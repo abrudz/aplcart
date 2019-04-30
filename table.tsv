@@ -1,92 +1,92 @@
 Type	Symbol	Related	Categories	Names
-function	+	- × ∨ J	arithmetic	plus;add;conjugate;mate
-function	-	+ ÷ ¯	arithmetic	minus;hyphen;subtract;negate;inverse
-function	×	÷ * ! E	arithmetic	cross;times;multiply;sgn;signum;direction
-function	÷	- × ⌹	arithmetic	divide;reciprocal;obelus;inverse
-function	*	× ⍟ ○ ⍣	arithmetic	star;asterisk;raisedtothepowerof;exponential
-function	⍟	*	arithmetic	naturallogarithm;circlestar;starcircle;splat
-function	⌹	÷	arithmetic	domino;matrixdivide;matrixinverse;quaddivide;leastsquares
-function	○	+ | *	arithmetic;complex	pi;circular;trigonometric;hyperbolic;complex;imaginary;arcsinh;arccosh;arctanh;arcus
-function	!	? × ⍳	arithmetic	exclamation;bang;shriek;factorial;binomial;combinations;beta;gamma
-function	?	⍳ !	arithmetic;generation	question;roll;deal;randomfloat;randominteger
-function	|	○	arithmetic;complex	verticalbar;pipe;stile;stroke;verticalline;modulo;modulus;abs;magnitude;residue;remainder
-function	⌈	< ≤ ≥ > ⍒ ⍋	arithmetic	upstile;maximum;ceiling;roundup;greater;larger
-function	⌊	< ≤ ≥ > ⍒ ⍋	arithmetic	downstile;minimum;floor;rounddown;lesser;smaller
-function	⊥	⊤	representation	frombase;decode;uptack;pack;frommixedradix;fromradix
-function	⊤	⊥	representation	antibase;tobase;encode;number;downtack;representation;unpack;tomixedradix;toradix
-function	⊣	⊢ ⌷ ⍝	structure	lev;lefttack;sameleft;identity
-function	⊢	⊣ ⌷	structure	dex;righttack;sameright;identity
-function	=	≡ ≠ ≤ ≥	comparison	equal;logicalxnor;same
-function	≠	= ≢ < >	comparison	ne;notequal;logicalxor;different;unequal
-function	≤	< ≥ = ⍋ ⍸	comparison	le;lessorequal;lessthanorequal;fore;logicalimplication;then
-function	<	≤ > ≠	comparison	lt;lessthan;before;precedes;logicalconversenonimplication
-function	>	≥ < ≠	comparison	gt;greaterthan;after;follows;logicalnonimplication
-function	≥	< ≤ = ⍒	comparison	ge;greaterorequal;greaterthanorequal;aft;logicalconverseimplication
-function	≡	= ≢ ⍳	comparison;structure	match;equalunderbar;identical;depth
-function	≢	≡ ≠ ⍴	comparison;structure	notmatch;natch;equalunderbarslash;notidentical;tally;count;differentfrom
-function	∧	∨ ⍲ × ⌊ ~	arithmetic;formallogic	and;conjunction;lcm;logicaland;lowestcommonmultiple;caret
-function	∨	∧ ⍱ + ⌈ ~	arithmetic;formallogic	or;disjunction;gcd;vel;logicalor;greatestcommondivisor;hcf;highestcommonfactor
-function	⍲	∧ ~	formallogic	nand;notand;andtilde;logicalnand;carettilde;alternativedenial
-function	⍱	∨ ~	formallogic	nor;notor;ortilde;logicalnor;jointdenial
-function	↑	⍴ ↓	structure;flattening	uparrow;mix;take;first;last;beginning;end;leading;trailing;head;tail
-function	↓	↑ ⊖ ⌽ ⍬	structure;selection	downarrow;split;drop;remove
-function	⊂	⊃ ⊆	structure	enclose;leftshoe;partitionedenclose;box;scalar
-function	⊃	⊂ ⊇ ⌷	structure;generation;selection;flattening	disclose;rightshoe;pick;first;unbox;open;content
-function	⌷	⊢ ⊣ ⊃	structure;generation;selection	squishquad;squad;index;materialise;materialize;defaultproperty;elements;items
-function	⍋	⍒ ⌈ ⌊ ≤ ⍸	comparison	gradeup;deltastile;upgrade;pine
-function	⍒	⍋ ⌈ ⌊ ≥	comparison	gradedown;delstile;downgrade;spine
-function	⍳	⍸ ∊ ? ⍷ ⌸ = ≡ ! ⍬	generation;lookup	iota;indices;indexof;integers;ints;countto;sequence;numbers;position
-function	⍷	∊ ⍳	lookup	find;epsilonunderbar
-function	∪	∩ ~	grouptheory	cup;union;unique;downshoe;distinct
-function	∩	∪ ~	grouptheory;lookup	cap;intersection;upshoe
-function	∊	⍷ ⍳ ,	flattening;lookup	epsilon;in;membership;enlist;flatten;type
-function	~	⍱ ⍲ ∨ ∧ ∩ ∪	grouptheory;formallogic	tilde;not;logicalnot;without;except;negation
-function	,	⍪ ∊ ↑	structure;flattening	comma;catenate;laminate;ravel;concatenate;flatten
-function	⍪	, ∊	structure;flattening	commabar;table;ravelcells;catenatefirst;concatenatefirst
-function	⍴	, / \ ≢ ⍬	generation;structure	rho;shape;reshape
-function	⌽	⊖ ⍉ ↓	structure	reverse;rotate;circlestile
-function	⊖	⍉ ⌽ ↓	structure	reversefirst;rotatefirst;circlebar;rowel;upset
-function	⍉	⊖ ⌽	structure	transpose;circlebackslash;cant;diagonal
-function	⍎	⍕ & '	representation	execute;eval;uptackjot;hydrant
-function	⍕	⍎ '	representation	format;downtackjot;thorn
-function	⍸	⍳ ≤ ⍋	lookup	where;intervalindex;iotaunderbar;trues
-function	⊆	⊂ ⊃	structure	leftshoeunderbar;encloseifsimple;conditionalenclose;partition;nested;boxsimple
-function;operator	/	⌿ \ ⍴ . ⌺	structure;selection	slash;reduce;fold;insert;select;compress;replicate;solidus
-function;operator	\	⍀ /	structure	backslash;slope;scan;expand;cumulativereduce
-function;operator	⌿	/ ⍀ ⍴ . ⌺	structure;selection	slashbar;reducefirst;foldfirst;insertfirst
-function;operator	⍀	⌿ \	structure	slopebar;backslashbar;scanfirst;expandfirst
-operator	¨	⍤	structure	each;diaeresis
-operator	⍨	∘		commute;switch;selfie;tildediaeresis;swap;frown
-operator	⍣	*		poweroperator;stardiaeresis;powerlimit;fixedpoint;fixpoint;converge;while;until;inverse
-operator	∘	⍨		jot;composewith;bind;curry;ring;outerproduct
-operator	⍤	¨ ⌺	structure	jotdiaeresis;rank;paw
-operator	⍠	⌶		colonquad;quadcolon;variant;option;setting
-operator	⌸	= . ≡ ⍳		equalquad;quadequal;key;group;classify
-operator	&	⍎		ampersand;spawn;et;and;thread;greenthread;launch
-operator	⌶	⍠		ibeam;systemservice;special
-operator	@	←		at;substitute;merge;amend;replace
-operator	⌺	⌸ ⍤ / ⌿		diamondquad;quaddiamond;stencil;tessellate;tile;cellularautomaton;gameoflife
-operator;syntax	.	/ ⌿ ⌸ J E ¯		dotproduct;innerproduct;namespaceseparator;dotinto;decimal
-syntax	E	J . ¯		exponent;timestento
-syntax	J	E . ¯		complex;plusitimes
-syntax	]			squarebracket;usercommand
-syntax	)			roundparentheses;systemcommand
-function;operator;syntax	[]		selection	squarebrackets;indexing;subscript;axis
-function;operator;syntax	()			roundparentheses;grouping;stranding;derived;train;unpacking
-function;operator;syntax	{}			curlybraces;function;operator;dfn;dop;optional;shy
-syntax	;	[ ]		indexing;axes;indices
-syntax	⍞	⎕		quotequad;quadquote;input;output;characterinput;rawinput;stdin;stderr
-syntax	⎕	⍞		quad;evaluatedinput;stdout
-syntax	'	⍎ ⍕		quote;apostrophe;string;text
-syntax	¯	- J E .		macron;negative;highminus;minus
-syntax	⋄	→		diamond;statementseparator
-syntax	⍝	⊣		comment;lamp;ignore;skip
-syntax	→	⋄		rightarrow;branch;abort;goto
-syntax	⍵	⍺ ∇ ⍵⍵		omega;rightarg
-syntax	⍺	⍵ ∇ ⍺⍺		alpha;leftarg
-syntax	∇	⍺ ⍵ ∇∇		del;recurse;function;triangledown;downtriangle;carrot
-syntax	⍵⍵	⍵ ∇∇ ⍺⍺		omega;rightop
-syntax	⍺⍺	⍺ ∇∇ ⍵⍵		alpha;leftop
-syntax	∇∇	⍺⍺ ⍵⍵ ∇∇		deldel;recurse;operator;triangledown;downtriangle;carrot
-syntax	←	@		leftarrow;assignment;gets;is;copula;let;define
-syntax	⍬	↓ ⍴		zilde;emptylist;emptynumericlist;zerotilde
+function	+	- × ∨ J	arithmetic	plus add conjugate mate
+function	-	+ ÷ ¯	arithmetic	minus hyphen subtract negate inverse
+function	×	÷ * ! E	arithmetic	cross times multiply sgn signum direction
+function	÷	- × ⌹	arithmetic	divide reciprocal obelus inverse
+function	*	× ⍟ ○ ⍣	arithmetic	star asterisk raisedtothepowerof exponential
+function	⍟	*	arithmetic	naturallogarithm circlestar starcircle splat
+function	⌹	÷	arithmetic	domino matrixdivide matrixinverse quaddivide leastsquares
+function	○	+ | *	arithmetic complex	pi circular trigonometric hyperbolic complex imaginary arcsinh arccosh arctanh arcus
+function	!	? × ⍳	arithmetic	exclamation bang shriek factorial binomial combinations beta gamma
+function	?	⍳ !	arithmetic generation	question roll deal randomfloat randominteger
+function	|	○	arithmetic complex	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude residue remainder
+function	⌈	< ≤ ≥ > ⍒ ⍋	arithmetic	upstile maximum ceiling roundup greater larger
+function	⌊	< ≤ ≥ > ⍒ ⍋	arithmetic	downstile minimum floor rounddown lesser smaller
+function	⊥	⊤	representation	frombase decode uptack pack frommixedradix fromradix
+function	⊤	⊥	representation	antibase tobase encode number downtack representation unpack tomixedradix toradix
+function	⊣	⊢ ⌷ ⍝	structure	lev lefttack sameleft identity
+function	⊢	⊣ ⌷	structure	dex righttack sameright identity
+function	=	≡ ≠ ≤ ≥	comparison	equal logicalxnor same
+function	≠	= ≢ < >	comparison	ne notequal logicalxor different unequal
+function	≤	< ≥ = ⍋ ⍸	comparison	le lessorequal lessthanorequal fore logicalimplication then
+function	<	≤ > ≠	comparison	lt lessthan before precedes logicalconversenonimplication
+function	>	≥ < ≠	comparison	gt greaterthan after follows logicalnonimplication
+function	≥	< ≤ = ⍒	comparison	ge greaterorequal greaterthanorequal aft logicalconverseimplication
+function	≡	= ≢ ⍳	comparison structure	match equalunderbar identical depth
+function	≢	≡ ≠ ⍴	comparison structure	notmatch natch equalunderbarslash notidentical tally count differentfrom
+function	∧	∨ ⍲ × ⌊ ~	arithmetic formallogic	and conjunction lcm logicaland lowestcommonmultiple caret
+function	∨	∧ ⍱ + ⌈ ~	arithmetic formallogic	or disjunction gcd vel logicalor greatestcommondivisor hcf highestcommonfactor
+function	⍲	∧ ~	formallogic	nand notand andtilde logicalnand carettilde alternativedenial
+function	⍱	∨ ~	formallogic	nor notor ortilde logicalnor jointdenial
+function	↑	⍴ ↓	structure flattening	uparrow mix take first last beginning end leading trailing head tail
+function	↓	↑ ⊖ ⌽ ⍬	structure selection	downarrow split drop remove
+function	⊂	⊃ ⊆	structure	enclose leftshoe partitionedenclose box scalar
+function	⊃	⊂ ⊇ ⌷	structure generation selection flattening	disclose rightshoe pick first unbox open content
+function	⌷	⊢ ⊣ ⊃	structure generation selection	squishquad squad index materialise materialize defaultproperty elements items
+function	⍋	⍒ ⌈ ⌊ ≤ ⍸	comparison	gradeup deltastile upgrade pine
+function	⍒	⍋ ⌈ ⌊ ≥	comparison	gradedown delstile downgrade spine
+function	⍳	⍸ ∊ ? ⍷ ⌸ = ≡ ! ⍬	generation lookup	iota indices indexof integers ints countto sequence numbers position
+function	⍷	∊ ⍳	lookup	find epsilonunderbar
+function	∪	∩ ~	grouptheory	cup union unique downshoe distinct
+function	∩	∪ ~	grouptheory lookup	cap intersection upshoe
+function	∊	⍷ ⍳ ,	flattening lookup	epsilon in membership enlist flatten type
+function	~	⍱ ⍲ ∨ ∧ ∩ ∪	grouptheory formallogic	tilde not logicalnot without except negation
+function	,	⍪ ∊ ↑	structure flattening	comma catenate laminate ravel concatenate flatten
+function	⍪	, ∊	structure flattening	commabar table ravelcells catenatefirst concatenatefirst
+function	⍴	, / \ ≢ ⍬	generation structure	rho shape reshape
+function	⌽	⊖ ⍉ ↓	structure	reverse rotate circlestile
+function	⊖	⍉ ⌽ ↓	structure	reversefirst rotatefirst circlebar rowel upset
+function	⍉	⊖ ⌽	structure	transpose circlebackslash cant diagonal
+function	⍎	⍕ & '	representation	execute eval uptackjot hydrant
+function	⍕	⍎ '	representation	format downtackjot thorn
+function	⍸	⍳ ≤ ⍋	lookup	where intervalindex iotaunderbar trues
+function	⊆	⊂ ⊃	structure	leftshoeunderbar encloseifsimple conditionalenclose partition nested boxsimple
+function operator	/	⌿ \ ⍴ . ⌺	structure selection	slash reduce fold insert select compress replicate solidus
+function operator	\	⍀ /	structure	backslash slope scan expand cumulativereduce
+function operator	⌿	/ ⍀ ⍴ . ⌺	structure selection	slashbar reducefirst foldfirst insertfirst
+function operator	⍀	⌿ \	structure	slopebar backslashbar scanfirst expandfirst
+operator	¨	⍤	structure	each diaeresis
+operator	⍨	∘		commute switch selfie tildediaeresis swap frown
+operator	⍣	*		poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while until inverse
+operator	∘	⍨		jot composewith bind curry ring outerproduct
+operator	⍤	¨ ⌺	structure	jotdiaeresis rank paw
+operator	⍠	⌶		colonquad quadcolon variant option setting
+operator	⌸	= . ≡ ⍳		equalquad quadequal key group classify
+operator	&	⍎		ampersand spawn et and thread greenthread launch
+operator	⌶	⍠		ibeam systemservice special
+operator	@	←		at substitute merge amend replace
+operator	⌺	⌸ ⍤ / ⌿		diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife
+operator syntax	.	/ ⌿ ⌸ J E ¯		dotproduct innerproduct namespaceseparator dotinto decimal
+syntax	E	J . ¯		exponent timestento
+syntax	J	E . ¯		complex plusitimes
+syntax	]			squarebracket usercommand
+syntax	)			roundparentheses systemcommand
+function operator syntax	[]	;	selection	squarebrackets indexing subscript axis
+function operator syntax	()			roundparentheses grouping stranding derived train unpacking
+function operator syntax	{}			curlybraces function operator dfn dop optional shy
+syntax	; 	[]		indexing axes indices
+syntax	⍞	⎕		quotequad quadquote input output characterinput rawinput stdin stderr
+syntax	⎕	⍞		quad evaluatedinput stdout
+syntax	'	⍎ ⍕		quote apostrophe string text
+syntax	¯	- J E .		macron negative highminus minus
+syntax	⋄	→		diamond statementseparator
+syntax	⍝	⊣		comment lamp ignore skip
+syntax	→	⋄		rightarrow branch abort goto
+syntax	⍵	⍺ ∇ ⍵⍵		omega rightarg
+syntax	⍺	⍵ ∇ ⍺⍺		alpha leftarg
+syntax	∇	⍺ ⍵ ∇∇		del recurse function triangledown downtriangle carrot
+syntax	⍵⍵	⍵ ∇∇ ⍺⍺		omega rightop
+syntax	⍺⍺	⍺ ∇∇ ⍵⍵		alpha leftop
+syntax	∇∇	⍺⍺ ⍵⍵ ∇∇		deldel recurse operator triangledown downtriangle carrot
+syntax	←	@		leftarrow assignment gets is copula let define
+syntax	⍬	↓ ⍴		zilde emptylist emptynumericlist zerotilde
