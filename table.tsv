@@ -67,26 +67,26 @@ operator	⌶	⍠		ibeam;systemservice;special
 operator	@	←		at;substitute;merge;amend;replace
 operator	⌺	⌸ ⍤ / ⌿		diamondquad;quaddiamond;stencil;tessellate;tile;cellularautomaton;gameoflife
 operator;syntax	.	/ ⌿ ⌸ J E ¯		dotproduct;innerproduct;namespaceseparator;dotinto;decimal
-syntax	E	J . ¯		exponent;timestento	0
-syntax	J	E . ¯		complex;plusitimes	0
-syntax	]			squarebracket;usercommand	0
-syntax	)			roundparentheses;systemcommand	0
-function;operator;syntax	[]		selection	squarebrackets;indexing;subscript;axis	0
-function;operator;syntax	()			roundparentheses;grouping;stranding;derived;train;unpacking	0
-function;operator;syntax	{}			curlybraces;function;operator;dfn;dop;optional;shy	0
-syntax	;	[ ]		indexing;axes;indices	0
+syntax	E	J . ¯		exponent;timestento
+syntax	J	E . ¯		complex;plusitimes
+syntax	]			squarebracket;usercommand
+syntax	)			roundparentheses;systemcommand
+function;operator;syntax	[]		selection	squarebrackets;indexing;subscript;axis
+function;operator;syntax	()			roundparentheses;grouping;stranding;derived;train;unpacking
+function;operator;syntax	{}			curlybraces;function;operator;dfn;dop;optional;shy
+syntax	;	[ ]		indexing;axes;indices
 syntax	⍞	⎕		quotequad;quadquote;input;output;characterinput;rawinput;stdin;stderr
 syntax	⎕	⍞		quad;evaluatedinput;stdout
-syntax	'	⍎ ⍕		quote;apostrophe;string;text	0
+syntax	'	⍎ ⍕		quote;apostrophe;string;text
 syntax	¯	- J E .		macron;negative;highminus;minus
-syntax	⋄	→		diamond;statementseparator	0
-syntax	⍝	⊣		comment;lamp;ignore;skip	0
-syntax	→	⋄		rightarrow;branch;abort;goto	0
-syntax	⍵	⍺ ∇ ⍵⍵		omega;rightarg	0
-syntax	⍺	⍵ ∇ ⍺⍺		alpha;leftarg	0
-syntax	∇	⍺ ⍵ ∇∇		del;recurse;function;triangledown;downtriangle;carrot	0
-syntax	⍵⍵	⍵ ∇∇ ⍺⍺		omega;rightop	0
-syntax	⍺⍺	⍺ ∇∇ ⍵⍵		alpha;leftop	0
-syntax	∇∇	⍺⍺ ⍵⍵ ∇∇		deldel;recurse;operator;triangledown;downtriangle;carrot	0
-syntax	←	@		leftarrow;assignment;gets;is;copula;let;define	0
-syntax	⍬	↓ ⍴		zilde;emptylist;emptynumericlist;zerotilde	0
+syntax	⋄	→		diamond;statementseparator
+syntax	⍝	⊣		comment;lamp;ignore;skip
+syntax	→	⋄		rightarrow;branch;abort;goto
+syntax	⍵	⍺ ∇ ⍵⍵		omega;rightarg
+syntax	⍺	⍵ ∇ ⍺⍺		alpha;leftarg
+syntax	∇	⍺ ⍵ ∇∇		del;recurse;function;triangledown;downtriangle;carrot
+syntax	⍵⍵	⍵ ∇∇ ⍺⍺		omega;rightop
+syntax	⍺⍺	⍺ ∇∇ ⍵⍵		alpha;leftop
+syntax	∇∇	⍺⍺ ⍵⍵ ∇∇		deldel;recurse;operator;triangledown;downtriangle;carrot
+syntax	←	@		leftarrow;assignment;gets;is;copula;let;define
+syntax	⍬	↓ ⍴		zilde;emptylist;emptynumericlist;zerotilde
