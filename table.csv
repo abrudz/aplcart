@@ -1,0 +1,106 @@
+#	S=syntax
+#	O=operator
+#	F=function
+#	a=arithmetic
+#	z=complex
+#	c=comparison
+#	s=structure
+#	m=generation
+#	f=lookup
+#	l=formallogic
+#	g=grouptheory
+#	i=selection
+#	e=flattening
+#	representation
+#type	symb	rel	cats	names
+F	+	-×∨J	a	plus;add;conjugate;mate	
+F	-	+÷¯	a	minus;hyphen;subtract;negate;inverse	
+F	×	÷*!E	a	cross;times;multiply;sgn;signum;direction	
+F	÷	-×⌹	a	divide;reciprocal;obelus;inverse	
+F	*	×⍟○⍣	a	star;asterisk;raisedtothepowerof;exponential	
+F	⍟	*	a	naturallogarithm;circlestar;starcircle;splat	
+F	⌹	÷	a	domino;matrixdivide;matrixinverse;quaddivide;leastsquares	
+F	○	+|*	az	pi;circular;trigonometric;hyperbolic;complex;imaginary;arcsinh;arccosh;arctanh;arcus	
+F	!	?×⍳	a	exclamation;bang;shriek;factorial;binomial;combinations;beta;gamma	
+F	?	⍳!	am	question;roll;deal;randomfloat;randominteger	
+F	|	○	az	verticalbar;pipe;stile;stroke;verticalline;modulo;modulus;abs;magnitude;residue;remainder	
+F	⌈	<≤≥>⍒⍋	a	upstile;maximum;ceiling;roundup;greater;larger	
+F	⌊	<≤≥>⍒⍋	a	downstile;minimum;floor;rounddown;lesser;smaller	
+F	⊥	⊤	r	frombase;decode;uptack;pack;frommixedradix;fromradix	
+F	⊤	⊥	r	antibase;tobase;encode;number;downtack;representation;unpack;tomixedradix;toradix	
+F	⊣	⊢⌷⍝	s	lev;lefttack;sameleft;identity	
+F	⊢	⊣⌷	s	dex;righttack;sameright;identity	
+F	=	≡≠≤≥	c	equal;logicalxnor;same	
+F	≠	=≢<>	c	ne;notequal;logicalxor;different;unequal	
+F	≤	<≥=⍋⍸	c	le;lessorequal;lessthanorequal;fore;logicalimplication;then	
+F	<	≤>≠	c	lt;lessthan;before;precedes;logicalconversenonimplication	
+F	>	≥<≠	c	gt;greaterthan;after;follows;logicalnonimplication	
+F	≥	<≤=⍒	c	ge;greaterorequal;greaterthanorequal;aft;logicalconverseimplication	
+F	≡	=≢⍳	cs	match;equalunderbar;identical;depth	
+F	≢	≡≠⍴	cs	notmatch;natch;equalunderbarslash;notidentical;tally;count;differentfrom	
+F	∧	∨⍲×⌊~	al	and;conjunction;lcm;logicaland;lowestcommonmultiple;caret	
+F	∨	∧⍱+⌈~	al	or;disjunction;gcd;vel;logicalor;greatestcommondivisor;hcf;highestcommonfactor	
+F	⍲	∧~	l	nand;notand;andtilde;logicalnand;carettilde;alternativedenial	
+F	⍱	∨~	l	nor;notor;ortilde;logicalnor;jointdenial	
+F	↑	⍴↓	se	uparrow;mix;take;first;last;beginning;end;leading;trailing;head;tail	
+F	↓	↑⊖⌽⍬	si	downarrow;split;drop;remove	
+F	⊂	⊃⊆	s	enclose;leftshoe;partitionedenclose;box;scalar	
+F	⊃	⊂⊇⌷	smie	disclose;rightshoe;pick;first;unbox;open;content	
+F	⌷	⊢⊣⊃	smi	squishquad;squad;index;materialise;materialize;defaultproperty;elements;items	
+F	⍋	⍒⌈⌊≤⍸	c	gradeup;deltastile;upgrade;pine	
+F	⍒	⍋⌈⌊≥	c	gradedown;delstile;downgrade;spine	
+F	⍳	⍸∊?⍷⌸=≡!⍬	mf	iota;indices;indexof;integers;ints;countto;sequence;numbers;position	
+F	⍷	∊⍳	f	find;epsilonunderbar	
+F	∪	∩~	g	cup;union;unique;downshoe;distinct	
+F	∩	∪~	gf	cap;intersection;upshoe	
+F	∊	⍷⍳,	ef	epsilon;in;membership;enlist;flatten;type	
+F	~	⍱⍲∨∧∩∪	gl	tilde;not;logicalnot;without;except;negation	
+F	,	⍪∊↑	se	comma;catenate;laminate;ravel;concatenate;flatten	
+F	⍪	,∊	se	commabar;table;ravelcells;catenatefirst;concatenatefirst	
+F	⍴	,/\≢⍬	ms	rho;shape;reshape	
+F	⌽	⊖⍉↓	s	reverse;rotate;circlestile	
+F	⊖	⍉⌽↓	s	reversefirst;rotatefirst;circlebar;rowel;upset	
+F	⍉	⊖⌽	s	transpose;circlebackslash;cant;diagonal	
+F	⍎	⍕&'	r	execute;eval;uptackjot;hydrant	
+F	⍕	⍎'	r	format;downtackjot;thorn	
+F	⍸	⍳≤⍋	f	where;intervalindex;iotaunderbar;trues	
+F	⊆	⊂⊃	s	leftshoeunderbar;encloseifsimple;conditionalenclose;partition;nested;boxsimple	
+FO	/	⌿\⍴.⌺	si	slash;reduce;fold;insert;select;compress;replicate;solidus	
+FO	\	⍀/	s	backslash;slope;scan;expand;cumulativereduce	
+FO	⌿	/⍀⍴.⌺	si	slashbar;reducefirst;foldfirst;insertfirst	
+FO	⍀	⌿\	s	slopebar;backslashbar;scanfirst;expandfirst	
+O	¨	⍤	s	each;diaeresis	
+O	⍨	∘		commute;switch;selfie;tildediaeresis;swap;frown	
+O	⍣	*		poweroperator;stardiaeresis;powerlimit;fixedpoint;fixpoint;converge;while;until;inverse	
+O	∘	⍨		jot;composewith;bind;curry;ring;outerproduct	
+O	⍤	¨⌺	s	jotdiaeresis;rank;paw	
+O	⍠	⌶		colonquad;quadcolon;variant;option;setting	
+O	⌸	=.≡⍳		equalquad;quadequal;key;group;classify	
+O	&	⍎		ampersand;spawn;et;and;thread;greenthread;launch	
+O	⌶	⍠		ibeam;systemservice;special	
+O	@	←		at;substitute;merge;amend;replace	
+O	⌺	⌸⍤/⌿		diamondquad;quaddiamond;stencil;tessellate;tile;cellularautomaton;gameoflife	
+OS	.	/⌿⌸JE¯		dotproduct;innerproduct;namespaceseparator;dotinto;decimal	
+S	E	J.¯		exponent;timestento
+S	J	E.¯		complex;plusitimes
+S	]			squarebracket;usercommand
+S	)			roundparentheses;systemcommand
+FOS	[]		i	squarebrackets;indexing;subscript;axis
+FOS	()			roundparentheses;grouping;stranding;derived;train;unpacking
+FOS	{}			curlybraces;function;operator;dfn;dop;optional;shy
+S	;	[]		indexing;axes;indices
+S	⍞	⎕		quotequad;quadquote;input;output;characterinput;rawinput;stdin;stderr	
+S	⎕	⍞		quad;evaluatedinput;stdout	
+S	'	⍎⍕		quote;apostrophe;string;text
+S	¯	-JE.		macron;negative;highminus;minus	
+S	⋄	→		diamond;statementseparator
+S	⍝	⊣		comment;lamp;ignore;skip
+S	→	⋄		rightarrow;branch;abort;goto
+S	⍵	⍺ ∇ ⍵⍵		omega;rightarg
+S	⍺	⍵ ∇ ⍺⍺		alpha;leftarg
+S	∇	⍺ ⍵ ∇∇		del;recurse;function;triangledown;downtriangle;carrot
+S	⍵⍵	⍵ ∇∇ ⍺⍺		omega;rightop
+S	⍺⍺	⍺ ∇∇ ⍵⍵		alpha;leftop
+S	∇∇	⍺⍺ ⍵⍵ ∇∇		deldel;recurse;operator;triangledown;downtriangle;carrot
+S	←	@		leftarrow;assignment;gets;is;copula;let;define
+S	⍬	↓⍴		zilde;emptylist;emptynumericlist;zerotilde
