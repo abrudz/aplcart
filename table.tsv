@@ -92,7 +92,7 @@ syntax	←	@		Modified Assignment; Assignment	leftarrow assignment gets is copul
 syntax	⍬	↓ ⍴		Empty Vector	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none
 tacit	+⌿÷≢		statistics	Mean	average arithmeticmean
 tacit	≠⊆⊢		text structure	Cut	cut split partition
-tacit	1↓¨⊣(=⊂⊢),	text structure	Split	cut split partition
+tacit	1↓¨⊣(=⊂⊢),		text structure	Split	cut split partition
 tacit	∨/⍷		text structure	Is Subarray	contains has isin issubarray appearsin
 tacit	↑{⍺⍵}↓		text structure	Head and Tail	headtail split divide
 tacit	⊢∘⊂⍨,∘⊆⊢		structure		Link	link connect juxtapose
