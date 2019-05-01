@@ -104,8 +104,8 @@ tacit	*∘3		arithmetic	Cube	cube
 tacit	*∘0.5		arithmetic	Square Root	squareroot
 tacit	*∘÷⍨		arithmetic	Root	nthroot
 tacit	+⍨		arithmetic	Double	double
-tacit	2∘|				Odd/Parity	parity odd
-tacit	~2∘|				Even	even
+tacit	2∘|			Odd/Parity	parity odd
+tacit	~2∘|			Even	even
 tacit	+⌿		arithmetic	Sum	summation bigsigma
 tacit	×⌿		arithmetic	Product	product bigpi
 tacit	∘.×⍨		arithmetic	Multiplication Table	multiplicationtable
