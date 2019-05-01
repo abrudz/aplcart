@@ -126,7 +126,7 @@ tacit	÷1∘○		complex	Cosecant	cosecant csc
 tacit	÷2∘○		complex	Secant	secant
 tacit	÷3∘○		complex	Cotangent	cotangent cotg ctg ctn
 tacit	¯1○÷		complex	Arccosecant	arccosecant acsc acosec arcuscosecant
-tacit	¯2○÷		complex	Arcsecant	arccosine acrsecant asec arcussecant
+tacit	¯2○÷		complex	Arcsecant	arcsecant asec arcussecant
 tacit	¯3○÷		complex	Arccotangent	arccotangent acotg actg actn arcuscotangent
 tacit	9∘○		complex	Real	realpart
 tacit	11∘○		complex	Imaginary	imaginarypart
