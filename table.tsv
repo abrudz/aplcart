@@ -1,5 +1,5 @@
 Type	Symbol	Related	Categories	Name	Terms
-function	+	- × ∨ J	arithmetic	Conjugate; Plus	plus add conjugate mate
+function	+	- × ∨ J	arithmetic complex	Conjugate; Plus	plus add conjugate mate
 function	-	+ ÷ ¯	arithmetic	Negate; Minus	minus hyphen subtract negate inverse
 function	×	÷ * ! E	arithmetic	Direction; Times	cross times multiply sgn signum direction
 function	÷	- × ⌹	arithmetic	Reciprocal; Divide	divide reciprocal obelus inverse
@@ -7,9 +7,9 @@ function	*	× ⍟ ○ ⍣	arithmetic	Power; Exponential	power star asterisk rais
 function	⍟	*	arithmetic	Natural Logarithm; Logarithm	naturallogarithm circlestar starcircle splat
 function	⌹	÷	arithmetic	Matrix Inverse; Matrix Divide	domino matrixdivide matrixinverse quaddivide leastsquares
 function	○	+ | *	arithmetic complex	Pi Times; Circular Functions	pi circular trigonometric hyperbolic complex imaginary arcsinh arccosh arctanh arcus
-function	!	? × ⍳	arithmetic	Factorial; Binomial	exclamation bang shriek factorial binomial combinations beta gamma
+function	!	? × ⍳	arithmetic	Factorial; Binomial	exclamation bang shriek factorial binomial combinations beta
 function	?	⍳ !	arithmetic generation	Roll; Deal	question roll deal randomfloat randominteger
-function	|	○	arithmetic complex	Magnitude; Residue	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude residue remainder
+function	|	○	arithmetic complex	Magnitude; Residue	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude residue remainder amplitude
 function	⌈	< ≤ ≥ > ⍒ ⍋	arithmetic	Ceiling; Maximum	upstile maximum ceiling roundup greater larger
 function	⌊	< ≤ ≥ > ⍒ ⍋	arithmetic	Floor; Minimum	downstile minimum floor rounddown lesser smaller
 function	⊥	⊤	representation	; Decode	frombase decode uptack pack frommixedradix fromradix
@@ -58,7 +58,7 @@ function operator	⍀	⌿ \	structure	Scan First; Expand First	slopebar backslas
 operator	¨	⍤	structure	Each; 	foreach diaeresis map
 operator	⍨	∘		Commute; 	commute switch selfie tildediaeresis swap frown
 operator	⍣	*		; Power	poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while until inverse repeat
-operator	∘	⍨		; Compose	jot composewith bind curry ring outerproduct table
+operator	∘	⍨		; Compose	jot composewith bind curry ring outerproduct table cartesianproduct combination
 operator	⍤	¨ ⌺	structure	; Rank	jotdiaeresis rank paw
 operator	⍠	⌶		; Variant	colonquad quadcolon variant option setting
 operator	⌸	= . ≡ ⍳		Key;	equalquad quadequal key group classify bin
@@ -66,7 +66,7 @@ operator	&	⍎		Spawn;	ampersand spawn et and greenthread launch run
 operator	⌶	⍠		I-Beam;	ibeam systemservice special foreign
 operator	@	←		At	at substitute merge amend replace
 operator	⌺	⌸ ⍤ / ⌿	structure	Stencil	diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife
-operator syntax	.	/ ⌿ ⌸ J E ¯		Outer Product; Inner Product	dotproduct innerproduct crossproduct vectorproduct matrixproduct namespaceseparator dotinto decimal point period
+operator syntax	.	/ ⌿ ⌸ J E ¯		Outer Product; Inner Product	dotproduct innerproduct crossproduct vectorproduct matrixproduct namespaceseparator dotinto decimal point period cartesianproduct table combinations
 syntax	E	J . ¯		Exponent	exponent timestento scale mantissa
 syntax	J	E . ¯		Complex	complex plusitimes imaginary
 syntax	]			Right Bracket	rightsquarebracket rightbracket usercommand ucmd
@@ -96,3 +96,69 @@ tacit	1↓¨⊣(=⊂⊢),		text structure	Split	cut split partition
 tacit	∨/⍷		text structure	Is Subarray	contains has isin issubarray appearsin
 tacit	↑{⍺⍵}↓		text structure	Head and Tail	headtail split divide
 tacit	⊢∘⊂⍨,∘⊆⊢		structure	Link	link connect juxtapose
+tacit	+∘1		arithmetic	Increment	increase
+tacit	-∘1		arithmetic	Decrement	decrease
+tacit	⌊0.5∘+		arithmetic	Round	round closestinteger
+tacit	×⍨		arithmetic	Square	square
+tacit	*∘3		arithmetic	Cube	cube
+tacit	*∘0.5		arithmetic	Square Root	squareroot
+tacit	*∘÷⍨		arithmetic	Root	nthroot
+tacit	+⍨		arithmetic	Double	double
+tacit	2∘|				Odd/Parity	parity odd
+tacit	~2∘|				Even	even
+tacit	+⌿		arithmetic	Sum	summation bigsigma
+tacit	×⌿		arithmetic	Product	product bigpi
+tacit	∘.×⍨		arithmetic	Multiplication Table	multiplicationtable
+tacit	~0∘∊		formallogic	All	forall true givenany tautology universalquantification
+tacit	1∘∊		formallogic	Any	thereexists forsome existentialquantification
+tacit	0∘∊		formallogic	Not All	notall somenot
+tacit	~1∘∊		formallogic	Not Any	none notany
+tacit	⍳≢		generation	Enumerate	enumerate number count
+tacit	,∘⍳⍴		generation	Indices Of	indicesof
+tacit	?⍨		generation	Random Permutation	shuffle randompermutation
+tacit	1∘○		complex	Sine	sine sinus
+tacit	2∘○		complex	Cosine	cosine cosinus
+tacit	3∘○		complex	Tangent	tangent
+tacit	¯1∘○		complex	Arccine	arcsine asin arcussinus
+tacit	¯2∘○		complex	Arccosine	arccosine acos arcuscosinus
+tacit	¯3∘○		complex	Arctangent	arctangent atan arcustangent
+tacit	÷1∘○		complex	Cosecant	cosecant csc
+tacit	÷2∘○		complex	Secant	secant
+tacit	÷3∘○		complex	Cotangent	cotangent cotg ctg ctn
+tacit	¯1○÷		complex	Arccosecant	arccosecant acsc acosec arcuscosecant
+tacit	¯2○÷		complex	Arcsecant	arccosine acrsecant asec arcussecant
+tacit	¯3○÷		complex	Arccotangent	arccotangent acotg actg actn arcuscotangent
+tacit	9∘○		complex	Real	realpart
+tacit	11∘○		complex	Imaginary	imaginarypart
+tacit	12∘○		complex	Phase	phase argument
+tacit	¯12∘○		complex	Cis	antiphase phasor cis
+tacit	¯2○1○⊢		complex	Complement	complimentaryangle complement
+tacit	+.×			Dot/Vector/Cross Product	dotproduct vectorproduct crossproduct matrixmultiply
+tacit	1≥≡		structure	Simple	simple
+tacit	2≤∘|≡		structure	Nested	nested
+tacit	0>≡		structure	Ragged	ragged nonorthogonal nonrectangular
+tacit	0≤≡		structure	Uniform	uniform orthogonal rectangular
+tacit	⍬≡⍴		structure	Scalar	scalar
+tacit	1=×/∘⍴		structure	Singleton	singleton unit sole one
+tacit	⊃0⍴⊂			Type	datatypeof
+tacit	-⌿		arithmetic	Alternating Sum	alternatingsum
+tacit	2-⍨/⊢			Deltas	differences deltas changes steps
+tacit	∘.×∘1 ¯1		arithmetic	Plus-Minus	plusminus
+tacit	⍋⍋		comparison	Cardinals Up	ascendingcardinalnumbers
+tacit	⍋⍒		comparison	Cardinals Down	descendingcardinalnumbers
+tacit	(⊢~∘.×⍨)1↓⍳			Primes	primesuntil
+tacit	2=0+.=⍳|⊢			Is Primes	isprime primality
+tacit	∧/∊		settheory	Subset	subset containedin
+tacit	∧/∊⍨		settheory	Superset	superset contains
+tacit	(○÷180)∘×		representation	Radians	radians
+tacit	(180÷○1)∘×	representation	complex	Degrees	degrees
+tacit	10∘⊥⍣¯1		representation	Digits	digits
+tacit	⊥⍣¯1		representation	Base	tobase
+tacit	1∘|		arithmetic	Fractional Part	fractional
+tacit	!-∘1		arithmetic	Gamma	gamma
+tacit	∊∧.∧∊⍨		settheory	Set Identity	setequivalence
+tacit	⊃⍒		comparison	Index of Largest	indexoflargest
+tacit	⊃⍋		comparison	Index of Smallest	indexofsmallest
+tacit	⊢⍉⍨⍴=⍴		structure	Diagonal	majordiagonal
+tacit	⌽⍉⍨⍴=⍴		structure	Anti-diagonal	minordiagonal
+tacit	0∊⍴		structure	Empty	isempty isvoid isnull
