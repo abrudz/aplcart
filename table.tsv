@@ -284,3 +284,12 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (÷3∘○)N	Cotangent	Tacit	Monadic Function		Mathematical	cotangent cotg ctg ctn
 (¯2○1○⊢)N	Complementry Angle	Tacit	Monadic Function		Mathematical	complement
 X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
+X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
+⎕CT←(0≤1E¯14≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←645	System	Variable		Mathematical	comparison tolerance fuzz IEEE754 64-bit binaryfloatingpoint representation
+⎕DCT←(0≤1E¯28≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←1287	System	Variable		Mathematical	comparison tolerance fuzz IEEE754-2008 128-bit decimalfloatingpoint representation
+⎕DIV←(0,1)	0: 1=0÷0, all other÷0 error; 1: 0=all÷0	System	Variable		Mathematical	divisionbyzero divisionmethod divmethod error nan indeterminate
+⎕FR←(645,1287)	Specifies the result type of floating-point computations	System	Variable		Mathematical	IEEE754 64-bit binaryfloatingpoint IEEE754-2008 128-bit decimalfloatingpoint internal representation
+⎕IO←(1,0)	Specifies whether array indices are counted from 0 or 1	System	Variable		Index Generation	indexing counting numbering natrualnumbers origin one zero based ordinals
+⎕ML←(0≤1≤3)	Degree of compatibility with IBM APL2 (from 0=low to 3=high)	System	Variable		System	migration level conformance APLX APL*PLUS GNUAPL APL+Win APL2000 NARS2000 ≡↑⊃ depth first mix ⎕TC terminalcontrolcharacters
+⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding display
+⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd roll randominteger randomfloat randomness source
