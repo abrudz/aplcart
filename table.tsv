@@ -247,7 +247,7 @@ N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	d
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Structural	singleton unit sole one
 (⊃0⍴⊂)Y	Type (converts charcters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
-(2-⍨/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences deltas changes steps
+(¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences deltas changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 (∘.×∘1 ¯1)N	±N	Tacit	Monadic Function		Mathematical	plusminus
 (⍋⍋)Y	Cardinals Up	Tacit	Monadic Function		Index Generation	ascendingcardinalnumbers
