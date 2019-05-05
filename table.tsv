@@ -303,7 +303,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 :While	:While bx ⋄ block ⋄ :AndIf bx|:OrIf bx ⋄ block ⋄ :EndWhile	Syntax	Control	Structure	Expression	loop do iteration ⍣
 :While	:While bx ⋄ block ⋄ :AndIf bx|:OrIf bx ⋄ block ⋄ :Until bx	Syntax	Control	Structure	Expression	loop do iteration ⍣
 :With	:With ns ⋄ block ⋄ :EndWith	Syntax	Control	Structure	Expression	scope namespace object
-	:GoTo	Syntax	Control	Keyword	Expression	branch switch →
-	:Return	Syntax	Control	Keyword	Expression	abort →0 stop
-	:Leave	Syntax	Control	Keyword	Expression	break earlyexit
-	:Continue	Syntax	Control	Keyword	Expression	continuation
+:GoTo J	Branch to line or label J	Syntax	Control	Keyword	Expression	branch switch →
+:Return	Abort (cut stack back one frame)	Syntax	Control	Keyword	Expression	abort →0 stop
+:Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit
+:Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation
