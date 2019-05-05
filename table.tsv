@@ -200,8 +200,8 @@ f;Y	Tradfn/Tradop Name Localisation	Syntax			Definition	indexing axes indices lo
 ¯	Negative	Syntax	Array		Expression	macron negative highminus minus
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
 ⍝	Comment	Syntax			Expression	comment lamp ignore skip note nb
-→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow branch abort goto stop switch
-→J	Branch to line or label J	Primitive	Niladic Function		Expression	rightarrow branch abort goto stop switch
+→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow branch abort stop switch
+→J	Branch to line or label J	Primitive	Niladic Function		Expression	rightarrow branch goto switch
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg
 ⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg
 ∇	Dfn Self	Primitive	Monadic Function;Dyadic Function		Expression	del recurse function triangledown downtriangle carrot
@@ -293,3 +293,17 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ⎕ML←(0≤1≤3)	Degree of compatibility with IBM APL2 (from 0=low to 3=high)	System	Variable		System	migration level conformance APLX APL*PLUS GNUAPL APL+Win APL2000 NARS2000 ≡↑⊃ depth first mix ⎕TC terminalcontrolcharacters
 ⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding display
 ⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd roll randominteger randomfloat randomness source
+:For	:For var :In|:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨
+:Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens
+:If	:If bx ⋄ block ⋄ :ElseIf bx|:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣ :
+:Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx|:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣
+:Repear	:Repeat ⋄ block ⋄ :EndRepeat	Syntax	Control	Structure	Expression	loop iteration ⍣
+:Select	:Select ax ⋄ :Case val|:CaseList val ⋄ block ⋄ :Else ⋄ block ⋄ :EndSelect	Syntax	Control	Structure	Expression	switch inspect multiwaybranch
+:Trap	:Trap ecode ⋄ block ⋄ :Case ecode|:CaseList ecode ⋄ block ⋄ :Else ⋄ block ⋄ :EndTrap	Syntax	Control	Structure	Expression	try catch errorhandling trapping exception
+:While	:While bx ⋄ block ⋄ :AndIf bx|:OrIf bx ⋄ block ⋄ :EndWhile	Syntax	Control	Structure	Expression	loop do iteration ⍣
+:While	:While bx ⋄ block ⋄ :AndIf bx|:OrIf bx ⋄ block ⋄ :Until bx	Syntax	Control	Structure	Expression	loop do iteration ⍣
+:With	:With ns ⋄ block ⋄ :EndWith	Syntax	Control	Structure	Expression	scope namespace object
+	:GoTo	Syntax	Control	Keyword	Expression	branch switch →
+	:Return	Syntax	Control	Keyword	Expression	abort →0 stop
+	:Leave	Syntax	Control	Keyword	Expression	break earlyexit
+	:Continue	Syntax	Control	Keyword	Expression	continuation
