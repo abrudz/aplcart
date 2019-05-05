@@ -11,11 +11,13 @@
     var table;
     $(document).ready(function(){
       $.get("table.tsv",function(w){table=(esc(w)).split(/\r?\n/g).map(w=>w.split('\t')).filter(w=>w!="");
+        s=(new URLSearchParams(window.location.search)).get("s")
         $('table').DataTable({
           data:table,
           paging:false,
           scrollY:"calc(100vh - 110px)",
-          searchDelay:250
+          searchDelay:250,
+          search:{search:(s?s:"")}
         });
       });
     });
