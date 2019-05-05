@@ -7,15 +7,15 @@
 |N	Magnitude (absolute value)	Primitive	Monadic Function	Scalar Function	Mathematical	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude amplitude
 *N	e raised to the power N	Primitive	Monadic Function	Scalar Function	Mathematical	power star asterisk exponential etothepowerof naturalexponential
 ⍟N	Natural logarithm of N	Primitive	Monadic Function	Scalar Function	Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662
-○N	pi times N	Primitive	Monadic Function	Scalar Function	Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503
+○N	pi times N	Primitive	Monadic Function	Scalar Function	Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π
 !N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek
 ?J	Random number selected from ⍳J	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randominteger
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randomfloat
-~B	Logical Inverse: 0=B	Primitive	Monadic Function	Scalar Function	Mathematical	tilde not logicalnot logicalnegation logicalcomplement
+~B	Logical Inverse: 0=B	Primitive	Monadic Function	Scalar Function	Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬
 M+N	Add N to M	Primitive	Dyadic Function	Scalar Function	Mathematical	plus addition
 M-N	Subtract N from M	Primitive	Dyadic Function	Scalar Function	Mathematical	minus dash hyphen subtraction difference
-M×N	Multiply M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	cross times multiplication
-M÷N	Divide M by N	Primitive	Dyadic Function	Scalar Function	Mathematical	division over
+M×N	Multiply M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	cross times multiplication ∙⋅·
+M÷N	Divide M by N	Primitive	Dyadic Function	Scalar Function	Mathematical	division over ⁄
 M|N	Residue after dividing N by M	Primitive	Dyadic Function	Scalar Function	Mathematical	verticalbar pipe stile stroke verticalline modulo modulus residue divisionremainder
 M*N	M raised to the power N	Primitive	Dyadic Function	Scalar Function	Mathematical	power star asterisk raisedtothepowerof exponentiation
 M⍟N	Base-M logarithm of N	Primitive	Dyadic Function	Scalar Function	Mathematical	logarithm circlestar starcircle splat
@@ -25,18 +25,18 @@ I○N	Circular functions	Primitive	Dyadic Function	Scalar Function	Mathematical	
 M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function	Scalar Function	Mathematical	exclamation bang shriek binomial
 M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	least smallest lcm denominator lcd
 M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	gcd gcf factor hcf highest gcm measure hcd
-M<N	Less Than	Primitive	Dyadic Function	Scalar Function	Comparison	lt before precedes
-M≤N	Less Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	le before precedes
-M≥N	Greater Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	ge after follows
-M>N	Greater Than	Primitive	Dyadic Function	Scalar Function	Comparison	gt after follows
+M<N	Less Than	Primitive	Dyadic Function	Scalar Function	Comparison	lt before precedes ≺
+M≤N	Less Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	le before precedes ≦
+M≥N	Greater Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	ge after follows ≧
+M>N	Greater Than	Primitive	Dyadic Function	Scalar Function	Comparison	gt after follows ≻
 X=Y	Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	same
 X≠Y	Not Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	ne unequal different
 A<B	Converse Nonimplication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	
-A≤B	Implication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	materialconditional materialconsequence implies imply
-A≥B	Converse Implication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	
+A≤B	Implication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	materialconditional materialconsequence implies imply therefore ∴⇒
+A≥B	Converse Implication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	because ∵⇐ if
 A>B	Nonimplication	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	abjunction
-A=B	XNOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	materialbiconditional eqv nxor bothorneither exclusivenor
-A≠B	XOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	exclusivedisjunction eor exor
+A=B	XNOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	materialbiconditional eqv nxor bothorneither exclusivenor materialequivalence ⇔ iff
+A≠B	XOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	exclusivedisjunction eor exor ⊕⊻
 A∧B	AND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	conjunction caret wedge hat circumflex
 A∨B	OR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek
 A⍲B	NAND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial
@@ -106,7 +106,7 @@ X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function	Non-
 X⍷Y	Occurrences of entire array X within Y	Primitive	Dyadic Function	Non-scalar Function	Sets	findin epsilonunderbar search locate
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	match equalunderbar identical
 X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function	Non-scalar Function	Sets	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
-Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	tilde butnot without except setdifference setsubtraction
+Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	tilde butnot without except setdifference setsubtraction setminus ∖
 Xv∪Yv	Union: Xv,Yv~Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	cup union downshoe setor
 Xv∩Yv	Intersection: (Xv∊Yv)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	cap intersection upshoe setand
 ⊃Y	First item of Y	Primitive	Monadic Function	Non-scalar Function	Selection	disclose rightshoe first unbox open contentof
@@ -170,8 +170,8 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 int.frac	Decimal Point	Syntax	Array		Expression	decimal point period rational
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento scale mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	complex plusitimes imaginary
-]	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
-)	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
+]name	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
+)name	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
 X[I;J;…]	Indexing	Syntax	Dyadic Function	Non-scalar Function	Selection	squarebrackets indexing subscript choose
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
@@ -210,7 +210,7 @@ f;Y	Tradfn/Tradop Name Localisation	Syntax			Definition	indexing axes indices lo
 ∇∇	Dop Self	Primitive	Monadic Function;Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse operator triangledown downtriangle carrot
 name f←Y	Modified Assignment	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow assignment gets is copula let redefine name naming denotes means inplace update
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow assignment gets is copula let redefine name naming denotes means inplace update
-⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none
+⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅
 bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	guard if conditional ternary
 errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try
 (+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean
@@ -220,60 +220,65 @@ X(∨/⍷)Y	Is X a Subarray of Y	Tacit	Dyadic Function		Structural	contains has 
 Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous
-(⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	round closestinteger
-×⍨N	Square	Tacit	Monadic Function		Mathematical	square
-(*∘3)N	Cube	Tacit	Monadic Function		Mathematical	cube
-(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot
-M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot
+(⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	round closestinteger nearestinteger nint
+×⍨N	Square	Tacit	Monadic Function		Mathematical	square ²
+(*∘3)N	Cube	Tacit	Monadic Function		Mathematical	cube ³
+(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot √
+M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot √
 +⍨N	2×N	Tacit	Monadic Function		Mathematical	double
 2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	parity odd
-(~2∘|)J	Is J even?	Tacit	Monadic Function		Mathematical	even
-+⌿N	Sum of N	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma
-×⌿N	Product of N	Tacit	Monadic Function		Mathematical	product enlargedpi bigpi capitalpi
+(~2∘|)J	J is Even	Tacit	Monadic Function		Mathematical	even
++⌿N	Sum of N	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑Σ
+×⌿N	Product of N	Tacit	Monadic Function		Mathematical	product enlargedpi bigpi capitalpi ∏Π
 ∘.×⍨∘⍳Js	Multiplication Table for Numbers up to Js	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable
-~0∘∊	All	Tacit	Monadic Function		Boolean/Logical	forall true givenany tautology universalquantification
-1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification
+~0∘∊	All	Tacit	Monadic Function		Boolean/Logical	forall true givenany tautology universalquantification ∀
+1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃
 0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot
 (~1∘∊)B	Not Any	Tacit	Monadic Function		Boolean/Logical	none notany
 (⍳≢)Y	Indices of Major Cells of Y	Tacit	Monadic Function		Index Generation	enumerate number count
 (,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffle randompermutation
-N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct matrixmultiply
+N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct matrixmultiply ∙⋅·
 (1≥∘|≡)Y	Is Y a Simple Array?	Tacit	Monadic Function		Structural	simple
 (2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Structural	nested
-(0>≡)Y	Does Y have non-Uniform depth?	Tacit	Monadic Function		Structural	ragged nonorthogonal nonrectangular
-(0≤≡)Y	Does Y have Uniform depth?	Tacit	Monadic Function		Structural	uniform orthogonal rectangular
-(⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Structural	scalar
-(1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Structural	singleton unit sole one
+(0>≡)Y	Y has Non-Uniform Depth	Tacit	Monadic Function		Structural	ragged nonorthogonal nonrectangular
+(0≤≡)Y	Y has Uniform Depth	Tacit	Monadic Function		Structural	uniform orthogonal rectangular
+(⍬≡⍴)Y	Y is a Scalar	Tacit	Monadic Function		Structural	scalar
+(1=×/∘⍴)Y	Y is a Singleton	Tacit	Monadic Function		Structural	singleton unit sole one
 (⊃0⍴⊂)Y	Type (converts charcters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences deltas changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
+Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (∘.×∘1 ¯1)N	±N	Tacit	Monadic Function		Mathematical	plusminus
+(∘.×∘¯1 1)N	∓N	Tacit	Monadic Function		Mathematical	minusplus
 (⍋⍋)Y	Cardinals Up	Tacit	Monadic Function		Index Generation	ascendingcardinalnumbers
 (⍋⍒)Y	Cardinals Down	Tacit	Monadic Function		Index Generation	descendingcardinalnumbers
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil
-(2=0+.=⍳|⊢)Ns	Is Ns a Prime?	Tacit	Monadic Function		Mathematical	isprime primality
-Xv(∧/∊)Yv	Is Xv a Subset of Yv	Tacit	Dyadic Function		Sets	subset containedin
-Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv	Tacit	Dyadic Function		Sets	superset contains
+(2=0+.=⍳|⊢)Ns	Ns is a Prime	Tacit	Monadic Function		Mathematical	isprime primality
+I(0=|)J	I Divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
+I(0≠|)J	I does Not Divide J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∤
+Xv(∧/∊)Yv	Is Xv a Subset of Yv	Tacit	Dyadic Function		Sets	subset containedin ⊆
+Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv	Tacit	Dyadic Function		Sets	superset contains ⊇
 (○÷180)∘×N	N Degrees in Radians	Tacit	Monadic Function		Mathematical	radians
 (180÷○1)∘×N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	degrees
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	digits base10 decimal
 M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
 1∘|N	Fractional Part of N	Tacit	Monadic Function		Mathematical	fractional
 (!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma
+Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖
 Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	indexoflargest
 (⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	indexofsmallest
 (⊢⍉⍨⍴=⍴)Y	Diagonal	Tacit	Monadic Function		Structural	majordiagonal
 (⌽⍉⍨⍴=⍴)Y	Anti-diagonal	Tacit	Monadic Function		Structural	minordiagonal
-(0∊⍴)Y	Is Y an Empty Araay?	Tacit	Monadic Function		Structural	isempty isvoid isnull
+(0∊⍴)Y	Is Y an Empty Array	Tacit	Monadic Function		Structural	isempty isvoid isnull
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort order up increasing
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort order down decreasing
-(1∧.=2</⊢)Nv	Strictly Increasing?	Tacit	Monadic Function		Mathematical	ascending rising up order
-(1∧.=2>/⊢)Nv	Strictly Decreasing?	Tacit	Monadic Function		Mathematical	ascending rising up order
-(1∧.=2≤/⊢)Nv	Non-decreasing?	Tacit	Monadic Function		Mathematical	descending falling down order
-(1∧.=2>/⊢)Nv	Non-increasing?	Tacit	Monadic Function		Mathematical	descending falling down order
+(1∧.=2</⊢)Nv	Nv is Strictly Increasing	Tacit	Monadic Function		Mathematical	ascending rising up order
+(1∧.=2>/⊢)Nv	Nv is Strictly Decreasing	Tacit	Monadic Function		Mathematical	ascending rising up order
+(1∧.=2≤/⊢)Nv	Nv is Non-decreasing	Tacit	Monadic Function		Mathematical	descending falling down order
+(1∧.=2>/⊢)Nv	Nv is Non-increasing	Tacit	Monadic Function		Mathematical	descending falling down order
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
 (¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	arccosecant acsc acosec arcuscosecant
