@@ -20,6 +20,7 @@
           search:{search:(s?s:"")}
         });
       });
+      if(null!=(new URLSearchParams(window.location.search)).get("w")){$("body").addClass("w")};
     });
     </script>
     <style>
@@ -27,12 +28,14 @@
     @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(apl385.ttf)}
     *{font-family:'APL333'!important;border:none!important}
     body{filter:invert(.9);background:#000c}
+    body.w{filter:invert(0);background:#0001}
     p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
     a{position:absolute;z-index:1;color:unset}
     .dataTables_filter{text-align:right!important}
     input{width:calc(100vw - 12em)}
     th{background:unset!important;cursor:unset!important}
     td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
+    i{position:absolute;bottom:0;right:0;font-style:normal;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
     </style>
     <link rel="shortcut icon" href="favicon.ico"/>
   </head>
@@ -49,4 +52,5 @@
     <th class="never"><!--keywords--></th>
   </tr></thead></table>
   </body>
+  <i onclick='$("body").toggleClass("w")'>🔅︎︎</i>
 </html>
