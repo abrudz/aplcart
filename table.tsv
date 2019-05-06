@@ -193,9 +193,9 @@ op←{⍵⍵ ⍺}	Dop	Syntax	Dyadic Function	Dyadic Operator	Definition	direct d
 {R}←f Y	Shy Tradfn/Tradop Result	Syntax			Definition	curlybraces function operator shy hideresult traditional
 {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator optional default ambivalent variadic traditional
 f;Y	Tradfn/Tradop Name Localisation	Syntax			Definition	indexing axes indices localisation localization shadow variable names scope
-←⍞	Character Input from Stdin	Syntax	Array		Expression	quotequad quadquote input output characterinput rawinput stdin stderr
-←⎕	Evaluated Input from Stdin	Syntax	Array		Expression	quad evaluatedinput stdout
-⍞←	Output to Stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote input output characterinput rawinput stdin stderr
+←⍞	Character Input from Stdin	Syntax	Array		Expression	quotequad quadquote input characterinput rawinput stdin
+←⎕	Evaluated Input from Stdin	Syntax	Array		Expression	quad evaluatedinput
+⍞←	Output to Stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote output stderr
 ⎕←	Output to Stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput stdout
 '	Character	Syntax	Array		Expression	quote apostrophe string text character
 ¯	Negative	Syntax	Array		Expression	macron negative highminus minus
@@ -349,3 +349,60 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z
 ⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9
 ⎕NULL	A reference to the null item	System	Constant		System Function	void emptycell .net nil
+0::any error	Covers all errors (errors 1–999)				Error Message	try catch errorhandling trapping exception
+1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	size memory resources maxws ⎕wa
+2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	parser parsing
+3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				Error Message	bounds limits overflow beyond dimensions length
+4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				Error Message	dimensions conformability
+5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				Error Message	conformability
+6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				Error Message	
+7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				Error Message	
+10::LIMIT ERROR	A system limit is exceeded				Error Message	
+11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				Error Message	
+12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				Error Message	
+16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				Error Message	
+18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				Error Message	
+19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				Error Message	
+20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				Error Message	
+21::FILE FULL	Operation would cause the file to exceed its file size limit				Error Message	
+22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				Error Message	
+23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				Error Message	
+24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				Error Message	
+25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	
+26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	
+28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				Error Message	oplock
+30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	⎕ftie fstie ⎕fcreate 
+31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				Error Message	
+32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				Error Message	⎕fcreate ⎕ftie ⎕fstie ⎕frename
+34::FILE SYSTEM NO SPACE	There is insufficient disk space				Error Message	
+35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	
+38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				Error Message	
+52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				Error Message	
+53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				Error Message	
+54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	
+55::FIELD SIZE ERROR					Error Message	
+56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	
+57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	
+58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	
+59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				Error Message	
+60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	
+61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				Error Message	
+62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				Error Message	
+63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				Error Message	
+70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				Error Message	
+71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				Error Message	
+72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				Error Message	
+76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				Error Message	
+84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	
+90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	
+92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	⎕avu unicode classic codepage characterset charset encoding sbcs
+99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	
+1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	try catch errorhandling trapping exception
+1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	
+1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	
+1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	
+1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	Error Message	end-of-file
+1005::EOF INTERRUPT	EOF when reading input from a file (when an input to APL is from a file)			Exception	Error Message	end-of-file
+1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	Error Message	character input stdin prompt
+1007::RESIZE	User resizes the ⎕SM window			Exception	Error Message	
+1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	Error Message	
