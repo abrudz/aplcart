@@ -10,7 +10,7 @@
     var ESC={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
     var table;
     $(document).ready(function(){
-      $.get("table.tsv",function(w){table=(esc(w)).split(/\r?\n/g).map(w=>w.split('\t')).filter(w=>w!="");
+      $.get("table.tsv",function(w){table=(esc(w)).split(/\r?\n/g).slice(1).map(w=>w.split('\t')).filter(w=>w!="");
         s=(new URLSearchParams(window.location.search)).get("s")
         $('table').DataTable({
           data:table,
