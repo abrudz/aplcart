@@ -313,3 +313,39 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 :Return	Abort (cut stack back one frame)	Syntax	Control	Keyword	Expression	abort →0 stop
 :Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation
+)CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty
+)CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
+)CONTINUE 	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close off
+)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax			System Command	import load include item object otherworkspace )pcopy
+)CS {space} 	Change current namespace 	Non-syntax			System Command	into out of # ⎕se
+)DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
+)ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify
+)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove expunge item object
+)HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens
+)LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
+)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax			System Command	open fetch get
+)NS {name}	Create new global namespace called name	Non-syntax			System Command	?NS
+)OFF	Terminate the session	Non-syntax			System Command	exit stop close
+)PCOPY ws {nms}	As )COPY but does not overwrite existing objects	Non-syntax			System Command	import load include item object otherworkspace )copy
+)RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
+)SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store
+)SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
+)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) 	Non-syntax			System Command	display stack
+)SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
+)SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals
+)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading
+)WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename
+)XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax			System Command	open fetch get quiet
+)CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4
+)EVENTS {nm}	List events in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯8.6
+)FNS {nm}	List functions in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.1 ¯3.2 ¯3.3 ¯3.6
+)INTERFACES {nm}	List interfaces in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.5 ¯9.7
+)METHODS {nm}	List methods in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.6
+)OBJECTS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯2.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
+)OBS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯2.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
+)OPS {nm}	List operatoris in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯4.1 ¯4.2 ¯4.3
+)PROPS {nm}	List properties in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.3
+)VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6
+⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z
+⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9
+⎕NULL	A reference to the null item	System	Constant		System Function	void emptycell .net nil
