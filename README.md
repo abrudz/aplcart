@@ -6,6 +6,10 @@
 
 - Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to white theme.
 
+## Contributing
+
+Wrote cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
+
 ## Navigation
 
 ### Access keys
