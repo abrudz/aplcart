@@ -119,8 +119,8 @@ Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function	Non-scalar Functio
 Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	compress slashbar solidus filter first
 Iv\Y	Expand last axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	reversesolidus slope
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	reversesolidusbar slopebar
-Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut
-Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut
+Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
+Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
 ⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call
 ⍕Y	Format: Character representation of Y	Primitive	Monadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation
 NS⍎Dv	Execute Dv within namespace NS	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call inside
@@ -215,10 +215,10 @@ name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow assignment g
 bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	guard if conditional ternary
 errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try
 (+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean
-Xs(≠⊆⊢)Y	Cut Y at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment
-X(1↓¨,⊂⍨⊣=,)Y	Split Y at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment
+Xs(≠⊆⊢)Y	Cut Y at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment separate
+X(1↓¨,⊂⍨⊣=,)Y	Split Y at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment separate
 X(∨/⍷)Y	Is X a Subarray of Y	Tacit	Dyadic Function		Structural	contains has isin issubarray appearsin
-Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide
+Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous
 (⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	round closestinteger nearestinteger nint
