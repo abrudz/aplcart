@@ -41,7 +41,7 @@ A≠B	XOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	exclusivedis
 A∧B	AND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	conjunction caret wedge hat circumflex
 A∨B	OR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek
 A⍲B	NAND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial
-A⍱B 	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial
+A⍱B	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial
 0∘N	cos ←→ sin: (1-N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary cop
 ¯1○N	Arcsin N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arcsine asin arcussinus
 ¯2○N	Arccos N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arccosine acos arcuscosinus
@@ -55,7 +55,7 @@ A⍱B 	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarr
 ¯10○N	+N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	complexconjugate
 ¯11○N	N×0J1	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	imaginary complex itimes
 ¯12○N	*N×0J1	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	antiphase phasor cis
-1○N	Sine N   	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus
+1○N	Sine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus
 2○N	Cosine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	cosinus
 3○N	Tangent N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	tanh
 4○N	sinh → cosh: (1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary coh
@@ -70,21 +70,21 @@ A⍱B 	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarr
 ⌹Nm	Matrix inverse ofNm (square Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide
 ⌹Nm	Matrix pseudo-inverse ofNm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function	Non-scalar Function	Mathematical	domino matrixdivide quaddivide
-M⊤N	Encode value N in number system M 	Primitive	Dyadic Function	Non-scalar Function	Mathematical	antibase tobase encode number downtack representation unpack tomixedradix toradix
+M⊤N	Encode value N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	antibase tobase encode number downtack representation unpack tomixedradix toradix
 M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	frombase decode uptack pack frommixedradix fromradix
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function	Non-scalar Function	Array Properties	dimensions rho
 ≡Y	Depth: Maximum level of nesting in Y (negative if uneven)	Primitive	Monadic Function	Non-scalar Function	Array Properties	equalunderbar
 ≢Y	Tally: Number of items in leading axis	Primitive	Monadic Function	Non-scalar Function	Array Properties	equalunderbarslash unequalunderbar count length cells
 ⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function	Non-scalar Function	Structural	leftshoe
 ⊆Y	Nest: Y if already nested, else scalar containing Y	Primitive	Monadic Function	Non-scalar Function	Structural	leftshoeunderbar encloseifsimple conditionalenclose nested boxsimple eis condencl
-↑Y 	Mix: Remove nesting	Primitive	Monadic Function	Non-scalar Function	Structural	uparrow
-↓Y 	Split: Nest sub-arrays	Primitive	Monadic Function	Non-scalar Function	Structural	downarrow
-∊Y 	Enlist: Simple vector from elements of Y	Primitive	Monadic Function	Non-scalar Function	Structural	flatten raze
-,[ax]Y 	Ravel with Axes: insert new axis or combine axes	Primitive	Monadic Function	Non-scalar Function	Structural	increaserank decreaserank reducerank comma
-,Y 	Ravel: Reshape into a vector	Primitive	Monadic Function	Non-scalar Function	Structural	comma flatten raze
-⍪Y 	Table: Reshape into 2-dimensional array	Primitive	Monadic Function	Non-scalar Function	Structural	commabar ravelcells flattencells razecells
-⌽Y 	Reverse last axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlestile mirror
-⊖Y 	Reverse leading axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebar rowel upset flip upend
+↑Y	Mix: Remove nesting	Primitive	Monadic Function	Non-scalar Function	Structural	uparrow
+↓Y	Split: Nest sub-arrays	Primitive	Monadic Function	Non-scalar Function	Structural	downarrow
+∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function	Non-scalar Function	Structural	flatten raze
+,[ax]Y	Ravel with Axes: insert new axis or combine axes	Primitive	Monadic Function	Non-scalar Function	Structural	increaserank decreaserank reducerank comma
+,Y	Ravel: Reshape into a vector	Primitive	Monadic Function	Non-scalar Function	Structural	comma flatten raze
+⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function	Non-scalar Function	Structural	commabar ravelcells flattencells razecells
+⌽Y	Reverse last axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlestile mirror
+⊖Y	Reverse leading axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebar rowel upset flip upend
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebackslash cant reverseaxes
 Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function	Non-scalar Function	Structural	mold form dimension array
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function	Non-scalar Function	Structural	circlestile
@@ -315,9 +315,9 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)CONTINUE 	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close off
+)CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close off
 )COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax			System Command	import load include item object otherworkspace )pcopy
-)CS {space} 	Change current namespace 	Non-syntax			System Command	into out of # ⎕se
+)CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove expunge item object
@@ -330,7 +330,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
 )SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) 	Non-syntax			System Command	display stack
+)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno)	Non-syntax			System Command	display stack
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals
 )TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading
@@ -371,7 +371,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	
 26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	
 28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				Error Message	oplock
-30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	⎕ftie fstie ⎕fcreate 
+30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	⎕ftie fstie ⎕fcreate
 31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				Error Message	
 32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				Error Message	⎕fcreate ⎕ftie ⎕fstie ⎕frename
 34::FILE SYSTEM NO SPACE	There is insufficient disk space				Error Message	
@@ -503,3 +503,6 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 (≢,)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tally all ⍴, number of elements items whole array scalars how many
+(+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sum all +⌿, total items
+(+/,)B	How many true	Tacit	Monadic Function		Boolean/Logical	sum all true how many
+(≢⍸)B	How many true	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all true how many
