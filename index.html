@@ -19,6 +19,7 @@
           searchDelay:250,
           search:{search:(s?s:"")}
         });
+        $("input").focus();
       });
       if(null!=(new URLSearchParams(window.location.search)).get("w")){$("body").addClass("w")};
     });
@@ -32,6 +33,7 @@
     p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
     a{position:absolute;z-index:1;color:unset}
     .dataTables_filter{text-align:right!important}
+    #DataTables_Table_0_info{text-align:unset}
     input{width:calc(100vw - 12em)}
     th{background:unset!important;cursor:unset!important}
     td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
