@@ -1,10 +1,10 @@
 # APLcart – <sub><sup>*A novel approach to finding your way in APL*</sup></sub>
 
-Click [here](https://abrudz.github.io/aplcart/) and start typing.
+- Click [here](https://abrudz.github.io/aplcart/) and start typing.
 
-Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code.
+- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code.
 
-Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to white theme.
+- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to white theme.
 
 ## Navigation
 
