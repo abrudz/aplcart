@@ -16,14 +16,6 @@ While holding <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>�
 - <kbd>A</kbd> to go to the **A**PLcart source code
 - <kbd>W</kbd> to toggle **W**hite theme
 
-### Focusing
-
-With focus on the Search field,
-
-- <kbd>Tab ↹</kbd> to focus on the result list (for scrolling)
-- <kbd>⇧ Shift</kbd>+<kbd>Tab ↹</kbd> to focus on the "APLcart" link to the source code
-- <kbd>⇧ Shift</kbd>+<kbd>Tab ↹</kbd>, <kbd>⇧ Shift</kbd>+<kbd>Tab ↹</kbd> to focus on the dark/light theme toggle button
-
 ### URL API
 
 After [abrudz.github.io/aplcart](https://abrudz.github.io/aplcart) you can add `?` and the following options, separated by `&` if you want both:
