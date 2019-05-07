@@ -11,14 +11,16 @@
     var table;
     $(document).ready(function(){
       $.get("table.tsv",function(w){table=(esc(w)).split(/\r?\n/g).slice(1).map(w=>w.split('\t')).filter(w=>w!="");
-        s=(new URLSearchParams(window.location.search)).get("s")
+        s=(new URLSearchParams(window.location.search)).get("q")
         $('table').DataTable({
           data:table,
           paging:false,
           scrollY:"calc(100vh - 110px)",
           searchDelay:250,
-          search:{search:(s?s:"")}
+          search:{search:(s?s:"")},
+          "language":{"search": "query:"}
         });
+        $("input").attr("accesskey","q")
         $("input").focus();
       });
       if(null!=(new URLSearchParams(window.location.search)).get("w")){$("body").addClass("w")};
@@ -32,17 +34,19 @@
     body.w{filter:invert(0);background:rgba(0,0,0,0.1)}
     p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
     a{position:absolute;z-index:1;color:unset}
+    #w{text-decoration:unset;bottom:0;right:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+    .dataTables_scrollHeadInner{padding-left:0!important}
     .dataTables_filter{text-align:right!important}
     #DataTables_Table_0_info{text-align:unset}
-    input{width:calc(100vw - 12em)}
+    input{width:calc(100vw - 10em)}
     th{background:unset!important;cursor:unset!important}
     td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
-    i{position:absolute;bottom:0;right:0;font-style:normal;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
     </style>
     <link rel="shortcut icon" href="favicon.ico"/>
   </head>
   <body>
-  <a href="https://github.com/abrudz/aplcart" title="Source on GitHub">APLcart</a> 
+  <a accesskey="w" id="w" href="#" onclick='$("body").toggleClass("w")' title="Toggle light/dark mode">🔅︎︎</a>
+  <a accesskey="a" href="https://github.com/abrudz/aplcart" title="Source on GitHub">APLcart</a> 
   <p>X,Y:any M,N:num I,J:int A,B:Bool C,D:char f,g,h:fn ax:axis s:scal v:vec m:mat</p>
   <table class="responsive ui"><thead><tr>
     <th> <!-- Syntax --></th>
@@ -54,5 +58,4 @@
     <th class="never"><!--keywords--></th>
   </tr></thead></table>
   </body>
-  <i onclick='$("body").toggleClass("w")' title="Toggle light/dark mode">🔅︎︎</i>
 </html>

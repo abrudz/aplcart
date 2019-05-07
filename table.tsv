@@ -10,8 +10,8 @@ SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 ⍟N	Natural logarithm of N	Primitive	Monadic Function	Scalar Function	Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662
 ○N	pi times N	Primitive	Monadic Function	Scalar Function	Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π
 !N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek
-?J	Random number selected from ⍳J	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randominteger
-?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randomfloat
+?J	Random number selected from ⍳J	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randominteger interrogationpoint query eroteme
+?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
 ~B	Logical Inverse: 0=B	Primitive	Monadic Function	Scalar Function	Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬
 M+N	Add N to M	Primitive	Dyadic Function	Scalar Function	Mathematical	plus addition
 M-N	Subtract N from M	Primitive	Dyadic Function	Scalar Function	Mathematical	minus dash hyphen subtraction difference
