@@ -1,3 +1,5 @@
+# Contributing
+
 Feel free to submit PR, especially against [table.tsv](table.tsv) which is the database. It is a really simple TSV file, 
 
 - `<`, `>`, `&`, `'`, and `"` are automatically escaped
