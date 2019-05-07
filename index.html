@@ -2,60 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="datatables.min.css"/>
-    <script type="text/javascript" src="datatables.min.js"></script>
-    <title>APLcart - Find your way in APL</title>
-    <script>
-    function esc(s){return s.replace(/[<>&'"]/g,x=>ESC[x])};
-    var ESC={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
-    var table;
-    $(document).ready(function(){
-      $.get("table.tsv",function(w){table=(esc(w)).split(/\r?\n/g).slice(1).map(w=>w.split('\t')).filter(w=>w!="");
-        s=(new URLSearchParams(window.location.search)).get("q")
-        $('table').DataTable({
-          data:table,
-          paging:false,
-          scrollY:"calc(100vh - 110px)",
-          searchDelay:250,
-          search:{search:(s?s:"")},
-          "language":{"search": "query:"}
-        });
-        $("input").attr("accesskey","q")
-        $("input").focus();
-      });
-      if(null!=(new URLSearchParams(window.location.search)).get("w")){$("body").addClass("w")};
-    });
-    </script>
-    <style>
-    @font-face{font-family:'APL333';src:local('APL333'),url(apl333.ttf)}
-    @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(apl385.ttf)}
-    *{font-family:'APL333'!important;border:none!important}
-    body{filter:invert(.9);background:rgba(0,0,0,0.8);overflow:hidden}
-    body.w{filter:invert(0);background:rgba(0,0,0,0.1)}
-    p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
-    a{position:absolute;z-index:1;color:unset}
-    #w{text-decoration:unset;bottom:0;right:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-    .dataTables_scrollHeadInner{padding-left:0!important}
-    .dataTables_filter{text-align:right!important}
-    #DataTables_Table_0_info{text-align:unset}
-    input{width:calc(100vw - 10em)}
-    th{background:unset!important;cursor:unset!important}
-    td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
-    </style>
     <link rel="shortcut icon" href="favicon.ico"/>
+    <title>APLcart - Find your way in APL</title>
+    <link rel="stylesheet" href="datatables.min.css"/>
+    <link rel="stylesheet" href="aplcart.css"/>
+    <script src="datatables.min.js"></script>
+    <script src="aplcart.js"></script>
   </head>
   <body>
-  <a accesskey="w" id="w" href="#" onclick='$("body").toggleClass("w")' title="Toggle light/dark mode">🔅︎︎</a>
-  <a accesskey="a" href="https://github.com/abrudz/aplcart" title="Source on GitHub">APLcart</a> 
-  <p>X,Y:any M,N:num I,J:int A,B:Bool C,D:char f,g,h:fn ax:axis s:scal v:vec m:mat</p>
-  <table class="responsive ui"><thead><tr>
-    <th> <!-- Syntax --></th>
-    <th> <!-- Result --></th>
-    <th class="never"><!--Class--></th>
-    <th class="never"><!--Type--></th>
-    <th class="never"><!--Group--></th>
-    <th class="never"><!--Categories--></th>
-    <th class="never"><!--keywords--></th>
-  </tr></thead></table>
+   <a accesskey="w" id="w" href="#" onclick='$("body").toggleClass("w")' title="Toggle light/dark mode">🔅︎︎</a>
+   <a accesskey="a" href="https://github.com/abrudz/aplcart" title="Source on GitHub">APLcart</a> 
+   <p>X,Y:any M,N:num I,J:int A,B:Bool C,D:char f,g,h:fn ax:axis s:scal v:vec m:mat</p>
+   <table class="responsive ui"><thead><tr>
+     <th> <!-- Syntax --></th>
+     <th> <!-- Result --></th>
+     <th class="never"><!--Class--></th>
+     <th class="never"><!--Type--></th>
+     <th class="never"><!--Group--></th>
+     <th class="never"><!--Categories--></th>
+     <th class="never"><!--keywords--></th>
+   </tr></thead></table>
   </body>
 </html>
