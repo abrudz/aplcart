@@ -224,7 +224,7 @@ Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		St
 (⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	round closestinteger nearestinteger nint
 ×⍨N	Square	Tacit	Monadic Function		Mathematical	square ²
 (*∘3)N	Cube	Tacit	Monadic Function		Mathematical	cube ³
-(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot √
+(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt √
 M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot √
 +⍨N	2×N	Tacit	Monadic Function		Mathematical	double
 2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	parity odd
