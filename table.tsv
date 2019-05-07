@@ -502,3 +502,4 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 ]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
+≢,	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tally all ⍴, number of elements items whole array scalars how many
