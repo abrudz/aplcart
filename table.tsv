@@ -506,3 +506,4 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sum all +⌿, total items
 (+/,)B	How many true	Tacit	Monadic Function		Boolean/Logical	sum all true how many
 (≢⍸)B	How many true	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all true how many
+(⍴⍴)Y	Rank	Tacit	Monadic Function		Array Properties	number of dimensions vector how many axes axis
