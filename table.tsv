@@ -71,7 +71,7 @@ A⍱B	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarro
 ⌹Nm	Matrix pseudo-inverse ofNm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function	Non-scalar Function	Mathematical	domino matrixdivide quaddivide
 M⊤N	Encode value N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	antibase tobase encode number downtack representation unpack tomixedradix toradix
-M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	frombase decode uptack pack frommixedradix fromradix
+M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	frombase decode uptack pack frommixedradix fromradix polynomial basevalue
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function	Non-scalar Function	Array Properties	dimensions rho
 ≡Y	Depth: Maximum level of nesting in Y (negative if uneven)	Primitive	Monadic Function	Non-scalar Function	Array Properties	equalunderbar
 ≢Y	Tally: Number of items in leading axis	Primitive	Monadic Function	Non-scalar Function	Array Properties	equalunderbarslash unequalunderbar count length cells
@@ -121,7 +121,7 @@ Iv\Y	Expand last axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selecti
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	reversesolidusbar slopebar
 Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
 Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
-⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call
+⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call parseexpression
 ⍕Y	Format: Character representation of Y	Primitive	Monadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation
 NS⍎Dv	Execute Dv within namespace NS	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call inside
 Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation round width
@@ -140,7 +140,7 @@ f¨Y	Each: f on items of Y	Primitive	Monadic Function	Monadic Operator	Function 
 X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operator	Function Application	foreach diaeresis map
 X f⌸Y	Key: f on items of Y grouped by unique X values	Primitive	Dyadic Function	Monadic Operator	Sets	equalquad quadequal group classify bin
 f⌸Y	Key: f on first axis indices of Y grouped by unique Y values	Primitive	Monadic Function	Monadic Operator	Sets	equalquad quadequal unique classify bin
-f⍨Y	Selfie: same as Y f Y	Primitive	Monadic Function	Monadic Operator	Function Application	commute tildediaeresis frown
+f⍨Y	Selfie: same as Y f Y	Primitive	Monadic Function	Monadic Operator	Function Application	commute tildediaeresis frown duplicate
 X f&Y	Spawn: f between X and Y in a new thread	Primitive	Monadic Function	Monadic Operator	System	ampersand spawn et and greenthread launch run
 Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign
 X f⍨Y	Commute: same as Y f X	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis swap frown
