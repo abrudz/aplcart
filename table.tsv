@@ -316,17 +316,17 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
 )CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off
-)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax			System Command	import use load transfer include item object otherworkspace )pcopy
+)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include item object otherworkspace )pcopy
 )CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
-)ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify
-)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove expunge item object
+)ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify code source definition define value ⎕ed
+)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item object
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
-)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax			System Command	open fetch get bringin
+)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin
 )NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue
-)PCOPY ws {nms}	As )COPY but does not overwrite existing objects	Non-syntax			System Command	import load include item object otherworkspace )copy
+)PCOPY ws {nms}	As )COPY but does not overwrite existing objects	Non-syntax		File Access	System Command	import load include item object otherworkspace )copy
 )RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
 )SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store ⎕save
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
@@ -335,7 +335,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals
 )TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename
-)XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax			System Command	open fetch get quiet latentexpression autoexec boot
+)XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4
 )EVENTS {nm}	List events in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯8.6
 )FNS {nm}	List functions in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.1 ¯3.2 ¯3.3 ¯3.6
@@ -527,11 +527,23 @@ r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data 
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
 user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all
-{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	System	System Function	import load use transfer import load include item object otherworkspace )copy
+{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy
 {num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
-⎕LOAD file	Load saved workspace	System	Function	System	System Function	open fetch get bringin
+⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin
 ⎕OFF	Terminate the APL session	System	Constant	System	System Function	exit stop close )off
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include
-{r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	System	System Function	archive store )save
+{r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	File Access	System Function	archive store )save
 ⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities
 numvec←⎕TS	Current time (y m d h m s ms)	System	Constant	System	System Function	now current localtimestamp datetime
+r←{selector} ⎕AT names	Syntactical attributes of named functions or operators	System	Function	System	System Function	valence arity shyness monadicdyadicambivalent functionoperator variadic properties
+r←⎕CR name	Source of function or operator as a character matrix	System	Function	Data Conversion	System Function	code representation
+{names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	open modify code source definition define value )ed
+{boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase
+{r}←⎕FX cr|nr|vr|or	Name of fn or op defined from its matrix, nested, vector or object representation (or failing line no)	System	Function	Data Conversion	System Function	define fix code source function operator
+{level} ⎕LOCK name|ref	Hide source and optionally disallow suspension	System	Function	System	System Function	secure closedsource encrypt
+r←⎕NR name	Source of function or operator as a nested vector	System	Function	Data Conversion	System Function	code representation vtv character
+state|data←{settings} ⎕PROFILE action	"Profile" CPU or elapsed time consumption of code	System	Function	System	System Function	performance monitor statistics stats observe processor resources
+names←⎕REFS name	List the names referenced by a function	System	Function	System	System Function	xref crossreference identifiers symbols
+{linenos}←{linenos} ⎕STOP name	Enable/report the current state of stops for a function	System	Function	System	System Function	halt inspect breakpoint
+{linenos}←{linenos} ⎕TRACE name	Enable/report the current state of tracing for a function	System	Function	System	System Function	monitor
+r←⎕VR name	Source of function or operator as a simple vector	System	Function	Data Conversion	System Function	code representation
