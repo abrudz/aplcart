@@ -502,9 +502,25 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 ]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces
-(≢,)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tally all ⍴, number of elements items whole array scalars how many
-(+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sum all +⌿, total items
-(+/,)B	How many true	Tacit	Monadic Function		Boolean/Logical	sum all true how many
-(≢⍸)B	How many true	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all true how many
-(⍴⍴)Y	Rank	Tacit	Monadic Function		Array Properties	number of dimensions vector how many axes axis
-(≢⍴)Y	Rank	Tacit	Monadic Function		Array Properties	number of dimensions vector how many axes axis
+(≢,)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole array scalars countall ×/⍴ ×⌿⍴
+(+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal items
+(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue
+(≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue
+(≢⍴)Y	Rank (number of dimensions) of Y	Tacit	Monadic Function		Array Properties	howmanyaxes numberofaxes axiscount ⍴⍴
+X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith
+captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor
+r←⎕CSV data	Convert CSV data data to APL array	System	Function	Data Conversion	System Function	tsv table import parse commaseparatedvalues tabseparatedvalues characterseparatedvalues
+r←data {header} ⎕CSV format_spec	Convert APL array to CSV data	System	Function	Data Conversion	System Function	tsv table export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues
+r←type ⎕DR x	Interpret internal representation as array of type type	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
+type←⎕DR x	Return internal data type (type) of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
+r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter
+r←{flag} ⎕JSON data	APL array from (flag=0) or to (flag=1) JSON text	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport generateparse
+name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array
+{name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
+r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex search find locate perlcompatibleregularexpression
+r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression
+captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor linux macos aix rasbianpios
+r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 encoding ucs-4 ucs4 ucs-2 ucs2 iso10646 ord chr ascii latin-1 windows-1252 ansi
+⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
+valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata
+r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtml
