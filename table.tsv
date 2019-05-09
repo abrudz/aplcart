@@ -313,22 +313,22 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 :Return	Abort (cut stack back one frame)	Syntax	Control	Keyword	Expression	abort →0 stop
 :Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation
-)CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty
+)CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close off
-)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax			System Command	import load include item object otherworkspace )pcopy
+)CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off
+)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax			System Command	import use load transfer include item object otherworkspace )pcopy
 )CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove expunge item object
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
-)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax			System Command	open fetch get
-)NS {name}	Create new global namespace called name	Non-syntax			System Command	?NS
-)OFF	Terminate the session	Non-syntax			System Command	exit stop close
+)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax			System Command	open fetch get bringin
+)NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
+)OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue
 )PCOPY ws {nms}	As )COPY but does not overwrite existing objects	Non-syntax			System Command	import load include item object otherworkspace )copy
 )RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
-)SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store
+)SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store ⎕save
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
 )SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno)	Non-syntax			System Command	display stack
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
@@ -524,3 +524,14 @@ r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Func
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
 valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtml
+r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
+user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
+⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all
+{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	System	System Function	import load use transfer import load include item object otherworkspace )copy
+{num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
+⎕LOAD file	Load saved workspace	System	Function	System	System Function	open fetch get bringin
+⎕OFF	Terminate the APL session	System	Constant	System	System Function	exit stop close )off
+⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include
+{r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	System	System Function	archive store )save
+⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities
+numvec←⎕TS	Current time (y m d h m s ms)	System	Constant	System	System Function	now current localtimestamp datetime
