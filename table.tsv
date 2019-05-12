@@ -122,9 +122,9 @@ Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function	Non-scalar Function	Se
 Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
 Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function	Non-scalar Function	Selection	segment chop split cut separate
 ⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call parseexpression
-⍕Y	Format: Character representation of Y	Primitive	Monadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation
+⍕Y	Format: Character representation of Y	Primitive	Monadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation ⎕fmt ⎕df
 NS⍎Dv	Execute Dv within namespace NS	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call inside
-Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation round width
+Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function	Non-scalar Function	Data Conversion	downtackjot thorn itoa tostringify totext representation round width ⎕fmt
 ⌷Y	Materialise items of Y in workspace	Primitive	Monadic Function	Non-scalar Function	Identity	squishquad squad materialise materialize defaultproperty elements items
 ⊣Y	Same: Y	Primitive	Monadic Function	Non-scalar Function	Identity	lev lefttack identity defer ignore where
 ⊢Y	Same: Y	Primitive	Monadic Function	Non-scalar Function	Identity	dex righttack sameright identity default
@@ -513,7 +513,7 @@ r←⎕CSV data	Convert CSV data data to APL array	System	Function	Data Conversi
 r←data {header} ⎕CSV format_spec	Convert APL array to CSV data	System	Function	Data Conversion	System Function	tsv table export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←type ⎕DR x	Interpret internal representation as array of type type	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 type←⎕DR x	Return internal data type (type) of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
-r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter
+r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter ⎕df ⍕
 r←{flag} ⎕JSON data	APL array from (flag=0) or to (flag=1) JSON text	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport generateparse
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
@@ -547,3 +547,14 @@ names←⎕REFS name	List the names referenced by a function	System	Function	Sys
 {linenos}←{linenos} ⎕STOP name	Enable/report the current state of stops for a function	System	Function	System	System Function	halt inspect breakpoint
 {linenos}←{linenos} ⎕TRACE name	Enable/report the current state of tracing for a function	System	Function	System	System Function	monitor
 r←⎕VR name	Source of function or operator as a simple vector	System	Function	Data Conversion	System Function	code representation
+⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base
+class_hierarchy←⎕CLASS ref	Class hierarchy for a class|instance	System	Function	System	System Function	parents ancestors
+ref←{class|interface} ⎕CLASS instance	Extract specific interface to an instance	System	Function	Data Conversion	System Function	parents ancestors
+{old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this
+old_df←⎕DF char_array	Set the display form of the current space	System	Function	Data Conversion	System Function	visualrepresentation format ⍕ ⎕fmt
+{ref}←{flags} ⎕FIX source	Define objects from source (vector of vectors or file name starting with 'file://')	System	Function	Data Conversion	System Function	define ⎕fx code source function operator namespace class interface
+refs←⎕INSTANCES class	Current instances of class	System	Function	Data Conversion	System Function	children derived
+instance←⎕NEW class {conargs}	Create an instance of class	System	Function	Data Conversion	System Function	.new
+{me|ref}←{name} ⎕NS names|ns	Create (optionally named) namespace copying names or contents of ns into it	System	Function	Data Conversion	System Function	object make new construct collect
+script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	System Function	representation script definition
+ref←⎕THIS	Reference to the current namespace	System	Function	Data Conversion	System Function	here me myself
