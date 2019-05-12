@@ -508,7 +508,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 (≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue
 (≢⍴)Y	Rank (number of dimensions) of Y	Tacit	Monadic Function		Array Properties	howmanyaxes numberofaxes axiscount ⍴⍴
 X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith
-captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor
+captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor ⎕sh )cmd
 r←⎕CSV data	Convert CSV data data to APL array	System	Function	Data Conversion	System Function	tsv table import parse commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←data {header} ⎕CSV format_spec	Convert APL array to CSV data	System	Function	Data Conversion	System Function	tsv table export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←type ⎕DR x	Interpret internal representation as array of type type	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
@@ -519,7 +519,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex search find locate perlcompatibleregularexpression
 r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression
-captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor linux macos aix rasbianpios
+captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor linux macos aix rasbianpios ⎕cmd )sh
 r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 encoding ucs-4 ucs4 ucs-2 ucs2 iso10646 ord chr ascii latin-1 windows-1252 ansi
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
 valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata
@@ -527,7 +527,7 @@ r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data 
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
 user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all
-{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy
+{0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy
 {num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
 ⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin
 ⎕OFF	Terminate the APL session	System	Constant	System	System Function	exit stop close )off
@@ -540,7 +540,7 @@ r←⎕CR name	Source of function or operator as a character matrix	System	Funct
 {names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	open modify code source definition define value )ed
 {boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase
 {r}←⎕FX cr|nr|vr|or	Name of fn or op defined from its matrix, nested, vector or object representation (or failing line no)	System	Function	Data Conversion	System Function	define fix code source function operator
-{level} ⎕LOCK name|ref	Hide source and optionally disallow suspension	System	Function	System	System Function	secure closedsource encrypt
+{level}←{level} ⎕LOCK name|ref	Hide source and optionally disallow suspension	System	Function	System	System Function	secure closedsource encrypt
 r←⎕NR name	Source of function or operator as a nested vector	System	Function	Data Conversion	System Function	code representation vtv character
 state|data←{settings} ⎕PROFILE action	"Profile" CPU or elapsed time consumption of code	System	Function	System	System Function	performance monitor statistics stats observe processor resources
 names←⎕REFS name	List the names referenced by a function	System	Function	System	System Function	xref crossreference identifiers symbols
@@ -583,3 +583,16 @@ r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	F
 {tn}←file ⎕FSTIE tn {pn}	Share-tie component file	System	Function	Component Files	System Function	dcf multiple parallel
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
 {tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf
+numvec←⎕LC	Lines at which each function on stack is suspended	System	Function	Component Files	System Function	linecounter number state
+⎕LX ←expression	Expression to be executed when workspace is loaded	System	Function	Component Files	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
+numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Component Files	System Function	itemtype
+names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally filtered	System	Function	Component Files	System Function	namelist
+space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Component Files	System Function	referencestateindicator namespaces suspended
+{r}←⎕SHADOW names	Make names local to most recently invoked defined fn	System	Function	Component Files	System Function	localise localize encapsulate shield scope
+names←⎕SI	Vector of names of functions on the stack	System	Function	Component Files	System Function	stateindicator
+bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Component Files	System Function	workspaceusage workspaceuse memoryconsumption
+r←⎕STACK	Definition of each function on the stack	System	Function	Component Files	System Function	state definitions
+r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Component Files	System Function	state definition
+bytes←⎕WA	Workspace available (unused)	System	Function	Component Files	System Function	freememory
+⎕WSID ←name	The name of the active workspace	System	Function	Component Files	System Function	filename currentworkspace
+names←⎕XSI	Full names of functions on the stack	System	Function	Component Files	System Function	extended state namespacepath references
