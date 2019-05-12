@@ -557,7 +557,7 @@ refs←⎕INSTANCES class	Current instances of class	System	Function	Data Conver
 instance←⎕NEW class {conargs}	Create an instance of class	System	Function	Data Conversion	System Function	.new
 {me|ref}←{name} ⎕NS names|ns	Create (optionally named) namespace copying names or contents of ns into it	System	Function	Data Conversion	System Function	object make new construct collect
 script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	System Function	representation script definition
-ref←⎕THIS	Reference to the current namespace	System	Function	Data Conversion	System Function	here me myself
+ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here me myself
 cn←x ⎕FAPPEND tn {pn}	Append x to end of file (optional passnumber)	System	Function	Component Files	System Function	dcf
 r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Files	System Function	dcf active usable accessible
 cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Function	Component Files	System Function	dcf check externalvariable
@@ -568,8 +568,8 @@ cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Functi
 r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
 {tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthread
 names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir
-names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Function	Component Files	System Function	dcf
-tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Function	Component Files	System Function	dcf access
+names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Constant	Component Files	System Function	dcf
+tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Constant	Component Files	System Function	dcf access
 r←pnames ⎕FPROPS tn {pn}	Current values of the named properties of file tn	System	Function	Component Files	System Function	dcf settings query get retreive
 r←nvpairs ⎕FPROPS tn {pn}	Set properties of file tn using name-value pairs	System	Function	Component Files	System Function	dcf settings update modify change
 ax_mx←⎕FRDAC tn {pn}	Read access matrix	System	Function	Component Files	System Function	dcf
@@ -583,22 +583,26 @@ r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	F
 {tn}←file ⎕FSTIE tn {pn}	Share-tie component file	System	Function	Component Files	System Function	dcf multiple parallel
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
 {tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf
-numvec←⎕LC	Lines at which each function on stack is suspended	System	Function	Component Files	System Function	linecounter number state
-⎕LX ←expression	Expression to be executed when workspace is loaded	System	Function	Component Files	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
+numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Component Files	System Function	linecounter number state
+⎕LX ←expression	Expression to be executed when workspace is loaded	System	Variable	Component Files	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
 numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Component Files	System Function	itemtype
 names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally filtered	System	Function	Component Files	System Function	namelist
 space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Component Files	System Function	referencestateindicator namespaces suspended
 {r}←⎕SHADOW names	Make names local to most recently invoked defined fn	System	Function	Component Files	System Function	localise localize encapsulate shield scope
-names←⎕SI	Vector of names of functions on the stack	System	Function	Component Files	System Function	stateindicator
+names←⎕SI	Vector of names of functions on the stack	System	Constant	Component Files	System Function	stateindicator
 bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Component Files	System Function	workspaceusage workspaceuse memoryconsumption
-r←⎕STACK	Definition of each function on the stack	System	Function	Component Files	System Function	state definitions
+r←⎕STACK	Definition of each function on the stack	System	Constant	Component Files	System Function	state definitions
 r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Component Files	System Function	state definition
-bytes←⎕WA	Workspace available (unused)	System	Function	Component Files	System Function	freememory
+bytes←⎕WA	Workspace available (unused)	System	Constant	Component Files	System Function	freememory
 ⎕WSID ←name	The name of the active workspace	System	Function	Component Files	System Function	filename currentworkspace
-names←⎕XSI	Full names of functions on the stack	System	Function	Component Files	System Function	extended state namespacepath references
+names←⎕XSI	Full names of functions on the stack	System	Constant	Component Files	System Function	extended state namespacepath references
 tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TID	The number of the current thread	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greethread
+tdno←⎕TID	The number of the current thread	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greethread
 {tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	Component Files	System Function	synchronisation synchronization parallel threading stop terminate greenthread
-⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TNUMS	Report the numbers of all current threads	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greenthread
 tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+{tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
