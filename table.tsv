@@ -300,7 +300,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding display
 ⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd roll randominteger randomfloat randomness source
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨
-:Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens
+:Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens greenthread
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣ :
 :Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx│:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣
 :Repeat	:Repeat ⋄ block ⋄ :EndRepeat	Syntax	Control	Structure	Expression	loop iteration ⍣
@@ -321,7 +321,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify code source definition define value ⎕ed
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item object
-)HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens
+)HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens greenthread
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
 )LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin
 )NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
@@ -330,10 +330,10 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
 )SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store ⎕save
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno)	Non-syntax			System Command	display stack
+)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for  tdno)	Non-syntax			System Command	display stack
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals
-)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading
+)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthread
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename
 )XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4
@@ -566,7 +566,7 @@ cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Functi
 {cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp
 {tn}←file ⎕FERASE tn {pn}	Erase exclusively-tied file	System	Function	Component Files	System Function	dcf delete expunge remove
 r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
-{tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading
+{tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthread
 names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir
 names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Function	Component Files	System Function	dcf
 tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Function	Component Files	System Function	dcf access
@@ -596,3 +596,9 @@ r←⎕STATE name	Details of the usage of name at each level of the stack	System
 bytes←⎕WA	Workspace available (unused)	System	Function	Component Files	System Function	freememory
 ⎕WSID ←name	The name of the active workspace	System	Function	Component Files	System Function	filename currentworkspace
 names←⎕XSI	Full names of functions on the stack	System	Function	Component Files	System Function	extended state namespacepath references
+tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TID	The number of the current thread	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greethread
+{tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	Component Files	System Function	synchronisation synchronization parallel threading stop terminate greenthread
+⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TNUMS	Report the numbers of all current threads	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
