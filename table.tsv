@@ -558,3 +558,28 @@ instance←⎕NEW class {conargs}	Create an instance of class	System	Function	Da
 {me|ref}←{name} ⎕NS names|ns	Create (optionally named) namespace copying names or contents of ns into it	System	Function	Data Conversion	System Function	object make new construct collect
 script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	System Function	representation script definition
 ref←⎕THIS	Reference to the current namespace	System	Function	Data Conversion	System Function	here me myself
+cn←x ⎕FAPPEND tn {pn}	Append x to end of file (optional passnumber)	System	Function	Component Files	System Function	dcf
+r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Files	System Function	dcf active usable accessible
+cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Function	Component Files	System Function	dcf check externalvariable
+{tn}←file ⎕FCOPY tn {pn}	Create copy of named file tied to tn	System	Function	Component Files	System Function	dcf duplicate
+{tn}←file ⎕FCREATE tn {64}	Create new component file	System	Function	Component Files	System Function	dcf touch make
+{cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp
+{tn}←file ⎕FERASE tn {pn}	Erase exclusively-tied file	System	Function	Component Files	System Function	dcf delete expunge remove
+r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
+{tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading
+names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir
+names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Function	Component Files	System Function	dcf
+tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Function	Component Files	System Function	dcf access
+r←pnames ⎕FPROPS tn {pn}	Current values of the named properties of file tn	System	Function	Component Files	System Function	dcf settings query get retreive
+r←nvpairs ⎕FPROPS tn {pn}	Set properties of file tn using name-value pairs	System	Function	Component Files	System Function	dcf settings update modify change
+ax_mx←⎕FRDAC tn {pn}	Read access matrix	System	Function	Component Files	System Function	dcf
+r←⎕FRDCI tn cn {pn}	Size in bytes, user and timestamp of last update to cn	System	Function	Component Files	System Function	dcf readaccess
+r←⎕FREAD tn cn {pn}	The array stored in component(s) cn in file tn	System	Function	Component Files	System Function	dcf get retrieve load copy fetch
+{tn}←file ⎕FRENAME tn {pn}	Rename exclusively-tied file	System	Function	Component Files	System Function	dcf
+{cn}←x ⎕FREPLACE tn cn {pn}	Store array x in component number cn	System	Function	Component Files	System Function	dcf put overwrite store
+{tn}←{bytes} ⎕FRESIZE tn {pn}	Compact exclusively-tied file tn and set its max size	System	Function	Component Files	System Function	dcf maximum limit clamp
+r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	Function	Component Files	System Function	dcf maximum
+{tn}←ax_mx ⎕FSTAC tn {pn}	Set access matrix for file tn	System	Function	Component Files	System Function	dcf
+{tn}←file ⎕FSTIE tn {pn}	Share-tie component file	System	Function	Component Files	System Function	dcf multiple parallel
+{tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
+{tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf
