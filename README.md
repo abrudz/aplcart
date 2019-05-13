@@ -40,6 +40,7 @@ APLCart currently searches a database of:
 - System commands
 - System functions
 - System constants
+- System operators
 - System variables
 - Errors
 - User commands
@@ -47,8 +48,6 @@ APLCart currently searches a database of:
 
 ### Planned
 
-- System functions
-- System operators
 - Subset of dfns from dfns.dws
 - Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists
 
