@@ -193,10 +193,10 @@ op←{⍵⍵ ⍺}	Dop	Syntax	Dyadic Function	Dyadic Operator	Definition	direct d
 {R}←f Y	Shy Tradfn/Tradop Result	Syntax			Definition	curlybraces function operator shy hideresult traditional
 {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator optional default ambivalent variadic traditional
 f;Y	Tradfn/Tradop Name Localisation	Syntax			Definition	indexing axes indices localisation localization shadow variable names scope
-←⍞	Character Input from Stdin	Syntax	Array		Expression	quotequad quadquote input characterinput rawinput stdin
-←⎕	Evaluated Input from Stdin	Syntax	Array		Expression	quad evaluatedinput
-⍞←	Output to Stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote output stderr
-⎕←	Output to Stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput stdout
+x←⍞	Return one line of user input from Stdin	Syntax	Array		Expression	quotequad quadquote input characterinput rawinput stdin
+charvec←⎕	Evaluate user input and return result	Syntax	Array		Expression	quad evaluatedinput
+⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote output stderr
+⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput stdout
 '	Character	Syntax	Array		Expression	quote apostrophe string text character
 ¯	Negative	Syntax	Array		Expression	macron negative highminus minus
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
@@ -582,7 +582,7 @@ r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	F
 {tn}←ax_mx ⎕FSTAC tn {pn}	Set access matrix for file tn	System	Function	Component Files	System Function	dcf
 {tn}←file ⎕FSTIE tn {pn}	Share-tie component file	System	Function	Component Files	System Function	dcf multiple parallel
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
-{tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf
+{tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf release
 numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Component Files	System Function	linecounter number state
 ⎕LX ←expression	Expression to be executed when workspace is loaded	System	Variable	Component Files	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
 numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Component Files	System Function	itemtype
@@ -606,3 +606,23 @@ tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	Syst
 tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greenthread
 {tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
 tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+{r}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make
+{offset}←x ⎕NAPPEND tn type	Append x using internal representation type	System	Function	Native Files	System Function	extend concatenate
+{tn}←file ⎕NCREATE tn	Create file (tn =0 to generate tn)	System	Function	Native Files	System Function	make new
+{r}←{flags} ⎕NDELETE file	Delete file (if flags =1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge drop
+{tn}←file ⎕NERASE tn	Erase tied file tn	System	Function	Native Files	System Function	delete remove expunge drop
+r←⎕NEXISTS file	Return 1 if file exists, else 0	System	Function	Native Files	System Function	present present check lookfor
+r←{encoding} ⎕NGET file {flags}	Read Unicode text file as lines into array r	System	Function	Native Files	System Function	fetch read load get
+t←{properties}1 ⎕NINFO tn|file	Return values of properties 1 for file tn|file (⍠1 will expand wildcards in file)	System	Function	Native Files	System Function	dir ls list information
+{rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change lock status of file region (0=unlock, 1=read, 2=write)(optional timeout in seconds)	System	Function	Native Files	System Function	restrict access seal passcode
+file←⎕NNAMES	Names of tied files in same order as ⎕NNUMS	System	Constant	Native Files	System Function	
+tns←⎕NNUMS	Tie numbers of tied files	System	Constant	Native Files	System Function	
+r←{flags} ⎕NPARTS file	Splits file into path, base name and extension (normalising file if flags=1)	System	Function	Native Files	System Function	directory
+{bytes}←vec ⎕NPUT file {flags}	Write (overwrite if flags=1) lines to Unicode file	System	Function	Native Files	System Function	dump cat
+vec←⎕NREAD tn type n {offset}	Read n items of specified type from file tn	System	Function	Native Files	System Function	load fetch get
+{tn}←file ⎕NRENAME tn	Rename tied file to have name file	System	Function	Native Files	System Function	move
+{end_offset}←x ⎕NREPLACE tn offset {typ}	Write x to file at offset as type	System	Function	Native Files	System Function	overwrite
+{tn}←{bytes} ⎕NRESIZE tn	Resize file to have specified size	System	Function	Native Files	System Function	cap limit clamp
+bytes←⎕NSIZE tn	Current size of file	System	Function	Native Files	System Function	bytes diskspace
+{tn}←file ⎕NTIE tn {file_mode}	Tie a file in the specified mode	System	Function	Native Files	System Function	
+{tn}←⎕NUNTIE tn	Untie one or more files	System	Function	Native Files	System Function	release
