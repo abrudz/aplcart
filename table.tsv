@@ -583,29 +583,29 @@ r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	F
 {tn}←file ⎕FSTIE tn {pn}	Share-tie component file	System	Function	Component Files	System Function	dcf multiple parallel
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
 {tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf release
-numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Component Files	System Function	linecounter number state
-⎕LX ←expression	Expression to be executed when workspace is loaded	System	Variable	Component Files	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
-numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Component Files	System Function	itemtype
-names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally filtered	System	Function	Component Files	System Function	namelist
-space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Component Files	System Function	referencestateindicator namespaces suspended
-{r}←⎕SHADOW names	Make names local to most recently invoked defined fn	System	Function	Component Files	System Function	localise localize encapsulate shield scope
-names←⎕SI	Vector of names of functions on the stack	System	Constant	Component Files	System Function	stateindicator
-bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Component Files	System Function	workspaceusage workspaceuse memoryconsumption
-r←⎕STACK	Definition of each function on the stack	System	Constant	Component Files	System Function	state definitions
-r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Component Files	System Function	state definition
-bytes←⎕WA	Workspace available (unused)	System	Constant	Component Files	System Function	freememory
-⎕WSID ←name	The name of the active workspace	System	Function	Component Files	System Function	filename currentworkspace
-names←⎕XSI	Full names of functions on the stack	System	Constant	Component Files	System Function	extended state namespacepath references
-tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TID	The number of the current thread	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greethread
-{tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	Component Files	System Function	synchronisation synchronization parallel threading stop terminate greenthread
-⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-{tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
-tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	Component Files	System Function	synchronisation synchronization parallel threading greenthread
+numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Workspace	System Function	linecounter number state
+⎕LX ←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
+numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Workspace	System Function	itemtype
+names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally filtered	System	Function	Workspace	System Function	namelist
+space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Workspace	System Function	referencestateindicator namespaces suspended
+{r}←⎕SHADOW names	Make names local to most recently invoked defined fn	System	Function	Workspace	System Function	localise localize encapsulate shield scope
+names←⎕SI	Vector of names of functions on the stack	System	Constant	Workspace	System Function	stateindicator
+bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Workspace	System Function	workspaceusage workspaceuse memoryconsumption
+r←⎕STACK	Definition of each function on the stack	System	Constant	Workspace	System Function	state definitions
+r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Workspace	System Function	state definition
+bytes←⎕WA	Workspace available (unused)	System	Constant	Workspace	System Function	freememory
+⎕WSID ←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace
+names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extended state namespacepath references
+tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronisation synchronization parallel threading greethread
+{tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	System	System Function	synchronisation synchronization parallel threading stop terminate greenthread
+⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	System	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthread
+tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthread
+{tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
 {r}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make
 {offset}←x ⎕NAPPEND tn type	Append x using internal representation type	System	Function	Native Files	System Function	extend concatenate
 {tn}←file ⎕NCREATE tn	Create file (tn =0 to generate tn)	System	Function	Native Files	System Function	make new
@@ -626,3 +626,10 @@ vec←⎕NREAD tn type n {offset}	Read n items of specified type from file tn	Sy
 bytes←⎕NSIZE tn	Current size of file	System	Function	Native Files	System Function	bytes diskspace
 {tn}←file ⎕NTIE tn {file_mode}	Tie a file in the specified mode	System	Function	Native Files	System Function	
 {tn}←⎕NUNTIE tn	Untie one or more files	System	Function	Native Files	System Function	release
+{r}←⎕DQ object	Process events generated by object(s)	System	Function	Native Files	System	dequeue wait
+{exported}←{flags} ⎕EXPORT nm	Specify fns to be exported by an OLEClient	System	Function	Native Files	System	
+{r}←{action} ⎕NQ object event {params}	Enqueue an event for processing	System	Function	Native Files	System	push request
+{name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new
+r←{object} ⎕WG props …	The values of the properties of an object	System	Function	Native Files	System	window gui get fetch query
+children←{class} ⎕WN parent	Child objects (of class) of parent	System	Function	Native Files	System	window gui names
+{old_values}←{object} ⎕WS nvpairs...	Set the values of one or more specified properties of object	System	Function	Native Files	System	window gui assign
