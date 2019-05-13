@@ -633,3 +633,8 @@ bytes←⎕NSIZE tn	Current size of file	System	Function	Native Files	System Fun
 r←{object} ⎕WG props …	The values of the properties of an object	System	Function	Native Files	System	window gui get fetch query
 children←{class} ⎕WN parent	Child objects (of class) of parent	System	Function	Native Files	System	window gui names
 {old_values}←{object} ⎕WS nvpairs...	Set the values of one or more specified properties of object	System	Function	Native Files	System	window gui assign
+⎕DMX	Namespace containing details of most recent error in current thread	System	Namespace	Error Message	System	extended diagnostic
+⎕EXCEPTION	Details of most recent .NET exception	System	Namespace	Error Message	System	
+{r}←{msg} ⎕SIGNAL errno|{nvpairs}…	Signal an error; nvpairs set ⎕DMX props	System	Function	Error Message	System	throw emulate
+{0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
+⎕TRAP ←trap_spec	Define error handling	System	Function	Error Message	System	try catch
