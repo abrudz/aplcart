@@ -314,35 +314,35 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 :Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear
-)CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off
-)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include item object otherworkspace )pcopy
-)CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se
+)CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell dos operatingsystem commandprocessor windows
+)CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off ⎕save
+)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include item object otherworkspace )pcopy ⎕cy
+)CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se ⎕cs
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify code source definition define value ⎕ed
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item object
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens greenthread
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
-)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin
+)LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin ⎕load
 )NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue
 )PCOPY ws {nms}	As )COPY but does not overwrite existing objects	Non-syntax		File Access	System Command	import load include item object otherworkspace )copy
 )RESET {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)sic clear cutback stack
 )SAVE {ws}	Save active workspace, optionally with new name ws	Non-syntax			System Command	archive store ⎕save
-)SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor
-)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for  tdno)	Non-syntax			System Command	display stack
+)SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor ⎕sh linux macos aix unix rasbianpios
+)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for  tdno)	Non-syntax			System Command	display stack ⎕si ⎕xsi
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
-)SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals
-)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthread
-)WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename
+)SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals ⎕state
+)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthread ⎕tid
+)WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename ⎕wsid
 )XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4
 )EVENTS {nm}	List events in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯8.6
 )FNS {nm}	List functions in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.1 ¯3.2 ¯3.3 ¯3.6
 )INTERFACES {nm}	List interfaces in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.5 ¯9.7
 )METHODS {nm}	List methods in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.6
-)OBJECTS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯2.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
-)OBS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯2.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
+)OBJECTS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯9.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
+)OBS {nm}	List objects in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.1 ¯9.2 ¯9.4 ¯9.5 ¯9.6 ¯9.7
 )OPS {nm}	List operatoris in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯4.1 ¯4.2 ¯4.3
 )PROPS {nm}	List properties in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.3
 )VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6
@@ -526,10 +526,10 @@ valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtml
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
 user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
-⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all
+⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear
 {0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy
 {num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
-⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin
+⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin )load
 ⎕OFF	Terminate the APL session	System	Constant	System	System Function	exit stop close )off
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include
 {r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	File Access	System Function	archive store )save
@@ -550,12 +550,12 @@ r←⎕VR name	Source of function or operator as a simple vector	System	Function
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base
 class_hierarchy←⎕CLASS ref	Class hierarchy for a class|instance	System	Function	System	System Function	parents ancestors
 ref←{class|interface} ⎕CLASS instance	Extract specific interface to an instance	System	Function	Data Conversion	System Function	parents ancestors
-{old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this
+{old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this )cs
 old_df←⎕DF char_array	Set the display form of the current space	System	Function	Data Conversion	System Function	visualrepresentation format ⍕ ⎕fmt
 {ref}←{flags} ⎕FIX source	Define objects from source (vector of vectors or file name starting with 'file://')	System	Function	Data Conversion	System Function	define ⎕fx code source function operator namespace class interface
 refs←⎕INSTANCES class	Current instances of class	System	Function	Data Conversion	System Function	children derived
 instance←⎕NEW class {conargs}	Create an instance of class	System	Function	Data Conversion	System Function	.new
-{me|ref}←{name} ⎕NS names|ns	Create (optionally named) namespace copying names or contents of ns into it	System	Function	Data Conversion	System Function	object make new construct collect
+{me|ref}←{name} ⎕NS names|ns	Create (optionally named) namespace copying names or contents of ns into it	System	Function	Data Conversion	System Function	object make new construct collect )ns
 script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	System Function	representation script definition
 ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here me myself
 cn←x ⎕FAPPEND tn {pn}	Append x to end of file (optional passnumber)	System	Function	Component Files	System Function	dcf
@@ -584,20 +584,29 @@ r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	F
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
 {tn}←⎕FUNTIE tns	Untie one or more component files	System	Function	Component Files	System Function	dcf release
 numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Workspace	System Function	linecounter number state
-⎕LX ←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
+⎕LX←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
 numvec←⎕NC names	Class of each name (fractional if names is encl. vec)	System	Function	Workspace	System Function	itemtype
 names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally filtered	System	Function	Workspace	System Function	namelist
+names←{init_chars} ⎕NL ¯9.4	Active classes, optionally filtered	System	Function	Workspace	System Function	namelist )classes
+names←{init_chars} ⎕NL ¯8.6	Active events, optionally filtered	System	Function	Workspace	System Function	namelist )events
+names←{init_chars} ⎕NL ¯3	Active functions, optionally filtered	System	Function	Workspace	System Function	namelist )fns
+names←{init_chars} ⎕NL ¯9.5 ¯9.7	Active interfaces, optionally filtered	System	Function	Workspace	System Function	namelist )interfaces
+names←{init_chars} ⎕NL ¯3.6	Active methods, optionally filtered	System	Function	Workspace	System Function	namelist )methods
+names←{init_chars} ⎕NL ¯9	Active objects, optionally filtered	System	Function	Workspace	System Function	namelist )objects )obs
+names←{init_chars} ⎕NL ¯4.1	Active operators, optionally filtered	System	Function	Workspace	System Function	namelist )ops
+names←{init_chars} ⎕NL ¯2.3	Active properties, optionally filtered	System	Function	Workspace	System Function	namelist )props
+names←{init_chars} ⎕NL ¯2.1	Active variables, optionally filtered	System	Function	Workspace	System Function	namelist )vars
 space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Workspace	System Function	referencestateindicator namespaces suspended
 {r}←⎕SHADOW names	Make names local to most recently invoked defined fn	System	Function	Workspace	System Function	localise localize encapsulate shield scope
-names←⎕SI	Vector of names of functions on the stack	System	Constant	Workspace	System Function	stateindicator
+names←⎕SI	Vector of names of functions on the stack	System	Constant	Workspace	System Function	stateindicator )si
 bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Workspace	System Function	workspaceusage workspaceuse memoryconsumption
 r←⎕STACK	Definition of each function on the stack	System	Constant	Workspace	System Function	state definitions
-r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Workspace	System Function	state definition
+r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Workspace	System Function	state definition )sinl
 bytes←⎕WA	Workspace available (unused)	System	Constant	Workspace	System Function	freememory
-⎕WSID ←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace
-names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extended state namespacepath references
+⎕WSID←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace )wsid
+names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extended state namespacepath references )si
 tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronisation synchronization parallel threading greethread
+tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronisation synchronization parallel threading greethread )tid
 {tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	System	System Function	synchronisation synchronization parallel threading stop terminate greenthread
 ⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	System	System Function	synchronisation synchronization parallel threading greenthread
 tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthread
@@ -609,7 +618,7 @@ tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	
 {r}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make
 {offset}←x ⎕NAPPEND tn type	Append x using internal representation type	System	Function	Native Files	System Function	extend concatenate
 {tn}←file ⎕NCREATE tn	Create file (tn =0 to generate tn)	System	Function	Native Files	System Function	make new
-{r}←{flags} ⎕NDELETE file	Delete file (if flags =1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge drop
+{r}←{flags} ⎕NDELETE file	Delete file (if flags =1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop
 {tn}←file ⎕NERASE tn	Erase tied file tn	System	Function	Native Files	System Function	delete remove expunge drop
 r←⎕NEXISTS file	Return 1 if file exists, else 0	System	Function	Native Files	System Function	present present check lookfor
 r←{encoding} ⎕NGET file {flags}	Read Unicode text file as lines into array r	System	Function	Native Files	System Function	fetch read load get
