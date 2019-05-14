@@ -215,8 +215,8 @@ name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow assignment g
 bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	guard if conditional ternary
 errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try
 (+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean
-Xs(≠⊆⊢)Y	Cut Y at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment separate
-X(1↓¨,⊂⍨⊣=,)Y	Split Y at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment separate
+Xs(≠⊆⊢)Yv	Cut Yv at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment separate
+X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment separate
 X(∨/⍷)Y	Is X a Subarray of Y	Tacit	Dyadic Function		Structural	contains has isin issubarray appearsin
 Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
