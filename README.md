@@ -48,6 +48,7 @@ APLCart currently searches a database of:
 
 ### Planned
 
+- I-beams
 - Subset of dfns from dfns.dws
 - Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists
 
