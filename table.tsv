@@ -67,7 +67,7 @@ A⍱B	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarro
 10○N	Magnitude of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	
 11○N	Imaginary part of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	
 12○N	phase N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	argument arc
-⌹Nm	Matrix inverse ofNm (square Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide
+⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide
 ⌹Nm	Matrix pseudo-inverse ofNm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function	Non-scalar Function	Mathematical	domino matrixdivide quaddivide
 M⊤N	Encode value N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	antibase tobase encode number downtack representation unpack tomixedradix toradix
@@ -141,10 +141,10 @@ X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operat
 X f⌸Y	Key: f on items of Y grouped by unique X values	Primitive	Dyadic Function	Monadic Operator	Sets	equalquad quadequal group classify bin
 f⌸Y	Key: f on first axis indices of Y grouped by unique Y values	Primitive	Monadic Function	Monadic Operator	Sets	equalquad quadequal unique classify bin
 f⍨Y	Selfie: same as Y f Y	Primitive	Monadic Function	Monadic Operator	Function Application	commute tildediaeresis frown duplicate
-X f&Y	Spawn: f between X and Y in a new thread	Primitive	Monadic Function	Monadic Operator	System	ampersand spawn et and greenthread launch run
+X f&Y	Spawn: f between X and Y in a new thread	Primitive	Monadic Function	Monadic Operator	System	ampersand spawn et and greenthreading launch run
 Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign
 X f⍨Y	Commute: same as Y f X	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis swap frown
-f&Y	Spawn: f on in a new thread	Primitive	Dyadic Function	Monadic Operator	System	ampersand spawn et and greenthread launch run
+f&Y	Spawn: f on in a new thread	Primitive	Dyadic Function	Monadic Operator	System	ampersand spawn et and greenthreading launch run
 X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	Dyadic Function	Monadic Operator	System	ibeam systemservice special foreign
 (f⍤r)Y	Rank: f on or between trailing rank-r subarrays	Primitive	Monadic Function	Dyadic Operator	Function Application	jotdiaeresis rank paw
 (f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife
@@ -172,6 +172,7 @@ int.frac	Decimal Point	Syntax	Array		Expression	decimal point period rational
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento scale mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	complex plusitimes imaginary
 ]name	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
+{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')		Monadic Function		Function Application
 )name	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
 X[I;J;…]	Indexing	Syntax	Dyadic Function	Non-scalar Function	Selection	squarebrackets indexing subscript choose
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
@@ -291,6 +292,11 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (¯2○1○⊢)N	Complementry Angle	Tacit	Monadic Function		Mathematical	complement
 X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
+X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
+X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
+X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
+X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY
+X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function Application	composewith functioncomposition splitover (fX)g(hY) (fX)ghY
 ⎕CT←(0≤1E¯14≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←645	System	Variable		Mathematical	comparison tolerance fuzz IEEE754 64-bit binaryfloatingpoint representation
 ⎕DCT←(0≤1E¯28≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←1287	System	Variable		Mathematical	comparison tolerance fuzz IEEE754-2008 128-bit decimalfloatingpoint representation
 ⎕DIV←(0,1)	0: 1=0÷0, all other÷0 error; 1: 0=all÷0	System	Variable		Mathematical	divisionbyzero divisionmethod divmethod error nan indeterminate
@@ -300,7 +306,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 ⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding display
 ⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd roll randominteger randomfloat randomness source
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨
-:Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens greenthread
+:Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens greenthreading
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣ :
 :Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx│:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣
 :Repeat	:Repeat ⋄ block ⋄ :EndRepeat	Syntax	Control	Structure	Expression	loop iteration ⍣
@@ -321,7 +327,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	open modify code source definition define value ⎕ed
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item object
-)HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens greenthread
+)HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading tokens greenthreading
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls
 )LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin ⎕load
 )NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
@@ -333,7 +339,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 )SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for  tdno)	Non-syntax			System Command	display stack ⎕si ⎕xsi
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset clear cutback stack
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	display stack list locals ⎕state
-)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthread ⎕tid
+)TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading ⎕tid
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename ⎕wsid
 )XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4
@@ -398,7 +404,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	⎕avu unicode classic codepage characterset charset encoding sbcs
 99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	
 1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	try catch errorhandling trapping exception
-1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	
+1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	halt inspect breakpoint
 1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	
 1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	
 1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	Error Message	end-of-file
@@ -511,8 +517,8 @@ X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof st
 captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor ⎕sh )cmd
 r←⎕CSV data	Convert CSV data data to APL array	System	Function	Data Conversion	System Function	tsv table import parse commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←data {header} ⎕CSV format_spec	Convert APL array to CSV data	System	Function	Data Conversion	System Function	tsv table export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues
-r←type ⎕DR x	Interpret internal representation as array of type type	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
-type←⎕DR x	Return internal data type (type) of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
+r←type ⎕DR x	Interpret internal representation as array of type 'type'	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
+type←⎕DR x	Return internal data type of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter ⎕df ⍕
 r←{flag} ⎕JSON data	APL array from (flag=0) or to (flag=1) JSON text	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport generateparse
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array
@@ -535,7 +541,7 @@ user_name←⎕AN	User (login) name	System	Constant	System	System Function	accou
 {r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	File Access	System Function	archive store )save
 ⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities
 numvec←⎕TS	Current time (y m d h m s ms)	System	Constant	System	System Function	now current localtimestamp datetime
-r←{selector} ⎕AT names	Syntactical attributes of named functions or operators	System	Function	System	System Function	valence arity shyness monadicdyadicambivalent functionoperator variadic properties
+r←{selector} ⎕AT names	Syntactical attributes of named functions or operators	System	Function	System	System Function	valence arity shyness locked niladicmonadicdyadicambivalent functionoperator variadic properties author timestamp modificationtime result
 r←⎕CR name	Source of function or operator as a character matrix	System	Function	Data Conversion	System Function	code representation
 {names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	open modify code source definition define value )ed
 {boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase
@@ -566,7 +572,7 @@ cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Functi
 {cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp
 {tn}←file ⎕FERASE tn {pn}	Erase exclusively-tied file	System	Function	Component Files	System Function	dcf delete expunge remove
 r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
-{tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthread
+{tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthreading
 names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir
 names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Constant	Component Files	System Function	dcf
 tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Constant	Component Files	System Function	dcf access
@@ -605,16 +611,16 @@ r←⎕STATE name	Details of the usage of name at each level of the stack	System
 bytes←⎕WA	Workspace available (unused)	System	Constant	Workspace	System Function	freememory
 ⎕WSID←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace )wsid
 names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extended state namespacepath references )si
-tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
 tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronisation synchronization parallel threading greethread )tid
-{tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	System	System Function	synchronisation synchronization parallel threading stop terminate greenthread
-⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	System	System Function	synchronisation synchronization parallel threading greenthread
-tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthread
-tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
-{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
-tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthread
-{tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
-tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	System	System Function	synchronisation synchronization parallel threading greenthread
+{tdno}←{0|1} ⎕TKILL tdno	Kill threads tdno and (default 1 is true) descendants	System	Function	System	System Function	synchronisation synchronization parallel threading stop terminate greenthreading
+⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	System	System Function	synchronisation synchronization parallel threading greenthreading
+tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
+tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
+{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
+tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
+{tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
+tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
 {r}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make
 {offset}←x ⎕NAPPEND tn type	Append x using internal representation type	System	Function	Native Files	System Function	extend concatenate
 {tn}←file ⎕NCREATE tn	Create file (tn =0 to generate tn)	System	Function	Native Files	System Function	make new
@@ -646,4 +652,62 @@ children←{class} ⎕WN parent	Child objects (of class) of parent	System	Functi
 ⎕EXCEPTION	Details of most recent .NET exception	System	Namespace	Error Message	System	
 {r}←{msg} ⎕SIGNAL errno|{nvpairs}…	Signal an error; nvpairs set ⎕DMX props	System	Function	Error Message	System	throw emulate
 {0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
-⎕TRAP ←trap_spec	Define error handling	System	Function	Error Message	System	try catch
+⎕TRAP←trap_spec	Define error handling	System	Function	Error Message	System	try catch
+Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function	Non-scalar Function	Index Generation	iota indicesin indexof position columndatabase
+As(85⌶)Dv	Execute (⍎) Silent Expression 	I-beam	Dyadic Function	Non-scalar Function	Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult
+127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe
+180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code representation oo classes private instance
+181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Function		Array Properties	datarepresentation internalrepresentation
+200⌶Dv	Syntax Colouring	I-beam	Function		Data Conversion	coloring highlighting parse parsing tokentypes
+201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes
+Mv(219⌶)Jv	Compress/Decompress Vector of Short Integers	I-beam	Function		Data Conversion	lz4 zlib gzip deflate uncompress inflate
+As(220⌶)Y	Serialise/Deserialise Array	I-beam	Function		Data Conversion	
+{Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance
+600⌶Js	Trap Control	I-beam	Function		System	debugging repl try catch error handling
+739⌶0	Temporary Directory	I-beam	Constant		System	tmp
+{Xs}(819⌶)Y	Case Convert	I-beam	Function		Data Conversion	casefold casemap uppercase lowercase lettercase
+900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc
+0=⎕NC'⍺'	Called Monadically (dfns/dops only)			Function Application	Expression	arity ambivalent ambivalence variadic leftargument 900⌶
+950⌶⍬	Loaded Libraries	I-beam	Constant		System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
+1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity
+1112⌶Js	Parallel Execution Threshold	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity
+X(1159⌶)Y	Update Function Time and User Stamp	I-beam	Function		System	⎕at properties operator
+Is(1500⌶)Y	Hash Array	I-beam	Function		Array Properties	performance hashing
+Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance
+2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Function		System	freememory
+{Av}(2010⌶)Yv	Update DataTable	I-beam	Function		Expression	databinding assignment redefine inplace update
+{Av}(2011⌶)Yv	Read DataTable	I-beam	Function		Expression	databinding get fetch value
+2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding
+{Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect
+2016⌶Yv	Create .NET Delegate	I-beam	Function		Array Properties	make new
+2017⌶Dv	Identify .NET Type	I-beam	Function		Array Properties	
+2022⌶0	Flush Session Caption	I-beam	Constant		System	titlebar
+2023⌶0	Close all Windows	I-beam	Constant		System	shut
+2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'|'RealPixel')	I-beam	Function		System	scaling highresolution hires retina px
+{X}(2041⌶)Js	Override COM Default Value	I-beam	Function		System	
+2100⌶0	Export Workspace to in-Memory .NET Assembly	I-beam	Constant		System	
+2101⌶0	Close .NET AppDomain	I-beam	Constant		System	
+2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor
+2401⌶Bs	Expose Root Properties	I-beam	Function		System	oo dotting
+2501⌶Bs	Discard incoming .NET thread on exit	I-beam	Function		System	
+2501⌶0	Discard parked incoming .NET threads	I-beam	Constant		System	
+2503⌶Js	Mark Thread as Uninterruptible	I-beam	Function		System	greenthreading launch run suspend suspension
+2520⌶Bs	Use Separate Thread For .NET	I-beam	Function		System	
+2701⌶Bs	Continue Autosave	I-beam	Function		System	)continue
+3002⌶Bs	Disable Component Checksum Validation	I-beam	Function		System	dcf
+{Cv}(3500⌶)Dv	Send Text Dv to RIDE-embedded Browser with caption Cv	I-beam	Function		System	html svg rendering cef remoteintegrateddevelopmentenvironment
+3501⌶0	Connected to the RIDE	I-beam	Constant		System	remoteintegrateddevelopmentenvironment
+3502⌶Yv	Manage RIDE Connections	I-beam	Function		System	remoteintegrateddevelopmentenvironment
+4000⌶⍬	Fork New Task	I-beam	Constant		System	aix multithreading parallel
+4001⌶Dv	Change User	I-beam	Function		System	aix multithreading parallel
+4002⌶⍬	Reap Forked Tasks	I-beam	Constant		System	aix multithreading parallel
+4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH
+5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text
+5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text
+5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text
+5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text
+As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namemangling
+8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹
+50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension
+(819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function			lettercase caseless caseinsensitive normalize
+C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator		lettercase caseless caseinsensitive comparison lookup
