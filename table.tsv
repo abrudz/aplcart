@@ -172,7 +172,7 @@ int.frac	Decimal Point	Syntax	Array		Expression	decimal point period rational
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento scale mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	complex plusitimes imaginary
 ]name	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
-{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')		Monadic Function		Function Application
+{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')		Monadic Function		Function Application	ucmd
 )name	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
 X[I;J;…]	Indexing	Syntax	Dyadic Function	Non-scalar Function	Selection	squarebrackets indexing subscript choose
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
