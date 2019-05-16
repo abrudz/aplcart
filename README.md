@@ -10,6 +10,8 @@
 
 Wrote cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
 
+Missing a someting? Faulty content? [Submit an issue!](https://github.com/abrudz/aplcart/issues/new)
+
 ## Navigation
 
 ### Access keys
