@@ -1,6 +1,8 @@
 # Contributing
 
-Feel free to submit PR, especially against [table.tsv](table.tsv) which is the database. It is a really simple TSV file, 
+If something is missing or not right, please [submit an issue](https://github.com/abrudz/aplcart/issues/new).
+
+You can also submit a pull request, especially against [table.tsv](table.tsv) — the really simple TSV file database: 
 
 - `<`, `>`, `&`, `'`, and `"` are automatically escaped
 - rows are separated by line breaks
