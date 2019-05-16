@@ -44,13 +44,13 @@ APLCart currently searches a database of:
 - System constants
 - System operators
 - System variables
+- I-beams
 - Errors
 - User commands
 - A selection of simple derived functions
 
 ### Planned
 
-- I-beams
 - Subset of dfns from dfns.dws
 - Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists
 
