@@ -68,7 +68,7 @@ A⍱B	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarro
 11○N	Imaginary part of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	
 12○N	phase N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	argument arc
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide
-⌹Nm	Matrix pseudo-inverse ofNm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
+⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function	Non-scalar Function	Mathematical	domino matrixdivide quaddivide
 M⊤N	Encode value N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	antibase tobase encode number downtack representation unpack tomixedradix toradix
 M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function	Non-scalar Function	Mathematical	frombase decode uptack pack frommixedradix fromradix polynomial basevalue
@@ -96,6 +96,7 @@ X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function	Non-scal
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Dyadic Function	Non-scalar Function	Index Generation	iota integers ints countto sequence numbers range
 ⍸B	Indices of all 1s in B	Primitive	Monadic Function	Non-scalar Function	Index Generation	wheretrues iotaunderbar locationsoftrues
 ⍋Y	Upgrade: Indices to reorder Y ascending	Primitive	Monadic Function	Non-scalar Function	Index Generation	gradeup deltastile upgrade pine concordetakingoff
+⍋Jv	Invert permutation	Primitive	Monadic Function	Non-scalar Function	Index Generation	deltastile upgrade pine concordetakingoff
 ⍒Y	Downgrade: Indices to reorder Y descending	Primitive	Monadic Function	Non-scalar Function	Index Generation	gradedown delstile downgrade spine concordelanding
 X⍳Y	Index of: Indices in X of items of Y	Primitive	Dyadic Function	Non-scalar Function	Index Generation	iota indicesin indexof position
 X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Function	Non-scalar Function	Index Generation	intervalindex iotaunderbar bin group range
@@ -249,7 +250,7 @@ N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	d
 (1=×/∘⍴)Y	Y is a Singleton	Tacit	Monadic Function		Structural	singleton unit sole one
 (⊃0⍴⊂)Y	Type (converts charcters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
-(¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences deltas changes steps
+(¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (∘.×∘1 ¯1)N	±N	Tacit	Monadic Function		Mathematical	plusminus
@@ -712,3 +713,10 @@ As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namem
 50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function			lettercase caseless caseinsensitive normalize
 C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator		lettercase caseless caseinsensitive comparison lookup
+⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural
+(X{(⊂⍋⍵⍵,⍨⍳≢⍵)⌷⍵,⍺⍺}Jv)Y	Insert X after positions Jv in Y (≢Jv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
+80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	
+82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	
+{⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
+X⊣⍣Bs⊢Y	Ternary: if Bs then return X else return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
+As f{⍺:⍺⍺ ⍵ ⋄ ⍵⍵ ⍵}g Y	Ternary: if As then apply f to Y else apply g to Y1	Dop	Dyadic Function	Dyadic Operator	Function Application	conditionaloperator inlineiff ternaryiff ?:
