@@ -713,7 +713,7 @@ As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namem
 50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function			lettercase caseless caseinsensitive normalize
 C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator		lettercase caseless caseinsensitive comparison lookup
-⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural
+⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural	
 (X{(⊂⍋⍵⍵,⍨⍳≢⍵)⌷⍵,⍺⍺}Jv)Y	Insert X after positions Jv in Y (≢Jv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	
