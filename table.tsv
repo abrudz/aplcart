@@ -9,7 +9,7 @@ SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 *N	e raised to the power N	Primitive	Monadic Function	Scalar Function	Mathematical	power star asterisk exponential etothepowerof naturalexponential
 ⍟N	Natural logarithm of N	Primitive	Monadic Function	Scalar Function	Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662
 ○N	pi times N	Primitive	Monadic Function	Scalar Function	Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π
-!N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek
+!N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek combinatorics
 ?J	Random number selected from ⍳J	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randominteger interrogationpoint query eroteme
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
 ~B	Logical Inverse: 0=B	Primitive	Monadic Function	Scalar Function	Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬
@@ -23,7 +23,7 @@ M⍟N	Base-M logarithm of N	Primitive	Dyadic Function	Scalar Function	Mathematic
 M⌈N	Maximum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	upstile maximum greater larger
 M⌊N	Minimum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	downstile minimum lesser smaller
 I○N	Circular functions	Primitive	Dyadic Function	Scalar Function	Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric
-M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function	Scalar Function	Mathematical	exclamation bang shriek binomial
+M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function	Scalar Function	Mathematical	exclamation bang shriek binomial combinatorics
 M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	least smallest lcm denominator lcd
 M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	gcd gcf factor hcf highest gcm measure hcd
 M<N	Less Than	Primitive	Dyadic Function	Scalar Function	Comparison	lt before precedes ≺
@@ -98,7 +98,7 @@ X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function	Non-scal
 ⍋Y	Upgrade: Indices to reorder Y ascending	Primitive	Monadic Function	Non-scalar Function	Index Generation	gradeup deltastile upgrade pine concordetakingoff
 ⍋Jv	Invert permutation	Primitive	Monadic Function	Non-scalar Function	Index Generation	deltastile upgrade pine concordetakingoff
 ⍒Y	Downgrade: Indices to reorder Y descending	Primitive	Monadic Function	Non-scalar Function	Index Generation	gradedown delstile downgrade spine concordelanding
-X⍳Y	Index of: Indices in X of items of Y	Primitive	Dyadic Function	Non-scalar Function	Index Generation	iota indicesin indexof position
+X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function	Non-scalar Function	Index Generation	iota indexin indexof position
 X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Function	Non-scalar Function	Index Generation	intervalindex iotaunderbar bin group range
 Is?Js	Deal: Is distinct items from ⍳Js	Primitive	Dyadic Function	Non-scalar Function	Index Generation	questionmark interrogationpoint query eroteme
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function	Non-scalar Function	Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet
@@ -253,8 +253,8 @@ N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	d
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
-(∘.×∘1 ¯1)N	±N	Tacit	Monadic Function		Mathematical	plusminus
-(∘.×∘¯1 1)N	∓N	Tacit	Monadic Function		Mathematical	minusplus
+(1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus
+(¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus
 (⍋⍋)Y	Cardinals Up	Tacit	Monadic Function		Index Generation	ascendingcardinalnumbers
 (⍋⍒)Y	Cardinals Down	Tacit	Monadic Function		Index Generation	descendingcardinalnumbers
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil
@@ -510,7 +510,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 ]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]Peek
 ]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]SizeOf
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]VarsLike
-(≢,)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole array scalars countall ×/⍴ ×⌿⍴
+(×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole array scalars countall ×/⍴ ×⌿⍴ ≢, ⍴,
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal items
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue
 (≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue
