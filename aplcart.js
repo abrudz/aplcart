@@ -20,7 +20,7 @@ $(document).ready(function(){
     $(".dataTables_scrollBody").attr("accesskey","z");
     $("input").focus().attr({
       accesskey:"q",
-      onkeyup:'q=$("input").val();setTit(q);setUrl(q)'
+      oninput:'q=$("input").val();setTit(q);setUrl(q)'
     });
     $("body").addClass(null!=s.get("w")?"w":"")
   });
