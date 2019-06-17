@@ -48,11 +48,11 @@ APLCart currently searches a database of:
 - Errors
 - User commands
 - A selection of simple derived functions
+- All of dfns.dws
 
 ### Planned
 
-- Subset of dfns from dfns.dws
-- Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists
+- Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists (in progess; about 25% done)
 
 ## Planned features
 - links to documentation
