@@ -837,16 +837,16 @@ i←bits dfns.int u	Signed from unsigned integers	Dfn	Function			typeconversion 
 rslt←{guess←1+⎕CT} (fn dfns.invr) argt	Inverse of real-valued function	Dop		Monadic Operator		functioninverse inverse Newton-Raphson absolutezero NewtonRaphson
 rslt←{array} dfns.iotag array	Generalized iota	Dfn	Function			generialisediota generalised⍳ Unicode
 bool←dfns.isdfn name	Test for D function	Dfn	Function			testforD-function name-clashproblem testforDfunction nameclashproblem
-stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function			lists concatenative applicative Ackermann'sfunction Metacircular
+stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function			lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular
 rslt←{dirn←¯1} dfns.just chars	Justify text array	Dfn	Function			justifytext aligntext
 lvec←{cols} dfns.justify lvec	Justify line-vector to ⍺ columns	Dfn	Function			justifytext aligntext linevector
-seq←dfns.k6174 nnnn	Kaprekar's operation	Dfn	Function			sequence 6174 Kaprekar'soperation
+seq←dfns.k6174 nnnn	Kaprekar's operation	Dfn	Function			sequence 6174 Kaprekar'soperation Kaprekarsoperation
 rslt←{c←1} dfns.kball p	Relationship between point and k-ball	Dfn	Function			K-ball sphere hypersphere Kball
 rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Operator		K-cell boundary hypercube Kcell
 kinds←dfns.kind namelist	Parse-category of name(s) ⍵	Dfn	Function			kind nameclass category namecolouring hybrid
 kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function			namecolouring parsing kind Bunda-Gerthparser polymorphism selfie BundaGerthparser
 area←dim dfns.ksphere radius	Hypersphere surface area	Dfn	Function			sphere hypersphere Newton-Raphson localmaximum K-sphere manifolds NewtonRaphson Ksphere
-nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function			chesspuzzle knight'stour graph treesearching diversions torus
+nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function			chesspuzzle knight'stour knightstour graph treesearching diversions torus
 chars←dfns.lcase chars	Lower-casification	Dfn	Function			uppercase lowercase upperorlowercase caseinsensitive
 precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function			sort quicksort Totalarrayordering order(ofarrays) comparearrays
 bmat←dfns.life bmat	John Conway's "Game of Life"	Dfn	Function			gameoflife cellularautomaton glider diversions Asteroids YouTube
