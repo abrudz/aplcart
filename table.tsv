@@ -103,7 +103,7 @@ X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Functi
 Is?Js	Deal: Is distinct items from ⍳Js	Primitive	Dyadic Function	Non-scalar Function	Index Generation	questionmark interrogationpoint query eroteme
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function	Non-scalar Function	Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet
 C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function	Non-scalar Function	Index Generation	gradedown delstile downgrade spine concordelanding customalphabet
-∪Yv	Unique: Distinct items of Yv	Primitive	Monadic Function	Non-scalar Function	Sets	cup downshoe distinct nub
+∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function	Non-scalar Function	Sets	cup downshoe distinctitems uniqueelements nub
 X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	epsilon isin membership containedin has ϵ ε ∈
 X⍷Y	Occurrences of entire array X within Y	Primitive	Dyadic Function	Non-scalar Function	Sets	findin epsilonunderbar search locate
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	match equalunderbar identical
@@ -112,8 +112,8 @@ Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	ti
 Xv∪Yv	Union: Xv,Yv~Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	cup union downshoe setor
 Xv∩Yv	Intersection: (Xv∊Yv)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	cap intersection upshoe setand
 ⊃Y	First item of Y	Primitive	Monadic Function	Non-scalar Function	Selection	disclose rightshoe first unbox open contentof
-Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function	Non-scalar Function	Selection	pick
-Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function	Non-scalar Function	Selection	squishquad squad indexinto
+Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function	Non-scalar Function	Selection	rightshoe pickfrom selectfrom
+Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function	Non-scalar Function	Selection	squishquad squad indexinto selectfrom
 Iv↑Y	Take Iv items along axes of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	uparrow take first last beginning end leading trailing head tail
 Iv↓Y	Drop Iv items along axes of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	downarrow split drop remove trim cut
 Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function	Non-scalar Function	Selection	compress slash solidus filter
@@ -228,8 +228,8 @@ Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		St
 (⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	round closestinteger nearestinteger nint
 ×⍨N	Square	Tacit	Monadic Function		Mathematical	square ²
 (*∘3)N	Cube	Tacit	Monadic Function		Mathematical	cube ³
-(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt √
-M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot √
+(*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt ²√
+M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³√
 +⍨N	2×N	Tacit	Monadic Function		Mathematical	double
 2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	parity odd
 (~2∘|)J	J is Even	Tacit	Monadic Function		Mathematical	even
@@ -999,3 +999,13 @@ refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function			namesp
 cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function			tabexpansion horizontaltabs adjacent1s flipflopRS
 z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function			FastFourierTransform convolution polynomial
 {0::0⋄1⊣8⌶⍨⍵}	Validate inverted table	Dfn	Monadic Function		Array Properties	
+X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Functtion	Dyadic Operator	Function Application	circlediaeresis on ⍥
+X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
+X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
+(⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷
+{⍺←⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}B	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Index Generation	truesat ⍸⍣¯1
+X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
+(⍳∘≢=(⍳⍨∪⍳⊢))Y	Nub sieve: mask for major cells to leave the distinct (∪Y)	Tacit	Monadic Function	Non-Scalar Function	Sets	unique Boolean indication ⍧
+Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function	Non-scalar Function	Structural	mold form dimension array autoshape
+Iv⌷⍨∘⊂⍨Y	Select major cells Iv of Y	Tacit	Dyadic Function	Non-scalar function	Selection	rightshoeunderbar saneindexing ⊇
+((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function	Non-scalar function	Sets	nub distinctitems uniqueelemenets
