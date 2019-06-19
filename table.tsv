@@ -106,7 +106,7 @@ C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function	Non-scalar 
 ∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function	Non-scalar Function	Sets	cup downshoe distinctitems uniqueelements nub
 X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	epsilon isin membership containedin has ϵ ε ∈
 X⍷Y	Occurrences of entire array X within Y	Primitive	Dyadic Function	Non-scalar Function	Sets	findin epsilonunderbar search locate
-X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	match equalunderbar identical
+X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function	Non-scalar Function	Sets	match equalunderbar identical?
 X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function	Non-scalar Function	Sets	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
 Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	tilde butnot without except setdifference setsubtraction setminus ∖
 Xv∪Yv	Union: Xv,Yv~Xv	Primitive	Dyadic Function	Non-scalar Function	Sets	cup union downshoe setor
@@ -221,7 +221,7 @@ errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	erro
 (+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean
 Xs(≠⊆⊢)Yv	Cut Yv at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment separate
 X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment separate
-X(∨/⍷)Y	Is X a Subarray of Y	Tacit	Dyadic Function		Structural	contains has isin issubarray appearsin
+X(∨/⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	contains? has? isin? issubarray? appearsin?
 Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous
@@ -244,12 +244,13 @@ M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³
 (,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffle randompermutation
 N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct matrixmultiply ∙⋅·
-(1≥∘|≡)Y	Is Y a Simple Array?	Tacit	Monadic Function		Structural	simple
-(2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Structural	nested
-(0>≡)Y	Y has Non-Uniform Depth	Tacit	Monadic Function		Structural	ragged nonorthogonal nonrectangular
-(0≤≡)Y	Y has Uniform Depth	Tacit	Monadic Function		Structural	uniform orthogonal rectangular
-(⍬≡⍴)Y	Y is a Scalar	Tacit	Monadic Function		Structural	scalar
-(1=×/∘⍴)Y	Y is a Singleton	Tacit	Monadic Function		Structural	singleton unit sole one
+(1≥∘|≡)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
+(0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	simple?
+(2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
+(0>≡)Y	Does Y have Non-Uniform Depth?	Tacit	Monadic Function		Array Properties	ragged? nonuniform? nonorthogonal? nonrectangular?
+(0≤≡)Y	Does Y have Uniform Depth?	Tacit	Monadic Function		Array Properties	uniform? orthogonal? rectangular?
+(⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	scalar?
+(1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	singleton? unit? sole? one?
 (⊃0⍴⊂)Y	Type (converts charcters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences changes steps
@@ -263,8 +264,8 @@ Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (2=0+.=⍳|⊢)Ns	Ns is a Prime	Tacit	Monadic Function		Mathematical	isprime primality
 I(0=|)J	I Divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
 I(0≠|)J	I does Not Divide J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∤
-Xv(∧/∊)Yv	Is Xv a Subset of Yv	Tacit	Dyadic Function		Sets	subset containedin ⊆
-Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv	Tacit	Dyadic Function		Sets	superset contains ⊇
+Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	subset? containedin ⊆
+Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	superset? contains ⊇
 (○÷180)∘×N	N Degrees in Radians	Tacit	Monadic Function		Mathematical	radians
 (180÷○1)∘×N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	degrees
 (2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base10 decimal base-10
@@ -278,13 +279,13 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	indexofsmallest
 (⊢⍉⍨⍴=⍴)Y	Diagonal	Tacit	Monadic Function		Structural	majordiagonal
 (⌽⍉⍨⍴=⍴)Y	Anti-diagonal	Tacit	Monadic Function		Structural	minordiagonal
-(0∊⍴)Y	Is Y an Empty Array	Tacit	Monadic Function		Structural	isempty isvoid isnull
+(0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	isempty? isvoid? isnull?
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort order up increasing
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort order down decreasing
-(1∧.=2</⊢)Nv	Nv is Strictly Increasing	Tacit	Monadic Function		Mathematical	ascending rising up order
-(1∧.=2>/⊢)Nv	Nv is Strictly Decreasing	Tacit	Monadic Function		Mathematical	ascending rising up order
-(1∧.=2≤/⊢)Nv	Nv is Non-decreasing	Tacit	Monadic Function		Mathematical	descending falling down order
-(1∧.=2>/⊢)Nv	Nv is Non-increasing	Tacit	Monadic Function		Mathematical	descending falling down order
+(1∧.=2</⊢)Nv	Is Nv Strictly Increasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order
+(1∧.=2>/⊢)Nv	Is Nv Strictly Decreasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order
+(1∧.=2≤/⊢)Nv	Is Nv Non-decreasing?	Tacit	Monadic Function		Mathematical	descending? falling? down order Nondecreasing?
+(1∧.=2>/⊢)Nv	Is Nv Non-increasing?	Tacit	Monadic Function		Mathematical	descending? falling? down order Nonincreasing?
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
 (¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	arccosecant acsc acosec arcuscosecant
@@ -895,8 +896,8 @@ cmp←{cmp←12} dfns.packZ exp	Abraham Lempel, Jacob Ziv, Terry Welch	Dfn	Funct
 tree← {trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function			parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser
 vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Function			unweightedgraph breadth-firstsearch breadthfirstsearch
 p←dfns.pco ⍵	⍵-th prime	Dfn	Monadic Function			primenumber J
-b←0 dfns.pco ⍵	1 iff ⍵ is not prime	Dfn	Dyadic Function			primenumber J
-b←1 dfns.pco ⍵	1 iff ⍵ is prime	Dfn	Dyadic Function			primenumber J
+b←0 dfns.pco ⍵	1 iff ⍵ is not prime	Dfn	Dyadic Function			primenumber J nonprime? non-prime? composite?
+b←1 dfns.pco ⍵	1 iff ⍵ is prime	Dfn	Dyadic Function			primenumber J prime?
 n←¯1 dfns.pco ⍵	number of primes less than ⍵	Dfn	Dyadic Function			primenumber J
 v←2 dfns.pco ⍵	prime factors and exponents	Dfn	Dyadic Function			primenumber J
 v←3 dfns.pco ⍵	prime factorization of ⍵	Dfn	Dyadic Function			primenumber J
@@ -955,7 +956,7 @@ dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function			graph spannin
 vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function			graph spanningtree path
 pvec←dfns.stpaths tree	Spanning tree paths	Dfn	Function			graph spanningtree path
 array←(from repl) dfns.subs array	Vector substitution	Dfn	Function			stringreplacement substitution
-yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function			subvector subset
+yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function			subvector? subset?
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function			diversions gameofsudoku K YouTube
 rslt←{larg} (func dfns.tc) rarg	Trace of function application	Dop		Monadic Operator		trace monitor debugging
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function			qualityassurance unittesting autoformat QA testing
@@ -1005,6 +1006,8 @@ X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵�
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷
 {⍺←⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}B	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Index Generation	truesat ⍸⍣¯1
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
+X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
+X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
 (⍳∘≢=(⍳⍨∪⍳⊢))Y	Nub sieve: mask for major cells to leave the distinct (∪Y)	Tacit	Monadic Function	Non-Scalar Function	Sets	unique Boolean indication ⍧
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function	Non-scalar Function	Structural	mold form dimension array autoshape
 Iv⌷⍨∘⊂⍨Y	Select major cells Iv of Y	Tacit	Dyadic Function	Non-scalar function	Selection	rightshoeunderbar saneindexing ⊇
