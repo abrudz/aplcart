@@ -183,7 +183,7 @@ X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train fgh fork 3train 3-train
 (X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train Agh fork 3train 3-train
-X(f g)Y	Atop: X f g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train
+X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train 
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fgh fork 3train 3-train
 X1(X2 g h)Y	Fork: X2 g X1 h Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train Agh fork 3train 3-train
 f←{⍵}	Dfn	Syntax	Monadic Function	Non-scalar Function	Definition	direct dynamic lambda anonymous curlybraces function dfn assignment
