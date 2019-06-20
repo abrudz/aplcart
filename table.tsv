@@ -1,31 +1,31 @@
 SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
-+Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function	Scalar Function	Mathematical	plus complex ¯10○ ¯10∘○
++Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function	Scalar Function	Mathematical	plus complex ¯10○ ¯10∘○ conj()
 -N	Negate: 0-N	Primitive	Monadic Function	Scalar Function	Mathematical	minus hyphen invert additiveinverse opposite dash negation signchange −
-×N	Direction ('Signum' if N is real)	Primitive	Monadic Function	Scalar Function	Mathematical	cross sgn sign
+×N	Direction ('Signum' if N is real)	Primitive	Monadic Function	Scalar Function	Mathematical	cross sgn() sign()
 ÷N	Reciprocal: 1÷N	Primitive	Monadic Function	Scalar Function	Mathematical	multiplicativeinverse opposite obelus invert
 ⌊N	Round down to integer	Primitive	Monadic Function	Scalar Function	Mathematical	downstile floor rounddown
 ⌈N	Round up to integer	Primitive	Monadic Function	Scalar Function	Mathematical	upstile roundup
 |N	Magnitude (absolute value)	Primitive	Monadic Function	Scalar Function	Mathematical	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude amplitude 10○ 10∘|
-*N	e raised to the power N	Primitive	Monadic Function	Scalar Function	Mathematical	power star asterisk exponential etothepowerof naturalexponential
-⍟N	Natural logarithm of N	Primitive	Monadic Function	Scalar Function	Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662
+*N	e raised to the power N	Primitive	Monadic Function	Scalar Function	Mathematical	power star asterisk exponential etothepowerof naturalexponential exp()
+⍟N	Natural logarithm of N	Primitive	Monadic Function	Scalar Function	Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662 ln()
 ○N	pi times N	Primitive	Monadic Function	Scalar Function	Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π 𝜋
-!N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek combinatorics
+!N	Factorial (Gamma function of N+1)	Primitive	Monadic Function	Scalar Function	Mathematical	countpermutations exclamation bang shriek combinatorics fact() gamma() Γ
 ?J	Random number selected from ⍳J	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randominteger interrogationpoint query eroteme
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function	Scalar Function	Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
 ~B	Logical Inverse: 0=B	Primitive	Monadic Function	Scalar Function	Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬
 M+N	Add N to M	Primitive	Dyadic Function	Scalar Function	Mathematical	plus addition
 M-N	Subtract N from M	Primitive	Dyadic Function	Scalar Function	Mathematical	minus dash hyphen subtraction difference −
-M×N	Multiply M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	cross times multiplication ∙⋅·
+M×N	Multiply M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	cross times multiplication ∙ ⋅ ·
 M÷N	Divide M by N	Primitive	Dyadic Function	Scalar Function	Mathematical	division over ⁄
-M|N	Residue after dividing N by M	Primitive	Dyadic Function	Scalar Function	Mathematical	verticalbar pipe stile stroke verticalline modulo modulus residue divisionremainder
-M*N	M raised to the power N	Primitive	Dyadic Function	Scalar Function	Mathematical	power star asterisk raisedtothepowerof exponentiation
-M⍟N	Base-M logarithm of N	Primitive	Dyadic Function	Scalar Function	Mathematical	logarithm circlestar starcircle splat
-M⌈N	Maximum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	upstile maximum greater larger
-M⌊N	Minimum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	downstile minimum lesser smaller
+M|N	Residue after dividing N by M	Primitive	Dyadic Function	Scalar Function	Mathematical	verticalbar pipe stile stroke verticalline modulo modulus residue divisionremainder mod()
+M*N	M raised to the power N	Primitive	Dyadic Function	Scalar Function	Mathematical	power star asterisk raisedtothepowerof exponentiation pow()
+M⍟N	Base-M logarithm of N	Primitive	Dyadic Function	Scalar Function	Mathematical	logarithm circlestar starcircle splat log()
+M⌈N	Maximum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	upstile maximum greater larger max()
+M⌊N	Minimum of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	downstile minimum lesser smaller min()
 I○N	Circular functions	Primitive	Dyadic Function	Scalar Function	Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric
-M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function	Scalar Function	Mathematical	exclamation bang shriek binomial combinatorics
-M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	least smallest lcm denominator lcd
-M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	gcd gcf factor hcf highest gcm measure hcd
+M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function	Scalar Function	Mathematical	exclamation bang shriek binomial combinatorics beta() Β Ꞵ B()
+M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	least smallest lcm() denominator lcd()
+M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function	Scalar Function	Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd
 M<N	Less Than	Primitive	Dyadic Function	Scalar Function	Comparison	lt before precedes ≺
 M≤N	Less Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	le before precedes ≦
 M≥N	Greater Than Or Equal To	Primitive	Dyadic Function	Scalar Function	Comparison	ge after follows ≧
@@ -42,31 +42,31 @@ A∧B	AND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	conjunction 
 A∨B	OR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek
 A⍲B	NAND	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial
 A⍱B	NOR	Primitive	Dyadic Function	Scalar Function	Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial
-0○N	cos ←→ sin: (1-N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary cop
-¯1○N	Arcsin N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arcsine asin arcussinus
-¯2○N	Arccos N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arccosine acos arcuscosinus
-¯3○N	Arctan N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arctangent atan arcustangent
-¯4○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary cohn
-¯5○N	Hyperbolic Arcsinh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arcsine asinh arcussinus arsinh area
-¯6○N	Hyperbolic Arccosh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arccosine acosh arcuscosinus arcosh area
-¯7○N	Hyperbolic Arctanh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arctangent atanh arcustangent artanh area
-¯8○N	icos ←→ -isin: -(-1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary nconh
+0○N	cos ←→ sin: (1-N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary cop()
+¯1○N	Arcsin N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arcsine asin() arcussinus
+¯2○N	Arccos N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arccosine acos() arcuscosinus
+¯3○N	Arctan N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arctangent atan() arcustangent
+¯4○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary cohn()
+¯5○N	Hyperbolic Arcsinh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area
+¯6○N	Hyperbolic Arccosh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area
+¯7○N	Hyperbolic Arctanh N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	arctangent atanh() arcustangent artanh() area
+¯8○N	icos ←→ -isin: -(-1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary nconh()
 ¯9○N	N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	identity
 ¯10○N	+N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	complexconjugate
 ¯11○N	N×0J1	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	imaginary complex itimes
-¯12○N	*N×0J1	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	antiphase phasor cis
-1○N	Sine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus
-2○N	Cosine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	cosinus
-3○N	Tangent N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	tanh
-4○N	sinh → cosh: (1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary coh
-5○N	Hyperbolic sine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus sinh
-6○N	Hyperbolic cosine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	cosinus cosh
-7○N	Hyperbolic tangent N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	tanh
-8○N	icos ←→ isin: (-1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary conh
+¯12○N	*N×0J1	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	antiphase phasor cis()
+1○N	Sine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus sin()
+2○N	Cosine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	cosinus cos()
+3○N	Tangent N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	tan()
+4○N	sinh → cosh: (1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary coh()
+5○N	Hyperbolic sine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	sinus sinh()
+6○N	Hyperbolic cosine N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	cosinus cosh()
+7○N	Hyperbolic tangent N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	tanh()
+8○N	icos ←→ isin: (-1+N*2)*.5	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	pythagorean complementary conh()
 9○N	Real part of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	re()
 10○N	Magnitude of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	abs() modulo modulus abs magnitude amplitude
 11○N	Imaginary part of N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	im()
-12○N	phase N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	argument arc
+12○N	phase N	Primitive	Dyadic Function	Scalar Function	Circular/Trigonometric	argument arc()
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function	Non-scalar Function	Mathematical	domino quaddivide leastsquares
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function	Non-scalar Function	Mathematical	domino matrixdivide quaddivide
@@ -85,7 +85,7 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function	Non-scalar
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function	Non-scalar Function	Structural	commabar ravelcells flattencells razecells
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlestile mirror
 ⊖Y	Reverse leading axis of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebar rowel upset flip upend
-⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebackslash cant reverseaxes
+⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function	Non-scalar Function	Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ
 Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function	Non-scalar Function	Structural	rho mold form dimension array ρ ϱ
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function	Non-scalar Function	Structural	circlestile
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function	Non-scalar Function	Structural	circlebar
@@ -272,7 +272,7 @@ Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	superset? c
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	digits base10 decimal base-10
 M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
 1∘|N	Fractional Part of N	Tacit	Monadic Function		Mathematical	fractional
-(!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma
+(!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma() Γ
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖
 Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	indexoflargest
