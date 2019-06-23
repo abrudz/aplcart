@@ -1,8 +1,8 @@
 @font-face{font-family:'APL333';src:local('APL333'),url(apl333.ttf)}
 @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(apl385.ttf)}
 *{font-family:'APL333'!important;border:none!important}
-body{filter:invert(.9);background:rgba(0,0,0,0.8);overflow:hidden}
-body.w{filter:invert(0);background:rgba(0,0,0,0.1)}
+body{filter:invert(.9);background:#333;overflow:hidden}
+body.w{filter:invert(0);background:#ddd}
 p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
 a{position:absolute;z-index:1;color:unset}
 #w{text-decoration:unset;bottom:0;right:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
