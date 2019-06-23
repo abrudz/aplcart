@@ -1201,7 +1201,7 @@ Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex 
 '-'@(=∘' ')Y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow assignment gets is copula let redefine name naming denotes means inplace update
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	at substitute merge amend replace update
- '@{2=⌈\' 0'⍳⍵}D	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s
+' '@{2=⌈\' 0'⍳⍵}D	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus residue divisionremainder 12hourclock
 (⊢⌽⍨1-=∘' '⊥1)Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright flushrightflush rightjustifyright
