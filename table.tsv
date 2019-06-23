@@ -1289,43 +1289,43 @@ X(f⍤0)Y	Run f to scalars	Tacit	Function	Monadic Operator	Function Application	
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s
 (0=/)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s
 ∊∘⍬Y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
-X{}Y	X and Y are ignored (no result produced)	Dfn	Function	Performance	System	silence shh quiet sink dump
-X{⍺⍵}Y	X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	juxtapose tuple pair
-{0}Y	0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	zero naught
-{0}¨Y	0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	zeroes naughts 0s
-1=≡,Y 	Is Y a Simple Array?	Expression		Performance	Array Properties	simple?
-1=≡Y	Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	simple? nonscalar?
-0=≡Y	Is Y a Simple Scalar?	Expression		Performance	Array Properties	simple?
-0=⍴⍴Y	Is Y a Scalar?	Expression		Performance	Array Properties	
-0=⊃⍴Y	Does Y have an empty first dimension?	Expression		Performance	Array Properties	empty? norows?
-0∊⍴Y	Is Y empty?	Expression		Performance	Array Properties	
-~0∊⍴Y	Is Y non-empty?	Expression		Performance	Array Properties	nonempty? hascontent?
-∧\' '=D	A Boolean mask indicating the leading blank spaces in each row of CA	Expression		Performance	Text	
-~∘' '¨↓Dm	A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	
-{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	
-↓⍉↑Yv	A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	transpose vtv
-Xm{(↓⍺)⍳↓⍵}Ym	A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	
-{(∨\' '≠⍵)/⍵}Dv	Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	trim left-align leftalign
-{(+/∧\' '=⍵)↓⍵}Dv	Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	trim left-align leftalign
-*○N	Euler's idiom (accurate when NA is a multiple of 0J0.5)	Expression		Performance	Mathematical	
-⌊0.5+N	Round to nearest integer	Expression		Performance	Mathematical	
-⍪/Yv	The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	combine merge stack joinvertically
-,/Yv	The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	combine merge joinhorizontally
-⊣⌿Y	The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	topmostrow
-⊣/Y	The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	leftmostcolumn
-⊃⌽,Y	The item in the bottom right of Y	Expression		Performance	Selection	last bottom-right se southeast south-east
-⊃⌽Y	The item in the top right of Y	Expression		Performance	Selection	top-right ne northeast north-east
-⊢⌿Y	The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	bottommostrow
-⊢/Y	The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	rightmostcolumn
-⊃∘⍴¨Y	The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	
-+/∧\B	The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	ones
-+/∧\' '=D	The number of leading blank spaces in each row of D	Expression		Performance	Text	
-Av/⍳⍴Yv	The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	ones where
-⍴⍴Y	The rank of Y as a 1-element vector	Expression		Performance	Array Properties	
-≢⍴Y	The rank of Y as a scalar	Expression		Performance	Array Properties	numberofdimensions tensorrank
-Bv/⍳Ns	The subset of BV corresponding to the 1s in NS.	Expression		Performance	Index Generation	
-M⊃¨⊂Yv	The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	chipmunk selectfrom indexinto
-name,←Y	'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	amend append extend accumulate concatenate
-name⍪←Y	name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	amend append extend accumulate concatenate
-{(⊂⍋⍵)⌷⍵}Y	XA sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	sort() order up increasing
-{(⊂⍒⍵)⌷⍵}Y	XA sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	sort() order down decreasing
+X{}Y	Fast: X and Y are ignored (no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet sink dump
+X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair
+{0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught
+{0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s
+1=≡,Y 	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	speed optimised optimized quick simple?
+1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	speed optimised optimized quick simple? nonscalar?
+0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	speed optimised optimized quick simple?
+0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	speed optimised optimized quick 
+0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	speed optimised optimized quick empty? norows?
+0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	speed optimised optimized quick 
+~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	speed optimised optimized quick nonempty? hascontent?
+∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of CA	Expression		Performance	Text	speed optimised optimized quick 
+~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick 
+{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick 
+↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv
+Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick 
+{(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign
+{(+/∧\' '=⍵)↓⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign
+*○N	Fast: Euler's idiom (accurate when NA is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick 
+⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick 
+⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically
+,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally
+⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow
+⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn
+⊃⌽,Y	Fast: The item in the bottom right of Y	Expression		Performance	Selection	speed optimised optimized quick last bottom-right se southeast south-east
+⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east
+⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow
+⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn
+⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick 
++/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones
++/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick 
+Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where
+⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick 
+≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank
+Bv/⍳Ns	Fast: The subset of BV corresponding to the 1s in NS.	Expression		Performance	Index Generation	speed optimised optimized quick 
+M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto
+name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate
+name⍪←Y	Fast: name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate
+{(⊂⍋⍵)⌷⍵}Y	Fast: XA sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() order up increasing
+{(⊂⍒⍵)⌷⍵}Y	Fast: XA sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() order down decreasing
