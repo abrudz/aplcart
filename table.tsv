@@ -90,7 +90,7 @@ Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar
 Iv⍉Y	Reorder the axes of Y	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes
-X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma concatenate
+X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma join
 X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally
 X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Dyadic Function		Index Generation	iota integers ints countto sequence numbers range ɩ ι positions locations
@@ -280,8 +280,8 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (⊢⍉⍨⍴=⍴)Y	Diagonal	Tacit	Monadic Function		Structural	majordiagonal
 (⌽⍉⍨⍴=⍴)Y	Anti-diagonal	Tacit	Monadic Function		Structural	minordiagonal
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	isempty? isvoid? isnull?
-(⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort order up increasing
-(⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort order down decreasing
+(⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort() order up increasing
+(⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort() order down decreasing
 (1∧.=2</⊢)Nv	Is Nv Strictly Increasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order
 (1∧.=2>/⊢)Nv	Is Nv Strictly Decreasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order
 (1∧.=2≤/⊢)Nv	Is Nv Non-decreasing?	Tacit	Monadic Function		Mathematical	descending? falling? down order Nondecreasing?
@@ -787,16 +787,16 @@ cmat←dfns.display array	Boxed display of array	Dfn	Function			displayofarrays 
 cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function			displayofarrays box boxing box-drawingcharacters boxdrawingcharacters
 cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays box boxing box-drawingcharacters boxdrawingcharacters
 d←L dfns.dist R	Levenshtein distance	Dfn	Function			stringcomparison fuzzy
-rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			blanks compression
-rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			blanks compression
+rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			blanks compression spaces
+rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			blanks compression spaces
 rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator		no-result is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function			whitedots functionsformatting name-clashproblem stuff nameclashproblem
 cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function			box box-drawingcharacters diversions boxdrawingcharacters
 nvec←{axis} dfns.dscan nvec	Divide scan	Dfn	Function			scanoperators
 cmat←{topbar←1} dfns.dsp array	Reduced version of disp	Dfn	Function			boxing displayofarrays tape
-rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function			blanks compression
-rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function			blanks compression
-rslt←(⍺⍺ dfns.each) array	Fast each for pure operand function	Dop		Monadic Operator		each purefunction
+rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function			blanks compression spaces
+rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function			blanks compression spaces
+rslt←(⍺⍺ dfns.each) array	Fast each for pure operand function	Dop		Monadic Operator	Function application	each purefunction
 yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function			date CouncilofNicaea canonpaschalis pervasivefunction histogram
 nvec←P dfns.efract Q	Egyptian fractions	Dfn	Function			Egyptianfraction
 nested←{left} dfns.eis right	Enclose-if-simple / link	Dfn	Function			link enclose-if-simple encloseifsimple
@@ -1289,3 +1289,43 @@ X(f⍤0)Y	Run f to scalars	Tacit	Function	Monadic Operator	Function Application	
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s
 (0=/)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s
 ∊∘⍬Y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
+X{}Y	X and Y are ignored (no result produced)	Dfn	Function	Performance	System	silence shh quiet sink dump
+X{⍺⍵}Y	X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	juxtapose tuple pair
+{0}Y	0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	zero naught
+{0}¨Y	0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	zeroes naughts 0s
+1=≡,Y 	Is Y a Simple Array?	Expression		Performance	Array Properties	simple?
+1=≡Y	Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	simple? nonscalar?
+0=≡Y	Is Y a Simple Scalar?	Expression		Performance	Array Properties	simple?
+0=⍴⍴Y	Is Y a Scalar?	Expression		Performance	Array Properties	
+0=⊃⍴Y	Does Y have an empty first dimension?	Expression		Performance	Array Properties	empty? norows?
+0∊⍴Y	Is Y empty?	Expression		Performance	Array Properties	
+~0∊⍴Y	Is Y non-empty?	Expression		Performance	Array Properties	nonempty? hascontent?
+∧\' '=D	A Boolean mask indicating the leading blank spaces in each row of CA	Expression		Performance	Text	
+~∘' '¨↓Dm	A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	
+{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	
+↓⍉↑Yv	A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	transpose vtv
+Xm{(↓⍺)⍳↓⍵}Ym	A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	
+{(∨\' '≠⍵)/⍵}Dv	Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	trim left-align leftalign
+{(+/∧\' '=⍵)↓⍵}Dv	Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	trim left-align leftalign
+*○N	Euler's idiom (accurate when NA is a multiple of 0J0.5)	Expression		Performance	Mathematical	
+⌊0.5+N	Round to nearest integer	Expression		Performance	Mathematical	
+⍪/Yv	The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	combine merge stack joinvertically
+,/Yv	The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	combine merge joinhorizontally
+⊣⌿Y	The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	topmostrow
+⊣/Y	The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	leftmostcolumn
+⊃⌽,Y	The item in the bottom right of Y	Expression		Performance	Selection	last bottom-right se southeast south-east
+⊃⌽Y	The item in the top right of Y	Expression		Performance	Selection	top-right ne northeast north-east
+⊢⌿Y	The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	bottommostrow
+⊢/Y	The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	rightmostcolumn
+⊃∘⍴¨Y	The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	
++/∧\B	The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	ones
++/∧\' '=D	The number of leading blank spaces in each row of D	Expression		Performance	Text	
+Av/⍳⍴Yv	The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	ones where
+⍴⍴Y	The rank of Y as a 1-element vector	Expression		Performance	Array Properties	
+≢⍴Y	The rank of Y as a scalar	Expression		Performance	Array Properties	numberofdimensions tensorrank
+Bv/⍳Ns	The subset of BV corresponding to the 1s in NS.	Expression		Performance	Index Generation	
+M⊃¨⊂Yv	The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	chipmunk selectfrom indexinto
+name,←Y	'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	amend append extend accumulate concatenate
+name⍪←Y	name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	amend append extend accumulate concatenate
+{(⊂⍋⍵)⌷⍵}Y	XA sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	sort() order up increasing
+{(⊂⍒⍵)⌷⍵}Y	XA sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	sort() order down decreasing

@@ -4,11 +4,11 @@
 
 - Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code.
 
-- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to white theme.
+- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme.
 
 ## Contributing
 
-Wrote cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
+Wrote a cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
 
 Missing someting? Faulty content? [Submit an issue!](https://github.com/abrudz/aplcart/issues/new)
 
@@ -27,7 +27,7 @@ While holding <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>�
 After [abrudz.github.io/aplcart](https://abrudz.github.io/aplcart) you can add `?` and the following options, separated by `&` if you want both:
 
 - [`w`](https://abrudz.github.io/aplcart?w) use white theme
-- [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate query field
+- [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate query field
 
 For example for a white interface looking for "find", use [abrudz.github.io/aplcart?w&q=find](https://abrudz.github.io/aplcart?w&q=find)
 
@@ -49,11 +49,14 @@ APLCart currently searches a database of:
 - User commands
 - A selection of simple derived functions
 - All of dfns.dws
+- Curated idioms from the APL2 idiom list
+- Curated performance idioms from Dyalog's idiom list
 
 ### Planned
 
-- Subset of idioms from Dyalog, FinnAPL, and APL2 idiom lists (in progess; about 25% done)
+- Subset of idioms from the FinnAPL idiom list (in progress)
+- Subset of entries from Dyalog's #onelinerwednesday series
 
-## Planned features
+## Wish list
 - links to documentation
 - links to TIO examples
