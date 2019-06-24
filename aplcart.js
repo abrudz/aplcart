@@ -18,6 +18,7 @@ $(document).ready(function(){
       language:{search:"query:"}
     });
     $(".dataTables_scrollBody").attr("accesskey","z");
+    $("label,input").prop('title',"What to search for (access-key: Q)");
     $("input").focus().attr({
       accesskey:"q",
       oninput:'q=$("input").val();setTit(q);setUrl(q)'

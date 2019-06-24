@@ -2,27 +2,27 @@
 
 - Click [here](https://abrudz.github.io/aplcart/) and start typing.
 
+- Click [`×`](https://abrudz.github.io/aplcart/) to start a new query.
+
 - Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code.
 
 - Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme.
 
-## Contributing
-
-Wrote a cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
-
-Missing someting? Faulty content? [Submit an issue!](https://github.com/abrudz/aplcart/issues/new)
-
-## Navigation
-
 ### Access keys
 
-While holding <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS),
+While holding <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS), press
 
 - <kbd>Q</kbd> to focus on the **Q**uery field
+- <kbd>X</kbd> to clear the query field (`×`)
 - <kbd>A</kbd> to go to the **A**PLcart source code
+- <kbd>Z</kbd> to focus on the results' listing (for keyboard scrolling)
 - <kbd>W</kbd> to toggle **W**hite theme
 
-### URL API
+## URL API ("Permalinks")
+
+As the query is modified, the browser address bar is updated too. Simply copy the address to share a query.
+
+### Manual construction
 
 After [abrudz.github.io/aplcart](https://abrudz.github.io/aplcart) you can add `?` and the following options, separated by `&` if you want both:
 
@@ -53,10 +53,16 @@ APLCart currently searches a database of:
 - Curated performance idioms from Dyalog's idiom list
 - Curated entries from Dyalog's #onelinerwednesday series
 
-### Planned
+### Coming soon
 
-- Subset of idioms from the FinnAPL idiom list (in progress)
+- Subset of idioms from the FinnAPL idiom list
 
-## Wish list
+## Features wish list
 - links to documentation
 - links to TIO examples
+
+## Contributing
+
+Wrote a cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
+
+Missing someting? Faulty content? [Submit an issue!](https://github.com/abrudz/aplcart/issues/new)

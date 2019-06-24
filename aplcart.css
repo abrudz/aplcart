@@ -5,7 +5,9 @@ body{filter:invert(.9);background:#333;overflow:hidden}
 body.w{filter:invert(0);background:#ddd}
 p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
 a{position:absolute;z-index:1;color:unset}
-#w{text-decoration:unset;bottom:0;right:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#w,#x{text-decoration:unset;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer}
+#w{bottom:0}
+#x{padding:0 .5ex}
 .dataTables_scrollHeadInner{padding-left:0!important}
 .dataTables_filter{text-align:right!important}
 #DataTables_Table_0_info{text-align:unset}
