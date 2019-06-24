@@ -1,26 +1,24 @@
 # APLcart – <sub><sup>*A novel approach to finding your way in APL*</sup></sub>
 
-- Click [here](https://abrudz.github.io/aplcart/) and start typing.
+**There is plenty of documentation on what parts of APL do. APLcart seeks to answer *How do I…* questions.**
 
-- Click [`×`](https://abrudz.github.io/aplcart/) to start a new query.
+## Usage
 
-- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code.
+Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
 
-- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme.
+- Click [here](https://abrudz.github.io/aplcart/) and start typing (access-key <kbd>Q</kbd> to re-focus)
 
-### Access keys
+- Click [`×`](https://abrudz.github.io/aplcart/) in the top right corner to start a new query (access-key <kbd>X</kbd>)
 
-While holding <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS), press
+- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd>)
 
-- <kbd>Q</kbd> to focus on the **Q**uery field
-- <kbd>X</kbd> to clear the query field (`×`)
-- <kbd>A</kbd> to go to the **A**PLcart source code
-- <kbd>Z</kbd> to focus on the results' listing (for keyboard scrolling)
-- <kbd>W</kbd> to toggle **W**hite theme
+- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd>)
 
-## URL API ("Permalinks")
+Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
-As the query is modified, the browser address bar is updated too. Simply copy the address to share a query.
+## URL API ("permalinks")
+
+As the query is modified, the browser address bar is updated too. Simply copy the current address to share a current query.
 
 ### Manual construction
 
@@ -33,7 +31,7 @@ For example for a white interface looking for "find", use [abrudz.github.io/aplc
 
 ## Scope
 
-APLCart currently searches a database of:
+APLCart currently searches a table of:
 
 - General APL syntax
 - Primitives
@@ -47,11 +45,11 @@ APLCart currently searches a database of:
 - I-beams
 - Errors
 - User commands
-- A selection of simple derived functions
+- A selection of simple dfns, dops, and derived functions
 - All of dfns.dws
-- Curated idioms from the APL2 idiom list
-- Curated performance idioms from Dyalog's idiom list
-- Curated entries from Dyalog's #onelinerwednesday series
+- Idioms from the APL2 idiom list
+- Performance idioms from Dyalog's idiom list
+- Entries from Dyalog's #onelinerwednesday series
 
 ### Coming soon
 
