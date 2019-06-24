@@ -51,11 +51,11 @@ APLCart currently searches a database of:
 - All of dfns.dws
 - Curated idioms from the APL2 idiom list
 - Curated performance idioms from Dyalog's idiom list
+- Curated entries from Dyalog's #onelinerwednesday series
 
 ### Planned
 
 - Subset of idioms from the FinnAPL idiom list (in progress)
-- Subset of entries from Dyalog's #onelinerwednesday series
 
 ## Wish list
 - links to documentation

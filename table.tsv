@@ -218,7 +218,7 @@ name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow assignment g
 ⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅
 bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	guard if conditional ternary
 errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try
-(+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean
+(+⌿÷≢)N	Mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg()
 Xs(≠⊆⊢)Yv	Cut Yv at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut split partition segment separate chop divide
 X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut split partition segment separate chop divide
 X(∨/⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	contains? has? isin? issubarray? appearsin?
@@ -1019,7 +1019,7 @@ Mv(f⍤1 0)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows
 ⍳∘⊃∘⌽∘⍴Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
-(∪⍳∨⊢)Js	All factors of Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	divisors
+(∪⍳∨⊢)Js	All divisors of Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	divisors
 ∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	
@@ -1038,7 +1038,6 @@ Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assig
 (⍳∘⊃∘⌽∘≢⍪⊢)Ym	Attach column numbers to a matrix	Tacit	Monadic Function		Index Generation	headings
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels
 Ms(+÷××⊣!+)Ns	Beta function 	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y)
-(∘.!⍨0,⍳ )Js	Binomial coefficients from until Js	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations
 (2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs
@@ -1103,7 +1102,7 @@ X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Com
 X(Is{⍵⌹⍺∘.*0,⍳⍺⍺})Y	Is degree polynomial fit given X,Y values	Dop	Dyadic Function		Mathematical	curvefitting model
 (0≠.=400 100 4∘.|⊢)Js	Is IS (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
 X1 X2(1=⍸)Y	Are Y in range [X1,X2)	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval
-(1∧|,÷)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
+((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking
 M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber
@@ -1151,7 +1150,7 @@ Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matr
 (0J1⊥⊖)Nm	Parallel projection of 3D object in Nm	Tacit	Monadic Function		Mathematical	
 ≠\B	Parity: Connect odd and even ones	Tacit	Monadic Function		Mathematical	1s
 (≠\∨⊢)B	Parity with connectors: Connect odd and even ones	Tacit	Monadic Function		Mathematical	1s
-(∘.!⍨0,⍳)Js	Pascal's triangle of order Js	Tacit	Monadic Function		Mathematical	
+(∘.!⍨0,⍳)Js	Binomial coefficients until Js	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations pascalstriangle
 Ms(0J1⊥(1↓⊢∘⊖)×⊢÷⊣-¯1↑⊢)Nm	Perspective projection of Nm from distance Ms	Tacit	Dyadic Function		Mathematical	
 f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	
 (1 ¯1×⊂)N	±N by juxtaposition	Tacit	Monadic Function		Mathematical	plusminus
@@ -1190,9 +1189,9 @@ Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex 
 {⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	delete allspaces emptylines
 ~∘' '¨D	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces
-{⍵/⍨¯1↓1,1(⊢∨⌽)' '∨.≠⍵}Dm	Remove duplicate blank columns	Dfn	Monadic Function		Text	delete allspaces repeated extraneous
-{⍵⌿⍨¯1↓1,1(⊢∨⌽)⍵∨.≠' '}Dm	Remove duplicate blank rows	Dfn	Monadic Function		Text	delete allspaces repeated extraneous
-' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces
+{⍵/⍨¯1↓1,1(⊢∨⌽)' '∨.≠⍵}Dm	Remove duplicate blank columns	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple
+{⍵⌿⍨¯1↓1,1(⊢∨⌽)⍵∨.≠' '}Dm	Remove duplicate blank rows	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple
+' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple
 {⍵/⍨∨\' '∨.≠⍵}Dm	Remove leading blank columns	Dfn	Monadic Function		Text	delete allspaces
 {⍵⌿⍨∨\⍵∨.≠' '}Dm	Remove leading blank rows	Dfn	Monadic Function		Text	delete allspaces
 {⍵/⍨∨\⍵≠' '}Dv	Remove leading blanks	Dfn	Monadic Function		Text	delete spaces beginning
@@ -1329,3 +1328,30 @@ name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last
 name⍪←Y	Fast: name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate
 {(⊂⍋⍵)⌷⍵}Y	Fast: XA sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() order up increasing
 {(⊂⍒⍵)⌷⍵}Y	Fast: XA sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() order down decreasing
+{' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski
+{⍵⌷⍨⊂⍒⊢/⍵},∘≢⌸	Sorted frequency table	Tacit	Monadic Function		Mathematical	
+(⍳(⊣(/⍨)0=|)⊢)Js	Divisors	Tacit	Monadic Function		Mathematical	factorisation factorization
+{n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic function		Mathematical	juggling beat
+{16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
+{(⎕D,⎕A)[1+16⊥⍣¯1⊢⍵]}Js	Convert to hexadecimal	Dfn	Monadic Function		Mathematical	tobase16 base-16 ₁₆ dec2hex hex()
++∘÷⍣=⍨1	Golden ratio	Constant	Expression		Mathematical	phi φ ϕ ɸ
+(0=10|1⊥∘,0 10⊤⊢×∘⌽1 2⍴⍨≢)	Valid credit card?	Tacit	Monadic Function		Mathematical	luhns luhn's formula debitcard? creditcard? checksum valid?
+(∨.∧⍨∨⊢)⍣≡	Transitive closure	Tacit	Monadic Function		Boolean/Logical	
+1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	
+I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	order sort() sortby()
+Mv⊥⍨∘⍪Nv	Evaluate polynomial with factors Mv in descending order for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply
+Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote
+{({1≠≢⍵}⌸⍵)⌿∪⍵}Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique
+C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	Tacit	Monadic Operator		Text	
+(×⌿*÷∘≢)N	Geometric mean	Tacit	Monadic Function		Mathematical	average GM()
+(≢÷+⌿∘÷)N	Harmonic mean	Tacit	Monadic Function		Mathematical	average subcontrary mean H()
+(⊃((×⌿*÷∘≢),(≢÷+⌿∘÷))⍣≡)Nv	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM()
+(⊃((+⌿÷≢),(×⌿*÷∘≢))⍣≡)Nv	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AGM()
+(32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
+(1.8÷⍨¯32∘+)N	Fahrenheit to Celcius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius c2f() ctof() convert
+(×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()
+{⍵⌷⍨⊂0~⍨⊢/⊢⌸⍵}	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	
+(¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
+(2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
+Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise
+(¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	ratios
