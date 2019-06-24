@@ -1350,7 +1350,7 @@ C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	
 (32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
 (1.8÷⍨¯32∘+)N	Fahrenheit to Celcius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius c2f() ctof() convert
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()
-{⍵⌷⍨⊂0~⍨⊢/⊢⌸⍵}	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	
+{⍵⌷⍨⊂0~⍨⊢/⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
 Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise

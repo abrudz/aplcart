@@ -18,7 +18,7 @@ Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
 ## URL API ("permalinks")
 
-As the query is modified, the browser address bar is updated too. Simply copy the current address to share a current query.
+As the query is modified, the browser address bar is updated too. Simply copy the current address to share the current query.
 
 ### Manual construction
 
