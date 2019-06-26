@@ -1284,9 +1284,9 @@ X(f{↑[⍵⍵](⊂AX)f⊂[⍵⍵]⍵}ax)Y	Run f on axes of Y	Dop	Dyadic Functio
 X(f{⍺←⊢ ⋄ ⎕IO←⍵⍵ ⋄ ⍺ ⍺⍺ ⍵}Bs)Y	Run f in origin Bs	Dop	Function	Dyadic Operator	Function Application	⎕IO indexorigin apply
 X(f⍤0)Y	Run f to scalars	Tacit	Function	Monadic Operator	Function Application	apply
 ≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
-(0≠/)Yv	Zeros, same shape plus one	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
+(0≠/⊢)Yv	Zeros, same shape plus one	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s
-(0=/)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s
+(0=/⊢)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s
 ∊∘⍬Y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s
 X{}Y	Fast: X and Y are ignored (no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet sink dump
 X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair
