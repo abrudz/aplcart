@@ -1,4 +1,4 @@
-# APLcart – <sub><sup>*A novel approach to finding your way in APL*</sup></sub>
+# APLcart – <sub><sup>*A novel approach to finding your way in [APL](#apl)*</sup></sub>
 
 **There is plenty of documentation on what parts of APL do. APLcart seeks to answer *How do I…* questions.**
 
