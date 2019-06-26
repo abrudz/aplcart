@@ -2,7 +2,7 @@ function esc(s){return s.replace(/[<>&'"]/g,x=>ESC[x])};
 var ESC={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
 var table;
 function setTit(t){document.title=t?"APLcart: "+t:"APLcart - Find your way in APL"};
-function setUrl(q){history.replaceState({},document.title,window.location.pathname+(q?"?q="+q:""))};
+function setUrl(q){history.replaceState({},document.title,window.location.pathname+(q?"?q="+encodeURIComponent(q):""))};
 $(document).ready(function(){
   $.get("table.tsv",function(w){
     table=(esc(w)).split(/\r?\n/g).slice(1).map(w=>w.split('\t')).filter(w=>w!="");
