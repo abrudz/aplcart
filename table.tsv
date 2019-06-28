@@ -80,7 +80,7 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ↑Y	Mix: Remove nesting	Primitive	Monadic Function		Structural	uparrow
 ↓Y	Split: Nest sub-arrays	Primitive	Monadic Function		Structural	downarrow
 ∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function		Structural	flatten raze ϵ ε ∈
-,[ax]Y	Ravel with Axes: insert new axis or combine axes	Primitive	Monadic Function		Structural	increaserank decreaserank reducerank comma
+,[ax]Y	Ravel with Axes: insert new axis or combine axes	Primitive	Monadic Function		Structural	increaserank decreaserank reducerank comma addaxis
 ,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flatten raze
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile mirror
@@ -116,8 +116,8 @@ Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
 Iv↑Y	Take Iv items along axes of Y	Primitive	Dyadic Function		Selection	uparrow take first last beginning end leading trailing head tail
 Iv↓Y	Drop Iv items along axes of Y	Primitive	Dyadic Function		Selection	downarrow split drop remove trim cut
-Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compress slash solidus filter
-Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compress slashbar solidus filter first
+Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat
+Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compress slashbar solidus filter first copy repeat
 Iv\Y	Expand last axis of Y	Primitive	Dyadic Function		Selection	reversesolidus slope
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function		Selection	reversesolidusbar slopebar
 Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function		Selection	segment chop split cut separate
@@ -1013,8 +1013,8 @@ Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv,
 Iv⌷⍨∘⊂⍨Y	Select major cells Iv of Y	Tacit	Dyadic Function	Non-scalar function	Selection	rightshoeunderbar saneindexing ⊇
 ((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function	Non-scalar function	Sets	nub distinctitems uniqueelemenets
 +/⍒∘|⊃¨⊂	Accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	sum floats precisionloss imprecision IEEE754 64-bit IEEE754-2008 128-bit binaryfloatingpoint
-Mv(f⍤1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement
-Mv(f⍤1 0)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement
+Mv(f⍤0 1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise
+Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows
@@ -1258,12 +1258,14 @@ Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients N
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding
 Is(+/÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant  ^T ⸆ ᵀ
-{⍉2⊥⍣¯1⊢0,⍳2*⍵-1}Js	Truth table with Js variables	Dfn	Monadic Function		Boolean/Logical	
+2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables)	Tacit	Monadic Function		Boolean/Logical	
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	
-(⊢⍴⍨2,⍨∘⌈.5×≢)Yv	Two column matrix from one vector (row-wise)	Tacit	Monadic Function		Structural	
-(⍉⊢⍴⍨2,∘⌈.5×≢)Yv	Two column matrix from one vector (column-wise)	Tacit	Monadic Function		Structural	
-Xv(,⍤0)Yv	Two column matrix from two vectors	Tacit	Monadic Function		Structural	
-Xv{↑⍺⍵}Yv	Two row matrix from two vectors	Dfn	Monadic Function		Structural	
+Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	
+Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	
+Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	
+Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	
+Xv(,⍤0)Yv	Two-column matrix from two vectors	Tacit	Monadic Function		Structural	
+Xv{↑⍺⍵}Yv	Two-row matrix from two vectors	Dfn	Monadic Function		Structural	
 (326(=-⍨2|⊢)⎕DR)Y	Type of simple Y (¯1:mixed, 0:character, 1:numeric)	Tacit	Monadic Function		Array Properties	
 (,[0.5]∘'¯')Dv	Underlines a string. (1=⎕IO)	Tacit	Monadic Function		Text	underscore
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
