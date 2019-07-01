@@ -23,7 +23,7 @@ M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithm ci
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile maximum greater larger max()
 M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile minimum lesser smaller min()
 I○N	Circular functions	Primitive	Dyadic Function		Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric
-M!N	Number of selections of size M from N (Beta fn)	Primitive	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics beta() Β Ꞵ B()
+M!N	Number of selections of size M from N (using Beta function)	Primitive	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics
 M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd()
 M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd
 M<N	Less Than	Primitive	Dyadic Function		Comparison	lt before precedes ≺
@@ -33,9 +33,9 @@ M>N	Greater Than	Primitive	Dyadic Function		Comparison	gt after follows ≻
 X=Y	Equal To	Primitive	Dyadic Function		Comparison	same
 X≠Y	Not Equal To	Primitive	Dyadic Function		Comparison	ne unequal different
 A<B	Converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	⇍
-A≤B	Implication	Primitive	Dyadic Function		Boolean/Logical	materialconditional materialconsequence implies imply therefore ∴ ⇒
+A≤B	Implication:	Primitive	Dyadic Function		Boolean/Logical	materialconditional materialconsequence implies imply therefore ∴ ⇒
 A≥B	Converse Implication	Primitive	Dyadic Function		Boolean/Logical	because ∵ ⇐ if
-A>B	Nonimplication	Primitive	Dyadic Function		Boolean/Logical	abjunction ⇏
+A>B	Nonimplication	Primitive	Dyadic Function		Boolean/Logical	abjunction ⇏ but not butnot
 A=B	XNOR	Primitive	Dyadic Function		Boolean/Logical	materialbiconditional eqv nxor bothorneither exclusivenor materialequivalence ⇔ iff
 A≠B	XOR	Primitive	Dyadic Function		Boolean/Logical	exclusivedisjunction eor exor ⊕ ⊻ ⇎
 A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat circumflex
@@ -86,7 +86,7 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile mirror
 ⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upset flip upend
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function		Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ
-Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ
+Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar
 Iv⍉Y	Reorder the axes of Y	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes
@@ -204,8 +204,9 @@ charvec←⎕	Evaluate user input and return result	Syntax	Array		Expression	qua
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
 ⍝	Comment	Syntax			Expression	comment lamp ignore skip note nb
 →	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow branch abort stop switch
-→J	Branch to line or label J	Primitive	Niladic Function		Expression	rightarrow branch goto switch
-→0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow branch goto switch
+→Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow branch goto switch
+→0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return
+→Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
 ⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ
 ∇	Dfn Self	Primitive	Monadic Function;Dyadic Function		Expression	del recurse function triangledown downtriangle carrot
@@ -258,7 +259,7 @@ Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus
-(⍋⍋)Y	Cardinals Up	Tacit	Monadic Function		Index Generation	ascendingcardinalnumbers
+(⍋⍋)Y	Cardinals Up (ranking, all different)	Tacit	Monadic Function		Index Generation	ascendingcardinalnumbers
 (⍋⍒)Y	Cardinals Down	Tacit	Monadic Function		Index Generation	descendingcardinalnumbers
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil
 (2=0+.=⍳|⊢)Ns	Ns is a Prime	Tacit	Monadic Function		Mathematical	isprime primality
@@ -268,7 +269,7 @@ Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	subset? containe
 Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	superset? contains ⊇
 (○÷180)∘×N	N Degrees in Radians	Tacit	Monadic Function		Mathematical	radians
 (180÷○1)∘×N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	degrees
-(2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base10 decimal base-10
+(2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base2 base-2
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	digits base10 decimal base-10
 M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
 1∘|N	Fractional Part of N	Tacit	Monadic Function		Mathematical	fractional
@@ -638,7 +639,7 @@ t←{properties}1 ⎕NINFO tn/file	Return values of properties 1 for file tn/fil
 file←⎕NNAMES	Names of tied files in same order as ⎕NNUMS	System	Constant	Native Files	System Function	
 tns←⎕NNUMS	Tie numbers of tied files	System	Constant	Native Files	System Function	
 r←{flags} ⎕NPARTS file	Splits file into path, base name and extension (normalising file if flags=1)	System	Function	Native Files	System Function	directory
-{bytes}←vec ⎕NPUT file {flags}	Write (overwrite if flags 1) lines to Unicode file	System	Function	Native Files	System Function	dump cat
+{bytes}←vec ⎕NPUT file {flags}	Write (overwrite if flags 1) text lines to Unicode file	System	Function	Native Files	System Function	dump cat save 🐈
 vec←⎕NREAD tn type n {offset}	Read n items of specified type from file tn	System	Function	Native Files	System Function	load fetch get
 {tn}←file ⎕NRENAME tn	Rename tied file to have name file	System	Function	Native Files	System Function	move
 {end_offset}←x ⎕NREPLACE tn offset {typ}	Write x to file at offset as type	System	Function	Native Files	System Function	overwrite
@@ -717,7 +718,7 @@ As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namem
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function			lettercase caseless caseinsensitive normalize
 C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator		lettercase caseless caseinsensitive comparison lookup
 ⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural	
-(X{(⊂⍋⍵⍵,⍨⍳≢⍵)⌷⍵,⍺⍺}Jv)Y	Insert X after positions Jv in Y (≢Jv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
+(X{(⊂⍋(⍳≢⍵),⌊⍺⍺)⌷⍵,⍺⍺}Nv)Y	Insert X at fractional positions Nv in Y (≢Nv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	
 {⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
@@ -1037,7 +1038,8 @@ Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function
 Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assignment name-value
 (⍳∘⊃∘⌽∘≢⍪⊢)Ym	Attach column numbers to a matrix	Tacit	Monadic Function		Index Generation	headings
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels
-Ms(+÷××⊣!+)Ns	Beta function 	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y)
+Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ
+((×/∘!-∘1)÷∘!¯1++/)N	Multivariate Beta Function	Tacit	Dyadic Function		Mathematical	B() Β() beta() Ꞵ
 (2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs
@@ -1082,7 +1084,6 @@ Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathe
 (10 12∘.○⊢)N	From complex to magnitude and radians	Tacit	Monadic Function		Data Conversion	polar
 M(⊣×¯12○⊢)N	From magnitude M and radians N to complex	Tacit	Dyadic Function		Data Conversion	polar
 Ms(1+⊣)∘⊥N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
-(!-∘1)N	Gamma function.	Tacit	Monadic Function		Mathematical	Γ
 ↑∘,∘⊂Y	Increment rank by one before first dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector
 (,⍤0)Y	Increment rank by one after last dimension	Tacit	Monadic Function		Structural	addtrailingaxis GhostBuster columnmatrixfromvector
 (≠\⍣¯1)B	Gray code or reflected binary	Tacit	Monadic Function		Boolean/Logical	
@@ -1111,7 +1112,7 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples
 100⊥3↑⎕TS	Join current date as YYYYMMDD integer	Constant			Expression	format
 ⌊/⍬	Largest representable number	Constant			Expression	
-Mv(⊢(⊢+.×⌹)0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
+Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton
 ∘.>⍨∘⍳Js	Lower triangular matrix: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle
@@ -1144,7 +1145,7 @@ I(!×∘!⊣)J	Number of permutations of (I,J) combinations	Tacit	Dyadic Functio
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of (Is,Js) combinations	Tacit	Dyadic Function		Mathematical	combinatorics selections
 (÷1⊥÷)Nv	Ohm's Law: resistance of parallel resistors/capacitance of capacitors in series	Tacit	Monadic Function		Mathematical	electronics circuits Ω
-{⍉' ○*⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series	Tacit	Monadic Function		Mathematical	chart curve graph
+{⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	plot curve graph
 ⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment
 (0J1⊥⊖)Nm	Parallel projection of 3D object in Nm	Tacit	Monadic Function		Mathematical	
