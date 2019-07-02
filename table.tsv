@@ -203,7 +203,7 @@ charvec←⎕	Evaluate user input and return result	Syntax	Array		Expression	qua
 ¯	Negative	Syntax	Array		Expression	macron negative highminus minus
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
 ⍝	Comment	Syntax			Expression	comment lamp ignore skip note nb
-→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow branch abort stop switch
+→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop
 →Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow branch goto switch
 →0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return
 →Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf
@@ -1100,9 +1100,9 @@ X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	t
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁
-X(Is{⍵⌹⍺∘.*0,⍳⍺⍺})Y	Is degree polynomial fit given X,Y values	Dop	Dyadic Function		Mathematical	curvefitting model
+Mv(Is{⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given Mv,Nv values	Dop	Dyadic Function		Mathematical	curvefitting model
 (0≠.=400 100 4∘.|⊢)Js	Is IS (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
-X1 X2(1=⍸)Y	Are Y in range [X1,X2)	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval
+X1 X2(1=⍸)Y	Are Y in range [X1,X2) ?	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval inrange?
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking
