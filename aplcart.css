@@ -15,3 +15,9 @@ input{width:calc(100vw - 10em)}
 th{background:unset!important;cursor:unset!important}
 td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
 @media(max-width:1365px){span{display:none}}
+input::-ms-clear,
+input::-ms-reveal,
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-sea-rch-results-decoration{display:none;width:0;height:0;}

@@ -267,8 +267,8 @@ I(0=|)J	I Divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
 I(0≠|)J	I does Not Divide J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∤
 Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	subset? containedin ⊆
 Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	superset? contains ⊇
-(○÷180)∘×N	N Degrees in Radians	Tacit	Monadic Function		Mathematical	radians
-(180÷○1)∘×N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	degrees
+(180÷⍨○)N	N Degrees in Radians	Tacit	Monadic Function		Mathematical	radians
+(180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	degrees
 (2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base2 base-2
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	digits base10 decimal base-10
 M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
