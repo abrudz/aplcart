@@ -15,7 +15,8 @@ $(document).ready(function(){
       scrollY:"calc(100vh - 110px)",
       searchDelay:250,
       search:{search:(q?q:"")},
-      language:{search:"query:"}
+      language:{search:"query:"},
+      initComplete:function(s,j){$('aside').remove();$('a,p').show();}
     });
     $(".dataTables_scrollBody").attr("accesskey","z");
     $("label,input").prop('title',"What to search for (access-key: Q)");

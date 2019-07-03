@@ -3,8 +3,11 @@
 *{font-family:'APL333'!important;border:none!important}
 body{filter:invert(.9);background:#333;overflow:hidden}
 body.w{filter:invert(0);background:#ddd}
-p{position:absolute;top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
-a{position:absolute;z-index:1;color:unset}
+aside,a,p{position:absolute}
+aside{position:absolute;text-align:center;width:100%;top:calc(38vh - 1ex);font-size:xx-large}
+a,p{display:none}
+p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
+a{z-index:1;color:unset}
 #w,#x{text-decoration:unset;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer}
 #w{bottom:0}
 #x{padding:0 .5ex}
