@@ -3,13 +3,15 @@
 *{font-family:'APL333'!important;border:none!important}
 body{filter:invert(.9);background:#333;overflow:hidden}
 body.w{filter:invert(0);background:#ddd}
+svg{height:1em}
+svg,aside{color:#333}
 aside,a,p{position:absolute}
 aside{position:absolute;text-align:center;width:100%;top:calc(38vh - 1ex);font-size:xx-large}
 a,p{display:none}
 p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis}
 a{z-index:1;color:unset}
 #w,#x{text-decoration:unset;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer}
-#w{bottom:0}
+#w{bottom:-.5ex}
 #x{padding:0 .5ex}
 .dataTables_scrollHeadInner{padding-left:0!important}
 .dataTables_filter{text-align:right!important}
