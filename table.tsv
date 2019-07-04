@@ -1358,3 +1358,4 @@ C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
 Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise
 (¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	ratios
+1=(≢∪)∘,	Are all elements identical?	Tacit	Monadic Function		Comparison	allsame? allequal?
