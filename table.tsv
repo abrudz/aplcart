@@ -111,7 +111,7 @@ X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function		Sets	notmatch natch equalunde
 Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function		Sets	tilde butnot without except setdifference setsubtraction setminus ∖
 Xv∪Yv	Union: Xv,Yv~Xv	Primitive	Dyadic Function		Sets	cup union downshoe setor
 Xv∩Yv	Intersection: (Xv∊Yv)/Xv	Primitive	Dyadic Function		Sets	cap intersection upshoe setand
-/⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe first unbox open contentof
+⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe first unbox open contentof
 Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
 Iv↑Y	Take Iv items along axes of Y	Primitive	Dyadic Function		Selection	uparrow take first last beginning end leading trailing head tail
@@ -122,9 +122,9 @@ Iv\Y	Expand last axis of Y	Primitive	Dyadic Function		Selection	reversesolidus s
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function		Selection	reversesolidusbar slopebar
 Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function		Selection	segment chop split cut separate
 Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function		Selection	segment chop split cut separate
-⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call parseexpression
+⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call parseexpression
 ⍕Y	Format: Character representation of Y	Primitive	Monadic Function		Data Conversion	downtackjot thorn itoa tostringify totext representation ⎕fmt ⎕df
-NS⍎Dv	Execute Dv within namespace NS	Primitive	Dyadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi run call inside
+NS⍎Dv	Execute Dv within namespace NS	Primitive	Dyadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call inside
 Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function		Data Conversion	downtackjot thorn itoa tostringify totext representation round width ⎕fmt
 ⌷Y	Materialise items of Y in workspace	Primitive	Monadic Function		Identity	squishquad squad materialise materialize defaultproperty elements items
 ⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack identity defer ignore where
@@ -532,7 +532,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex search find locate perlcompatibleregularexpression
 r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression
 captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor linux macos aix rasbianpios ⎕cmd )sh
-r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 encoding ucs-4 ucs4 ucs-2 ucs2 iso10646 ord chr ascii latin-1 windows-1252 ansi
+r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 encoding ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
 valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtmltag xmltag
