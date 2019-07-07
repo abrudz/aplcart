@@ -94,11 +94,11 @@ X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comm
 X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally
 X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Dyadic Function		Index Generation	iota integers ints countto sequence numbers range ɩ ι positions locations
-⍸B	Indices of all 1s in B	Primitive	Monadic Function		Index Generation	wheretrues iotaunderbar locationsoftrues positions
+⍸B	Indices of all 1s in B	Primitive	Monadic Function		Index Generation	wheretrues iotaunderbar locationsoftrues positions locations
 ⍋Y	Upgrade: Indices to reorder Y ascending	Primitive	Monadic Function		Index Generation	gradeup deltastile upgrade pine concordetakingoff
 ⍋Jv	Invert permutation	Primitive	Monadic Function		Index Generation	deltastile upgrade pine concordetakingoff
 ⍒Y	Downgrade: Indices to reorder Y descending	Primitive	Monadic Function		Index Generation	gradedown delstile downgrade spine concordelanding
-X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota indexin indexof position ɩ ι
+X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota indexin indexof position ɩ ι find locate positionof 1st
 X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Function		Index Generation	intervalindex iotaunderbar bin group range bucket
 Is?Js	Deal: Is distinct items from ⍳Js	Primitive	Dyadic Function		Index Generation	questionmark interrogationpoint query eroteme
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet
@@ -866,7 +866,7 @@ hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function
 cols←{base←1} dfns.mayan numb	Mayan numbers	Dfn	Function			numbersystem stela calendar date astronomy vigesimalnumbersystem abacus
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function			diversions indexedassignment maze
 num←dfns.mean nvec	Arithmetic mean	Dfn	Function			localnames standarddeviation APL'88 APL88 1988
-rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Function memoization	Dop		Dyadic Operator		memoization cache persistentlocalvariable fibonaccinumber
+rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Fast: Function memoisation	Dop		Dyadic Operator		memoization cache persistentlocalvariable fibonaccinumber
 dfns.mmind ⎕A[?4⍴6]	Mastermind or "cows and bulls"	Dfn	Function			Mastermind gameofcowsandbulls diversions REPL
 ref←dfns.mns defn	Make Namespace from association list ⍵	Dfn	Function			namespace associationlist
 code←dfns.morse text	Conversion to/from Morse code	Dfn	Function			Morsecode
@@ -1005,7 +1005,7 @@ X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before app
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷
-{⍺←⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}B	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Index Generation	truesat ⍸⍣¯1
+{⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Boolean/Logical	truesat ⍸⍣¯1
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
 X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
 X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
@@ -1021,10 +1021,10 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows
 ⍳∘⊃∘⌽∘⍴Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
 (∪⍳∨⊢)Js	All divisors of Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	factorisation factorization
-∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	
-≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	
-∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	
-<\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	
+∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	1s 0
+≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
+∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
+<\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	1 0s
 (¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical	
 (⊢(/⍨⍨)1 0⍴⍨≢)Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Tacit	Monadic Function		Boolean/Logical	1s 0s zeroes naughts
@@ -1040,11 +1040,11 @@ Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assig
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ
 ((×/∘!-∘1)÷∘!¯1++/)N	Multivariate Beta Function	Tacit	Dyadic Function		Mathematical	B() Β() beta() Ꞵ
-(2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns
+(2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns 1s
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave
-(1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs
-(2>/,∘0)B	Boolean last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns
-X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst
+(1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs 1
+(2>/,∘0)B	Boolean last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s
+X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1
 Xv(⊣/⍷)Ym	Boolean rows of Ym starting with X	Tacit	Dyadic Function		Sets	findfirstin search locatefirst
 Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys.	Tacit	Dyadic Function		Sets	findall lookup rows
 (∪≡⊢)Y	Boolean test: Are all items of Y unique?	Tacit	Monadic Function		Sets	alldifferent noduplicates nodups
@@ -1072,7 +1072,7 @@ Ms(⊢⌷⍨∘⊂×∘⍋)A	Sort A according to Ms (1: ascending, 0: unordered,
 +\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal
 '-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⎕TS 	Date and time as YYYY-MM-DD hh:mm:ss	Constant			Expression	datetime format
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens
-M×∘÷N	Division. Force DOMAIN ERROR for division by 0.	Tacit	Dyadic Function		Mathematical	
+M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical	
 ''''∘{⍺,⍺,⍨⍵/⍨1+⍺=⍵}Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dyadic Function		Mathematical	
 +\⍣2∘⍳Js	First Js triangular pyramidal numbers	Tacit	Monadic Function		Mathematical	figurative tetrahedral oeisA000292 oeisA292
@@ -1123,7 +1123,7 @@ Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		St
 ⊂⍤¯1∘⍉Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split
 ↓M	Matrix to vector of row vectors	Primitive	Monadic Function	Non-scalar function	Structural	downarrow split
 (2÷⍨1⊥⊢⌷⍨∘⊂⍋⌷⍨∘⊂∘⌈2÷⍨0 1+≢)Nv	Median of non-empty Nv	Tacit	Monadic Function		Mathematical	average
-X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵} Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	merge mesh alternate shuffle
+X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	merge mesh alternate shuffle
 X⌷⍨∘⊂∘⍋∘⍋Y	Reorder X according to the order of Y	Tacit	Dyadic Function		Mathematical	mesh
 M,.×N	Mid product of AX and AY.	Tacit	Dyadic Function		Mathematical	midproduct
 As○⍨∘(¯10+~)⍨N	Mirror N in x-axis if As	Tacit	Dyadic Function		Mathematical	conjugate negateimaginary
@@ -1205,7 +1205,7 @@ X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primit
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus residue divisionremainder 12hourclock
 (⊢⌽⍨1-=∘' '⊥1)Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright flushrightflush rightjustifyright
-{{⍵+.×¯1*2</⍵,0}(,1 5∘.×⍨1,10*⍳3)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	romannumerals arabicnumerals latinnumerals
+{{⍵+.×¯1*2</⍵,0}(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	romannumerals arabicnumerals latinnumerals
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
 (××∘⌊|+1≤2||)N	Rounding to nearest even number	Tacit	Monadic Function		Mathematical	precision
@@ -1265,8 +1265,10 @@ Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-
 Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	
 Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	
-Xv(,⍤0)Yv	Two-column matrix from two vectors	Tacit	Monadic Function		Structural	
-Xv{↑⍺⍵}Yv	Two-row matrix from two vectors	Dfn	Monadic Function		Structural	
+Xv(,⍤0)Yv	Two-column matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	
+Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	
+Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	
+Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic Function		Structural	
 (326(=-⍨2|⊢)⎕DR)Y	Type of simple Y (¯1:mixed, 0:character, 1:numeric)	Tacit	Monadic Function		Array Properties	
 (,[0.5]∘'¯')Dv	Underlines a string. (1=⎕IO)	Tacit	Monadic Function		Text	underscore
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
@@ -1325,7 +1327,7 @@ Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there 
 Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where
 ⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick 
 ≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank
-Bv/⍳Ns	Fast: The subset of BV corresponding to the 1s in NS.	Expression		Performance	Index Generation	speed optimised optimized quick 
+Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick  ones
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate
 name⍪←Y	Fast: name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate
