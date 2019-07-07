@@ -38,3 +38,6 @@ Array Properties | Boolean/Logical | Comparison | Data Conversion | Expression |
 ```
 
 **Keywords** (optional)
+```
+space-separated synonyms (e.g. first 1st) and alternative spellings (e.g. normalise normalize)
+```
