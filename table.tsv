@@ -19,7 +19,7 @@ M×N	Multiply M and N	Primitive	Dyadic Function		Mathematical	cross times multip
 M÷N	Divide M by N	Primitive	Dyadic Function		Mathematical	division over ⁄
 M|N	Residue after dividing N by M	Primitive	Dyadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus residue divisionremainder mod()
 M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	power star asterisk raisedtothepowerof exponentiation pow()
-M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithm circlestar starcircle splat log()
+M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithm circlestar starcircle splat log() log₁₀()
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile maximum greater larger max()
 M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile minimum lesser smaller min()
 I○N	Circular functions	Primitive	Dyadic Function		Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric
@@ -32,16 +32,16 @@ M≥N	Greater Than Or Equal To	Primitive	Dyadic Function		Comparison	ge after fo
 M>N	Greater Than	Primitive	Dyadic Function		Comparison	gt after follows ≻
 X=Y	Equal To	Primitive	Dyadic Function		Comparison	same
 X≠Y	Not Equal To	Primitive	Dyadic Function		Comparison	ne unequal different
-A<B	Converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	⇍
-A≤B	Implication:	Primitive	Dyadic Function		Boolean/Logical	materialconditional materialconsequence implies imply therefore ∴ ⇒
-A≥B	Converse Implication	Primitive	Dyadic Function		Boolean/Logical	because ∵ ⇐ if
-A>B	Nonimplication	Primitive	Dyadic Function		Boolean/Logical	abjunction ⇏ but not butnot
-A=B	XNOR	Primitive	Dyadic Function		Boolean/Logical	materialbiconditional eqv nxor bothorneither exclusivenor materialequivalence ⇔ iff
-A≠B	XOR	Primitive	Dyadic Function		Boolean/Logical	exclusivedisjunction eor exor ⊕ ⊻ ⇎
-A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat circumflex
-A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek
-A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial
-A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial
+A<B	Converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	⇍ Mpq
+A≤B	Implication:	Primitive	Dyadic Function		Boolean/Logical	materialconditional materialconsequence implies imply materialimplication therefore ∴ ⇒ Cpq
+A≥B	Converse Implication	Primitive	Dyadic Function		Boolean/Logical	because ∵ ⇐ if converseconditional Bpq
+A>B	Nonimplication	Primitive	Dyadic Function		Boolean/Logical	abjunction ⇏ but not butnot Lpq
+A=B	XNOR	Primitive	Dyadic Function		Boolean/Logical	materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq
+A≠B	XOR	Primitive	Dyadic Function		Boolean/Logical	exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
+A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat circumflex Kpq
+A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek Apq
+A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq
+A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq
 0○N	cos ←→ sin: (1-N*2)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary cop()
 ¯1○N	Arcsin N	Primitive	Dyadic Function		Circular/Trigonometric	arcsine asin() arcussinus
 ¯2○N	Arccos N	Primitive	Dyadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus
@@ -262,7 +262,7 @@ Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (⍋⍋)Y	Ascending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	cardinals up
 (⍋⍒)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	cardinals down
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil
-(2=0+.=⍳|⊢)Ns	Ns is a prime	Tacit	Monadic Function		Mathematical	isprime primality
+(2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	isprime primality
 I(0=|)J	I divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
 I(0≠|)J	I does not divide J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∤
 Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	subset? containedin ⊆
@@ -1100,7 +1100,7 @@ X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	t
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁
-Mv(Is{⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given Mv,Nv values	Dop	Dyadic Function		Mathematical	curvefitting model
+Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model
 (0≠.=400 100 4∘.|⊢)Js	Is IS (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
 X1 X2(1=⍸)Y	Are Y in range [X1,X2) ?	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval inrange?
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
@@ -1115,7 +1115,10 @@ X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tupl
 Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton sub-array
-∘.>⍨∘⍳Js	Lower triangular matrix: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle
+∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west
+∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west
+∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east
+∘.≤⍨∘⍳Js	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals
 Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv 	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize
@@ -1338,7 +1341,9 @@ name⍪←Y	Fast: name' redefined to be its value with Y catenated along its fir
 {n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic function		Mathematical	juggling beat
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
 {(⎕D,⎕A)[1+16⊥⍣¯1⊢⍵]}Js	Convert to hexadecimal	Dfn	Monadic Function		Mathematical	tobase16 base-16 ₁₆ dec2hex hex()
-+∘÷⍣=⍨1	Golden ratio	Constant	Expression		Mathematical	phi φ ϕ ɸ
++∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
+2÷¯1+5*÷2	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
+○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
 (0=10|1⊥∘,0 10⊤⊢×∘⌽1 2⍴⍨≢)	Valid credit card?	Tacit	Monadic Function		Mathematical	luhns luhn's formula debitcard? creditcard? checksum valid?
 (∨.∧⍨∨⊢)⍣≡	Transitive closure	Tacit	Monadic Function		Boolean/Logical	
 1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	
