@@ -148,7 +148,7 @@ X f⍨Y	Commute: same as Y f X	Primitive	Dyadic Function	Monadic Operator	Functi
 f&Y	Spawn: f on in a new thread	Primitive	Dyadic Function	Monadic Operator	System	ampersand spawn et and greenthreading launch run
 X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	Dyadic Function	Monadic Operator	System	ibeam systemservice special foreign
 (f⍤Jv)Y	Rank: f on or between trailing rank-Jv subarrays	Primitive	Monadic Function	Dyadic Operator	Function Application	jotdiaeresis rank paw sub-array
-(f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife
+(f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y of size and (optionally step) Jm	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife vanneumann moore neighbourhoods neighborhoods
 f⍣g Y	Power: iterates f on Y until condition Y g f Y is true	Primitive	Monadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while until repeat
 (f⍣Js)Y	Power: f (or X∘f) on Y Js times	Primitive	Monadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis while until inverse repeat
 X f.g Y	Inner Product: f / g between trailing vectors of X and leading vectors of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	dotproduct innerproduct crossproduct vectorproduct period fullstop
@@ -308,7 +308,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 ⎕DIV←(0,1)	0: 1=0÷0, all other÷0 error; 1: 0=all÷0	System	Variable		Mathematical	divisionbyzero divisionmethod divmethod error nan indeterminate
 ⎕FR←(645,1287)	Specifies the result type of floating-point computations	System	Variable		Mathematical	IEEE754 64-bit binaryfloatingpoint IEEE754-2008 128-bit decimalfloatingpoint internal representation
 ⎕IO←(1,0)	Specifies whether array indices are counted from 0 or 1	System	Variable		Index Generation	indexing counting numbering natrualnumbers origin one zero based ordinals
-⎕ML←(0≤1≤3)	Degree of compatibility with IBM APL2 (from 0=low to 3=high)	System	Variable		System	migration level conformance APLX APL*PLUS GNUAPL APL+Win APL2000 NARS2000 ≡↑⊃ depth first mix ⎕TC terminalcontrolcharacters
+⎕ML←(0≤1≤3)	Degree of compatibility with IBM APL2 (from 0=low to 3=high)	System	Variable		System	migration level conformance APLX APL*PLUS GNUAPL APL+Win APL2000 NARS2000 ≡↑⊃ depth first mix ⎕TC terminalcontrolcharacters migrate behaviour behavior
 ⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding display
 ⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd roll randominteger randomfloat randomness source
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨
@@ -394,7 +394,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	
 55::FIELD SIZE ERROR					Error Message	
 56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	
-57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	
+57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	behavior
 58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	
 59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				Error Message	
 60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	
@@ -845,8 +845,8 @@ lvec←{cols} dfns.justify lvec	Justify line-vector to ⍺ columns	Dfn	Function	
 seq←dfns.k6174 nnnn	Kaprekar's operation	Dfn	Function			sequence 6174 Kaprekar'soperation Kaprekarsoperation
 rslt←{c←1} dfns.kball p	Relationship between point and k-ball	Dfn	Function			K-ball sphere hypersphere Kball
 rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Operator		K-cell boundary hypercube Kcell
-kinds←dfns.kind namelist	Parse-category of name(s) ⍵	Dfn	Function			kind nameclass category namecolouring hybrid
-kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function			namecolouring parsing kind Bunda-Gerthparser polymorphism selfie BundaGerthparser
+kinds←dfns.kind namelist	Parse-category of name(s) ⍵	Dfn	Function			kind nameclass category namecolouring hybrid coloring
+kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function			namecolouring parsing kind Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring
 area←dim dfns.ksphere radius	Hypersphere surface area	Dfn	Function			sphere hypersphere Newton-Raphson localmaximum K-sphere manifolds NewtonRaphson Ksphere
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function			chesspuzzle knight'stour knightstour graph treesearching diversions torus
 chars←dfns.lcase chars	Lower-casification	Dfn	Function			uppercase lowercase upperorlowercase caseinsensitive
@@ -1077,7 +1077,7 @@ M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dyadic Function		Mathematical	
 +\⍣2∘⍳Js	First Js triangular pyramidal numbers	Tacit	Monadic Function		Mathematical	figurative tetrahedral oeisA000292 oeisA292
 +\∘⍳IS	First Js triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217
-Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange
+Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
 (×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals
 1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurances statistics
