@@ -2,6 +2,8 @@
 
 **There is plenty of documentation on what parts of APL do. APLcart seeks to answer *How do I…* questions.**
 
+It is intended for both beginners and professionals, but knowledge of basic APL syntax is a prerequisite.
+
 ## Usage
 
 Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
