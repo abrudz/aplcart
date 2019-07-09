@@ -1210,7 +1210,8 @@ M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	D
 (⊢⌽⍨1-=∘' '⊥1)Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright flushrightflush rightjustifyright
 {{⍵+.×¯1*2</⍵,0}(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	romannumerals arabicnumerals latinnumerals
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points
-Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
+Is(⍎⍕)N Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
+Is{p÷⍨⌊0.5+(p←10*⍺)×⍵}N Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
 (××∘⌊|+1≤2||)N	Rounding to nearest even number	Tacit	Monadic Function		Mathematical	precision
 (××∘⌊|+1>2||)N	Rounding to nearest odd number	Tacit	Monadic Function		Mathematical	precision
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M	Tacit	Dyadic Function		Mathematical	precision
