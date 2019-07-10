@@ -15,7 +15,7 @@ SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 ~B	Logical Inverse: 0=B	Primitive	Monadic Function		Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬
 M+N	Add N to M	Primitive	Dyadic Function		Mathematical	plus addition
 M-N	Subtract N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −
-M×N	Multiply M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ ·
+M×N	Multiply M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product
 M÷N	Divide M by N	Primitive	Dyadic Function		Mathematical	division over ⁄
 M|N	Residue after dividing N by M	Primitive	Dyadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus residue divisionremainder mod()
 M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	power star asterisk raisedtothepowerof exponentiation pow()
@@ -244,7 +244,7 @@ M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³
 (⍳≢)Y	Indices of Major Cells of Y	Tacit	Monadic Function		Index Generation	enumerate number count
 (,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffle randompermutation
-N+.×M	Dot/Vector/Cross Product of M and N	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ ·
+M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication
 (1≥∘|≡)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
 (0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	simple?
 (2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
@@ -276,8 +276,8 @@ M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
 (!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma() Γ
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖
 Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
-(⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	indexoflargest
-(⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	indexofsmallest
+(⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	indexoflargest biggest greatest lexicographically lexically
+(⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	indexofsmallest least lexicographically lexically
 (⊢⍉⍨⍴=⍴)Y	Diagonal	Tacit	Monadic Function		Structural	majordiagonal
 (⌽⍉⍨⍴=⍴)Y	Anti-diagonal	Tacit	Monadic Function		Structural	minordiagonal
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	isempty? isvoid? isnull?
@@ -301,7 +301,7 @@ X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
 X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
 X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
-X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY
+X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing
 X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function Application	composewith functioncomposition splitover (fX)g(hY) (fX)ghY
 ⎕CT←(0≤1E¯14≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←645	System	Variable		Mathematical	comparison tolerance fuzz IEEE754 64-bit binaryfloatingpoint representation
 ⎕DCT←(0≤1E¯28≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←1287	System	Variable		Mathematical	comparison tolerance fuzz IEEE754-2008 128-bit decimalfloatingpoint representation
@@ -850,7 +850,7 @@ kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop n
 area←dim dfns.ksphere radius	Hypersphere surface area	Dfn	Function			sphere hypersphere Newton-Raphson localmaximum K-sphere manifolds NewtonRaphson Ksphere
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function			chesspuzzle knight'stour knightstour graph treesearching diversions torus
 chars←dfns.lcase chars	Lower-casification	Dfn	Function			uppercase lowercase upperorlowercase caseinsensitive
-precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function			sort quicksort Totalarrayordering order(ofarrays) comparearrays
+precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function			sort quicksort Totalarrayordering order(ofarrays) comparearrays lexically lexicographically
 bmat←dfns.life bmat	John Conway's "Game of Life"	Dfn	Function			gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
 rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operator		functionpower palindrome arithmetic-geometricmean goldenmean arithmeticgeometricmean
 rslt←{eval←1} dfns.lisp expr	Evaluator for a subset of Scheme	Dfn	Function			Lisp Scheme closure Metacircular SICP lambdaexpression evaluator
@@ -1089,17 +1089,15 @@ Ms(1+⊣)∘⊥N	Future value of cash flows N at interest Ms	Tacit	Dyadic Functi
 (≠\⍣¯1)B	Gray code or reflected binary	Tacit	Monadic Function		Boolean/Logical	
 (÷⍳∘.+¯1+⍳)Js	Hilbert matrix of order IS. (1=⎕IO)	Tacit	Monadic Function		Mathematical	
 (,⍨⍴1,⍴∘0)Js	Identity matrix: Js by Js	Tacit	Monadic Function		Mathematical	unitmatrix
-⊃∘⍒Y	Index of the largest item	Tacit	Monadic Function		Mathematical	
-⊃∘⍋Y	Index of the smallest item	Tacit	Monadic Function		Mathematical	
 (⍴⍨0∘,)Js	Initialise a matrix with Js columns and no rows	Tacit	Monadic Function		Structural	initialise
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
 (××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp
 0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split
 (+\⍣¯1)N	Difference of adjacent pairs with seed value	Tacit	Monadic Function		Mathematical	differences deltas changes steps
-X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering after follows ≻ ⋠ ⋩
-X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀
-X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨
-X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁
+X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically
+X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
+X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
+X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model
 (0≠.=400 100 4∘.|⊢)Js	Is IS (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
 X1 X2(1=⍸)Y	Are Y in range [X1,X2) ?	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval inrange?
@@ -1111,7 +1109,6 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 (⊃⍪⌿)AA	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples
 100⊥3↑⎕TS	Join current date as YYYYMMDD integer	Constant			Expression	format
-⌊/⍬	Largest representable number	Constant			Expression	
 Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton sub-array
@@ -1184,8 +1181,8 @@ Ms((÷1+⊣)⊥∘⌽⊢)Nv	Present value of cash flows Nv at interval Ms	Tacit	
 ({⍞}¨⍳)Jv	Input of ×/Jv strings	Tacit	Monadic Function		Expression	multi input characterinput rawinput stdin
 (1=∘?⍴∘2)Jv	Random Boolean array of shape Jv	Tacit	Monadic Function		Boolean/Logical	base2
 (⌈/-⌊/)∘,N	Range of N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes
-(⊢⍉⍨1/⍨≢∘⍴)Y	Main diagonal of any array	Tacit	Monadic Function		Array Properties	maindiagonal nwse nw-se
-(⌽⍉⍨1/⍨≢∘⍴)Y	Anti-diagonal of any array	Tacit	Monadic Function		Array Properties	antidiagonal nesw ne-sw
+(⊢⍉⍨1*⍴)Y	Main diagonal of any array	Tacit	Monadic Function		Array Properties	maindiagonal nwse nw-se
+(⌽⍉⍨1*⍴)Y	Anti-diagonal of any array	Tacit	Monadic Function		Array Properties	antidiagonal nesw ne-sw
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update
 Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
 (*∘○0J2×⊢÷⍨0,⍳)Js	Regular unit polygon of Js edges	Tacit	Monadic Function		Mathematical	star triangle square pentagon hexagon octagon
@@ -1237,7 +1234,7 @@ M{×11○(⍵-1↓⍺)×+2-/⍺}Ns	Sign of point Ns relative to edges of M	Dfn	D
 M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		Mathematical	signum
 Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Function		Mathematical	oblique
 ⌈/⍬	Smallest representable number	Constant			Mathematical	negativeinfinity -∞ mostnegative least
-⌊/⍬	Largest representable number	Constant			Mathematical	negativeinfinity ∞ mostpositive biggest
+⌊/⍬	Largest representable number	Constant			Mathematical	negativeinfinity ∞ mostpositive biggest largest greatest
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	sort order up increasing
 ((⊂∘⍋⌷⊢)⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	sort order up increasing
 {⍵⌷⍨⊂⍋{(819⌶⍵)⍵}¨⍵}Y	Sorting Y in case-insensitive alphabetical order	Dfn	Monadic Function		Text	sort order up increasing caseinsensitive
@@ -1257,13 +1254,13 @@ Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic 
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	
 (0=⊢∘.|⍨∘⍳⌈/)Iv	Table of divisibility	Tacit	Monadic Function		Mathematical	
 Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients Nv	Dfn	Dyadic Function		Mathematical	
-{⍵/⍨(⊢∨≠\)⍵=''''}Dv	Text (including quotes) in expression	Dfn	Monadic Function		Text	strings
-(⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Text (without quotes) in expression	Tacit	Monadic Function		Text	strings
+{⍵/⍨(⊢∨≠\)⍵=''''}Dv	Extract text (including quotes) in expression	Dfn	Monadic Function		Text	strings extract
+(⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings extract
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding
 Is(+/÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant  ^T ⸆ ᵀ
-2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables)	Tacit	Monadic Function		Boolean/Logical	
+2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	
 Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	
 Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	
