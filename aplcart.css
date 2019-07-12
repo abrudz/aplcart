@@ -17,13 +17,13 @@ a{z-index:1;color:unset}
 .dataTables_scrollHeadInner{padding-left:0!important}
 .dataTables_filter{text-align:right!important}
 #DataTables_Table_0_info{text-align:unset}
-input{width:calc(100vw - 11em)}
 th{background:unset!important;cursor:unset!important}
-td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
-@media(max-width:1365px){span{display:none}}
+input,td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
+input{width:calc(100vw - 11em)}
 input::-ms-clear,
 input::-ms-reveal,
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-sea-rch-results-decoration{display:none;width:0;height:0;}
+@media(max-width:1365px){span{display:none}}

@@ -254,7 +254,7 @@ M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Taci
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	singleton? unit? sole? one?
 (⊃0⍴⊂)Y	Type (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
-(¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	differences changes steps
+(¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus
@@ -516,8 +516,8 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]VarsLike
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole array scalars countall ×/⍴ ×⌿⍴ ≢, ⍴,
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems
-(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue
-(≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue
+(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s
+(≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue count tally 1s
 (≢⍴)Y	Rank (number of dimensions) of Y	Tacit	Monadic Function		Array Properties	howmanyaxes numberofaxes axiscount ⍴⍴
 X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith
 captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor ⎕sh )cmd
@@ -1019,7 +1019,7 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows
-⍳∘⊃∘⌽∘⍴Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
+(⍳0⊥⍴)Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
 (∪⍳∨⊢)Js	All divisors of Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	factorisation factorization
 ∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	1s 0
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
@@ -1053,7 +1053,7 @@ Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys.	Tacit	Dyadic Function		Sets
 (~∨/∘,)B	Boolean test: Are none true?	Tacit	Monadic Function		Boolean/Logical	theredoesnotexist ∄
 (⍕≡⊢)Y	Boolean test: Is Y a simple character array?	Tacit	Monadic Function		Array Properties	
 (1=≢∘⍴)Y	Boolean test: Is Y a vector?	Tacit	Monadic Function		Array Properties	rank1
-(-≡⍉)Ym	Boolean test: Is Ym anti-symmetric?	Tacit	Monadic Function		Array Properties	
+(-≡⍉)Ym	Boolean test: Is Ym anti-symmetric?	Tacit	Monadic Function		Array Properties	antisymmetric skewsymmetric skew-symmetric
 (⍉≡⊢)Ym	Boolean test: Is Ym symmetric?	Tacit	Monadic Function		Array Properties	
 (1=2|⎕DR)Y	Boolean test: Is Y numeric?	Tacit	Monadic Function		Array Properties	
 (11=⎕DR)Y	Boolean test: Is Y Boolean?	Tacit	Monadic Function		Array Properties	
@@ -1073,7 +1073,7 @@ Ms(⊢⌷⍨∘⊂×∘⍋)A	Sort A according to Ms (1: ascending, 0: unordered,
 '-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⎕TS 	Date and time as YYYY-MM-DD hh:mm:ss	Constant			Expression	datetime format
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical	
-''''∘{⍺,⍺,⍨⍵/⍨1+⍺=⍵}Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1
+''''∘{⍺,⍺,⍨⍵/⍨1+⍺=⍵}Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dyadic Function		Mathematical	
 +\⍣2∘⍳Js	First Js triangular pyramidal numbers	Tacit	Monadic Function		Mathematical	figurative tetrahedral oeisA000292 oeisA292
 +\∘⍳IS	First Js triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217
@@ -1110,7 +1110,7 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples
 100⊥3↑⎕TS	Join current date as YYYYMMDD integer	Constant			Expression	format
 Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
-(+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength
+(+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength perimeter coordinates vertices
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton sub-array
 ∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west
 ∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west
@@ -1137,7 +1137,7 @@ Xv(⊢⌷⍨∘⊂∘⍋∊⍨)Yv	Move items Xv to end of Yv	Tacit	Dyadic Functi
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas
 (*∘○0J2×⊢÷⍨1+⍳)Js	Js spokes of unit wheel	Tacit	Monadic Function		Mathematical	circle points distributed
 Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier matrix with Mv control points	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model interpolation
-⊃∘⌽∘⍴Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape
+(0⊥⍴)Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape
 ×/∘⍴Y	Number of elements in Y	Tacit	Monadic Function		Array Properties	items cells
 (×/1↓⍴)Y	Number of elements in a plane of rank-3 array Y	Tacit	Monadic Function		Array Properties	layersshape
 (⊥⍨' '=⌽)Dv	Number of leading blanks	Tacit	Monadic Function		Text	prefixspaces
@@ -1170,7 +1170,7 @@ X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index 
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence
 Xm(,⍤1)Yv	Postfix vector to each row of matrix	Tacit	Dyadic Function		Structural	append rows
 Xv(,⍤1)Ym	Prefix vector to each row of matrix	Tacit	Dyadic Function		Structural	prepend rows
-Ms((÷1+⊣)⊥∘⌽⊢)Nv	Present value of cash flows Nv at interval Ms	Tacit	Dyadic Function		Mathematical	worth
+Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Tacit	Dyadic Function		Mathematical	worth
 ((⊢~∘.×⍨)1↓⍳)Js	Prime numbers until Js	Tacit	Monadic Function		Mathematical	
 ×/N	Product of N (row-wise)	Tacit	Monadic Function		Mathematical	horizontal product enlargedpi bigpi capitalpi ∏ Π
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input
@@ -1204,7 +1204,7 @@ X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primit
 ' '@{2=⌈\' 0'⍳⍵}D	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus residue divisionremainder 12hourclock
-(⊢⌽⍨1-=∘' '⊥1)Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright flushrightflush rightjustifyright
+(⊢⌽⍨1-1⊥⍨=∘' ')Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright flushrightflush rightjustifyright
 {{⍵+.×¯1*2</⍵,0}(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	romannumerals arabicnumerals latinnumerals
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
@@ -1213,7 +1213,7 @@ Is{p÷⍨⌊0.5+(p←10*⍺)×⍵}N	Rounding N to Is decimal places (Fast: ⍎Is
 (××∘⌊|+1>2||)N	Rounding to nearest odd number	Tacit	Monadic Function		Mathematical	precision
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M	Tacit	Dyadic Function		Mathematical	precision
 (××∘⌊0.5+|)N	Rounding to nearest whole number	Tacit	Monadic Function		Mathematical	precision
-(+/÷1⌈⊃∘⌽∘⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean
+(+/÷1⌈0⊥⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero
 (0.5*⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
 (≢÷⍨0.5*⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
@@ -1361,7 +1361,7 @@ C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
 Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise
-(¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	ratios
+(¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	pairwiseratios
 1=∘≢∪	Are all cells identical?	Tacit	Monadic Function		Sets	allsame? allequal? nounique?
 ≢=∘≢∪	Are all cells distinct?	Tacit	Monadic Function		Sets	alldifferent? allunequal? noduplicates?
 ≢>∘≢∪	Are any cells identical?	Tacit	Monadic Function		Sets	anysame? anyequal? anyduplicates?
