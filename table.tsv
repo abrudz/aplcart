@@ -188,9 +188,10 @@ int.frac	Decimal Point	Syntax	Array		Expression	decimal point period rational
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento scale mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	complex plusitimes imaginary
 ]name	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
-{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')		Monadic Function		Function Application	ucmd
+{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	ucmd
 )name	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
-X[I;J;…]	Indexing	Syntax	Dyadic Function		Selection	squarebrackets indexing subscript choose
+X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets indexing subscript choose
+X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets indexing subscript choose
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
 (X1 X2)(Y1 Y2)	Stranding: (⊂(⊂X1),(⊂X2)),(⊂(⊂Y1),(⊂Y2))	Syntax			Expression	roundparentheses roundparens grouping stranding nestedarraynotation nestedvectornotation
@@ -198,7 +199,7 @@ X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train fgh fork 3train 3-train
 (X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train Agh fork 3train 3-train
-X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train 
+X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fgh fork 3train 3-train
 X1(X2 g h)Y	Fork: X2 g X1 h Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train Agh fork 3train 3-train
 f←{⍵}	Dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces function dfn assignment
@@ -225,9 +226,9 @@ charvec←⎕	Evaluate user input and return result	Syntax	Array		Expression	qua
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
 ⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ
 ∇	Dfn Self	Primitive	Monadic Function;Dyadic Function		Expression	del recurse function triangledown downtriangle carrot
-⍵⍵	Dop Right Operand	Primitive	Array;Monadic Function;Dyadic Function		Expression	omega rightop
-⍺⍺	Dop Left Operand	Primitive	Array;Monadic Function;Dyadic Function		Expression	alpha leftop
-∇∇	Dop Self	Primitive	Monadic Function;Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse operator triangledown downtriangle carrot
+⍵⍵	Dop Right Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	omega rightop
+⍺⍺	Dop Left Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	alpha leftop
+∇∇	Dop Self	Primitive	Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse operator triangledown downtriangle carrot
 name f←Y	Modified Assignment	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow assignment gets is copula let redefine name naming denotes means inplace update
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow assignment gets is copula let define name naming denotes means
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow assignment get are copula let define name naming denote mean
@@ -267,7 +268,7 @@ M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Taci
 (0≤≡)Y	Does Y have Uniform Depth?	Tacit	Monadic Function		Array Properties	uniform? orthogonal? rectangular?
 (⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	scalar?
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	singleton? unit? sole? one?
-(⊃0⍴⊂)Y	Type (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof
+(⊃0⍴⊂)Y	Type (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof 0s zeroes
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
@@ -587,7 +588,7 @@ script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	Sys
 ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here me myself
 cn←x ⎕FAPPEND tn {pn}	Append x to end of file (optional passnumber)	System	Function	Component Files	System Function	dcf
 r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Files	System Function	dcf active usable accessible
-cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file 	System	Function	Component Files	System Function	dcf check externalvariable
+cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file	System	Function	Component Files	System Function	dcf check externalvariable
 {tn}←file ⎕FCOPY tn {pn}	Create copy of named file tied to tn	System	Function	Component Files	System Function	dcf duplicate
 {tn}←file ⎕FCREATE tn {64}	Create new component file	System	Function	Component Files	System Function	dcf touch make
 {cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp
@@ -675,7 +676,7 @@ children←{class} ⎕WN parent	Child objects (of class) of parent	System	Functi
 {0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
 ⎕TRAP←trap_spec	Define error handling	System	Function	Error Message	System	try catch
 Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function		Index Generation	iota indicesin indexof position columndatabase
-As(85⌶)Dv	Execute (⍎) Silent Expression 	I-beam	Dyadic Function		Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult
+As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult
 127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe
 180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code representation oo classes private instance
 181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Function		Array Properties	datarepresentation internalrepresentation
@@ -1039,7 +1040,7 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 ∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	1s 0
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
-<\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	1 0s
+<\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	1 0s zeroes
 (¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical	
 (⊢(/⍨⍨)1 0⍴⍨≢)Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Tacit	Monadic Function		Boolean/Logical	1s 0s zeroes naughts
@@ -1047,7 +1048,7 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 -/N	Alternating sum of N	Tacit	Monadic Function		Mathematical	
 I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest N	Tacit	Dyadic Function		Mathematical	loan
 Mv(|2÷⍨+.×∘(¯1∘⌽-1∘⌽))Nv	Area of a polygon given Mv,Nv endpoints	Tacit	Dyadic Function		Mathematical	shoelaceformula
-(0.5*⍨0∘,×.-0.5×+/)Nv 	Area of a triangle given side length. (3=≢Nv)	Tacit	Monadic Function		Mathematical	
+(0.5*⍨0∘,×.-0.5×+/)Nv	Area of a triangle given side length. (3=≢Nv)	Tacit	Monadic Function		Mathematical	
 Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence
 (0<⎕NC)Dv	Is Dv defined	Tacit	Dyadic Function		System	symboltable exists
 Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assignment name-value
@@ -1085,7 +1086,7 @@ Ms(⊢⌷⍨∘⊂×∘⍋)A	Sort A according to Ms (1: ascending, 0: unordered,
 (+/∧\)B	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s
 (↑'⎕'⍴¨⍨⌊)N	Histogram	Tacit	Monadic Function		Structural	chart
 +\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal
-'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⎕TS 	Date and time as YYYY-MM-DD hh:mm:ss	Constant			Expression	datetime format
+{'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime format ISO8601:2006-09
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical	
 ''''∘{⍺,⍺,⍨⍵/⍨1+⍺=⍵}Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎
@@ -1132,7 +1133,7 @@ U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarr
 ∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east
 ∘.≤⍨∘⍳Js	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals
-Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv 	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle
+Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize
 Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		Structural	vectorise vectorize serialise serialize
 ⊂⍤¯1∘⍉Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split
@@ -1272,7 +1273,7 @@ Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients N
 {⍵/⍨(⊢∨≠\)⍵=''''}Dv	Extract text (including quotes) in expression	Dfn	Monadic Function		Text	strings extract
 (⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings extract
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	
-(⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding
+(⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes
 Is(+/÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant  ^T ⸆ ᵀ
 2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets
@@ -1296,8 +1297,8 @@ Cv(⊢⊆⍨∘~∊⍨)Dv	Split vector Dv at any sequence of characters in Cv	Ta
 {⊂⍤¯1⊢1/⍵}Y	Vector of major cells for any rank	Dfn	Monadic Function		Structural	vectorise vectorize
 (7|2⎕NQ⎕←#'DateToIDN',⊂)Jv	Weekday (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	gregoriancalendar
 (7|2⎕NQ#'DateToIDN',,∘1 1)Js	Weekday (S-S:0-6) of first of year Js	Tacit	Monadic Function		Mathematical	gregoriancalendar
-Mv(+.×÷1⊥⊣)Nm 	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
-Mv(+.×⍨÷1⊥⊣)Nm 	Weighted average of rows of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
+Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
+Mv(+.×⍨÷1⊥⊣)Nm	Weighted average of rows of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
 f@{B}Y	Where: Execute f on condition B mask	Dop	Dyadic Function	Monadic Operator	Function Application	at amend update
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows
 X(f{↑[⍵⍵](⊂[⍵⍵]⍺)⍺⍺⊂⍵}ax)Y	Run f on axes of X	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply
@@ -1312,23 +1313,23 @@ X(f⍤0)Y	Run f to scalars	Tacit	Function	Monadic Operator	Function Application	
 X{}Y	Fast: X and Y are ignored (no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet sink dump
 X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair
 {0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught
-{0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s
-1=≡,Y 	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	speed optimised optimized quick simple?
+{0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s zeros
+1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	speed optimised optimized quick simple?
 1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	speed optimised optimized quick simple? nonscalar?
 0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	speed optimised optimized quick simple?
-0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	speed optimised optimized quick 
+0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	speed optimised optimized quick
 0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	speed optimised optimized quick empty? norows?
-0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	speed optimised optimized quick 
+0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	speed optimised optimized quick
 ~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	speed optimised optimized quick nonempty? hascontent?
-∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of CA	Expression		Performance	Text	speed optimised optimized quick 
-~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick 
-{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick 
+∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of CA	Expression		Performance	Text	speed optimised optimized quick
+~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick
+{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv
-Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick 
+Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign
 {(+/∧\' '=⍵)↓⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign
-*○N	Fast: Euler's idiom (accurate when NA is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick 
-⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick 
+*○N	Fast: Euler's idiom (accurate when NA is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick
+⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick
 ⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically
 ,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally
 ⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray
@@ -1337,11 +1338,11 @@ Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there 
 ⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east
 ⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray
-⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick 
+⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick
 +/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones
-+/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick 
++/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick
 Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where
-⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick 
+⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick
 ≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank
 Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick  ones
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto
