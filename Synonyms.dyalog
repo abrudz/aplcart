@@ -1,0 +1,3 @@
+ Synonyms←{
+     ⊃Synonym/⍺,⊂⍵
+ }

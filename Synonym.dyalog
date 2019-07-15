@@ -1,6 +1,6 @@
  table←terms Synonym table;mask;In;i;in;relevant;add;report
  ⍝ Add synonyms to table.tsv
- In←{∨/≢¨('\b\Q',⍺,'\E\b')⎕S ⍬⍠'ML' 1⍠1¨⍵}
+ In←{∨/≢¨('(^|\(|\s|,)\Q',⍺,'\E($|\)|\s|,)')⎕S ⍬⍠'ML' 1⍠1¨⍵}
 
  :If 2=≢table
      (table report)←table
