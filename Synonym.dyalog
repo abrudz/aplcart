@@ -1,33 +1,27 @@
- table←terms Synonym table;mask;In;i;in;relevant;add;report;file;∆CSV
+ table←terms Synonym table;mask;In;i;in;relevant;add;report
  ⍝ Add synonyms to table.tsv
  In←{∨/≢¨('\b\Q',⍺,'\E\b')⎕S ⍬⍠'ML' 1⍠1¨⍵}
 
  :If 2=≢table
      (table report)←table
  :Else
-     report←0
- :EndIf
- :If 1≥≢⍴table
-     file←table
-     ∆CSV←⎕CSV⍠'Separator'(⎕UCS 9)⍠'QuoteChar' ''⍠'IfExists' 'Replace'∘⊂
-     table←∆CSV file
- :Else
-     file←''
+     report←¯1
  :EndIf
  terms(∪⊣,~¨)←'-'
  in←terms In¨⊂table
  relevant←⍸⊃∨/in
  :For i :In relevant
      add←,/' ',¨terms/⍨~i⊃¨in
-     :If report
+     :If 0<report
      :AndIf ×≢¨add
-         ⎕←add,⍨i⍕⍨2↑1+⌊10⍟≢table
+         :If 1=report
+             ⍞←'⎕'
+         :Else
+             ⎕←add,⍨i⍕⍨2↑1+⌊10⍟≢table
+         :EndIf
      :EndIf
      table[i;7],←add
  :EndFor
- :If ×≢file
-     table ∆CSV file
- :EndIf
- :If report
+ :If ¯1≠report
      table{⍺ ⍵}←report
  :EndIf
