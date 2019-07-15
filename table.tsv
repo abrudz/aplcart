@@ -75,19 +75,25 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function		Array Properties	dimensions rho ρ ϱ
 ≡Y	Depth: Maximum level of nesting in Y (negative if uneven)	Primitive	Monadic Function		Array Properties	equalunderbar
 ≢Y	Tally: Number of items in leading axis	Primitive	Monadic Function		Array Properties	equalunderbarslash unequalunderbar count length cells
-⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function		Structural	leftshoe
+⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function		Structural	leftshoe box scalarise scalarize
+⊂[ax]Y	Enclose: Contain axes ax inside scalars	Primitive	Monadic Function		Structural	leftshoe box scalarise scalarize axis
 ⊆Y	Nest: Y if already nested, else scalar containing Y	Primitive	Monadic Function		Structural	leftshoeunderbar encloseifsimple conditionalenclose nested boxsimple eis condencl
-↑Y	Mix: Remove nesting	Primitive	Monadic Function		Structural	uparrow
-↓Y	Split: Nest sub-arrays	Primitive	Monadic Function		Structural	downarrow subarray
+↑Y	Mix: Remove nesting (adding trailing axes)	Primitive	Monadic Function		Structural	uparrow
+↓Y	Split: Nest sub-arrays (from last axis)	Primitive	Monadic Function		Structural	downarrow subarray
+↑[ax]Y	Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)	Primitive	Monadic Function		Structural	uparrow
+↓[ax]Y	Split: Nest sub-arrays (from axis ax)	Primitive	Monadic Function		Structural	downarrow subarray
 ∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function		Structural	flatten raze ϵ ε ∈
-,[ax]Y	Ravel with Axes: insert new axis or combine axes	Primitive	Monadic Function		Structural	increaserank decreaserank reducerank comma addaxis
+,[ax]Y	Ravel with Axis: insert new axis between ⌊ax and ⌈ax	Primitive	Monadic Function		Structural	increaserank expandrank comma addaxis
+,[ax]Y	Ravel with Axes: combine axes	Primitive	Monadic Function		Structural	decreaserank reducerank comma removeaxes removeaxis
 ,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flatten raze
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile mirror
+⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile mirror
 ⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upset flip upend
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function		Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ
 Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile
+I⌽[ax]Y	Rotate vectors along axis ax of Y	Primitive	Dyadic Function		Structural	circlestile
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar
 Iv⍉Y	Reorder the axes of Y	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes
 X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma join
@@ -104,7 +110,7 @@ Is?Js	Deal: Is distinct items from ⍳Js	Primitive	Dyadic Function		Index Genera
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet
 C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradedown delstile downgrade spine concordelanding customalphabet
 ∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function		Sets	cup downshoe distinctitems uniqueelements nub
-X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	epsilon isin membership containedin has ϵ ε ∈
+X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	epsilon isin membership containedin has ϵ ε ∈ memberof
 X⍷Y	Occurrences of entire array X within Y	Primitive	Dyadic Function		Sets	findin epsilonunderbar search locate subarray sub-array sub-vector subvector subsequence sub-sequence sub-string substring
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function		Sets	match equalunderbar identical?
 X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function		Sets	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
@@ -114,14 +120,21 @@ Xv∩Yv	Intersection: (Xv∊Yv)/Xv	Primitive	Dyadic Function		Sets	cap intersect
 ⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe first unbox open contentof
 Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
-Iv↑Y	Take Iv items along axes of Y	Primitive	Dyadic Function		Selection	uparrow take first last beginning end leading trailing head tail
-Iv↓Y	Drop Iv items along axes of Y	Primitive	Dyadic Function		Selection	downarrow split drop remove trim cut
+Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
+Iv↑Y	Take Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	uparrow take first last beginning end leading trailing head tail
+Iv↓Y	Drop Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	downarrow split drop remove trim cut
+Iv↑[ax]Y	Take Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	uparrow take first last beginning end leading trailing head tail
+Iv↓[ax]Y	Drop Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	downarrow split drop remove trim cut
 Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat
+Iv/[ax]Y	Replicate along axis ax	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat
 Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compress slashbar solidus filter first copy repeat
 Iv\Y	Expand last axis of Y	Primitive	Dyadic Function		Selection	reversesolidus slope
+Iv\[ax]Y	Expand axis ax of Y	Primitive	Dyadic Function		Selection	reversesolidus slope
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function		Selection	reversesolidusbar slopebar
-Av⊂Y	Partitioned enclose of Y according to Av	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
-Mv⊆Y	Partition Y according to Mv	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
+Av⊂Y	Partitioned enclose of Y according to Av (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
+Av⊂[ax]Y	Partitioned enclose of Y according to Av (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
+Mv⊆Y	Partition Y according to Mv (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
+Mv⊆[ax]Y	Partition Y according to Mv (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
 ⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call parseexpression
 ⍕Y	Format: Character representation of Y	Primitive	Monadic Function		Data Conversion	downtackjot thorn itoa tostringify totext representation ⎕fmt ⎕df
 X⍎Dv	Execute Dv within namespace X	Primitive	Dyadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call inside
@@ -131,12 +144,14 @@ Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function		Data
 ⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright identity default
 X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft identity
 X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright identity
-f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash reduce fold insert solidus filter over rowwise
+f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash reduce fold insert solidus over rowwise
+f/[ax]Y	Reduce: f between all items of Y on axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	slash reduce fold insert solidus over rowwise
 f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise
-Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash reduce fold insert select solidus filter over rowwise
+Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash reduce fold insert select solidus over rowwise
 Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise
 f\Y	Scan: f between items of Y in progressively longer vectors along last axis	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope scan cumulativereduce rowwise
 f⍀Y	Scan First: f between items of Y in progressively longer vectors along first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst filterfirst columnwise
+f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis [ax]	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope scan cumulativereduce rowwise
 f¨Y	Each: f on items of Y	Primitive	Monadic Function	Monadic Operator	Function Application	foreach diaeresis map
 X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operator	Function Application	foreach diaeresis map
 X f⌸Y	Key: f on items of Y grouped by unique X values	Primitive	Dyadic Function	Monadic Operator	Sets	equalquad quadequal group classify bin bucket
@@ -789,7 +804,7 @@ cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray
 cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays box boxing box-drawingcharacters boxdrawingcharacters
 d←L dfns.dist R	Levenshtein distance	Dfn	Function			stringcomparison fuzzy
 rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			blanks compression spaces
-rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			blanks compression spaces
+rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			blanks compression spaces consecutive
 rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator		no-result is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function			whitedots functionsformatting name-clashproblem stuff nameclashproblem
 cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function			box box-drawingcharacters diversions boxdrawingcharacters
@@ -948,7 +963,7 @@ entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function			Entr
 nvec←dfns.sieve nvec	Sieve of Eratosthenes	Dfn	Function			primenumber sieve
 tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	Dfn	Function			unweightedgraph spanningtree breadth-firstsearch breadthfirstsearch
 rslt←{larg} (op dfns.splay) rarg	Splay trees	Dop		Monadic Operator		tree binarysearchtree enlist
-cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function			compression linevector
+cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function			compression linevector consecutive
 cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function			ssxutils stringreplacement substitution
 cmat←dfns.ssmat (cmat from into)	Matrix search/replace	Dfn	Function			ssxutils stringreplacement substitution
 cvec←{prim supp} dfns.ssword (srce from into)	Approx alternative to xutils ss	Dfn	Function			ssxutils stringreplacement substitution
@@ -1083,7 +1098,7 @@ Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathe
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurances statistics
 (10 12∘.○⊢)N	From complex to magnitude and radians	Tacit	Monadic Function		Data Conversion	polar
 M(⊣×¯12○⊢)N	From magnitude M and radians N to complex	Tacit	Dyadic Function		Data Conversion	polar
-Ms(1+⊣)∘⊥N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
+Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
 ↑∘,∘⊂Y	Increment rank by one before first dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector
 (,⍤0)Y	Increment rank by one after last dimension	Tacit	Monadic Function		Structural	addtrailingaxis GhostBuster columnmatrixfromvector
 (≠\⍣¯1)B	Gray code or reflected binary	Tacit	Monadic Function		Boolean/Logical	
@@ -1098,7 +1113,7 @@ X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	t
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
-Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model
+Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model best
 (0≠.=400 100 4∘.|⊢)Js	Is IS (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
 X1 X2(1=⍸)Y	Are Y in range [X1,X2) ?	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval inrange?
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
@@ -1109,7 +1124,7 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 (⊃⍪⌿)AA	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples
 100⊥3↑⎕TS	Join current date as YYYYMMDD integer	Constant			Expression	format
-Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	
+Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength perimeter coordinates vertices
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton sub-array
 ∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west
