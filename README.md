@@ -6,15 +6,17 @@ It is intended for both beginners and professionals, but knowledge of basic APL 
 
 ## Usage
 
+**Note that APLcart is not intended for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes. Rather, APLcart is for finding out *how to do* things.**
+
 Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
 
-- Click [here](https://abrudz.github.io/aplcart/) and start typing (access-key <kbd>Q</kbd> to re-focus)
+- Click [here](https://abrudz.github.io/aplcart/) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
 
-- Click [`×`](https://abrudz.github.io/aplcart/) in the top right corner to start a new query (access-key <kbd>X</kbd>)
+- Click [`×`](https://abrudz.github.io/aplcart/) in the top right corner to start a new query (access-key <kbd>X</kbd> — for _e**x**punge_)
 
-- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd>)
+- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
 
-- Click [`🔅︎︎︎`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd>)
+- Click [`◐`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd> — _**W**hite_)
 
 Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
@@ -24,16 +26,16 @@ As the query is modified, the browser address bar is updated too. Simply copy th
 
 ### Manual construction
 
-After [abrudz.github.io/aplcart](https://abrudz.github.io/aplcart) you can add `?` and the following options, separated by `&` if you want both:
+After [aplcart.info](https://aplcart.info/) you can add `?` and the following options, separated by `&` if you want both:
 
-- [`w`](https://abrudz.github.io/aplcart?w) use white theme
-- [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate query field
+- [`w`](https://abrudz.github.io/aplcart?w) use **w**hite theme
+- [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate the _Tell me about_ **q**uery field
 
-For example for a white interface looking for "find", use [abrudz.github.io/aplcart?w&q=find](https://abrudz.github.io/aplcart?w&q=find)
+For example for a white interface looking for "find", use [aplcart.info?w&q=find](https://aplcart.info?w&q=find)
 
 ## Scope
 
-APLcart currently encompasses:
+To answer *how do I* questions, APLcart currently searches the following :
 
 - General syntax, like `name f←Y`
 - Primitives, like `!`
@@ -48,10 +50,11 @@ APLcart currently encompasses:
 - Errors numbers and messages, like `11::DOMAIN ERROR`
 - User commands, like `]Box`
 - A selection of simple dfns, dops, and derived functions like `(0=|)`
-- All of dfns.dws, like `dfns.cal`
+- All of dfns.dws, like `dfns.cal` (In APLcart, entries from here are prefixed `dfns.` . To use, insert `{(⍎⍵⎕NS⍬).⎕CY⍵}'dfns'` into your code, then call, for example, `dfns.cal`.)
 - Idioms from the APL2 idiom list, like `(+/|)`
 - Performance idioms from Dyalog's idiom list, like `{(+/∨\' '≠⌽⍵)↑¨↓⍵}`
 - Entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)`
+- other entries
 
 ### Coming soon
 
