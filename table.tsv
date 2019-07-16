@@ -315,8 +315,8 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 X⌷⍨∘⊂J	Items of X at positions J	Tacit	Dyadic Function		Selection	index
 X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
-X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
-X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY
+X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY backcompose back-compose
+X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	on composewith functioncomposition fXgY backcompose back-compose
 X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing
 X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function Application	composewith functioncomposition splitover (fX)g(hY) (fX)ghY
 ⎕CT←(0≤1E¯14≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←645	System	Variable		Mathematical	comparison tolerance fuzz IEEE754 64-bit binaryfloatingpoint representation
@@ -1386,3 +1386,4 @@ X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-vector sub-sequence subsequence sub-list subvector sublist
 (⍳∘≢,/¨⊂)Yv	All possible subvectors grouped by length (Yv must be simple)	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
+Is(⊢∘⌊+0>*⍨×⊣)N	Rounding with method Is (¯2:up, 2:down, ¯1:away from 0, 1:towards 0)	Tacit	Dyadic Function		Mathematical	precision
