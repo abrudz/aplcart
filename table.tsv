@@ -8,7 +8,7 @@ SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 |N	Magnitude (absolute value)	Primitive	Monadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus abs magnitude amplitude 10○ 10∘|
 *N	e raised to the power N	Primitive	Monadic Function		Mathematical	power star asterisk exponential etothepowerof naturalexponential exp()
 ⍟N	Natural logarithm of N	Primitive	Monadic Function		Mathematical	naturallogarithm circlestar starcircle splat 2.718281828459045235360287471352662 ln()
-○N	pi times N	Primitive	Monadic Function		Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π 𝜋
+○N	pi times N	Primitive	Monadic Function		Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π 𝜋 big large ring
 !N	Factorial (Gamma function of N+1)	Primitive	Monadic Function		Mathematical	countpermutations exclamation bang shriek combinatorics fact() gamma() Γ
 ?J	Random number selected from ⍳J	Primitive	Monadic Function		Mathematical	questionmark roll randominteger interrogationpoint query eroteme
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function		Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
@@ -22,7 +22,7 @@ M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	power star a
 M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithm circlestar starcircle splat log() log₁₀()
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile maximum greater larger max()
 M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile minimum lesser smaller min()
-I○N	Circular functions	Primitive	Dyadic Function		Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric
+I○N	Circular functions	Primitive	Dyadic Function		Mathematical	circular trigonometric hyperbolic complex imaginary arcus angle goniometric circle big large ring
 M!N	Number of selections of size M from N (using Beta function)	Primitive	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered
 M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd()
 M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd
@@ -42,31 +42,31 @@ A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat
 A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex check hachek Apq
 A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq
 A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq
-0○N	cos ←→ sin: (1-N*2)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary cop()
-¯1○N	Arcsin N	Primitive	Dyadic Function		Circular/Trigonometric	arcsine asin() arcussinus
-¯2○N	Arccos N	Primitive	Dyadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus
-¯3○N	Arctan N	Primitive	Dyadic Function		Circular/Trigonometric	arctangent atan() arcustangent
-¯4○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary cohn()
-¯5○N	Hyperbolic Arcsinh N	Primitive	Dyadic Function		Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area
-¯6○N	Hyperbolic Arccosh N	Primitive	Dyadic Function		Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area
-¯7○N	Hyperbolic Arctanh N	Primitive	Dyadic Function		Circular/Trigonometric	arctangent atanh() arcustangent artanh() area
-¯8○N	icos ←→ -isin: -(-1+N*2)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary nconh()
-¯9○N	N	Primitive	Dyadic Function		Circular/Trigonometric	identity
-¯10○N	+N	Primitive	Dyadic Function		Circular/Trigonometric	complexconjugate
-¯11○N	N×0J1	Primitive	Dyadic Function		Circular/Trigonometric	imaginary complex itimes
-¯12○N	*N×0J1	Primitive	Dyadic Function		Circular/Trigonometric	antiphase phasor cis()
-1○N	Sine N	Primitive	Dyadic Function		Circular/Trigonometric	sinus sin()
-2○N	Cosine N	Primitive	Dyadic Function		Circular/Trigonometric	cosinus cos()
-3○N	Tangent N	Primitive	Dyadic Function		Circular/Trigonometric	tan()
-4○N	sinh → cosh: (1+N*2)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary coh()
-5○N	Hyperbolic sine N	Primitive	Dyadic Function		Circular/Trigonometric	sinus sinh()
-6○N	Hyperbolic cosine N	Primitive	Dyadic Function		Circular/Trigonometric	cosinus cosh()
-7○N	Hyperbolic tangent N	Primitive	Dyadic Function		Circular/Trigonometric	tanh()
-8○N	icos ←→ isin: (-1+N*2)*.5	Primitive	Dyadic Function		Circular/Trigonometric	pythagorean complementary conh()
-9○N	Real part of N	Primitive	Dyadic Function		Circular/Trigonometric	re()
-10○N	Magnitude of N	Primitive	Dyadic Function		Circular/Trigonometric	abs() modulo modulus abs magnitude amplitude
-11○N	Imaginary part of N	Primitive	Dyadic Function		Circular/Trigonometric	im()
-12○N	phase N	Primitive	Dyadic Function		Circular/Trigonometric	argument arc()
+0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()
+¯1∘○N	Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asin() arcussinus
+¯2∘○N	Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus
+¯3∘○N	Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atan() arcustangent
+¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()
+¯5∘○N	Hyperbolic Arcsinh N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area
+¯6∘○N	Hyperbolic Arccosh N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area
+¯7∘○N	Hyperbolic Arctanh N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atanh() arcustangent artanh() area
+¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
+¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
+¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate
+¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	imaginary complex itimes
+¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	antiphase phasor cis()
+1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sinus sin()
+2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosinus cos()
+3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan()
+4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()
+5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinus sinh()
+6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosinus cosh()
+7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh()
+8∘○N	icos ←→ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary conh()
+9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()
+10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus abs magnitude amplitude
+11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()
+12∘○N	phase N	Tacit	Monadic Function		Circular/Trigonometric	argument arc()
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide table
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide leastsquares table
 Mm⌹Nm	Multiply Mm with inverse of Nm	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
@@ -109,7 +109,7 @@ X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Functi
 Is?Js	Deal: Is distinct items from ⍳Js	Primitive	Dyadic Function		Index Generation	questionmark interrogationpoint query eroteme
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet
 C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradedown delstile downgrade spine concordelanding customalphabet
-∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function		Sets	cup downshoe distinctitems uniqueelements nub
+∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function		Sets	cup downshoe distinctitems uniqueelements nub eraseremoveduplicates
 X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	epsilon isin membership containedin has ϵ ε ∈ memberof
 X⍷Y	Occurrences of entire array X within Y	Primitive	Dyadic Function		Sets	findin epsilonunderbar search locate subarray sub-array sub-vector subvector subsequence sub-sequence sub-string substring sub-list sublist
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function		Sets	match equalunderbar identical?
@@ -131,8 +131,8 @@ Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	co
 Iv\Y	Expand last axis of Y	Primitive	Dyadic Function		Selection	reversesolidus slope
 Iv\[ax]Y	Expand axis ax of Y	Primitive	Dyadic Function		Selection	reversesolidus slope
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function		Selection	reversesolidusbar slopebar
-Av⊂Y	Partitioned enclose of Y according to Av (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
-Av⊂[ax]Y	Partitioned enclose of Y according to Av (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
+Av⊂Y	Partitioned enclose of Y according to Av (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists
+Av⊂[ax]Y	Partitioned enclose of Y according to Av (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists
 Mv⊆Y	Partition Y according to Mv (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
 Mv⊆[ax]Y	Partition Y according to Mv (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk
 ⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call parseexpression
@@ -166,12 +166,12 @@ X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	
 (f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y of size and (optionally step) Jm	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond stencil tessellate tile cellularautomaton gameoflife vanneumann moore neighbourhoods neighborhoods
 f⍣g Y	Power: iterates f on Y until condition Y g f Y is true	Primitive	Monadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while until repeat
 (f⍣Js)Y	Power: f (or X∘f) on Y Js times	Primitive	Monadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis while until inverse repeat
-X f.g Y	Inner Product: f / g between trailing vectors of X and leading vectors of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	dotproduct innerproduct crossproduct vectorproduct period fullstop
+X f.g Y	Inner Product: f / g between trailing vectors of X and leading vectors of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	small little tiny dotproduct innerproduct crossproduct vectorproduct period fullstop
 X∘.g Y	Outer Product: g between each item of X and every item of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	jotdot outerproduct table cartesianproduct allcombinationsof matrix
-f∘g Y	Atop: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	jot composewith bind ring functioncomposition
-X f∘g Y	With: X∘f on the result of g on Y, that is, X f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	jot composewith bind ring functioncomposition
-X∘g Y	Curry: g between X and Y, that is, XgY	Primitive	Monadic Function	Dyadic Operator	Composition	jot composewith bind curry ring
-(f∘Y2)Y1	Curry: f between Y1 and Y2, that is, Y1fY2	Primitive	Monadic Function	Dyadic Operator	Composition	jot composewith bind curry ring
+f∘g Y	Atop: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition
+X f∘g Y	With: X∘f on the result of g on Y, that is, X f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition
+X∘g Y	Curry: g between X and Y, that is, XgY	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind curry ring
+(f∘Y2)Y1	Curry: f between Y1 and Y2, that is, Y1fY2	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind curry ring
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (X@N)Y	At: use values in X to replace positions N in Y	Primitive	Monadic Function	Dyadic Operator	Structural	at substitute merge amend replace update
 (f@N)Y	At: apply f to modify positions N in Y	Primitive	Monadic Function	Dyadic Operator	Function Application	at amend update
@@ -926,7 +926,7 @@ pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	F
 mat←dfns.pmat n	Permutation matrix of ⍳⍵	Dfn	Function			permutationmatrix table
 to←{dirn←1} dfns.polar fm	Polar from/to cartesian coordinates	Dfn	Function			polarcoordinates cartesiancoordinates coordinates
 rslt←count (fun dfns.pow) argt	Explicit function power	Dop		Monadic Operator		poweroperator functionpower fibonaccinumber
-rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator		partionedreduction
+rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator		partionedreduction sub-vectors segmented sub-lists subvectors sublists
 rslt←{larg} (func dfns.profile subs) rarg	Performance profiling	Dop		Dyadic Operator		performance timing profiling monitor ⎕profile
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function			nativefile textfile Unicode
 cmats←dfns.queens N	The N-Queens Problem	Dfn	Function			diversions chesspuzzle treesearching purefunction N-Queens YouTube NQueens
@@ -1181,7 +1181,7 @@ X⍳⍨∘⌽Y	Position of last X in Y	Tacit	Dyadic Function		Index Generation	l
 PO←X(Is{⍺⍺⊃⍸⍺≡¨⊂⍵})Y	Position of the Is'th Y in X	Dop	Dyadic Function	Monadic Operator	Index Generation	nthindexin nthindexof nthposition
 X(⍸⍷⍨∘⊂)Y	Positions of item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof position subarray sub-array subsequence sub-sequence
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof position
-X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-arrays sub-strings substrings subvectors sub-vectors sub-matrices submatrices sub-sequence subsequence
+X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-arrays sub-strings substrings subvectors sub-vectors sub-matrices submatrices sub-sequence subsequence segmented sub-lists partitioned sublists
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable
 Xm(,⍤1)Yv	Postfix vector to each row of matrix	Tacit	Dyadic Function		Structural	append rows list table
 Xv(,⍤1)Ym	Prefix vector to each row of matrix	Tacit	Dyadic Function		Structural	prepend rows list table
@@ -1375,7 +1375,7 @@ C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	
 {⍵⌷⍨⊂0~⍨⊢/⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
-Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise
+Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise sub-vectors sub-lists partitioned subvectors sublists
 (¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	pairwiseratios vector
 1=∘≢∪	Are all cells identical?	Tacit	Monadic Function		Sets	allsame? allequal? nounique?
 ≢=∘≢∪	Are all cells distinct?	Tacit	Monadic Function		Sets	alldifferent? allunequal? noduplicates?
@@ -1383,6 +1383,12 @@ Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over wheneve
 1<∘≢∪	Are any cells distinct?	Tacit	Monadic Function		Sets	anydifferent? anyunequal? anyunique?
 (f⍣¯1)Y	Inverse: find Z such that Y ≡ f Z	Tacit	Monadic Function	Monadic Operator	Function Application	f⁻¹(x) f′(x) fʹ(x) opposite revert
 X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic Operator	Function Application	f⁻¹(x,y) f′(x,y) fʹ(x,y) opposite revert
-Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-vector sub-sequence subsequence sub-list subvector sublist
-(⍳∘≢,/¨⊂)Yv	All possible subvectors grouped by length (Yv must be simple)	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences
+Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-vector sub-sequence subsequence sub-list subvector sublist sub-vectors segmented sub-lists partitioned sublists
+(⍳∘≢,/¨⊂)Yv	All possible subvectors grouped by length (Yv must be simple)	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
+0∘<N	Strictly positive?	Tacit	Monadic Function		Mathematical	
+0∘≤N	Non-negative?	Tacit	Monadic Function		Mathematical	nonnegative?
+0∘=N	Zero?	Tacit	Monadic Function		Mathematical	
+0∘≥N	Non-positive?	Tacit	Monadic Function		Mathematical	nonpositive?
+0∘>N	Strictly negative?	Tacit	Monadic Function		Mathematical	
+0∘≠N	Non-zero?	Tacit	Monadic Function		Mathematical	nonzero?
