@@ -15,7 +15,7 @@ $(document).ready(function(){
       scrollY:"calc(100vh - 110px)",
       searchDelay:250,
       search:{search:(q?q:"")},
-      language:{search:"query:"},
+      language:{search:"Tell me about:"},
       initComplete:function(s,j){$('aside').remove();$('a,p').show();}
     });
     $(".dataTables_scrollBody").attr("accesskey","z");

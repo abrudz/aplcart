@@ -89,7 +89,7 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile mirror
 ⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile mirror
-⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upset flip upend
+⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upset flip upend upsidedown
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function		Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ sort sorting reordering ordering
 Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile
@@ -1386,4 +1386,3 @@ X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-vector sub-sequence subsequence sub-list subvector sublist
 (⍳∘≢,/¨⊂)Yv	All possible subvectors grouped by length (Yv must be simple)	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
-Is(⊢∘⌊+0>*⍨×⊣)N	Rounding with method Is (¯2:up, 2:down, ¯1:away from 0, 1:towards 0)	Tacit	Dyadic Function		Mathematical	precision
