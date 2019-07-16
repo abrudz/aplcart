@@ -19,7 +19,7 @@ a{z-index:1;color:unset}
 #DataTables_Table_0_info{text-align:unset}
 th{background:unset!important;cursor:unset!important}
 input,td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
-input{width:calc(100vw - 11em)}
+input{width:calc(100vw - 15em)}
 input::-ms-clear,
 input::-ms-reveal,
 input::-webkit-search-decoration,
