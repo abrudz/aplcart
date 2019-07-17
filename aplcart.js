@@ -19,10 +19,12 @@ $(document).ready(function(){
       initComplete:function(s,j){$('aside').remove();$('a,p').show();}
     });
     $(".dataTables_scrollBody").attr("accesskey","z");
+    $("tr>*").attr('tabindex', '-1');
     $("label,input").prop('title',"What to search for (access-key: Q)");
     $("input").focus().attr({
       accesskey:"q",
-      oninput:'q=$("input").val();setTit(q);setUrl(q)'
+      oninput:'q=$("input").val();setTit(q);setUrl(q)',
+      tabindex:"3"
     });
     $("body").addClass(null!=s.get("w")?"w":"")
   });
