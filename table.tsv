@@ -1116,7 +1116,14 @@ X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	tota
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model best
 (0≠.=400 100 4∘.|⊢)Js	Is Js (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
-X Y(1=⍸)Z	Are Z in range [X,Y) ?	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval inrange?
+X(1≠6 9⍸⍳+3×⍸)Y	Test if Y is outside range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	≥Y> ≥X> tao totalarrayordering interval outsiderange?
+X(6≠⍳+3×⍸)Y	Test if Y is outside range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	≥Y≥ ≥X≥ tao totalarrayordering interval outsiderange?
+X(1≠⍸)Y	Test if Y is outside range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	>Y≥ >X≥ tao totalarrayordering interval outsiderange?
+X(1≠4 9⍸⍳+3×⍸)Y	Test if Y is outside range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	>Y> >X> tao totalarrayordering interval outsiderange?
+X(1=6 9⍸⍳+3×⍸)Y	Test if Y is within range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	<Y≤ <X≤ tao totalarrayordering interval inrange?
+X(6=⍳+3×⍸)Y	Test if Y is within range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	<Y< <X< tao totalarrayordering interval inrange?
+X(1=⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	≤Y< ≤X< tao totalarrayordering interval inrange?
+X(1=4 9⍸⍳+3×⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	≤Y≤ ≤X≤ tao totalarrayordering interval inrange?
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list
@@ -1392,3 +1399,4 @@ X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	
 0∘≥N	Non-positive?	Tacit	Monadic Function		Mathematical	nonpositive?
 0∘>N	Strictly negative?	Tacit	Monadic Function		Mathematical	
 0∘≠N	Non-zero?	Tacit	Monadic Function		Mathematical	nonzero?
+{(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get
