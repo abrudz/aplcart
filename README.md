@@ -51,24 +51,23 @@ To answer *how do I* questions, APLcart currently searches the following :
 - User commands, like `]Box`
 - A selection of simple dfns, dops, and derived functions like `(0=|)`
 - All of dfns.dws, like `dfns.cal` (In APLcart, entries from here are prefixed `dfns.` . To use, insert `{(⍎⍵⎕NS⍬).⎕CY⍵}'dfns'` into your code, then call, for example, `dfns.cal`.)
-- Idioms from the APL2 idiom list, like `(+/|)`
+- Idioms from the APL2 idiom list, like `(+/|)` (fully updated to use modern APL)
 - Performance idioms from Dyalog's idiom list, like `{(+/∨\' '≠⌽⍵)↑¨↓⍵}`
-- Entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)`
-- other entries
-
-### Coming soon
-
-- Subset of idioms from the FinnAPL idiom list, like `(⊢⍳⌈/)`
+- Entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)` 
+- All idioms from the FinnAPL idiom list, like `(⊢⍳⌈/)` (fully updated to use modern APL)
+- and other entries [submitted](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=) by users like you!
 
 ## Features wish list
 - links to documentation
 - links to TIO examples
 
-## Contributing
+Got an idea for improving the site? [Suggest it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=enhancement&template=feature_request.md&title=)
 
-Wrote a cool train? Found a clever dfn? [Please contribute!](CONTRIBUTING.md)
+## [Contributing](CONTRIBUTING.md)
 
-Missing something? Faulty content? [Submit an issue!](https://github.com/abrudz/aplcart/issues/new)
+Wrote a cool train? Found a clever dfn? [Submit it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=)
+
+Missing something? Faulty content? [Report it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=bug&template=bug_report.md&title=)
 
 # APL?
 
