@@ -299,10 +299,10 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	isempty? isvoid? isnull?
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort() order up increasing sorting reordering ordering
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort() order down decreasing sorting reordering ordering
-(1∧.=2</⊢)Nv	Is Nv Strictly Increasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order sort sorting reordering ordering
-(1∧.=2>/⊢)Nv	Is Nv Strictly Decreasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up order sort sorting reordering ordering
-(1∧.=2≤/⊢)Nv	Is Nv Non-decreasing?	Tacit	Monadic Function		Mathematical	descending? falling? down order Nondecreasing? sort sorting reordering ordering
-(1∧.=2>/⊢)Nv	Is Nv Non-increasing?	Tacit	Monadic Function		Mathematical	descending? falling? down order Nonincreasing? sort sorting reordering ordering
+(⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up ordered sorted
+(⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	descending? falling? down ordered Nondecreasing? sorted
+(⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Mathematical	ascending? rising? up ordered sorted
+(⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	descending? falling? down ordered Nonincreasing? sorted
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
 (¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	arccosecant acsc acosec arcuscosecant
@@ -1041,7 +1041,7 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
 <\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	1 0s zeroes
-(¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed
+(¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed valid? name? identifier?
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical	
 (⊢(/⍨⍨)1 0⍴⍨≢)Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Tacit	Monadic Function		Boolean/Logical	1s 0s zeroes naughts
 -\∘⍳Js	Alternating series (1,-1,2,-2, …) of length Js	Tacit	Monadic Function		Mathematical	oeisA001057 oeisA1057
@@ -1075,7 +1075,7 @@ Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	
 (11=⎕DR)Y	Boolean test: Is Y Boolean?	Tacit	Monadic Function		Array Properties	
 (0 2∊⍨⎕DR)Y	Boolean test: Is Y character?	Tacit	Monadic Function		Array Properties	
 Xv(∊∧.∧∊⍨)Yv	Boolean test: Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Properties	
-(⍬≡⊢~⍳∘≢)Yv	Boolean test: Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	
+(⊢≡∘⍋⍋)Yv	Boolean test: Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	
 ≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical	
 X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets	
 1∘/Y	Make vector if scalar	Tacit	Monadic Function		Array Properties	minimumrank1 makenonscalar list
