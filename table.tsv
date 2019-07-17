@@ -1137,7 +1137,11 @@ U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarr
 ∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
 ∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
 ∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
-∘.≤⍨∘⍳Js	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
+(⊢≡∘.≤⍨∘⍳∘≢)Bm	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
+(⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table triangular?
+(⊢≡∘.≥⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table triangular?
+(⊢≡∘.<⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table triangular?
+(⊢≡∘.≤⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table triangular?
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals
 Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize
