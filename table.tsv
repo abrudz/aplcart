@@ -117,7 +117,7 @@ X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function		Sets	notmatch natch equalunde
 Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function		Sets	tilde butnot without except setdifference setsubtraction setminus ∖ removing remove
 Xv∪Yv	Union: Xv,Yv~Xv	Primitive	Dyadic Function		Sets	cup union downshoe setor
 Xv∩Yv	Intersection: (Xv∊Yv)/Xv	Primitive	Dyadic Function		Sets	cap intersection upshoe setand
-⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe first unbox open contentof
+⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe first unbox open contentof Y[1] X[1]
 Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
 Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
@@ -188,9 +188,9 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 int.frac	Decimal Point	Syntax	Array		Expression	decimal point period rational
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento scale mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	complex plusitimes imaginary
-]name	User Command	Non-syntax				rightsquarebracket rightbracket usercommand ucmd
-{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	ucmd
-)name	System Command	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd
+]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running
+{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	ucmd evaluate calling running
+)name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling
 X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets indexing subscript choose
 X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets indexing subscript choose
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator along
@@ -203,13 +203,14 @@ X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator
 X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fg atop 2train 2-train
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train fgh fork 3train 3-train
 X1(X2 g h)Y	Fork: X2 g X1 h Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived train Agh fork 3train 3-train
-f←{⍵}	Dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces function dfn assignment
-op←{⍺⍺ ⍵}	Dop	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment
-op←{⍺⍺ ⍺}	Dop	Syntax	Dyadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment
-f←{⍺}	Dfn	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces function dfn assignment
-op←{⍵⍵ ⍵}	Dop	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment
-op←{⍵⍵ ⍺}	Dop	Syntax	Dyadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment
-{R}←f Y	Shy Tradfn/Tradop Result	Syntax			Definition	curlybraces function operator shy hideresult traditional
+f←{⍵}	Prototypical monadic Dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces function dfn assignment header defining
+op←{⍺⍺ ⍵}	Prototypical monadic Dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment header defining
+op←{⍺⍺ ⍺}	Prototypical monadic Dop deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment header defining
+f←{⍺}	Prototypical dyadic Dfn	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces function dfn assignment header defining
+op←{⍵⍵ ⍵}	Prototypical dyadic Dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment header defining
+op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces operator dop assignment header defining
+{_← … }	Shy Dfn/Dop result	Syntax			Definition	curlybraces function operator shy hideresult traditional
+{R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator shy hideresult traditional
 f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking
 (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing
 {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator optional default ambivalent variadic traditional ambivalence
@@ -395,8 +396,8 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 )OPS {nm}	List operatoris in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯4.1 ¯4.2 ¯4.3 vector
 )PROPS {nm}	List properties in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.3 vector
 )VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6 vector
-⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z
-⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9
+⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
+⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9 0123456789
 ⎕NULL	A reference to the null item	System	Constant		System Function	void emptycell .net nil
 0::any error	Covers all errors (errors 1–999)				Error Message	try catch errorhandling trapping exception
 1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	size memory resources maxws ⎕wa
@@ -429,7 +430,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				Error Message	dimensions
 53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				Error Message	
 54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	
-55::FIELD SIZE ERROR					Error Message	
+55::FIELD SIZE ERROR	Invalid field size for ⎕SM				Error Message	
 56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	
 57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	behavior
 58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	dimensions
@@ -1833,12 +1834,12 @@ Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at po
 (,(/⍨)(<\∘,(⊢=⍴⍴⌈⌿)∧⊢=∘⍉⌽∘⍴⍴⌊/))Nm	Value of saddle point	Tacit	Monadic Function		Mathematical	
 Ns{+/⍵××\1,⍺÷⍳¯1+≢⍵}Nv	Value of Taylor series with coefficients Nv at point Ns	Dfn	Dyadic Function		Mathematical	
 Mv(((1⌽⊣)×¯1⌽⊢)-(¯1⌽⊣)×1⌽⊢)Nv	Vector (cross) product of vectors	Tacit	Dyadic Function		Mathematical	
-(≠\(⍳+/)∊(+\1∘,))Jv	Vector (Jv[1]⍴1),(Jv[2]⍴0),(Jv[3]⍴1),…	Tacit	Monadic Function		Boolean/Logical	
-Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	
-Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ←→ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	
+(≠\(⍳+/)∊(+\1∘,))Jv	Vector (Jv[1]⍴1),(Jv[2]⍴0),(Jv[3]⍴1),…	Tacit	Monadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes
+Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes
+Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ←→ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	sequence list
 (1⍴⍨≢)Ym	Vector having as many ones as Ym has rows	Tacit	Monadic Function		Boolean/Logical	
-Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros ⍵
-Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros ⍺
+Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js
+Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js
 ((,1,⍨⍪)(/∘,)⍪,~)Bv	Vector to expand a new element after each one in Bv	Tacit	Monadic Function		Structural	insert openup
 X{⍺,[1+2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as column matrices in catenation beneath each other	Dfn	Dyadic Function		Structural	combine
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine
