@@ -75,7 +75,7 @@ Missing something? Faulty content? [Report it!](https://github.com/abrudz/aplcar
 
 - <a href="https://www.dyalog.com/mastering-dyalog-apl.htm" target="_blank"><em>Mastering Dyalog APL</em></a> by Bernard Legrand: a complete guide, beginning with a thorough introduction to the language and progressing to worked examples. Free to download, but can be bought printed.
 - <a href="https://tryapl.org/" target="_blank">TryAPL</a>: an online interactive environment that allows users to play with simple expressions. Includes tutorial mode in which various scenarios are explored.
-- <a href="http://tutorial.dyalog.com/" target="_blank">The APL tutor</a>: online system that takes a complete novice through terminology, conventions and functionality
+- <a href="http://tutorial.dyalog.com/" target="_blank">Dyalog APL Tutor</a>: ancient online system that takes a complete novice through terminology, conventions and functionality
 - <a href="https://chat.stackexchange.com/rooms/info/52405/the-apl-orchard?tab=conversations" target="_blank">APL Cultivation</a>: a Stack Exchange repository of text-based lesson transcripts.
 - <a href="https://chat.stackexchange.com/rooms/52405/the-apl-orchard" target="_blank">The APL Orchard</a>: a Stack Exchange chatroom.
 - <a href="https://stackoverflow.com/questions/ask?tags=apl+dyalog&title=How+do+I%E2%80%A6" target="_blank">Stack Overflow</a>: a question & answer site where APL questions are usually answered very quickly.
