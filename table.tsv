@@ -394,7 +394,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				Error Message	
 21::FILE FULL	Operation would cause the file to exceed its file size limit				Error Message	
 22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				Error Message	
-23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				Error Message	
+23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				Error Message	correct validate
 24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				Error Message	
 25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	
 26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	
@@ -517,7 +517,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 ]UCMD.UReset	Refresh cache of all user command definitions	Non-syntax	Ucmd	UCMD	User command	User commands that manage the user command framework ]UReset
 ]UCMD.USetup	Run Setup from setup.dyalog	Non-syntax	Ucmd	UCMD	User command	User commands that manage the user command framework ]USetup
 ]UCMD.UVersion	Report version information of a user command	Non-syntax	Ucmd	UCMD	User command	User commands that manage the user command framework ]UVersion
-]WS.Check	Perform workspace integrity check	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]Check
+]WS.Check	Perform workspace integrity check	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]Check correct validate
 ]WS.Compare	Compare two workspaces	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]Compare
 ]WS.Document	List (part of) the workspace content, displaying each item separately	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]Document vector
 ]WS.FindRefs	Follow references in the workspace until all references have been found	Non-syntax	Ucmd	WS	User command	User commands that relate to workspaces ]FindRefs
@@ -550,7 +550,7 @@ r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans	Sy
 captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	shell os operatingsystem commandprocessor linux macos aix rasbianpios ⎕cmd )sh
 r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 encoding ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
-valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata list
+valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata list check correct
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtmltag xmltag
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
 user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
@@ -588,7 +588,7 @@ script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	Sys
 ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here me myself
 cn←x ⎕FAPPEND tn {pn}	Append x to end of file (optional passnumber)	System	Function	Component Files	System Function	dcf
 r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Files	System Function	dcf active usable accessible
-cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file	System	Function	Component Files	System Function	dcf check externalvariable
+cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file	System	Function	Component Files	System Function	dcf check externalvariable correct validate
 {tn}←file ⎕FCOPY tn {pn}	Create copy of named file tied to tn	System	Function	Component Files	System Function	dcf duplicate
 {tn}←file ⎕FCREATE tn {64}	Create new component file	System	Function	Component Files	System Function	dcf touch make
 {cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp
@@ -1016,7 +1016,7 @@ digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function
 refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function			namespacereferences list
 cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function			tabexpansion horizontaltabs adjacent1s flipflopRS
 z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function			FastFourierTransform convolution polynomial
-{0::0⋄1⊣8⌶⍨⍵}	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix
+{0::0⋄1⊣8⌶⍨⍵}	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
 X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Functtion	Dyadic Operator	Function Application	circlediaeresis on ⍥
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
@@ -1125,7 +1125,7 @@ X(6=⍳+3×⍸)Y	Test if Y is within range ( 1⌷X , 2⌷X )	Tacit	Dyadic Functi
 X(1=⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	≤Y< ≤X< tao totalarrayordering interval inrange?
 X(1=4 9⍸⍳+3×⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	≤Y≤ ≤X≤ tao totalarrayordering interval inrange?
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
-(|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber
+(|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber correct validate
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list
 M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten
@@ -1277,7 +1277,7 @@ Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv 
 Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic Function		Structural	segment chop split cut separate chunks
 (¯11○+)N	Swap real and imaginary	Tacit	Monadic Function		Mathematical	
 +∘-N	Negate real part ("real conjugate")	Tacit	Monadic Function		Mathematical	
-(¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	
+(¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate
 (0=⊢∘.|⍨∘⍳⌈/)Iv	Table of divisibility	Tacit	Monadic Function		Mathematical	matrix
 Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients Nv	Dfn	Dyadic Function		Mathematical	
 {⍵/⍨(⊢∨≠\)⍵=''''}Dv	Extract text (including quotes) in expression	Dfn	Monadic Function		Text	strings extract
@@ -1411,7 +1411,7 @@ X{⍺⌿⍨(≢⍵)<⍵⍳⍺}Y	Without (~) on major cells for any rank	Dfn	Dyad
 ' '∘(⊢(/⍨)1(⊢∨⌽)≠)Dv	Cyclic compression of successive blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous spaces multiple
 (⊃÷¯2÷2∘⊃-¯1 1×0.5*⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0
 ((⍳-∘⌈÷∘2)(⊣⊖⌽),⍨⍴∘⍳×⍨)Js	A magic square, odd side Js	Tacit	Monadic Function		Mathematical	
-Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y 	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank
+Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert
 Mv{⍵⍀⍨~(⍳(≢⍺)+≢⍵)∊(⌊⍺)+⍳≢⍺}Y	Adding an empty cell into Y at fractional positions Mv	Dfn	Monadic Function		Structural	expand insert
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast
@@ -1455,7 +1455,7 @@ X(∊⍨×⍳)Y	Changing index of an unfound element to zero (slow)	Tacit	Dyadic
 (¯1⌽+\∊⍨∘⍳+/)Jv	Changing lengths IV of subvectors to starting indicators.	Tacit	Monadic Function		Boolean/Logical	partitions
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix IM (starts,ends) to a connection matrix.	Tacit	Monadic Function		Mathematical	graph connectivity
 (¯2-/∘⍸,∘1)Bv	Changing starting indicators Bv of subvectors to lengths	Tacit	Monadic Function		Boolean/Logical	partitions
-{' '∧.=⍞:⍵ ⋄ ⍵}Y 	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback
+{' '∧.=⍞:⍵ ⋄ ⍵}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback
 Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid?
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose
 Bs(⊃⌽)Yv	Picking based on cyclic offset (as ⎕IO=0)	Tacit	Dyadic Function		Selection	Choosing choose
@@ -1463,7 +1463,7 @@ Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Ta
 Is(?⍴)Js	Choosing Is random elements of ⍳Js with replacement	Tacit	Dyadic Function		Mathematical	roll
 Is(⍋×∘⍋∘⍋)Y	Choosing grading direction (¯1,0,1) dynamically during execution	Tacit	Dyadic Function		Mathematical	sorting ascending descending grade
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify bucket bin group intervals
-Mv(*@1⊢∘⍟⌹0 1∘.*⍨⊣)Nv 	Coefficients of exponential (curve) fit of points (Mv,Nv)	Tacit	Dyadic Function		Mathematical	fitting model
+Mv(*@1⊢∘⍟⌹0 1∘.*⍨⊣)Nv	Coefficients of exponential (curve) fit of points (Mv,Nv)	Tacit	Dyadic Function		Mathematical	fitting model
 X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	
 (∧/2=⌿⊢)Ym	Comparison of successive rows	Tacit	Dyadic Function		Comparison	
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table
@@ -1493,7 +1493,7 @@ Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of s
 Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps
 Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical	
 X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals with cut-offs X	Tacit	Dyadic Function		Mathematical	bin group range bucket
-(0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor 
+(0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	
 Is↓Ym	Drop Is rows from matrix Ym	Primitive	Dyadic Function		Structural	
 Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next 1 in Av	Dfn	Dyadic Function		Selection	
@@ -1630,7 +1630,7 @@ Mv⌈.×Nv	Maximum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	gre
 ∘.⌈⍨∘⍳Js	Maximum table of 1…Js	Tacit	Monadic Function		Mathematical	
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything FinnAPL
 ⍎⌽⍕⌈*○≡⍬	Meaning of life (modern)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything new updated
-⍴⍕!⍋⎕D 	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything golf
+⍴⍕!⍋⎕D	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything golf
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	merge mesh alternate shuffle
 X(Av{⊣@(⍋⍺⍺)⍨⍺⍪⍵})Y	Merging X and Y under control of Av (0:cell from X, 1:cell from Y)	Dop	Dyadic Function	Monadic Operator	Structural	merge mesh shuffle
 Iv{(⊂⍋⍋⍺)⌷⊃⍪⌿⍵}Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Dfn	Dyadic Function		Structural	merge mesh shuffle
@@ -1657,7 +1657,7 @@ Xs+.=∘,Y	Number of occurrences of scalar Xs in array Y	Tacit	Dyadic Function		
 ≢Xm	Number of rows in matrix Xm	Primitive	Monadic Function		Array Properties	count tally
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount
-(Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y 	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	
+(Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which
 (~∧≠\)B	Places between pairs of ones	Tacit	Monadic Function		Boolean/Logical	1s
@@ -1813,3 +1813,7 @@ Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Taci
 Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit		Monadic Operator	Structural	
 M(⊢×∘~∊⍨)N	Zeroing elements of N that are found in M	Tacit	Dyadic Function		Sets	arein membersof 0ing
 (⌊=⊢)N	Test if N is integer	Tacit	Monadic Function		Mathematical	integer? whole number?
+(⍉≡+)Nm	Is Nm a Hermitian matrix?	Tacit	Monadic Function		Mathematical	Hermitian? self-adjoint? selfadjoint? Yᴴ Y† Aᴴ A†
+(⍉≡⌹)Nm	Is Nm an Orthogonal matrix?	Tacit	Monadic Function		Mathematical	Orthogonal?
+⍉∘+Nm	Conjugate Transpose	Tacit	Monadic Function		Mathematical	self-adjoint selfadjoin Yᴴ Y† Aᴴ A†
+(⌹≡⍉∘+)Nm	Is Nm a Unitary matrix?	Tacit	Monadic Function		Mathematical	Unitary?
