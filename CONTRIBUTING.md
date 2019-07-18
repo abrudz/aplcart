@@ -1,6 +1,6 @@
 # Contributing
 
-If something is missing or not right, please [submit an issue](https://github.com/abrudz/aplcart/issues/new).
+If something is missing or not right, please [submit an issue](https://github.com/abrudz/aplcart/issues/new/choose).
 
 You can also submit a pull request, especially against [table.tsv](table.tsv) — the really simple TSV file database: 
 
@@ -14,7 +14,7 @@ You can also submit a pull request, especially against [table.tsv](table.tsv) �
 
 ## Example entries from table.tsv
 
-|A<br><sup>SYNTAX</sup>|B<br><sup>DESCRIPTION</sup>|C<br><sup>CLASS</sup>|D<br><sup>TYPE</sup>|E<br><sup>GROUP</sup>|F<br><sup>CATEGORY</sup>|G<br><sup>KEYWORDS</sup>|
+|SYNTAX|DESCRIPTION|CLASS|TYPE|GROUP|CATEGORY|KEYWORDS|
 |------|-----------|-----|----|-----|---------|--------|
 | +Y   |Conjugate ('Identity' if Y not complex)|Primitive|Monadic|Function|Scalar|Function|Mathematical|plus complex|
 |(+⌿÷≢)N|Mean of N|Tacit|Monadic Function| |Mathematical|average arithmeticmean|
@@ -31,7 +31,8 @@ Note how arguments and operands are given short menmonic names, as follows:
 |NAME<br> |PLACEMENT<br><sup>relative to main subject</sub>|TYPE<br><sup>of array</sup>|
 | - | - | -|
 |X|left|any array|
-|Y|right|any array|
+|Y|right|any array (can be on the left in combination with Z)|
+|Z|right|any array (only used when X and Y are not enough)|
 |M|left|numeric array|
 |N|right|numeric array|
 |I|left|integer array|
