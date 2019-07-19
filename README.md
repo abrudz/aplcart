@@ -8,30 +8,33 @@ It is intended for both beginners and professionals, but knowledge of basic APL 
 
 **Note that APLcart is not intended for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes. Rather, APLcart is for finding out *how to do* things.**
 
+The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
+
 Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
 
-- Click [here](https://abrudz.github.io/aplcart/) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
-
-- Click [`×`](https://abrudz.github.io/aplcart/) in the top right corner to start a new query (access-key <kbd>X</kbd> — for _e**x**punge_)
-
-- Click [APLcart](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
-
-- Click [`◐`](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd> — _**W**hite_)
+- Click [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+- Click logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
+- Click [(?)](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
+- Click [(×)](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
+- Click [(¶)](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
+- Click [◐](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd> — for _**W**hite_) — not available in Internet Explorer
 
 Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
 ## URL API ("permalinks")
 
-As the query is modified, the browser address bar is updated too. Simply copy the current address to share the current query.
+After clicking [(¶)](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient.
+
+While Internet Explorer can copy the current query to the address bar, it cannot parse such links, and will just load the site without any pre-filled query.
 
 ### Manual construction
 
 After [aplcart.info](https://aplcart.info/) you can add `?` and the following options, separated by `&` if you want both:
 
-- [`w`](https://abrudz.github.io/aplcart?w) use **w**hite theme
+- [`w`](https://abrudz.github.io/aplcart?w) use **w**hite theme — always active in Internet Explorer
 - [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate the _Tell me about_ **q**uery field
 
-For example for a white interface looking for "find", use [aplcart.info?w&q=find](https://aplcart.info?w&q=find)
+For example, for a white interface looking for "find", use [aplcart.info?w&q=find](https://aplcart.info?w&q=find)
 
 ## Scope
 
@@ -70,9 +73,7 @@ Wrote a cool train? Found a clever dfn? [Submit it!](https://github.com/abrudz/a
 Missing something? Faulty content? [Report it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=bug&template=bug_report.md&title=)
 
 # APL?
-
 - <a href="https://www.dyalog.com/what-is-dyalog.htm" target="_blank">What is Dyalog APL?</a>
-
 - <a href="https://www.dyalog.com/mastering-dyalog-apl.htm" target="_blank"><em>Mastering Dyalog APL</em></a> by Bernard Legrand: a complete guide, beginning with a thorough introduction to the language and progressing to worked examples. Free to download, but can be bought printed.
 - <a href="https://tryapl.org/" target="_blank">TryAPL</a>: an online interactive environment that allows users to play with simple expressions. Includes tutorial mode in which various scenarios are explored.
 - <a href="http://tutorial.dyalog.com/" target="_blank">The APL tutor</a>: online system that takes a complete novice through terminology, conventions and functionality

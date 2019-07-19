@@ -1,28 +1,31 @@
 @font-face{font-family:'APL333';src:local('APL333'),url(apl333.ttf)}
 @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(apl385.ttf)}
+a,p{display:none}
 *{font-family:'APL333'!important;border:none!important;color:#333}
-td,input{color:#000!important}
+noscript{display:block;padding-top:calc(24vh - 1em)}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
 .w{filter:invert(0);background:#ddd}
 aside,a,p{position:absolute}
-aside{text-align:center;width:100%;top:calc(38vh - 1em);font-size:xx-large}
-noscript{display:block;padding-top:calc(24vh - 1em)}
-a,p{display:none}
-p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333}
-a{z-index:1;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+aside,a{text-align:center}
+aside{width:100%;top:calc(38vh - 1em);font-size:xx-large}
+label{margin-right:2em}
+a{z-index:1;width:1em;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover{color:#000}
-#a{letter-spacing:-.25ex;font-size:larger}
-#e,#w{font-size:small;border-radius:1em;width:1em;border:.25ex solid currentcolor!important}
-#e{left:2.5em;text-align:center;top:.25ex}
-#w,#x{right:0}
-#w{bottom:0;height:1em;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
-#x{padding:.25ex .5ex}
+#a{letter-spacing:-.25ex;font-size:133%}
+#e,#w,#x,#c{font-size:90%;border-radius:1em;border:.25ex solid currentcolor!important;}
+#e{left:2.25em}
+#e,#x,#c{top:.2ex;}
+#w,#c{right:0}
+#w{bottom:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
+#x{right:2.1em}
+#DataTables_Table_0_info{text-align:unset}
 .dataTables_scrollHeadInner{padding-left:0!important}
 .dataTables_filter{text-align:right!important}
-#DataTables_Table_0_info{text-align:unset}
+p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333}
 th{cursor:default!important}
+input,td{color:#000!important}
 input,td:first-child:not(.dataTables_empty){font-family:'APL385 Unicode'!important}
-input{width:calc(100vw - 14em)}
+input{width:calc(100vw - 16em);border-radius:0 1em 1em 0}
 input::-ms-clear,
 input::-ms-reveal,
 input::-webkit-search-decoration,
