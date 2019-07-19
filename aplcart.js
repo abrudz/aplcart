@@ -1,16 +1,20 @@
-function esc(s){return s.replace(/[<>&'"]/g,x=>ESC[x])};
-var ESC={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
-var table;
-function setTit(t){document.title=t?"APLcart: "+t:"APLcart - Find your way in APL"};
+function esc(s){return s.replace(/[<>&'"]/g,function(x){return E[x]})};
+var E={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
 function setUrl(q){history.replaceState({},document.title,window.location.pathname+(q?"?q="+encodeURIComponent(q):""))};
-$(document).ready(function(){
+$(function(){
   $.get("table.tsv",function(w){
-    table=(esc(w)).split(/\r?\n/g).slice(1).map(w=>w.split('\t')).filter(w=>w!="");
-    s=new URLSearchParams(window.location.search)
-    q=s.get("q");
-    setTit(q);
+    t=(esc(w)).split(/\r?\n/g).slice(1).map(function(w){return w.split('\t')}).filter(function(w){return w!=""});
+    if("undefined"===typeof(URLSearchParams)){
+      $("body").addClass("w");
+      $('#w').remove();
+      q="";
+    }else{
+      s=new URLSearchParams(window.location.search);
+      $("body").addClass(null!=s.get("w")?"w":"");
+      q=s.get("q");
+    };
     $('table').DataTable({
-      data:table,
+      data:t,
       paging:false,
       scrollY:"calc(100vh - 110px)",
       searchDelay:250,
@@ -19,13 +23,11 @@ $(document).ready(function(){
       initComplete:function(s,j){$('aside').remove();$('a,p').show();}
     });
     $(".dataTables_scrollBody").attr("accesskey","z");
-    $("tr>*").attr('tabindex', '-1');
+    $("tr>*").attr('tabindex','-1');
     $("label,input").prop('title',"What to search for (access-key: Q)");
     $("input").focus().attr({
       accesskey:"q",
-      oninput:'q=$("input").val();setTit(q);setUrl(q)',
       tabindex:"3"
     });
-    $("body").addClass(null!=s.get("w")?"w":"")
   });
 });
