@@ -869,7 +869,7 @@ cnos←file dfns.filefind string	Find 'string' ⍵ in component file ⍺	Dfn	Fun
 cmat←{space←⎕THIS} dfns.find string	Lines containing string(s) ⍵	Dfn	Function			name-clashproblem stringsearch nameclashproblem
 {name}←dfns.fix rep	Fix function/operator rep	Dfn	Function			fixfunction
 rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of "fork" syntax	Dop		Dyadic Operator		hook fork co-operator cooperator
-rslt←{larg} I ##._fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator		hook fork co-operator cooperator
+rslt←{larg} I _fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator		hook fork co-operator cooperator
 refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator		functionarray functionarray
 cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function			functionsdifference comparefunctions
 cvecs←dfns.fnrefs func	External refs from tradfn ⍵	Dfn	Function			functionreferences cross-reference crossreference
@@ -1862,3 +1862,5 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	format
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering
+#	Reference to the root namespace (in the workspace)	System	Constant		System	workspace top
+##	Reference the the parent namespace	System	Constant		System	workspace top
