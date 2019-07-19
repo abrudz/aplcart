@@ -3,13 +3,13 @@
 *{font-family:'APL333'!important;border:none!important;color:#333}
 td,input{color:#000!important}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
-body.w{filter:invert(0);background:#ddd}
+.w{filter:invert(0);background:#ddd}
 aside,a,p{position:absolute}
 aside{text-align:center;width:100%;top:calc(38vh - 1em);font-size:xx-large}
 noscript{display:block;padding-top:calc(24vh - 1em)}
 a,p{display:none}
 p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333}
-a{z-index:1;line-height:1em;color:unset;text-decoration:unset;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+a{z-index:1;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:larger}
 #e,#w{font-size:small;border-radius:1em;width:1em;border:.25ex solid currentcolor!important}
