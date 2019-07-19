@@ -398,7 +398,7 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 )VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6 vector
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9 0123456789
-⎕NULL	A reference to the null item	System	Constant		System Function	void emptycell .net nil
+⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil
 0::any error	Covers all errors (errors 1–999)				Error Message	try catch errorhandling trapping exception
 1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	size memory resources maxws ⎕wa
 2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	parser parsing
@@ -1079,9 +1079,9 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	1s 0
 <\B	All zeros except the first one	Tacit	Monadic Function		Boolean/Logical	1 0s zeroes
-(¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed valid? name? identifier?
+(¯1≠⎕NC)Dv	Whether Dv is a valid identifier	Tacit	Monadic Function		System	symbol name validity allowed valid? name? identifier? legal
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical	
-(⊢(/⍨⍨)1 0⍴⍨≢)Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Tacit	Monadic Function		Boolean/Logical	1s 0s zeroes naughts
+{⍵/1 0⍴⍨≢⍵}Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Dfn	Monadic Function		Boolean/Logical	1s 0s zeroes naughts
 -\∘⍳Js	Alternating series (1,-1,2,-2, …) of length Js	Tacit	Monadic Function		Mathematical	oeisA001057 oeisA1057
 -/N	Alternating sum of N	Tacit	Monadic Function		Mathematical	
 I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest N	Tacit	Dyadic Function		Mathematical	loan
@@ -1862,5 +1862,5 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	format
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering
-#	Reference to the root namespace (in the workspace)	System	Constant		System	workspace top
+#	Reference to the workspace root namespace	System	Constant		System	workspace top
 ##	Reference the the parent namespace	System	Constant		System	workspace top
