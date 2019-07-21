@@ -2,13 +2,15 @@
 @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(/apl385.ttf)}
 td:nth-child(n+3){display:none}
 *{font-family:'APL333';color:#333}
-input,td:first-child{font-family:'APL385 Unicode';font-size:medium;}
+input,td:first-child{font-family:'APL385 Unicode'}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
 .w{filter:invert(0);background:#ddd}
-div{height:calc(100vh - 12ex);overflow:auto;}
-table{background:#fff;width:100%}
+div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidden}
+table{width:100%;table-layout:fixed}
+td{padding:.5em;}
+td:first-child{word-wrap:break-word}
 footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.5em)}
-input{width:calc(100% - 13em);border:none;border-radius:0 1em 1em 0}
+input{width:calc(100% - 13em);border:none;border-radius:0 1em 1em 0;font-size:medium}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
@@ -23,4 +25,8 @@ input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{display:none;width:0;height:0;}
-@media(max-width:1365px){span{display:none}}
+@media(max-width:1320px){span{display:none}}
+@media(max-width:320px){
+  #e,#x,#c{display:none}
+  input{border-radius:0;width:calc(100vw - 9.5em)}
+}
