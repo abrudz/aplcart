@@ -1,21 +1,21 @@
 @font-face{font-family:'APL333';src:local('APL333'),url(/apl333.ttf)}
 @font-face{font-family:'APL385 Unicode';src:local('APL385 Unicode'),url(/apl385.ttf)}
-td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){display:none}
+td:nth-child(n+3){display:none}
 *{font-family:'APL333';color:#333}
-input,td:first-child{font-family:'APL385 Unicode'}
+input,td:first-child{font-family:'APL385 Unicode';font-size:medium;}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
 .w{filter:invert(0);background:#ddd}
 div{height:calc(100vh - 12ex);overflow:auto;}
 table{background:#fff;width:100%}
 footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.5em)}
-input{width:calc(100% - 16em);border:none;border-radius:0 1em 1em 0}
+input{width:calc(100% - 13em);border:none;border-radius:0 1em 1em 0}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#w{border-radius:1em;border:.25ex solid currentcolor}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
-#x{margin:0 1em 0 -1.5em}
+#x{margin:0 0.75em 0 -1.5em}
 p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333;margin:1ex 0}
 input::-ms-clear,
 input::-ms-reveal,
