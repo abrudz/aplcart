@@ -4,13 +4,16 @@ td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){
 *{font-family:'APL333';color:#333}
 input,td:first-child{font-family:'APL385 Unicode'}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
-div{height:calc(100vh - 11.5ex);overflow:auto;}
+.w{filter:invert(0);background:#ddd}
+div{height:calc(100vh - 15ex);overflow:auto;}
 table{background:#fff;width:100%}
+footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.5em)}
 input{width:calc(100% - 16em);border:none;border-radius:0 1em 1em 0}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
-#e,#x,#c{border-radius:1em;border:.25ex solid currentcolor}
+#e,#x,#c,#w{border-radius:1em;border:.25ex solid currentcolor}
+#w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
 #x{margin:0 1em 0 -1.5em}
 p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333}
