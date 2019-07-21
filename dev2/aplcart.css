@@ -5,7 +5,7 @@ td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){
 input,td:first-child{font-family:'APL385 Unicode'}
 body{filter:invert(.9);background:#333;overflow:hidden;position:relative}
 .w{filter:invert(0);background:#ddd}
-div{height:calc(100vh - 15ex);overflow:auto;}
+div{height:calc(100vh - 12ex);overflow:auto;}
 table{background:#fff;width:100%}
 footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.5em)}
 input{width:calc(100% - 16em);border:none;border-radius:0 1em 1em 0}
@@ -16,7 +16,7 @@ a:hover{color:#000}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
 #x{margin:0 1em 0 -1.5em}
-p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333}
+p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333;margin:1ex 0}
 input::-ms-clear,
 input::-ms-reveal,
 input::-webkit-search-decoration,
