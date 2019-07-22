@@ -1,9 +1,9 @@
 function E(s){return s.replace(/[<>&'"]/g,function(x){return {'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]})}
 function I(){
-  fetch("/table.tsv"
-  ).then(function(d){return d.text()}
-  ).then(function(d){t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'}
-  ).then(function(){
+  fetch("/table.tsv")
+    .then(function(d){return d.text()})
+    .then(function(d){
+      t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
       if("undefined"===typeof(URLSearchParams)){document.body.className='w';document.body.removeChild(w)}
       else{var s=new URLSearchParams(location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q")}
       Q()})}
