@@ -1,33 +1,17 @@
-function esc(s){return s.replace(/[<>&'"]/g,function(x){return E[x]})};
-var E={'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}
-function setUrl(q){history.replaceState({},document.title,window.location.pathname+(q?"?q="+encodeURIComponent(q):""))};
-$(function(){
-  $.get("table.tsv",function(w){
-    t=(esc(w)).split(/\r?\n/g).slice(1).map(function(w){return w.split('\t')}).filter(function(w){return w!=""});
-    if("undefined"===typeof(URLSearchParams)){
-      $("body").addClass("w");
-      $('#w').remove();
-      q="";
-    }else{
-      s=new URLSearchParams(window.location.search);
-      $("body").addClass(null!=s.get("w")?"w":"");
-      q=s.get("q");
-    };
-    $('table').DataTable({
-      data:t,
-      paging:false,
-      scrollY:"calc(100vh - 110px)",
-      searchDelay:250,
-      search:{search:(q?q:"")},
-      language:{search:"Tell me about:"},
-      initComplete:function(s,j){$('aside').remove();$('a,p').show();}
-    });
-    $(".dataTables_scrollBody").attr("accesskey","z");
-    $("tr>*").attr('tabindex','-1');
-    $("label,input").prop('title',"What to search for (access-key: Q)");
-    $("input").focus().attr({
-      accesskey:"q",
-      tabindex:"3"
-    });
-  });
-});
+C=_=>{var qv=q.value;history.replaceState({},document.title,location.pathname+(qv?"?q="+encodeURIComponent(qv):""));F()}
+E=s=>s.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]))
+F=_=>q.focus()
+I=_=>{
+  fetch("table.tsv")
+  .then(d=>d.text())
+  .then(d=>{t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
+  var s=new URLSearchParams(location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q");Q();F()})}
+Q=_=>{
+  var f,l=q.value.toLowerCase().split(' '),tr=t.rows,n=0
+  for(var i=0;i<tr.length;i++){
+    var s=tr[i].textContent.toLowerCase()
+    for(var j=0;j<l.length;j++){f=s.indexOf(l[j])>-1;if(!f)break}
+    n+=!(tr[i].hidden=!f)}
+  z.textContent="Showing "+n+" of "+tr.length}
+W=_=>{document.body.classList.toggle('w');F()}
+X=_=>{q.value="";Q();F()}

@@ -1,2 +1,0 @@
- html←TsvToHtml file
- html←⎕XML 0 'table' ''⍪,[1 2]1 'tr' ''⍪⍤1 2⊢2 'td',⍤1 0⊢1↓⎕CSV⍠'Separator'(⎕UCS 9)⍠'QuoteChar' ''⊢file
