@@ -5,11 +5,11 @@ function I(){
   ).then(function(d){t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'}
   ).then(function(){
       if("undefined"===typeof(URLSearchParams)){document.body.className='w';document.body.removeChild(w)}
-      else{var s=new URLSearchParams(window.location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q")}
+      else{var s=new URLSearchParams(location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q")}
       Q()})}
 function W(){document.body.classList.toggle('w');q.focus()}
 function X(){q.value="";Q();q.focus()}
-function C(){var qv=q.value;history.replaceState({},document.title,window.location.pathname+(qv?"?q="+encodeURIComponent(qv):""));q.focus()}
+function C(){var qv=q.value;history.replaceState({},document.title,location.pathname+(qv?"?q="+encodeURIComponent(qv):""));q.focus()}
 function Q(){
   var fw,ws=q.value.toLowerCase().split(' '),tr=t.rows,n=0
   for(var i=0;i<tr.length;i++){
