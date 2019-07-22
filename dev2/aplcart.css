@@ -11,7 +11,11 @@ td{padding:.5em;}
 td:first-child{word-wrap:break-word}
 footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.75em)}
 input{width:calc(100% - 13em);border:none;border-radius:0 1em 1em 0;font-size:medium}
-a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none}
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#w{border-radius:1em;border:.25ex solid currentcolor}
