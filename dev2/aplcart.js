@@ -11,7 +11,7 @@ function W(){document.body.classList.toggle('w');q.focus()}
 function X(){q.value="";Q();q.focus()}
 function C(){var qv=q.value;history.replaceState({},document.title,window.location.pathname+(qv?"?q="+encodeURIComponent(qv):""));q.focus()}
 function Q(){
-  var fw,ws=q.value.toLowerCase().split(' '),tr=t.getElementsByTagName("tr"),n=0
+  var fw,ws=q.value.toLowerCase().split(' '),tr=t.rows,n=0
   for(var i=0;i<tr.length;i++){
     var s=tr[i].textContent.toLowerCase()
     for(var j=0;j<ws.length;j++){fw=s.indexOf(ws[j])>-1;if(!fw)break}
