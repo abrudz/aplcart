@@ -43,13 +43,13 @@ A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation 
 A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq
 A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq
 0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()
-¯1∘○N	Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asin() arcussinus
-¯2∘○N	Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus
-¯3∘○N	Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atan() arcustangent
+¯1∘○N	Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asin() arcussinus sin⁻¹() sin^-1()
+¯2∘○N	Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus cos⁻¹() cos^-1()
+¯3∘○N	Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atan() arcustangent tan⁻¹() tan^-1()
 ¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()
-¯5∘○N	Hyperbolic Arcsinh N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area
-¯6∘○N	Hyperbolic Arccosh N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area
-¯7∘○N	Hyperbolic Arctanh N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atanh() arcustangent artanh() area
+¯5∘○N	Hyperbolic Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area sinh⁻¹() sinh^-1() 
+¯6∘○N	Hyperbolic Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area cosh⁻¹() cosh^-1()
+¯7∘○N	Hyperbolic Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atanh() arcustangent artanh() area tanh⁻¹() tanh^-1()
 ¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
 ¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
 ¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate
