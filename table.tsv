@@ -1061,8 +1061,8 @@ X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵�
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷
 {⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Boolean/Logical	truesat ⍸⍣¯1 inversion
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
-X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
-X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function			
+X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function		Composition	split-compose
+X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function		Composition	split-compose
 (⍳∘≢=(⍳⍨∪⍳⊢))Y	Nub sieve: mask for major cells to leave the distinct (∪Y)	Tacit	Monadic Function	Non-Scalar Function	Sets	unique Boolean indication ⍧
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape
 Iv⌷⍨∘⊂⍨Y	Select major cells Iv of Y	Tacit	Dyadic Function	Non-scalar function	Selection	rightshoeunderbar saneindexing ⊇
@@ -1668,7 +1668,7 @@ Mv⌈.×Nv	Maximum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	gre
 ∘.⌈⍨∘⍳Js	Maximum table of 1…Js	Tacit	Monadic Function		Mathematical	
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything FinnAPL
 ⍎⌽⍕⌈*○≡⍬	Meaning of life (modern)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything new updated
-⍴⍕!⍋⎕D	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything golf
+≢⍕!⍋⎕D	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question of Life, the Universe, and Everything golf
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	merge mesh alternate shuffle
 X(Av{⊣@(⍋⍺⍺)⍨⍺⍪⍵})Y	Merging X and Y under control of Av (0:cell from X, 1:cell from Y)	Dop	Dyadic Function	Monadic Operator	Structural	merge mesh shuffle
 Iv{(⊂⍋⍋⍺)⌷⊃⍪⌿⍵}Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Dfn	Dyadic Function		Structural	merge mesh shuffle
