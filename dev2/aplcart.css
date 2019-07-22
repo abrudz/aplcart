@@ -10,7 +10,7 @@ table{width:100%;table-layout:fixed}
 td{padding:.5em;}
 td:first-child{word-wrap:break-word}
 footer{margin-top:1ex;display:inline-block;width:calc(100% - 1.75em)}
-input{width:calc(100% - 13em);border:none;border-radius:0 1em 1em 0;font-size:medium}
+input{width:calc(100vw - 15em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
   -webkit-user-select:none;
   -moz-user-select:none;
@@ -21,16 +21,11 @@ a:hover{color:#000}
 #e,#x,#c,#w{border-radius:1em;border:.25ex solid currentcolor}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
-#x{margin:0 0.75em 0 -1.5em}
-p{top:1em;white-space:nowrap;overflow:hidden;width:100%;text-overflow:ellipsis;color:#333;margin:1ex 0}
-input::-ms-clear,
-input::-ms-reveal,
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration{display:none;width:0;height:0;}
+#x{margin:0 0.75em 0 -1.5em;back}
+p{top:1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#333;margin:1ex 0}
+::-ms-clear{display:none}
 @media(max-width:1320px){s{display:none}}
 @media(max-width:320px){
   #e,#x,#c{display:none}
-  input{border-radius:0;width:calc(100vw - 9.5em)}
+  input{border-radius:0;width:calc(100vw - 9.5em);padding-right:unset}
 }
