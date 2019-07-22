@@ -4,7 +4,7 @@ function I(){
     .then(function(d){return d.text()})
     .then(function(d){
       t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
-      if("undefined"===typeof(URLSearchParams)){document.body.className='w';document.body.removeChild(w)}
+      if("undefined"===typeof URLSearchParams){document.body.className='w';document.body.removeChild(w)}
       else{var s=new URLSearchParams(location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q")}
       Q()})}
 function W(){document.body.classList.toggle('w');q.focus()}
