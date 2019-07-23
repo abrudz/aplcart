@@ -399,63 +399,63 @@ X g⍨∘f⍨∘h Y	Split Compose: (f X) g (h Y)	Tacit	Dyadic Function		Function
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9 0123456789
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil
-0::any error	Covers all errors (errors 1–999)				Error Message	try catch errorhandling trapping exception
-1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	size memory resources maxws ⎕wa
-2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	parser parsing
-3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				Error Message	bounds limits overflow beyond dimensions length rank
-4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				Error Message	dimensions conformability
-5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				Error Message	conformability
-6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				Error Message	
-7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				Error Message	
-10::LIMIT ERROR	A system limit is exceeded				Error Message	
-11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				Error Message	
-12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				Error Message	
-16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				Error Message	
-18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				Error Message	
-19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				Error Message	
-20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				Error Message	
-21::FILE FULL	Operation would cause the file to exceed its file size limit				Error Message	
-22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				Error Message	
-23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				Error Message	correct validate
-24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				Error Message	
-25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	
-26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	
-28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				Error Message	oplock
-30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	⎕ftie fstie ⎕fcreate
-31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				Error Message	
-32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				Error Message	⎕fcreate ⎕ftie ⎕fstie ⎕frename
-34::FILE SYSTEM NO SPACE	There is insufficient disk space				Error Message	
-35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	
-38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				Error Message	
-52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				Error Message	dimensions
-53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				Error Message	
-54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	
-55::FIELD SIZE ERROR	Invalid field size for ⎕SM				Error Message	
-56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	
-57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	behavior
-58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	dimensions
-59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				Error Message	rank
-60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	
-61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				Error Message	
-62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				Error Message	list dimensions
-63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				Error Message	
-70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				Error Message	
-71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				Error Message	
-72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				Error Message	
-76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				Error Message	matrix
-84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	
-90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	
-92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	⎕avu unicode classic codepage characterset charset encoding sbcs list
-99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	
-1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	try catch errorhandling trapping exception
-1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	halt inspect breakpoint list
-1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	
-1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	
-1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	Error Message	end-of-file
-1005::EOF INTERRUPT	EOF when reading input from a file (when an input to APL is from a file)			Exception	Error Message	end-of-file
-1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	Error Message	character input stdin prompt
-1007::RESIZE	User resizes the ⎕SM window			Exception	Error Message	
-1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	Error Message	
+0::any error	Covers all errors (errors 1–999)				trap catch errno Error Message	try catch errorhandling trapping exception
+1::WS FULL	There is insufficient workspace in which to perform an operation				trap catch errno Error Message	size memory resources maxws ⎕wa
+2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				trap catch errno Error Message	parser parsing
+3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				trap catch errno Error Message	bounds limits overflow beyond dimensions length rank
+4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				trap catch errno Error Message	dimensions conformability
+5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				trap catch errno Error Message	conformability
+6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				trap catch errno Error Message	
+7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				trap catch errno Error Message	
+10::LIMIT ERROR	A system limit is exceeded				trap catch errno Error Message	
+11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				trap catch errno Error Message	
+12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				trap catch errno Error Message	
+16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				trap catch errno Error Message	
+18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				trap catch errno Error Message	
+19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				trap catch errno Error Message	
+20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				trap catch errno Error Message	
+21::FILE FULL	Operation would cause the file to exceed its file size limit				trap catch errno Error Message	
+22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				trap catch errno Error Message	
+23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				trap catch errno Error Message	correct validate
+24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				trap catch errno Error Message	
+25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				trap catch errno Error Message	
+26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				trap catch errno Error Message	
+28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				trap catch errno Error Message	oplock
+30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				trap catch errno Error Message	⎕ftie fstie ⎕fcreate
+31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				trap catch errno Error Message	
+32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				trap catch errno Error Message	⎕fcreate ⎕ftie ⎕fstie ⎕frename
+34::FILE SYSTEM NO SPACE	There is insufficient disk space				trap catch errno Error Message	
+35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				trap catch errno Error Message	
+38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				trap catch errno Error Message	
+52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				trap catch errno Error Message	dimensions
+53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				trap catch errno Error Message	
+54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				trap catch errno Error Message	
+55::FIELD SIZE ERROR	Invalid field size for ⎕SM				trap catch errno Error Message	
+56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				trap catch errno Error Message	
+57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				trap catch errno Error Message	behavior
+58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				trap catch errno Error Message	dimensions
+59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				trap catch errno Error Message	rank
+60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				trap catch errno Error Message	
+61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				trap catch errno Error Message	
+62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				trap catch errno Error Message	list dimensions
+63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				trap catch errno Error Message	
+70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				trap catch errno Error Message	
+71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				trap catch errno Error Message	
+72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				trap catch errno Error Message	
+76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				trap catch errno Error Message	matrix
+84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				trap catch errno Error Message	
+90::EXCEPTION	A Microsoft .NET object threw an exception				trap catch errno Error Message	
+92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				trap catch errno Error Message	⎕avu unicode classic codepage characterset charset encoding sbcs list
+99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				trap catch errno Error Message	
+1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	trap catch errno Error Message	try catch errorhandling trapping exception
+1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	trap catch errno Error Message	halt inspect breakpoint list
+1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	trap catch errno Error Message	
+1003::INTERRUPT	Execution stopped by strong interrupt			Exception	trap catch errno Error Message	
+1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	trap catch errno Error Message	end-of-file
+1005::EOF INTERRUPT	EOF when reading input from a file (when an input to APL is from a file)			Exception	trap catch errno Error Message	end-of-file
+1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	trap catch errno Error Message	character input stdin prompt
+1007::RESIZE	User resizes the ⎕SM window			Exception	trap catch errno Error Message	
+1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	trap catch errno Error Message	
 ]CALC.Factors	Determine the prime factors of the argument	Non-syntax	Ucmd	CALC	User command	User commands that relate to manipulation of data ]Factors
 ]CALC.FromHex	Convert a list of hexadecimal representations of integers to a numeric vector	Non-syntax	Ucmd	CALC	User command	User commands that relate to manipulation of data ]FromHex
 ]CALC.PivotTable	Create a pivot table from an appropriate matrix	Non-syntax	Ucmd	CALC	User command	User commands that relate to manipulation of data ]PivotTable
@@ -1862,5 +1862,83 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	format
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering
-#	Reference to the workspace root namespace	System	Constant		System	workspace top
-##	Reference the the parent namespace	System	Constant		System	workspace top
+#	Reference to the workspace root namespace	Constant			System	workspace top hashtag pound numbersign poundsign
+##	Reference the the parent namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor
+#⎕WG'APLVersion'	Report interpreter version	Constant			Expression	dyalogapl-version build exe system
+⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system IPv4
+⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell
+(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings regirstry entries
+{name}⎕WC'ActiveXContainer'	Represents the application hosting a Dyalog APL ActiveXControl	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'ActiveXControl'	Represents an ActiveX control written in Dyalog APL	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'Animation'	Displays simple animations from .AVI files	GUI Object			Information	WindowsForms WinForms Create new
+{name}⎕WC'Bitmap'	Defines a bitmap	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'BrowseBox'	Prompts user to browse for a folder or other resource.	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Button'	Selects an option	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'ButtonEdit'	Text input field with dropdown button	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Calendar'	Displays a month calendar control	GUI Object			Input & Selection	WindowsForms WinForms Create new copy paste insertfrom
+{name}⎕WC'Circle'	Draws a circle	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'Clipboard'	Provides access to Windows clipboard	GUI Object			System Objects	WindowsForms WinForms Create new
+{name}⎕WC'ColorButton'	Allows the user to select a colour	GUI Object			Input & Selection	WindowsForms WinForms Create new color
+{name}⎕WC'Combo'	Edit field with selectable list of choices	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'ComboEx'	Edit field with selectable list of choices (extended)	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'CoolBand'	Represents a band in a CoolBar	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'CoolBar'	A container for CoolBand objects	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Cursor'	Defines a cursor	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'DateTimePicker'	An editable date/time field with an optional drop-down Calendar	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Edit'	Text input field	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Ellipse'	Draws an ellipse	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'FileBox'	Prompts user to select a file	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Font'	Loads a font	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'Form'	Top-level Window	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Grid'	Displays a data matrix as a spreadsheet	GUI Object			Input & Selection	WindowsForms WinForms Create new table
+{name}⎕WC'Group'	A frame for grouping Buttons and other objects	GUI Object			Container Objects	WindowsForms WinForms Create new fieldset
+{name}⎕WC'HTMLRenderer'	Displays HTML content	GUI Object			Miscellaneous	WindowsForms WinForms Create new browser CEF chrome chromiumembeddedframework XHTML SVG show
+{name}⎕WC'Icon'	Defines an icon	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'Image'	Displays Bitmaps, Icons and Metafiles	GUI Object			Graphical Output	WindowsForms WinForms Create new picture
+{name}⎕WC'ImageList'	Defines a collection of bitmaps or icons	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'Label'	Displays static text	GUI Object			Information	WindowsForms WinForms Create new
+{name}⎕WC'List'	For selecting an item	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'ListView'	Displays a collection of items for selection	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Locator'	Graphical (positional) input device	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'MDIClient'	Container for MDI windows	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Marker'	Draws a series of polymarkers	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'Menu'	Pop-up menu	GUI Object			Menu	WindowsForms WinForms Create new popup
+{name}⎕WC'MenuBar'	Pull-down menu bar	GUI Object			Menu	WindowsForms WinForms Create new pulldown
+{name}⎕WC'MenuItem'	Selects an option or action	GUI Object			Menu	WindowsForms WinForms Create new
+{name}⎕WC'Metafile'	Loads a Windows Metafile	GUI Object			Resource	WindowsForms WinForms Create new
+{name}⎕WC'MsgBox'	Displays a message box	GUI Object			Information	WindowsForms WinForms Create new notification
+{name}⎕WC'NetClient'	Provides access to .NET Classes	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'NetControl'	Instantiates a .NET Control.	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'NetType'	Exports an APL namespace as a Net Class	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'OCXClass'	Provides access to OLE Custom Controls	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'OLEClient'	Provides access to OLE Automation objects	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'OLEServer'	Enables APL to act as an OLE Automation server	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'Poly'	Draws lines	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'Printer'	For hard-copy output	GUI Object			System Objects	WindowsForms WinForms Create new
+{name}⎕WC'ProgressBar'	Displays the progress of a lengthy operation	GUI Object			Information	WindowsForms WinForms Create new
+{name}⎕WC'PropertyPage'	Tabbed or paged container for other controls	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'PropertySheet'	Contains PropertyPages	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Rect'	Draws rectangles	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'RichEdit'	Text input with word-processing capabilities	GUI Object			Input & Selection	WindowsForms WinForms Create new editor
+{name}⎕WC'SM'	Specifies a window for ⎕SM (character mode interface)	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'Scroll'	Scroll bar	GUI Object			Action	WindowsForms WinForms Create new scrollbar
+{name}⎕WC'Separator'	Separator between items	GUI Object			Menu	WindowsForms WinForms Create new
+{name}⎕WC'Spinner'	Input field with spin buttons	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'Splitter'	Divides a container into panes	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Static'	A frame for drawing and clipping graphics	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'StatusBar'	Ribbon status bar	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'StatusField'	Displays status information	GUI Object			Information	WindowsForms WinForms Create new
+{name}⎕WC'SubForm'	Acts as an MDI window or a constrained Form	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'SysTrayItem'	An item that you can create in the Windows System Tray	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'TCPSocket'	Provides an interface to TCP/IP sockets	GUI Object			Miscellaneous	WindowsForms WinForms Create new
+{name}⎕WC'TabButton'	Selects a tabbed SubForm	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'TabControl'	Contains TabButtons (tabs)	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'Text'	Draws graphical text	GUI Object			Graphical Output	WindowsForms WinForms Create new
+{name}⎕WC'Timer'	Generates events at regular intervals	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'TipField'	Displays pop-up context sensitive help	GUI Object			Information	WindowsForms WinForms Create new
+{name}⎕WC'ToolBar'	Ribbon tool bar	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'ToolButton'	Performs an action or selects an option	GUI Object			Action	WindowsForms WinForms Create new
+{name}⎕WC'ToolControl'	Standard Windows tool control	GUI Object			Container Objects	WindowsForms WinForms Create new
+{name}⎕WC'TrackBar'	A slider control for analogue input/output	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'TreeView'	Displays a hierarchical collection of items	GUI Object			Input & Selection	WindowsForms WinForms Create new
+{name}⎕WC'UpDown'	Spin buttons	GUI Object			Action	WindowsForms WinForms Create new
