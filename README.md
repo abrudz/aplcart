@@ -49,6 +49,7 @@ To answer *how do I* questions, APLcart currently searches the following :
 - System constants, like `⎕A`
 - System operators, like `⎕R`
 - System variables, like `⎕IO`
+- GUI objects, like `HTMLRenderer`
 - I-beams, like `819⌶`
 - Errors numbers and messages, like `11::DOMAIN ERROR`
 - User commands, like `]Box`
