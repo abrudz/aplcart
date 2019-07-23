@@ -1867,7 +1867,7 @@ Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y
 #⎕WG'APLVersion'	Report interpreter version	Constant			Expression	dyalogapl-version build exe system
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system IPv4
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell
-(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings regirstry entries
+(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
 {name}⎕WC'ActiveXContainer'	Represents the application hosting a Dyalog APL ActiveXControl	GUI Object			Miscellaneous	WindowsForms WinForms Create new
 {name}⎕WC'ActiveXControl'	Represents an ActiveX control written in Dyalog APL	GUI Object			Miscellaneous	WindowsForms WinForms Create new
 {name}⎕WC'Animation'	Displays simple animations from .AVI files	GUI Object			Information	WindowsForms WinForms Create new

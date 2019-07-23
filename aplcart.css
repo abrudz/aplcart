@@ -3,7 +3,7 @@
 td:nth-child(n+3){display:none}
 *{font-family:P;color:#333;text-decoration:none}
 input,td:first-child{font-family:M}
-body{filter:invert(1);background:#333;overflow:hidden;position:relative;font-size:16px}
+body{filter:invert(.9);background:#333;overflow:hidden;position:relative;font-size:16px}
 .w{filter:invert(0);background:#ddd}
 tr:hover td{color:#000}
 div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidden}
