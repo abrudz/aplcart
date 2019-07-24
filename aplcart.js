@@ -2,8 +2,8 @@ C=_=>{var qv=q.value;history.replaceState({},document.title,location.pathname+(q
 E=s=>s.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]))
 F=_=>q.focus()
 I=_=>{
-  var s=new URLSearchParams(location.search);b.className=0==s.get("w")?"w":0==s.get("b")?"b":"";q.value=s.get("q");Q();F()
-  fetch("table.tsv").then(d=>d.text()).then(d=>{t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'})}
+  var s=new URLSearchParams(location.search);b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
+  fetch("table.tsv").then(d=>d.text()).then(d=>{t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>';F(Q(q.value=s.get("q")))})}
 Q=_=>{
   var f,l=q.value.toLowerCase().split(' '),tr=t.rows,n=0
   for(var i=0;i<tr.length;i++){
