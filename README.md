@@ -56,10 +56,11 @@ To answer *how do I* questions, APLcart currently searches the following :
 - User commands, like `]Box`
 - A selection of simple dfns, dops, and derived functions like `(0=|)`
 - All of dfns.dws, like `dfns.cal` (In APLcart, entries from here are prefixed `dfns.` . To use, insert `{(⍎⍵⎕NS⍬).⎕CY⍵}'dfns'` into your code, then call, for example, `dfns.cal`.)
-- Idioms from the APL2 idiom list, like `(+/|)` (fully updated to use modern APL)
 - Performance idioms from Dyalog's idiom list, like `{(+/∨\' '≠⌽⍵)↑¨↓⍵}`
-- Entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)` 
+- Idioms from the APL2 idiom list, like `(+/|)` (fully updated to use modern APL)
+- James A. Brown's favourite idioms (fully updated to use modern APL)
 - All idioms from the FinnAPL idiom list, like `(⊢⍳⌈/)` (fully updated to use modern APL)
+- Selected entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)` 
 - and other entries [submitted](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=) by users like you!
 
 ## Features wish list

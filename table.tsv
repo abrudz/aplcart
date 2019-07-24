@@ -110,7 +110,7 @@ Is?Js	Deal: Is random items from ⍳Js (without replacement)	Primitive	Dyadic Fu
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradeup deltastile upgrade pine concordetakingoff customalphabet case-insensitive caseinsensitive
 C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradedown delstile downgrade spine concordelanding customalphabet case-insensitive caseinsensitive
 ∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function		Sets	cup downshoe distinctitems uniqueelements nub eraseremoveduplicates
-X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	epsilon isin membership containedin has ϵ ε ∈ memberof
+X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	epsilon isin membership containedin has ϵ ε ∈ memberof elementof
 X⍷Y	Boolean indication of top left corner of occurrences of entire array X within Y	Primitive	Dyadic Function		Sets	findin epsilonunderbar search locate subarray sub-array sub-vector subvector subsequence sub-sequence sub-string substring sub-list sublist locating
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function		Sets	match equalunderbar identical? === equivalentto sameas
 X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function		Sets	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
@@ -277,7 +277,7 @@ M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Taci
 (0≤≡)Y	Does Y have Uniform Depth?	Tacit	Monadic Function		Array Properties	uniform? orthogonal? rectangular?
 (⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	scalar?
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	singleton? unit? sole? one?
-(⊃0⍴⊂)Y	Type (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	datatypeof 0s zeroes
+(⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷ datatypeof 0s zeroes spaces blanks
 -⌿N	Alternating Sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
@@ -301,8 +301,8 @@ M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
 (!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma() Γ
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖
 Xv(∊∧.∧∊⍨)Yv	Set Identity	Tacit	Monadic Function		Sets	setequivalence
-(⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	indexoflargest biggest greatest lexicographically lexically
-(⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	indexofsmallest least lexicographically lexically
+(⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	find locate positionof largest biggest greatest largest maximum lexicographically lexically locating
+(⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	find locate positionof smallest least minimum lexicographically lexically locating
 (⊢⍉⍨⍴=⍴)Y	Diagonal	Tacit	Monadic Function		Structural	majordiagonal
 (⌽⍉⍨⍴=⍴)Y	Anti-diagonal	Tacit	Monadic Function		Structural	minordiagonal
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	isempty? isvoid? isnull?
@@ -1058,7 +1058,6 @@ z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function			FastFourie
 X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Functtion	Dyadic Operator	Function Application	circlediaeresis on ⍥
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
-(⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function	Non-scalar function	Array Properties	prototype ∊ ⍷
 {⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function	Non-scalar Function	Boolean/Logical	truesat ⍸⍣¯1 inversion
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
 X f⍨∘g⍨∘h Y	Split compose: f between g X and h Y, that is, (g X) f (h Y)	Tacit	Dyadic Function		Composition	split-compose
@@ -1095,7 +1094,7 @@ Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assig
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ
 ((×/∘!-∘1)÷∘!¯1++/)N	Multivariate Beta Function	Tacit	Dyadic Function		Mathematical	B() Β() beta() Ꞵ
 (2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns 1s
-X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave
+X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave elementof ∉
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs 1
 (2>/,∘0)B	Boolean last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s
 X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1
@@ -1203,7 +1202,7 @@ Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic F
 Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier matrix with Mv control points	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model interpolation table
 (0⊥⍴)Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape
 ×/∘⍴Y	Number of elements in Y	Tacit	Monadic Function		Array Properties	items cells
-(×/1↓⍴)Y	Number of elements in a plane of rank-3 array Y	Tacit	Monadic Function		Array Properties	layersshape
+(×/1↓⍴)Y	Number of elements in major cells	Tacit	Monadic Function		Array Properties	shape
 (⊥⍨' '=⌽)Dv	Number of leading blanks	Tacit	Monadic Function		Text	prefixspaces
 I(!×∘!⊣)J	Number of permutations of (I,J) combinations	Tacit	Dyadic Function		Mathematical	combinatorics
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces
@@ -1590,8 +1589,6 @@ X{⍵⍴⍨(1⍴⍨-/≢∘⍴¨⍺⍵),⍴⍵}Y	Increasing rank of Y to rank of
 Is(⊢↑⍨⊢∘≢+|∘-∘≢)Y	Increasing the leading dimension of Y to multiple of IS	Tacit	Dyadic Function		Structural	1st axis divisibleby pad extend
 Iv(⊢↑⍨⊢∘⍴+|∘-∘⍴)Y	Increasing the dimensions of Y to multiples of Iv	Tacit	Dyadic Function		Structural	allaxes divisibleby pad extend
 I(1+|)J	Incrementing cyclic counter J with upper limit I	Tacit	Dyadic Function		Mathematical	
-(⊃⍒)Y	Index of (first) maximum call of Y	Tacit	Monadic Function		Index Generation	indexin indexof find locate positionof largest biggest greatest locating
-(⊃⍋)Y	Index of (first) minimum cell of Y	Tacit	Monadic Function		Index Generation	indexin indexof find locate positionof largest smallest least locating
 X(⊃∘⍸≠)Y	Index of first differing element in X and Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof unequal different 1st locating
 X(⌊/⍳)Y	Index of first occurrence of elements of Y in X	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof any 1st locating
 Y(1⍳⍨∘(⊃⍤¯1)⍷)Y	Index of first consecutive occurrence of major cells of X in Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof subarray sub-array locating
@@ -1942,3 +1939,26 @@ Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y
 {name}⎕WC'TrackBar'	A slider control for analogue input/output	GUI Object			Input & Selection	WindowsForms WinForms Create new
 {name}⎕WC'TreeView'	Displays a hierarchical collection of items	GUI Object			Input & Selection	WindowsForms WinForms Create new
 {name}⎕WC'UpDown'	Spin buttons	GUI Object			Action	WindowsForms WinForms Create new
+Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
+Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematical	sum
+Is(⊣⊥⊣|(+/⊥⍣¯1))J	Digital sum in base Is	Tacit	Dyadic Function		Mathematical	
+2∘(+⌿⊥⍣¯1)J	Hamming weight	Tacit	Monadic Function		Mathematical	population popcount sideways summation count() bitcount() cardinality() popcnt() bitsum() pcnt() ones 1s
+Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
+X(∧\=)Y	Indicate leading elements that are equal	Tacit	Dyadic Function		Comparison	mask show matching onleft
+X(∧\∘⌽=)Y	Indicate trailing elements that are equal	Tacit	Dyadic Function		Comparison	mask show matching onright
+X{+/∧\⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	count matching onleft
+X{+/∧\⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	count matching onright
+X(∧\≠)Y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Comparison	mask show different onleft
+X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Function		Comparison	mask show different onright
+X{+/∧\⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	count different onleft
+X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	count different onright
+(⊃⌽∘⍴)Y	Number of items in trailing axis	Tacit	Monadic Function		Array Properties	count length() cells len()
+(1↓⍴)Y	Dimensions of major cells	Tacit	Monadic Function		Array Properties	shape
+(¯1↓⍴)Y	Lengths of leading axes	Tacit	Monadic Function		Array Properties	shape
+(⍳∘≢⍴)Y	Indices of dimensions of Y	Tacit	Monadic Function		Array Properties	shape
+(⍳¯1↑⍴)Y	Indices of trailing axis of Y	Tacit	Monadic Function		Array Properties	shape
+(⌈/|)N	Largest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally biggest greatest largest maximum absolute value
+(⌊/|)N	Smallest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally least minimum absolute value
+(⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatest largest maximum absolute value
+(⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value
+M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian
