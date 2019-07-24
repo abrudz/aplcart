@@ -4,6 +4,8 @@
 
 It is intended for both beginners and professionals, but knowledge of basic APL syntax is a prerequisite.
 
+Note that Internet Explorer is not supported.
+
 ## Usage
 
 **Note that APLcart is not intended for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes. Rather, APLcart is for finding out *how to do* things.**
@@ -13,28 +15,27 @@ The site may take some seconds to load due to the information being processed by
 Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
 
 - Click [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
-- Click logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
-- Click [(?)](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
-- Click [(×)](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
-- Click [(¶)](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
-- Click [◐](https://abrudz.github.io/aplcart?w) in the bottom right corner to toggle white theme (access-key <kbd>W</kbd> — for _**W**hite_) — not available in Internet Explorer
+- Click the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
+- Click [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
+- Click [<kbd>×</kbd>](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
+- Click [<kbd>¶</kbd>](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
+- Click [<kbd>◐</kbd>](https://abrudz.github.io/aplcart?w) in the bottom right corner to cycle theme (access-keys <kbd>B for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W for **W**hite)
 
 Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
 ## URL API ("permalinks")
 
-After clicking [(¶)](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient.
-
-While Internet Explorer can copy the current query to the address bar, it cannot parse such links, and will just load the site without any pre-filled query.
+After clicking [<kbd>¶</kbd>](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient.
 
 ### Manual construction
 
-After [aplcart.info](https://aplcart.info/) you can add `?` and the following options, separated by `&` if you want both:
+After [aplcart.info](https://aplcart.info/) you can add `?` and the following options, separated by `&` if you want both a theme and a query:
 
-- [`w`](https://abrudz.github.io/aplcart?w) use **w**hite theme — always active in Internet Explorer
+- [<code>w</code>](https://abrudz.github.io/aplcart?w) select **w**hite theme
+- [<code>b</code>](https://abrudz.github.io/aplcart?b) select **b**lack theme
 - [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate the _Tell me about_ **q**uery field
 
-For example, for a white interface looking for "find", use [aplcart.info?w&q=find](https://aplcart.info?w&q=find)
+For example, for a white interface looking for "find", use [aplcart.info?w=2&q=find](https://aplcart.info?w=2&q=find)
 
 ## Scope
 

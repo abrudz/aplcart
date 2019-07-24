@@ -2,10 +2,8 @@ C=_=>{var qv=q.value;history.replaceState({},document.title,location.pathname+(q
 E=s=>s.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]))
 F=_=>q.focus()
 I=_=>{
-  fetch("table.tsv")
-  .then(d=>d.text())
-  .then(d=>{t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
-  var s=new URLSearchParams(location.search);document.body.className=null!=s.get("w")?"w":"";q.value=s.get("q");Q();F()})}
+  var s=new URLSearchParams(location.search);b.className=0==s.get("w")?"w":0==s.get("b")?"b":"";q.value=s.get("q");Q();F()
+  fetch("table.tsv").then(d=>d.text()).then(d=>{t.innerHTML=E(d).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'})}
 Q=_=>{
   var f,l=q.value.toLowerCase().split(' '),tr=t.rows,n=0
   for(var i=0;i<tr.length;i++){
@@ -13,5 +11,5 @@ Q=_=>{
     for(var j=0;j<l.length;j++){f=s.indexOf(l[j])>-1;if(!f)break}
     n+=!(tr[i].hidden=!f)}
   z.textContent="Showing "+n+" of "+tr.length}
-W=_=>{document.body.classList.toggle('w');F()}
-X=_=>{q.value="";Q();F()}
+W=x=>F(b.className=x?x:"wb"[1+"wb".indexOf(b.className[0])])
+X=_=>F(Q(q.value=""))
