@@ -19,7 +19,7 @@ Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd
 - Click [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
 - Click [<kbd>×</kbd>](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
 - Click [<kbd>¶</kbd>](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
-- Click [<kbd>◐</kbd>](https://abrudz.github.io/aplcart?w) in the bottom right corner to cycle theme (access-keys <kbd>B for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W for **W**hite)
+- Click [<kbd>◐</kbd>](https://abrudz.github.io/aplcart?w) in the bottom right corner to cycle theme (access-keys <kbd>B</kbd> for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W</kbd> for **W**hite)
 
 Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
@@ -35,7 +35,7 @@ After [aplcart.info](https://aplcart.info/) you can add `?` and the following op
 - [<code>b</code>](https://abrudz.github.io/aplcart?b) select **b**lack theme
 - [<code>q=<i>query</i></code>](https://abrudz.github.io/aplcart?q=query) prepopulate the _Tell me about_ **q**uery field
 
-For example, for a white interface looking for "find", use [aplcart.info?w=2&q=find](https://aplcart.info?w=2&q=find)
+For example, for a white interface looking for "find", use [aplcart.info?w&q=find](https://aplcart.info?w&q=find)
 
 ## Scope
 
@@ -60,6 +60,7 @@ To answer *how do I* questions, APLcart currently searches the following :
 - Idioms from the APL2 idiom list, like `(+/|)` (fully updated to use modern APL)
 - James A. Brown's favourite idioms (fully updated to use modern APL)
 - All idioms from the FinnAPL idiom list, like `(⊢⍳⌈/)` (fully updated to use modern APL)
+- The Yale/APL79 idiom list (fully updated to use modern APL)
 - Selected entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)` 
 - and other entries [submitted](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=) by users like you!
 
