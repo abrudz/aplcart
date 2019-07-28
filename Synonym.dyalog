@@ -22,6 +22,7 @@
      :EndIf
      table[i;7],←add
  :EndFor
+ table←Trim table
  :If ¯1≠report
      table{⍺ ⍵}←report
  :EndIf
