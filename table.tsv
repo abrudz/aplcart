@@ -97,8 +97,8 @@ I⌽[ax]Y	Rotate vectors along axis ax of Y	Primitive	Dyadic Function		Structura
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar rotating cyclically dimension
 Iv⍉Y	Reorder the axes of Y	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes reordering dimensions
 X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma combine juxtapose dimension
-X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension
-X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack X,[1]Y dimension
+X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise
+X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack X,[1]Y dimension column-wise columnwise
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Dyadic Function		Index Generation	iota integers ints countto sequence numbers range ɩ ι positions locations 1… 1... cells elements
 ⍸B	Indices of all 1s in B	Primitive	Monadic Function		Index Generation	wheretrues iotaunderbar locationsoftrues positions ones trues truths
 ⍋Y	Upgrade: Indices to reorder Y ascending	Primitive	Monadic Function		Index Generation	gradeup deltastile pine concordetakingoff increasing
@@ -145,14 +145,14 @@ Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function		Data
 X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where
 X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright
 X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright
-f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash insert solidus over rowwise reducing folding cells elements dimension
+f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash insert solidus over rowwise reducing folding cells elements dimension row-wise horizontally
 f/[ax]Y	Reduce: f between all items of Y on axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	slash insert solidus over reducing folding cells elements dimension
-f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st
-Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash insert select solidus over rowwise reducing folding cells elements dimension
-Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st
-f\Y	Scan: f between items of Y in progressively longer vectors along last axis	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension
-f⍀Y	Scan First: f between items of Y in progressively longer vectors along first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst filterfirst columnwise f\[1] scanning major cells elements dimension 1st
-f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension
+f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
+Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash insert select solidus over rowwise reducing folding cells elements dimension row-wise horizontally
+Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
+f\Y	Scan: f between items of Y in progressively longer vectors along last axis	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension row-wise horizontally
+f⍀Y	Scan First: f between items of Y in progressively longer vectors along first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst filterfirst columnwise f\[1] scanning major cells elements dimension 1st column-wise vertically
+f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension row-wise horizontally
 f¨Y	Each: f on items of Y	Primitive	Monadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
 X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
 X f⌸Y	Key: f on items of Y grouped by unique X values	Primitive	Dyadic Function	Monadic Operator	Sets	equalquad quadequal groups classify bins buckets major cells elements
@@ -262,8 +262,8 @@ M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³
 3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice
 2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	
 (~2∘|)J	J is Even	Tacit	Monadic Function		Mathematical	
-+⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	vertical summation enlargedsigma bigsigma capitalsigma ∑ Σ
-×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	vertical enlargedpi bigpi capitalpi ∏ Π
++⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
+×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
 Iv∘.×Jv	Multiplication Table fIv down and Jv across	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix
 Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix
 ∘.×⍨∘⍳Js	Multiplication Table for Numbers up to Js	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix integers
@@ -284,8 +284,8 @@ M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Taci
 (⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	unit? sole? one?
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods
--⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series
--/N	Row-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series
+-⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise
+-/N	Row-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series horizontally rowwise
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
@@ -816,7 +816,7 @@ prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function			Bayesformula
 {tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function			turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers
 cvec←{larg} (fn dfns.big) rarg	Arithmetic on large integers	Dop		Monadic Operator		infiniteprecision factorial
 p←s dfns.birthday n	Probability of same birthday	Dfn	Function			
-cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function			border box-drawingcharacters displayofarrays boxing boxdrawingcharacters
+cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function			border box-drawingcharacters displayofarrays boxing boxdrawingcharacters boxed enclosed
 indx←(fun dfns.bsearch) range	Binary search	Dop		Monadic Operator		binarysearch
 tvec←{larg} (fn dfns.bt) rarg	Balanced Ternary Arithmetic	Dop		Monadic Operator		balancedternary Setuncomputer TERNAC BurroughsB1700
 sref←dfns.cache ivec	Ref to space with initial cache	Dfn	Function			memoization persistentlocalvariable fibonaccinumber
@@ -843,10 +843,10 @@ tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex �
 tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Operator		derivedfunction combinator hook fork box-drawingcharacters boxdrawingcharacters
 cvec←dfns.dice ?6 6	Interpret a throw of dice	Dfn	Function			guard diversions
 rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function			definefunction sessioninput ⎕SE REPL
-cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function			displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters
-cmat←dfns.display array	Boxed display of array	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters
-cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters sub-array dimension
-cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters dimension
+cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function			displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters enclosed
+cmat←dfns.display array	Boxed display of array	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters enclosed
+cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters sub-array dimension enclosed
+cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters dimension enclosed
 d←L dfns.dist R	Levenshtein distance	Dfn	Function			stringcomparison fuzzy
 rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			compression spaces
 rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			compression spaces consecutive
@@ -1073,8 +1073,8 @@ Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv,
 I⌷⍨∘⊂⍨Y	Select major cells I of Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements
 ((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function		Sets	nub distinctitems uniqueelemenets matrix items elements
 (+/⍒∘|⊃¨⊂)Nv	Accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	floats precisionloss imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list
-Mv(f⍤0 1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes
-Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise list dimensions axes
+Mv(f⍤0 1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise
+Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise list dimensions axes horizontally
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table
@@ -1171,8 +1171,8 @@ X(1=4 9⍸⍳+3×⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X ]	Tacit	Dyadic 
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber correct validate 1st
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list
 M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber
-(⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten
-(⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten
+(⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten row-wise rowwise
+(⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten column-wise columnwise
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements
 Mv(⊢⌹0 1∘.*⍨⊣)Nv	Least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength perimeter coordinates vertices
@@ -1240,7 +1240,7 @@ Xm(,⍤1)Yv	Postfix vector to each row of matrix	Tacit	Dyadic Function		Structur
 Xv(,⍤1)Ym	Prefix vector to each row of matrix	Tacit	Dyadic Function		Structural	prepend rows list table
 Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Tacit	Dyadic Function		Mathematical	worth
 ((⊢~∘.×⍨)1↓⍳)Js	Prime numbers until Js	Tacit	Monadic Function		Mathematical	
-×/N	Product of N (row-wise)	Tacit	Monadic Function		Mathematical	horizontal enlargedpi bigpi capitalpi ∏ Π
+×/N	Product of N (row-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π horizontally rowwise
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input
 4○N	Triangle hypotenuse as function of side ratio	Primitive	Dyadic Function		Mathematical	Pythagorean trigonometry
 ¯4○N	Triangle side (≥1) as function of hypotenuse	Primitive	Dyadic Function		Mathematical	Pythagorean trigonometry
@@ -1287,8 +1287,8 @@ M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away f
 (≢÷⍨0.5*⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
 (≢÷⍨≢÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 Var(X) dispersion
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion
-(100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	%
-(100×⊢÷⍤1 0+/)N	Row-wise percentage per row	Tacit	Monadic Function		Mathematical	%
+(100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	% vertically columnwise
+(100×⊢÷⍤1 0+/)N	Row-wise percentage per row	Tacit	Monadic Function		Mathematical	% horizontally rowwise
 Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathematical	windowedsum cells items
 (?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element
@@ -1314,7 +1314,7 @@ Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Funct
 Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ←→ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins
 (+/∊)N	Sum of all atoms in N	Tacit	Monadic Function		Mathematical	sumall +⌿∊ grandtotal sumitems
 (+/|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs
-+/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	horizontal summation enlargedsigma bigsigma capitalsigma ∑ Σ sum()
++/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
 Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic Function		Structural	segment chop split separate chunks
 (¯11○+)N	Swap real and imaginary	Tacit	Monadic Function		Mathematical	
@@ -1331,10 +1331,10 @@ Is(+/÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingm
 2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	
 Xv(Cv{(⍵,⍨⊂⍺⍺)⍪⍺,⍺∘.(⍎⍺⍺)⍵})Yv	Formatted function table for function Cv with Xv down and Yv across	Dop	Dyadic Function	Monadic Operator	Function Application	
-Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table
-Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table
-Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table
-Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table
+Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise
+Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
+Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise
+Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
 Xv(,⍤0)Yv	Two-column matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	list table
 Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table
@@ -1429,7 +1429,7 @@ C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	
 {⍵⌷⍨⊂0~⍨⊢/⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	items elements
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression
-Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise sub-vectors sub-lists partitioned subvectors sublists
+Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise sub-vectors sub-lists partitioned subvectors sublists row-wise horizontally
 (¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	pairwiseratios vector
 (1=∘≢∪)Y	Are all major cells identical?	Tacit	Monadic Function		Sets	allsame? allequal? nounique? items elements
 (≢=∘≢∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	alldifferent? allunequal? noduplicates? items elements
@@ -1470,7 +1470,7 @@ Av{(⍺⌿⍵)∧1(⍵⌿⊖)⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on
 ∧/Bv	Boolean test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 Av{(⍺⌿⍵)≥1(⍵⌿⊖)⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on each subvector of Bv partitioned by Av (fast ∨⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector cell item
-∨/BA	Any? (row-wise)	Tacit	Monadic Function		Boolean/Logical	anyone? forany thereexists ∃
+∨/BA	Any? (row-wise)	Tacit	Monadic Function		Boolean/Logical	anyone? forany thereexists ∃ horizontally rowwise
 f{⍉⍺⍺⍉⍵}Y	Applying to columns action f defined on rows	Dop	Monadic Function	Monadic Operator	Function Application	
 M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Function		Mathematical	pythagorean
 0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Mathematical	Heron's formula
@@ -1578,8 +1578,8 @@ Iv Jv⍕⍨∘(∊,⍤0/)N	Formatting N with Jv decimals in fields of width Iv	T
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	
 (⍉0/⍪)Yv	Using sample row Yv to form an initially empty matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize
 ⍉∘⍪Yv	Forming first row of a matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize 1st
-{⊃{⍺@(⊂1 1)⌽⍉⍵}/'┌┐┘└',{⍺⍪⌽⍉⍵}/'─│─│',⊂⍵}Dm	Unicode frame a matrix	Dfn	Monadic Function		Text	border box
-{'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'─|─|',⊂⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border box
+{⊃{⍺@(⊂1 1)⌽⍉⍵}/'┌┐┘└',{⍺⍪⌽⍉⍵}/'─│─│',⊂⍵}Dm	Unicode frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed
+{'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'─|─|',⊂⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed
 {⊃⍞,⍵}Ds	Input of one character with default Ds	Dfn	Monadic Function		Text	prompt fallback
 (⊃{2⊃⎕VFI⍞},⊢)Ns	Giving a default value for input of scalar number	Tacit	Monadic Function		Mathematical	prompt fallback
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
@@ -1589,10 +1589,10 @@ Av{g[⍋(+\⍺)[g←⍋⍵]]}Y	Grade up (⍋) for sorting subarrays of Y indicat
 X(⍋⍳)Y	Grade up of Y according to key X	Tacit	Dyadic Function		Index Generation	custom sort order
 f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Graph of scalar function f at points Nv	Dop	Monadic Function	Monadic Operator	Mathematical	plot draw
 X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left argument X)	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled
-(1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location
+(1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise
 (÷¯1+∘.+⍨∘⍳)Is	Hilbert matrix of order Is	Tacit	Monadic Function		Mathematical	
 ({'⎕'/⍨¯1+≢⍵}⌸⊢,⍨∘⍳⌈/)Jv	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical	
-(⍴⍴1,0∘×)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal
+(⍴⍴1,{0}¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal
 Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalence
 M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction
 X{⍵⍴⍨(1⍴⍨-/≢∘⍴¨⍺⍵),⍴⍵}Y	Increasing rank of Y to rank of X	Dfn	Dyadic Function		Structural	
@@ -1614,9 +1614,9 @@ X⍳⍨∘⌽⍨Y	Last indices in X of major cells Y, counted from the rear	Taci
 Xv{⍺[1+⍵]}B	Indexing two-element vector Xv with Boolean values B	Dfn	Dyadic Function		Selection	
 (⍳⍨=⍳∘≢)XV	Indicator of first occurrence of each unique major cell of Y	Tacit	Monadic Function		Comparison	item element 1st
 X(⍸∊)Y	Indices of all occurrences of elements of X in Y	Tacit	Dyadic Function		Index Generation	locate find membersof positionsof locating cells items location
-X(⍳⍤1)Y	Indices of elements of X in corresponding rows of X (X[i;]⍳Y[i;])	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof rowwise row-wise locating cells items location
-(⍳∘' '⍤1)D	Indices of first blanks in rows of array D	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text
-((⊃∘⌽⍸)⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise
+X(⍳⍤1)Y	Indices of elements of X in corresponding rows of X (X[i;]⍳Y[i;])	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof rowwise row-wise locating cells items location horizontally
+(⍳∘' '⍤1)D	Indices of first blanks in rows of array D	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally
+((⊃∘⌽⍸)⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise horizontally
 (Xv@Js)Ym	Amend row Is of matrix Ym	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge replace update
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	major cells items
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	major cells items
@@ -1650,7 +1650,7 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 Is{0 1↓(2↑1+⍺)⍕⍵∘.+,10*⍺}Jv	Format with leading zeroes for non-negative Jv in fields of width Is	Dfn	Dyadic Function		Data Conversion	pad fill align zeros 0s tostringify falses falsehoods
 ((¯1↓⊢,⍨1↑0∘⍴)⍤1)Y	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items
 ¯1∘⌽Y	Leftmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items
-Xm↑⍨∘≢Ym	Vertically lengthening matrix Xm to be compatible (for ,) with Ym	Tacit	Monadic Function		Structural	compatibility sameheight adjust
+Xm↑⍨∘≢Ym	Vertically lengthening matrix Xm to be compatible (for ,) with Ym	Tacit	Monadic Function		Structural	compatibility sameheight adjust column-wise columnwise
 (0~⍨¯1-2-/∘⍸1,1,⍨~)Bv	Lengths of groups of ones in Bv	Tacit	Monadic Function		Boolean/Logical	runs 1s trues truths
 (¯2-/∘⍸1,1,⍨2≠/⊢)Yv	Lengths of subvectors of Yv having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
 I(X{(⊂⍺⌊1+≢⍵)⌷⍵⍪⍺⍺})Y	Giving a default value X for indices beyond end of Y	Dop	Dyadic Function	Monadic Operator	Selection	fallback indexing
@@ -1718,8 +1718,8 @@ X{⍺(I⍨∊I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive member o
 X{⍺⌷⍨⊂(⍳≢⍺)~⍺(I⍨⍳I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	
-Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis
-{⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding
+Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis row-wise horizontally
+{⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally
 {⍵/⍨∨⌿' '≠⍵}Dm	Removing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove
 {⍵⌿⍨∨/' '≠⍵}Dm	Removing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove
 Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot
@@ -1780,7 +1780,7 @@ M(≤∘|×⊢)N	Rounding to zero values of N within M of zero	Tacit	Dyadic Func
 Xv{⍵⌿⍨⍺∧.=⍨⍵↑[2]⍨≢⍺}Ym	Rows of matrix Ym starting with Xv	Dfn	Dyadic Function		Selection	
 X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an element in X	Dfn	Dyadic Function		Selection	cell item
 Av{≠\⍵≠⍺\2≠/0,⍺/≠\¯1↓0,⍵}B	Running parity (≠\) over subvectors of B indicated by Av	Dfn	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists
-f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning
+f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally
 A/Y	Selecting elements of Y satisfying condition A	Primitive	Dyadic Function		Selection	compress filter cells items
 A!N	Selecting elements satisfying condition A, others to 1	Primitive	Dyadic Function		Boolean/Logical	one cells items
 A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Function		Boolean/Logical	zero cells items
@@ -1912,7 +1912,7 @@ Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y
 {name}⎕WC'MenuBar'	Pull-down menu bar	GUI Object			Menu	WindowsForms WinForms Create new pulldown
 {name}⎕WC'MenuItem'	Selects an option or action	GUI Object			Menu	WindowsForms WinForms Create new
 {name}⎕WC'Metafile'	Loads a Windows Metafile	GUI Object			Resource	WindowsForms WinForms Create new
-{name}⎕WC'MsgBox'	Displays a message box	GUI Object			Information	WindowsForms WinForms Create new notification
+{name}⎕WC'MsgBox'	Displays a message box	GUI Object			Information	WindowsForms WinForms Create new notification boxed enclosed
 {name}⎕WC'NetClient'	Provides access to .NET Classes	GUI Object			Miscellaneous	WindowsForms WinForms Create new
 {name}⎕WC'NetControl'	Instantiates a .NET Control.	GUI Object			Miscellaneous	WindowsForms WinForms Create new
 {name}⎕WC'NetType'	Exports an APL namespace as a Net Class	GUI Object			Miscellaneous	WindowsForms WinForms Create new
@@ -1968,8 +1968,8 @@ X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dy
 (⍳¯1↑⍴)Y	Indices of trailing axis of Y	Tacit	Monadic Function		Array Properties	shape dimension
 (⌈/|)N	Largest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally biggest greatest maximum absolute value
 (⌊/|)N	Smallest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally least minimum absolute value
-(⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatest maximum absolute value
-(⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value
+(⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatest maximum absolute value vertically row-wise rowwise
+(⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise
 M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian
 ⍸Bm	List of arcs from adjacency matrix Bm	Primitive	Monadic Function		Mathematical	connections table directed graph
 Is{1@⍵⊢⍺ ⍺⍴0}Jv	Adjacency matrix of size Is from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph
@@ -2058,4 +2058,7 @@ Xm,Yv	Append elements of vector to respective columns of matrix	Primitive	Dyadic
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host
 {(⎕NEW⊂'Clipboard').Text←⍵}D	Copy to Windows clipboard	Dfn	Monadic Function		System	cut put into
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents
-,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector last dimensions axes axis
+,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells
+(⍉∘⍪⍤1)Y	Increment rank by one before rows	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis
+(↑∘,∘⊂⍤¯1)Y	Increment rank by one before major cells	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis items elements
+⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed
