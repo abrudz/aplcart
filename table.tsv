@@ -1123,7 +1123,7 @@ X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets
 1∘/Y	Make vector if scalar	Tacit	Monadic Function		Array Properties	minimumrank1 makenonscalar list
 A(⊢×¯1*⊣)N	Change sign of N on condition A	Tacit	Monadic Function		Mathematical	conditionalnegation
 X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	chipmunk
-Ms(⊢⌷⍨∘⊂×∘⍋)A	Sort A according to Ms (1: ascending, 0: unordered, ¯1: descending)	Tacit	Monadic Function		Mathematical	sorting reordering ordering
+Ms{⍵⌷⍨⊂⍋⍋⍺×⍋⍵}A	Sort A according to Ms (1: ascending, 0: unordered, ¯1: descending)	Tacit	Monadic Function		Mathematical	sorting reordering ordering
 (⊢!⍨0,⍳)Js	Coefficients of the binomial	Tacit	Monadic Function		Mathematical	
 (+/∧\)B	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths
 (↑'⎕'⍴¨⍨⌊)N	Histogram	Tacit	Monadic Function		Structural	chart
@@ -1147,7 +1147,8 @@ Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Fun
 (≠\⍣¯1)B	Convert binary to reflected Gray code	Tacit	Monadic Function		Boolean/Logical	
 ≠\B	Convert reflected Gray code to binary	Tacit	Monadic Function		Boolean/Logical	
 (÷⍳∘.+¯1+⍳)Js	Hilbert matrix of order Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	table sorting reordering ordering
-(,⍨⍴1,⍴∘0)Js	Identity matrix: Js by Js	Tacit	Monadic Function		Mathematical	unitmatrix
+(,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix
+(,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal
 (⍴⍨0∘,)Js	Initialise a matrix with Js columns and no rows	Tacit	Monadic Function		Structural	table
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
 (××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp
@@ -1593,6 +1594,7 @@ X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left
 (÷¯1+∘.+⍨∘⍳)Is	Hilbert matrix of order Is	Tacit	Monadic Function		Mathematical	
 ({'⎕'/⍨¯1+≢⍵}⌸⊢,⍨∘⍳⌈/)Jv	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical	
 (⍴⍴1,{0}¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal
+(⍴⍴0,{1}¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal
 Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalence
 M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction
 X{⍵⍴⍨(1⍴⍨-/≢∘⍴¨⍺⍵),⍴⍵}Y	Increasing rank of Y to rank of X	Dfn	Dyadic Function		Structural	
@@ -2062,3 +2064,7 @@ Xm,Yv	Append elements of vector to respective columns of matrix	Primitive	Dyadic
 (⍉∘⍪⍤1)Y	Increment rank by one before rows	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis
 (↑∘,∘⊂⍤¯1)Y	Increment rank by one before major cells	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis items elements
 ⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed
+((⊂∘⍋⌷⊢)⍤¯1)Y	Sort major cells ascending	Tacit	Monadic Function		Mathematical	elements cells items sort() up increasing sorting reordering ordering
+((⊂∘⍒⌷⊢)⍤¯1)Y	Sort major cells descending	Tacit	Monadic Function		Mathematical	elements cells items sort() down decreasing sorting reordering ordering
+Is(⊢⌷⍨∘⊂∘⍋⌷⍤1)Y	Sort Y ascending according to column Is	Tacit	Dyadic Function		Mathematical	sort() up increasing sorting reordering ordering bycolumn
+Is(⊢⌷⍨∘⊂∘⍒⌷⍤1)Y	Sort Y descending according to column Is	Tacit	Dyadic Function		Mathematical	sort() down decreasing sorting reordering ordering bycolumn
