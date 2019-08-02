@@ -87,8 +87,8 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ,[ax]Y	Ravel with Axes: combine axes	Primitive	Monadic Function		Structural	decreaserank reducerank comma removeaxes removeaxis dimensions
 ,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flattening flatten() raze razing list
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells
-⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile mirroring reversing dimension
-⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile mirroring reversing dimension
+⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension
+⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension
 ⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing ⌽[1] dimension
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function		Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ reordering ordering reversing dimensions
 Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould dim() axis
@@ -255,8 +255,8 @@ Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		St
 ×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2
 (*∘3)N	Cube	Tacit	Monadic Function		Mathematical	³ ^3
 (*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt ²√ ^0.5 ^.5
-M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³√
-(*∘÷∘3)N	Cube Root	Tacit	Monadic Function		Mathematical	squareroot cbrt ³√ ^0.333 ^.333 ^(1/3)
+M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³√ ∛ ∜
+(*∘÷∘3)N	Cube Root	Tacit	Monadic Function		Mathematical	squareroot cbrt ³√ ∛ ^0.333 ^.333 ^(1/3)
 +⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice
 (÷∘2)N	Halve: N÷2	Tacit	Monadic Function		Mathematical	halfof
 3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice
@@ -274,9 +274,10 @@ Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathe
 (~1∘∊)B	Not Any	Tacit	Monadic Function		Boolean/Logical	none notany
 (⍳≢)Y	Indices of Major Cells of Y	Tacit	Monadic Function		Index Generation	enumerate number count items elements
 (,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof
-?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffle randompermutation
+?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation
+?⍨∘≢Y	Random Permutation vector for Y	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation randomise randomize
 M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply
-(1≥∘|≡)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
+(⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
 (0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	simple?
 (2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
 (0>≡)Y	Does Y have Non-Uniform Depth?	Tacit	Monadic Function		Array Properties	ragged? nonuniform? nonorthogonal? nonrectangular?
@@ -293,7 +294,7 @@ Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
 (⍋⍋)Y	Ascending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	rising up
 (⍋⍒)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down
-((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil
+((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers
 (2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	isprime primality
 I(0=|)J	I divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
 I(0≠|)J	I does not divide J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∤ dividing
@@ -1075,7 +1076,6 @@ Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table
 (⍳0⊥⍴)Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
-(∪⍳∨⊢)Js	All divisors of Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	factorisation factorization
 ∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	0 trues truths 1st
 ≤\B	All ones after the first zero	Tacit	Monadic Function		Boolean/Logical	0 trues truths 1st
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	0 trues truths 1st
@@ -1861,7 +1861,7 @@ Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y
 #	Reference to the workspace root namespace	Constant			System	top hashtag numbersign poundsign
 ##	Reference the the parent namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor
 #⎕WG'APLVersion'	Report interpreter version	Constant			Expression	dyalogapl-version build exe system
-⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system IPv4 1st
+⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
 {name}⎕WC'ActiveXContainer'	Represents the application hosting a Dyalog APL ActiveXControl	GUI Object			Miscellaneous	WindowsForms WinForms Create new
@@ -2004,9 +2004,9 @@ Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	duplicate res
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements
 +∘÷/N	Continued fraction with terms N	Tacit	Monadic Function		Mathematical	series sequence
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence
-(¯1+⍳)Is	First Is integers	Tacit	Monadic Function		Mathematical	whole numbers natural 1st
-(2×¯1+⍳)Is	First Is even integers	Tacit	Monadic Function		Mathematical	numbers 1st
-(¯1+2×⍳)Is	First Is odd integers	Tacit	Monadic Function		Mathematical	numbers 1st
+(¯1+⍳)Js	First Js integers	Tacit	Monadic Function		Mathematical	whole numbers natural 1st
+(2×¯1+⍳)Js	First Js even integers	Tacit	Monadic Function		Mathematical	numbers 1st
+(¯1+2×⍳)Js	First Js odd integers	Tacit	Monadic Function		Mathematical	numbers 1st
 X f{⊃⍸⍺ ⍺⍺ ⍵}Y	Index of first element where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st
 X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st
 X f{⊃⌽⍸⍺ ⍺⍺ ⍵}Y	Index of last element where Xv f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item
@@ -2058,3 +2058,29 @@ Is(⊢⌷⍨∘⊂∘⍒⌷⍤1)Y	Sort Y descending according to column Is	Tacit
 (⊢⍳⍨⌷⍨∘⊂∘⍒⍨)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling do
 (⊢-⌊/)N	Normalise y so that minimum item is 0	Tacit	Monadic Function		Mathematical	normalize zero smallest least cell element
 Ms(⊢×÷∘(⌈/))N	Scale N so the maximum elemenent is Ms	Tacit	Dyadic Function		Mathematical	clamp rescale adjust
+Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated
+⍉∘⌽Ym	Rotate 90° counter-clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn counterclockwise
+⌽∘⍉Ym	Rotate 90° clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn
+⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn
+⌽∘⍉∘⌽Ym	Reflect counter-diagonally	Tacit	Monadic Function		Structural	mirroring reflecting reflection counterdiagonally
+⌽Ym	Reflect vertically	Tacit	Monadic Function		Structural	mirroring reflecting reflection right-left rightleft leftright left-right
+⊖Ym	Reflect horizontally	Tacit	Monadic Function		Structural	mirroring reflecting reflection up-down updown down-up downup
+⍉Ym	Reflect diagonally	Tacit	Monadic Function		Structural	mirroring reflecting reflection
+(⌽⌽,0,-)∘⍳Js	Integers from -Js to Js	Tacit	Monadic Function		Mathematical	whole numbers natural symmetric negative positive
+(+⍨=1⊥∘∪⊢∨⍳)Js	Is Js a perfect number?	Tacit	Monadic Function		Mathematical	test perfect?
+(+⍨>1⊥∘∪⊢∨⍳)Js	Is Js a deficient number?	Tacit	Monadic Function		Mathematical	test deficient?
+(+⍨<1⊥∘∪⊢∨⍳)Js	Is Js an abundant number?	Tacit	Monadic Function		Mathematical	test abundant?
+(+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	test quasiperfect? quasi-perfect?
+Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	test amicable?
+Is(∧/+=¯1+∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js betrothed numbers?	Tacit	Dyadic Function		Mathematical	test betrothed? quasiamicable? quasi-amicable?
+(+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	test almostperfect? almost-perfect?
+(+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum
+(∪⊢∨¯1↓⍳)Js	Proper divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization
+Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical	
+(∪⊢∨⍳)Js	All divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization
+(≢∘∪⊢∨⍳)Js	Number-of-divisors of Js	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5
+(+/∘∪⊢∨⍳)Js	Sum of positive divisors of Js	Tacit	Monadic Function		Mathematical	sigma σ(n)
+M(+⌿⊣∘.*⍨∘∪⊢∨⊢∘⍳)Js	Sum of M'th powers of positive divisors of Js	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
+(⍸1=⊢∨⍳)Js	Totatives of Js	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)
+(+/1=⊢∨⍳)Js	Euler's totient function	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)
+I(1=∨)J	Are I and J co-prime?	Tacit	Dyadic Function		Mathematical	coprime? relatively mutually
