@@ -66,12 +66,12 @@ A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger
 9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()
 10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude
 11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()
-12∘○N	Phase N	Tacit	Monadic Function		Circular/Trigonometric	argument arc()
+12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide table inversion
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide leastsquares table pseudoinversion
 Mm⌹Nm	Multiplying Mm with inversed Nm	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide inversion
-M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix
-M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathematical	frombase decoding uptack pack frommixedradix fromradix basevalue
+M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix conversion convert
+M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathematical	frombase decoding uptack pack frommixedradix fromradix basevalue conversion convert
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function		Array Properties	dimensions rho ρ ϱ rank axes
 ≡Y	Depth: Maximum level of nesting in Y (negative if uneven)	Primitive	Monadic Function		Array Properties	equalunderbar
 ≢Y	Tally: Number of items in leading axis	Primitive	Monadic Function		Array Properties	equalunderbarslash unequalunderbar count length() cells len() major cells elements dimension
@@ -277,6 +277,7 @@ Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathe
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation
 ?⍨∘≢Y	Random Permutation vector for Y	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation randomise randomize
 M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply
+M-.×N	Alternating Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
 (0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	simple?
 (2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
@@ -304,7 +305,7 @@ Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	superset? c
 (180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Mathematical	
 (2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base2 base-2
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	base10 decimal base-10
-M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase
+M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase convert conversion
 1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals
 (!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma() Γ
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖
@@ -1133,8 +1134,6 @@ Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dy
 Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
 (×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurances statistics items elements
-(10 12∘.○⊢)N	From complex to magnitude and radians	Tacit	Monadic Function		Data Conversion	polar
-M(⊣×¯12○⊢)N	From magnitude M and radians N to complex	Tacit	Dyadic Function		Data Conversion	polar
 Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
 ↑∘,∘⊂Y	Increment rank by one before first dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector dimensions axes axis 1st
 (,⍤0)Y	Increment rank by one after last dimension	Tacit	Monadic Function		Structural	addtrailingaxis GhostBuster columnmatrixfromvector dimensions axes axis
@@ -1146,7 +1145,7 @@ Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Fun
 (⍴⍨0∘,)Js	Initialise a matrix with Js columns and no rows	Tacit	Monadic Function		Structural	table
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
 (××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp
-0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split
+0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals
 (+\⍣¯1)N	Difference of adjacent pairs with seed value	Tacit	Monadic Function		Mathematical	differences deltas changes steps
 X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
@@ -1165,7 +1164,6 @@ X(1=4 9⍸⍳+3×⍸)Y	Test if Y is within range [ 1⌷X , 2⌷X ]	Tacit	Dyadic 
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber correct validate 1st
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list
-M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten row-wise rowwise
 (⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten column-wise columnwise
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements
@@ -1299,7 +1297,15 @@ Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Functi
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering
 ((⊂∘⍋⌷⊢)⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering
 {⍵⌷⍨⊂⍋{(819⌶⍵)⍵}¨⍵}Y	Sorting Y in case-insensitive alphabetical order	Dfn	Monadic Function		Text	up increasing caseinsensitive reordering ordering
-(9 11○⊂)N	Split complex array into real array and imaginary array	Tacit	Monadic Function		Mathematical	re() im()
+(9 11∘.○⊢)N	From complex to real and imaginary (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values
+(9 11○⊂)N	Split complex array into two-element vector of real array and imaginary array	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values list tuple
+M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine
+(⊣+¯11○⊢)⌿N	Join real and imaginary major cells by removing leading axis	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine reduce
+(10 12∘.○⊢)N	From complex to magnitude and radians (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts angle absolute values
+(10 12○⊂)N	Split complex array into two-element vector of magnitude array and angle array	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts angle absolute values list tuple
+(⊣×¯12○⊢)⌿N	Join magnitude and radians major cells by removing leading axis	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine reduce
+M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine
+] * 10&^@-@[ < |	
 ×∘|⍨N	Square without changing sign	Tacit	Monadic Function		Mathematical	
 Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spikes	Tacit	Dyadic Function		Boolean/Logical	signal on/off
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical	
@@ -1466,7 +1472,7 @@ Av{(⍺⌿⍵)≥1(⍵⌿⊖)⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on 
 ∨/BA	Any? (row-wise)	Tacit	Monadic Function		Boolean/Logical	anyone? forany thereexists ∃ horizontally rowwise
 f{⍉⍺⍺⍉⍵}Y	Applying to columns action f defined on rows	Dop	Monadic Function	Monadic Operator	Function Application	
 M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Function		Mathematical	pythagorean
-0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Mathematical	Heron's formula
+0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Mathematical	Heron's formula herons
 (+/∘,÷(×/⍴))N	Arithmetic mean value of all elements, also for an empty array	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells items
 17×2-645=⎕FR	Arithmetic precision of the system (in decimals)	Constant			Mathematical	comparison tolerance fuzz IEEE754 floatingpoint
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill
@@ -1525,7 +1531,11 @@ Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic F
 Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZZZ:1 3 2)	Tacit	Dyadic Function		Data Conversion	unpack
 {(∨/a)⌿(⍴⍵)⍴(,a)\(,a←∧\('⍝'≠⍵)∨≠\⍵='''')/,⍵}Dm	Decommenting a matrix representation of a function (⎕CR)	Dfn	Monadic Function		Text	uncomment strip comments remove table
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
-¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivate of polynomial Nv	Tacit	Monadic Function		Mathematical	firstderivative
+Mv{+⌿↑⍺⍵}Nv	Polynomial sum	Dfn	Dyadic Function		Mahtematical	additionof polynomials
+Mv{-⌿↑⍺⍵}Nv	Polynomial difference	Dfn	Dyadic Function		Mahtematical	subtractionof polynomials
+Mv(+⌿1 0⌽0,∘.×)Nv	Polynomial product	Tacit	Dyadic Function		Mahtematical	multiplicationof polynomials
+¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate
+Ms{⍺←0 ⋄ ⍺,⍵÷⍳≢⍵}Nv	Integral of polynomial Nv with optional constant Ms	Dfn	Ambivalent Monadic Function,Dyadic Function		Mathematical	firstintegral integrate
 (⌽∘⍳∘≢⌽⊢,(0 ¯1+≢)⍴0∘⍴)Yv	Diagonal matrix with elements of Yv (filled appropriately)	Tacit	Monadic Function		Structural	cells items table
 (,⌷⍨∘⊂∘⍋1⊥⍴⊤¯1+∘⍳×/∘⍴)Ym	Diagonal ravel	Tacit	Monadic Function		Structural	
 Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items
@@ -2084,3 +2094,17 @@ M(+⌿⊣∘.*⍨∘∪⊢∨⊢∘⍳)Js	Sum of M'th powers of positive divisor
 (⍸1=⊢∨⍳)Js	Totatives of Js	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)
 (+/1=⊢∨⍳)Js	Euler's totient function	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)
 I(1=∨)J	Are I and J co-prime?	Tacit	Dyadic Function		Mathematical	coprime? relatively mutually
+I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical	width representation required digits positions
+×/Nv	Area of rectangle with sides Nv	Tacit	Monadic Function		Mathematical	edge lengths
+(2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths
+×/Nv	Volume of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths
+(2×○)N	Circumference of circle with radius N	Tacit	Monadic Function		Mathematical	edge length
+(○*∘2)N	Area of circle with radius N	Tacit	Monadic Function		Mathematical	length
+M(○×)N	Area of cone with height M and radius N (excluding base)	Tacit	Dyadic Function		Mathematical	lengths bottom
+M(○××3÷⍨⊢)N	Volume of cone with height M and radius N	Tacit	Dyadic Function		Mathematical	lengths
+(○4×*∘2)N	Area of sphere with radius N	Tacit	Monadic Function		Mathematical	length ball
+(○4÷3÷*∘3)N	Volume of sphere with radius N	Tacit	Monadic Function		Mathematical	length ball
+(2*∘÷⍨+.×⍨)Nv	Length of vector Nv	Tacit	Monadic Function		Mathematical	absolute value magnitude distance from origin 0 zero
+Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with height and width Mv and length Ns	Dfn	Dyadic Function		Mathematical	lengths sides
+Mv{⍵×2+.*∘÷⍨(⍺*2)+×⍨⍵÷2}Ns	Area of pyramid with height and width Mv and length Ns (excluding base)	Dfn	Dyadic Function		Mathematical	lengths bottom sides
+(3÷⍨×/)Nv	Volume of pyramid with height, width, length Nv	Tacit	Monadic Function		Mathematical	lengths sides
