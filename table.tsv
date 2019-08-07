@@ -78,9 +78,9 @@ M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathemati
 ⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize enclosing
 ⊂[ax]Y	Enclose: Contain axes ax inside scalars	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize axis enclosing dimensions
 ⊆Y	Nest: Y if already nested, else scalar containing Y	Primitive	Monadic Function		Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose
-↑Y	Mix: Remove nesting (adding trailing axes)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop ending
+↑Y	Mix: Remove nesting (adding trailing axes)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop ending without
 ↓Y	Split: Nest sub-arrays (from last axis)	Primitive	Monadic Function		Structural	downarrow subarrays dimension
-↑[ax]Y	Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop
+↑[ax]Y	Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop without
 ↓[ax]Y	Split: Nest sub-arrays (from axis ax)	Primitive	Monadic Function		Structural	downarrow subarray dimension
 ∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function		Structural	flattening raze razing ϵ ε ∈ flatten() cells items
 ,[ax]Y	Ravel with Axis: insert new axis between ⌊ax and ⌈ax	Primitive	Monadic Function		Structural	increaserank expandrank comma addaxis dimension
@@ -106,7 +106,7 @@ X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structu
 ⍒Y	Downgrade: Indices to reorder Y descending	Primitive	Monadic Function		Index Generation	gradedown delstile spine concordelanding decreasing
 X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota indexin indexof ɩ ι finding locating locate positionof 1st items elements location
 X⍸Y	Indices of items of Y in intervals with cut-offs X	Primitive	Dyadic Function		Index Generation	intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
-Is?Js	Deal: Is random items from ⍳Js (without replacement)	Primitive	Dyadic Function		Index Generation	questionmark interrogationpoint query eroteme distinct cells elements
+Is?Js	Deal: Is random items from ⍳Js (without replacement)	Primitive	Dyadic Function		Index Generation	questionmark interrogationpoint query eroteme distinct cells elements remove
 C⍋D	Upgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradeup deltastile pine concordetakingoff customalphabet case-insensitive caseinsensitive
 C⍒D	Downgrade using collation sequence C	Primitive	Dyadic Function		Index Generation	gradedown delstile spine concordelanding customalphabet case-insensitive caseinsensitive
 ∪Y	Unique: Distinct major cells of Y	Primitive	Monadic Function		Sets	cup downshoe distinctitems uniqueelements nub eraseremoveduplicates items elements
@@ -122,9 +122,9 @@ Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom
 Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom dimensions
 Iv↑Y	Take Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	uparrow first last beginning trailing head tail major cells elements dimensions 1st start ending
-Iv↓Y	Drop Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut major cells elements dimensions delete start beginning
+Iv↓Y	Drop Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut major cells elements dimensions delete start beginning without
 Iv↑[ax]Y	Take Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	uparrow first last beginning leading trailing head tail cells elements dimensions 1st start ending
-Iv↓[ax]Y	Drop Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut cells elements dimensions delete
+Iv↓[ax]Y	Drop Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut cells elements dimensions delete without
 Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat dimension
 Iv/[ax]Y	Replicate along axis ax	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat dimension
 Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compress slashbar solidus filter first copy repeat Iv/[1] dimension 1st start beginning
@@ -224,7 +224,7 @@ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definit
 ;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variable scope localise localize declaration declare declaring 1st
 x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
 charvec←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput
-⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending
+⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove
 ⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending
 '	Character delimiter	Syntax	Array		Expression	quote apostrophe string text
 ¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
@@ -380,14 +380,14 @@ X g⍨∘f⍨∘h Y	Split-Compose: apply g between (f X) and (h Y), that is (f X
 :Implements Trigger name1{,name2,name3,…}	Function is a trigger function: called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 :Implements Trigger *	Function is a global trigger function: called when any any global variable in the same namespace is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types
-)CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear drop
+)CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear drop without
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell dos operatingsystem commandprocessor
 )CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off ⎕save
 )COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include item object otherworkspace )pcopy ⎕cy cell element
 )CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se ⎕cs
-)DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge
+)DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge without
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	modify code source definition define value ⎕ed
-)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item cell element drop
+)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item cell element drop without
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading vector
 )LIB {folder}	List workspaces either on WSPATH or in folder	Non-syntax			System Command	dir ls vector
 )LOAD {ws}	Replace active workspace with workspace ws	Non-syntax		File Access	System Command	open fetch get bringin ⎕load
@@ -402,7 +402,7 @@ X g⍨∘f⍨∘h Y	Split-Compose: apply g between (f X) and (h Y), that is (f X
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st
 )TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading ⎕tid
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename ⎕wsid
-)XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot
+)XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot remove
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4 vector start leading
 )EVENTS {nm}	List events in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯8.6 vector start leading
 )FNS {nm}	List functions in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯3.1 ¯3.2 ¯3.3 ¯3.6 vector start leading
@@ -531,12 +531,12 @@ X g⍨∘f⍨∘h Y	Split-Compose: apply g between (f X) and (h Y), that is (f X
 ]PERFORMANCE.RunTime	Report execution time of one or more expressions	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]RunTime
 ]PERFORMANCE.SpaceNeeded	Compute memory needed to run expression(s)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate consumption of computing resources ]SpaceNeeded
 ]SALT.Boot	Boot from a file containing instructions or a function	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Boot
-]SALT.Clean	Remove SALT tags from the ws or specific items so that SALT no longer saves changes to associated files	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Clean cells elements delete drop
+]SALT.Clean	Remove SALT tags from the ws or specific items so that SALT no longer saves changes to associated files	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Clean cells elements delete drop without
 ]SALT.Compare	Compare two versions of a SALTed item	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Compare cell element
 ]SALT.List	List files (default: .dyalog only) and directories in the specified directory	Non-syntax	Ucmd	SALT	User command	covers for functionality ]List vector
 ]SALT.Load	Load item from native text file	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Load cell element
 ]SALT.Refresh	Reload all SALTed items from their associated files	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Refresh cells elements
-]SALT.RemoveVersions	Remove one or more versions of a file managed by SALT	Non-syntax	Ucmd	SALT	User command	covers for functionality ]RemoveVersions delete drop
+]SALT.RemoveVersions	Remove one or more versions of a file managed by SALT	Non-syntax	Ucmd	SALT	User command	covers for functionality ]RemoveVersions delete drop without
 ]SALT.Save	Save item in a native text file (default: same place if already SALTed)	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Save cell element
 ]SALT.Set	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Set
 ]SALT.Settings	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Settings
@@ -602,7 +602,7 @@ valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtmltag xmltag
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
 user_name←⎕AN	User (login) name	System	Constant	System	System Function	accountname
-⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop
+⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without
 {0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy cell element
 {num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
 ⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin )load
@@ -614,7 +614,7 @@ numvec←⎕TS	Current time (y m d h m s ms)	System	Constant	System	System Funct
 r←{selector} ⎕AT names	Syntactical attributes of named functions or operators	System	Function	System	System Function	valence arity shyness locked niladicmonadicdyadicambivalent functionoperator variadic properties author timestamp modificationtime result
 r←⎕CR name	Source of function or operator as a character matrix	System	Function	Data Conversion	System Function	code representation table
 {names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	modify code source definition define value )ed
-{boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase cell element drop
+{boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase cell element drop without
 {r}←⎕FX cr/nr/vr/or	Name of fn or op defined from its matrix, nested, vector or object representation (or failing line no)	System	Function	Data Conversion	System Function	fix code source operator list table
 {level}←{level} ⎕LOCK name/ref	Hide source and optionally disallow suspension	System	Function	System	System Function	secure closedsource encrypt
 r←⎕NR name	Source of function or operator as a nested vector	System	Function	Data Conversion	System Function	code representation vtv character list
@@ -639,8 +639,8 @@ r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Fi
 cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file	System	Function	Component Files	System Function	dcf check externalvariable correct validate
 {tn}←file ⎕FCOPY tn {pn}	Create copy of named file tied to tn	System	Function	Component Files	System Function	dcf duplicate
 {tn}←file ⎕FCREATE tn {64}	Create new component file	System	Function	Component Files	System Function	dcf touch make
-{cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp beginning trailing delete leading ending
-{tn}←file ⎕FERASE tn {pn}	Erase exclusively-tied file	System	Function	Component Files	System Function	dcf delete expunge remove drop
+{cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp beginning trailing delete leading ending without
+{tn}←file ⎕FERASE tn {pn}	Erase exclusively-tied file	System	Function	Component Files	System Function	dcf delete expunge remove drop without
 r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
 {tn}←⎕FHOLD tn {pn}	Hold tied file tn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthreading table
 names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir vector
@@ -687,7 +687,7 @@ tdno←⎕TID	The number of the current thread	System	Constant	System	System Fun
 ⎕TNAME←{tdname}	Report/set the name (tdname) of the current thread	System	Variable	System	System Function	synchronisation synchronization parallel threading greenthreading
 tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
 tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
-{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading delete drop
+{tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading delete drop without
 tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
 {tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
 tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading vector
@@ -696,9 +696,9 @@ tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	
 {counts}←destination ⎕NCOPY sources	Copy files/directories from 'sources' to 'destination'	System	Function	Native Files	System Function	copying
 {counts}←destination(⎕NCOPY⍠1)sources	Copy files/directories from 'sources' (with ? and * globbing) to 'destination'	System	Function	Native Files	System Function	copying wildcards
 {tn}←file ⎕NCREATE tn	Create file (tn 0 to generate tn)	System	Function	Native Files	System Function	make new
-{counts}←{flags} ⎕NDELETE files	Delete files (if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop drop
-{counts}←{flags}(⎕NDELETE⍠1)files	Delete files (with ? and * globbing, if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop wildcards drop
-{tn}←file ⎕NERASE tn	Erase tied file tn	System	Function	Native Files	System Function	delete remove expunge drop
+{counts}←{flags} ⎕NDELETE files	Delete files (if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop drop without
+{counts}←{flags}(⎕NDELETE⍠1)files	Delete files (with ? and * globbing, if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop wildcards drop without
+{tn}←file ⎕NERASE tn	Erase tied file tn	System	Function	Native Files	System Function	delete remove expunge drop without
 r←⎕NEXISTS files	Return 1 if files exist, else 0	System	Function	Native Files	System Function	present present check lookfor
 r←(⎕NEXISTS⍠1)files	Return 1 if files (with ? and * globbing) exist, else 0	System	Function	Native Files	System Function	present present check lookfor
 r←{encoding} ⎕NGET file {flags}	Read Unicode text file as lines into array r	System	Function	Native Files	System Function	fetch load
@@ -754,7 +754,7 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Function		System	freememory
 {Av}(2010⌶)Yv	Update DataTable	I-beam	Function		Expression	databinding assignment redefine inplace
 {Av}(2011⌶)Yv	Read DataTable	I-beam	Function		Expression	databinding get fetch value
-2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding delete drop
+2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding delete drop without
 {Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect
 2016⌶Yv	Create .NET Delegate	I-beam	Function		Array Properties	make new
 2017⌶Dv	Identify .NET Type	I-beam	Function		Array Properties	
@@ -781,7 +781,7 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH
 5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector
 5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector
-5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop
+5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop without
 5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text
 As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namemangling
 8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹
@@ -843,10 +843,10 @@ sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) columns	Dfn	Funct
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function			
 rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator		conditionaloperator Helsingør hyperator co-operator cooperator
 {mbrot←0}(cxfn dfns.cxdraw) zoom	Complex function drawing	Dop		Monadic Operator		complexnumbers unitcircle fixpoint Mandelbrotset dual under
-rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function			compression spaces delete remove
+rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function			compression spaces delete remove without
 dates←{g←¯53799} dfns.date daynos	⎕TS format from day number	Dfn	Function			Gregoriancalendar 1752 calendar
 daynos←{g←17520902} dfns.days dates	Day number from ⎕TS format	Dfn	Function			InternationalDayNumber
-rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function			compression spaces delete remove trailing
+rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function			compression spaces delete remove trailing without
 nums←{signed←0} dfns.dec cvex	Decimal from hexadecimal	Dfn	Function			decimalfromhex
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function			display latebinding ⎕NC
 num←dfns.det nmat	Determinant of square matrix	Dfn	Function			Gaussianmethod Hilbertmatrix table
@@ -859,15 +859,15 @@ cmat←dfns.display array	Boxed display of array	Dfn	Function			displayofarrays 
 cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters sub-array dimension enclosed
 cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters dimension enclosed
 d←L dfns.dist R	Levenshtein distance	Dfn	Function			stringcomparison fuzzy
-rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			compression spaces delete remove start beginning
-rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			compression spaces consecutive delete remove
+rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			compression spaces delete remove start beginning without
+rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			compression spaces consecutive delete remove without
 rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator		is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function			whitedots functionsformatting name-clashproblem stuff nameclashproblem
 cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function			box-drawingcharacters diversions boxdrawingcharacters
 nvec←{axis} dfns.dscan nvec	Divide scan	Dfn	Function			scanoperators dividing scanning
 cmat←{topbar←1} dfns.dsp array	Reduced version of disp	Dfn	Function			boxing displayofarrays tape
-rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function			compression spaces delete remove ending
-rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function			compression spaces delete remove
+rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function			compression spaces delete remove ending without
+rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function			compression spaces delete remove without
 rslt←(⍺⍺ dfns.each) array	Fast each for pure operand function	Dop		Monadic Operator	Function application	purefunction
 yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function			date CouncilofNicaea canonpaschalis pervasivefunction histogram
 nvec←P dfns.efract Q	Egyptian fractions	Dfn	Function			Egyptianfraction
@@ -997,7 +997,7 @@ crep←{tabs csep←4} dfns.refmt crep	Reformat dfn/op representation	Dfn	Functi
 refs←dfns.refpath ref	Refs path from root to ⍵	Dfn	Function			parentspace ancestorspace namespacereferences
 rvec←{exclude←⍬} dfns.refs ref	Vector of sub-space references	Dfn	Function			namespacereferences ⎕WX root-space rootspace list
 ref←dfns.refws wsid	Ref to saved ws ⍵	Dfn	Function			workspacereferences externalworkspace remoteexecution
-graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function			unweightedgraph delete drop
+graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function			unweightedgraph delete drop without
 graph←graph dfns.remnode vertex	Graph ⍺ with vertex ⍵ removed	Dfn	Function			unweightedgraph
 enc←dfns.rep name	Encapsulate function/operator	Dfn	Function			functionarray encapsulatefunction
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator		shell error-guard,dynamic shell errorguard,dynamic
@@ -1054,7 +1054,7 @@ cvec←dfns.utf8get fid	Char vector from UTF-8 file ⍵	Dfn	Function			encoding 
 rslt←{larg} {''} dfns.vof F vof G vof ··· rarg	Vector of functions	Dop		Dyadic Operator		functionarray vectoroffunctions fork co-operator cooperator list
 caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function			diversions capitalisation 1st
 lvec←{sepr} dfns.vtol nvec	Nested vector to lines	Dfn	Function			linevector list
-cvec←dfns.vtrim cvec	Remove trailing blanks	Dfn	Function			compression spaces delete drop ending
+cvec←dfns.vtrim cvec	Remove trailing blanks	Dfn	Function			compression spaces delete drop ending without
 rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator		variablewise blank
 cvec←wgraph dfns.wcost path	Cost vector for path ⍵ through weighted graph ⍺	Dfn	Function			weightedgraph costvector list
 rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator		conditionaloperator
@@ -1181,13 +1181,13 @@ Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit gi
 Mv(*⊢∘⍟(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model correct y=ab^x curve
 (+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength perimeter coordinates vertices
 U∊⍨⊢∘⊂⌺3 3	Life: next generation given U 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	conway's gameoflife gol conways cellularautomaton sub-array
-∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
+∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table remove
 ∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
-∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
+∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table remove
 ∘.≤⍨∘⍳Bm	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
-(⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?
+(⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove
 (⊢≡∘.≥⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?
-(⊢≡∘.<⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?
+(⊢≡∘.<⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove
 (⊢≡∘.≤⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals
 Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle cell element indicate masking indicating
@@ -1215,7 +1215,7 @@ Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier ma
 (⊥⍨' '=⌽)Dv	Number of leading blanks	Tacit	Monadic Function		Text	prefixspaces spaces start beginning
 I(!×∘!⊣)J	Number of permutations of (I,J) combinations	Tacit	Dyadic Function		Mathematical	combinatorics
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces spaces ending
-Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of (Is,Js) combinations	Tacit	Dyadic Function		Mathematical	combinatorics selections unordered without replacement list vector table
+Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of (Is,Js) combinations	Tacit	Dyadic Function		Mathematical	combinatorics selections unordered without replacement list vector table remove
 (÷1⊥÷)Nv	Ohm's Law: resistance of parallel resistors/capacitance of capacitors in series	Tacit	Monadic Function		Mathematical	electronics circuits Ω
 {⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	plot curve graph
@@ -1256,18 +1256,18 @@ Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Ta
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table
 Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
 (*∘○0J2×⊢÷⍨0,⍳)Js	Regular unit polygon of Js edges	Tacit	Monadic Function		Mathematical	star triangle square pentagon hexagon octagon
-{⍵/⍨' '∨.≠⍵}Dm	Remove blank columns	Dfn	Monadic Function		Text	delete allspaces drop space
-{⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	delete allspaces emptylines drop space
-~∘' '¨D	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces spaces drop
-(~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop
-{⍵/⍨¯1↓1,1(⊢∨⌽)' '∨.≠⍵}Dm	Remove duplicate blank columns	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space
-{⍵⌿⍨¯1↓1,1(⊢∨⌽)⍵∨.≠' '}Dm	Remove duplicate blank rows	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space
-' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending
-{⍵/⍨∨\' '∨.≠⍵}Dm	Remove leading blank columns	Dfn	Monadic Function		Text	delete allspaces drop start beginning space
-{⍵⌿⍨∨\⍵∨.≠' '}Dm	Remove leading blank rows	Dfn	Monadic Function		Text	delete allspaces drop start beginning space
-{⍵/⍨∨\⍵≠' '}Dv	Remove leading blanks	Dfn	Monadic Function		Text	delete spaces beginning start drop
-(~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop
-{⍵↓⍨-⊥⍨' '=⍵}Dv	Remove trailing blanks	Tacit	Monadic Function		Text	delete spaces drop ending
+{⍵/⍨' '∨.≠⍵}Dm	Remove blank columns	Dfn	Monadic Function		Text	delete allspaces drop space without
+{⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	delete allspaces emptylines drop space without
+~∘' '¨D	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces spaces drop without
+(~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without
+{⍵/⍨¯1↓1,1(⊢∨⌽)' '∨.≠⍵}Dm	Remove duplicate blank columns	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space without
+{⍵⌿⍨¯1↓1,1(⊢∨⌽)⍵∨.≠' '}Dm	Remove duplicate blank rows	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space without
+' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
+{⍵/⍨∨\' '∨.≠⍵}Dm	Remove leading blank columns	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without
+{⍵⌿⍨∨\⍵∨.≠' '}Dm	Remove leading blank rows	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without
+{⍵/⍨∨\⍵≠' '}Dv	Remove leading blanks	Dfn	Monadic Function		Text	delete spaces beginning start drop without
+(~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without
+{⍵↓⍨-⊥⍨' '=⍵}Dv	Remove trailing blanks	Tacit	Monadic Function		Text	delete spaces drop ending without
 '-'@(=∘' ')Y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow gets is copula let redefine naming denotes means inplace update cells elements
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items
@@ -1316,7 +1316,7 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 (10 12○⊂)N	Split complex array into two-element vector of magnitude array and angle array	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts absolute values list tuple
 (⊣×¯12○⊢)⌿N	Join magnitude and radians major cells by removing leading axis	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine reduce start beginning
 M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine
-×∘|⍨N	Square without changing sign	Tacit	Monadic Function		Mathematical	
+×∘|⍨N	Square without changing sign	Tacit	Monadic Function		Mathematical	remove
 Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spikes	Tacit	Dyadic Function		Boolean/Logical	signal on/off
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical	
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical	
@@ -1332,7 +1332,7 @@ Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic 
 (0=⊢∘.|⍨∘⍳⌈/)Iv	Table of divisibility	Tacit	Monadic Function		Mathematical	matrix
 Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients Nv	Dfn	Dyadic Function		Mathematical	
 {⍵/⍨(⊢∨≠\)⍵=''''}Dv	Extract text (including quotes) in expression	Dfn	Monadic Function		Text	strings
-(⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings
+(⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings remove
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	cell element
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods
 Is(+/÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage
@@ -1388,7 +1388,7 @@ X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performa
 {(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick blanks lists ending
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists
 Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick list major cells elements 1st
-{(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning
+{(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove
 *○N	Fast: Euler's idiom (accurate when N is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick
 ⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st
@@ -1458,8 +1458,8 @@ X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	
 X{⍺⍪⍵/⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements
 X{⍺⌿⍨(≢⍵)>⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements
-X{⍺⌿⍨(≢⍵)<⍵⍳⍺}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements
-' '∘(⊢(/⍨)1(⊢∨⌽)≠)Dv	Cyclic compression of successive blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous spaces multiple remove drop
+X{⍺⌿⍨(≢⍵)<⍵⍳⍺}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove
+' '∘(⊢(/⍨)1(⊢∨⌽)≠)Dv	Cyclic compression of successive blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous spaces multiple remove drop without
 (⊃÷¯2÷2∘⊃-¯1 1×0.5*⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0
 ((⍳-∘⌈÷∘2)(⊣⊖⌽),⍨⍴∘⍳×⍨)Js	A magic square, odd side Js	Tacit	Monadic Function		Mathematical	
 Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank axis
@@ -1518,8 +1518,8 @@ X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Compari
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix
 ⍎Bs⍴'→'	Contitional Abort (cut stack back one frame if Bs)	System			Expression	stop
 A*∘~⍨N	Conditional change of elements of N to one according to A	Tacit	Dyadic Function		Mathematical	1 cells items
-Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dyadic Function	Monadic Operator	Structural	major cells items delete remove
-As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending
+Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dyadic Function	Monadic Operator	Structural	major cells items delete remove without
+As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean
 Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic progression)	Tacit	Dyadic Function		Mathematical	range seq() sequence …
 +∘÷/∘⍳Js	Continued fraction: 1+÷2+÷3+÷4+÷5+÷6+÷…Js	Tacit	Monadic Function		Mathematical	series sequence
@@ -1533,7 +1533,7 @@ Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic p
 ⊂∘⊃Y	Corner element of a (non-empty) array Y[1;1;1…]	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st
 Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic Function		Comparison	cells items lists
 Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZZZ:1 3 2)	Tacit	Dyadic Function		Data Conversion	unpack
-{(∨/a)⌿(⍴⍵)⍴(,a)\(,a←∧\('⍝'≠⍵)∨≠\⍵='''')/,⍵}Dm	Decommenting a matrix representation of a function (⎕CR)	Dfn	Monadic Function		Text	uncomment strip comments remove table delete drop
+{(∨/a)⌿(⍴⍵)⍴(,a)\(,a←∧\('⍝'≠⍵)∨≠\⍵='''')/,⍵}Dm	Decommenting a matrix representation of a function (⎕CR)	Dfn	Monadic Function		Text	uncomment strip comments remove table delete drop without
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
 Mv{+⌿↑⍺⍵}Nv	Polynomial sum	Dfn	Dyadic Function		Mahtematical	additionof polynomials
 Mv{-⌿↑⍺⍵}Nv	Polynomial difference	Dfn	Dyadic Function		Mahtematical	subtractionof polynomials
@@ -1546,11 +1546,11 @@ Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Ta
 Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical	table
 X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals with cut-offs X	Tacit	Dyadic Function		Mathematical	bins groups ranges buckets
 (0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix
-Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove
-Is↓Ym	Drop Is rows from matrix Ym	Primitive	Dyadic Function		Structural	table delete remove
+Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without
+Is↓Ym	Drop Is rows from matrix Ym	Primitive	Dyadic Function		Structural	table delete remove without
 Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next 1 in Av	Dfn	Dyadic Function		Selection	item element
 Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list
-Cv{((~(≢b↑⍵)↑'/'=⍺)/b↑⍵),(1↓b↓⍺),⍵↓⍨b←+/∧\⍺≠','}Dv	Editing Dv with Cv ('/' to delete and ',' to insert)	Dfn	Dyadic Function		Text	line editor remove drop
+Cv{((~(≢b↑⍵)↑'/'=⍺)/b↑⍵),(1↓b↓⍺),⍵↓⍨b←+/∧\⍺≠','}Dv	Editing Dv with Cv ('/' to delete and ',' to insert)	Dfn	Dyadic Function		Text	line editor remove drop without
 Is(⊢∩∧)Jv	Elements of Jv divisible by Is	Tacit	Dyadic Function		Mathematical	filter divisors cells items
 0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st
 ⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table
@@ -1601,7 +1601,7 @@ X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left
 (⍴⍴1,{0}¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table
 (⍴⍴0,{1}¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table
 Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalence
-M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction
+M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction remove
 X{⍵⍴⍨(1⍴⍨-/≢∘⍴¨⍺⍵),⍴⍵}Y	Increasing rank of Y to rank of X	Dfn	Dyadic Function		Structural	
 Is(⊢↑⍨⊢∘≢+|∘-∘≢)Y	Increasing the leading dimension of Y to multiple of IS	Tacit	Dyadic Function		Structural	1st axis divisibleby pad extend first start beginning
 Iv(⊢↑⍨⊢∘⍴+|∘-∘⍴)Y	Increasing the dimensions of Y to multiples of Iv	Tacit	Dyadic Function		Structural	allaxes divisibleby pad extend axes
@@ -1715,16 +1715,16 @@ I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	D
 (⌈/,∘0)N	Positive maximum, at least zero (also for empty N)	Tacit	Monadic Function		Mathematical	largest biggest
 Mv{+⌿(1-⍳≢⍺)⌽⍺∘.×⍵,0×1↓⍺}Nv	Product of two polynomials with coefficients Mv and Nv	Dfn	Dyadic Function		Mathematical	multiplication multiply
 Nv×.*B	Products over subsets of Nv specified by B	Tacit	Dyadic Function		Mathematical	sub-sets
-X{⍺(I⍨⍳I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI
-X{⍺(I⍨∊I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE
-X{⍺⌷⍨⊂(⍳≢⍺)~⍺(I⍨⍳I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT
+X{⍺(I⍨⍳I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove
+X{⍺(I⍨∊I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove
+X{⍺⌷⍨⊂(⍳≢⍺)~⍺(I⍨⍳I←⊢∘≢↑∘⍋∘⍋⊣⍳⍪⍨)⍵}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT remove
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	table
 Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis row-wise horizontally
-{⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally
-{⍵/⍨∨⌿' '≠⍵}Dm	Removing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space
-{⍵⌿⍨∨/' '≠⍵}Dm	Removing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space
-Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot
+{⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally remove
+{⍵/⍨∨⌿' '≠⍵}Dm	Removing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without
+{⍵⌿⍨∨/' '≠⍵}Dm	Removing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without
+Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot remove
 {⍵⌿⍨1,∨/2≢⌿⍵}Ym	Removing consecutive duplicate rows from ordered matrix Ym	Dfn	Monadic Function		Sets	table
 Xs(⊢(/⍨)2∨/1,≠)Yv	Removing consecutive duplicate Xs's from vector Yv	Tacit	Dyadic Function		Sets	list
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list
@@ -1740,8 +1740,8 @@ Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Removing multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending
 {⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces
 (∩∘(⎕D,⎕A,819⌶⎕A))Dv	Removing non-alphanumeric ASCII characters	Tacit	Monadic Function		Text	punctuation
-{⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm	Removing trailing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove trim right delete drop ending space
-{⍵↓⍨-+/∧\⌽Dm∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space
+{⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm	Removing trailing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove trim right delete drop ending space without
+{⍵↓⍨-+/∧\⌽Dm∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without
 Xs@(Ys∘=)Y	Replacing all values Xs in Y with Ys	Tacit	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update
 (Xv{(⍵⍵⌷⍨∘⊂⍺⍺∘⍳)@(∊∘⍺⍺)⊢⍵}Yv)Y	Replacing elements of Y in set Xv with corresponding element from Yv	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update cells items
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods
@@ -1789,7 +1789,7 @@ A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Fun
 M(A{{⍺×⍺⍺)+⍵×~⍺⍺})N	Selection of elements of M and N depending on condition A	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector mesh merge cells items indicate masking indicating
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
-name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list
+name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove
 Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	Dyadic Function		Selection	leftshift list
 Is(⊢∘-∘≢↑↓⍨∘-⍨)Yv	Shifting vector XV right with IS (padding on left)	Tacit	Dyadic Function		Selection	rightshift list
 Mm(1 2 1 2⍉1∘.×)Nm	Shur product	Tacit	Dyadic Function		Mathematical	
@@ -2006,8 +2006,8 @@ Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create
 10∘*N	Anti-logarithm	Tacit	Monadic Function		Mathematical	log⁻¹ log^1 antilogarithm
 1∘⌷Y	Gead: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning
 (1⌷⊖)Y	Tail: Last major cell	Tacit	Monadic Function		Selection	Y[-1;] X[-1;] Y[-1] X[-1] Y[¯1;] X[¯1;] Y[¯1] X[¯1] trailing element item ending
-1∘↓Y	Behead: Remove first major cell	Tacit	Monadic Function		Selection	drop chop leading element item 1st delete start beginning
-¯1∘↓Y	Curtail: Remove last major cell	Tacit	Monadic Function		Selection	drop chop trailing element item delete ending
+1∘↓Y	Behead: Remove first major cell	Tacit	Monadic Function		Selection	drop chop leading element item 1st delete start beginning without
+¯1∘↓Y	Curtail: Remove last major cell	Tacit	Monadic Function		Selection	drop chop trailing element item delete ending without
 0∘⌈N	Ensure that N is non-negative (negatives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict
 0∘⌊N	Ensure that N is non-positive (positives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict
 {⌽@(1,≢⍵)⊢⍵}Y	Interchange first and last major cells	Dfn	Monadic Function		Structural	exchange swap head tail leading trailing elements items 1st start beginning ending
