@@ -43,25 +43,25 @@ A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation 
 A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq
 A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq
 0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()
-¯1∘○N	Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asin() arcussinus sin⁻¹() sin^-1()
-¯2∘○N	Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acos() arcuscosinus cos⁻¹() cos^-1()
-¯3∘○N	Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atan() arcustangent tan⁻¹() tan^-1()
+¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arcsine arsin() asin() arcussinus sin⁻¹() sin^-1()
+¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccosine arccos() acos() arcuscosinus cos⁻¹() cos^-1()
+¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent arctan() atan() arcustangens tan⁻¹() tan^-1()
 ¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()
-¯5∘○N	Hyperbolic Arcsin N	Tacit	Monadic Function		Circular/Trigonometric	arcsine asinh() arcussinus arsinh() area sinh⁻¹() sinh^-1()
-¯6∘○N	Hyperbolic Arccos N	Tacit	Monadic Function		Circular/Trigonometric	arccosine acosh() arcuscosinus arcosh() area cosh⁻¹() cosh^-1()
-¯7∘○N	Hyperbolic Arctan N	Tacit	Monadic Function		Circular/Trigonometric	arctangent atanh() arcustangent artanh() area tanh⁻¹() tanh^-1()
+¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()
+¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()
+¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()
 ¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
 ¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
 ¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate
 ¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	imaginary complex itimes
 ¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	antiphase phasor cis()
-1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sinus sin()
-2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosinus cos()
-3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan()
+1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sin() sinus
+2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus
+3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens
 4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()
-5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinus sinh()
-6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosinus cosh()
-7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh()
+5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinh() sinushyperbolicus
+6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosh() cosinushyperbolicus
+7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh() tangenshyperbolicus
 8∘○N	icos ←→ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary conh()
 9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()
 10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude
@@ -332,12 +332,18 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Monadic Func
 (⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	descending? falling? down ordered decreasing? sorted
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
-(¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	acsc acosec arcuscosecant
-(¯2○÷)N	Arcsecant	Tacit	Monadic Function		Mathematical	asec arcussecant
-(¯3○÷)N	Arccotangent	Tacit	Monadic Function		Mathematical	acotg actg actn arcuscotangent
-(÷1∘○)N	Cosecant	Tacit	Monadic Function		Mathematical	csc
-(÷2∘○)N	Secant	Tacit	Monadic Function		Mathematical	
-(÷3∘○)N	Cotangent	Tacit	Monadic Function		Mathematical	cotg ctg ctn
+(¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	inverse acsc() arccsc() acosec() arccosec() arcuscosecans
+(¯2○÷)N	Arcsecant	Tacit	Monadic Function		Mathematical	inverse asec() arcsec() arcussecans
+(¯3○÷)N	Arccotangent	Tacit	Monadic Function		Mathematical	inverse acotg() actg() actn() arccotg() arcctg() arcctn() arcuscotangens
+(÷1∘○)N	Cosecant	Tacit	Monadic Function		Mathematical	csc() cosec() cosecans
+(÷2∘○)N	Secant	Tacit	Monadic Function		Mathematical	sec() secans
+(÷3∘○)N	Cotangent	Tacit	Monadic Function		Mathematical	cotg() ctg() ctn() cotangens
+(¯5○÷)N	Hyperbolic area cosecant	Tacit	Monadic Function		Mathematical	inverse acsch() csch^-1() csch⁻¹() acosech() cosech^-1() cosech⁻¹() arcsch() arcosech() arccsch() arccosech() cosecanshyperbolicus
+(¯6○÷)N	Hyperbolic area secant	Tacit	Monadic Function		Mathematical	inverse asech() sech^-1() sech⁻¹() arsech() arcsech() secanshyperbolicus
+(¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Mathematical	inverse actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcotgh() arctnh() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus
+(÷5∘○)N	Hyperbolic cosecant	Tacit	Monadic Function		Mathematical	csch() cosech() cosecanshyperbolicus
+(÷6∘○)N	Hyperbolic secant	Tacit	Monadic Function		Mathematical	sech() secanshyperbolicus
+(÷7∘○)N	Hyperbolic cotangent	Tacit	Monadic Function		Mathematical	ctgh() cotgh() ctnh() cotangenshyperbolicus
 (¯2○1○⊢)N	Complementry Angle	Tacit	Monadic Function		Mathematical	
 X⌷⍨∘⊂J	Major cells of X at positions J	Tacit	Dyadic Function		Selection	index items elements
 X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY
@@ -585,10 +591,10 @@ r←data {header}(⎕CSV⍠2)format_spec	Convert CSV data from APL inverted tabl
 r←type ⎕DR x	Interpret internal representation as array of type 'type'	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 type←⎕DR x	Return internal data type of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter ⎕df ⍕ table
-r←0 ⎕JSON data	Convert JSON text to APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport parse deserialise deserialize
-r←1 ⎕JSON data	Convert JSON text from APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport generate serialise serialize
-r←0(⎕JSON⍠'M')data	Convert JSON text to APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport parse deserialise deserialize table
-r←1(⎕JSON⍠'M')data	Convert JSON text from APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation importexport generate serialise serialize table
+r←0 ⎕JSON data	Convert JSON text to APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation import parse deserialise deserialize
+r←1 ⎕JSON data	Convert JSON text from APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation export generate serialise serialize
+r←0(⎕JSON⍠'M')data	Convert JSON text to APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation import parse deserialise deserialize table
+r←1(⎕JSON⍠'M')data	Convert JSON text from APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation export generate serialise serialize table
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex find locate perlcompatibleregularexpression locating location
@@ -2115,8 +2121,8 @@ Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with hei
 Mv{⍵×2+.*∘÷⍨(⍺*2)+×⍨⍵÷2}Ns	Area of pyramid with height and width Mv and length Ns (excluding base)	Dfn	Dyadic Function		Mathematical	lengths bottom sides
 (3÷⍨×/)Nv	Volume of pyramid with height, width, length Nv	Tacit	Monadic Function		Mathematical	lengths sides
 Is(⊢↑⍨⊢∘≢,⊣)Ym	Adjust Ym to width Is (positive Is to pad/chop on right, negative Is to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit
-f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply f to Y, g Y times	Dop	Monadic Function		Iteration	application inverse repeated repeating inversion inverting iterating looping
-X f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, g Y times	Dop	Monadic Function		Iteration	application inverse repeated repeating inversion inverting iterating looping
+f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply f to Y, g Y times	Dop	Monadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
+X f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, g Y times	Dop	Dyadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing	
 Iv{+⍀(1↑⍵),i⌿(¯2-⌿⍵)÷i←1+⍺}N	Interpolate Iv values between major cells of N	Dfn	Dyadic Function		Mathematical	fill items elements inserting interpolated
 (819⌶≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	upper-case? large? caps? capitals? capital? majuscules? majuscule?
@@ -2124,3 +2130,7 @@ Iv{+⍀(1↑⍵),i⌿(¯2-⌿⍵)÷i←1+⍺}N	Interpolate Iv values between maj
 ((819⌶≠⊢)∧819⌶⍨∘1≠⊢)D	Are characters of D titlecase?	Tacit	Monadic Function		Text	title-case? digraphs? ligatures?
 ((819⌶=⊢)∧819⌶⍨∘1=⊢)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral?
 ((819⌶≠⊢)-819⌶⍨∘1≠⊢)D	Detect case of characters (1:uppercase, ¯1:lowercase, 0:neither)	Tacit	Monadic Function		Text	query determine report
+f{2⊥⍺⍺/2⊥⍣¯1⊢⍵}Jv	Bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply
+Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cypher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting
+{⎕A[26|13+⎕A⍳⍵]}@(∊∘⎕A)D	Rot-13	Tacit	Monadic Function		Text	obfuscation obfuscate rot13
+(2⊥1⊖2⊥⍣¯1⊢)Js	Survivor number in the Josephus problem of order Js	Tacit	Monadic Function		Mathematical	flavius winnner remaining person surviving winning permutation
