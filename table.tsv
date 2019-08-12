@@ -289,7 +289,7 @@ M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Taci
 M-.×N	Alternating Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	simple?
 (0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	simple?
-(2≤∘|≡)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
+(⊂≢⊆)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	nested?
 (0>≡)Y	Does Y have Non-Uniform Depth?	Tacit	Monadic Function		Array Properties	ragged? nonuniform? nonorthogonal? nonrectangular?
 (0≤≡)Y	Does Y have Uniform Depth?	Tacit	Monadic Function		Array Properties	uniform? orthogonal? rectangular?
 (⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	
@@ -302,8 +302,8 @@ Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
-(⍋⍋)Y	Ascending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	rising up
-(⍋⍒)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down
+(⍋⍋)Y	Ascending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	rising up
+(⍋⍒)Y	Descending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers
 (2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	isprime primality
 I(0=|)J	I divides J	Tacit	Dyadic Function		Mathematical	divisibility divisor ∣
@@ -334,16 +334,16 @@ Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Monadic Func
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
 (¯1○÷)N	Arccosecant	Tacit	Monadic Function		Mathematical	inverse acsc() arccsc() acosec() arccosec() arcuscosecans
 (¯2○÷)N	Arcsecant	Tacit	Monadic Function		Mathematical	inverse asec() arcsec() arcussecans
-(¯3○÷)N	Arccotangent	Tacit	Monadic Function		Mathematical	inverse acotg() actg() actn() arccotg() arcctg() arcctn() arcuscotangens
+(¯3○÷)N	Arccotangent	Tacit	Monadic Function		Mathematical	inverse acot() acotg() actg() actn() arcot() arccot() arccotg() acotn() arccotn() arcctg() arcctn() arcuscotangens
 (÷1∘○)N	Cosecant	Tacit	Monadic Function		Mathematical	csc() cosec() cosecans
 (÷2∘○)N	Secant	Tacit	Monadic Function		Mathematical	sec() secans
-(÷3∘○)N	Cotangent	Tacit	Monadic Function		Mathematical	cotg() ctg() ctn() cotangens
+(÷3∘○)N	Cotangent	Tacit	Monadic Function		Mathematical	cot() cotg() ctg() cotn() ctn() cotangens
 (¯5○÷)N	Hyperbolic area cosecant	Tacit	Monadic Function		Mathematical	inverse acsch() csch^-1() csch⁻¹() acosech() cosech^-1() cosech⁻¹() arcsch() arcosech() arccsch() arccosech() cosecanshyperbolicus
 (¯6○÷)N	Hyperbolic area secant	Tacit	Monadic Function		Mathematical	inverse asech() sech^-1() sech⁻¹() arsech() arcsech() secanshyperbolicus
-(¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Mathematical	inverse actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcotgh() arctnh() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus
+(¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Mathematical	inverse acoth() actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() acotnh() cotnh^-1() cotnh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcoth() arcotgh() arctnh() arccoth() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus
 (÷5∘○)N	Hyperbolic cosecant	Tacit	Monadic Function		Mathematical	csch() cosech() cosecanshyperbolicus
 (÷6∘○)N	Hyperbolic secant	Tacit	Monadic Function		Mathematical	sech() secanshyperbolicus
-(÷7∘○)N	Hyperbolic cotangent	Tacit	Monadic Function		Mathematical	ctgh() cotgh() ctnh() cotangenshyperbolicus
+(÷7∘○)N	Hyperbolic cotangent	Tacit	Monadic Function		Mathematical	coth() ctgh() cotgh() ctnh() cotnh() cotangenshyperbolicus
 (¯2○1○⊢)N	Complementry Angle	Tacit	Monadic Function		Mathematical	
 X⌷⍨∘⊂J	Major cells of X at positions J	Tacit	Dyadic Function		Selection	index items elements
 X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY
@@ -1104,7 +1104,7 @@ I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest
 Mv(|2÷⍨+.×∘(¯1∘⌽-1∘⌽))Nv	Area of a polygon given Mv,Nv endpoints	Tacit	Dyadic Function		Mathematical	shoelaceformula
 Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence
 (0<⎕NC)Dv	Is Dv defined	Tacit	Dyadic Function		System	symboltable exists
-Cv{⍎⍺,'←⍵'}Y	Assign value Y to name Cv	Dfn	Dyadic Function		System	assignment name-value
+Cv{⍎⍺,'←⍵'}Y	Assign values Y to names Cv	Dfn	Dyadic Function		System	assignment name-value names-values dynamic variable
 (⍳∘⊃∘⌽∘≢⍪⊢)Ym	Attach column numbers to a matrix	Tacit	Monadic Function		Index Generation	headings table
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ
@@ -1414,7 +1414,7 @@ Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		
 Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension
-name⍪←Y	Fast: name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st
+name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering
 {(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering
 {' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski
@@ -2134,3 +2134,10 @@ f{2⊥⍺⍺/2⊥⍣¯1⊢⍵}Jv	Bit-wise application of f over Jv	Dop	Monadic F
 Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cypher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting
 {⎕A[26|13+⎕A⍳⍵]}@(∊∘⎕A)D	Rot-13	Tacit	Monadic Function		Text	obfuscation obfuscate rot13
 (2⊥1⊖2⊥⍣¯1⊢)Js	Survivor number in the Josephus problem of order Js	Tacit	Monadic Function		Mathematical	flavius winnner remaining person surviving winning permutation
+Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item
+100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	convert conversion
+(÷∘100)N	Rate corresponding to percentage N	Tacit	Monadic Function		Mathematical	convert conversion
+M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit 	Dyadic Function		Mathematical	
+Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof
+Mv{⍺+2-/⌈\0,+\⍺-⍵}Nv	Work done for demand Nv with capacity Mv	Dfn	Dyadic Function		Mathematical	orders capacities production supply and demands supplies
+{(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method

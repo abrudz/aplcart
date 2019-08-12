@@ -1,4 +1,4 @@
-C=_=>{var qv=q.value;history.replaceState({},document.title,location.pathname+(qv?"?q="+encodeURIComponent(qv):""));F()}
+C=_=>F(history.replaceState({},document.title,location.pathname+(q.value?"?q="+encodeURIComponent(q.value):"")))
 E=s=>s.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]))
 F=_=>q.focus()
 I=_=>{
