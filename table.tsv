@@ -423,63 +423,63 @@ X g⍨∘f⍨∘h Y	Split-Compose: apply g between (f X) and (h Y), that is (f X
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9 0123456789
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element
-0::any error	Covers all errors (errors 1–999)				trap catch errno Error Message	try errorhandling trapping exception
-1::WS FULL	There is insufficient workspace in which to perform an operation				trap catch errno Error Message	size memory resources maxws ⎕wa
-2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				trap catch errno Error Message	parser parsing
-3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				trap catch errno Error Message	bounds limits overflow beyond dimensions length rank axes
-4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				trap catch errno Error Message	dimensions conformability axes
-5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				trap catch errno Error Message	conformability
-6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				trap catch errno Error Message	
-7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				trap catch errno Error Message	
-10::LIMIT ERROR	A system limit is exceeded				trap catch errno Error Message	
-11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				trap catch errno Error Message	
-12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				trap catch errno Error Message	
-16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				trap catch errno Error Message	
-18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				trap catch errno Error Message	
-19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				trap catch errno Error Message	
-20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				trap catch errno Error Message	
-21::FILE FULL	Operation would cause the file to exceed its file size limit				trap catch errno Error Message	
-22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				trap catch errno Error Message	
-23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				trap catch errno Error Message	correct validate
-24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				trap catch errno Error Message	
-25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				trap catch errno Error Message	
-26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				trap catch errno Error Message	
-28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				trap catch errno Error Message	oplock
-30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				trap catch errno Error Message	⎕ftie fstie ⎕fcreate
-31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				trap catch errno Error Message	
-32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				trap catch errno Error Message	⎕fcreate ⎕ftie ⎕fstie ⎕frename
-34::FILE SYSTEM NO SPACE	There is insufficient disk space				trap catch errno Error Message	blank
-35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				trap catch errno Error Message	
-38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				trap catch errno Error Message	
-52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				trap catch errno Error Message	dimensions axes
-53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				trap catch errno Error Message	
-54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				trap catch errno Error Message	locate
-55::FIELD SIZE ERROR	Invalid field size for ⎕SM				trap catch errno Error Message	
-56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				trap catch errno Error Message	
-57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				trap catch errno Error Message	behavior
-58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				trap catch errno Error Message	dimensions axes
-59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				trap catch errno Error Message	rank axes
-60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				trap catch errno Error Message	
-61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				trap catch errno Error Message	
-62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				trap catch errno Error Message	list dimensions axes
-63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				trap catch errno Error Message	
-70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				trap catch errno Error Message	
-71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				trap catch errno Error Message	
-72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				trap catch errno Error Message	
-76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				trap catch errno Error Message	matrix
-84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				trap catch errno Error Message	
-90::EXCEPTION	A Microsoft .NET object threw an exception				trap catch errno Error Message	
-92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				trap catch errno Error Message	⎕avu classic codepage characterset charset encoding sbcs list
-99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				trap catch errno Error Message	blank
-1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	trap catch errno Error Message	try errorhandling trapping
-1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	trap catch errno Error Message	halt inspect breakpoint list
-1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	trap catch errno Error Message	
-1003::INTERRUPT	Execution stopped by strong interrupt			Exception	trap catch errno Error Message	
-1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	trap catch errno Error Message	end-of-file
-1005::EOF INTERRUPT	EOF when reading input from a file (when an input to APL is from a file)			Exception	trap catch errno Error Message	end-of-file
-1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	trap catch errno Error Message	character stdin prompt
-1007::RESIZE	User resizes the ⎕SM window			Exception	trap catch errno Error Message	
-1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	trap catch errno Error Message	
+0::any error	Covers all errors (errors 1–999)				Error Message	trap catch errno try errorhandling trapping exception
+1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa
+2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	trap catch errno parser parsing
+3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				Error Message	trap catch errno bounds limits overflow beyond dimensions length rank axes
+4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				Error Message	trap catch errno dimensions conformability axes
+5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				Error Message	trap catch errno conformability
+6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				Error Message	trap catch errno 
+7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				Error Message	trap catch errno 
+10::LIMIT ERROR	A system limit is exceeded				Error Message	trap catch errno 
+11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				Error Message	trap catch errno 
+12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				Error Message	trap catch errno 
+16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				Error Message	trap catch errno 
+18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				Error Message	trap catch errno 
+19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				Error Message	trap catch errno 
+20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				Error Message	trap catch errno 
+21::FILE FULL	Operation would cause the file to exceed its file size limit				Error Message	trap catch errno 
+22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				Error Message	trap catch errno 
+23::FILE DAMAGED	Component file damaged — check with ⎕FCHK				Error Message	trap catch errno correct validate
+24::FILE TIED	Attempt to tie file that is exclusively tied, or to exclusively tie file that is tied				Error Message	trap catch errno 
+25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	trap catch errno 
+26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	trap catch errno 
+28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				Error Message	trap catch errno oplock
+30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	trap catch errno ⎕ftie fstie ⎕fcreate
+31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				Error Message	trap catch errno 
+32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				Error Message	trap catch errno ⎕fcreate ⎕ftie ⎕fstie ⎕frename
+34::FILE SYSTEM NO SPACE	There is insufficient disk space				Error Message	trap catch errno blank
+35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	trap catch errno 
+38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				Error Message	trap catch errno 
+52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				Error Message	trap catch errno dimensions axes
+53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				Error Message	trap catch errno 
+54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	trap catch errno locate
+55::FIELD SIZE ERROR	Invalid field size for ⎕SM				Error Message	trap catch errno 
+56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	trap catch errno 
+57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	trap catch errno behavior
+58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	trap catch errno dimensions axes
+59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				Error Message	trap catch errno rank axes
+60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	trap catch errno 
+61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				Error Message	trap catch errno 
+62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				Error Message	trap catch errno list dimensions axes
+63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				Error Message	trap catch errno 
+70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				Error Message	trap catch errno 
+71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				Error Message	trap catch errno 
+72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				Error Message	trap catch errno 
+76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				Error Message	trap catch errno matrix
+84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	trap catch errno 
+90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	trap catch errno 
+92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	trap catch errno ⎕avu classic codepage characterset charset encoding sbcs list
+99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	trap catch errno blank
+1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	trap catch errno try errorhandling trapping
+1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	trap catch errno halt inspect breakpoint list
+1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	trap catch errno 
+1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	trap catch errno 
+1004::INPUT INTERRUPT	EOF to ⎕ or soft interrupt to ⍞			Exception	Error Message	trap catch errno end-of-file
+1005::EOF INTERRUPT	EOF when reading input from a file (when an input to APL is from a file)			Exception	Error Message	trap catch errno end-of-file
+1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	Error Message	trap catch errno character stdin prompt
+1007::RESIZE	User resizes the ⎕SM window			Exception	Error Message	trap catch errno 
+1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	Error Message	trap catch errno 
 ]CALC.Factors	Determine the prime factors of the argument	Non-syntax	Ucmd	CALC	User command	commands that relate manipulation data ]Factors
 ]CALC.FromHex	Convert a list of hexadecimal representations of integers to a numeric vector	Non-syntax	Ucmd	CALC	User command	commands that relate manipulation data ]FromHex
 ]CALC.PivotTable	Create a pivot table from an appropriate matrix	Non-syntax	Ucmd	CALC	User command	commands that relate to manipulation of data ]PivotTable
