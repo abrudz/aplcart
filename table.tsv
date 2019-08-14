@@ -254,6 +254,7 @@ errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	erro
 (⊃((×⌿*∘÷≢),≢÷1⊥÷)⍣≡)Nv	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 (2*∘÷⍨1⊥×⍨÷⊢∘≢)N	Quadratic mean	Tacit	Monadic Function		Mathematical	Root square rms()
+Mv{n←(⊢÷+.×⍨*0.5⍨)(⊢-+⌿÷≢)⋄(n⍺)+.×(n⍵)}Nv	Sample Pearson correlation coefficient	Dfn	Dyadic Function		Mathematical	pcc ppmcc bivariate
 Xs(≠⊆⊢)Yv	Cut Yv at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split partition separate chop divide chunk dividing
 X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
 X(1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable
@@ -2142,3 +2143,8 @@ M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathe
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof
 Mv{⍺+2-/⌈\0,+\⍺-⍵}Nv	Work done for demand Nv with capacity Mv	Dfn	Dyadic Function		Mathematical	orders capacities production supply demands supplies
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method
+Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	contains
+Cv{⊃⌽ ⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/ (⌽⍺),⊂0⊣¨⍵}Dv	Length of longest common substring	Dfn	Dyadic Function		Text	text match
+(-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st
+{1 0 1(,∘.∧)⍣⍵⊢1}Js	Cantor set iteration Js	Dfn	Monadic Function		Mathematical	fractal ternary middle third
+{,⊃∘.+/⍵⍴⊂⍳10}Is	Sum of digits of the first 10*Is numbers (0=⎕IO)	Dfn	Monadic Function		Mathematical	sod
