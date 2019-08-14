@@ -1078,7 +1078,7 @@ refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function			namesp
 cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function			tabexpansion horizontaltabs adjacent1s flipflopRS
 z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function			FastFourierTransform convolution polynomial
 {0::0⋄1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
-X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Functtion	Dyadic Operator	Function Application	circlediaeresis ⍥
+X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Function	Dyadic Operator	Function Application	circlediaeresis ⍥
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 {⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function		Boolean/Logical	truesat ⍸⍣¯1 inversion
