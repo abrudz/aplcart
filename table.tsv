@@ -198,13 +198,13 @@ X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebr
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension
 (X1 X2)(Y1 Y2)	Stranding: (⊂(⊂X1),(⊂X2)),(⊂(⊂Y1),(⊂Y2))	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation
-(X1+X2)×Y	Precedece: Y×X1+X2	Syntax			Expression	roundparentheses grouping precedence roundparens
+(X+Y)×Z	Precedence: Z×X+Y	Syntax			Expression	roundparentheses grouping precedence roundparens
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train fgh 3train 3-train
 (X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Trian	Expression	tacit roundparentheses roundparens grouping derived train Agh 3train 3-train
 X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fgh 3train 3-train
-X1(X2 g h)Y	Fork: X2 g X1 h Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived Agh 3train 3-train
+X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived Agh 3train 3-train
 f←{⍵}	Prototypical monadic Dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 op←{⍺⍺ ⍵}	Prototypical monadic Dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 op←{⍺⍺ ⍺}	Prototypical monadic Dop deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
