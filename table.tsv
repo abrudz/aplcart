@@ -1117,20 +1117,20 @@ X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnoti
 X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1st binary base-2 base2
 Xv(⊣/⍷)Ym	Boolean rows of Ym starting with X	Tacit	Dyadic Function		Sets	findfirstin search locatefirst binary base-2 base2
 Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2
-(∪≡⊢)Y	Boolean test: Are all major cells of Y unique?	Tacit	Monadic Function		Sets	alldifferent noduplicates nodups items elements binary base-2 base2
-∧/∘,B	Boolean test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ binary base-2 base2
-∨/∘,B	Boolean test: Are any true?	Tacit	Monadic Function		Boolean/Logical	forany thereexists ∃ binary base-2 base2
-(~∨/∘,)B	Boolean test: Are none true?	Tacit	Monadic Function		Boolean/Logical	theredoesnotexist ∄ binary base-2 base2
-(⍕≡⊢)Y	Boolean test: Is Y a simple character array?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-(1=≢∘⍴)Y	Boolean test: Is Y a vector?	Tacit	Monadic Function		Array Properties	rank1 binary base-2 base2
-(-≡⍉)Ym	Boolean test: Is Ym anti-symmetric?	Tacit	Monadic Function		Array Properties	antisymmetric skewsymmetric skew-symmetric binary base-2 base2
-(⍉≡⊢)Ym	Boolean test: Is Ym symmetric?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-(1=2|⎕DR)Y	Boolean test: Is Y numeric?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-(11=⎕DR)Y	Boolean test: Is Y Boolean?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-(0 2∊⍨⎕DR)Y	Boolean test: Is Y character?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-Xv(∊∧.∧∊⍨)Yv	Boolean test: Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Properties	binary base-2 base2
-(⊢≡∘⍋⍋)Yv	Boolean test: Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	binary base-2 base2
-≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical	binary base-2 base2
+(∪≡⊢)Y	Test: Are all major cells of Y unique?	Tacit	Monadic Function		Sets	alldifferent noduplicates nodups items elements binary base-2 base2
+∧/∘,B	Test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀
+∨/∘,B	Test: Are any true?	Tacit	Monadic Function		Boolean/Logical	forany thereexists ∃
+(~∨/∘,)B	Test: Are none true?	Tacit	Monadic Function		Boolean/Logical	theredoesnotexist ∄
+(⍕≡⊢)Y	Test: Is Y a simple character array?	Tacit	Monadic Function		Array Properties	
+(1=≢∘⍴)Y	Test: Is Y a vector?	Tacit	Monadic Function		Array Properties	rank1
+(-≡⍉)Ym	Test: Is Ym anti-symmetric?	Tacit	Monadic Function		Array Properties	antisymmetric skewsymmetric skew-symmetric
+(⍉≡⊢)Ym	Test: Is Ym symmetric?	Tacit	Monadic Function		Array Properties	
+(1=2|⎕DR)Y	Test: Is Y numeric?	Tacit	Monadic Function		Array Properties	
+(11=∘⎕DR 2∘⌿)Y	Test: Is Y Boolean?	Tacit	Monadic Function		Array Properties	binary base-2 base2
+(0 2∊⍨10|⎕DR)Y	Test: Is Y character?	Tacit	Monadic Function		Array Properties	
+Xv(∊∧.∧∊⍨)Yv	Test: Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Properties	
+(⊢≡∘⍋⍋)Yv	Test: Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	
+≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical	
 X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets	
 A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation
 X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	chipmunk
@@ -1479,7 +1479,7 @@ X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last
 Av{(⍺⌿⍵)∧1(⍵⌿⊖)⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on each subvector of Bv partioned by Av (fast ∧⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector major cells items
 ,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items
 (⍉1+⊢⊤¯1+∘⍳×/)Yv	All tuples of corresponding elements of ⍳¨Yv (for large Yv)	Tacit	Monadic Function		Index Generation	indices major cells items
-∧/Bv	Boolean test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ binary base-2 base2
+∧/Bv	Test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ binary base-2 base2
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 Av{(⍺⌿⍵)≥1(⍵⌿⊖)⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on each subvector of Bv partitioned by Av (fast ∨⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector cell item
 ∨/BA	Any? (row-wise)	Tacit	Monadic Function		Boolean/Logical	anyone? forany thereexists ∃ horizontally rowwise
