@@ -69,7 +69,8 @@ A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger
 12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide table inversion
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide leastsquares table pseudoinversion
-Mm⌹Nm	Multiplying Mm with inversed Nm	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide inversion
+Mm⌹Nm	Multiplying Mm with inversed Nm	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
+Mm⌹Nv	Solve equation system with variable coefficients Mm and values Nv	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
 M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix conversion convert
 M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathematical	frombase decoding uptack pack frommixedradix fromradix basevalue conversion convert
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function		Array Properties	dimensions rho ρ ϱ rank axes
@@ -592,10 +593,12 @@ r←data {header}(⎕CSV⍠2)format_spec	Convert CSV data from APL inverted tabl
 r←type ⎕DR x	Interpret internal representation as array of type 'type'	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 type←⎕DR x	Return internal data type of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter ⎕df ⍕ table
-r←0 ⎕JSON data	Convert JSON text to APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation import parse deserialise deserialize
-r←1 ⎕JSON data	Convert JSON text from APL array	System	Function	Data Conversion	System Function	javascriptobjectnotation export generate serialise serialize
-r←0(⎕JSON⍠'M')data	Convert JSON text to APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation import parse deserialise deserialize table
-r←1(⎕JSON⍠'M')data	Convert JSON text from APL matrix	System	Function	Data Conversion	System Function	javascriptobjectnotation export generate serialise serialize table
+r←0 ⎕JSON data	Convert JSON text to APL array	System	Function	Data Conversion	System Function	from JSON2APL javascriptobjectnotation import parse deserialise deserialize
+r←1 ⎕JSON data	Convert APL array to JSON text	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize
+r←0(⎕JSON⍠'M')data	Convert JSON text to APL matrix	System	Function	Data Conversion	System Function	from JSON2APL javascriptobjectnotation import parse deserialise deserialize table
+r←1(⎕JSON⍠'M')data	Convert APL matrix to JSON text	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table
+(1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵⋄⍵})Y	Convert any rank APL array to JSON	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
+(↑⍣≡0∘⎕JSON)Y	Convert JSON to high rank APL array	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex find locate perlcompatibleregularexpression locating location
@@ -1293,8 +1296,8 @@ M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away f
 (××∘⌊0.5+|)N	Rounding to nearest whole number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring integer
 (+/÷1⌈0⊥⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero cells items
-(0.5*⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
-(≢÷⍨0.5*⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
+(2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
+(≢÷⍨2*∘÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
 (≢÷⍨≢÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 Var(X) dispersion
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion
 (100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	% vertically columnwise
@@ -1434,7 +1437,8 @@ I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Funct
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with factors Mv in descending order for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply sorting reordering ordering
 Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote cells items
 {({1≠≢⍵}⌸⍵)⌿∪⍵}Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique items elements
-C(⎕S'%'⍠'ML'1)D	grep: Globally search D with Regular expression C and Print	Tacit	Monadic Operator		Text	
+Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find
+Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Test: Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search
 (32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
 (1.8÷⍨¯32∘+)N	Fahrenheit to Celcius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius c2f() ctof() convert
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()
@@ -1466,9 +1470,9 @@ X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	
 X{⍺⍪⍵/⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements
 X{⍺⌿⍨(≢⍵)>⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements
-X{⍺⌿⍨(≢⍵)<⍵⍳⍺}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove
+X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove
 ' '∘(⊢(/⍨)1(⊢∨⌽)≠)Dv	Cyclic compression of successive blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous spaces multiple remove drop without
-(⊃÷¯2÷2∘⊃-¯1 1×0.5*⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0
+(⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0
 ((⍳-∘⌈÷∘2)(⊣⊖⌽),⍨⍴∘⍳×⍨)Js	A magic square, odd side Js	Tacit	Monadic Function		Mathematical	
 Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank axis
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element
@@ -1534,7 +1538,8 @@ Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic p
 →⎕LC	Continuing execution	System			Expression	resume thread
 (10⊥¯1+⎕D∘⍳)Dv	Safe conversion of string into integer	Tacit	Monadic Function		Data Conversion	eval() evaluate atoi() execute secure number
 {,⍉3↑(⎕D,⎕A)[1+16 16⊤¯1+'UTF-8'⎕UCS ⍵]}Dv	Conversion of characters to hexadecimal byte representation	Dfn	Monadic Function		Data Conversion	ord() num() hex() utf8
-((⊃2⊃⎕VFI)⍤1)Dv	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	eval() evaluate execute atoi() secure
+((⊃2⊃⎕VFI)⍤1)D	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe
+X({(w/⍺)@{w}⊃⌽w f←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a number with defaults X	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe
 (1+⍴⊥¯1∘+)Jm	Conversion of indices Jm of array to indices of raveled array	Tacit	Monadic Function		Index Generation	
 (⊢∊⍨∘⍳⌈/)Jv	Conversion of set of indices Jv to a mask	Tacit	Monadic Function		Boolean/Logical	indicate masking indicating
 ⍎∘⍕Yv	Convert character or numeric data into numeric (unsafe)	Tacit	Monadic Function		Data Conversion	normalise numbers
@@ -2007,7 +2012,7 @@ X(Is{(⍺↑⍨a[⍺⍺]@⍺⍺⊢s),[⍺⍺]⍵↑⍨w[⍺⍺]@⍺⍺⊢s←(a�
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 I(⊣*⍨1+÷⍨)N	Effective rate of interest with nominal rate N for I periods	Tacit	Dyadic Function		Mathematical	
 *N*2	Limit of nominal rate N when continuously compounded	Primitive	Monadic Function		Mathematical	interest
-(0.5*⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	Cartesian metric Pythagorean d() matrix
+(2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	Cartesian metric Pythagorean d() matrix
 Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create (optionally named Cv) namespace with name-value pairs Yv	Dfn	Ambivalent Monadic Function,Dyadic Function		Data Conversion	object new namevalue dictionary convert array
 {⍵.((⊂,∘⊂⍎)¨⎕NL¯2)}Y	Extract name-value pairs from namespaces Y	Dfn	Monadic Function		Data Conversion	object unpack namevalue dictionary convert array contents
 10∘⍟N	Logarithm	Tacit	Monadic Function		Mathematical	log() log-10 log10() 10-log
