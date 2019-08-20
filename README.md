@@ -62,6 +62,7 @@ To answer *how do I* questions, APLcart currently searches over 2000 entries:
 - All idioms from the FinnAPL idiom list, like `(⊢⍳⌈/)` (fully updated to use modern APL)
 - The Yale/APL79 idiom list (fully updated to use modern APL)
 - Selected entries from Dyalog's #onelinerwednesday series, like `(×/⊢÷+/-2×⊢)` 
+- Adapted entries from JSoftware's Phrase Book (translated to APL)
 - and other entries [submitted](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=) by users like you!
 
 ## Features wish list

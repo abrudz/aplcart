@@ -256,8 +256,8 @@ errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	erro
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 (2*∘÷⍨1⊥×⍨÷⊢∘≢)N	Quadratic mean	Tacit	Monadic Function		Mathematical	Root square rms()
 Mv{n←(⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢ ⋄ (n⍺)+.×(n⍵)}Nv	Sample Pearson correlation coefficient	Dfn	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
-Xs(≠⊆⊢)Yv	Cut Yv at occurences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split partition separate chop divide chunk dividing
-X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
+Xs(≠⊆⊢)Yv	Cut Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split partition separate chop divide chunk dividing
+X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
 X(1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable
 Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
@@ -847,7 +847,7 @@ rslt←{larg} (land dfns.cf rand) rarg	Ratio of operand timings	Dop		Dyadic Oper
 nvec←{tolerance←⎕CT} dfns.cfract numb	Continued fraction approx of real ⍵	Dfn	Function			continuedfraction goldenmean fibonaccinumber
 sum←{digs←6} dfns.chksum array	Simple ⍺-digit checksum	Dfn	Function			hashing
 mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function			expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table
-table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function			performance expressioncomparison histogram ⎕ML
+table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function			performance expressioncomparison histogram ⎕ML time milliseconds speed
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function			cells elements
 sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) columns	Dfn	Function			addition columnsum infiniteprecision
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function			
@@ -1151,7 +1151,7 @@ Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dy
 +\∘⍳IS	First Js triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217 1st
 Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
 (×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals
-{≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurances statistics items elements
+{≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements
 Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
 ↑∘,∘⊂Y	Increment rank by one before first dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector dimensions axes axis 1st
 (,⍤0)Y	Increment rank by one after last dimension	Tacit	Monadic Function		Structural	addtrailingaxis GhostBuster columnmatrixfromvector dimensions axes axis
@@ -1170,7 +1170,9 @@ X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is-degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model best
-(0≠.=400 100 4∘.|⊢)Js	Is Js (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
+(0≠.=400 100 4∘.|⊢)J	Test: Is J (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	gregoriancalendar 29thfeb29 29february29th
+(28+0≠.=400 100 4∘.|⊢)J	Number of days in February of year J (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
+I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
 X(1≠6 9⍸⍳+3×⍸)Y	Test if Y is outside range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	≥Y> ≥X> tao totalarrayordering interval outsiderange?
 X(6≠⍳+3×⍸)Y	Test if Y is outside range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	≥Y≥ ≥X≥ tao totalarrayordering interval outsiderange?
 X(1≠⍸)Y	Test if Y is outside range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	>Y≥ >X≥ tao totalarrayordering interval outsiderange?
@@ -1286,7 +1288,8 @@ X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primit
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double items elements
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 (⊢⌽⍨1-1⊥⍨=∘' ')Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright right-align flushrightflush rightjustifyright table
-{{⍵+.×¯1*2</⍵,0}(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	romannumerals arabicnumerals latinnumerals
+{(⊢+.×¯1*2</,∘0)(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral
+('MDCLXVI'/⍨(0,6⍴2 5)⊤⊢)Js	Generate Roman numeral (purely additive, no refinements)	Tacit	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
 Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast: ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick
@@ -1368,8 +1371,8 @@ Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic
 X@{B}Y	Unpack a vector X into an array based on mask B	Primitive	Monadic Function	Dyadic Operator	Structural	list indicate masking indicating
 Cv(⊢⊆⍨∘~∊⍨)Dv	Split vector Dv at any sequence of characters in Cv	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv partition segment separate chunk list dividing
 {⊂⍤¯1⊢1/⍵}Y	Vector of major cells for any rank	Dfn	Monadic Function		Structural	vectorise vectorize list dimensions higher high-rank any-rank highrank anyrank items elements axes
-(7|2⎕NQ⎕←#'DateToIDN',⊂)Jv	Weekday (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	gregoriancalendar
-(7|2⎕NQ#'DateToIDN',,∘1 1)Js	Weekday (S-S:0-6) of first of year Js	Tacit	Monadic Function		Mathematical	gregoriancalendar 1st
+(7|2⎕NQ⎕←#'DateToIDN',⊂)Jv	Day of week (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar
+(7|2⎕NQ#'DateToIDN',,∘1 1)Js	Day of week (Sunday:0) of first of January Js	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar 1st year
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
 Mv(+.×⍨÷1⊥⊣)Nm	Weighted average of rows of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
 f@{B}Y	Where: Execute f on condition B mask	Dop	Dyadic Function	Monadic Operator	Function Application	amend update indicate masking indicating
@@ -1718,7 +1721,7 @@ Xs+.=∘,Y	Number of occurrences of scalar Xs in array Y	Tacit	Dyadic Function		
 (×/¯1↓⍴)Y	Number of rows in array Y (also of vector)	Tacit	Monadic Function		Array Properties	list
 ≢Xm	Number of rows in matrix Xm	Primitive	Monadic Function		Array Properties	count tally table
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
-{--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements
+{--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which
@@ -1767,7 +1770,7 @@ M(⊢+⊣×0=⊢)N	Replacing zeroes in N with corresponding elements of M	Tacit	
 ('/'@(' '∘=)∘⍕100|1⌽3∘↑)Jv	Date (⎕TS format) to M/D/YY	Tacit	Monadic Function		Text	ANSI INCITS 30-1997 (R2008) NIST FIPS PUB 4-2 American USA
 ('.'@(' '∘=)∘⍕∘⌽3∘↑)Jv	Date (⎕TS format) to D.M.YYYY	Tacit	Monadic Function		Text	ÖNORM DS Austrian Denmark Danish Finnish Finland Montenegro Serbian Montenegrin
 ('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO 8601:2005 LST
-{2⌽(⊃'am'⌽⍨12≤4⊃⍵),1↓∊':',¨'m00',∘⍕¨3↑3↓⍵}Jv	Date (⎕TS format) to H:mm:sstt	Dfn	Monadic Function		Text	timestamp am/pm 12-hour clock
+{2⌽∊(12((⊃'am' 'pm'⌽⍨≤),∘⍕|)4⊃⍵),':'@1∘⍕¨100+2↑4↓⍵}Jv	Date (⎕TS format) to H:mm:sstt	Dfn	Monadic Function		Text	timestamp am/pm 12-hour clock
 {1↓∊':'@1∘⍕¨100+3↑3↓⍵}Jv	Date (⎕TS format) to hh:mm:ss	Dfn	Monadic Function		Text	timestamp 24-hour clock
 ⍬∘⍴Y	First element of Y as a scalar	Tacit	Monadic Function		Selection	1st cell item
 (⊢⍴⍨1⌈¯2↑⍴)Yv	Reshaping non-empty lower-rank array Yv into a matrix	Tacit	Monadic Function		Structural	table
@@ -2153,3 +2156,8 @@ Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length 
 (-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones
 {1 0 1(,∘.∧)⍣⍵⊢1}Js	Cantor set iteration Js	Dfn	Monadic Function		Mathematical	fractal ternary middle third
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()
+((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
+(¯1+(⎕D,⎕A)⍳⊢)D	Translate characters to digits (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
+(⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels
+Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function,Dyadic Function		System	time speed performance
+⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
