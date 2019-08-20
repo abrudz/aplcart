@@ -2161,3 +2161,5 @@ Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length 
 (⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels
 Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function,Dyadic Function		System	time speed performance
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
+(⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	
+(⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	
