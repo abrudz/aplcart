@@ -12,7 +12,7 @@ SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 !N	Factorial (Gamma function of N+1)	Primitive	Monadic Function		Mathematical	countpermutations exclamation bang shriek combinatorics fact() gamma() Γ
 ?J	Random number selected from ⍳J	Primitive	Monadic Function		Mathematical	questionmark roll randominteger interrogationpoint query eroteme
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function		Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
-~B	Logical Inverse: 0=B	Primitive	Monadic Function		Mathematical	tilde not logicalnot logicalnegation logicalcomplement ¬ negate inverting
+~B	Logical Inverse: 0=B	Primitive	Monadic Function		Boolean/Logical	tilde not logicalnot logicalnegation logicalcomplement ¬ negate inverting
 M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	plus addition
 M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −
 M×N	Multiplying M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product
@@ -40,8 +40,8 @@ A=B	XNOR	Primitive	Dyadic Function		Boolean/Logical	materialbiconditional biimpl
 A≠B	XOR	Primitive	Dyadic Function		Boolean/Logical	exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat circumflex Kpq
 A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
-A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq
-A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq
+A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
+A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()
 ¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arsin() asin() arcussinus sin⁻¹() sin^-1()
 ¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()
@@ -1121,8 +1121,8 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 Xv(⊣/⍷)Ym	Boolean rows of Ym starting with X	Tacit	Dyadic Function		Sets	findfirstin search locatefirst binary base-2 base2
 Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2
 (∪≡⊢)Y	Test: Are all major cells of Y unique?	Tacit	Monadic Function		Sets	alldifferent noduplicates nodups items elements binary base-2 base2
-∧/∘,B	Test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀
-∨/∘,B	Test: Are any true?	Tacit	Monadic Function		Boolean/Logical	forany thereexists ∃
+∧/∘,B	Test: Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ ⋀
+∨/∘,B	Test: Are any true?	Tacit	Monadic Function		Boolean/Logical	forany thereexists ∃ ⋁
 (~∨/∘,)B	Test: Are none true?	Tacit	Monadic Function		Boolean/Logical	theredoesnotexist ∄
 (⍕≡⊢)Y	Test: Is Y a simple character array?	Tacit	Monadic Function		Array Properties	
 (1=≢∘⍴)Y	Test: Is Y a vector?	Tacit	Monadic Function		Array Properties	rank1
@@ -2163,3 +2163,17 @@ Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
 (⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	
+(⌽≡⊢)Dv	Test: Is Dv a palindrome?	Tacit	Monadic Function		Text	
+X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1
+X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boolean/Logical	falsy falsey 0
+X f⍨Y	Church Boolean Logical Inverse	Primitive	Dyadic Function	Monadic Operator	Mathematical	~ not logicalnot logicalnegation logicalcomplement ¬ negate inverting
+{⍺(⍺⍺ ⍵⍵ ⊢)⍵}	Church Boolean AND	Primitive	Dyadic Function		Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq
+{⍺(⊣ ⍺⍺ ⍵⍵)⍵}	Church Boolean OR	Primitive	Dyadic Function		Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
+{⍵(⍺⍺ ⍵⍵ ⊢)⍺}	Church Boolean NAND	Primitive	Dyadic Function		Boolean/Logical	⍲ shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
+{⍵(⊣ ⍺⍺ ⍵⍵)⍺}	Church Boolean NOR	Primitive	Dyadic Function		Boolean/Logical	⍱ peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
+{⍺(⍺⍺⍨ ⍵⍵ ⍺⍺)⍵}	Church Boolean XOR	Primitive	Dyadic Function		Boolean/Logical	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
+{⍺(⍺⍺ ⍵⍵ ⍺⍺⍨)⍵}	Church Boolean XNOR	Primitive	Dyadic Function		Boolean/Logical	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
+{⍺(⍵⍵ ⍺⍺ ⊣)⍵}	Church Boolean Implication	Primitive	Dyadic Function		Boolean/Logical	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
+{⍵(⍵⍵ ⍺⍺ ⊣)⍺}	Church Boolean Nonimplication	Primitive	Dyadic Function		Boolean/Logical	> abjunction ⇏ not butnot Lpq
+{⍺(⍺⍺ ⍵⍵ ⊣)⍵}	Church Boolean Converse Implication	Primitive	Dyadic Function		Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying
+{⍵(⍺⍺ ⍵⍵ ⊣)⍺}	Church Boolean Converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	< ⇍ Mpq
