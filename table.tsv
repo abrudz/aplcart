@@ -741,6 +741,7 @@ children←{class} ⎕WN parent	Child objects (of class) of parent	System	Functi
 {0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
 ⎕TRAP←trap_spec	Define error handling	System	Function	Error Message	System	try catch
 Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function		Index Generation	iota indicesin indexof position columndatabase matrix
+60⌶D	Partition lines of D into APL tokens	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut into identifiers
 As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult
 127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe
 180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code oo classes private instance
@@ -796,8 +797,8 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namemangling
 8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹
 50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension
-(819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function			lettercase caseless caseinsensitive normalize
-C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator		lettercase caseinsensitive comparison lookup
+(819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function		Text	lettercase caseless caseinsensitive normalize
+C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lettercase caseinsensitive comparison lookup
 ⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural	list cells items
 (X{(⊂⍋(⍳≢⍵),⌊⍺⍺)⌷⍵,⍺⍺}Nv)Y	Insert X at fractional positions Nv in Y (≢Nv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	
@@ -805,234 +806,235 @@ C f{(⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}(819⌶819⌶⍨∘1) D	Caseless operation	
 {⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
 X⊣⍣Bs⊢Y	Ternary: if Bs then return X else return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
 As f{⍺:⍺⍺ ⍵ ⋄ ⍵⍵ ⍵}g Y	Ternary: if As then apply f to Y else apply g to Y1	Dop	Dyadic Function	Dyadic Operator	Function Application	conditionaloperator inlineiff ternaryiff ?:
-y←dfns.Cholesky x	Decomposition of Hermitian positive-definite matrix	Dfn	Function			Choleskydecomposition table
-rslt←{x} (u dfns.Cut case) y	Cut operator	Dop		Dyadic Operator		gameoflife GoL
-{larg}(fn dfns.Depth k)rarg	Apply fn at depths k	Dop		Dyadic Operator		rank dimensions axes
-z←{larg}(fn dfns.H)rarg	Quaternion arithmetic	Dop		Monadic Operator		
-distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function			
-commit←(⎕NS'') dfns.UndoRedo	Derive undo/redo function	Dop		Monadic Operator		
-V←{rcols←1…} dfns.X M	Exact cover: Knuth's Algorithm X	Dfn	Function			exactcover AlgorithmX exactcover gameofsudoku N-Queens pentomino NQueens
-rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator		hook co-operator cooperator
-rslt←(func dfns.acc) argt	Accumulating reduction	Dop		Monadic Operator		
-digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function			k-adicnumbers shortlex bijectivenumeration unary kadicnumbers
-val←list dfns.alget key	Value for key ⍵ from list ⍺	Dfn	Function			associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
-val list←list dfns.alpop key	Value for key ⍵, and reduced list ⍺	Dfn	Function			associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
-list←list dfns.alpush key val	List ⍺ extended with key-value pair ⍵	Dfn	Function			associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
-list←list dfns.alset key val	List ⍺ with key-value ⍵ replacement	Dfn	Function			associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
-rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator		determinant innerproduct SAX
-{name}←{ref} dfns.ambiv namelist	Ambivalize traditional function	Dfn	Function			ambivalent tradfn
-rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator		lazyevaluation sequentialtest adjacentguard &&
-alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function			USHousepfRepresentatives assignment
-enco←base (dfns.ary) ratnum	⍺-ary representation of rational ⍵	Dfn	Function			rationalnumber binary ternary IEEEFPprecision boolean base-2 base2
-vect←(fn dfns.ascan) vect	Associative vector scan	Dop		Monadic Operator		scanoperators list scanning
-array←{ascan} (fn dfns.ascana) array	Associative higher rank scan	Dop		Monadic Operator		scanoperators dimensions scanning high-rank any-rank highrank anyrank axes
-bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function			Hungarianmethod maximise optimise graph independentzeros
-rslt←{⍺←⊢} (new dfns.at sel) old	Prefix-friendly @	Dop		Dyadic Operator		atoperator prefixagreement whereclause SigmaAPL semicolonseparator
-cmat←{attributes} dfns.attrib namelist	Function/operator attributes	Dfn	Function			⎕AT ⎕SIZE syntax name-clashproblem nameclashproblem
-rslt←{larg)(op dfns.avl) rarg	Adelson-Velskii, Landis (AVL) trees	Dop		Monadic Operator		binarysearchtree typenotation expressiontransformation
-bmat←{A CI} dfns.baby bmat	Manchester Small Scale Experimental Machine	Dfn	Function			SSEM firstcomputer assembler disassembler diversions bottom⊥
-z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator		FinnAPLIdiomList
-coded←dfns.base64 plain	Base64 encoding and decoding as used in MIME	Dfn	Function			Base64encoding
-prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function			Bayesformula
-{tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function			turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers vectors
-cvec←{larg} (fn dfns.big) rarg	Arithmetic on large integers	Dop		Monadic Operator		infiniteprecision factorial
-p←s dfns.birthday n	Probability of same birthday	Dfn	Function			
-cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function			border box-drawingcharacters displayofarrays boxing boxdrawingcharacters boxed enclosed
-indx←(fun dfns.bsearch) range	Binary search	Dop		Monadic Operator		binarysearch boolean base-2 base2
-tvec←{larg} (fn dfns.bt) rarg	Balanced Ternary Arithmetic	Dop		Monadic Operator		balancedternary Setuncomputer TERNAC BurroughsB1700
-sref←dfns.cache ivec	Ref to space with initial cache	Dfn	Function			memoization persistentlocalvariable fibonaccinumber blank
-calendar←dfns.cal date	Calendar	Dfn	Function			winningLoto
-rslt←i j k ··· F dfns.case G case H ··· arg	Select statement	Dop		Dyadic Operator		conditionaloperator selectoperator co-operator cooperator
-rslt←{larg} (land dfns.cf rand) rarg	Ratio of operand timings	Dop		Dyadic Operator		performance expressioncomparison hyperator
-nvec←{tolerance←⎕CT} dfns.cfract numb	Continued fraction approx of real ⍵	Dfn	Function			continuedfraction goldenmean fibonaccinumber
-sum←{digs←6} dfns.chksum array	Simple ⍺-digit checksum	Dfn	Function			hashing
-mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function			expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table
-table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function			performance expressioncomparison histogram ⎕ML time milliseconds speed
-cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function			cells elements
-sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) columns	Dfn	Function			addition columnsum infiniteprecision
-TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function			
-rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator		conditionaloperator Helsingør hyperator co-operator cooperator
-{mbrot←0}(cxfn dfns.cxdraw) zoom	Complex function drawing	Dop		Monadic Operator		complexnumbers unitcircle fixpoint Mandelbrotset dual under
-rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function			compression spaces delete remove without
-dates←{g←¯53799} dfns.date daynos	⎕TS format from day number	Dfn	Function			Gregoriancalendar 1752 calendar
-daynos←{g←17520902} dfns.days dates	Day number from ⎕TS format	Dfn	Function			InternationalDayNumber
-rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function			compression spaces delete remove trailing without
-nums←{signed←0} dfns.dec cvex	Decimal from hexadecimal	Dfn	Function			decimalfromhex
-defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function			display latebinding ⎕NC
-num←dfns.det nmat	Determinant of square matrix	Dfn	Function			Gaussianmethod Hilbertmatrix table
-tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex ⍵	Dfn	Function			depth-firstsearch spanningtree abstraction depthfirstsearch
-tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Operator		derivedfunction combinator hook fork box-drawingcharacters boxdrawingcharacters
-cvec←dfns.dice ?6 6	Interpret a throw of dice	Dfn	Function			guard diversions
-rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function			definefunction sessioninput ⎕SE REPL
-cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function			displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters enclosed
-cmat←dfns.display array	Boxed display of array	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters enclosed
-cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters sub-array dimension enclosed
-cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function			displayofarrays boxing box-drawingcharacters boxdrawingcharacters dimension enclosed
-d←L dfns.dist R	Levenshtein distance	Dfn	Function			stringcomparison fuzzy
-rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function			compression spaces delete remove start beginning without
-rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function			compression spaces consecutive delete remove without
-rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator		is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
-crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function			whitedots functionsformatting name-clashproblem stuff nameclashproblem
-cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function			box-drawingcharacters diversions boxdrawingcharacters
-nvec←{axis} dfns.dscan nvec	Divide scan	Dfn	Function			scanoperators dividing scanning
-cmat←{topbar←1} dfns.dsp array	Reduced version of disp	Dfn	Function			boxing displayofarrays tape
-rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function			compression spaces delete remove ending without
-rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function			compression spaces delete remove without
+({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function "name" from the dfns workspace without polluting the urrent workspace	Syntax			System	
+y←dfns.Cholesky x	Decomposition of Hermitian positive-definite matrix	Dfn	Function		Mathematical	Choleskydecomposition table
+rslt←{x} (u dfns.Cut case) y	Cut operator	Dop		Dyadic Operator	Structural	gameoflife GoL ⌺
+{larg}(fn dfns.Depth k)rarg	Apply fn at depths k	Dop		Dyadic Operator	Function Application	rank dimensions axes levels
+z←{larg}(fn dfns.H)rarg	Quaternion arithmetic	Dop		Monadic Operator	Mathematical	Hamiltonians
+distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian
+commit←(⎕NS'') dfns.UndoRedo	Derive undo/redo function	Dop		Monadic Operator	Function Application	state
+V←{rcols←1…} dfns.X M	Exact cover: Knuth's Algorithm X	Dfn	Function		Boolean/Logical	exactcover AlgorithmX exactcover gameofsudoku N-Queens pentomino NQueens
+rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+rslt←(func dfns.acc) argt	Accumulating reduction	Dop		Monadic Operator	Function Application	
+digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function		Mathematical	k-adicnumbers shortlex bijectivenumeration unary kadicnumbers
+val←list dfns.alget key	Value for key ⍵ from list ⍺	Dfn	Function		Selection	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
+val list←list dfns.alpop key	Value for key ⍵, and reduced list ⍺	Dfn	Function		Selection	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
+list←list dfns.alpush key val	List ⍺ extended with key-value pair ⍵	Dfn	Function		Structural	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
+list←list dfns.alset key val	List ⍺ with key-value ⍵ replacement	Dfn	Function		Structural	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
+rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator	Mathematical	determinant innerproduct SAX
+{name}←{ref} dfns.ambiv namelist	Ambivalize traditional function	Dfn	Function		System	ambivalent tradfn
+rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtest adjacentguard && shortcutting
+alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment
+enco←base (dfns.ary) ratnum	⍺-ary representation of rational ⍵	Dfn	Function		Mathematical	rationalnumber binary ternary IEEEFPprecision boolean base-2 base2
+vect←(fn dfns.ascan) vect	Associative vector scan	Dop		Monadic Operator	Function Application	scanoperators list scanning
+array←{ascan} (fn dfns.ascana) array	Associative higher rank scan	Dop		Monadic Operator	Function Application	scanoperators dimensions scanning high-rank any-rank highrank anyrank axes
+bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function		Mathematical	Hungarianmethod maximise optimise graph independentzeros zeroes 0s
+rslt←{⍺←⊢} (new dfns.at sel) old	Prefix-friendly @	Dop		Dyadic Operator	Function Application	atoperator prefixagreement whereclause SigmaAPL semicolonseparator @
+cmat←{attributes} dfns.attrib namelist	Function/operator attributes	Dfn	Function		System	⎕AT ⎕SIZE syntax name-clashproblem nameclashproblem properties
+rslt←{larg)(op dfns.avl) rarg	Adelson-Velskii, Landis (AVL) trees	Dop		Monadic Operator	Structural	binarysearchtree typenotation expressiontransformation
+bmat←{A CI} dfns.baby bmat	Manchester Small Scale Experimental Machine	Dfn	Function		Mathematical	SSEM firstcomputer assembler disassembler diversions bottom ⊥
+z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator	Sets	FinnAPLIdiomList
+coded←dfns.base64 plain	Base64 encoding and decoding as used in MIME	Dfn	Function		Representation	Base64encoding
+prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function		Mathematical	Bayesformula
+{tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function		Text	turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers vectors
+cvec←{larg} (fn dfns.big) rarg	Arithmetic on large integers	Dop		Monadic Operator	Mathematical	infiniteprecision factorial
+p←s dfns.birthday n	Probability of same birthday	Dfn	Function		Mathematical	paradox
+cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function		Text	border box-drawingcharacters displayofarrays boxing boxdrawingcharacters boxed enclosed
+indx←(fun dfns.bsearch) range	Binary search	Dop		Monadic Operator	Lookup	binarysearch boolean base-2 base2
+tvec←{larg} (fn dfns.bt) rarg	Balanced Ternary Arithmetic	Dop		Monadic Operator	Representation	balancedternary Setuncomputer TERNAC BurroughsB1700
+sref←dfns.cache ivec	Ref to space with initial cache	Dfn	Function		System	memoisation memoization persistentlocalvariable fibonaccinumber blank
+calendar←dfns.cal date	Calendar	Dfn	Function		Mathematical	winningLoto lotto
+rslt←i j k ··· F dfns.case G case H ··· arg	Select statement	Dop		Dyadic Operator	Selection	conditionaloperator selectoperator co-operator cooperator switch
+rslt←{larg} (land dfns.cf rand) rarg	Ratio of operand timings	Dop		Dyadic Operator	System	performance expressioncomparison hyperator
+nvec←{tolerance←⎕CT} dfns.cfract numb	Continued fraction approx of real ⍵	Dfn	Function		Mathematical	continuedfraction goldenmean fibonaccinumber
+sum←{digs←6} dfns.chksum array	Simple ⍺-digit checksum	Dfn	Function		Mathematical	hashing
+mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table
+table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function		System	performance expressioncomparison histogram ⎕ML time milliseconds speed
+cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements
+sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) columns	Dfn	Function		Mathematical	addition columnsum infiniteprecision
+TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function		System	
+rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator	Function Application	conditionaloperator Helsingør hyperator co-operator cooperator
+{mbrot←0}(cxfn dfns.cxdraw) zoom	Complex function drawing	Dop		Monadic Operator	Graphics	complexnumbers unitcircle fixpoint Mandelbrotset dual under
+rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function		Text	compression spaces delete remove without
+dates←{g←¯53799} dfns.date daynos	⎕TS format from day number	Dfn	Function		Data Conversion	InternationalDayNumber Gregoriancalendar serialnumber 1752 convert
+daynos←{g←17520902} dfns.days dates	Day number from ⎕TS format	Dfn	Function		Data Conversion	InternationalDayNumber Gregoriancalendar serialnumber convert
+rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function		Text	compression spaces delete remove trailing without
+nums←{signed←0} dfns.dec cvex	Decimal from hexadecimal	Dfn	Function		Data Conversion	decimalfromhex dec()
+defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC
+num←dfns.det nmat	Determinant of square matrix	Dfn	Function		Mathematical	Gaussianmethod Hilbertmatrix table
+tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex ⍵	Dfn	Function		Structural	depth-firstsearch spanningtree abstraction depthfirstsearch
+tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Operator	System	derivedfunction combinator hook fork box-drawingcharacters boxdrawingcharacters
+cvec←dfns.dice ?6 6	Interpret a throw of dice	Dfn	Function		Text	guard diversions
+rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function		Text	definefunction sessioninput ⎕SE REPL
+cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function		Text	displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters enclosed
+cmat←dfns.display array	Boxed display of array	Dfn	Function		Text	displayofarrays boxing box-drawingcharacters boxdrawingcharacters enclosed
+cmat←dfns.displayr array	Boxed display of array with axis lengths and subarray depths	Dfn	Function		Text	displayofarrays boxing box-drawingcharacters boxdrawingcharacters sub-array dimension enclosed
+cmat←dfns.displays array	Boxed display of array with axis lengths	Dfn	Function		Text	displayofarrays boxing box-drawingcharacters boxdrawingcharacters dimension enclosed
+d←L dfns.dist R	Levenshtein distance	Dfn	Function		Mathematical	stringcomparison fuzzy
+rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function		Text	compression spaces delete remove start beginning without
+rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function		Text	compression spaces consecutive delete remove without
+rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
+crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem
+cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function		Text	box-drawingcharacters diversions boxdrawingcharacters asciiart unicode linedrawingcharacters lines boxes
+nvec←{axis} dfns.dscan nvec	Divide scan	Dfn	Function		Mathematical	scanoperators dividing scanning
+cmat←{topbar←1} dfns.dsp array	Reduced version of disp	Dfn	Function		Text	boxing displayofarrays tape
+rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function		Text	compression spaces delete remove ending without
+rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function		Text	compression spaces delete remove without
 rslt←(⍺⍺ dfns.each) array	Fast each for pure operand function	Dop		Monadic Operator	Function application	purefunction
-yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function			date CouncilofNicaea canonpaschalis pervasivefunction histogram
-nvec←P dfns.efract Q	Egyptian fractions	Dfn	Function			Egyptianfraction
-nested←{left} dfns.eis right	Enclose-if-simple / link	Dfn	Function			encloseifsimple
-rslt←cond (⍺⍺ dfns.else ⍵⍵) argt	Condition f else g …	Dop		Dyadic Operator		conditionaloperator
-list←{leaves} dfns.enlist array	List ⍺-leaves of nested array	Dfn	Function			nestedarray vector
-dfns.esh digits	Shell for Eide-number sums	Dfn	Function			Eidenumbers rationalnumber balancedternary hexadecimal REPL
-cvec←dfns.exit code	Return to calling environment	Dfn	Function			
-names←{expr←0} dfns.externs dfn	External references from dfn ⍵	Dfn	Function			externalreferences
-v83←dfns.f32 nums	Conversion to 32-bit floats as ⎕DR 83	Dfn	Function			32-bitfloatingpoint 32bitfloatingpoint
-num←dfns.factorial num	Tail recursive factorial	Dfn	Function			tailrecursion accumulator
-nvec←dfns.factors numb	Prime factors of ⍵	Dfn	Function			primenumber
-nvec←dfns.fibonacci num	Tail-recursive Fibonacci	Dfn	Function			tailrecursion accumulator fibonaccinumber goldenmean continuedfraction
-rslt←(fun dfns.file) fname	Apply function to native file tie	Dop		Monadic Operator		nativefile railwaydiagram
-cnos←file dfns.filefind string	Find 'string' ⍵ in component file ⍺	Dfn	Function			componentfile
-cmat←{space←⎕THIS} dfns.find string	Lines containing string(s) ⍵	Dfn	Function			name-clashproblem stringsearch nameclashproblem
-{name}←dfns.fix rep	Fix function/operator rep	Dfn	Function			fixfunction
-rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of "fork" syntax	Dop		Dyadic Operator		hook co-operator cooperator
-rslt←{larg} I _fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator		hook co-operator cooperator
-refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator		functionarray functionarray
-cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function			functionsdifference comparefunctions
-cvecs←dfns.fnrefs func	External refs from tradfn ⍵	Dfn	Function			functionreferences cross-reference crossreference
-{fns}←{space←⎕THIS} dfns.fnrepl (from to)	Function string replacement	Dfn	Function			stringreplacement
-rslt←ival (func dfns.foldl) vals	Fold (reduce) from the left	Dop		Monadic Operator		reduction typenotation reducing folding
-rslt←i j k··· F dfns.for G for H··· arg	Multiple selection of function list	Dop		Dyadic Operator		conditionaloperator functionselection functionarray co-operator cooperator vector
-rslt←indx dfns.from array	Select (1↓⍴⍵)-cells from array ⍵	Dfn	Function			arrayindexing
-inv←{vals} dfns.gauss_jordan mat	Gauss-Jordan elimination	Dfn	Function			Hilbertmatrix IEEEFPprecision purefunction GaussJordan
-num←num dfns.gcd num	Greatest Common Divisor	Dfn	Function			greatestcommondivisor leastcommonmultiple tailrecursion
-lines←{tabs←0 {ctype←80}} dfns.getfile filename	Text file ⍵ as nested vector	Dfn	Function			nativefile textfile Unicode list
-graph←graph dfns.gperm perm	⍵-permutation of vertices of graph ⍺	Dfn	Function			unweightedgraph
-cvex←{width} dfns.hex nums	Hexadecimal from decimal	Dfn	Function			decimalfromhex
-{cmds←''} dfns.hexdump file	Hex dump of native file	Dfn	Function			hexadecimal macro nativefile destructiveassignment endian offsiderule
-hex←dfns.hexf num	IEEE 754/854 binary floating point	Dfn	Function			hexadecimal endian DecimalFloatingPoint 128-bitFloatingPoint 128bitFloatingPoint boolean base-2 base2
-segs←tag dfns.htx html	Extract html segments	Dfn	Function			XMLtag Kumquat
-paths←item dfns.in array	Locations of item ⍺ in array ⍵	Dfn	Function			find index pick cell element locate
-indx←notespace dfns.index class	⍵-index of notes in space ⍺	Dfn	Function			blank
-graph←graph dfns.inslink (from to)	Insert edge ⍵ in graph ⍺	Dfn	Function			
-graph←graph dfns.insnode vertex	Insert vertex ⍵ in graph ⍺	Dfn	Function			
-i←bits dfns.int u	Signed from unsigned integers	Dfn	Function			typeconversion pervasivefunction nativefile cast
-rslt←{guess←1+⎕CT} (fn dfns.invr) argt	Inverse of real-valued function	Dop		Monadic Operator		functioninverse Newton-Raphson absolutezero NewtonRaphson inversion
-rslt←{array} dfns.iotag array	Generalized iota	Dfn	Function			generialisediota generalised⍳ Unicode
-bool←dfns.isdfn name	Test for D function	Dfn	Function			testforD-function name-clashproblem testforDfunction nameclashproblem
-stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function			lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors
-rslt←{dirn←¯1} dfns.just chars	Justify text array	Dfn	Function			justifytext aligntext
-lvec←{cols} dfns.justify lvec	Justify line-vector to ⍺ columns	Dfn	Function			justifytext aligntext linevector
-seq←dfns.k6174 nnnn	Kaprekar's operation	Dfn	Function			sequence Kaprekar'soperation Kaprekarsoperation
-rslt←{c←1} dfns.kball p	Relationship between point and k-ball	Dfn	Function			sphere hypersphere
-rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Operator		boundary hypercube
-kinds←dfns.kind namelist	Parse-category of name(s) ⍵	Dfn	Function			nameclass namecolouring hybrid coloring
-kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function			namecolouring parsing Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring
-area←dim dfns.ksphere radius	Hypersphere surface area	Dfn	Function			Newton-Raphson localmaximum K-sphere manifolds NewtonRaphson
-nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function			chesspuzzle knight'stour knightstour graph treesearching diversions torus
-chars←dfns.lcase chars	Lower-casification	Dfn	Function			uppercase lowercase upperorlowercase caseinsensitive
-precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function			quicksort Totalarrayordering order(ofarrays) comparearrays lexically lexicographically sorting reordering
-bmat←dfns.life bmat	John Conway's "Game of Life"	Dfn	Function			gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
-rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operator		functionpower palindrome arithmetic-geometricmean goldenmean arithmeticgeometricmean
-rslt←{eval←1} dfns.lisp expr	Evaluator for a subset of Scheme	Dfn	Function			closure Metacircular SICP lambdaexpression
-list←dfns.list vect	List from vector ⍵	Dfn	Function			accumulator lambdaexpression min(workspace) parsing lists cons vectors
-rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator		conditionaloperator listoffunctions co-operator cooperator vector
-rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator		conditionaloperator booleanfunctions truthtables
-rslt←pvec dfns.lsys axiom	Lindenmayer L-system expansion	Dfn	Function			L-Systems fractal rewriting termrewriting Turtlegraphics LSystems
-nvec←{sepr} dfns.ltov lvec	Lines to nested vector	Dfn	Function			linevector list
-rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator		accumulator lambdaexpression minworkspace parsing lists cons vectors
-m←dfns.m91 n	McCarthy's M91 function	Dfn	Function			
-bfobj←(dfns.mac) src	Simple macro processor for bf	Dfn	Function			Brainfuck continuation-passingstyle continuationpassingstyle
-hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function			
-cols←{base←1} dfns.mayan numb	Mayan numbers	Dfn	Function			numbersystem stela calendar date astronomy vigesimalnumbersystem abacus
-cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function			diversions indexedassignment
-num←dfns.mean nvec	Arithmetic mean	Dfn	Function			localnames standarddeviation APL'88 APL88 1988
-rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Fast: Function memoisation	Dop		Dyadic Operator		memoization persistentlocalvariable fibonaccinumber
-dfns.mmind ⎕A[?4⍴6]	Mastermind or "cows and bulls"	Dfn	Function			gameofcowsandbulls diversions REPL
-ref←dfns.mns defn	Make Namespace from association list ⍵	Dfn	Function			associationlist vector
-code←dfns.morse text	Conversion to/from Morse code	Dfn	Function			Morsecode
-{files}←{type←''} dfns.mp3 dirs	Create playlist(s) for music directories	Dfn	Function			MP3(mediaplayer) mediaplayer(MP3) diversions
-nvec←{axis} dfns.mscan nvec	Minus scan	Dfn	Function			scanoperators scanning
-cmat←dfns.mtrim cmat	Trim off trailing blank cols	Dfn	Function			blanks trailingblanks spaces ending
-cvec←larg (fn dfns.nats) rarg	Natural number arithmetic	Dop		Monadic Operator		naturalnumber infiniteprecision expressiontransformation
-cvec←{path←⎕PATH} dfns.ncpath names	⎕path-aware ⎕NC	Dfn	Function			nameclassification extended⎕NC
-nvec←p dfns.nicediv q	⍵ similar integers with sum ⍺	Dfn	Function			histogram
-n←dfns.nlines simple	Number of display lines for simple array	Dfn	Function			defaultdisplay linesofoutput
-saved←{seed} dfns.nspack ref	Share arrays across space tree	Dfn	Function			packing compression enlist blank
-rslt←pick dfns.of F of G of H … arg	Pick'th fn applied to arg	Dop		Dyadic Operator		functionarray conditionaloperator co-operator cooperator
-rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator		lazyevaluation sequentialtest adjacentguard &&
-num←dfns.osc num	Oscillate - probably returns 1	Dfn	Function			cashprize wondrousnumber Gödel,Escher,Bach Goedel,Escher,Bach GödelEscherBach GodelEscherBach GoedelEscherBach engineer'sproof engineersproof
-array←dfns.pack array	Saves WS by sharing subarrays	Dfn	Function			compression arraysharing sub-array
-rslt←{cmp←1} dfns.pack4 image	Quad-tree packing	Dfn	Function			compression quadtree
-cmp←{cmp←1} dfns.packB exp	Pack a simple array	Dfn	Function			packing compression
-cmp←{cmp←1} dfns.packD data	Pack char array to boolean vector	Dfn	Function			packing compression encryption list binary base-2 base2
-cmp←{cmp←1} dfns.packH exp	Huffman packing	Dfn	Function			compression Huffmancode
-cmp←{cmp←1} dfns.packN exp	Null packing	Dfn	Function			compression stuff
-cmp←{cmp←1} dfns.packQ data	Assorted uniQues packer	Dfn	Function			packing compression
-cmp←{cmp←1} dfns.packR exp	Run-Length Encoding (RLE packing)	Dfn	Function			compression run-lengthencoding runlengthencoding
-cmp←{cmp←1} dfns.packS exp	Shannon-Fano packing	Dfn	Function			compression ShannonFano
-cmp←{cmp←1} dfns.packT exp	Simple text vector packager	Dfn	Function			packing compression list
-cmp←{cmp←1} dfns.packU exp	Unique packing	Dfn	Function			compression
-cmp←{cmp←1} dfns.packX txt	TeXt Packer	Dfn	Function			packing compression
-cmp←{cmp←12} dfns.packZ exp	Abraham Lempel, Jacob Ziv, Terry Welch	Dfn	Function			packing compression suffixtrie Lempel-Ziv-Welch LempelZivWelch
-tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function			parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser
-vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Function			unweightedgraph breadth-firstsearch breadthfirstsearch
-p←dfns.pco ⍵	⍵-th prime	Dfn	Monadic Function			primenumber J
-b←0 dfns.pco ⍵	1 iff ⍵ is not prime	Dfn	Dyadic Function			primenumber J nonprime? non-prime? composite?
-b←1 dfns.pco ⍵	1 iff ⍵ is prime	Dfn	Dyadic Function			primenumber J prime?
-n←¯1 dfns.pco ⍵	number of primes less than ⍵	Dfn	Dyadic Function			primenumber J
-v←2 dfns.pco ⍵	prime factors and exponents	Dfn	Dyadic Function			primenumber J
-v←3 dfns.pco ⍵	prime factorization of ⍵	Dfn	Dyadic Function			primenumber J
-p←4 dfns.pco ⍵	next prime larger than ⍵	Dfn	Dyadic Function			primenumber J
-p←¯4 dfns.pco ⍵	next prime smaller than ⍵	Dfn	Dyadic Function			primenumber J
-b←10 dfns.pco ⍵	m+b/⍳⍴b are all the primes between m and n, where ⍵≡m,n	Dfn	Dyadic Function			primenumber J
-rslt←{lft} (fun dfns.perv) rgt	Scalar pervasion	Dop		Monadic Operator		scalar-wise pervasivefunction scalarwise Pervade
-pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function			goldenmean goldenrectangle phinarynumber
-mat←dfns.pmat n	Permutation matrix of ⍳⍵	Dfn	Function			permutationmatrix table
-to←{dirn←1} dfns.polar fm	Polar from/to cartesian coordinates	Dfn	Function			polarcoordinates cartesiancoordinates
-rslt←count (fun dfns.pow) argt	Explicit function power	Dop		Monadic Operator		poweroperator functionpower fibonaccinumber
-rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator		partionedreduction sub-vectors segmented sub-lists subvectors sublists
-rslt←{larg} (func dfns.profile subs) rarg	Performance profiling	Dop		Dyadic Operator		timing monitor ⎕profile
-{size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function			nativefile textfile Unicode
-cmats←dfns.queens N	The N-Queens Problem	Dfn	Function			diversions chesspuzzle treesearching purefunction YouTube NQueens
-soln←dfns.quzzle grid	A hard, simple problem	Dfn	Function			diversions puzzle
-indx←brks dfns.range nums	Numeric range classification	Dfn	Function			
-rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function			rationalnumber Pi numberoftheBeast
-rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator		rationalnumber primenumber
-sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator		Eidenumbers rationalnumber balancedternary skewedfour
-rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator		currying typenotation fibonaccinumber N-Queens NQueens
-rslt←{larg) (op dfns.redblack) rarg	Red-black trees	Dop		Monadic Operator		red-blacktrees binarysearchtree enlist redblacktrees
-match←this dfns.refmatch that	Space reference match	Dfn	Function			comparenamespaces namespacecomparison blank
-crep←{tabs csep←4} dfns.refmt crep	Reformat dfn/op representation	Dfn	Function			functionsformatting
-refs←dfns.refpath ref	Refs path from root to ⍵	Dfn	Function			parentspace ancestorspace namespacereferences
-rvec←{exclude←⍬} dfns.refs ref	Vector of sub-space references	Dfn	Function			namespacereferences ⎕WX root-space rootspace list
-ref←dfns.refws wsid	Ref to saved ws ⍵	Dfn	Function			workspacereferences externalworkspace remoteexecution
-graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function			unweightedgraph delete drop without
-graph←graph dfns.remnode vertex	Graph ⍺ with vertex ⍵ removed	Dfn	Function			unweightedgraph
-enc←dfns.rep name	Encapsulate function/operator	Dfn	Function			functionarray encapsulatefunction
-{prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator		shell error-guard,dynamic shell errorguard,dynamic
-nvec←dfns.ripple nvec	Perfect Ripple Shuffle	Dfn	Function			grade carddeck diversions riffleshuffle
-line←dfns.rmcm line	APL source with comments removed	Dfn	Function			functionsformatting commentremoval one-liner oneliner
-res←{sin} (fvn dfns.roman) dex	Roman numeral arithmetic	Dop		Monadic Operator		romannumerals numbersystem diversions
-num←{num←2} dfns.root num	⍺'th root	Dfn	Function			defaultleftargument ⍺throot
-nvec←dfns.roots triple	Real roots of quadratic	Dfn	Function			realrootsofquadratic complexnumbers
-rslt←(fun dfns.rows) {array}	Operand function applied to argument rows	Dop		Monadic Operator		vector-wise vectorwise
-rounds←dfns.rr players	Round-robin tournament	Dfn	Function			Round-robintournament combination Roundrobintournament
-new←{larg} (sel dfns.sam mod) old	Select and modify	Dop		Dyadic Operator		selectandmodify destructiveassignment purefunction
-rslt←{left} (fun dfns.saw) right	Apply function Simple-Array-Wise	Dop		Monadic Operator		simplearraywise
-rslt←{larg} (op dfns.sbst) rarg	Simple Binary Search Trees	Dop		Monadic Operator		binarysearchtree typenotation enlist boolean base-2 base2
-C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function			Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch
-vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function			unweightedgraph breadth-firstsearch breadthfirstsearch
-vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function			words split text partition list
-rslt←indx dfns.select avec	⍺-selection of items from vector ⍵	Dfn	Function			indexedassignment destructiveassignment purefunction list major cells elements
-entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function			informationtheory
-nvec←dfns.sieve nvec	Sieve of Eratosthenes	Dfn	Function			primenumber
-tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	Dfn	Function			unweightedgraph spanningtree breadth-firstsearch breadthfirstsearch
-rslt←{larg} (op dfns.splay) rarg	Splay trees	Dop		Monadic Operator		binarysearchtree enlist
-cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function			compression linevector consecutive spaces
-cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function			ssxutils stringreplacement substitution
-cmat←dfns.ssmat (cmat from into)	Matrix search/replace	Dfn	Function			ssxutils stringreplacement substitution table
-cvec←{prim supp} dfns.ssword (srce from into)	Approx alternative to xutils ss	Dfn	Function			ssxutils stringreplacement substitution
+yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function		Mathematical	date CouncilofNicaea canonpaschalis pervasivefunction histogram
+nvec←P dfns.efract Q	Egyptian fractions	Dfn	Function		Mathematical	Egyptianfraction
+nested←{left} dfns.eis right	Enclose-if-simple / link	Dfn	Function		Structural	encloseifsimple
+rslt←cond (⍺⍺ dfns.else ⍵⍵) argt	Condition f else g …	Dop		Dyadic Operator	Function Application	conditionaloperator
+list←{leaves} dfns.enlist array	List ⍺-leaves of nested array	Dfn	Function		Structural	nestedarray vector
+dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL
+cvec←dfns.exit code	Return to calling environment	Dfn	Function		System	⎕OFF interactive conditional safe quit leave )off
+names←{expr←0} dfns.externs dfn	External references from dfn ⍵	Dfn	Function		System	externalreferences xref
+v83←dfns.f32 nums	Conversion to 32-bit floats as ⎕DR 83	Dfn	Function		Data Conversion	32-bitfloatingpoint 32bitfloatingpoint
+num←dfns.factorial num	Tail recursive factorial	Dfn	Function		Mathematical	tailrecursion accumulator
+nvec←dfns.factors numb	Prime factors of ⍵	Dfn	Function		Mathematical	primenumber
+nvec←dfns.fibonacci num	Tail-recursive Fibonacci	Dfn	Function		Mathematical	tailrecursion accumulator fibonaccinumber goldenmean continuedfraction
+rslt←(fun dfns.file) fname	Apply function to native file tie	Dop		Monadic Operator	Native Files	nativefile railwaydiagram
+cnos←file dfns.filefind string	Find 'string' ⍵ in component file ⍺	Dfn	Function		Component Files	componentfile
+cmat←{space←⎕THIS} dfns.find string	Lines containing string(s) ⍵	Dfn	Function		Text	name-clashproblem stringsearch nameclashproblem
+{name}←dfns.fix rep	Fix function/operator rep	Dfn	Function		Data Conversion	fixfunction
+rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+rslt←{larg} I _fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator	Function Application	functionarray functionarray
+cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function		Text	functionsdifference comparefunctions
+cvecs←dfns.fnrefs func	External refs from tradfn ⍵	Dfn	Function		System	functionreferences cross-reference crossreference
+{fns}←{space←⎕THIS} dfns.fnrepl (from to)	Function string replacement	Dfn	Function		Text	stringreplacement
+rslt←ival (func dfns.foldl) vals	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding
+rslt←i j k··· F dfns.for G for H··· arg	Multiple selection of function list	Dop		Dyadic Operator	Function Application	conditionaloperator functionselection functionarray co-operator cooperator vector
+rslt←indx dfns.from array	Select (1↓⍴⍵)-cells from array ⍵	Dfn	Function		Selection	arrayindexing
+inv←{vals} dfns.gauss_jordan mat	Gauss-Jordan elimination	Dfn	Function		Mathematical	Hilbertmatrix IEEEFPprecision purefunction GaussJordan
+num←num dfns.gcd num	Greatest Common Divisor	Dfn	Function		Mathematical	greatestcommondivisor leastcommonmultiple tailrecursion
+lines←{tabs←0 {ctype←80}} dfns.getfile filename	Text file ⍵ as nested vector	Dfn	Function		Native Files	nativefile textfile Unicode list
+graph←graph dfns.gperm perm	⍵-permutation of vertices of graph ⍺	Dfn	Function		Mathematical	unweightedgraph
+cvex←{width} dfns.hex nums	Hexadecimal from decimal	Dfn	Function		Data Conversion	decimalfromhex
+{cmds←''} dfns.hexdump file	Hex dump of native file	Dfn	Function		Native Files	hexadecimal macro nativefile destructiveassignment endian offsiderule
+hex←dfns.hexf num	IEEE 754/854 binary floating point	Dfn	Function		Data Conversion	hexadecimal endian DecimalFloatingPoint 128-bitFloatingPoint 128bitFloatingPoint boolean base-2 base2
+segs←tag dfns.htx html	Extract html segments	Dfn	Function		Text	XMLtag Kumquat
+paths←item dfns.in array	Locations of item ⍺ in array ⍵	Dfn	Function		Index Generation	find index pick cell element locate
+indx←notespace dfns.index class	⍵-index of notes in space ⍺	Dfn	Function		Text	blank
+graph←graph dfns.inslink (from to)	Insert edge ⍵ in graph ⍺	Dfn	Function		Mathematical	
+graph←graph dfns.insnode vertex	Insert vertex ⍵ in graph ⍺	Dfn	Function		Mathematical	
+i←bits dfns.int u	Signed from unsigned integers	Dfn	Function		Data Conversion	typeconversion pervasivefunction nativefile cast
+rslt←{guess←1+⎕CT} (fn dfns.invr) argt	Inverse of real-valued function	Dop		Monadic Operator	Mathematical	functioninverse Newton-Raphson absolutezero NewtonRaphson inversion
+rslt←{array} dfns.iotag array	Generalized iota	Dfn	Function		Mathematical	generialisediota generializediota generalized⍳ generalised⍳ Unicode alphabetical abcdefghijklmopqrstuvwxyz interval range steps sequence
+bool←dfns.isdfn name	Test for D function	Dfn	Function		System	testforD-function name-clashproblem testforDfunction nameclashproblem
+stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function		Text	lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors interpreter programming joylang
+rslt←{dirn←¯1} dfns.just chars	Justify text array	Dfn	Function		Text	justifytext aligntext
+lvec←{cols} dfns.justify lvec	Justify line-vector to ⍺ columns	Dfn	Function		Text	justifytext aligntext linevector
+seq←dfns.k6174 nnnn	Kaprekar's operation	Dfn	Function		Mathematical	sequence Kaprekar'soperation Kaprekarsoperation
+rslt←{c←1} dfns.kball p	Relationship between point and k-ball	Dfn	Function		Mathematical	sphere hypersphere
+rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Operator	Mathematical	boundary hypercube
+kinds←dfns.kind namelist	Parse-category of name(s) ⍵	Dfn	Function		Text	nameclass namecolouring hybrid coloring parser parsing apl dyalog types names token syntax
+kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function		Text	namecolouring parsing Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring tokens types syntax syntactic
+area←dim dfns.ksphere radius	Hypersphere surface area	Dfn	Function		Mathematical	Newton-Raphson localmaximum K-sphere manifolds NewtonRaphson
+nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function		Mathematical	chesspuzzle knight'stour knightstour graph treesearching diversions torus
+chars←dfns.lcase chars	Lower-casification	Dfn	Function		Text	lowercase
+precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function		Mathematical	quicksort Totalarrayordering order(ofarrays) comparearrays lexically lexicographically sorting reordering
+bmat←dfns.life bmat	John Conway's "Game of Life"	Dfn	Function		Boolean/Logical	gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
+rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operator	Function Application	functionpower palindrome arithmetic-geometricmean goldenmean arithmeticgeometricmean ⍣≡
+rslt←{eval←1} dfns.lisp expr	Evaluator for a subset of Scheme	Dfn	Function		Text	closure Metacircular SICP lambdaexpression parser interpreter
+list←dfns.list vect	List from vector ⍵	Dfn	Function		Structural	accumulator lambdaexpression min(workspace) parsing lists cons vectors
+rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator	Function Application	conditionaloperator listoffunctions co-operator cooperator vector
+rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator	Boolean/Logical	conditionaloperator booleanfunctions truthtables
+rslt←pvec dfns.lsys axiom	Lindenmayer L-system expansion	Dfn	Function		Selection	L-Systems fractal rewriting termrewriting Turtlegraphics LSystems
+nvec←{sepr} dfns.ltov lvec	Lines to nested vector	Dfn	Function		Text	linevector list
+rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator	Structural	accumulator lambdaexpression minworkspace parsing lists cons vectors
+m←dfns.m91 n	McCarthy's M91 function	Dfn	Function		Mathematical	
+bfobj←(dfns.mac) src	Simple macro processor for bf	Dfn	Function		Text	Brainfuck continuation-passingstyle continuationpassingstyle
+hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function		Text	globbing
+cols←{base←1} dfns.mayan numb	Mayan numbers	Dfn	Function		Mathematical	numbersystem stela calendar date astronomy vigesimalnumbersystem abacus
+cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children
+num←dfns.mean nvec	Arithmetic mean	Dfn	Function		Mathematical	localnames standarddeviation APL'88 APL88 1988
+rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Fast: Function memoisation	Dop		Dyadic Operator	Function Application	memoization persistentlocalvariable fibonaccinumber cache remember reuse speed performance
+dfns.mmind ⎕A[?4⍴6]	Mastermind or "cows and bulls"	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL
+ref←dfns.mns defn	Make Namespace from association list ⍵	Dfn	Function		Data Conversion	associationlist vector
+code←dfns.morse text	Conversion to/from Morse code	Dfn	Function		Data Conversion	Morsecode
+{files}←{type←''} dfns.mp3 dirs	Create playlist(s) for music directories	Dfn	Function		Native Files	MP3(mediaplayer) mediaplayer(MP3) diversions
+nvec←{axis} dfns.mscan nvec	Minus scan	Dfn	Function		Mathematical	scanoperators scanning
+cmat←dfns.mtrim cmat	Trim off trailing blank cols	Dfn	Function		Text	blanks trailingblanks spaces ending
+cvec←larg (fn dfns.nats) rarg	Natural number arithmetic	Dop		Monadic Operator	Mathematical	naturalnumber infiniteprecision expressiontransformation
+cvec←{path←⎕PATH} dfns.ncpath names	⎕path-aware ⎕NC	Dfn	Function		System	nameclassification extended⎕NC
+nvec←p dfns.nicediv q	⍵ similar integers with sum ⍺	Dfn	Function		Mathematical	histogram
+n←dfns.nlines simple	Number of display lines for simple array	Dfn	Function		Text	defaultdisplay linesofoutput
+saved←{seed} dfns.nspack ref	Share arrays across space tree	Dfn	Function		System	packing compression enlist blank
+rslt←pick dfns.of F of G of H … arg	Pick'th fn applied to arg	Dop		Dyadic Operator	Function Application	functionarray conditionaloperator co-operator cooperator
+rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtest adjacentguard && shortcutting
+num←dfns.osc num	Oscillate - probably returns 1	Dfn	Function		Mathematical	cashprize wondrousnumber Gödel,Escher,Bach Goedel,Escher,Bach GödelEscherBach GodelEscherBach GoedelEscherBach engineer'sproof engineersproof
+array←dfns.pack array	Saves WS by sharing subarrays	Dfn	Function		System	compression arraysharing sub-array memory saving
+rslt←{cmp←1} dfns.pack4 image	Quad-tree packing	Dfn	Function		Storage	compression quadtree
+cmp←{cmp←1} dfns.packB exp	Pack a simple array	Dfn	Function		Storage	packing compression
+cmp←{cmp←1} dfns.packD data	Pack char array to boolean vector	Dfn	Function		Storage	packing compression encryption list binary base-2 base2
+cmp←{cmp←1} dfns.packH exp	Huffman packing	Dfn	Function		Storage	compression Huffmancode
+cmp←{cmp←1} dfns.packN exp	Null packing	Dfn	Function		Storage	compression stuff
+cmp←{cmp←1} dfns.packQ data	Assorted uniQues packer	Dfn	Function		Storage	packing compression
+cmp←{cmp←1} dfns.packR exp	Run-Length Encoding (RLE packing)	Dfn	Function		Storage	compression run-lengthencoding runlengthencoding
+cmp←{cmp←1} dfns.packS exp	Shannon-Fano packing	Dfn	Function		Storage	compression ShannonFano
+cmp←{cmp←1} dfns.packT exp	Simple text vector packager	Dfn	Function		Storage	packing compression list
+cmp←{cmp←1} dfns.packU exp	Unique packing	Dfn	Function		Storage	compression
+cmp←{cmp←1} dfns.packX txt	TeXt Packer	Dfn	Function		Storage	packing compression
+cmp←{cmp←12} dfns.packZ exp	Abraham Lempel, Jacob Ziv, Terry Welch	Dfn	Function		Storage	packing compression suffixtrie Lempel-Ziv-Welch LempelZivWelch
+tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function		Text	parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser
+vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Function		Mathematical	unweightedgraph breadth-firstsearch breadthfirstsearch
+p←dfns.pco ⍵	⍵-th prime	Dfn	Monadic Function		Mathematical	primenumber Jlang
+b←0 dfns.pco ⍵	1 iff ⍵ is not prime	Dfn	Dyadic Function		Mathematical	test primenumber Jlang nonprime? non-prime? composite?
+b←1 dfns.pco ⍵	1 iff ⍵ is prime	Dfn	Dyadic Function		Mathematical	test primenumber Jlang prime?
+n←¯1 dfns.pco ⍵	number of primes less than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+v←2 dfns.pco ⍵	prime factors and exponents	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+v←3 dfns.pco ⍵	prime factorization of ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+p←4 dfns.pco ⍵	next prime larger than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+p←¯4 dfns.pco ⍵	next prime smaller than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+b←10 dfns.pco ⍵	m+b/⍳⍴b are all the primes between m and n, where ⍵≡m,n	Dfn	Dyadic Function		Mathematical	primenumber Jlang
+rslt←{lft} (fun dfns.perv) rgt	Scalar pervasion	Dop		Monadic Operator	Function Application	scalar-wise pervasivefunction scalarwise Pervade
+pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber
+mat←dfns.pmat n	Permutation matrix of ⍳⍵	Dfn	Function		Structural	permutationmatrix table
+to←{dirn←1} dfns.polar fm	Polar from/to cartesian coordinates	Dfn	Function		Data Conversion	polarcoordinates cartesiancoordinates
+rslt←count (fun dfns.pow) argt	Explicit function power	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber
+rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors segmented sub-lists subvectors sublists
+rslt←{larg} (func dfns.profile subs) rarg	Performance profiling	Dop		Dyadic Operator	System	timing monitor ⎕profile
+{size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode
+cmats←dfns.queens N	The N-Queens Problem	Dfn	Function		Mathematical	diversions chesspuzzle treesearching purefunction YouTube NQueens
+soln←dfns.quzzle grid	A hard, simple problem	Dfn	Function		Mathematical	diversions puzzle
+indx←brks dfns.range nums	Numeric range classification	Dfn	Function		Comparison	
+rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rationalnumber Pi numberoftheBeast
+rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mahtematical	rationalnumber primenumber
+sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	Eidenumbers rationalnumber balancedternary skewedfour
+rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
+rslt←{larg) (op dfns.redblack) rarg	Red-black trees	Dop		Monadic Operator	Structural	red-blacktrees binarysearchtree enlist redblacktrees
+match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	test comparenamespaces namespacecomparison blank identical equal sameas equivalent
+crep←{tabs csep←4} dfns.refmt crep	Reformat dfn/op representation	Dfn	Function		Text	functionsformatting sourcecode layout
+refs←dfns.refpath ref	Refs path from root to ⍵	Dfn	Function		Array Properties	parentspace ancestorspace namespacereferences
+rvec←{exclude←⍬} dfns.refs ref	Vector of sub-space references	Dfn	Function		Array Properties	namespacereferences ⎕WX root-space rootspace list
+ref←dfns.refws wsid	Ref to saved ws ⍵	Dfn	Function		System	workspacereferences externalworkspace remoteexecution
+graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function		Structural	unweightedgraph delete drop without
+graph←graph dfns.remnode vertex	Graph ⍺ with vertex ⍵ removed	Dfn	Function		Structural	unweightedgraph
+enc←dfns.rep name	Encapsulate function/operator	Dfn	Function		Data Conversion	functionarray encapsulatefunction
+{prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic
+nvec←dfns.ripple nvec	Perfect Ripple Shuffle	Dfn	Function		Structural	grade carddeck diversions riffleshuffle
+line←dfns.rmcm line	APL source with comments removed	Dfn	Function		Text	functionsformatting commentremoval one-liner oneliner
+res←{sin} (fvn dfns.roman) dex	Roman numeral arithmetic	Dop		Monadic Operator	Mathematical	romannumerals numbersystem diversions
+num←{num←2} dfns.root num	⍺'th root	Dfn	Function		Mathematical	defaultleftargument ⍺throot
+nvec←dfns.roots triple	Real roots of quadratic	Dfn	Function		Mathematical	realrootsofquadratic complexnumbers
+rslt←(fun dfns.rows) {array}	Operand function applied to argument rows	Dop		Monadic Operator	Function Application	vector-wise vectorwise
+rounds←dfns.rr players	Round-robin tournament	Dfn	Function		Mathematical	Round-robintournament combination Roundrobintournament
+new←{larg} (sel dfns.sam mod) old	Select and modify	Dop		Dyadic Operator	Function Application	selectandmodify destructiveassignment purefunction
+rslt←{left} (fun dfns.saw) right	Apply function Simple-Array-Wise	Dop		Monadic Operator	Function Application	simplearraywise
+rslt←{larg} (op dfns.sbst) rarg	Simple Binary Search Trees	Dop		Monadic Operator	Structural	binarysearchtree typenotation enlist boolean base-2 base2
+C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch
+vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function		Structural	unweightedgraph breadth-firstsearch breadthfirstsearch
+vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function		Structural	words split text partition list
+rslt←indx dfns.select avec	⍺-selection of items from vector ⍵	Dfn	Function		Selection	indexedassignment destructiveassignment purefunction list major cells elements
+entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function		Text	informationtheory
+nvec←dfns.sieve nvec	Sieve of Eratosthenes	Dfn	Function		Mathematical	primenumber
+tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	Dfn	Function		Structural	0unweightedgraph spanningtree breadth-firstsearch breadthfirstsearch
+rslt←{larg} (op dfns.splay) rarg	Splay trees	Dop		Monadic Operator	Structural	binarysearchtree enlist
+cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function		Text	compression linevector consecutive spaces
+cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function		Text	ssxutils stringreplacement substitution
+cmat←dfns.ssmat (cmat from into)	Matrix search/replace	Dfn	Function		Structural	ssxutils stringreplacement substitution table
+cvec←{prim supp} dfns.ssword (srce from into)	Approx alternative to xutils ss	Dfn	Function		Text	ssxutils stringreplacement substitution
 nvec←{denoms←1 5 6 10 26 39 43} dfns.stamps value	Postage stamps for ⍵	Dfn	Function			postagestamps graph balancedternary
 dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function			graph spanningtree
 vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function			graph spanningtree
