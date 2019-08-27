@@ -999,9 +999,9 @@ rslt←{larg} (func dfns.profile subs) rarg	Performance profiling	Dop		Dyadic Op
 cmats←dfns.queens N	The N-Queens Problem	Dfn	Function		Mathematical	diversions chesspuzzle treesearching purefunction YouTube NQueens
 soln←dfns.quzzle grid	A hard, simple problem	Dfn	Function		Mathematical	diversions puzzle
 indx←brks dfns.range nums	Numeric range classification	Dfn	Function		Comparison	
-rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rationalnumber Pi numberoftheBeast
-rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mahtematical	rationalnumber primenumber
-sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	Eidenumbers rationalnumber balancedternary skewedfour
+rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rats rationalnumber Pi numberoftheBeast
+rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mahtematical	rats rationalnumber primenumber
+sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	rats Eidenumbers rationalnumber balancedternary skewedfour
 rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
 rslt←{larg) (op dfns.redblack) rarg	Red-black trees	Dop		Monadic Operator	Structural	red-blacktrees binarysearchtree enlist redblacktrees
 match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	test comparenamespaces namespacecomparison blank identical equal sameas equivalent
@@ -1035,54 +1035,54 @@ cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function		Text	compression
 cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function		Text	ssxutils stringreplacement substitution
 cmat←dfns.ssmat (cmat from into)	Matrix search/replace	Dfn	Function		Structural	ssxutils stringreplacement substitution table
 cvec←{prim supp} dfns.ssword (srce from into)	Approx alternative to xutils ss	Dfn	Function		Text	ssxutils stringreplacement substitution
-nvec←{denoms←1 5 6 10 26 39 43} dfns.stamps value	Postage stamps for ⍵	Dfn	Function			postagestamps graph balancedternary
-dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function			graph spanningtree
-vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function			graph spanningtree
-pvec←dfns.stpaths tree	Spanning tree paths	Dfn	Function			graph spanningtree
-array←(from repl) dfns.subs array	Vector substitution	Dfn	Function			stringreplacement list
-yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function			subvector? subset? sub-sequence? subsequence? substring sub-string sub-vector sub-list sublist
-svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function			diversions gameofsudoku YouTube list
-rslt←{larg} (func dfns.tc) rarg	Trace of function application	Dop		Monadic Operator		monitor debugging
-{ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function			qualityassurance unittesting autoformat QA testing
-cmat←dfns.tfmt tree	Char matrix from tree(s)	Dfn	Function			treesformatting table
-{rslt}←{larg} (fun dfns.time) rarg	Function application time	Dop		Monadic Operator		performance monitor timing
-cvec←{time←⎕TS} dfns.timestamp cvec	Time-stamped message	Dfn	Function			date
-tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function			treesformatting
-nvec←from dfns.to unto	Sequence ⍺ … ⍵	Dfn	Function			stepping seq()
-cvecs←{nv←0} dfns.tokens cvec	Lex of APL src line	Dfn	Function			parsing lexicalscan
-vec←(fun dfns.traj) arg	Function limit 'trajectory'	Dop		Monadic Operator		debugging Newton-Raphson sequence NewtonRaphson
-rslt←ival (accm dfns.trav subs) tree	Generic depth-first tree traversal	Dop		Dyadic Operator		currying typenotation fibonaccinumber N-Queens NQueens
-cvec←{maxcols←⎕PW} dfns.tree space	Display of namespace tree	Dfn	Function			workspace name-clashproblem nameclashproblem blank
-{lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function			Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems
-(depth leaves)←dfns.tview tree	TreeView style from nested array	Dfn	Function			
-rslt←code dfns.type array	Widen ⍵ to type ⍺	Dfn	Function			dataconversion ⎕DR
-chars←dfns.ucase chars	Upper-casification	Dfn	Function			uppercase lowercase upperorlowercase caseinsensitive
-expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function			parsing polymorphism
-rslt←(func dfns.until cond) argt	Conditional function power	Dop		Dyadic Operator		conditionaloperator
-cvec←dfns.unwrap lvec	Replace [LF] with blanks	Dfn	Function			text wordswrapping linevector spaces
-sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function			parentspace ancestorspace namespacereferences blank
-cvec←dfns.utf8get fid	Char vector from UTF-8 file ⍵	Dfn	Function			encoding Unicode list
-{size}←cvec dfns.utf8put fid	Char vector ⍺ to UTF-8 file ⍵	Dfn	Function			encoding Unicode list
-rslt←{larg} {''} dfns.vof F vof G vof ··· rarg	Vector of functions	Dop		Dyadic Operator		functionarray vectoroffunctions fork co-operator cooperator list
-caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function			diversions capitalisation 1st
-lvec←{sepr} dfns.vtol nvec	Nested vector to lines	Dfn	Function			linevector list
-cvec←dfns.vtrim cvec	Remove trailing blanks	Dfn	Function			compression spaces delete drop ending without
-rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator		variablewise blank
-cvec←wgraph dfns.wcost path	Cost vector for path ⍵ through weighted graph ⍺	Dfn	Function			weightedgraph costvector list
-rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator		conditionaloperator
-tree←wug dfns.wmst root	Minimum Spanning Tree for weighted graph ⍺	Dfn	Function			weightedgraph spanningtree mininumspanningtree
-cvecs←{prim supp} dfns.words cvec	Source vector split into words	Dfn	Function			text list
-path←wgraph dfns.wpath (from to)	Quickest path from/to ⍵ in weighted graph ⍺	Dfn	Function			weightedgraph destructiveassignment indexedassignment
-lvec←{cols←⎕PW} dfns.wrap cvec	Wrap word vector at ⍺ columns	Dfn	Function			words text linevector transitiveclosure list
-note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function			words linevector box-drawingcharacters boxdrawingcharacters
-{excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function			compareworkspaces name-clashproblem nameclashproblem
-{protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function			workspacemerge
-tree←wgraph dfns.wspan from	Spanning tree for weighted graph ⍺ from ⍵	Dfn	Function			weightedgraph spanningtree
-bytes←dfns.wsreq expr	WS required to execute expression ⍵	Dfn	Function			performance monitor fudgefactor calibration
-digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function			FastFourierTransform
-refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function			namespacereferences list
-cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function			tabexpansion horizontaltabs adjacent1s flipflopRS
-z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function			FastFourierTransform convolution polynomial
+nvec←{denoms←1 5 6 10 26 39 43} dfns.stamps value	Postage stamps for ⍵	Dfn	Function		Mathematical	postagestamps graph balancedternary
+dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function		Structural	graph spanningtree
+vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function		Structural	graph spanningtree
+pvec←dfns.stpaths tree	Spanning tree paths	Dfn	Function		Structural	graph spanningtree
+array←(from repl) dfns.subs array	Vector substitution	Dfn	Function		Text	stringreplacement list
+yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function		Structural	test subvector? subset? sub-sequence? subsequence? substring sub-string sub-vector sub-list sublist
+svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list
+rslt←{larg} (func dfns.tc) rarg	Trace of function application	Dop		Monadic Operator	Function Application	monitor debugging
+{ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing
+cmat←dfns.tfmt tree	Char matrix from tree(s)	Dfn	Function		Data Conversion	treesformatting table
+{rslt}←{larg} (fun dfns.time) rarg	Function application time	Dop		Monadic Operator	System	performance monitor timing
+cvec←{time←⎕TS} dfns.timestamp cvec	Time-stamped message	Dfn	Function		Text	date
+tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Data Conversion	treesformatting
+nvec←from dfns.to unto	Sequence ⍺ … ⍵	Dfn	Function		Index Generation	stepping seq()
+cvecs←{nv←0} dfns.tokens cvec	Lex of APL src line	Dfn	Function		Text	parsing lexicalscan parse dyalog
+vec←(fun dfns.traj) arg	Function limit 'trajectory'	Dop		Monadic Operator	Mathematical	debugging Newton-Raphson sequence NewtonRaphson
+rslt←ival (accm dfns.trav subs) tree	Generic depth-first tree traversal	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
+cvec←{maxcols←⎕PW} dfns.tree space	Display of namespace tree	Dfn	Function		System	workspace name-clashproblem nameclashproblem blank
+{lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems
+(depth leaves)←dfns.tview tree	TreeView style from nested array	Dfn	Function		Data Conversion	
+rslt←code dfns.type array	Widen ⍵ to type ⍺	Dfn	Function		Data Conversion	dataconversion ⎕DR
+chars←dfns.ucase chars	Upper-casification	Dfn	Function		Text	uppercase lowercase upperorlowercase caseinsensitive
+expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function		Mathematical	parsing polymorphism
+rslt←(func dfns.until cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
+cvec←dfns.unwrap lvec	Replace [LF] with blanks	Dfn	Function		Text	text wordswrapping linevector spaces
+sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function		System	parentspace ancestorspace namespacereferences blank
+cvec←dfns.utf8get fid	Char vector from UTF-8 file ⍵	Dfn	Function		Native Files	text encoding Unicode list read load fetch
+{size}←cvec dfns.utf8put fid	Char vector ⍺ to UTF-8 file ⍵	Dfn	Function		Native Files	text encoding Unicode list write save dump
+rslt←{larg} {''} dfns.vof F vof G vof ··· rarg	Vector of functions	Dop		Dyadic Operator	Structural	functionarray vectoroffunctions fork co-operator cooperator list
+caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function		Text	diversions capitalisation 1st
+lvec←{sepr} dfns.vtol nvec	Nested vector to lines	Dfn	Function		Data Conversion	linevector list
+cvec←dfns.vtrim cvec	Remove trailing blanks	Dfn	Function		Text	compression spaces delete drop ending without
+rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator	Text	variablewise blank
+cvec←wgraph dfns.wcost path	Cost vector for path ⍵ through weighted graph ⍺	Dfn	Function		Mathematical	weightedgraph costvector list
+rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
+tree←wug dfns.wmst root	Minimum Spanning Tree for weighted graph ⍺	Dfn	Function		Structural	weightedgraph spanningtree mininumspanningtree
+cvecs←{prim supp} dfns.words cvec	Source vector split into words	Dfn	Function		Text	text list
+path←wgraph dfns.wpath (from to)	Quickest path from/to ⍵ in weighted graph ⍺	Dfn	Function		Mathematical	weightedgraph destructiveassignment indexedassignment
+lvec←{cols←⎕PW} dfns.wrap cvec	Wrap word vector at ⍺ columns	Dfn	Function		Text	words text linevector transitiveclosure list
+note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
+{excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem
+{protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function		System	workspacemerge
+tree←wgraph dfns.wspan from	Spanning tree for weighted graph ⍺ from ⍵	Dfn	Function		Structural	weightedgraph spanningtree
+bytes←dfns.wsreq expr	WS required to execute expression ⍵	Dfn	Function		System	performance monitor fudgefactor calibration
+digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function		Mathematical	FastFourierTransform
+refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function		Selection	namespacereferences list
+cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function		Text	tabexpansion horizontaltabs adjacent1s flipflopRS
+z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function		Mathematical	FastFourierTransform convolution polynomial
 {0::0⋄1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
 X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Function	Dyadic Operator	Function Application	circlediaeresis ⍥
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
