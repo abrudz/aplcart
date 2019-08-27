@@ -1,0 +1,8 @@
+ t←Reorder t;syntaxdata;classdata;typedata;length
+ ⎕SHADOW,1↑t
+ {⍎⍕(,1↑⍵)'←↑¨⊂[1]1↓⍵'}t
+ syntaxdata←chars⍳SYNTAX
+ classdata←class⍳CLASS
+ typedata←type⍳TYPE
+ length←SYNTAX(≢~)⍤1⊢' ',⎕A,819⌶⎕A
+ t⌷⍨←⊂⍋0⍪classdata,length,syntaxdata,typedata
