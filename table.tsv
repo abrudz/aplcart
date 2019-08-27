@@ -1872,7 +1872,7 @@ Xm↑[2]⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with Xm	T
 Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Tacit	Dyadic Function		Mathematical	
 0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods
-Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit		Monadic Operator	Structural	
+Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural	
 M(⊢×∘~∊⍨)N	Zeroing elements of N that are found in M	Tacit	Dyadic Function		Sets	arein membersof 0ing cells items
 (⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif integer? whole number?
 (⍉≡+)Nm	Is Nm a Hermitian matrix?	Tacit	Monadic Function		Mathematical	testif Hermitian? self-adjoint? selfadjoint? Yᴴ Y† Aᴴ A†
@@ -2181,3 +2181,5 @@ X f⍨Y	Church Boolean Logical Inverse	Primitive	Dyadic Function	Monadic Operato
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session as file Dv	Dfn	Monadic Function		System	put store dyalog .dse
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse
+(,¨,\)Yv	Prefixes of a vector	Tacit	Monadic Function		Structural	string text
+((⌽∘,¨,\∘⌽))Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text
