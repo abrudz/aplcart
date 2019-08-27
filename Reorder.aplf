@@ -1,8 +1,10 @@
- t←Reorder t;syntaxdata;classdata;typedata;length
+ t←Reorder t;syntaxdata;classdata;typedata;length;complexity;letters;syntax
  ⎕SHADOW,1↑t
  {⍎⍕(,1↑⍵)'←↑¨⊂[1]1↓⍵'}t
  syntaxdata←chars⍳SYNTAX
  classdata←class⍳CLASS
  typedata←type⍳TYPE
- length←SYNTAX(≢~)⍤1⊢' ',⎕A,819⌶⎕A
- t⌷⍨←⊂⍋0⍪classdata,length,syntaxdata,typedata
+ syntax←(↓SYNTAX)~¨⊂' ',letters←'¯_∆⍙',⎕D,⎕A,819⌶⎕A
+ complexity←↑((⊂∘⍒⌷⊢)(chars~letters)∘⍳)¨syntax
+ length←≢¨syntax
+ t⌷⍨←⊂⍋0⍪classdata,length,complexity,syntaxdata,typedata
