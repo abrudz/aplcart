@@ -2182,4 +2182,4 @@ X f⍨Y	Church Boolean Logical Inverse	Primitive	Dyadic Function	Monadic Operato
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session as file Dv	Dfn	Monadic Function		System	put store dyalog .dse
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse
 (,¨,\)Yv	Prefixes of a vector	Tacit	Monadic Function		Structural	string text
-((⌽∘,¨,\∘⌽))Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text
+(⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text
