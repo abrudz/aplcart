@@ -202,8 +202,8 @@ X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator
 (X+Y)×Z	Precedence: Z×X+Y	Syntax			Expression	roundparentheses grouping precedence roundparens
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
 X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
-(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Trian	Expression	pointwise tacit roundparentheses roundparens grouping derived train fgh 3train 3-train
-(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Trian	Expression	pointwise tacit roundparentheses roundparens grouping derived train Agh 3train 3-train
+(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived train fgh 3train 3-train
+(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived train Agh 3train 3-train
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
 X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
 f←{⍵}	Prototypical monadic Dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
@@ -237,10 +237,10 @@ charvec←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		E
 →Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
 ⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ
-∇	Dfn Self	Primitive	Monadic Function;Dyadic Function		Expression	del recurse triangledown downtriangle carrot
+∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
 ⍵⍵	Dop Right Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	omega rightop
 ⍺⍺	Dop Left Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	alpha leftop
-∇∇	Dop Self	Primitive	Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse triangledown downtriangle carrot
+∇∇	Dop Self	Primitive	Ambivalent Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse triangledown downtriangle carrot
 name f←Y	Modified Assignment	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector
@@ -1000,7 +1000,7 @@ cmats←dfns.queens N	The N-Queens Problem	Dfn	Function		Mathematical	diversions
 soln←dfns.quzzle grid	A hard, simple problem	Dfn	Function		Mathematical	diversions puzzle
 indx←brks dfns.range nums	Numeric range classification	Dfn	Function		Comparison	
 rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rats rationalnumber Pi numberoftheBeast
-rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mahtematical	rats rationalnumber primenumber
+rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mathematical	rats rationalnumber primenumber
 sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	rats Eidenumbers rationalnumber balancedternary skewedfour
 rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
 rslt←{larg) (op dfns.redblack) rarg	Red-black trees	Dop		Monadic Operator	Structural	red-blacktrees binarysearchtree enlist redblacktrees
@@ -1244,7 +1244,7 @@ f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic 
 (1 ¯1×⊂)N	±N by juxtaposition	Tacit	Monadic Function		Mathematical	plusminus
 (¯1 1×⊂)N	∓N by juxtaposition	Tacit	Monadic Function		Mathematical	minusplus
 M((*0-⊣)×*÷⊢∘!)N	Poisson distribution of states N with average M	Tacit	Dyadic Function		Mathematical	
-expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		lev lefttack where	
+expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		Identity	lev lefttack where
 '*/'∘(≠\(<\⍷)∨∘⌽(<\⍷∘⌽))D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*
 X(⊃∘⍸∘~∊)Y	Position of first item in X not in Y	Tacit	Dyadic Function		Index Generation	cell element 1st
 C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
@@ -1429,7 +1429,7 @@ name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its fi
 {(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering
 {' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski
 ({⍵⌷⍨⊂⍒⊢/⍵},∘≢⌸)Y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix
-{n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic function		Mathematical	juggling beat
+{n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic Function		Mathematical	juggling beat
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
 {(⎕D,⎕A)[1+16⊥⍣¯1⊢⍵]}Js	Convert to hexadecimal	Dfn	Monadic Function		Mathematical	tobase16 base-16 ₁₆ dec2hex hex()
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
@@ -1553,11 +1553,11 @@ Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic F
 Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZZZ:1 3 2)	Tacit	Dyadic Function		Data Conversion	unpack
 {(∨/a)⌿(⍴⍵)⍴(,a)\(,a←∧\('⍝'≠⍵)∨≠\⍵='''')/,⍵}Dm	Decommenting a matrix representation of a function (⎕CR)	Dfn	Monadic Function		Text	uncomment strip comments remove table delete drop without
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
-Mv{+⌿↑⍺⍵}Nv	Polynomial sum	Dfn	Dyadic Function		Mahtematical	additionof polynomials
-Mv{-⌿↑⍺⍵}Nv	Polynomial difference	Dfn	Dyadic Function		Mahtematical	subtractionof polynomials
-Mv(+⌿1 0⌽0,∘.×)Nv	Polynomial product	Tacit	Dyadic Function		Mahtematical	multiplicationof polynomials
+Mv{+⌿↑⍺⍵}Nv	Polynomial sum	Dfn	Dyadic Function		Mathematical	additionof polynomials
+Mv{-⌿↑⍺⍵}Nv	Polynomial difference	Dfn	Dyadic Function		Mathematical	subtractionof polynomials
+Mv(+⌿1 0⌽0,∘.×)Nv	Polynomial product	Tacit	Dyadic Function		Mathematical	multiplicationof polynomials
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate
-Ms{⍺←0 ⋄ ⍺,⍵÷⍳≢⍵}Nv	Integral of polynomial Nv with optional constant Ms	Dfn	Ambivalent Monadic Function,Dyadic Function		Mathematical	firstintegral integrate
+Ms{⍺←0 ⋄ ⍺,⍵÷⍳≢⍵}Nv	Integral of polynomial Nv with optional constant Ms	Dfn	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
 (⌽∘⍳∘≢⌽⊢,(0 ¯1+≢)⍴0∘⍴)Yv	Diagonal matrix with elements of Yv (filled appropriately)	Tacit	Monadic Function		Structural	cells items table
 (,⌷⍨∘⊂∘⍋1⊥⍴⊤¯1+∘⍳×/∘⍴)Ym	Diagonal ravel	Tacit	Monadic Function		Structural	
 Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items
@@ -2018,7 +2018,7 @@ X(Is{(⍺↑⍨a[⍺⍺]@⍺⍺⊢s),[⍺⍺]⍵↑⍨w[⍺⍺]@⍺⍺⊢s←(a�
 I(⊣*⍨1+÷⍨)N	Effective rate of interest with nominal rate N for I periods	Tacit	Dyadic Function		Mathematical	
 *N*2	Limit of nominal rate N when continuously compounded	Primitive	Monadic Function		Mathematical	interest
 (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	Cartesian metric Pythagorean d() matrix
-Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create (optionally named Cv) namespace with name-value pairs Yv	Dfn	Ambivalent Monadic Function,Dyadic Function		Data Conversion	object new namevalue dictionary convert array
+Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create (optionally named Cv) namespace with name-value pairs Yv	Dfn	Ambivalent Monadic Function, Dyadic Function		Data Conversion	object new namevalue dictionary convert array
 {⍵.((⊂,∘⊂⍎)¨⎕NL¯2)}Y	Extract name-value pairs from namespaces Y	Dfn	Monadic Function		Data Conversion	object unpack namevalue dictionary convert array contents
 10∘⍟N	Logarithm	Tacit	Monadic Function		Mathematical	log() log-10 log10() 10-log
 10∘*N	Anti-logarithm	Tacit	Monadic Function		Mathematical	log⁻¹ log^1 antilogarithm
@@ -2161,7 +2161,7 @@ Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length 
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
 (¯1+(⎕D,⎕A)⍳⊢)D	Translate characters to digits (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
 (⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels
-Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function,Dyadic Function		System	time speed performance
+Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	time speed performance
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
 (⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	
