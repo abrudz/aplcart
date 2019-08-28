@@ -154,11 +154,11 @@ f&Y	Spawn: f on in a new thread	Primitive	Dyadic Function	Monadic Operator	Syste
 Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog
 name f←Y	Modified Assignment	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means
+∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
 →	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop
 →0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return
 →Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow goto switch 1st
 ⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ list
-∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
 ⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ
 Z f⍨X,Y	Avoiding parentheses by swapping arguments in (X,Y) f Z	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis frown
@@ -480,6 +480,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension
 name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st
 {0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught
+⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table
 +∘-N	Negate real part ("real conjugate")	Tacit	Monadic Function		Mathematical	
 -∘+N	Mirror complex N in y-axis	Tacit	Monadic Function		Mathematical	negatereal
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical	
@@ -517,7 +518,6 @@ Iv∘.×Jv	Multiplication Table fIv down and Jv across	Tacit	Monadic Function		M
 X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets	
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomium at point Ms	Tacit	Dyadic Function		Mathematical	
 ⍎∘⍕Yv	Convert character or numeric data into numeric (unsafe)	Tacit	Monadic Function		Data Conversion	normalise numbers
-⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table
 ⍬∘⍴Y	First element of Y as a scalar	Tacit	Monadic Function		Selection	1st cell item
 {0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s zeros cell element falses falsehoods
 X(f⍤0)Y	Run f to scalars	Tacit	Function	Monadic Operator	Function Application	apply
@@ -549,11 +549,11 @@ X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	ch
 ⊂⍤¯1∘⍉Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists
 A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
+Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry
 Av+.×⍨Nv	Summation over subsets of Nv specified by Av	Tacit	Dyadic Function		Mathematical	
 Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Function		Comparison	testif hasdifferent cells items
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with factors Mv in descending order for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply sorting reordering ordering
-Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists
 ⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-<
 Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
@@ -918,6 +918,7 @@ Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyad
 Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+bx y=ax+b
 {⍵.##}⍣≡Y	Reference to toot ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate
+Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
 (∧/' '∘=)D	Mask for blank rows	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks
 (∨/'  '∘⍷)D	Does D have any duplicated spaces? (per row)	Tacit	Monadic Function		Text	testif repeated blanks? double multiple line
@@ -928,7 +929,6 @@ Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values 
 (⊥⍨' '=⌽)Dv	Number of leading blanks	Tacit	Monadic Function		Text	prefixspaces spaces start beginning
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces spaces ending
 ((⊃2⊃⎕VFI)⍤1)D	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe
-Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items
 Is(↑{⍺⍵}↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ
 Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Function		Mathematical	oblique
@@ -967,12 +967,12 @@ Iv Jv⍕⍨∘(∊,⍤0/)N	Formatting N with Jv decimals in fields of width Iv	T
 Iv((+\⊢)∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating
 (⍋(≢,⊂)¨)Yv	Ascending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical
 (⍒(≢,⊂)¨)Yv	Descending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
+(,[0.5]∘'¯')Dv	Underlines a string (1=⎕IO)	Tacit	Monadic Function		Text	underscore
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elemetnts at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	plot curve graph
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing	
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
-(,[0.5]∘'¯')Dv	Underlines a string (1=⎕IO)	Tacit	Monadic Function		Text	underscore
 (⊢⍴⍨2,⍨2÷⍨≢)Yv	Reshaping vector Yv into a two-column matrix	Tacit	Monadic Function		Structural	2-column table list
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical	
@@ -1118,8 +1118,8 @@ Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic p
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items
 Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical	
-Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
+Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
 X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away from 0)	Tacit	Dyadic Function		Mathematical	precision favoring
 M(+⌿⊣∘.*⍨∘∪⊢∨⊢∘⍳)Js	Sum of M'th powers of positive divisors of Js	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
@@ -1144,8 +1144,8 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 Xv(Bv{(⍺⍺/X)@(⊢∘⍺⍺)⍵})Yv	Mask Operator. Merge Xv and Yv using Bv (1 for Xv's item, 0 for Yv's item)	Tacit	Dyadic Function	Monadic Operator	Structural	alternative choose mesh shuffle cell element indicate masking indicating
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?
 (⊃((+⌿÷≢),≢÷1⊥÷)⍣≡)Nv	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic
-(⊢⊂⍨1,1↓≢↑2</'aeiouyäö'∊⍨819⌶)Dv	Syllabisation of a Finnish word Dv	Tacit	Monadic Function		Text	Syllabization syllables
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
+(⊢⊂⍨1,1↓≢↑2</'aeiouyäö'∊⍨819⌶)Dv	Syllabisation of a Finnish word Dv	Tacit	Monadic Function		Text	Syllabization syllables
 Av(∧{⍵∧s∊⍺/s←+\2</0,⍵}⊢)Bv	Groups of ones in Bv pointed to by at least one 1 in Av	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
 ' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 (⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings remove
@@ -1392,12 +1392,12 @@ X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 Mv{+⌿↑⍺⍵}Nv	Polynomial sum	Dfn	Dyadic Function		Mathematical	additionof polynomials
 Mv{-⌿↑⍺⍵}Nv	Polynomial difference	Dfn	Dyadic Function		Mathematical	subtractionof polynomials
+Xv{⍺[1+⍵]}B	Indexing two-element vector Xv with Boolean values B	Dfn	Dyadic Function		Selection	list binary base-2 base2
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double items elements
 As{⊖⍣⍺⊢⍵}Y	Reverse Y on condition As	Dfn	Dyadic Function		Structural	conditional
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function		Mathematical	chesspuzzle knight'stour knightstour graph treesearching diversions torus
 pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems
-Xv{⍺[1+⍵]}B	Indexing two-element vector Xv with Boolean values B	Dfn	Dyadic Function		Selection	list binary base-2 base2
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row table
@@ -1435,11 +1435,11 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
 X{+/∧\⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending
 X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending
-note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered sorted dimension
 Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered sorted dimension
 Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered Nonincreasing? sorted dimension
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered Nondecreasing? sorted dimension
+note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
 X{2=⎕NC⍵:⍎⍵⋄⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item
@@ -1466,13 +1466,13 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 {⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	delete allspaces emptylines drop space without
 {(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get
 {(⎕NEW⊂'Clipboard').Text←⍵}D	Copy to Windows clipboard	Dfn	Monadic Function		System	cut put into
+{,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse
 {n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic Function		Mathematical	testif juggling beat
 Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast: ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick
-{,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending
+I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st
 I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	Dfn	Dyadic Function		Selection	without remove indices delete drop
-I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC
 Ms{⍺←0 ⋄ ⍺,⍵÷⍳≢⍵}Nv	Integral of polynomial Nv with optional constant Ms	Dfn	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
@@ -1492,9 +1492,9 @@ Iv{(⊂⍋⍋⍺)⌷⊃⍪⌿⍵}Y	Merging Y[1] Y[2] Y[3], … under control of 
 Av{¯2-⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Sums over (+/) subvectors of N indicated by Av	Dfn	Dyadic Function		Mathematical	segmented partitioned sub-vectors
 {⍵⌽⍨+/∧\' '=⍵}D	Justifying left	Dfn	Monadic Function		Text	leftalign left-align
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Removing multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending
+{⍵[⍋⍵+.≠' ';]}Dm	Sorting words in list Dm according to word length	Dfn	Monadic Function		Text	vector
 {⍵/⍨∨\' '∨.≠⍵}Dm	Remove leading blank columns	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without
 {⍵⌿⍨∨\⍵∨.≠' '}Dm	Remove leading blank rows	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without
-{⍵[⍋⍵+.≠' ';]}Dm	Sorting words in list Dm according to word length	Dfn	Monadic Function		Text	vector
 {2∨/0,≠\⍵=''''}Dv	Locations of texts between and including quotes	Dfn	Monadic Function		Text	strings
 {2∧/0,≠\⍵=''''}Dv	Locations of texts between and excluding quotes	Dfn	Monadic Function		Text	strings
 Is{⍵⌿⍨(⍋⍒⍵)∊⍳⍺}Y	The Is largest cells of Y in order of occurrence	Dfn	Dyadic Function		Selection	biggest greatestif items elements
@@ -1504,13 +1504,13 @@ kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop n
 Mv{⍺+2-/⌈\0,+\⍺-⍵}Nv	Work done for demand Nv with capacity Mv	Dfn	Dyadic Function		Mathematical	orders capacities production supply demands supplies
 Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next 1 in Av	Dfn	Dyadic Function		Selection	item element
 Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot remove
-A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified by A (one mask per column)	Dfn	Dyadic Function		Mathematical	major cells items indicate masking indicating
 {(⎕D,⎕A)[1+16⊥⍣¯1⊢⍵]}Js	Convert to hexadecimal	Dfn	Monadic Function		Mathematical	tobase16 base-16 ₁₆ dec2hex hex()
+A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified by A (one mask per column)	Dfn	Dyadic Function		Mathematical	major cells items indicate masking indicating
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Yv	The Is'th subvector of Yv (subvectors separated by Yv[1])	Dfn	Dyadic Function		Selection	
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Dv	Extracting field number Is from Dv (field separated by first element of Dv)	Dfn	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
+Is{(+/[⍺]÷⍺⊃⍴)⍵}N	Average (mean value) of elements of N along direction Is	Dfn	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element
 Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (excluding phase)	Dfn	Dyadic Function		Comparison	testif vectors same? equivalent? equal?
-Is{(+/[⍺]÷⍺⊃⍴)⍵}N	Average (mean value) of elements of N along direction Is	Dfn	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which
 {({1≠≢⍵}⌸⍵)⌿∪⍵}Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique items elements
 Ns{+/⍵××\1,⍺÷⍳¯1+≢⍵}Nv	Value of Taylor series with coefficients Nv at point Ns	Dfn	Dyadic Function		Mathematical	
@@ -1738,6 +1738,7 @@ mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 ¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
 ○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
+]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running
 int.frac	Decimal Point	Syntax	Array		Expression	period rational
 ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period
 1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity
@@ -1775,10 +1776,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹
 900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc
 #	Reference to workspace root namespace	Constant			System	top hashtag numbersign poundsign
-]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running
-⍝	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
-bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣
 :Implements Constructor	Function is a class constructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 :Implements Destructor	Function is a class destructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
@@ -1800,7 +1798,9 @@ bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 :While	:While bx ⋄ block ⋄ :AndIf bx│:OrIf bx ⋄ block ⋄ :EndWhile	Syntax	Control	Structure	Expression	loop do iteration ⍣
 :While	:While bx ⋄ block ⋄ :AndIf bx│:OrIf bx ⋄ block ⋄ :Until bx	Syntax	Control	Structure	Expression	loop do iteration ⍣
 :With	:With ns ⋄ block ⋄ :EndWith	Syntax	Control	Structure	Expression	scope namespace object
+bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 '	Character delimiter	Syntax	Array		Expression	quote apostrophe string text
+⍝	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell dos operatingsystem commandprocessor
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear drop without
 )CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off ⎕save
@@ -1818,18 +1818,8 @@ bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick
 ⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east cell element
 Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths
-2 2 2 2⊤⍳16	Unit tesseract	Constant	Expression		Mathematical	
-2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical	
-2 2⊤⍳4	Unit square	Constant	Expression		Mathematical	
-##	Reference to parent namespace of the current namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor
-1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
-⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base
-⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment
-⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending
-charvec←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput
-⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove
-name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove
-x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
+X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension
+f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator
 ]MSWIN.Assemblies	List all .NET assemblies currently loaded into memory	Non-syntax	Ucmd	MSWIN	User command	commands that relate the Microsoft Windows operating system ]Assemblies vector
 ]MSWIN.Caption	Query or change window captions	Non-syntax	Ucmd	MSWIN	User command	commands that relate to the Microsoft Windows operating system ]Caption
 ]MSWIN.CopyReg	Copy registry entries to file and, optionally, between Dyalog versions	Non-syntax	Ucmd	MSWIN	User command	commands that relate the Microsoft Windows operating system ]CopyReg
@@ -1926,12 +1916,23 @@ x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quoteq
 ]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Peek
 ]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]SizeOf sorting reordering ordering
 ]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]VarsLike vector
-X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension
-f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator
-→Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf
-→⎕LC	Continuing execution	Expression			Expression	resume thread
+2 2 2 2⊤⍳16	Unit tesseract	Constant	Expression		Mathematical	
+2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical	
+2 2⊤⍳4	Unit square	Constant	Expression		Mathematical	
+##	Reference to parent namespace of the current namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor
+1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
+⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base
+⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment
+⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending
+charvec←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput
+⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove
+name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove
+x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
 :Implements Trigger *	Function is a global trigger function: called when any any global variable in the same namespace is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
+:Implements Constructor :Base expr	Function is a class constructor which calls the base constructor with the result of 'expr' as argument	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 0::any error	Covers all errors (errors 1–999)				Error Message	trap catch errno try errorhandling trapping exception
+1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa
+10::LIMIT ERROR	A system limit is exceeded				Error Message	trap catch errno
 1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	trap catch errno try errorhandling trapping
 1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	trap catch errno halt inspect breakpoint list
 1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	trap catch errno
@@ -1941,13 +1942,12 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 1006::TIMEOUT	Time limit specified by ⎕RTL exceeded while awaiting input through ⍞ or ⎕SR			Exception	Error Message	trap catch errno character stdin prompt
 1007::RESIZE	User resizes the ⎕SM window			Exception	Error Message	trap catch errno
 1008::DEADLOCK	Two threads acquiring a hold of two different tokens, and then each asks to hold the other token			Exception	Error Message	trap catch errno
-10::LIMIT ERROR	A system limit is exceeded				Error Message	trap catch errno
 11::DOMAIN ERROR	Type or value not permitted for the function/operator/system variable or unrepresentable numeric value				Error Message	trap catch errno
 12::HOLD ERROR	Attempting ⎕SAVE while external arrays or component files are held by ⎕FHOLD				Error Message	trap catch errno
 16::NONCE ERROR	System function or syntax or appropriate value is not currently implemented but is reserved for future use				Error Message	trap catch errno
 18::FILE TIE ERROR	File tie number used as tied when not or available when tied, or missing external variable				Error Message	trap catch errno
 19::FILE ACCESS ERROR	User is not authorised, or has supplied the wrong passnumber, or ⎕FERASE/⎕FRENAME on non-exclusive tie				Error Message	trap catch errno
-1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa
+2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	trap catch errno parser parsing
 20::FILE INDEX ERROR	An attempt is made to reference a non-existent component				Error Message	trap catch errno
 21::FILE FULL	Operation would cause the file to exceed its file size limit				Error Message	trap catch errno
 22::FILE NAME ERROR	File not found, file exists, incompatible file, or ⎕FERASE/⎕NERASE filename mismatch				Error Message	trap catch errno
@@ -1956,36 +1956,36 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 25::FILE TIED REMOTELY	Attempt to tie file that another processor has exclusively tied, or to exclusively tie file that another processor has exclusively tied				Error Message	trap catch errno
 26::FILE SYSTEM ERROR	Input/output error during file read/write — use ⎕FCHK when file becomes available				Error Message	trap catch errno
 28::FILE SYSTEM NOT AVAILABLE	Lock attempt failed — may be due to opportunistic locks being enabled on Windows				Error Message	trap catch errno oplock
-2::SYNTAX ERROR	A line of characters does not constitute a meaningful statement				Error Message	trap catch errno parser parsing
+3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				Error Message	trap catch errno bounds limits overflow beyond dimensions length rank axes
 30::FILE SYSTEM TIES USED UP	User already has the maximum number of files tied				Error Message	trap catch errno ⎕ftie fstie ⎕fcreate
 31::FILE TIE QUOTA USED UP	Maximum number of file ties for this APL instance has been reached				Error Message	trap catch errno
 32::FILE NAME QUOTA USED UP	User already has the maximum number of files named				Error Message	trap catch errno ⎕fcreate ⎕ftie ⎕fstie ⎕frename
 34::FILE SYSTEM NO SPACE	There is insufficient disk space				Error Message	trap catch errno blank
 38::FILE COMPONENT DAMAGED	Attempt is made to access a component that is not a valid APL object — use ⎕FCHK				Error Message	trap catch errno
-3::INDEX ERROR	Index or axis is not in ⍳⍴Y or not in ⍳≢⍴Y				Error Message	trap catch errno bounds limits overflow beyond dimensions length rank axes
 4::RANK ERROR	Array rank invalid for function/operator, or ranks of arguments do not conform				Error Message	trap catch errno dimensions conformability axes
+5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				Error Message	trap catch errno conformability
 52::FIELD CONTENTS RANK ERROR	Field content of rank greater than 2 is assigned to ⎕SM				Error Message	trap catch errno dimensions axes
 53::FIELD CONTENTS TOO MANY COLUMNS	Content of a numeric or date field assigned to ⎕SM has more than one column				Error Message	trap catch errno
 54::FIELD POSITION ERROR	Location of the field assigned to ⎕SM is outside the screen				Error Message	trap catch errno locate
 55::FIELD SIZE ERROR	Invalid field size for ⎕SM				Error Message	trap catch errno
 58::FIELD ATTRIBUTES RANK ERROR	The current video attribute assigned to ⎕SM is non-scalar but its rank does not match that of the field contents				Error Message	trap catch errno dimensions axes
 59::FIELD ATTRIBUTES LENGTH ERROR	The current video attribute assigned to ⎕SM is non-scalar but its dimensions do not match those of the field contents				Error Message	trap catch errno rank axes
-5::LENGTH ERROR	The shape of the arguments of a function do not conform, but the ranks do conform				Error Message	trap catch errno conformability
+6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				Error Message	trap catch errno
 61::KEY CODE UNRECOGNISED	A key code supplied to ⎕SR or ⎕PFKEY is not recognised as a valid code, or attempt at creating a KeyPress event with invalid Input Code				Error Message	trap catch errno
 62::KEY CODE RANK ERROR	A key code supplied to ⎕SR or ⎕PFKEY is not a scalar or a vector				Error Message	trap catch errno list dimensions axes
 63::KEY CODE TYPE ERROR	A key code supplied to ⎕SR or ⎕PFKEY is numeric or nested; i.e. is not a valid key code				Error Message	trap catch errno
-6::VALUE ERROR	Undefined name in this scope, or function does not return result while required				Error Message	trap catch errno
+7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				Error Message	trap catch errno
 70::FORMAT FILE ACCESS ERROR	The date format file to be used by ⎕SM does not exist or cannot be accessed				Error Message	trap catch errno
 71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				Error Message	trap catch errno
 72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				Error Message	trap catch errno
 76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				Error Message	trap catch errno matrix
-7::FORMAT ERROR	Ill-formed specification in the left argument of ⎕FMT				Error Message	trap catch errno
 84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	trap catch errno
 90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	trap catch errno
 92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	trap catch errno ⎕avu classic codepage characterset charset encoding sbcs list
 99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	trap catch errno blank
 errno::Y	Dfn/Dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try
-:Implements Constructor :Base expr	Function is a class constructor which calls the base constructor with the result of 'expr' as argument	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
+→Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf
+→⎕LC	Continuing execution	Expression			Expression	resume thread
 127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe
 201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes
 4000⌶⍬	Fork New Task	I-beam	Constant		System	aix multithreading parallel
@@ -2013,11 +2013,11 @@ f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of argu
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists
 ⊃⌽,Y	Fast: The item in the bottom right of Y	Expression		Performance	Selection	speed optimised optimized quick last bottom-right southeast south-east cell element
 Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where trues truths
+;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variable scope localise localize declaration declare declaring 1st
+f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variable scope localise localize locals declaration declare declaring [0]
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick
 ...	Syntax error to stop execution	Non-syntax			System	halt
-f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variable scope localise localize locals declaration declare declaring [0]
-;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variable scope localise localize declaration declare declaring 1st
 35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	trap catch errno
 60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	trap catch errno
 56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	trap catch errno
