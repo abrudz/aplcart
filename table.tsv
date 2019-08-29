@@ -772,8 +772,8 @@ Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		St
 (⍳∘≢⍴)Y	Indices of dimensions of Y	Tacit	Monadic Function		Array Properties	shape axes
 (,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof
 I(~∊∘⍳)Js	Boolean vector of length Js with zeros in locations I	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2
-(1<∘≢∪)Y	Are any major cells distinct?	Tacit	Monadic Function		Sets	testif anydifferent? anyunequal? anyunique? items elements
-(1=∘≢∪)Y	Are all major cells identical?	Tacit	Monadic Function		Sets	testif allsame? allequal? nounique? items elements
+(1<≢∘∪)Y	Are any major cells distinct?	Tacit	Monadic Function		Sets	testif anydifferent? anyunequal? anyunique? items elements
+(1≥≢∘∪)Y	Are all major cells identical?	Tacit	Monadic Function		Sets	testif allsame? allequal? nounique? items elements
 Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	duplicate reshape
 X(⊃∘⍸≠)Y	Index of first differing element in X and Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof unequal different 1st locating cell item difference location
 X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dyadic Function		Index Generation	find locate positionof locating memberof occurrence location 1st
@@ -841,8 +841,8 @@ Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Struc
 Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	Dyadic Function		Selection	leftshift list
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table
-(≢=∘≢∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? items elements
-(≢>∘≢∪)Y	Are any major cells identical?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? items elements
+(≢=≢∘∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? items elements
+(≢>≢∘∪)Y	Are any major cells identical?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? items elements
 (?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods
 (⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Mathematical	testif ascending? increasing? rising? up ordered sorted
