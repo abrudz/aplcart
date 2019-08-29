@@ -4,7 +4,7 @@
  syntaxdata←chars⍳SYNTAX
  classdata←class⍳CLASS
  typedata←type⍳TYPE
- syntax←(↓SYNTAX)~¨⊂' ',letters←'¯_∆⍙',⎕D,⎕A,819⌶⎕A
+ syntax←(↓SYNTAX)~¨⊂' ',letters←'¯_∆⍙⍬',⎕D,⎕A,819⌶⎕A
  complexity←↑((⊂∘⍒⌷⊢)(chars~letters)∘⍳)¨syntax
  length←≢¨syntax
  t⌷⍨←⊂⍋0⍪classdata,length,complexity,syntaxdata,typedata
