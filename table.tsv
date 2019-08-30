@@ -1,5 +1,12 @@
 SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
 ⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ list
+⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default
+X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright
+X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright
+X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boolean/Logical	falsy falsey 0
+⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack
+X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where
+X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1
 +Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	plus ¯10○ ¯10∘○ conj() conjugating
 +N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	conjugate negateimaginary
 M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	plus addition
@@ -16,13 +23,6 @@ A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger
 ⌊N	Rounding down to integer	Primitive	Monadic Function		Mathematical	downstile rounddown down() floor()
 M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile lesser smaller min()
-⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default
-X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright
-X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright
-X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boolean/Logical	falsy falsey 0
-⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack
-X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where
-X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1
 ⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension
 ⌽Ym	Reflect vertically	Primitive	Monadic Function		Structural	mirroring reflecting reflection right-left rightleft leftright left-right
 I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile rotating shifting cyclically dimension lists
@@ -426,6 +426,8 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()
 ¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
 ¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
+⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension
+⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
 Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathematical	windowedsum cells items
 -/N	Row-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series horizontally rowwise
@@ -436,16 +438,14 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 ∧/Bv	Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ binary base-2 base2 testif
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum
-⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension
-⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical	
 ≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical	
 1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list
+⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st
+⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st
 +⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
 -⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise
 ×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
-⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st
-⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st
 0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st
 1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths
 ,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells ending
@@ -675,8 +675,8 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 (⌈/|)N	Largest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally biggest greatestif maximum absolute value
 (⌊/|)N	Smallest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally least minimum absolute value
 (0=/⊢)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s trues truths
-Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 (0≠/⊢)Yv	Zeros, same shape plus one	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
+Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿⍴ ≢, ⍴, cells items
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise
 (⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise
@@ -718,9 +718,9 @@ X(∧\=)Y	Indicate leading elements that are equal	Tacit	Dyadic Function		Compar
 X(∧\≠)Y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Comparison	show different onleft cells items masking indicating start beginning
 (+\⍣¯1)N	Difference of adjacent pairs with seed value	Tacit	Monadic Function		Mathematical	differences deltas changes steps
 (≠\⍣¯1)B	Convert binary to reflected Gray code	Tacit	Monadic Function		Boolean/Logical	base-2 base2
+(⍉≡⊢)Ym	Is Ym symmetric?	Tacit	Monadic Function		Array Properties	testif
 (⍉≡+)Nm	Is Nm a Hermitian matrix?	Tacit	Monadic Function		Mathematical	testif Hermitian? self-adjoint? selfadjoint? Yᴴ Y† Aᴴ A†
 (-≡⍉)Ym	Is Ym anti-symmetric?	Tacit	Monadic Function		Array Properties	testif antisymmetric skewsymmetric skew-symmetric
-(⍉≡⊢)Ym	Is Ym symmetric?	Tacit	Monadic Function		Array Properties	testif
 (⍉0/⍪)Yv	Using sample row Yv to form an initially empty matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize table
 Xv(⊣/⍷)Ym	Boolean rows of Ym starting with X	Tacit	Dyadic Function		Sets	findfirstin search locatefirst binary base-2 base2
 Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Function		Text	find locate positionof locating location 1st
@@ -793,10 +793,10 @@ X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dy
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable 1st
 (⌊0.5+⊢)N	Rounding to nearest integer (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring
-(32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
-(⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	closestinteger nearestinteger nint
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
+(32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
+(⌊0.5∘+)N	Round	Tacit	Monadic Function		Mathematical	closestinteger nearestinteger nint
 (10 12∘.○⊢)N	From complex to magnitude and radians (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts angle absolute values start beginning
 (9 11∘.○⊢)N	From complex to real and imaginary (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values start beginning
 Mm(1 2 1 2⍉∘.+)Nm	Sum of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables
@@ -812,8 +812,8 @@ Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ←→ ⍴Xv)	Tacit	Dyadic Function		
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	table lists
 Xv∘.{⍺⍵}Yv	Catalog of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix
-Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths
+Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
 (××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp
 I(!×∘!⊣)J	Number of permutations of (I,J) combinations	Tacit	Dyadic Function		Mathematical	combinatorics
 M(≤∘|×⊢)N	Rounding to zero values of N within M of zero	Tacit	Dyadic Function		Mathematical	precision fuzz 0
