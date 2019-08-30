@@ -1365,7 +1365,7 @@ expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function	
 {⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
 Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic Function		Structural	table lists
 dfns.mmind ⎕A[?4⍴6]	Mastermind or "cows and bulls"	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL
-distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian
+distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian distributed
 sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function		System	parentspace ancestorspace namespacereferences blank
 cvec←{maxcols←⎕PW} dfns.tree space	Display of namespace tree	Dfn	Function		System	workspace name-clashproblem nameclashproblem blank
 cvec←{path←⎕PATH} dfns.ncpath names	⎕path-aware ⎕NC	Dfn	Function		System	nameclassification extended⎕NC
@@ -1575,6 +1575,7 @@ Xv{(↑∘⍵⍪⍺↑⍨1∘↓)(⍴⍵)⌈0,≢⍺}Ym	Appending vector Xv to t
 {' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski
 Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	time speed performance
 {s⍴1@(1+s[1]⊥⍵-1)⊢0⍴⍨×/s←0 0+⌈/,⍵}Jm	Changing connectivity list Jm to a connectivity matrix	Dfn	Monadic Function		Mathematical	graph connection table vector
+M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍵)×1○○2×?0×⍵}N	Normally distributed numbers with mean M and standard deviation N	Dfn	Function		Mathematical	Gaussian distribution
 I{(12⍴7⍴31 30)[⍺]-(⍺=2)×2-0≠.=400 100 4∘.|⍵}J	Number of days in months I of years J	Dfn	Dyadic Function		Mathematical	calendar lengths gregorian
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list
