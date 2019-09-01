@@ -14,11 +14,12 @@ M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	plus addition
 M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −
 ×N	Direction ('Signum' if N is real)	Primitive	Monadic Function		Mathematical	cross sgn() sign()
 M×N	Multiplying M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product
+M×N	Probabilistic AND	Primitive	Dyadic Function		Mathematical	fuzzy probability chance conjunction Kpq
 A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Function		Boolean/Logical	zero cells items
 M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd
-A∨B	OR	Primitive	Dyadic Function		Boolean/Logical	disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
+A∨B	Logical OR	Primitive	Dyadic Function		Boolean/Logical	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
 M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd()
-A∧B	AND	Primitive	Dyadic Function		Boolean/Logical	conjunction caret wedge hat circumflex Kpq
+A∧B	Logical AND	Primitive	Dyadic Function		Boolean/Logical	gate conjunction caret wedge hat circumflex Kpq
 ⌈N	Rounding up to integer	Primitive	Monadic Function		Mathematical	upstile roundup ceiling seiling up() ceil()
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger
 ⌊N	Rounding down to integer	Primitive	Monadic Function		Mathematical	downstile rounddown down() floor()
@@ -40,17 +41,17 @@ A!N	Selecting elements satisfying condition A, others to 1	Primitive	Dyadic Func
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function		Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
 Is?Js	Deal: Is random items from ⍳Js (without replacement)	Primitive	Dyadic Function		Index Generation	questionmark interrogationpoint query eroteme distinct cells elements remove
 M<N	Less Than	Primitive	Dyadic Function		Comparison	lt before precedes ≺ smaller lesser
-A<B	Converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	⇍ Mpq
+A<B	Logical converse Nonimplication	Primitive	Dyadic Function		Boolean/Logical	gate ⇍ Mpq
 M≤N	Less Than Or Equal To	Primitive	Dyadic Function		Comparison	before precedes ≦ smaller lesser same as
-A≤B	Implication	Primitive	Dyadic Function		Boolean/Logical	materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
-X=Y	Equal To	Primitive	Dyadic Function		Comparison	same ===
-A=B	XNOR	Primitive	Dyadic Function		Boolean/Logical	materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
+A≤B	Logical implication	Primitive	Dyadic Function		Boolean/Logical	gate materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
+X=Y	Equal To	Primitive	Dyadic Function		Comparison	sameas ===
+A=B	Logical xNOR	Primitive	Dyadic Function		Boolean/Logical	gate materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 M≥N	Greater Than Or Equal To	Primitive	Dyadic Function		Comparison	ge after follows ≧ larger same as succeeds
-A≥B	Converse Implication	Primitive	Dyadic Function		Boolean/Logical	because ∵ ⇐ if converseconditional Bpq reverseimplying
+A≥B	Logical converse Implication	Primitive	Dyadic Function		Boolean/Logical	gate because ∵ ⇐ if converseconditional Bpq reverseimplying
 M>N	Greater Than	Primitive	Dyadic Function		Comparison	gt after follows ≻ larger succeeds
-A>B	Nonimplication	Primitive	Dyadic Function		Boolean/Logical	abjunction ⇏ not butnot Lpq
-X≠Y	Not Equal To	Primitive	Dyadic Function		Comparison	ne unequal different != <> /=
-A≠B	XOR	Primitive	Dyadic Function		Boolean/Logical	exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
+A>B	Logical nonimplication	Primitive	Dyadic Function		Boolean/Logical	gate abjunction ⇏ not butnot Lpq
+X≠Y	Not Equal To	Primitive	Dyadic Function		Comparison	ne unequal differentfrom != <> /=
+A≠B	Logical XOR	Primitive	Dyadic Function		Boolean/Logical	gate exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 ≡Y	Depth: Maximum level of nesting in Y (negative if uneven)	Primitive	Monadic Function		Array Properties	equalunderbar
 X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function		Sets	testif equalunderbar identical? === equivalentto sameas
 ≢Xm	Number of rows in matrix Xm	Primitive	Monadic Function		Array Properties	count tally table
@@ -71,7 +72,7 @@ M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	star asteris
 M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithms logs circlestar starcircle splat log() log₁₀()
 ○N	pi times N	Primitive	Monadic Function		Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π 𝜋 big large ring
 I○N	Circular functions	Primitive	Dyadic Function		Mathematical	trigonometric hyperbolic complex imaginary arcus angle goniometric circle big large ring
-~B	Logical Inverse: 0=B	Primitive	Monadic Function		Boolean/Logical	tilde not logicalnot logicalnegation logicalcomplement ¬ negate inverting
+~B	Logical inverse (NOT): 0=B	Primitive	Monadic Function		Boolean/Logical	gate tilde not logicalnot logicalnegation logicalcomplement ¬ negate inverting
 Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function		Sets	tilde butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 X f⍨Y	Commute: same as Y f X	Primitive	Dyadic Function	Monadic Operator	Function Application	switch tildediaeresis swap frown
 X f⍨Y	Church Boolean Logical Inverse	Primitive	Dyadic Function	Monadic Operator	Mathematical	~ not logicalnot logicalnegation logicalcomplement ¬ negate inverting
@@ -88,8 +89,8 @@ f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Mon
 Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
 Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compress slashbar solidus filter first copy repeat Iv/[1] dimension 1st start beginning
 f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
-A⍱B	NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
-A⍲B	NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
+A⍱B	Logical NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
+A⍲B	Logical NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
 ,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flattening flatten() raze razing list
 X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise
 Xm,Ys	Append scalar to each row of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate rows table
@@ -204,6 +205,7 @@ X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items
+M f{⊃(|⍵ ⍺ 0-⊂⍺×⍵){⊃|⍺-⊃⍺⍺+.×⍺≠⍵}/1 1 0 0⊂,∘.⍺⍺⍨0 1}N	Probabilistic function corresponding to Boolean function f	Primitive	Dyadic Function		Mathematical	fuzzy probability chance
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without
@@ -367,7 +369,7 @@ t←{properties}1(⎕NINFO⍠1)tns/files	Return values of properties 1 for tns/f
 {counts}←{flags}(⎕NDELETE⍠1)files	Delete files (with ? and * globbing, if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop wildcards drop without
 {0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy cell element
 {r}←{msg} ⎕SIGNAL errno/{nvpairs}…	Signal an error; nvpairs set ⎕DMX props	System	Function	Error Message	System	throw emulate
-name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array mmap input output load save get put fetch import export native
+name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array mmap() input output load save get put fetch import export native
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change lock status of file region 0:unlock, 1:read, 2:write (optional timeout in seconds)	System	Function	Native Files	System Function	restrict access seal passcode
 {name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new
 (1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵⋄⍵})Y	Convert any rank APL array to JSON	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
@@ -555,7 +557,9 @@ Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Func
 Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with factors Mv in descending order for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply sorting reordering ordering
 ⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists
+I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-<
+M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼
 Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
 I(1+|)J	Incrementing cyclic counter J with upper limit I	Tacit	Dyadic Function		Mathematical	
 M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian
@@ -582,6 +586,7 @@ M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Func
 (¯6○÷)N	Hyperbolic area secant	Tacit	Monadic Function		Circular/Trigonometric	inverse asech() sech^-1() sech⁻¹() arsech() arcsech() secanshyperbolicus
 (¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Circular/Trigonometric	inverse acoth() actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() acotnh() cotnh^-1() cotnh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcoth() arcotgh() arctnh() arccoth() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous
+(1∘-)N	Probabilistic inverse (NOT)	Tacit	Monadic Function		Mathematical	fuzzy probability chance not logicalnot logicalnegation logicalcomplement ¬ negate inverting
 (÷∘100)N	Rate corresponding to percentage N	Tacit	Monadic Function		Mathematical	convert conversion
 (÷∘2)N	Halve: N÷2	Tacit	Monadic Function		Mathematical	halfof
 (1∘↑)Ym	First row as a row matrix (row vector)	Tacit	Monadic Function		Selection	topmostrow leading 1st table list start beginning
@@ -746,6 +751,8 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 ∘.≤⍨∘⍳Bm	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
 ∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
 ∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table remove
+M(⊢×1-⊣)N	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance ⇍ Mpq
+M(⊣×1-⊢)N	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq
 A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation
 M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine
 M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine
@@ -812,6 +819,8 @@ Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ←→ ⍴Xv)	Tacit	Dyadic Function		
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	table lists
 Xv∘.{⍺⍵}Yv	Catalog of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix
+A(1-⊢×1-⊣)B	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying
+A(1-⊣×1-⊢)B	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths
 Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
 (××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp
@@ -964,6 +973,7 @@ Iv(,⌿1+⊢⊤¯1+⊣)Jv	Indices of Iv'th elements in ravel order of an array o
 Iv Jv⍕⍨∘(∊,⍤0/)N	Formatting N with Jv decimals in fields of width Iv	Tacit	Dyadic Function		Text	widths
 (+/2 1∘⊃∘⎕VFI⍤1)Dm	Sum of numbers in character matrix Dm	Tacit	Monadic Function		Data Conversion	table
 (⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	
+M((1-⊣)×1-⊢)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 (⍋(≢,⊂)¨)Yv	Ascending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical
 (⍒(≢,⊂)¨)Yv	Descending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
 Iv((+\⊢)∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating
@@ -995,6 +1005,7 @@ X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1�
 (∨.∧⍨∨⊢)⍣≡Bm	Transitive closure	Tacit	Monadic Function		Boolean/Logical	
 (28+0≠.=400 100 4∘.|⊢)J	Number of days in February of year J (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical	
+M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq
 Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths
 Ms(⊢×÷∘(⌈/))N	Scale N so the maximum elemenent is Ms	Tacit	Dyadic Function		Mathematical	clamp rescale adjust
 (2 2⍴∘(-@2)2 1 1 2∘○)Ns	Rotation matrix for angle Ns (in radians) counter-clockwise	Tacit	Monadic Function		Mathematical	table
@@ -1112,10 +1123,12 @@ Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros aft
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix
 0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Circular/Trigonometric	Heron's formula herons
 (0=10|1⊥∘,0 10⊤⊢×∘⌽1 2⍴⍨≢)	Valid credit card?	Tacit	Monadic Function		Mathematical	testif luhns luhn's formula debitcard? creditcard? checksum valid?
+M((1-⊣×1-⊢)×1-⊢×1-⊣)N	Probabilistic XNOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic progression)	Tacit	Dyadic Function		Mathematical	range seq() sequence …
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	major cells items list
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix IM (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points points beginnings table points
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items
+M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical	
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
@@ -1681,6 +1694,7 @@ X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f
 f{2⊥⍺⍺/2⊥⍣¯1⊢⍵}Jv	Bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply
 X f{⊃⌽⍸~⍺ ⍺⍺ ⍵}Y	Index of last element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose
+M(A{⍺×⍵*¯1*⍺⍺})N	Conditionally multiply (where A=0) or divide (where A=1)	Dop	Dyadic Function	Monadic Operator	Mathematical	per-element item cell
 Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dyadic Function	Monadic Operator	Structural	major cells items delete remove without
 (Ms{⍺⍺⌈⍵⍵⌊⍵}Ns)N	Force N to range Ms≤N≤Ns	Dop	Monadic Function	Dyadic Operator	Mathematical	clamp limitrange between –
 rslt←{larg} {''} dfns.vof F vof G vof ··· rarg	Vector of functions	Dop		Dyadic Operator	Structural	functionarray vectoroffunctions fork co-operator cooperator list
@@ -1712,7 +1726,6 @@ Iv(Is{⍵\⍨,⍺∘.>¯1+⍳⍺⍺})Yv	Justifying left fields of Yv (lengths Iv
 X f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, g Y times	Dop	Dyadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
 f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply f to Y, g Y times	Dop	Monadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
 M(A{(⍺×⍺⍺)+⍵×~⍺⍺})N	Selection of elements of M and N depending on condition A	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector mesh merge cells items indicate masking indicating
-M(A{⍺×⍵*¯1*⍺⍺})N	Conditionally multiply (where A=0) or divide (where A=1)	Dop	Dyadic Function	Monadic Operator	Mathematical	per-element item cell
 Iv(Is{⍵\⍨,⍺∘.>⌽¯1+⍳⍺⍺})Yv	Justifying right fields of Yv (lengths Iv) to length Is	Dop	Dyadic Function	Monadic Operator	Text	rightalign right-align
 (Mv{⍺⍺∘+¨⍵⍵∘×¨¯1+⍳⍵}Nv)Jv	Multi-dimensional arithmetic progression with dimensions Jv starting at Mv with steps Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	sequence seq() multidimensional axes
 I(X{(⊂⍺⌊1+≢⍵)⌷⍵⍪⍺⍺})Y	Giving a default value X for indices beyond end of Y	Dop	Dyadic Function	Monadic Operator	Selection	fallback indexing trailing ending
@@ -1723,6 +1736,7 @@ Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier ma
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
 Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis row-wise horizontally
 X(f{↑[⍵⍵](⊂[⍵⍵]⍺)⍺⍺⊂⍵}ax)Y	Run f on axes of X	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions
+A(I{(0 1 2 3∘.=⍨⍵+2×⍺)∨.∧⍺⍺⊤⍨4⍴2})B	Apply Boolean functions I (0-15) between arguments A and B	Dop	Dyadic Function	Monadic Operator	Boolean/Logical	application numbered enumerated operation
 (X{(⊂⍋(⍳≢⍵),⌊⍺⍺)⌷⍵,⍺⍺}Nv)Y	Insert X at fractional positions Nv in Y (≢Nv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank axis
