@@ -205,7 +205,7 @@ X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items
-M f{⊃+/,(∘.⍺⍺⍨0 1)×(1-⍺)⍺∘.×(1-⍵)⍵}N	Probabilistic function corresponding to Boolean function f	Primitive	Dyadic Function		Mathematical	fuzzy probability chance
+M f{⊃+/,(∘.⍺⍺⍨0 1)×(1-⍺)⍺∘.×(1-⍵)⍵}N	Probabilistic function corresponding to Boolean function f	Primitive	Dyadic Function	Monadic Operator	Mathematical	fuzzy probability chance
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without
