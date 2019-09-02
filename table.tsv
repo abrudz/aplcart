@@ -205,7 +205,7 @@ X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items
-M f{⊃(|⍵ ⍺ 0-⊂⍺×⍵){⊃|⍺-⊃⍺⍺+.×⍺≠⍵}/1 1 0 0⊂,∘.⍺⍺⍨0 1}N	Probabilistic function corresponding to Boolean function f	Primitive	Dyadic Function		Mathematical	fuzzy probability chance
+M f{⊃+/,(∘.⍺⍺⍨0 1)×(1-⍺)⍺∘.×(1-⍵)⍵}N	Probabilistic function corresponding to Boolean function f	Primitive	Dyadic Function		Mathematical	fuzzy probability chance
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without
@@ -1101,7 +1101,7 @@ Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled colu
 (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	Cartesian metric Pythagorean d() matrix
 M((*0-⊣)×*÷⊢∘!)N	Poisson distribution of states N with average M	Tacit	Dyadic Function		Mathematical	
 X(1+(≢⊣)-⍳⍨∘⌽⍨)Y	Last index of (⍳): Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof finding locating locate positionof items elements location
-(⍳∘≢=(⍳⍨∪⍳⊢))Y	Nub sieve: mask for major cells to leave the distinct (∪Y)	Tacit	Monadic Function		Sets	unique Boolean indication indicate ⍧ items elements masking indicating binary base-2 base2
+(⍳∘≢=(⍳⍨∪⍳⊢))Y	Nub sieve: mask for major cells to leave the distinct (∪Y)	Tacit	Monadic Function		Sets	unique Boolean indication indicate ⍧ items elements masking indicating Nub-sieve
 ((819⌶=⊢)∧819⌶⍨∘1=⊢)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral?
 ((819⌶≠⊢)-819⌶⍨∘1≠⊢)D	Detect case of characters (1:uppercase, ¯1:lowercase, 0:neither)	Tacit	Monadic Function		Text	query determine report
 ((819⌶≠⊢)∧819⌶⍨∘1≠⊢)D	Are characters of D titlecase?	Tacit	Monadic Function		Text	title-case? digraphs? ligatures?
@@ -1736,7 +1736,6 @@ Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier ma
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
 Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis row-wise horizontally
 X(f{↑[⍵⍵](⊂[⍵⍵]⍺)⍺⍺⊂⍵}ax)Y	Run f on axes of X	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions
-A(I{(0 1 2 3∘.=⍨⍵+2×⍺)∨.∧⍺⍺⊤⍨4⍴2})B	Apply Boolean functions I (0-15) between arguments A and B	Dop	Dyadic Function	Monadic Operator	Boolean/Logical	application numbered enumerated operation
 (X{(⊂⍋(⍳≢⍵),⌊⍺⍺)⌷⍵,⍺⍺}Nv)Y	Insert X at fractional positions Nv in Y (≢Nv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin
 X f{⍺←⊢ ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Under: preprocess (g) arguments before applying main function (f), then undo preprocessing	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank axis
@@ -1744,6 +1743,7 @@ Xv(Cv{(⍵,⍨⊂⍺⍺)⍪⍺,⍺∘.(⍎⍺⍺)⍵})Yv	Formatted function tabl
 X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing
 (Xv{(⍵⍵⌷⍨∘⊂⍺⍺∘⍳)@(∊∘⍺⍺)⊢⍵}Yv)Y	Replacing elements of Y in set Xv with corresponding element from Yv	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update cells items
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
+M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/probabilistic functions I (0-15)	Dop	Dyadic Function	Monadic Operator	Mathematical	Logical application numbered enumerated operation apply fuzzy probability chance
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	table
 Iv(Is{(⊂(1+≢⍵)⌊⍋(⍳≢⍵),⍺⍴⍨⍺⍺×≢⍺)⌷⍵⍪⍵⍵}Y)Z	Inserting Is Y's into Z after indices Iv	Dop	Dyadic Function	Dyadic Operator	Structural	
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
