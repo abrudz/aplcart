@@ -151,7 +151,7 @@ Iv⍕Y	Format Y using (width, decimals) pairs Iv	Primitive	Dyadic Function		Data
 X f&Y	Spawn: f between X and Y in a new thread	Primitive	Monadic Function	Monadic Operator	System	ampersand greenthreading launch run
 f&Y	Spawn: f on in a new thread	Primitive	Dyadic Function	Monadic Operator	System	ampersand et and greenthreading launch run
 Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog
-name f←Y	Modified Assignment	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
+name f←Y	Modified Assignment (tradfns/tradops only)	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means
 ∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
 →	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop
@@ -183,6 +183,7 @@ Mv⊆[ax]Y	Partition Y according to Mv (along axis ax)	Primitive	Dyadic Function
 Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom dimensions
 Iv\[ax]Y	Expand axis ax of Y	Primitive	Dyadic Function		Selection	reversesolidus slope dimension
 f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension row-wise horizontally lists
+name f∘⊢←Y	Modified Assignment (dfns/dops only)	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
 (f∘Y)Z	Curry: f between Z and Y, that is, Z f Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring
 X(f⍤Js)Y	Rank: f on or between trailing rank-Js subarrays	Primitive	Dyadic Function	Dyadic Operator	Function Application	jotdiaeresis paw sub-array dimensions axes ending
 (f⍤Jv)Y	Rank: f on or between trailing rank-Jv subarrays	Primitive	Monadic Function	Dyadic Operator	Function Application	jotdiaeresis paw sub-array dimensions axes ending
@@ -371,13 +372,13 @@ t←{properties}1(⎕NINFO⍠1)tns/files	Return values of properties 1 for tns/f
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array mmap() input output load save get put fetch import export native
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change lock status of file region 0:unlock, 1:read, 2:write (optional timeout in seconds)	System	Function	Native Files	System Function	restrict access seal passcode
 {name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new
-(1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵⋄⍵})Y	Convert any rank APL array to JSON	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
 1⌽Y	Rightmost neighboring elements (cyclically)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items
 +⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice
 ×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths
 ≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
+X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Function Application	dyadic to from monadic dummy onrightargument
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
 0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods
 100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	convert conversion
@@ -479,6 +480,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list
 0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals
 0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked
+name⊢←Y	In-place update	Tacit	Derived Function	Monadic Operator	Expression	inplace replace value reassign re-assign
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension
 name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st
 {0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught
@@ -1159,6 +1161,7 @@ Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyad
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
 (⊢⊂⍨1,1↓≢↑2</'aeiouyäö'∊⍨819⌶)Dv	Syllabisation of a Finnish word Dv	Tacit	Monadic Function		Text	Syllabization syllables
 Av(∧{⍵∧s∊⍺/s←+\2</0,⍵}⊢)Bv	Groups of ones in Bv pointed to by at least one 1 in Av	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
+(1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵⋄⍵})Y	Convert any rank APL array to JSON	Tacit	Monadic Function		Data Conversion	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
 ' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 (⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings remove
 ('/'@(' '∘=)∘⍕100|1⌽3∘↑)Jv	Date (⎕TS format) to M/D/YY	Tacit	Monadic Function		Text	ANSI INCITS 30-1997 (R2008) NIST FIPS PUB 4-2 American USA
@@ -1495,7 +1498,6 @@ Ms{⍺←0 ⋄ ⍺,⍵÷⍳≢⍵}Nv	Integral of polynomial Nv with optional con
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()
-{⍵⌷⍨⊂0~⍨⊢/0,⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	items elements
 Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cypher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting
 Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method
@@ -1512,6 +1514,7 @@ Is{⍵⌿⍨(⍋⍒⍵)∊⍳⍺}Y	The Is largest cells of Y in order of occurre
 {2∧/0,≠\⍵=''''}Dv	Locations of texts between and excluding quotes	Dfn	Monadic Function		Text	strings
 Is{⍵⍪(⍺-≢⍵)⌿¯1↑⍵}Y	Extending Y with last cell of Y to length Is	Dfn	Dyadic Function		Structural	filling enlongating item element
 X{⍺⌿⍨(≢⍵)>⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements
+{⍵⌷⍨⊂0~⍨⊢/0,⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	items elements
 kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function		Text	namecolouring parsing Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring tokens types syntax syntactic
 Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot remove
 Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next 1 in Av	Dfn	Dyadic Function		Selection	item element
