@@ -91,7 +91,7 @@ Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	co
 f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst reversesolidus columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
 A⍱B	Logical NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 A⍲B	Logical NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
-,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flattening flatten() raze razing list
+,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flattening flatten() raze razing list array
 X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise
 Xm,Ys	Append scalar to each row of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate rows table
 Xm,Yv	Append elements of vector to respective rows of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate table list
