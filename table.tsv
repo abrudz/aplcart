@@ -72,14 +72,14 @@ M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	star asteris
 M⍟N	Base-M logarithm of N	Primitive	Dyadic Function		Mathematical	logarithms logs circlestar starcircle splat log() log₁₀()
 ○N	pi times N	Primitive	Monadic Function		Circular/Trigonometric	archimedesconstant 3.141592653589793238462643383279503 π 𝜋 big large ring
 I○N	Circular functions	Primitive	Dyadic Function		Mathematical	trigonometric hyperbolic complex imaginary arcus angle goniometric circle big large ring
-~B	Logical inverse (NOT): 0=B	Primitive	Monadic Function		Boolean/Logical	gate tilde not logicalnot logicalnegation logicalcomplement ¬ negate inverting
+~B	Logical inverse (NOT): 0=B	Primitive	Monadic Function		Boolean/Logical	gate tilde logicalnot logicalnegation logicalcomplement ¬ negate inverting
 Xv~Y	Without: (~Xv∊Y)/Xv	Primitive	Dyadic Function		Sets	tilde butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 X f⍨Y	Commute: same as Y f X	Primitive	Dyadic Function	Monadic Operator	Function Application	switch tildediaeresis swap frown
 X f⍨Y	Church Boolean Logical Inverse	Primitive	Dyadic Function	Monadic Operator	Mathematical	~ not logicalnot logicalnegation logicalcomplement ¬ negate inverting
 f⍨Y	Selfie: same as Y f Y	Primitive	Monadic Function	Monadic Operator	Function Application	commute tildediaeresis frown duplicate
 X f∘g Y	With: X∘f on the result of g on Y, that is, X f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition hook against besides
 X∘g Y	Curry: g between X and Y, that is, XgY	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring
-f∘g Y	Atop: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition against besides atop
+f∘g Y	Atop: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition against besides
 X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
 f¨Y	Each: f on items of Y	Primitive	Monadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
 Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash insert select solidus over rowwise reducing folding cells elements dimension row-wise horizontally
@@ -299,7 +299,7 @@ r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data 
 {tn}←file ⎕NCREATE tn	Create file (tn 0 to generate tn)	System	Function	Native Files	System Function	make new
 {tn}←file ⎕NERASE tn	Erase tied file tn	System	Function	Native Files	System Function	delete remove expunge drop without
 {tn}←file ⎕NRENAME tn	Rename tied file to have name file	System	Function	Native Files	System Function	move
-state|data←{settings} ⎕PROFILE action	"Profile" CPU or elapsed time consumption of code	System	Function	System	System Function	performance monitor statistics stats observe processor resources
+state|data←{settings} ⎕PROFILE action	“Profile” CPU or elapsed time consumption of code	System	Function	System	System Function	performance monitor statistics stats observe processor resources
 ref←{class/interface} ⎕CLASS instance	Extract specific interface to an instance	System	Function	Data Conversion	System Function	parents ancestors
 t←{properties}1 ⎕NINFO tns/files	Return values of properties 1 for tns/files	System	Function	Native Files	System Function	dir ls list information vector
 ⎕IO←(1,0)	Specifies whether array indices are counted from 0 or 1	System	Variable		Index Generation	indexing counting numbering natrualnumbers origin one zero based ordinals
@@ -378,7 +378,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths
 ≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
-X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Function Application	dyadic to from monadic dummy onrightargument
+X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Function Application	to from dummy onrightargument
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
 0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods
 100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	convert conversion
@@ -484,7 +484,7 @@ name⊢←Y	In-place update	Tacit	Derived Function	Monadic Operator	Expression	i
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension
 name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st
 {0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught
-+∘-N	Negate real part ("real conjugate")	Tacit	Monadic Function		Mathematical	
++∘-N	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical	
 -∘+N	Mirror complex N in y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal
 ⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical	
@@ -587,7 +587,7 @@ M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Func
 (¯6○÷)N	Hyperbolic area secant	Tacit	Monadic Function		Circular/Trigonometric	inverse asech() sech^-1() sech⁻¹() arsech() arcsech() secanshyperbolicus
 (¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Circular/Trigonometric	inverse acoth() actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() acotnh() cotnh^-1() cotnh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcoth() arcotgh() arctnh() arccoth() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous
-(1∘-)N	Probabilistic inverse (NOT)	Tacit	Monadic Function		Mathematical	fuzzy probability chance not logicalnot logicalnegation logicalcomplement ¬ negate inverting
+(1∘-)N	Probabilistic inverse (NOT)	Tacit	Monadic Function		Mathematical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ¬ negate inverting
 (÷∘100)N	Rate corresponding to percentage N	Tacit	Monadic Function		Mathematical	convert conversion
 (÷∘2)N	Halve: N÷2	Tacit	Monadic Function		Mathematical	halfof
 (1∘↑)Ym	First row as a row matrix (row vector)	Tacit	Monadic Function		Selection	topmostrow leading 1st table list start beginning
@@ -657,7 +657,7 @@ Is⌿∘⍉∘⍪Yv	Matrix with Is rows, each consisting of Yv	Tacit	Dyadic Func
 Xs+.=∘,Y	Number of occurrences of scalar Xs in array Y	Tacit	Dyadic Function		Comparison	count tally
 (×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals
 (⊢=+)N	Is N real?	Tacit	Monadic Function		Mathematical	testif
-(⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif integer? whole number?
+(⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif whole number?
 (⊢≠+)N	Is N complex?	Tacit	Monadic Function		Mathematical	testif
 (⌽≡⊢)Dv	Is Dv a palindrome?	Tacit	Monadic Function		Text	testif
 I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical	width representation required digits positions
@@ -694,7 +694,7 @@ Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths
 Xs(,,⍤0)Yv	Inserting Xs after each element of Yv	Tacit	Dyadic Function		Structural	cell item
-Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	merge mesh shuffle lists
+Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	merge mesh shuffle lists zip()
 Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		Structural	merge cell item
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten row-wise rowwise
@@ -871,7 +871,7 @@ X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Funct
 (⌽⍉⍨1*⍴)Y	Anti-diagonal of any rank array	Tacit	Monadic Function		Selection	minordiagonal antidiagonal nesw ne-sw
 X(⍸⍷⍨∘⊂)Y	Positions of item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof subarray sub-array subsequence sub-sequence cell element
 (1.8÷⍨¯32∘+)N	Fahrenheit to Celcius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius c2f() ctof() convert
-(⊃∧.=,)Y	Are all elements of Y equal?	Tacit	Monadic Function		Comparison	testif allsame allmatch? equal? cells items allidentical
+(⊃∧.=,)Y	Are all elements of Y equal?	Tacit	Monadic Function		Comparison	testif allsame allmatch? cells items allidentical
 Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical	
 (1+⍴⊥¯1∘+)Jm	Conversion of indices Jm of array to indices of raveled array	Tacit	Monadic Function		Index Generation	
 2∘(+⌿⊥⍣¯1)J	Hamming weight	Tacit	Monadic Function		Mathematical	population popcount sideways summation count() bitcount() cardinality() popcnt() bitsum() pcnt() ones 1s trues truths
@@ -980,7 +980,7 @@ M((1-⊣)×1-⊢)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy p
 Iv((+\⊢)∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating
 (,[0.5]∘'¯')Dv	Underlines a string (1=⎕IO)	Tacit	Monadic Function		Text	underscore
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elemetnts at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes
-(↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	plot curve graph
+(↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing	
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
@@ -1186,7 +1186,7 @@ Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍋⍵]]}Y	Minima (⌊/) of elements of subv
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maxima (⌈/) of elements of subvectors of Y indicated by Av	Tacit	Dyadic Function		Mathematical	segmented partitioned array maximums greatestif largest biggest major cells items
 (≢÷⍨2*∘÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
 ((⍳-∘⌈÷∘2)(⊣⊖⌽),⍨⍴∘⍳×⍨)Js	A magic square, odd side Js	Tacit	Monadic Function		Mathematical	
-{⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph
+{⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph plotting
 (-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion
 I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
@@ -1219,7 +1219,7 @@ mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	
 mat←dfns.pmat n	Permutation matrix of ⍳⍵	Dfn	Function		Structural	permutationmatrix table
 match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	testif comparenamespaces namespacecomparison blank identical equal sameas equivalent
 bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function		Mathematical	Hungarianmethod maximise optimise graph independentzeros zeroes 0s
-bmat←dfns.life bmat	John Conway's "Game of Life"	Dfn	Function		Boolean/Logical	gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
+bmat←dfns.life bmat	John Conway's “Game of Life”	Dfn	Function		Boolean/Logical	gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
 bool←dfns.isdfn name	Test for D function	Dfn	Function		System	testforD-function name-clashproblem testforDfunction nameclashproblem
 bytes←dfns.wsreq expr	WS required to execute expression ⍵	Dfn	Function		System	performance monitor fudgefactor calibration
 chars←dfns.lcase chars	Lower-casification	Dfn	Function		Text	lowercase
@@ -1228,7 +1228,7 @@ calendar←dfns.cal date	Calendar	Dfn	Function		Mathematical	winningLoto lotto
 cvec←dfns.squeeze cvec	Compress multiple blanks	Dfn	Function		Text	compression linevector consecutive spaces
 cvec←dfns.vtrim cvec	Remove trailing blanks	Dfn	Function		Text	compression spaces delete drop ending without
 cvec←dfns.exit code	Return to calling environment	Dfn	Function		System	⎕OFF interactive conditional safe quit leave )off
-cvec←dfns.unwrap lvec	Replace [LF] with blanks	Dfn	Function		Text	text wordswrapping linevector spaces
+cvec←dfns.unwrap lvec	Replace [LF] with blanks	Dfn	Function		Text	wordswrapping linevector spaces
 cvec←dfns.utf8get fid	Char vector from UTF-8 file ⍵	Dfn	Function		Native Files	text encoding Unicode list read load fetch
 cvec←wgraph dfns.wcost path	Cost vector for path ⍵ through weighted graph ⍺	Dfn	Function		Mathematical	weightedgraph costvector list
 cvecs←dfns.fnrefs func	External refs from tradfn ⍵	Dfn	Function		System	functionreferences cross-reference crossreference
@@ -1270,7 +1270,7 @@ num←dfns.det nmat	Determinant of square matrix	Dfn	Function		Mathematical	Gaus
 num←dfns.osc num	Oscillate - probably returns 1	Dfn	Function		Mathematical	cashprize wondrousnumber Gödel,Escher,Bach Goedel,Escher,Bach GödelEscherBach GodelEscherBach GoedelEscherBach engineer'sproof engineersproof
 num←num dfns.gcd num	Greatest Common Divisor	Dfn	Function		Mathematical	greatestcommondivisor leastcommonmultiple tailrecursion
 p←s dfns.birthday n	Probability of same birthday	Dfn	Function		Mathematical	paradox
-paths←item dfns.in array	Locations of item ⍺ in array ⍵	Dfn	Function		Index Generation	find index pick cell element locate
+paths←item dfns.in array	Locations of item ⍺ in array ⍵	Dfn	Function		Index Generation	find pick cell element locate
 pvec←dfns.stpaths tree	Spanning tree paths	Dfn	Function		Structural	graph spanningtree
 precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function		Mathematical	quicksort Totalarrayordering order(ofarrays) comparearrays lexically lexicographically sorting reordering
 prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function		Mathematical	Bayesformula
@@ -1311,7 +1311,7 @@ vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Functi
 bfobj←(dfns.mac) src	Simple macro processor for bf	Dfn	Function		Text	Brainfuck continuation-passingstyle continuationpassingstyle
 bmat←{A CI} dfns.baby bmat	Manchester Small Scale Experimental Machine	Dfn	Function		Mathematical	SSEM firstcomputer assembler disassembler diversions bottom ⊥
 cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function		Text	ssxutils stringreplacement substitution
-cvecs←{prim supp} dfns.words cvec	Source vector split into words	Dfn	Function		Text	text list
+cvecs←{prim supp} dfns.words cvec	Source vector split into words	Dfn	Function		Text	list
 cvex←{width} dfns.hex nums	Hexadecimal from decimal	Dfn	Function		Data Conversion	decimalfromhex
 cmat←dfns.ssmat (cmat from into)	Matrix search/replace	Dfn	Function		Structural	ssxutils stringreplacement substitution table
 cmat←{attributes} dfns.attrib namelist	Function/operator attributes	Dfn	Function		System	⎕AT ⎕SIZE syntax name-clashproblem nameclashproblem properties
@@ -1379,16 +1379,16 @@ tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	
 expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function		Mathematical	parsing polymorphism
 {⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:
 Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic Function		Structural	table lists
-dfns.mmind ⎕A[?4⍴6]	Mastermind or "cows and bulls"	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL
+dfns.mmind ⎕A[?4⍴6]	Mastermind or “cows and bulls”	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL
 distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian distributed
 sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function		System	parentspace ancestorspace namespacereferences blank
 cvec←{maxcols←⎕PW} dfns.tree space	Display of namespace tree	Dfn	Function		System	workspace name-clashproblem nameclashproblem blank
 cvec←{path←⎕PATH} dfns.ncpath names	⎕path-aware ⎕NC	Dfn	Function		System	nameclassification extended⎕NC
 cvec←{time←⎕TS} dfns.timestamp cvec	Time-stamped message	Dfn	Function		Text	date
 cmat←{space←⎕THIS} dfns.find string	Lines containing string(s) ⍵	Dfn	Function		Text	name-clashproblem stringsearch nameclashproblem
-lvec←{cols←⎕PW} dfns.wrap cvec	Wrap word vector at ⍺ columns	Dfn	Function		Text	words text linevector transitiveclosure list
+lvec←{cols←⎕PW} dfns.wrap cvec	Wrap word vector at ⍺ columns	Dfn	Function		Text	words linevector transitiveclosure list
 nvec←{tolerance←⎕CT} dfns.cfract numb	Continued fraction approx of real ⍵	Dfn	Function		Mathematical	continuedfraction goldenmean fibonaccinumber
-rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rats rationalnumber Pi numberoftheBeast
+rats←{tolerance←⎕CT} dfns.rational nums	Rational approximation to real ⍵	Dfn	Function		Mathematical	rationalnumber Pi numberoftheBeast
 {⍵+⎕IO-1}J	Changing an index origin dependent argument to act as ⎕IO=1	Dfn	Monadic Function		Index Generation	
 {-⎕IO-⍵}J	Changing an index origin dependent result to be as ⎕IO=0	Dfn	Monadic Function		Index Generation	
 {⍵+~⎕IO}J	Changing an index origin dependent result to be as ⎕IO=1	Dfn	Monadic Function		Index Generation	
@@ -1424,7 +1424,7 @@ cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Func
 lines←{tabs←0 {ctype←80}} dfns.getfile filename	Text file ⍵ as nested vector	Dfn	Function		Native Files	nativefile textfile Unicode list
 M{⎕DIV←1⋄⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dyadic Function		Mathematical	over ⁄
 Is{1@⍵⊢⍺ ⍺⍴0}Jv	Adjacency matrix of size Is from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector
-crep←{dot←'·'} dfns.dots crep	Show dfn with "white dots"	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem
+crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2
@@ -1597,7 +1597,7 @@ Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left ar
 Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths
 {(⊢+.×¯1*2</,∘0)(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify buckets bin groups intervals cells items
-Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	"Transpose" of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table
+Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose” of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table
 Mv{⍵⍀⍨~(⍳(≢⍺)+≢⍵)∊(⌊⍺)+⍳≢⍺}Y	Adding an empty cell into Y at fractional positions Mv	Dfn	Monadic Function		Structural	expand insert item element
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
@@ -1622,7 +1622,7 @@ X(Is{(⍺↑⍨a[⍺⍺]@⍺⍺⊢s),[⍺⍺]⍵↑⍨w[⍺⍺]@⍺⍺⊢s←(a�
 X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY backcompose back-compose reverse-compose reversecompose into
 rslt←pick dfns.of F of G of H … arg	Pick'th fn applied to arg	Dop		Dyadic Operator	Function Application	functionarray conditionaloperator co-operator cooperator
 f@{B}Y	Where: Execute f on condition B mask	Dop	Dyadic Function	Monadic Operator	Function Application	amend update indicate masking indicating
-rslt←{larg} I _fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+rslt←{larg} I _fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
 vec←(fun dfns.traj) arg	Function limit 'trajectory'	Dop		Monadic Operator	Mathematical	debugging Newton-Raphson sequence NewtonRaphson
 vect←(fn dfns.ascan) vect	Associative vector scan	Dop		Monadic Operator	Function Application	scanoperators list scanning
 cvec←larg (fn dfns.nats) rarg	Natural number arithmetic	Dop		Monadic Operator	Mathematical	naturalnumber infiniteprecision expressiontransformation
@@ -1644,20 +1644,20 @@ rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operato
 rslt←(func dfns.acc) argt	Accumulating reduction	Dop		Monadic Operator	Function Application	
 rslt←(func dfns.until cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
 rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
-rslt←(dewy dfns.do) rarg	Apply no-result function "en passant"	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
+rslt←(dewy dfns.do) rarg	Apply no-result function “en passant”	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator	Function Application	conditionaloperator Helsingør hyperator co-operator cooperator
-rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
-rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of "fork" syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
+rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
 refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator	Function Application	functionarray functionarray
 z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator	Sets	FinnAPLIdiomList
 {larg}(fn dfns.Depth k)rarg	Apply fn at depths k	Dop		Dyadic Operator	Function Application	rank dimensions axes levels
 array←{ascan} (fn dfns.ascana) array	Associative higher rank scan	Dop		Monadic Operator	Function Application	scanoperators dimensions scanning high-rank any-rank highrank anyrank axes
-sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	rats Eidenumbers rationalnumber balancedternary skewedfour
+sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	Eidenumbers rationalnumber balancedternary skewedfour
 cvec←{larg} (fn dfns.big) rarg	Arithmetic on large integers	Dop		Monadic Operator	Mathematical	infiniteprecision factorial
 new←{larg} (sel dfns.sam mod) old	Select and modify	Dop		Dyadic Operator	Function Application	selectandmodify destructiveassignment purefunction
 rslt←(fun dfns.rows) {array}	Operand function applied to argument rows	Dop		Monadic Operator	Function Application	vector-wise vectorwise
 rslt←{lft} (fun dfns.perv) rgt	Scalar pervasion	Dop		Monadic Operator	Function Application	scalar-wise pervasivefunction scalarwise Pervade
-rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mathematical	rats rationalnumber primenumber
+rslt←{larg} (fn dfns.rats) rarg	Rational arithmetic	Dop		Monadic Operator	Mathematical	rationalnumber primenumber
 rslt←{larg} (func dfns.profile subs) rarg	Performance profiling	Dop		Dyadic Operator	System	timing monitor ⎕profile
 rslt←{larg} (func dfns.tc) rarg	Trace of function application	Dop		Monadic Operator	Function Application	monitor debugging
 rslt←{larg} (land dfns.cf rand) rarg	Ratio of operand timings	Dop		Dyadic Operator	System	performance expressioncomparison hyperator
@@ -1677,17 +1677,17 @@ tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Ope
 {⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally remove
 f{⍉⍺⍺⍉⍵}Y	Applying to columns action f defined on rows	Dop	Monadic Function	Monadic Operator	Function Application	
 f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending
-f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	
+f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	plotting
 f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criteria f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items
 X f{≢⍸⍺ ⍺⍺ ⍵}Y	The number of elements where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Boolean/Logical	count tally cells items binary base-2 base2
 X f{⊃⍸⍺ ⍺⍺ ⍵}Y	Index of first element where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2
 rslt←cond (⍺⍺ dfns.else ⍵⍵) argt	Condition f else g …	Dop		Dyadic Operator	Function Application	conditionaloperator
 rslt←i j k ··· F dfns.case G case H ··· arg	Select statement	Dop		Dyadic Operator	Selection	conditionaloperator selectoperator co-operator cooperator switch
 rslt←i j k··· F dfns.for G for H··· arg	Multiple selection of function list	Dop		Dyadic Operator	Function Application	conditionaloperator functionselection functionarray co-operator cooperator vector
-rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Fast: Function memoisation	Dop		Dyadic Operator	Function Application	memoization persistentlocalvariable fibonaccinumber cache remember reuse speed performance
+rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Fast: Function memoisation	Dop		Dyadic Operator	Function Application	memoization persistentlocalvariable fibonaccinumber remember reuse speed performance
 {rslt}←{larg} (fun dfns.time) rarg	Function application time	Dop		Monadic Operator	System	performance monitor timing
 rslt←{guess←1+⎕CT} (fn dfns.invr) argt	Inverse of real-valued function	Dop		Monadic Operator	Mathematical	functioninverse Newton-Raphson absolutezero NewtonRaphson inversion
-rslt←{⍺←⊢} (new dfns.at sel) old	Prefix-friendly @	Dop		Dyadic Operator	Function Application	atoperator prefixagreement whereclause SigmaAPL semicolonseparator @
+rslt←{⍺←⊢} (new dfns.at sel) old	Prefix-friendly @	Dop		Dyadic Operator	Function Application	atoperator prefixagreement whereclause SigmaAPL semicolonseparator
 X f{⊃⌽⍸⍺ ⍺⍺ ⍵}Y	Index of last element where Xv f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2
 X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic
@@ -1751,7 +1751,7 @@ M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/pro
 Iv(Is{(⊂(1+≢⍵)⌊⍋(⍳≢⍵),⍺⍴⍨⍺⍺×≢⍺)⌷⍵⍪⍵⍵}Y)Z	Inserting Is Y's into Z after indices Iv	Dop	Dyadic Function	Dyadic Operator	Structural	
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
-f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Graph of scalar function f at points Nv	Dop	Monadic Function	Monadic Operator	Mathematical	plot draw
+f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Graph of scalar function f at points Nv	Dop	Monadic Function	Monadic Operator	Mathematical	draw plotting
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
 realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
@@ -1761,47 +1761,47 @@ realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 int.frac	Decimal Point	Syntax	Array		Expression	period rational
 ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period
 ⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table
-1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity
-1112⌶Js	Parallel Execution Threshold	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity
-127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe
-180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code oo classes private instance
-181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Function		Array Properties	datarepresentation internalrepresentation
-200⌶Dv	Syntax Colouring	I-beam	Function		Data Conversion	coloring highlighting parse parsing tokentypes
-2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Function		System	freememory
-201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes
-2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding delete drop without
-2016⌶Yv	Create .NET Delegate	I-beam	Function		Array Properties	make new
-2017⌶Dv	Identify .NET Type	I-beam	Function		Array Properties	
-2022⌶0	Flush Session Caption	I-beam	Constant		System	titlebar
-2023⌶0	Close all Windows	I-beam	Constant		System	shut
-2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel')	I-beam	Function		System	scaling highresolution hires retina px
-2100⌶0	Export Workspace to in-Memory .NET Assembly	I-beam	Constant		System	
-2101⌶0	Close .NET AppDomain	I-beam	Constant		System	
-2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor
-2401⌶Bs	Expose Root Properties	I-beam	Function		System	dotting
-2501⌶0	Discard parked incoming .NET threads	I-beam	Constant		System	
-2501⌶Bs	Discard incoming .NET thread on exit	I-beam	Function		System	
-2503⌶Js	Mark Thread as Uninterruptible	I-beam	Function		System	greenthreading launch run suspend suspension
-2520⌶Bs	Use Separate Thread For .NET	I-beam	Function		System	
-2701⌶Bs	Continue Autosave	I-beam	Function		System	)continue
-3002⌶Bs	Disable Component Checksum Validation	I-beam	Function		System	dcf
-3501⌶0	Connected to the RIDE	I-beam	Constant		System	remoteintegrateddevelopmentenvironment
-3502⌶Yv	Manage RIDE Connections	I-beam	Function		System	remoteintegrateddevelopmentenvironment
-4000⌶⍬	Fork New Task	I-beam	Constant		System	aix multithreading parallel
-4001⌶Dv	Change User	I-beam	Function		System	aix multithreading parallel
-4002⌶⍬	Reap Forked Tasks	I-beam	Constant		System	aix multithreading parallel
-4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH
-50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension
-5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector
-5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector
-5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop without
-5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text
-60⌶D	Partition lines of D into APL tokens	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut into identifiers
-600⌶Js	Trap Control	I-beam	Function		System	debugging repl try catch error handling
-739⌶0	Temporary Directory	I-beam	Constant		System	tmp
-8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹
-900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc
-950⌶⍬	Loaded Libraries	I-beam	Constant		System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
+1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam
+1112⌶Js	Parallel Execution Threshold	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam
+127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe ibeam
+180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code oo classes private instance ibeam
+181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Function		Array Properties	datarepresentation internalrepresentation ibeam
+200⌶Dv	Syntax Colouring	I-beam	Function		Data Conversion	coloring highlighting parse parsing tokentypes ibeam
+2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Function		System	freememory ibeam
+201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes ibeam
+2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding delete drop without ibeam
+2016⌶Yv	Create .NET Delegate	I-beam	Function		Array Properties	make new ibeam
+2017⌶Dv	Identify .NET Type	I-beam	Function		Array Properties	ibeam
+2022⌶0	Flush Session Caption	I-beam	Constant		System	titlebar ibeam
+2023⌶0	Close all Windows	I-beam	Constant		System	shut ibeam
+2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel')	I-beam	Function		System	scaling highresolution hires retina px ibeam
+2100⌶0	Export Workspace to in-Memory .NET Assembly	I-beam	Constant		System	ibeam
+2101⌶0	Close .NET AppDomain	I-beam	Constant		System	ibeam
+2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam
+2401⌶Bs	Expose Root Properties	I-beam	Function		System	dotting ibeam
+2501⌶0	Discard parked incoming .NET threads	I-beam	Constant		System	ibeam
+2501⌶Bs	Discard incoming .NET thread on exit	I-beam	Function		System	ibeam
+2503⌶Js	Mark Thread as Uninterruptible	I-beam	Function		System	greenthreading launch run suspend suspension ibeam
+2520⌶Bs	Use Separate Thread For .NET	I-beam	Function		System	ibeam
+2701⌶Bs	Continue Autosave	I-beam	Function		System	)continue ibeam
+3002⌶Bs	Disable Component Checksum Validation	I-beam	Function		System	dcf ibeam
+3501⌶0	Connected to the RIDE	I-beam	Constant		System	remoteintegrateddevelopmentenvironment ibeam
+3502⌶Yv	Manage RIDE Connections	I-beam	Function		System	remoteintegrateddevelopmentenvironment ibeam
+4000⌶⍬	Fork New Task	I-beam	Constant		System	aix multithreading parallel ibeam
+4001⌶Dv	Change User	I-beam	Function		System	aix multithreading parallel ibeam
+4002⌶⍬	Reap Forked Tasks	I-beam	Constant		System	aix multithreading parallel ibeam
+4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH ibeam
+50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam
+5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector ibeam
+5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector ibeam
+5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop without ibeam
+5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text ibeam
+60⌶D	Partition lines of D into APL tokens	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut identifiers ibeam
+600⌶Js	Trap Control	I-beam	Function		System	debugging repl try catch error handling ibeam
+739⌶0	Temporary Directory	I-beam	Constant		System	tmp ibeam
+8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹ ibeam
+900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam
+950⌶⍬	Loaded Libraries	I-beam	Constant		System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣
 :Implements Constructor	Function is a class constructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
@@ -1842,8 +1842,8 @@ bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 ≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank dimensions axes
 ⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick list dimensions axes
 *○N	Fast: Euler's idiom (accurate when N is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick
-⌈/⍬	Negative "infinity" (the smallest representable value)	Constant			Expression	system internal representation lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞ mostnegative least number
-⌊/⍬	Positive "infinity" (the largest representable value)	Constant			Expression	system internal representation upper limit ∞ ∞ ¯ negativeinfinity ∞ mostpositive biggest greatestif number
+⌈/⍬	Negative “infinity” (the smallest representable value)	Constant			Expression	system internal representation lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞ mostnegative least number
+⌊/⍬	Positive “infinity” (the largest representable value)	Constant			Expression	system internal representation upper limit ∞ ∞ ¯ negativeinfinity ∞ mostpositive biggest greatestif number
 ⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east cell element
 Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths
 0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick
@@ -1901,7 +1901,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]OUTPUT.Format	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using specified margins	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Format table cells elements lists
 ]OUTPUT.HTML	Render HTML or SVG	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]HTML cells elements
 ]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Layout table cells elements lists
-]OUTPUT.Plot	Plot data	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Plot cells elements
+]OUTPUT.Plot	Plot data	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Plot cells elements plotting
 ]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Rows folding cells elements
 ]PERFORMANCE.Profile	Report performance details (optionally through GUI)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]Profile
 ]PERFORMANCE.RunTime	Report execution time of one or more expressions	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]RunTime
@@ -1959,10 +1959,10 @@ name←⍞	Assignment of character vector without needing to double quotes	Expre
 x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
 :Implements Trigger *	Function is a global trigger function: called when any any global variable in the same namespace is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 :Implements Constructor :Base expr	Function is a class constructor which calls the base constructor with the result of 'expr' as argument	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
-0::any error	Covers all errors (errors 1–999)				Error Message	trap catch errno try errorhandling trapping exception
+0::any error	Covers all errors (errors 1–999)				Error Message	catch errno try errorhandling trapping exception
 1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa
 10::LIMIT ERROR	A system limit is exceeded				Error Message	trap catch errno
-1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	trap catch errno try errorhandling trapping
+1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	catch errno try errorhandling trapping
 1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	trap catch errno halt inspect breakpoint list
 1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	trap catch errno
 1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	trap catch errno
@@ -2008,7 +2008,7 @@ x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quoteq
 71::FORMAT FILE ERROR	The date format file to be used by ⎕SM is ill-formed				Error Message	trap catch errno
 72::NO PIPES	The limit on the number of pipes communicating between tasks is during startup, ⎕SH, or use of an external variable				Error Message	trap catch errno
 76::PROCESSOR TABLE FULL	The limit on the number of processes (tasks) that the computer system can support would be exceeded				Error Message	trap catch errno matrix
-84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	trap catch errno
+84::TRAP ERROR	Searching for a definition set for the system variable ⎕TRAP, after a trappable error has occurred, caused WS FULL				Error Message	catch errno
 90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	trap catch errno
 92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	trap catch errno ⎕avu classic codepage characterset charset encoding sbcs list
 99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	trap catch errno blank
@@ -2023,9 +2023,9 @@ X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparenth
 X(f op g)Y	Dyadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	declaration [0] declaring defining
 X(f op)Y	Monadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	declaration [0] declaring defining
 f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector
-(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived train Agh 3train 3-train
+(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
 {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence
-(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived train fgh 3train 3-train
+(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
 (f op g)Y	Dyadic tradop header for deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	declaration [0] declaring defining
 (f op)Y	Monadic tradop header for deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	declaration [0] declaring defining
@@ -2038,7 +2038,7 @@ Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		
 ~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick nonempty? hascontent?
 ;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variable scope localise localize declaration declare declaring 1st
 f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variable scope localise localize locals declaration declare declaring [0]
-↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists
+↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists zip()
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick
 ...	Syntax error to stop execution	Non-syntax			System	halt
 35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	trap catch errno
@@ -2046,14 +2046,14 @@ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definit
 56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	trap catch errno
 57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	trap catch errno behavior
 X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose
-Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function		Index Generation	iota indicesin indexof position columndatabase matrix
-X(1159⌶)Y	Update Function Time and User Stamp	I-beam	Function		System	⎕at properties operator
-Mv(219⌶)Jv	Compress/Decompress Vector of Short Integers	I-beam	Function		Data Conversion	lz4 zlib gzip deflate uncompress inflate list
-Is(1500⌶)Y	Hash Array	I-beam	Function		Array Properties	performance hashing
-Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance
-As(220⌶)Y	Serialise/Deserialise Array	I-beam	Function		Data Conversion	
-As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namemangling
-As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult
+Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function		Index Generation	iota indicesin indexof position columndatabase matrix ibeam
+X(1159⌶)Y	Update Function Time and User Stamp	I-beam	Function		System	⎕at properties operator ibeam
+Mv(219⌶)Jv	Compress/Decompress Vector of Short Integers	I-beam	Function		Data Conversion	lz4 zlib gzip deflate uncompress inflate list ibeam
+Is(1500⌶)Y	Hash Array	I-beam	Function		Array Properties	performance hashing ibeam
+Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance ibeam
+As(220⌶)Y	Serialise/Deserialise Array	I-beam	Function		Data Conversion	ibeam
+As(7162⌶)Dv	JSON Translate Name	I-beam	Function		Data Conversion	⎕json namemangling ibeam
+As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Conversion	evaluate apl compute numbers atoi run call parseexpression shy noresult ibeam
 (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector
 {R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional
 :Attribute name {ConstructorArgs}	Descriptive tag that provides additional information to .NET	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation metadata
@@ -2084,7 +2084,7 @@ As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Convers
 +/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones trues truths start beginning
 17×2-645=⎕FR	Arithmetic precision of the system (in decimals)	Constant			Mathematical	comparison tolerance fuzz IEEE754 floatingpoint
 100⊥100|3↑⎕TS	Packing current date (YYMMDD)	Constant			System	Encoding
-(X+Y)×Z	Precedence: Z×X+Y	Syntax			Expression	roundparentheses grouping precedence roundparens
+(X+Y)×Z	Precedence: Z×X+Y	Syntax			Expression	roundparentheses grouping roundparens
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	testif
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	testif
 {ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running
@@ -2102,13 +2102,13 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st
 0=⎕NC'⍺'	Called Monadically (dfns/dops only)			Function Application	Expression	arity ambivalent ambivalence variadic leftargument 900⌶
-{Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect
-{Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance
-{Xs}(819⌶)Y	Case Convert	I-beam	Function		Data Conversion	casefold casemap uppercase lowercase lettercase
-{X}(2041⌶)Js	Override COM Default Value	I-beam	Function		System	
-{Av}(2010⌶)Yv	Update DataTable	I-beam	Function		Expression	databinding assignment redefine inplace
-{Av}(2011⌶)Yv	Read DataTable	I-beam	Function		Expression	databinding get fetch value
-{Cv}(3500⌶)Dv	Send Text Dv to RIDE-embedded Browser with caption Cv	I-beam	Function		System	html svg rendering cef remoteintegrateddevelopmentenvironment
+{Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect ibeam
+{Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance ibeam
+{Xs}(819⌶)Y	Case Convert	I-beam	Function		Data Conversion	casefold casemap uppercase lowercase lettercase ibeam
+{X}(2041⌶)Js	Override COM Default Value	I-beam	Function		System	ibeam
+{Av}(2010⌶)Yv	Update DataTable	I-beam	Function		Expression	databinding assignment redefine inplace ibeam
+{Av}(2011⌶)Yv	Read DataTable	I-beam	Function		Expression	databinding get fetch value ibeam
+{Cv}(3500⌶)Dv	Send Text Dv to RIDE-embedded Browser with caption Cv	I-beam	Function		System	html svg rendering cef remoteintegrateddevelopmentenvironment ibeam
 {name}⎕WC'MDIClient'	Container for MDI windows	GUI Object			Container Objects	WindowsForms WinForms Create new
 {name}⎕WC'Marker'	Draws a series of polymarkers	GUI Object			Graphical Output	WindowsForms WinForms Create new
 {name}⎕WC'MsgBox'	Displays a message box	GUI Object			Information	WindowsForms WinForms Create new notification boxed enclosed
@@ -2199,6 +2199,6 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host
-({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function "name" from the dfns workspace without polluting the urrent workspace	Syntax			System	
+({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the urrent workspace	Syntax			System	
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
