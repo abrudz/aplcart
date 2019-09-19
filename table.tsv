@@ -947,7 +947,8 @@ Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Functi
 Is(×⍴1↑⍨∘-⊢)Js	Ending points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	partition vector list trailing
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction remove
-(+/∘|2-/⊢)Nv	Length of polygon given as complex points	Tacit	Monadic Function		Mathematical	circumference linelength perimeter coordinates vertices
+(+/∘|2-/⊢)Nv	Length of path given as complex points	Tacit	Monadic Function		Mathematical	linelength perimeter coordinates vertices
+(+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices
 (⌈/-⌊/)∘,N	Range of N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum
 (⊢⌷⍨∘⊂?⍨)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements
