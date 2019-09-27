@@ -1030,6 +1030,7 @@ Y(1⍳⍨∘(⊃⍤¯1)⍷)Y	Index of first consecutive occurrence of major cell
 Xm↑[2]⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with Xm	Tacit	Dyadic Function		Structural	adjust width table
 (××∘⌊|+1≤2||)N	Rounding to nearest even number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring
 (××∘⌊|+1>2||)N	Rounding to nearest odd number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring
+(××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring
 (⌊+1∘|>∘?0∘×)N	Stochastic rounding to integer	Tacit	Monadic Function		Mathematical	precision whole number probabilistic
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements
@@ -1062,6 +1063,7 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
 (7|2⎕NQ⎕←#'DateToIDN',⊂)Jv	Day of week (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2
+(××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring
 Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences boolean major cells items indicate masking indicating trailing binary base-2 base2
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate
