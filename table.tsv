@@ -802,7 +802,6 @@ X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dy
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable 1st
 (⌊0.5+⊢)N	Rounding to nearest integer (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring closestinteger nearestinteger nint()
-(××∘⌊|)N	Rounding away from zero	Tacit	Monadic Function		Mathematical	0 to whole number
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
 (32+1.8∘×)N	Celcius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celcius f2c() ftoc() convert
@@ -825,7 +824,7 @@ A(1-⊢×1-⊣)B	Probabilistic converse implication	Tacit	Dyadic Function		Mathe
 A(1-⊣×1-⊢)B	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths
 Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
-(××⌊∘|)N	Integer: Truncate to whole number	Tacit	Monadic Function		Mathematical	chop clamp round towards 0
+(××∘⌊|)N	Rounding towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp
 I(!×∘!⊣)J	Number of permutations of (I,J) combinations	Tacit	Dyadic Function		Mathematical	combinatorics
 M(≤∘|×⊢)N	Rounding to zero values of N within M of zero	Tacit	Dyadic Function		Mathematical	precision fuzz 0
 Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	Dyadic Function		Selection	leftshift list
@@ -948,7 +947,6 @@ Is(×⍴1↑⍨∘-⊢)Js	Ending points for Is fields of width Js	Tacit	Dyadic F
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction remove
 (+/∘|2-/⊢)Nv	Length of path given as complex points	Tacit	Monadic Function		Mathematical	linelength perimeter coordinates vertices
-(+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices
 (⌈/-⌊/)∘,N	Range of N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum
 (⊢⌷⍨∘⊂?⍨)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements
@@ -964,11 +962,12 @@ X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathem
 (⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered sorted
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths
-(××∘⌊0.5+|)N	Rounding to nearest whole number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring integer
+(××∘⌈¯0.5+|)N	Rounding to nearest whole number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()
+(××∘⌊0.5+|)N	Rounding to nearest whole number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()
 (⌊/∘.=⌈⌿)Nm	Boolean matrix indicating saddle points	Tacit	Monadic Function		Mathematical	minimax indicate masking table binary base-2 base2
 Mv(+⌿1 0⌽0,∘.×)Nv	Polynomial product	Tacit	Dyadic Function		Mathematical	multiplicationof polynomials
 (2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	testif testif isprime primality
-(÷⍳∘.+¯1+⍳)Js	Hilbert matrix of order Js (1=⎕IO)	Tacit	Monadic Function		Mathematical	table sorting reordering ordering
+(÷⍳∘.+¯1+⍳)Js	Hilbert matrix of order Js	Tacit	Monadic Function		Mathematical	table sorting reordering ordering
 (1 2 1⍉⊢∘.-⌊/)Nm	Move set of points Nm into first quadrant	Tacit	Monadic Function		Mathematical	1st
 (0≠.=400 100 4∘.|⊢)J	Is J (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	testif gregoriancalendar 29thfeb29 29february29th
 Mv(+.×⍨÷1⊥⊣)Nm	Weighted average of rows of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
@@ -988,6 +987,7 @@ Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical	
 Is(×∘×⍨∘≢↑↓)Bv	Shift Bv forward or backward Is positions	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes
+(+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices
 (⊢⍴⍨2,⍨2÷⍨≢)Yv	Reshaping vector Yv into a two-column matrix	Tacit	Monadic Function		Structural	2-column table list
 Is(⊢↑⍨⊢∘≢,⊣)Ym	Adjust Ym to width Is (positive Is to pad/chop on right, negative Is to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2
@@ -1001,7 +1001,6 @@ X(⊃∘⍸⍷)¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Functi
 (2*∘÷⍨+.×⍨)Nv	Length of vector Nv	Tacit	Monadic Function		Mathematical	absolute value magnitude distance from origin 0 zero
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero cells items
 M(+/∘×∘.-⍨)N	Test relations (¯2…2) of elements of N to ranges M (2=¯1↑⍴M)	Tacit	Dyadic Function		Comparison	cells items
-(÷¯1+∘.+⍨∘⍳)Is	Hilbert matrix of order Is	Tacit	Monadic Function		Mathematical	table
 (⊢∘.<∘⍳⌈/)Iv	Matrix with Iv[i] leading zeroes on row i	Tacit	Monadic Function		Boolean/Logical	0s zeros falses falsehoods table start beginning
 (⊢∘.≥∘⍳⌈/)Iv	Matrix with Iv[i] leading ones on row i	Tacit	Monadic Function		Boolean/Logical	1st trues truths first table start beginning
 X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1⌷X,2⌷X	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval items elements
@@ -1137,6 +1136,7 @@ Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for J
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
 Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
 X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
+M(⊢∘××⊣×∘⌈¯0.5+∘|÷⍨)N	Rounding N to nearest M (favouring towards 0)	Tacit	Dyadic Function		Mathematical	precision favoring
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away from 0)	Tacit	Dyadic Function		Mathematical	precision favoring
 M(+⌿⊣∘.*⍨∘∪⊢∨⊢∘⍳)Js	Sum of M'th powers of positive divisors of Js	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 ((×/∘!-∘1)÷∘!¯1++/)N	Multivariate Beta Function	Tacit	Dyadic Function		Mathematical	B() Β() beta() Ꞵ
@@ -1213,7 +1213,7 @@ sref←dfns.cache ivec	Ref to space with initial cache	Dfn	Function		System	memo
 v83←dfns.f32 nums	Conversion to 32-bit floats as ⎕DR 83	Dfn	Function		Data Conversion	32-bitfloatingpoint 32bitfloatingpoint
 val list←list dfns.alpop key	Value for key ⍵, and reduced list ⍺	Dfn	Function		Selection	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
 val←list dfns.alget key	Value for key ⍵ from list ⍺	Dfn	Function		Selection	associationlist dictionary look-uptable symboltable graph lists lookuptable vectors
-vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function		Structural	unweightedgraph breadth-firstsearch breadthfirstsearch
+vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function		Structural	unweightedgraph breadthfirstsearch bfs
 vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function		Structural	graph spanningtree
 vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function		Structural	words split text partition list
 m←dfns.m91 n	McCarthy's M91 function	Dfn	Function		Mathematical	
@@ -1285,8 +1285,8 @@ ref←dfns.refws wsid	Ref to saved ws ⍵	Dfn	Function		System	workspacereferenc
 refs←dfns.refpath ref	Refs path from root to ⍵	Dfn	Function		Array Properties	parentspace ancestorspace namespacereferences
 refs←dfns.xrefs array	Extract refs vector from array ⍵	Dfn	Function		Selection	namespacereferences list
 rounds←dfns.rr players	Round-robin tournament	Dfn	Function		Mathematical	Round-robintournament combination Roundrobintournament
-tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	Dfn	Function		Structural	0unweightedgraph spanningtree breadth-firstsearch breadthfirstsearch
-tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex ⍵	Dfn	Function		Structural	depth-firstsearch spanningtree abstraction depthfirstsearch
+tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	Dfn	Function		Structural	0unweightedgraph spanningtree breadth-firstsearch breadthfirstsearch bfs
+tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex ⍵	Dfn	Function		Structural	depth-firstsearch spanningtree abstraction depthfirstsearch dfs
 tree←wgraph dfns.wspan from	Spanning tree for weighted graph ⍺ from ⍵	Dfn	Function		Structural	weightedgraph spanningtree
 tree←wug dfns.wmst root	Minimum Spanning Tree for weighted graph ⍺	Dfn	Function		Structural	weightedgraph spanningtree mininumspanningtree
 y←dfns.Cholesky x	Decomposition of Hermitian positive-definite matrix	Dfn	Function		Mathematical	Choleskydecomposition table
@@ -1309,7 +1309,7 @@ graph←graph dfns.inslink (from to)	Insert edge ⍵ in graph ⍺	Dfn	Function		
 graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function		Structural	unweightedgraph delete drop without
 array←(from repl) dfns.subs array	Vector substitution	Dfn	Function		Text	stringreplacement list
 saved←{seed} dfns.nspack ref	Share arrays across space tree	Dfn	Function		System	packing compression enlist blank
-vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Function		Mathematical	unweightedgraph breadth-firstsearch breadthfirstsearch
+vvec←graph dfns.path (fm to)	Shortest path between ⍵ in graph ⍺	Dfn	Function		Mathematical	unweightedgraph breadth-firstsearch breadthfirstsearch bfs
 bfobj←(dfns.mac) src	Simple macro processor for bf	Dfn	Function		Text	Brainfuck continuation-passingstyle continuationpassingstyle
 bmat←{A CI} dfns.baby bmat	Manchester Small Scale Experimental Machine	Dfn	Function		Mathematical	SSEM firstcomputer assembler disassembler diversions bottom ⊥
 cvec←dfns.ss (srce from into)	Approx alternative to xutils' ss	Dfn	Function		Text	ssxutils stringreplacement substitution
@@ -1341,7 +1341,7 @@ tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Da
 {name}←dfns.fix rep	Fix function/operator rep	Dfn	Function		Data Conversion	fixfunction
 {protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function		System	workspacemerge
 X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair list cell element
-C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch
+C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch dfs
 alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment
 stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function		Text	lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors interpreter programming joylang
 sum←{digs←6} dfns.chksum array	Simple ⍺-digit checksum	Dfn	Function		Mathematical	hashing
@@ -1540,6 +1540,7 @@ Iv{¯2-⌿0⍪(⊂+\⍺)⌷+⍀⍵}N	Sums over (+/) subvectors of N, lengths in 
 Av{g[⍋(+\⍺)[g←⍋⍵]]}Y	Grade up (⍋) for sorting subarrays of Y indicated by Av	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
 Av{g[⍋(+\⍺)[g←⍒⍵]]}Y	Grade down (⍒) for sorting subarrays of Y indicated by Av	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
 {⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function		Boolean/Logical	truesat ⍸⍣¯1 inversion
+{s←0 ⋄ ⌈/{s⊢←0⌈s+⍵}¨⍵}Nv	Largest sum of any contiguous subvector	Dfn	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector largest biggest highest kadane's kadanes algorithm
 M{×11○(⍵-1↓⍺)×+2-/⍺}Ns	Sign of point Ns relative to edges of M	Dfn	Dyadic Function		Mathematical	signum
 Iv{(¯1+⊃⍵)+?⍺⍴1--/⍵}Jv	Iv-shaped array of random numbers in range Jv[1]…Jv[2] (inclusively, with replacement)	Dfn	Dyadic Function		Index Generation	between integers
 Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic Function		Structural	segment chop split separate chunks
@@ -1633,7 +1634,7 @@ rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Ope
 rslt←count (fun dfns.pow) argt	Explicit function power	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber
 rslt←ival (func dfns.foldl) vals	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding
 rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
-rslt←ival (accm dfns.trav subs) tree	Generic depth-first tree traversal	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
+rslt←ival (accm dfns.trav subs) tree	Generic depth-first tree traversal	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens dsf
 rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator	Structural	accumulator lambdaexpression minworkspace parsing lists cons vectors
 rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator	Boolean/Logical	conditionaloperator booleanfunctions truthtables
 rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors segmented sub-lists subvectors sublists
@@ -2204,4 +2205,3 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the urrent workspace	Syntax			System	
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
-{s←0 ⋄ ⌈/{s⊢←0⌈s+⍵}¨⍵}Nv	Largest sum of any contiguous subvector	Dfn	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector largest biggest highest kadane's kadanes algorithm
