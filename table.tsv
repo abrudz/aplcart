@@ -642,8 +642,9 @@ M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase convert con
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
 (⍎⍕)Nv	Reshaping only one-element numeric vector Nv into a scalar (leave longer vectors as-is)	Tacit	Monadic Function		Structural	1-element singleton lists
 (⍎⍕)Nv	Rounding to ⎕PP precision	Tacit	Monadic Function		Mathematical	system
-(0<⎕NC)Dv	Is Dv defined	Tacit	Dyadic Function		System	symboltable exists
-(¯1≠⎕NC)Dv	Is Dv a valid APL identifier	Tacit	Monadic Function		System	testif symbol validity allowed? valid? name? identifier? legal? dyalog permitted?
+(0<⎕NC)Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists
+(0=⎕NC)Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't not exists
+(¯1≠⎕NC)Dv	Is Dv a valid APL identifier	Tacit	Monadic Function		System	name testif symbol validity allowed? valid? name? identifier? legal? dyalog permitted?
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill
