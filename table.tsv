@@ -211,39 +211,39 @@ X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primit
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without
 ⎕D	The digits from 0 to 9	System	Constant		System Function	123456789 numbers arabicnumerals 0-9 0123456789
-⎕DMX	Namespace containing details of most recent error in current thread	System	Namespace	Error Message	System	extended diagnostic
+⎕DMX	Namespace containing details of most recent error in current thread	System	Namespace	Error Message	System	diagnosticmessageextended
 ⎕EXCEPTION	Details of most recent .NET exception	System	Namespace	Error Message	System	
 ⎕LOAD file	Load saved workspace	System	Function	File Access	System Function	open fetch get bringin )load
 ⎕OFF	Terminate the APL session	System	Constant	System	System Function	exit stop close )off
 ⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities
 ⎕LX←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include vector
-⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd randominteger randomfloat randomness source
+⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd randominteger randomfloat randomness source randomlink
 ⎕TRAP←trap_spec	Define error handling	System	Function	Error Message	System	try catch
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
-⎕WSID←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace )wsid
+⎕WSID←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace )wsid workspaceidentification
 file←⎕NNAMES	Names of tied files in same order as ⎕NNUMS	System	Constant	Native Files	System Function	sorting reordering ordering
 script←⎕SRC ref	The source code of a ref	System	Function	Data Conversion	System Function	representation definition
-space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Workspace	System Function	referencestateindicator namespaces suspended blanks
+space_references←⎕RSI	The spaces from which functions on stack were called	System	Function	Workspace	System Function	referencestateindicator referencespaceindicator namespaces suspended blanks execution
 bytes←⎕NSIZE tn	Current size of file	System	Function	Native Files	System Function	diskspace
 bytes←⎕SIZE names	Space consumed by code/data attached to names	System	Function	Workspace	System Function	workspaceusage workspaceuse memoryconsumption blank
 bytes←⎕WA	Workspace available (unused)	System	Constant	Workspace	System Function	freememory
-captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell operatingsystem commandprocessor ⎕sh )cmd
-captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	os operatingsystem commandprocessor linux macos aix rasbianpios ⎕cmd )sh
+captured_output←⎕CMD cmd	Execute Microsoft Windows cmd	System	Function	System	System Function	shell operatingsystem commandprocessor ⎕sh )cmd.exe command.com
+captured_output←⎕SH cmd	Execute UNIX shell cmd	System	Function	System	System Function	os operatingsystem commandprocessor linux macos aix rasbianpios ⎕cmd )sh ash bash dash pdksh mksh zsh tcsh fish rc scsh wish
 class_hierarchy←⎕CLASS ref	Class hierarchy for a class/instance	System	Function	System	System Function	parents ancestors
-names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extended state namespacepath references )si
+names←⎕XSI	Full names of functions on the stack	System	Constant	Workspace	System Function	extendedstateindicator extendedspaceindicator namespacepath references )si execution
 names←⎕FNAMES	Names of tied files in same order as ⎕FNUMS	System	Constant	Component Files	System Function	dcf sorting reordering ordering
-names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir vector
-names←⎕REFS name	List the names referenced by a function	System	Function	System	System Function	xref crossreference identifiers symbols vector
-names←⎕SI	Vector of names of functions on the stack	System	Constant	Workspace	System Function	stateindicator )si list
-numvec←⎕NC names	Class of each name (fractional if names is nested)	System	Function	Workspace	System Function	itemtype
+names←⎕FLIB folder	List component files in the specified folder	System	Function	Component Files	System Function	dcf ls dir vector library
+names←⎕REFS name	List the names referenced by a function	System	Function	System	System Function	xref crossreferences identifiers symbols vector
+names←⎕SI	Vector of names of functions on the stack	System	Constant	Workspace	System Function	stateindicator )si list execution
+numvec←⎕NC names	Class of each name (fractional if names is nested)	System	Function	Workspace	System Function	itemtype nameclass
 numvec←⎕LC	Lines at which each function on stack is suspended	System	Constant	Workspace	System Function	linecounter number state
 numvec←⎕TS	Current time (y m d h m s ms)	System	Constant	System	System Function	now localtimestamp datetime
 old_df←⎕DF char_array	Set the display form of the current space	System	Function	Data Conversion	System Function	visualrepresentation format ⍕ ⎕fmt blank
 r←⎕NEXISTS files	Return 1 if files exist, else 0	System	Function	Native Files	System Function	present present check lookfor
 r←⎕NR name	Source of function or operator as a nested vector	System	Function	Data Conversion	System Function	code representation vtv character list
 r←⎕AI	User number, compute, connect, keying time (ms)	System	Constant	System	System Function	accountinformation session milliseconds uptime useridentification cpuusage processorusage idle
-r←⎕CR name	Source of function or operator as a character matrix	System	Function	Data Conversion	System Function	code representation table
+r←⎕CR name	Source of function or operator as a character matrix	System	Function	Data Conversion	System Function	code representation table canonical
 r←⎕CSV data	Convert CSV data to APL matrix	System	Function	Data Conversion	System Function	tsv table import parse commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←⎕FAVAIL	1 if file system is available, else 0	System	Function	Component Files	System Function	dcf active usable accessible
 r←⎕STACK	Definition of each function on the stack	System	Constant	Workspace	System Function	state definitions
@@ -254,12 +254,12 @@ r←1 ⎕JSON data	Convert APL array to JSON text	System	Function	Data Conversio
 r←type ⎕DR x	Interpret internal representation as array of type 'type'	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
 ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here myself
 refs←⎕INSTANCES class	Current instances of class	System	Function	Data Conversion	System Function	children derived
-tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
-tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronisation synchronization parallel threading greethread )tid
-tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
-tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading
-tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronisation synchronization parallel threading greenthreading
-tktype←⎕TREQ tdno	List token types that threads tdno are waiting for	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading vector
+tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading
+tdno←⎕TID	The number of the current thread	System	Constant	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greethread )tid currentthreadidentity identification
+tdno←⎕TCNUMS tdno	The child thread numbers of the given thread numbers	System	Function	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading
+tdres←⎕TSYNC tdno	Wait for threads tdno to terminate and return results	System	Function	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading
+tktype←⎕TPOOL	Type of each token in the token pool	System	Constant	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading
+tktype←⎕TREQ tdno	List token types that threads tdno are have requested and are waiting for	System	Function	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading vector requests
 tns←⎕NNUMS	Tie numbers of tied files	System	Constant	Native Files	System Function	
 tns←⎕FNUMS	Vector containing tie numbers of tied files	System	Constant	Component Files	System Function	dcf access list
 type←⎕DR x	Return internal data type of x	System	Function	Array Properties	System Function	datarepresentation internalrepresentation
@@ -276,16 +276,16 @@ names←{init_chars} ⎕NL nums	Active names of specified class(es), optionally 
 names←{init_chars} ⎕NL ¯3	Active functions, optionally filtered	System	Function	Workspace	System Function	namelist )fns
 names←{init_chars} ⎕NL ¯9	Active objects, optionally filtered	System	Function	Workspace	System Function	namelist )objects )obs
 r←⎕FHIST tn {pn}	Return tied file tn's history (user/time of last operations)	System	Function	Component Files	System Function	dcf log
-r←⎕FRDCI tn cn {pn}	Size in bytes, user and timestamp of last update to cn	System	Function	Component Files	System Function	dcf readaccess
+r←⎕FRDCI tn cn {pn}	Size in bytes, user and timestamp of last update to cn	System	Function	Component Files	System Function	dcf readaccess componentinformation
 r←⎕FREAD tn cn {pn}	The array stored in component(s) cn in file tn	System	Function	Component Files	System Function	dcf get retrieve load copy fetch
 r←⎕FSIZE tn {pn}	First cn, next-free cn, used and max size in bytes	System	Function	Component Files	System Function	dcf maximum 1st
 r←data {header} ⎕CSV format_spec	Convert CSV data from APL matrix	System	Function	Data Conversion	System Function	tsv table export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues
 r←nvpairs ⎕FPROPS tn {pn}	Set properties of file tn using name-value pairs	System	Function	Component Files	System Function	dcf settings update modify change
 r←pnames ⎕FPROPS tn {pn}	Current values of the named properties of file tn	System	Function	Component Files	System Function	dcf settings query get retreive
-r←{flags} ⎕NPARTS files	Splits files into paths, base names and extensions (normalising files if flags=1)	System	Function	Native Files	System Function	directory
+r←{flags} ⎕NPARTS files	Splits files into paths, base names and extensions (normalising files if flags=1)	System	Function	Native Files	System Function	directory parse
 r←{format_spec} ⎕FMT x	Convert x into character matrix according to spec	System	Function	Data Conversion	System Function	displayform formatbyspecification cobolpictureformat fortranformatter ⎕df ⍕ table
 r←{selector} ⎕AT names	Syntactical attributes of named functions or operators	System	Function	System	System Function	valence arity shyness locked niladicmonadicdyadicambivalent functionoperator variadic properties author timestamp modificationtime result
-r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping
+r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping convert UniversalCodedCharacterSet UniversalCharacterSet
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtmltag xmltag
 {0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
 {boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase cell element drop without
@@ -317,7 +317,7 @@ r←(⎕CSV⍠1)data	Convert CSV data to APL inverted table (character data as m
 r←(⎕CSV⍠2)data	Convert CSV data to APL inverted table (character data as vectors of vectors)	System	Function	Data Conversion	System Function	tsv import parse commaseparatedvalues tabseparatedvalues characterseparatedvalues matrix lists
 r←{object} ⎕WG props…	The values of the properties of an object	System	Function	Native Files	System	window gui get fetch query
 ⎕ML←(0≤1≤3)	Degree of compatibility with IBM APL2 (from 0=low to 3=high)	System	Variable		System	migration level conformance APLX APL*PLUS GNUAPL APL+Win APL2000 NARS2000 ≡↑⊃ depth first mix ⎕TC terminalcontrolcharacters migrate behaviour behavior 1st
-⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	print precision decimals rounding
+⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	printing precision decimals rounding
 names←{init_chars} ⎕NL ¯9.5 ¯9.7	Active interfaces, optionally filtered	System	Function	Workspace	System Function	namelist )interfaces
 r←{encoding} ⎕NGET file {flags}	Read Unicode text file as lines into array r	System	Function	Native Files	System Function	fetch load
 r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression
@@ -331,7 +331,7 @@ r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (o
 {exported}←{flags} ⎕EXPORT nm	Specify fns to be exported by an OLEClient	System	Function	Native Files	System	
 {linenos}←{linenos} ⎕STOP name	Enable/report the current state of stops for a function	System	Function	System	System Function	halt inspect breakpoint
 {linenos}←{linenos} ⎕TRACE name	Enable/report the current state of tracing for a function	System	Function	System	System Function	monitor
-{names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	modify code source definition define value )ed
+{names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	modify code source definition define value )editing
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 {old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this )cs
 {ref}←{flags} ⎕FIX source	Define objects from source (vector of vectors or file name starting with 'file://')	System	Function	Data Conversion	System Function	⎕fx code operator namespace class interface lists
