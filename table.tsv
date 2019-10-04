@@ -7,18 +7,18 @@ X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boole
 ⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack
 X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where
 X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1
-+Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	plus ¯10○ ¯10∘○ conj() conjugating
-+N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	conjugate negateimaginary
-M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	plus addition
++Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	greek cross plus ¯10○ ¯10∘○ conj() conjugating
++N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	greek cross conjugate negateimaginary
+M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	greek cross plus addition
 -N	Negate: 0-N	Primitive	Monadic Function		Mathematical	minus hyphen invert additiveinverse opposite dash negation signchange − negating
 M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −
-×N	Direction ('Signum' if N is real)	Primitive	Monadic Function		Mathematical	cross sgn() sign()
+×N	Direction ('Signum' if N is real)	Primitive	Monadic Function		Mathematical	cross sgn() sign() trend
 M×N	Multiplying M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product
 M×N	Probabilistic AND	Primitive	Dyadic Function		Mathematical	fuzzy probability chance conjunction Kpq
 A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Function		Boolean/Logical	zero cells items
-M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd
+M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 A∨B	Logical OR	Primitive	Dyadic Function		Boolean/Logical	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
-M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd()
+M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex
 A∧B	Logical AND	Primitive	Dyadic Function		Boolean/Logical	gate conjunction caret wedge hat circumflex Kpq
 ⌈N	Rounding up to integer	Primitive	Monadic Function		Mathematical	upstile roundup ceiling seiling up() ceil()
 M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger
@@ -30,12 +30,12 @@ I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	
 ⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing ⌽[1] dimension start beginning
 ⊖Ym	Reflect horizontally	Primitive	Monadic Function		Structural	mirroring reflecting reflection up-down updown down-up downup
 I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar rotating cyclically dimension lists start beginning
-÷N	Reciprocal: 1÷N	Primitive	Monadic Function		Mathematical	multiplicativeinverse opposite obelus inverting reciprocating
-M÷N	Dividing M by N	Primitive	Dyadic Function		Mathematical	division over ⁄ divide
+÷N	Reciprocal: 1÷N	Primitive	Monadic Function		Mathematical	multiplicativeinverse opposite obelus inverting reciprocating per
+M÷N	Dividing M by N	Primitive	Dyadic Function		Mathematical	division over ⁄ divide per
 |N	Magnitude (absolute value)	Primitive	Monadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus amplitude 10○ 10∘|
 M|N	Residue after dividing N by M	Primitive	Dyadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus divisionremainder mod() divide % divmod() residual
 !N	Factorial (Gamma function of N+1)	Primitive	Monadic Function		Mathematical	countpermutations exclamation bang shriek combinatorics fact() gamma() Γ
-M!N	Number of selections of size M from N (using Beta function)	Primitive	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking
+M!N	Number of selections of size M from N (using Beta function)	Primitive	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof
 A!N	Selecting elements satisfying condition A, others to 1	Primitive	Dyadic Function		Boolean/Logical	one cells items
 ?J	Random number selected from ⍳J	Primitive	Monadic Function		Mathematical	questionmark roll randominteger interrogationpoint query eroteme
 ?B	Random real number between (0,1) if B=0 or ⎕IO if B=1	Primitive	Monadic Function		Mathematical	questionmark roll randomfloat interrogationpoint query eroteme
@@ -57,15 +57,16 @@ X≡Y	Match: 1 if X is identical to Y, else 0	Primitive	Dyadic Function		Sets	te
 ≢Xm	Number of rows in matrix Xm	Primitive	Monadic Function		Array Properties	count tally table
 ≢Y	Tally: Number of items in leading axis	Primitive	Monadic Function		Array Properties	equalunderbarslash unequalunderbar count length() cells len() major cells elements dimension start beginning
 X≢Y	Not Match: ~X≡Y	Primitive	Dyadic Function		Sets	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
-↓Y	Split: Nest sub-arrays (from last axis)	Primitive	Monadic Function		Structural	downarrow subarrays dimension
-↓M	Matrix to vector of row vectors	Primitive	Monadic Function		Structural	downarrow split table lists
+↓Y	Split: Nest sub-arrays (from last axis)	Primitive	Monadic Function		Structural	spike downarrow subarrays dimension
+↓Ym	Matrix to vector of row vectors	Primitive	Monadic Function		Structural	spike downarrow split table lists
 Is↓Ym	Drop Is rows from matrix Ym	Primitive	Dyadic Function		Structural	table delete remove without
-Iv↓Y	Drop Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut major cells elements dimensions delete start beginning without
-↑Y	Mix: Remove nesting (adding trailing axes)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop ending without
+Iv↓Y	Drop Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	spike downarrow split remove trim cut major cells elements dimensions delete start beginning without
+↑Y	Mix: Remove nesting (adding trailing axes)	Primitive	Monadic Function		Structural	pike uparrow axis dimensions delete drop ending without
 Is↑Yv	Padding Yv on the right to width width Is	Primitive	Dyadic Function		Structural	extend right-align rightalign text
-Iv↑Y	Take Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	uparrow first last beginning trailing head tail major cells elements dimensions 1st start ending
+Is↑Ym	Take Is rows from matrix Ym	Primitive	Dyadic Function		Structural	table grab first last chop
+Iv↑Y	Take Iv items along leading axes of Y	Primitive	Dyadic Function		Selection	pike uparrow first last beginning trailing head tail major cells elements dimensions 1st start ending
 ⍴Y	Shape: Length of each axis of Y	Primitive	Monadic Function		Array Properties	dimensions rho ρ ϱ rank axes
-Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould dim() axis
+Iv⍴Y	Reshape Y to have shape Iv	Primitive	Dyadic Function		Structural	rho mold form dimension array ρ ϱ mould dim() axis cyclically repeat repetition
 *N	e raised to the power N	Primitive	Monadic Function		Mathematical	star asterisk exponential etothepowerof naturalexponential exp() 2.718281828459045235360287471352662 antiln antilog ln^-1 ln⁻¹ log^-1 log⁻¹
 M*N	M raised to the power N	Primitive	Dyadic Function		Mathematical	star asterisk raisedtothepowerof exponentiation pow() ** raising
 ⍟N	Natural logarithm of N	Primitive	Monadic Function		Mathematical	naturallogarithm circlestar starcircle splat ln()
@@ -82,18 +83,18 @@ X∘g Y	Curry: g between X and Y, that is, XgY	Primitive	Monadic Function	Dyadic
 f∘g Y	Atop: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring functioncomposition against besides
 X f¨Y	Each: f between items of X and Y	Primitive	Dyadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
 f¨Y	Each: f on items of Y	Primitive	Monadic Function	Monadic Operator	Function Application	foreach diaeresis mapping cells elements
-Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash inserting solidus over rowwise reducing folding cells elements dimension row-wise horizontally windowed windows moving
-Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compressing slash solidus copying repeatingeachcolumns dimension horizontally replicating rowwise row-wise
-Av/Y	Filtering columns of Y according to mask Av	Primitive	Dyadic Function		Selection	compressing slash solidus selecting cells items horizontally
-f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash inserting solidus over rowwise reducing folding cells elements dimension row-wise horizontally
-Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst solidusbar columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically windowed windows moving
-Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compressing slashbar solidusbar first copying repeatingeachrows Iv/[1] dimension 1st start beginning vertically columnwise column-wise
-Av⌿Y	Filtering major cells of Y according to mask Av	Primitive	Dyadic Function		Selection	compressing slashbar selecting cells items vertically rowsofmatrix columnwise column-wise Av/[1] dimension 1st start beginning
-f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst inserting folding solidusbar columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically
+Is f/Y	Reduce: f between all items of Y in groups of Is on last axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slash inserting solidus over rowwise reducing folding cells elements dimension row-wise horizontally windowed windows moving across
+Iv/Y	Replicate along last axis of Y	Primitive	Dyadic Function		Selection	compressing slash solidus copying repeatingeachcolumns dimension horizontally replicating rowwise row-wise across
+Av/Y	Filtering columns of Y according to mask Av	Primitive	Dyadic Function		Selection	compressing slash solidus selecting cells items horizontally across
+f/Y	Reduce: f between all items of Y on last axis	Primitive	Monadic Function	Monadic Operator	Function Application	slash inserting solidus over rowwise reducing folding cells elements dimension row-wise horizontally across
+Is f⌿Y	Reduce First: f between all items of Y in groups of Is on first axis	Primitive	Dyadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst solidusbar columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically windowed windows moving down
+Iv⌿Y	Replicate along leading axis of Y	Primitive	Dyadic Function		Selection	compressing slashbar solidusbar first copying repeatingeachrows Iv/[1] dimension 1st start beginning vertically columnwise column-wise down
+Av⌿Y	Filtering major cells of Y according to mask Av	Primitive	Dyadic Function		Selection	compressing slashbar selecting cells items vertically rowsofmatrix columnwise column-wise Av/[1] dimension 1st start beginning down
+f⌿Y	Reduce First: f between all items of Y on first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slashbar reducefirst foldfirst insertfirst inserting folding solidusbar columnwise f/[1] reducing major cells elements dimension 1st column-wise vertically down
 A⍱B	Logical NOR	Primitive	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 A⍲B	Logical NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
 ,Y	Ravel: Reshape into a vector	Primitive	Monadic Function		Structural	comma flattening flatten() raze razing list array
-X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise
+X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise by
 Xm,Ys	Append scalar to each row of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate rows table
 Xm,Yv	Append elements of vector to respective rows of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate table list
 ⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells
@@ -138,9 +139,9 @@ X f⌸Y	Key: f on items of Y grouped by unique X values	Primitive	Dyadic Functio
 f⌸Y	Key: f on first axis indices of Y grouped by unique Y values	Primitive	Monadic Function	Monadic Operator	Sets	equalquad quadequal dimension 1st
 X⍷Y	Boolean indication of top left corner of occurrences of entire array X within Y	Primitive	Dyadic Function		Sets	findin epsilonunderbar search locate subarray sub-array sub-vector subvector subsequence sub-sequence sub-string substring sub-list sublist locating location binary base-2 base2
 X f.g Y	Inner Product: f / g between trailing vectors of X and leading vectors of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	small little tiny dotproduct innerproduct crossproduct vectorproduct period fullstop lists start beginning ending
-M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathematical	frombase decoding uptack pack frommixedradix fromradix basevalue conversion convert
+M⊥N	Decode: Evaluate N in number system M	Primitive	Dyadic Function		Mathematical	frombase decoding uptack pack frommixedradix fromradix basevalue base-value conversion convert
 Ns⊥N	Value of polynomial with coefficients N at point Ns	Primitive	Dyadic Function		Mathematical	
-M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix conversion convert
+M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix conversion convert inversebase
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide table inversion
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide leastsquares table pseudoinversion
 Mm⌹Nv	Solve equation system with variable coefficients Mm and values Nv	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
@@ -159,7 +160,7 @@ name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copu
 →0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return
 →Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow goto switch 1st
 ⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
-⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ
+⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ alfa
 Z f⍨X,Y	Avoiding parentheses by swapping arguments in (X,Y) f Z	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis frown
 X∘.g Y	Outer Product: g between each item of X and every item of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element
 expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		Identity	lev lefttack where
