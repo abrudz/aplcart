@@ -2,7 +2,7 @@
 
 **There is plenty of documentation on what parts of APL do. APLcart seeks to answer *How do I…* questions.**
 
-It is intended for both beginners and professionals, but knowledge of basic APL syntax is a prerequisite.
+APLcart is a searchable repository of short APL phrases intended for both beginners and professionals. Knowledge of basic APL syntax is a prerequisite.
 
 Note that Internet Explorer is not supported.
 
