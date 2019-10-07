@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for APLcart
-title: ''
+title: 'Feature request: [SHORT DESCRIPTION]'
 labels: enhancement
 assignees: abrudz
 

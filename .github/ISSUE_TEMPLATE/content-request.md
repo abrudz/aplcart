@@ -1,7 +1,7 @@
 ---
 name: Content request
 about: Suggest additional content for APLcart
-title: ''
+title: Please add [SHORT DESCRIPTION]
 labels: addition
 assignees: abrudz
 
@@ -41,3 +41,6 @@ Array Properties | Boolean/Logical | Comparison | Data Conversion | Expression |
 ```
 space-separated synonyms (e.g. first 1st) and alternative spellings (e.g. normalise normalize)
 ```
+
+---
+**Note:** By submitting this issue, you permit your contribution to be [used without restriction](../../blob/master/LICENSE).
