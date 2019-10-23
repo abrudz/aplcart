@@ -407,7 +407,8 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sin() sinus
 10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude
 11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()
-12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle
+12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle ∠
+M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Mathematical	atan2() arctan2() atn2() arctn2() atng2() arctng2()
 2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus
 3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens
 4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()
@@ -430,6 +431,7 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()
 ¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
 ¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
+(1∘○+2∘○)N	Hartley kernel	Tacit	Monadic Function		Mathematical	cas()
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
