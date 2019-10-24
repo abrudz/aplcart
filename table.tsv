@@ -477,6 +477,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 ⌈⍀N	Progressive maxima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically
 ⌊⍀N	Progressive minima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically
 1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table
+⊥⍨Bv	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at end
 0∘⊥N	Last major cell of numeric array	Tacit	Monadic Function		Selection	item element
 100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format
 2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list
@@ -736,6 +737,8 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 Mv(+.÷)Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 (*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt ²√ ^0.5 ^.5
 (÷1⊥÷)Nv	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Monadic Function		Mathematical	electronics electrics circuits Ω series inparallel
+(⊥⍨⌽)Bv	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at start beginning
+(⊥⍨~)Bv	Count of trailing zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at end
 (⍳0⊥⍴)Ym	All column indices of array Ym	Tacit	Monadic Function		Index Generation	enumerate columns
 (10∘⊥⍣¯1)N	Digits of N	Tacit	Monadic Function		Mathematical	base10 decimal base-10
 (2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base2 base-2 boolean
@@ -798,7 +801,6 @@ X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dy
 (∪⊢∨⍳)Js	All divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization
 (≠\∨⊢)B	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths
 (~∧≠\)B	Places between pairs of ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths
-(+/∧\)B	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths start beginning
 (,¨,\)Yv	Prefixes of a vector	Tacit	Monadic Function		Structural	string text
 (⍉∘⍪⍤1)Y	Increment rank by one before rows	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table
@@ -814,6 +816,7 @@ Mm(1 2 1 2⍉1∘.+)Nm	Shur sum	Tacit	Dyadic Function		Mathematical
 Mm(1 2 1 2⍉1∘.×)Nm	Shur product	Tacit	Dyadic Function		Mathematical	
 Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical	table
 (≢÷1⊥÷)N	Harmonic mean	Tacit	Monadic Function		Mathematical	average subcontrary H() HM() harmonicmean
+(⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning
 Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function		Text	lettercase caseless caseinsensitive normalize
 (0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif
