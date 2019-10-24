@@ -144,7 +144,7 @@ Ns⊥N	Value of polynomial with coefficients N at point Ns	Primitive	Dyadic Func
 M⊤N	Encoding value N in number system M	Primitive	Dyadic Function		Mathematical	antibase tobase encode downtack representation unpack tomixedradix toradix conversion convert inversebase
 ⌹Nm	Matrix inverse of Nm (square Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide table inversion
 ⌹Nm	Matrix pseudo-inverse of Nm (over-determined Nm)	Primitive	Monadic Function		Mathematical	domino quaddivide leastsquares table pseudoinversion
-Mm⌹Nv	Solve equation system with variable coefficients Mm and values Nv	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
+Mv⌹Nm	Solve equation system with variable coefficients Nm and values Mv	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
 Mm⌹Nm	Multiplying Mm with inversed Nm	Primitive	Dyadic Function		Mathematical	domino matrixdivide quaddivide
 ⍎Dv	Execute: Result of expression Dv	Primitive	Monadic Function		Data Conversion	evaluate uptackjot hydrant apl compute numbers atoi() run call parseexpression dyalog
 X⍎Dv	Execute Dv within namespace X	Primitive	Dyadic Function		Data Conversion	evaluatein uptackjot hydrant apl compute numbers atoi() run call inside dyalog
