@@ -408,7 +408,6 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude
 11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()
 12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle ∠
-M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Mathematical	atan2() arctan2() atn2() arctn2() atng2() arctng2()
 2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus
 3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens
 4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()
@@ -431,7 +430,6 @@ M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Ma
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()
 ¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()
 ¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity
-(1∘○+2∘○)N	Hartley kernel	Tacit	Monadic Function		Mathematical	cas()
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
@@ -826,6 +824,7 @@ Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit
 Xv∘.{⍺⍵}Yv	Catalog of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix
 A(1-⊢×1-⊣)B	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying
 A(1-⊣×1-⊢)B	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
+M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Mathematical	atan2() arctan2() atn2() arctn2() atng2() arctng2()
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths
 Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
 (××∘⌊|)N	Rounding towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp
@@ -835,6 +834,7 @@ Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	D
 Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list
 (○4÷3÷*∘3)N	Volume of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball
 (1=∘?⍴∘2)Jv	Random Boolean array of shape Jv	Tacit	Monadic Function		Boolean/Logical	base2 binary base-2
+(1∘○+2∘○)N	Hartley kernel	Tacit	Monadic Function		Mathematical	cas()
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?
 (⊣+¯11○⊢)⌿N	Join real and imaginary major cells by removing leading axis	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine reduce start beginning
 (⊣×¯12○⊢)⌿N	Join magnitude and radians major cells by removing leading axis	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine reduce start beginning
@@ -1450,6 +1450,7 @@ cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function
 Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick list major cells elements 1st
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering
 {(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering
+{(⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	import load fetch get include from .dws ns
 Cv{⍎⍺,'←⍵'}Y	Assign values Y to names Cv	Dfn	Dyadic Function		System	assignment name-value names-values dynamic variable
 caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function		Text	diversions capitalisation 1st
 {files}←{type←''} dfns.mp3 dirs	Create playlist(s) for music directories	Dfn	Function		Native Files	MP3(mediaplayer) mediaplayer(MP3) diversions
@@ -1567,6 +1568,7 @@ Is{0 1↓(2↑1+⍺)⍕⍵∘.+,10*⍺}Jv	Format with leading zeroes for non-neg
 X{(⊃0⍴⊂)@(~∊∘⍺)⊢⍵}Y	Replacing elements of Y not in set X with prototypical elements	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update cells items zeroes falses falsehoods
 X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value X	Dfn	Dyadic Function		Expression	fallback
 {⍵⌷⍨⊂⍋{(819⌶⍵)⍵}¨⍵}Y	Sorting Y in case-insensitive alphabetical order	Dfn	Monadic Function		Text	up increasing caseinsensitive reordering ordering
+{(⎕SE.SALT.New'HttpCommand'('GET'⍵)).Run.Data}Dv	Download file from URL Dv	Dfn	Monadic Function		System	curl online internet http:// https:// wget fetch
 {-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row table
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine tables lists
 Xv{⍵⌿⍨⍺∧.=⍨⍵↑[2]⍨≢⍺}Ym	Rows of matrix Ym starting with Xv	Dfn	Dyadic Function		Selection	table
@@ -1893,15 +1895,15 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]FILE.ToLarge	Transform component files in the specified directory from small-span to large-span	Non-syntax	Ucmd	FILE	User command	commands that relate ]ToLarge
 ]FILE.ToQuadTS	Convert a component file timestamp (single float number) to ⎕TS format (vector of 7 numbers)	Non-syntax	Ucmd	FILE	User command	commands that relate files ]ToQuadTS list
 ]FILE.Touch	Check whether the specified file exists in the current/specified location and create it if it cannot be found	Non-syntax	Ucmd	FILE	User command	commands that relate files ]Touch locate
-]LINK.Import	Import a namespace from a directory (create the namespace if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Import
-]LINK.Add	Associate item in linked namespace with new file/directory in corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Add cell element
-]LINK.Break	Break link between namespace and corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Break
-]LINK.CaseCode	Append filename with numeric encoding of capitalisation	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]CaseCode
-]LINK.Create	Link a namespace with a directory (create one or both if absent)	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Create
-]LINK.Export	Export a namespace to a directory (create the directory if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Export
-]LINK.Expunge	Erase item and associated file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]Expunge cell element
-]LINK.GetItemName	Return name of item associated with file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]GetItemName cell element
-]LINK.GetFileName	Return name of file associated with item	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation (see https//github.com/dyalog/link/wiki) ]GetFileName cell element
+]LINK.Import	Import a namespace from a directory (create the namespace if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Import
+]LINK.Add	Associate item in linked namespace with new file/directory in corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Add cell element
+]LINK.Break	Break link between namespace and corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Break
+]LINK.CaseCode	Append filename with numeric encoding of capitalisation	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]CaseCode
+]LINK.Create	Link a namespace with a directory (create one or both if absent)	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Create
+]LINK.Export	Export a namespace to a directory (create the directory if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Export
+]LINK.Expunge	Erase item and associated file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Expunge cell element
+]LINK.GetItemName	Return name of item associated with file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]GetItemName cell element
+]LINK.GetFileName	Return name of file associated with item	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]GetFileName cell element
 ]LINK.List	List active namespace-directory links	Non-syntax	Ucmd	LINK	User command	commands for synchronisation (see https//github.com/dyalog/link/wiki) ]List vector
 ]LINK.Refresh	Fully synchronise namespace-directory content	Non-syntax	Ucmd	LINK	User command	commands for synchronisation (see https//github.com/dyalog/link/wiki) ]Refresh
 ]OUTPUT.Box	Display output with borders indicating shape, type and structure	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Box cells elements indicate masking
@@ -2210,6 +2212,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host
-({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	
+{(⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	import load fetch get include from dfns.dws ns
+({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
