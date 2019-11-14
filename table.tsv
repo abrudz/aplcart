@@ -207,7 +207,7 @@ X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	
 X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector
-(name1 name2)←name2 name1	Swap variable values	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector exchange swapping variables
+(name1 name2)←name2 name1	Swap variable values	Primitive	Dyadic Function		Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -645,9 +645,6 @@ M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase convert con
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
 (⍎⍕)Nv	Reshaping only one-element numeric vector Nv into a scalar (leave longer vectors as-is)	Tacit	Monadic Function		Structural	1-element singleton lists
 (⍎⍕)Nv	Rounding to ⎕PP precision	Tacit	Monadic Function		Mathematical	system
-(0<⎕NC)Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists
-(0=⎕NC)Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't not exists
-(¯1≠⎕NC)Dv	Is Dv a valid APL identifier	Tacit	Monadic Function		System	name testif symbol validity allowed? valid? name? identifier? legal? dyalog permitted?
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill
@@ -890,6 +887,9 @@ Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZ
 (819⌶⍨∘1≠⊢)D	Are characters of D lowercase?	Tacit	Monadic Function		Text	lower-case? small? minuscules? minuscule?
 (11=∘⎕DR 2∘⌿)Y	Is Y Boolean?	Tacit	Monadic Function		Array Properties	testif binary base-2 base2
 (10⊥¯1+⎕D∘⍳)Dv	Safe conversion of string into integer	Tacit	Monadic Function		Data Conversion	eval() evaluate atoi() execute secure number
+{0<⎕NC⊆,⍵}Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists
+{0=⎕NC⊆,⍵}Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't not exists
+{¯1≠⎕NC⊆,⍵}Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	name testif symbol validity allowed? valid? name? legal? dyalog permitted?
 (⍳∘' '⍤1)D	Indices of first blanks in rows of array D	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally
 ({⍞}¨⍳)Jv	Input of ×/Jv strings	Tacit	Monadic Function		Expression	multi characterinput rawinput stdin
 X⌷⍨∘⊂∘⍋∘⍋Y	Reorder X according to the order of Y	Tacit	Dyadic Function		Mathematical	meshing sorting reordering ordering
@@ -1430,6 +1430,8 @@ pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	F
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row table
+{3=⌊⎕NC⊆,⍵}Dv	Is Dv a function?	Dfn	Monadic Function		System	fn? are functions?
+{4=⌊⎕NC⊆,⍵}Dv	Is Dv an operator?	Dfn	Monadic Function		System	op? are operators?
 {⍵/1 0⍴⍨≢⍵}Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Dfn	Monadic Function		Boolean/Logical	1s 0s zeroes naughts falses falsehoods trues truths
 Av{⍵⌷⍨⊂⍒⍺}Y	Moving cells of Y indicated by Av to the start of Y	Dfn	Dyadic Function		Structural	conditional promote promotion items elements beginning leading
 hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function		Text	globbing
@@ -1443,6 +1445,7 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 boolean
+{1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?
 {0::0⋄1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list
@@ -1462,6 +1465,9 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem
+{3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfns? tradops?
+{3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?
+{3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived primtive? primitives? functions? train? trains?
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
 X{+/∧\⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending
 X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending
@@ -1477,6 +1483,8 @@ Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif
 {(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get
 {fns}←{space←⎕THIS} dfns.fnrepl (from to)	Function string replacement	Dfn	Function		Text	stringreplacement
+{9.4 9.6∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv a class?	Dfn	Monadic Function		System	are classes?
+{9.5 9.7∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an interface?	Dfn	Monadic Function		System	are interfaces?
 {⍵⌿⍨1,∨/2≢⌿⍵}Ym	Removing consecutive duplicate rows from ordered matrix Ym	Dfn	Monadic Function		Sets	table
 {⍵\⍨1 0⍴⍨⊃⌽⍴⍵}D	Spacing out text	Dfn	Monadic Function		Text	insert blanks expanded spaces
 Av{⍵⌷⍨⊂⌽⍒+\⍺}Y	Reversal (⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	
@@ -1922,7 +1930,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]OUTPUT.HTML	Render HTML or SVG	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]HTML cells elements
 ]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Layout table cells elements lists
 ]OUTPUT.Plot	Plot data	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Plot cells elements plotting
-]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Rows folding cells elements
+]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Rows folding cells elements limit fitting maximum columns characters screen
 ]PERFORMANCE.Profile	Report performance details (optionally through GUI)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]Profile
 ]PERFORMANCE.RunTime	Report execution time of one or more expressions	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]RunTime
 ]PERFORMANCE.SpaceNeeded	Compute memory needed to run expression(s)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate consumption of computing resources ]SpaceNeeded
