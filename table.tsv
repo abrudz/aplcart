@@ -2225,10 +2225,10 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types
+(¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	tacit	Monadic function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host
 {(⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	import load fetch get include from dfns.dws ns
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
-¯1*≢-∘≢∘∪{⍵⌊⍵[⍵]}⍣≡	Levi-Civita symbol	tacit	Monadic function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
