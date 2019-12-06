@@ -8,6 +8,8 @@ Note that Internet Explorer is not supported.
 
 ## Usage
 
+*→ See also [the video introduction](https://dyalog.tv/Dyalog19/?v=r3owA7tfKE8).*
+
 **Note that APLcart is not intended for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes. Rather, APLcart is for finding out *how to do* things.**
 
 The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
