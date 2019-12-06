@@ -1507,7 +1507,7 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending
 {n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic Function		Mathematical	testif juggling beat
-Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast: ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick
+Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick
 I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	Dfn	Dyadic Function		Selection	without remove indices delete drop
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st
 I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering
@@ -1640,7 +1640,7 @@ X{⍺⌷⍨⊂(⍳≢⍺)~⍺(I⍨⍳I←⊢∘≢⍴∘⍋∘⍋⊣⍳⍪⍨)�
 Mv{n←(⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢ ⋄ (n⍺)+.×(n⍵)}Nv	Sample Pearson correlation coefficient	Dfn	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
 Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length of longest common substring	Dfn	Dyadic Function		Text	match
 {'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'-|-|',⊂⍕⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table
-{(⍴⍵)⍴(,(+/b)∘.>¯1+⍳¯1↑⍴⍵)\(,b←⍵≠' ')/,⍵}D	Moving all blanks to end of each rows (Fast: (~,∩)∘' '⍤1)	Dfn	Monadic Function		Text	quick speed spaces trailing ending
+{(⍴⍵)⍴(,(+/b)∘.>¯1+⍳¯1↑⍴⍵)\(,b←⍵≠' ')/,⍵}D	Moving all blanks to end of each rows (fast (~,∩)∘' '⍤1)	Dfn	Monadic Function		Text	quick speed spaces trailing ending
 {2⌽∊(12((⊃'am' 'pm'⌽⍨≤),∘⍕|)4⊃⍵),':'@1∘⍕¨100+2↑4↓⍵}Jv	Date (⎕TS format) to H:mm:sstt	Dfn	Monadic Function		Text	timestamp am/pm 12-hour clock
 {⌽((0,⍳≢⍵)∘.=+⌿~b)+.×(-⍵)×.*b←t⊤¯1+⍳×/t←2⍴⍨≢⍵}Nv	Polynomial with roots Nv	Dfn	Monadic Function		Mathematical	solve
 {⊃{⍺@(⊂1 1)⌽⍉⍵}/'┌┐┘└',{⍺⍪⌽⍉⍵}/'─│─│',⊂⍕⍵}Dm	Unicode frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table
