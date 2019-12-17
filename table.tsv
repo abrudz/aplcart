@@ -322,8 +322,8 @@ r←{object} ⎕WG props…	The values of the properties of an object	System	Fun
 ⎕PP←(1≤10≤34)	Number of significant digits in the display of numeric output	System	Variable		Data Conversion	printing precision decimals rounding
 names←{init_chars} ⎕NL ¯9.5 ¯9.7	Active interfaces, optionally filtered	System	Function	Workspace	System Function	namelist )interfaces
 r←{encoding} ⎕NGET file {flags}	Read Unicode text file as lines into array r	System	Function	Native Files	System Function	fetch load
-r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression
-r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex find locate perlcompatibleregularexpression locating location
+r←{tn} (reg_ex ⎕R trans) text	Replace text selected by reg_ex using trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regexp substitute pcre perlcompatibleregularexpression
+r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regexp find locate perlcompatibleregularexpression locating location
 {bytes}←vec ⎕NPUT file {flags}	Write (overwrite if flags 1) text lines to Unicode file	System	Function	Native Files	System Function	dump cat save 🐈
 {cn}←⎕FDROP tn n {pn}	Drop n components from start (n>0) or end (n<0)	System	Function	Component Files	System Function	dcf remove trim slice resize cap clamp beginning trailing delete leading ending without
 {cn}←x ⎕FREPLACE tn cn {pn}	Store array x in component number cn	System	Function	Component Files	System Function	dcf put overwrite
@@ -360,8 +360,8 @@ r←0(⎕JSON⍠'M')data	Convert JSON text to APL matrix	System	Function	Data Co
 r←1(⎕JSON⍠'M')data	Convert APL matrix to JSON text	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table
 r←data {header}(⎕CSV⍠1)format_spec	Convert CSV data from APL inverted table (character data as matrices)	System	Function	Data Conversion	System Function	tsv export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues matrix tables
 r←data {header}(⎕CSV⍠2)format_spec	Convert CSV data from APL inverted table (character data as vectors of vectors)	System	Function	Data Conversion	System Function	tsv export generate commaseparatedvalues tabseparatedvalues characterseparatedvalues matrix lists
-r←{tn} (reg_ex ⎕R trans⍠1) text	Replace text selected by case-insensitive reg_ex using trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex substitute pcre perlcompatibleregularexpression case-insensitivity caseinsensitive caseinsensitivity
-r←{tn} (reg_ex ⎕S trans⍠1) text	Search text for case-insensitive PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regex find locate perlcompatibleregularexpression locating case-insensitivity caseinsensitive caseinsensitivity location
+r←{tn} (reg_ex ⎕R trans⍠1) text	Replace text selected by case-insensitive reg_ex using trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regexp substitute pcre perlcompatibleregularexpression case-insensitivity caseinsensitive caseinsensitivity
+r←{tn} (reg_ex ⎕S trans⍠1) text	Search text for case-insensitive PCRE reg_ex returning trans (optional tn to spool output to native file)	System	Operator	Data Conversion	System Function	regexp find locate perlcompatibleregularexpression locating case-insensitivity caseinsensitive caseinsensitivity location
 {counts}←destination(⎕NMOVE⍠1)sources	Move files/directories from 'sources' (with ? and * globbing) to 'destination'	System	Function	Native Files	System Function	moving renaming rename wildcards
 {counts}←destination(⎕NCOPY⍠1)sources	Copy files/directories from 'sources' (with ? and * globbing) to 'destination'	System	Function	Native Files	System Function	copying wildcards
 {old_values}←{object} ⎕WS nvpairs…	Set the values of one or more specified properties of object	System	Function	Native Files	System	window gui assign
@@ -1386,7 +1386,7 @@ rslt←{cmp←1} dfns.pack4 image	Quad-tree packing	Dfn	Function		Storage	compre
 rslt←{dirn←¯1} dfns.just chars	Justify text array	Dfn	Function		Text	justifytext aligntext
 rslt←{eval←1} dfns.lisp expr	Evaluator for a subset of Scheme	Dfn	Function		Text	closure Metacircular SICP lambdaexpression parser interpreter
 rvec←{exclude←⍬} dfns.refs ref	Vector of sub-space references	Dfn	Function		Array Properties	namespacereferences ⎕WX root-space rootspace list
-table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function		System	performance expressioncomparison histogram ⎕ML time milliseconds speed
+table←{opts←⍬} dfns.cmpx exprs	Approx expression timings	Dfn	Function		System	performance expressioncomparison histogram ⎕ML time milliseconds speed commands consumption computing resources ]RunTime ]performance.runtime measure elapsed ms comparison tuning tune
 to←{dirn←1} dfns.polar fm	Polar from/to cartesian coordinates	Dfn	Function		Data Conversion	polarcoordinates cartesiancoordinates
 tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function		Text	parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser
 {⎕IO+⍵}J	Changing an index origin dependent argument to act as ⎕IO=0	Dfn	Monadic Function		Index Generation	
@@ -1442,7 +1442,7 @@ M{⎕DIV←1⋄⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dyadi
 Is{1@⍵⊢⍺ ⍺⍴0}Jv	Adjacency matrix of size Is from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector
 crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating
-{⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor
+{⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor self-contained
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 boolean
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?
@@ -1879,102 +1879,95 @@ Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Per
 0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator
-]MSWIN.Assemblies	List all .NET assemblies currently loaded into memory	Non-syntax	Ucmd	MSWIN	User command	commands that relate the Microsoft Windows operating system ]Assemblies vector
-]MSWIN.Caption	Query or change window captions	Non-syntax	Ucmd	MSWIN	User command	commands that relate to the Microsoft Windows operating system ]Caption
-]MSWIN.CopyReg	Copy registry entries to file and, optionally, between Dyalog versions	Non-syntax	Ucmd	MSWIN	User command	commands that relate the Microsoft Windows operating system ]CopyReg
-]MSWIN.FileAssociations	Change the file associations of Dyalog workspaces, applications and scripts (.dws, .dyapp and .dyalog files)	Non-syntax	Ucmd	MSWIN	User command	commands that relate to Microsoft Windows operating system ]FileAssociations
-]MSWIN.GUIProps	List property names and values for given or current object	Non-syntax	Ucmd	MSWIN	User command	commands that relate to the Microsoft Windows operating system ]GUIProps vector
-]MSWIN.KeyPress	Return message arguments of KeyPress events	Non-syntax	Ucmd	MSWIN	User command	commands that relate to the Microsoft Windows operating system ]KeyPress
-]NS.Xref	Describe the inter-object cross-references in a class/namespace/scriptfile	Non-syntax	Ucmd	NS	User command	commands that relate to namespaces ]Xref
-]NS.ScriptUpdate	Synchronise namespace/class script to match current content	Non-syntax	Ucmd	NS	User command	commands that relate namespaces ]ScriptUpdate
-]NS.Summary	Summarise (scope, size, syntax) the functions in a namespace/class/scriptfile	Non-syntax	Ucmd	NS	User command	commands that relate to namespaces ]Summary
-]CALC.Factors	Determine the prime factors of the argument	Non-syntax	Ucmd	CALC	User command	commands that relate manipulation data ]Factors
-]CALC.FromHex	Convert a list of hexadecimal representations of integers to a numeric vector	Non-syntax	Ucmd	CALC	User command	commands that relate manipulation data ]FromHex
-]CALC.PivotTable	Create a pivot table from an appropriate matrix	Non-syntax	Ucmd	CALC	User command	commands that relate to manipulation of data ]PivotTable
-]CALC.ToHex	Convert integer(s) to a vector of text vectors containing the hexadecimal representation of each number	Non-syntax	Ucmd	CALC	User command	commands that relate manipulation data ]ToHex lists
-]DEVOPS.DBuild	Run one or more DyalogBuild script files (.dyalogbuild)	Non-syntax	Ucmd	DEVOPS	User command	commands that relate to development operations ]DBuild
-]DEVOPS.DTest	Run (a selection of) functions named test_* from a namespace, file or directory	Non-syntax	Ucmd	DEVOPS	User command	commands that relate development operations ]DTest
-]FN.Align	Align end-of-line comments	Non-syntax	Ucmd	FN	User command	commands that relate to functions operators ]Align
-]FN.Calls	Produce the calling tree of a function in a class/namespace/scriptfile	Non-syntax	Ucmd	FN	User command	commands that relate to functions operators ]Calls
-]FN.Compare	Compare two functions	Non-syntax	Ucmd	FN	User command	commands that relate to operators ]Compare
-]FN.DInput	Define a multi-line dfn, dop or derived function/operator, or execute a multi-line expression	Non-syntax	Ucmd	FN	User command	commands that relate functions operators ]DInput
-]FN.Defs	List single-line dfns, dops, derived functions and trains	Non-syntax	Ucmd	FN	User command	commands that relate to operators ]Defs vector
-]FN.Latest	List functions modified since a specified date (default is today), most-recently-changed first	Non-syntax	Ucmd	FN	User command	commands that relate operators ]Latestif vector 1st
-]FN.ReorderLocals	Sort local names in the header of tradfns and tradops	Non-syntax	Ucmd	FN	User command	commands that relate to functions operators ]ReorderLocals sorting reordering ordering
-]FILE.CD	Report (and, optionally, change) the current directory	Non-syntax	Ucmd	FILE	User command	commands that relate files ]CD
-]FILE.Compare	Compare two component files	Non-syntax	Ucmd	FILE	User command	commands that relate to ]Compare
-]FILE.Collect	Merge all the files with the specified path/name{-nnn} into a single file	Non-syntax	Ucmd	FILE	User command	commands that relate ]Collect
-]FILE.Edit	Open the specified native file as an editable text file	Non-syntax	Ucmd	FILE	User command	commands that relate files ]Edit
-]FILE.Find	List line numbers and lines that contain the specified string for each file that has a match	Non-syntax	Ucmd	FILE	User command	commands relate to files ]Find vector
-]FILE.Open	Open a file or directory with the specified application	Non-syntax	Ucmd	FILE	User command	commands that relate files ]Open
-]FILE.Replace	Replace strings in files and return the number of changes made	Non-syntax	Ucmd	FILE	User command	commands that relate to ]Replace
-]FILE.Split	Split a single file into (up to 999) smaller files	Non-syntax	Ucmd	FILE	User command	commands that relate ]Split
-]FILE.ToLarge	Transform component files in the specified directory from small-span to large-span	Non-syntax	Ucmd	FILE	User command	commands that relate ]ToLarge
-]FILE.ToQuadTS	Convert a component file timestamp (single float number) to ⎕TS format (vector of 7 numbers)	Non-syntax	Ucmd	FILE	User command	commands that relate files ]ToQuadTS list
-]FILE.Touch	Check whether the specified file exists in the current/specified location and create it if it cannot be found	Non-syntax	Ucmd	FILE	User command	commands that relate files ]Touch locate
-]LINK.Import	Import a namespace from a directory (create the namespace if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Import
-]LINK.Add	Associate item in linked namespace with new file/directory in corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Add cell element
-]LINK.Break	Break link between namespace and corresponding directory	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Break
-]LINK.CaseCode	Append filename with numeric encoding of capitalisation	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]CaseCode
-]LINK.Create	Link a namespace with a directory (create one or both if absent)	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Create
-]LINK.Export	Export a namespace to a directory (create the directory if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Export
-]LINK.Expunge	Erase item and associated file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]Expunge cell element
-]LINK.GetItemName	Return name of item associated with file	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]GetItemName cell element
-]LINK.GetFileName	Return name of file associated with item	Non-syntax	Ucmd	LINK	User command	commands for namespace-directory synchronisation ]GetFileName cell element
-]LINK.List	List active namespace-directory links	Non-syntax	Ucmd	LINK	User command	commands for synchronisation (see https//github.com/dyalog/link/wiki) ]List vector
-]LINK.Refresh	Fully synchronise namespace-directory content	Non-syntax	Ucmd	LINK	User command	commands for synchronisation (see https//github.com/dyalog/link/wiki) ]Refresh
-]OUTPUT.Box	Display output with borders indicating shape, type and structure	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Box cells elements indicate masking
-]OUTPUT.Boxing	Display output with borders indicating shape, type and structure	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Boxing cells elements indicate masking
-]OUTPUT.Disp	Display specified array with borders indicating sub-array shape and type	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Disp subarray cells elements indicate masking
-]OUTPUT.Display	Display specified array with borders indicating array and sub-array shape and type	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Display subarray cells elements indicate masking
-]OUTPUT.Find	Precede output with a reference to the line of code that generated it	Non-syntax	Ucmd	OUTPUT	User command	commands affect way items are displayed ]Find cells elements
-]OUTPUT.Format	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using specified margins	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Format table cells elements lists
-]OUTPUT.HTML	Render HTML or SVG	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]HTML cells elements
-]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Layout table cells elements lists
-]OUTPUT.Plot	Plot data	Non-syntax	Ucmd	OUTPUT	User command	commands that affect the way items are displayed ]Plot cells elements plotting
-]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands that affect way items are displayed ]Rows folding cells elements limit fitting maximum columns characters screen
-]PERFORMANCE.Profile	Report performance details (optionally through GUI)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]Profile
-]PERFORMANCE.RunTime	Report execution time of one or more expressions	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate to consumption computing resources ]RunTime
-]PERFORMANCE.SpaceNeeded	Compute memory needed to run expression(s)	Non-syntax	Ucmd	PERFORMANCE	User command	commands that relate consumption of computing resources ]SpaceNeeded
-]SALT.Boot	Boot from a file containing instructions or a function	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Boot
-]SALT.Clean	Remove SALT tags from the ws or specific items so that SALT no longer saves changes to associated files	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Clean cells elements delete drop without
-]SALT.Compare	Compare two versions of a SALTed item	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Compare cell element
-]SALT.List	List files (default: .dyalog only) and directories in the specified directory	Non-syntax	Ucmd	SALT	User command	covers for functionality ]List vector
-]SALT.Load	Load item from native text file	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Load cell element
-]SALT.Refresh	Reload all SALTed items from their associated files	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Refresh cells elements
-]SALT.RemoveVersions	Remove one or more versions of a file managed by SALT	Non-syntax	Ucmd	SALT	User command	covers for functionality ]RemoveVersions delete drop without
-]SALT.Save	Save item in a native text file (default: same place if already SALTed)	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Save cell element
-]SALT.Set	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Set
-]SALT.Settings	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Settings
-]SALT.Snap	Save all new or modified items to native text files (unscripted namespaces become directories)	Non-syntax	Ucmd	SALT	User command	covers for functionality ]Snap cells elements
-]TOOLS.ADoc	Generate documentation automatically	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]ADoc
-]TOOLS.Chart	Chart the specified expression	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Chart
-]TOOLS.Calendar	Display calendar	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Calendar
-]TOOLS.Demo	Provide playback mechanism for live demonstrations	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Demo
-]TOOLS.Help	Browse or get link to information about any APL concept	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Help
-]TOOLS.Version	Report version numbers of APL, OS, SALT, UCMD, .NET and/or workspace	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Version
-]TRANSFER.In	Import a workspace from a workspace transfer file	Non-syntax	Ucmd	TRANSFER	User command	commands that convert workspaces between APL versions dialects ]In
-]TRANSFER.Out	Export the current workspace to a workspace transfer file	Non-syntax	Ucmd	TRANSFER	User command	commands that convert workspaces between APL versions dialects ]Out
-]UCMD.UMonitor	Gather user command execution data	Non-syntax	Ucmd	UCMD	User command	commands that manage framework ]UMonitor
-]UCMD.UNew	Create one or more new user commands (optionally using a GUI)	Non-syntax	Ucmd	UCMD	User command	that manage the framework ]UNew
-]UCMD.UDebug	Facilitate debugging of user commands	Non-syntax	Ucmd	UCMD	User command	that manage the framework ]UDebug
-]UCMD.ULoad	Load a user command's script into the current namespace	Non-syntax	Ucmd	UCMD	User command	commands that manage framework ]ULoad
-]UCMD.UReset	Refresh cache of all user command definitions	Non-syntax	Ucmd	UCMD	User command	commands that manage the framework ]UReset
-]UCMD.USetup	Run Setup from setup.dyalog	Non-syntax	Ucmd	UCMD	User command	commands that manage the framework ]USetup
-]UCMD.UVersion	Report version information of a user command	Non-syntax	Ucmd	UCMD	User command	commands that manage the framework ]UVersion
-]WS.Map	Display namespace treeview	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Map
-]WS.NamesLike	List names followed by their class matching the pattern	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]NamesLike vector
-]WS.Nms	List names followed by their class matching the pattern	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Nms vector
-]WS.Check	Perform workspace integrity check	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Check correct validate
-]WS.Compare	Compare two workspaces	Non-syntax	Ucmd	WS	User command	commands that relate to ]Compare
-]WS.Document	List (part of) the workspace content, displaying each item separately	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Document vector cell element
-]WS.FindRefs	Follow references in the workspace until all references have been found	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]FindRefs
-]WS.FnsLike	List functions and operators matching a pattern	Non-syntax	Ucmd	WS	User command	commands that relate workspaces ]FnsLike vector
-]WS.Locate	Locate (and, optionally, replace) strings in the workspace	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Locate locating location
-]WS.ObsLike	List objects matching the pattern	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]ObsLike vector
-]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]Peek
-]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]SizeOf sorting reordering ordering
-]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	commands that relate to workspaces ]VarsLike vector
+]MSWIN.Assemblies	List all .NET assemblies currently loaded into memory	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]Assemblies .dlls .so .dylib Framework Core assembly sharedlibraries sharedlibrary dynamiclinkedlibraries dynamiclinkedlibrary
+]MSWIN.Caption	Query or change window captions	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]Caption titlebar titletext set get session
+]MSWIN.CopyReg	Copy registry entries to file and, optionally, between Dyalog versions	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]CopyReg migrate userprofile usersettings from
+]MSWIN.FileAssociations	Change the file associations of Dyalog workspaces, applications and scripts (.dws, .dyapp and .dyalog files)	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]FileAssociations openwith specific version
+]MSWIN.GUIProps	List property names and values for given or current object	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]GUIProps key-value pairs dictionary properties
+]MSWIN.KeyPress	Return message arguments of KeyPress events	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]KeyPress view details display show
+]NS.Xref	Describe the inter-object cross-references in a class/namespace/scriptfile	Non-syntax	Ucmd	NS	User command	commands to namespaces ]Xref symbols symbolusage
+]NS.ScriptUpdate	Synchronise namespace/class script to match current content	Non-syntax	Ucmd	NS	User command	commands namespaces ]ScriptUpdate synchronize align textualrepresentation
+]NS.Summary	Summarise (scope, size, syntax) the functions in a namespace/class/scriptfile	Non-syntax	Ucmd	NS	User command	commands to namespaces ]Summary list show display 
+]CALC.Factors	Determine the prime factors of the argument	Non-syntax	Ucmd	CALC	User command	commands manipulation data ]Factors
+]CALC.FromHex	Convert a list of hexadecimal representations of integers to a numeric vector	Non-syntax	Ucmd	CALC	User command	commands manipulation data ]FromHex
+]CALC.PivotTable	Create a pivot table from an appropriate matrix	Non-syntax	Ucmd	CALC	User command	commands to manipulation of data ]PivotTable
+]CALC.ToHex	Convert integer(s) to a vector of text vectors containing the hexadecimal representation of each number	Non-syntax	Ucmd	CALC	User command	commands manipulation data ]ToHex lists
+]DEVOPS.DBuild	Run one or more DyalogBuild script files (.dyalogbuild)	Non-syntax	Ucmd	DEVOPS	User command	commands to development operations ]DBuild
+]DEVOPS.DTest	Run (a selection of) functions named test_* from a namespace, file or directory	Non-syntax	Ucmd	DEVOPS	User command	commands development operations ]DTest
+]FN.Align	Align end-of-line comments	Non-syntax	Ucmd	FN	User command	commands to functions operators ]Align
+]FN.Calls	Produce the calling tree of a function in a class/namespace/scriptfile	Non-syntax	Ucmd	FN	User command	commands to functions operators ]Calls
+]FN.Compare	Compare two functions	Non-syntax	Ucmd	FN	User command	commands to operators ]Compare
+]FN.DInput	Define a multi-line dfn, dop or derived function/operator, or execute a multi-line expression	Non-syntax	Ucmd	FN	User command	commands functions operators ]DInput
+]FN.Defs	List single-line dfns, dops, derived functions and trains	Non-syntax	Ucmd	FN	User command	commands to operators ]Defs
+]FN.Latest	List functions modified since a specified date (default is today), most-recently-changed first	Non-syntax	Ucmd	FN	User command	commands operators ]Latestif 1st
+]FN.ReorderLocals	Sort local names in the header of tradfns and tradops	Non-syntax	Ucmd	FN	User command	commands to functions operators ]ReorderLocals sorting reordering ordering
+]FILE.CD	Report (and, optionally, change) the current directory	Non-syntax	Ucmd	FILE	User command	commands files ]CD
+]FILE.Compare	Compare two component files	Non-syntax	Ucmd	FILE	User command	commands to ]Compare
+]FILE.Open	Open a file or directory with the specified application	Non-syntax	Ucmd	FILE	User command	commands files ]Open
+]FILE.Collect⍝⌿Split a single file into (up to 999) smaller files	Non-syntax	Ucmd	FILE	User command	commands ]Split chop cut into pieces
+]FILE.ToQuadTS	Convert a component file timestamp (single float number) to ⎕TS format (vector of 7 numbers)	Non-syntax	Ucmd	FILE	User command	commands files ]ToQuadTS list ymdhmst ymdhmsf
+]LINK.Import	Import a namespace from a directory (create the namespace if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Import load get fetch read
+]LINK.Add	Associate item in linked namespace with new file/directory in corresponding directory	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Add
+]LINK.Break	Break link between namespace and corresponding directory	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Break stop cut
+]LINK.Create	Link a namespace with a directory (create one or both if absent)	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Create establish
+]LINK.Export	Export a namespace to a directory (create the directory if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Export save put write ]snap ]salt.snap
+]LINK.Expunge	Erase item and associated file	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Expunge delete remove
+]LINK.GetItemName	Return name of item associated with file	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]GetItemName
+]LINK.GetFileName	Return name of file associated with item	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]GetFileName
+]LINK.List	List active namespace-directory links	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]List report count
+]LINK.Refresh	Fully synchronise namespace-directory content	Non-syntax	Ucmd	LINK	User command	commands namespace-directory resynchronization resynchronise resynchronize resynchronisation ]Refresh reload
+]OUTPUT.Box	Display output with borders indicating shape, type and structure	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying fancy format linedrawing pseudographics pseudographical boxdrawing ]Box cells elements indicate
+]OUTPUT.Boxing	Display output with borders indicating shape, type and structure	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying fancy format linedrawing pseudographics pseudographical boxdrawing ]Boxing cells elements indicate
+]OUTPUT.Disp	Display specified array with borders indicating sub-array shape and type	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying fancy format linedrawing pseudographics pseudographical boxdrawing ]Disp subarray cells elements indicate
+]OUTPUT.Display	Display specified array with borders indicating array and sub-array shape and type	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying fancy format linedrawing pseudographics pseudographical boxdrawing ]Display subarray cells elements indicate
+]OUTPUT.Find	Precede output with a reference to the line of code that generated it	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Find report stdout
+]OUTPUT.Format	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using specified margins	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Format table lists textlayout specification specifying
+]OUTPUT.HTML	Render HTML or SVG	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]HTML chrome chromium cef htmlrenderer window
+]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Layout table lists textlayout inferring 
+]OUTPUT.Plot	Plot data using any of the SharpPlot graph types	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Plot plotting draw chart Bar Box Bubble Cloud Contour Dial Gantt Histogram Line MinMax Pie Polar Response Scatter Step Table Tower Trace TreeMap Triangle Vector XBar
+]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Rows folding cells elements limit fitting maximum columns characters screen window ellipsis ellipses ... …
+]PERFORMANCE.Profile	Report performance details (optionally through GUI)	Non-syntax	Ucmd	PERFORMANCE	User command	commands consumption computing resources ]Profile drilldown piechart time spent tuning tune
+]PERFORMANCE.RunTime	Report execution time of one or more expressions	Non-syntax	Ucmd	PERFORMANCE	User command	commands performance expressioncomparison histogram ⎕ML time milliseconds speed commands consumption computing resources ]RunTime measure elapsed ms comparison cmpx tuning tune
+]PERFORMANCE.SpaceNeeded	Compute memory needed to run expression(s)	Non-syntax	Ucmd	PERFORMANCE	User command	commands consumption computing resources ]SpaceNeeded ram workspace necessary expressions
+]SALT.Boot	Boot from a file containing instructions or a function	Non-syntax	Ucmd	SALT	User command	commands covers ]Boot startup run initialise initialize
+]SALT.Clean	Remove SALT tags from the ws or specific items so that SALT no longer saves changes to associated files	Non-syntax	Ucmd	SALT	User command	commands covers ]Clean delete drop without
+]SALT.Compare	Compare two versions of a SALTed item	Non-syntax	Ucmd	SALT	User command	commands covers ]Compare diff scm sourcecodemanagement
+]SALT.List	List files (default: .dyalog only) and directories in the specified directory	Non-syntax	Ucmd	SALT	User command	commands covers ]List dir ls
+]SALT.Load	Load item from native text file	Non-syntax	Ucmd	SALT	User command	commands covers ]Load fetch get import read
+]SALT.Refresh	Reload all SALTed items from their associated files	Non-syntax	Ucmd	SALT	User command	commands covers ]Refresh synchronise synchronize
+]SALT.RemoveVersions	Remove one or more versions of a file managed by SALT	Non-syntax	Ucmd	SALT	User command	commands covers ]RemoveVersions delete drop without scm sourcecodemanagement
+]SALT.Save	Save item in a native text file (default: same place if already SALTed)	Non-syntax	Ucmd	SALT	User command	commands covers ]Save export put write
+]SALT.Set	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	commands covers ]Set parametres ]settings ]salt.settings
+]SALT.Settings	Return one or all parameters or set one parameter	Non-syntax	Ucmd	SALT	User command	commands covers ]Settings parametres
+]SALT.Snap	Save all new or modified items to native text files (unscripted namespaces become directories)	Non-syntax	Ucmd	SALT	User command	commands covers ]Snap export save directory folder tree put snapshot
+]TOOLS.ADoc	Generate documentation automatically	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]ADoc html report render
+]TOOLS.Chart	Chart the specified expression using a GUI wizard	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Chart sharpplotting draw chart Bar Box Bubble Cloud Contour Dial Gantt Histogram Line MinMax Pie Polar Response Scatter Step Table Tower Trace TreeMap Triangle Vector XBar
+]TOOLS.Calendar	Display calendar	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Calendar current next previous year month
+]TOOLS.Demo	Provide playback mechanism for live demonstrations	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Demo automatic execution automation
+]TOOLS.Help	Browse or get link to information about any APL concept	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Help documentation online url
+]TOOLS.Version	Report version numbers of APL, OS, SALT, UCMD, .NET and/or workspace	Non-syntax	Ucmd	TOOLS	User command	Development presentation commands ]Version build
+]TRANSFER.In	Import a workspace from a workspace transfer file	Non-syntax	Ucmd	TRANSFER	User command	commands convert conversion workspaces between from to APLs versions implemenations dialects ]In
+]TRANSFER.Out	Export the current workspace to a workspace transfer file	Non-syntax	Ucmd	TRANSFER	User command	commands convert conversion workspaces between from to APLs versions implemenations dialects ]Out
+]UCMD.UMonitor	Gather user command execution data	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]UMonitor performance tuning tune
+]UCMD.UNew	Create one or more new user commands (optionally using a GUI)	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]UNew gui wizard make own custom personalise personalize
+]UCMD.UDebug	Facilitate debugging of user commands	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]UDebug test stop error trace
+]UCMD.ULoad	Load a user command's script into the current namespace	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]ULoad fetch import get script
+]UCMD.UReset	Refresh cache of all user command definitions	Non-syntax	Ucmd	UCMD	User command	commands framework ]UReset reload restart
+]UCMD.USetup	Run Setup from setup.dyalog	Non-syntax	Ucmd	UCMD	User command	commands framework ]USetup autostart autoexec setup.dyalog user's
+]UCMD.UVersion	Report version information of a user command	Non-syntax	Ucmd	UCMD	User command	commands framework ]UVersion
+]WS.Map	Display namespace treeview	Non-syntax	Ucmd	WS	User command	commands workspaces ]Map outline overview workspace ns
+]WS.NamesLike	List names followed by their class matching the pattern	Non-syntax	Ucmd	WS	User command	commands workspaces ]NamesLike items report
+]WS.Nms	List names followed by their class matching the pattern	Non-syntax	Ucmd	WS	User command	commands workspaces ]Nms items report
+]WS.Check	Perform workspace integrity check	Non-syntax	Ucmd	WS	User command	commands workspaces ]Check correct validate sanity validation
+]WS.Compare	Compare two workspaces	Non-syntax	Ucmd	WS	User command	commands ]Compare diff wss
+]WS.Document	List (part of) the workspace content, displaying each item separately	Non-syntax	Ucmd	WS	User command	commands workspaces ]Document xref crossreference automatic
+]WS.FindRefs	Follow references in the workspace until all references have been found	Non-syntax	Ucmd	WS	User command	commands workspaces ]FindRefs report
+]WS.FnsLike	List functions and operators matching a pattern	Non-syntax	Ucmd	WS	User command	commands workspaces ]FnsLike items report
+]WS.Locate	Locate (and, optionally, replace) strings in the workspace	Non-syntax	Ucmd	WS	User command	commands workspaces ]Locate locating location search find regexp regularexpression grep
+]WS.ObsLike	List objects matching the pattern	Non-syntax	Ucmd	WS	User command	commands workspaces ]ObsLike items report
+]WS.Peek	Execute expression in temporary copy of workspace	Non-syntax	Ucmd	WS	User command	commands workspaces ]Peek lookinto
+]WS.SizeOf	Report size of variables in descending order	Non-syntax	Ucmd	WS	User command	commands workspaces ]SizeOf sorting reordering ordering
+]WS.VarsLike	List variables matching the pattern	Non-syntax	Ucmd	WS	User command	commands workspaces ]VarsLike report items
 2 2 2 2⊤⍳16	Unit tesseract	Constant	Expression		Mathematical	
 2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical	
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical	
@@ -2234,3 +2227,4 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
+{0::⎕DMX⊣⎕DMX.(⎕EX⎕NL)2 ⋄ .}Y	New root namespace (Y is ignored)	Dfn	Monadic Function		System	own parent ancestor self-contained
