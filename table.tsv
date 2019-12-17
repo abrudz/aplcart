@@ -1538,6 +1538,7 @@ Is{⍵⍪(⍺-≢⍵)⌿¯1↑⍵}Y	Extending Y with last cell of Y to length Is
 X{⍺⌿⍨(≢⍵)>⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements
 {⍵⌷⍨⊂0~⍨⊢/0,⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	items elements
 kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function		Text	namecolouring parsing Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring tokens types syntax syntactic
+{0::⎕DMX⊣⎕DMX.(⎕EX⎕NL)2 ⋄ .}Y	New root namespace (Y is ignored)	Dfn	Monadic Function		System	own parent ancestor self-contained
 Iv{⍵/⍨~⍺∊⍨⍳⊃⌽⍴⍵}Y	Removing columns Iv from array Y	Dfn	Dyadic Function		Selection	except without butnot remove
 Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next 1 in Av	Dfn	Dyadic Function		Selection	item element
 Mv{⍺+2-/⌈\0,+\⍺-⍵}Nv	Work done for demand Nv with capacity Mv	Dfn	Dyadic Function		Mathematical	orders capacities production supply demands supplies
@@ -1620,6 +1621,7 @@ Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds
 {s⍴1@(1+s[1]⊥⍵-1)⊢0⍴⍨×/s←0 0+⌈/,⍵}Jm	Changing connectivity list Jm to a connectivity matrix	Dfn	Monadic Function		Mathematical	graph connection table vector
 M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍵)×1○○2×?0×⍵}N	Normally distributed numbers with mean M and standard deviation N	Dfn	Function		Mathematical	Gaussian distribution
 I{(12⍴7⍴31 30)[⍺]-(⍺=2)×2-0≠.=400 100 4∘.|⍵}J	Number of days in months I of years J	Dfn	Dyadic Function		Mathematical	calendar lengths gregorian
+{(⍳⍵)((,[⍳2]⊢,⍤1 0~)⍤1)⍣⍵⍉⍪⍬}Js	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list
 Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths
@@ -1887,7 +1889,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]MSWIN.KeyPress	Return message arguments of KeyPress events	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]KeyPress view details display show
 ]NS.Xref	Describe the inter-object cross-references in a class/namespace/scriptfile	Non-syntax	Ucmd	NS	User command	commands to namespaces ]Xref symbols symbolusage
 ]NS.ScriptUpdate	Synchronise namespace/class script to match current content	Non-syntax	Ucmd	NS	User command	commands namespaces ]ScriptUpdate synchronize align textualrepresentation
-]NS.Summary	Summarise (scope, size, syntax) the functions in a namespace/class/scriptfile	Non-syntax	Ucmd	NS	User command	commands to namespaces ]Summary list show display 
+]NS.Summary	Summarise (scope, size, syntax) the functions in a namespace/class/scriptfile	Non-syntax	Ucmd	NS	User command	commands to namespaces ]Summary list show display
 ]CALC.Factors	Determine the prime factors of the argument	Non-syntax	Ucmd	CALC	User command	commands manipulation data ]Factors
 ]CALC.FromHex	Convert a list of hexadecimal representations of integers to a numeric vector	Non-syntax	Ucmd	CALC	User command	commands manipulation data ]FromHex
 ]CALC.PivotTable	Create a pivot table from an appropriate matrix	Non-syntax	Ucmd	CALC	User command	commands to manipulation of data ]PivotTable
@@ -1903,8 +1905,8 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]FN.ReorderLocals	Sort local names in the header of tradfns and tradops	Non-syntax	Ucmd	FN	User command	commands to functions operators ]ReorderLocals sorting reordering ordering
 ]FILE.CD	Report (and, optionally, change) the current directory	Non-syntax	Ucmd	FILE	User command	commands files ]CD
 ]FILE.Compare	Compare two component files	Non-syntax	Ucmd	FILE	User command	commands to ]Compare
+]FILE.Collect	Split a single file into (up to 999) smaller files	Non-syntax	Ucmd	FILE	User command	commands ]Split chop cut into pieces
 ]FILE.Open	Open a file or directory with the specified application	Non-syntax	Ucmd	FILE	User command	commands files ]Open
-]FILE.Collect⍝⌿Split a single file into (up to 999) smaller files	Non-syntax	Ucmd	FILE	User command	commands ]Split chop cut into pieces
 ]FILE.ToQuadTS	Convert a component file timestamp (single float number) to ⎕TS format (vector of 7 numbers)	Non-syntax	Ucmd	FILE	User command	commands files ]ToQuadTS list ymdhmst ymdhmsf
 ]LINK.Import	Import a namespace from a directory (create the namespace if absent); does not create a link	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Import load get fetch read
 ]LINK.Add	Associate item in linked namespace with new file/directory in corresponding directory	Non-syntax	Ucmd	LINK	User command	commands namespace-directory synchronization synchronise synchronize synchronisation scm sourcecodemanagement ]Add
@@ -1923,7 +1925,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]OUTPUT.Find	Precede output with a reference to the line of code that generated it	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Find report stdout
 ]OUTPUT.Format	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using specified margins	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Format table lists textlayout specification specifying
 ]OUTPUT.HTML	Render HTML or SVG	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]HTML chrome chromium cef htmlrenderer window
-]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Layout table lists textlayout inferring 
+]OUTPUT.Layout	Format text into vector of text vectors (or matrix if called from Session) to fit ⎕PW using margins inferred from the text	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Layout table lists textlayout inferring
 ]OUTPUT.Plot	Plot data using any of the SharpPlot graph types	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Plot plotting draw chart Bar Box Bubble Cloud Contour Dial Gantt Histogram Line MinMax Pie Polar Response Scatter Step Table Tower Trace TreeMap Triangle Vector XBar
 ]OUTPUT.Rows	Cut, wrap, fold or extend the display of output lines to fit the Session window	Non-syntax	Ucmd	OUTPUT	User command	commands displayed displaying ]Rows folding cells elements limit fitting maximum columns characters screen window ellipsis ellipses ... …
 ]PERFORMANCE.Profile	Report performance details (optionally through GUI)	Non-syntax	Ucmd	PERFORMANCE	User command	commands consumption computing resources ]Profile drilldown piechart time spent tuning tune
@@ -2227,4 +2229,3 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
-{0::⎕DMX⊣⎕DMX.(⎕EX⎕NL)2 ⋄ .}Y	New root namespace (Y is ignored)	Dfn	Monadic Function		System	own parent ancestor self-contained
