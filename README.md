@@ -25,6 +25,10 @@ Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd
 
 Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
 
+## DuckDuckGo support
+
+DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For example, [searching for `!aplcart 42`](https://duckduckgo.com/?q=!aplcart+42) redirects to APLcart. This also means that if you set your browser's default search engine to DuckDuckGo, you can search APLcart directly from your browser address bar by prefixing your search with `!aplcart`.
+
 ## URL API ("permalinks")
 
 After clicking [<kbd>#</kbd>](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient.
