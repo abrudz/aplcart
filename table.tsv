@@ -1230,7 +1230,7 @@ vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Func
 vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function		Structural	words split text partition list
 m←dfns.m91 n	McCarthy's M91 function	Dfn	Function		Mathematical	
 mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table
-mat←dfns.pmat n	Permutation matrix of ⍳⍵	Dfn	Function		Structural	permutationmatrix table
+mat←dfns.pmat n	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table
 match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	testif comparenamespaces namespacecomparison blank identical equal sameas equivalent
 bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function		Mathematical	Hungarianmethod maximise optimise graph independentzeros zeroes 0s
 bmat←dfns.life bmat	John Conway's “Game of Life”	Dfn	Function		Boolean/Logical	gameoflife cellularautomaton glider diversions Asteroids YouTube GoL
