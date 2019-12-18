@@ -16,14 +16,14 @@ The site may take some seconds to load due to the information being processed by
 
 Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
 
-- Click [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
-- Click the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
-- Click [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
-- Click [<kbd>×</kbd>](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
-- Click [<kbd>#</kbd>](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
-- Click [<kbd>◐</kbd>](https://abrudz.github.io/aplcart?w) in the bottom right corner to cycle theme (access-keys <kbd>B</kbd> for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W</kbd> for **W**hite)
-
-Access-key <kbd>Z</kbd> focuses on the results' listing for keyboard scrolling.
+- Hit [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
+- Hit [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
+- Hit [<kbd>×</kbd>](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
+- Hit [<kbd>#</kbd>](https://abrudz.github.io/aplcart?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
+- Hit [<kbd>◐</kbd>](https://abrudz.github.io/aplcart?w) in the bottom right corner to cycle theme (access-keys <kbd>B</kbd> for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W</kbd> for **W**hite)
+- Hit the result list to enable movement keys for scrolling (access-key <kbd>Z</kbd>)
+- Hit [the input field](https://abrudz.github.io/aplcart) at the top to start a new query (access-key <kbd>E</kbd> — for _**Q**uery_)
 
 ## DuckDuckGo support
 
@@ -31,7 +31,7 @@ DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For 
 
 ## URL API ("permalinks")
 
-After clicking [<kbd>#</kbd>](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient.
+After clicking [<kbd>#</kbd>](https://abrudz.github.io/aplcart?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient. Note that the result for such a URL isn't permanent; it depends on APLcart's content at the time of usage.
 
 ### Manual construction
 
