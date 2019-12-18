@@ -1082,7 +1082,6 @@ Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	
 (⊢≡∘.≤⍨∘⍳∘≢)Bm	Is Bm a upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?
 (⊢≡∘.≥⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?
 (⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove
-(0=⊢∘.|⍨∘⍳⌈/)Iv	Table of divisibility	Tacit	Monadic Function		Mathematical	matrix
 (0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix
 0.01∘(⊣×∘⌊0.5+÷⍨)N	Rounding to nearest hundredth (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring
 0.05∘(⊣×∘⌊0.5+÷⍨)N	Rounding currencies to nearest 5 subunits	Tacit	Monadic Function		Mathematical	cents nickels ¢5¢
