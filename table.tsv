@@ -1015,6 +1015,7 @@ X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1�
 (∨.∧⍨∨⊢)⍣≡Bm	Transitive closure	Tacit	Monadic Function		Boolean/Logical	adjacency list matrix contingency table
 (28+0≠.=400 100 4∘.|⊢)J	Number of days in February of year J (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical	
+(¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC
 M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq
 Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths
 Ms(⊢×÷∘(⌈/))N	Scale N so the maximum elemenent is Ms	Tacit	Dyadic Function		Mathematical	clamp rescale adjust
@@ -1208,6 +1209,7 @@ I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
 {(⊣/⍵)/⍨(⌈/=⊢)⊢/⍵}{⍺(≢⍵)}⌸Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of all unordered combinations of Is out of Js without replacement	Tacit	Dyadic Function		Mathematical	combinatorics selections unordered without replacement list vector table remove
+Is(⊣|∘⊃{0=⍵:1 0⋄(⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Multiplicative inverse of Js modulo Is (fast)	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
 (,(/⍨)(<\∘,(⊢=⍴⍴⌈⌿)∧⊢=∘⍉⌽∘⍴⍴⌊/))Nm	Value of saddle point	Tacit	Monadic Function		Mathematical	
 dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function		System	
@@ -2223,7 +2225,6 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types
-(¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	tacit	Monadic function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host
 {(⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	import load fetch get include from dfns.dws ns
