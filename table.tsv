@@ -1776,6 +1776,7 @@ X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X)
 (Xv{(⍵⍵⌷⍨∘⊂⍺⍺∘⍳)@(∊∘⍺⍺)⊢⍵}Yv)Y	Replacing elements of Y in set Xv with corresponding element from Yv	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update cells items
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
 M f{⊃+/,(∘.⍺⍺⍨0 1)×(1-⍺)⍺∘.×(1-⍵)⍵}N	Probabilistic function corresponding to Boolean function f	Dop	Dyadic Function	Monadic Operator	Mathematical	fuzzy probability chance
+Mv(Ns{⍺⍺{⍺⍺|⍺×⍺⍺|×⍨⍵}⌿⍺*⍤1⊖0⍪2⊥⍣¯1⊢⍵})Jv	Modulo power (fast non-overflowing Ns|Mv*Jv)	Dop	Dyadic function	Monadic Operator	Mathematical	powermodulo powmodulo modular exponentiation modulus bmodpow() pow() expmod() exp() bcpowmod() mpz_powm() @powermod() mod_exp()
 X(f{⍺←⊢ ⋄ r⊣⍺ ⍺⍺{r,∘⊂←⍺ ⍺⍺ ⍵}⍣⍵⍵⊃r←⊂⍵}Y)Z	Iterate: ⍣ but with intermediary results	Dop	Monadic Function,Dyadic Function	Dyadic Operator	Iteration	apply application repeated converge while repeating looping power intermediaries
 M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/probabilistic functions I (0-15)	Dop	Dyadic Function	Monadic Operator	Mathematical	Logical application numbered enumerated operation apply fuzzy probability chance
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	table
@@ -2122,6 +2123,7 @@ f←{⍺}	Prototypical dyadic Dfn	Syntax	Dyadic Function		Definition	direct dyna
 X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose
 ∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick indicate masking blanks start beginning binary base-2 base2
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow gets is copula let redefine naming denotes means inplace update cells elements
+(⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	exact integer arithmetic large arbitrary precision infinite bignum high decimals
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st
@@ -2228,5 +2230,3 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
-(⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	exact integer arithmetic large arbitrary precision infinite bignum high decimals
-Mv(Ns{⍺⍺{⍺⍺|⍺×⍺⍺|×⍨⍵}⌿⍺*⍤1⊖0⍪2⊥⍣¯1⊢⍵)Jv	Modulo power (fast non-overflowing Ns|Mv*Jv)	Dop	Dyadic function	Monadic Operator	Mathematical	powermodulo powmodulo modular exponentiation modulus bmodpow() pow() expmod() exp() bcpowmod() mpz_powm() @powermod() mod_exp()
