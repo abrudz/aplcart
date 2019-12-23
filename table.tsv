@@ -1134,7 +1134,7 @@ X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	T
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix
 0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Circular/Trigonometric	Heron's formula herons
-(0=10|1⊥∘,0 10⊤⊢×∘⌽1 2⍴⍨≢)	Valid credit card?	Tacit	Monadic Function		Mathematical	testif luhns luhn's formula debitcard? creditcard? checksum valid?
+(0=10|1⊥∘,0 10⊤⊢×∘⌽1 2⍴⍨≢)Jv	Valid credit card?	Tacit	Monadic Function		Mathematical	testif luhns luhn's formula debitcard? creditcard? checksum valid?
 M((1-⊣×1-⊢)×1-⊢×1-⊣)N	Probabilistic XNOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic progression)	Tacit	Dyadic Function		Mathematical	range seq() sequence …
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	major cells items list
@@ -2228,3 +2228,5 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
+(⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	exact integer arithmetic large arbitrary precision infinite bignum high decimals
+Mv(Ns{⍺⍺{⍺⍺|⍺×⍺⍺|×⍨⍵}⌿⍺*⍤1⊖0⍪2⊥⍣¯1⊢⍵)Jv	Modulo power (fast non-overflowing Ns|Mv*Jv)	Dop	Dyadic function	Monadic Operator	Mathematical	powermodulo powmodulo modular exponentiation modulus bmodpow() pow() expmod() exp() bcpowmod() mpz_powm() @powermod() mod_exp()
