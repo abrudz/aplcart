@@ -1623,9 +1623,11 @@ Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds
 M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍵)×1○○2×?0×⍵}N	Normally distributed numbers with mean M and standard deviation N	Dfn	Function		Mathematical	Gaussian distribution
 I{(12⍴7⍴31 30)[⍺]-(⍺=2)×2-0≠.=400 100 4∘.|⍵}J	Number of days in months I of years J	Dfn	Dyadic Function		Mathematical	calendar lengths gregorian
 {(⍳⍵)((,[⍳2]⊢,⍤1 0~)⍤1)⍣⍵⍉⍪⍬}Js	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table
+Is{⍺>⍵:0⋄⊃⌽1(+\×)⍣(⍵-⍺)⍨⍳⍺}Js	Count partitions of a set of Js objects into Is non-empty subsets: S(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to partitions Stirling numbers of the second kind 𝔖(n,k) 𝕾(n,k)
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list
 Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths
+Is{⍺>⍵:0⋄⊃⌽⊃(+\×)/1,⍨⌽⍺,/⍳⍵-1}Js	Count permutations of a set of Js objects that have Is cycles: s(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to permute disjoint Stirling numbers of the first kind
 {(⊢+.×¯1*2</,∘0)(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify buckets bin groups intervals cells items
 Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose” of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table
@@ -1635,7 +1637,6 @@ Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) 
 {'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime ISO8601:2006-09
 Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	testif contains
 Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ←→ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	sequence list
-Is{⍺>⍵:0⋄⊃⌽(⍳⍺)(+\×)⍣(⍵-⍺)⊢⍺⍴1}Js	Number of ways to partition a set of Js objects into Is non-empty subsets: S(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics partitions Stirling the second kind count
 {+/∧∘⍉⍨∧/⍵[;a⍴1;]≤2 1 3⍉⍵[;2⍴⍨a←≢⍵;]}N	Number of areas intersecting areas in N (⍴N ←→ (n × 2 × dim))	Dfn	Monadic Function		Mathematical	
 Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create (optionally named Cv) namespace with name-value pairs Yv	Dfn	Ambivalent Monadic Function, Dyadic Function		Data Conversion	object new namevalue dictionary convert array
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering table
@@ -1792,6 +1793,7 @@ Xv(Am{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⊢⍺),¨(⍺⍺\⍤1⊢⍵)})Yv	Mes
 Xm(Am{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⊢⍺),¨(⍺⍺\⍤1⊢⍵)})Ym	Mesh matrices Xm and Ym differently for each row under control of Am (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix multiple
 X f{⍺←{⍵ ⋄ ⍵⍵} ⋄ w←⍵ ⋄ ((⍵⍵)w)←(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵) ⋄ w}g Y	Under: apply main function (f) to selection (g) of arguments	Dop	Function	Dyadic Operator	Function Application	deldiaeresis computationalunder dual while ⍢
 f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Graph of scalar function f at points Nv	Dop	Monadic Function	Monadic Operator	Mathematical	draw plotting
+Is(As{⍺>⍵:0⋄⊃⌽⊃(+\×)/1,⍨1,⍨⌽⊣\⍣⍺⍺⊢⍺,/⍳⍵-1})Js	Stirling number of the As'th kind (0:first, 1:second)	Dop	Dyadic Function	Monadic Operator	Mathematical	combinatorics 𝔖(n,k) 𝕾(n,k) s(n,k)
 Xv(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Yv	Mesh vectors Xv and Yv differently in each column under control of Am (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing multiple
 Xm(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Ym	Mesh matrices Xm and Ym differently for each column under control of Am (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix multiple column-wise
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
