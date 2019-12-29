@@ -835,6 +835,7 @@ Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	D
 Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list
 (○4÷3÷*∘3)N	Volume of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball
 (1=∘?⍴∘2)Jv	Random Boolean array of shape Jv	Tacit	Monadic Function		Boolean/Logical	base2 binary base-2
+(2∘*+¯1∘*)Js	Jacobsthal-Lucas number	Tacit	Monadic Function		Mathematical	sequence Édouard Edouard Ernst J(n) A014551() A14551()
 (1∘○+2∘○)N	Hartley kernel	Tacit	Monadic Function		Mathematical	cas()
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?
 (⊣+¯11○⊢)⌿N	Join real and imaginary major cells by removing leading axis	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine reduce start beginning
@@ -955,6 +956,7 @@ Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Functi
 Is(×⍴1↑⍨∘-⊢)Js	Ending points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	partition vector list trailing
 M(⊣+|⍨∘-⍨)N	Residue after dividing N by M but replacing 0 with M	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadic Function		Mathematical	adjust decrease magnitude preserve signum direction remove
+(3÷⍨2∘*-¯1∘*)Js	Jacobsthal number	Tacit	Monadic Function		Mathematical	sequence Ernst J(n) A001045() A1045()
 (+/∘|2-/⊢)Nv	Length of path given as complex points	Tacit	Monadic Function		Mathematical	linelength perimeter coordinates vertices
 (⌈/-⌊/)∘,N	Range of N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum
