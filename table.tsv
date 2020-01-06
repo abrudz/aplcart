@@ -383,6 +383,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
 X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Function Application	to from dummy onrightargument
 1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next
+¯1∘-J	2's-complement bit-wise NOT	Tacit	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos
 0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods
 100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	convert conversion
 3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice
@@ -1433,6 +1434,7 @@ pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	F
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row table
+{2⊥~2⊥⍣¯1⊢⍵}J	Bit-wise NOT for positive integers	Dfn	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion
 {3=⌊⎕NC⊆,⍵}Dv	Is Dv a function?	Dfn	Monadic Function		System	fn? are functions?
 {4=⌊⎕NC⊆,⍵}Dv	Is Dv an operator?	Dfn	Monadic Function		System	op? are operators?
 {⍵/1 0⍴⍨≢⍵}Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Dfn	Monadic Function		Boolean/Logical	1s 0s zeroes naughts falses falsehoods trues truths
@@ -1554,16 +1556,16 @@ Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional p
 Is{(+/[⍺]÷⍺⊃⍴)⍵}N	Average (mean value) of elements of N along direction Is	Dfn	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which
 {({1≠≢⍵}⌸⍵)⌿∪⍵}Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique items elements
-I{⍉2⊥∨/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise OR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq
-I{⍉2⊥∧/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise AND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq
-I{⍉2⊥</2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse nonimplication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply
-I{⍉2⊥≤/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise implication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialconditional materialconsequence implies implying materialimplication therefore Cpq
-I{⍉2⊥=/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XNOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialbiconditional biimplication eqv nxor bothorneither both-or-neither exclusivenor materialequivalence Kroneckerdelta iff logicalequivalence Epq doubleimplying
-I{⍉2⊥≥/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse implication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate because if converseconditional Bpq reverseimplying cimply
-I{⍉2⊥>/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise nonimplication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate abjunction not butnot Lpq nimply
-I{⍉2⊥≠/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq
-I{⍉2⊥⍱/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq
-I{⍉2⊥⍲/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NAND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq
+I{⍉2⊥∨/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise OR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq
+I{⍉2⊥∧/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise AND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq
+I{⍉2⊥</2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse nonimplication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply
+I{⍉2⊥≤/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise implication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialconditional materialconsequence implies implying materialimplication therefore Cpq
+I{⍉2⊥=/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XNOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialbiconditional biimplication eqv nxor bothorneither both-or-neither exclusivenor materialequivalence Kroneckerdelta iff logicalequivalence Epq doubleimplying
+I{⍉2⊥≥/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse implication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate because if converseconditional Bpq reverseimplying cimply
+I{⍉2⊥>/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise nonimplication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate abjunction not butnot Lpq nimply
+I{⍉2⊥≠/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq
+I{⍉2⊥⍱/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq
+I{⍉2⊥⍲/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NAND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq
 {⌊2÷⍨(⍋⍋NV)+⌽⍋⍋⌽⍵}Y	Cardinals Up (ranking, shareable)	Dfn	Monadic Function		Index Generation	ascendingcardinalnumbers
 Ns{+/⍵××\1,⍺÷⍳¯1+≢⍵}Nv	Value of Taylor series with coefficients Nv at point Ns	Dfn	Dyadic Function		Mathematical	
 Av{≠⍀b⍀2≠⌿0⍪⍵⌿⍨b←⍺∨⍵}Bv	Not leading zeroes (∨\) in each subvector of ⍵ indicated by ⍺	Dfn	Dyadic Function		Boolean/Logical	zeros 0s falses falsehoods start beginning
@@ -1636,6 +1638,16 @@ M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍵)×1○○2×?0×⍵}N	Normally distributed nu
 I{(12⍴7⍴31 30)[⍺]-(⍺=2)×2-0≠.=400 100 4∘.|⍵}J	Number of days in months I of years J	Dfn	Dyadic Function		Mathematical	calendar lengths gregorian
 {(⍳⍵)((,[⍳2]⊢,⍤1 0~)⍤1)⍣⍵⍉⍪⍬}Js	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table
 Is{⍺>⍵:0⋄⊃⌽1(+\×)⍣(⍵-⍺)⍨⍳⍺}Js	Count partitions of a set of Js objects into Is non-empty subsets: S(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to partitions Stirling numbers of the second kind 𝔖(n,k) 𝕾(n,k)
+I{⍉2⊥(-∨/0>b)⍪∨/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise OR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq 2s two's twos
+I{⍉2⊥(-∧/0>b)⍪∧/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise AND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq 2s two's twos
+I{⍉2⊥(-</0>b)⍪</2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise converse nonimplication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply 2s two's twos
+I{⍉2⊥(-≤/0>b)⍪≤/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise implication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialconditional materialconsequence implies implying materialimplication therefore Cpq 2s two's twos
+I{⍉2⊥(-=/0>b)⍪=/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise XNOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialbiconditional biimplication eqv nxor bothorneither both-or-neither exclusivenor materialequivalence Kroneckerdelta iff logicalequivalence Epq doubleimplying 2s two's twos
+I{⍉2⊥(-≥/0>b)⍪≥/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise converse implication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate because if converseconditional Bpq reverseimplying cimply 2s two's twos
+I{⍉2⊥(->/0>b)⍪>/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise nonimplication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate abjunction not butnot Lpq nimply 2s two's twos
+I{⍉2⊥(-≠/0>b)⍪≠/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise XOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq 2s two's twos
+I{⍉2⊥(-⍱/0>b)⍪⍱/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise NOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq 2s two's twos
+I{⍉2⊥(-⍲/0>b)⍪⍲/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise NAND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq 2s two's twos
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list
 Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths
@@ -1738,7 +1750,7 @@ X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Bo
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic
 rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator	Function Application	conditionaloperator listoffunctions co-operator cooperator vector
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	jotunderbar composewith bind ringunderbar functioncomposition ⍛
-f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary
+f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary
 X f{⊃⌽⍸~⍺ ⍺⍺ ⍵}Y	Index of last element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose
 M(A{⍺×⍵*¯1*⍺⍺})N	Conditionally multiply (where A=0) or divide (where A=1)	Dop	Dyadic Function	Monadic Operator	Mathematical	per-element item cell
@@ -1769,7 +1781,7 @@ X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dy
 X f{(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) arguments before applying main function (f)	Dop	Dyadic Function	Dyadic Operator	Function Application	circlediaeresis ⍥
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Is-degree polynomial fit given x-values Mv, y-values Nv	Dop	Dyadic Function		Mathematical	curvefitting model best
 f{(⊂⍵⍳⍨∪⍵)⌷⍺⍺∪⍵}Y	Fast: Apply costly monadic function f on repetitive arguments	Dop	Monadic Function	Monadic Operator	Function Application	performance memoisation memoization quick speed
-I f{⍉2⊥⍺⍺/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise application of f between I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary
+I f{⍉2⊥⍺⍺/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise application of f between positive integers I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary
 Iv(Is{⍵\⍨,⍺∘.>¯1+⍳⍺⍺})Yv	Justifying left fields of Yv (lengths Iv) to length Is	Dop	Dyadic Function	Monadic Operator	Text	leftalign left-align
 X f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, g Y times	Dop	Dyadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
 f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply f to Y, g Y times	Dop	Monadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping
@@ -1781,6 +1793,7 @@ X(f{⍺←⊢ ⋄ ⎕IO←⍵⍵ ⋄ ⍺ ⍺⍺ ⍵}Bs)Y	Run f in origin Bs	Dop	
 Mv f{⍵+.×⍨(⍳≢⍺)⌽⍤0 1⍺⍺⌽⍺}Nv	Generalised convolution	Dop	Dyadic Function	Monadic Operators	Mathematical	generalized convolute
 Mv(Ms{⍺⍺⊥⍺⌹⍵∘.*⌽¯1+⍳≢⍵})Nv	Interpolated value of series Mv=f(Nv) at Ms	Dop	Dyadic Function	Monadic Operator	Mathematical	extrapolate
 X(f{↑[⍵⍵](⊂AX)f⊂[⍵⍵]⍵}ax)Y	Run f on axes of Y	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions
+f{⍉2⊥(-⍺⍺/0>b)⍪⍺⍺/2⊥⍣¯1⊢b←⍵}J	2's-complement bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary 2s two's twos
 Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier matrix with Mv control points	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model interpolation table
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change
 Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in dimension Is (default: last), rank unchanged	Dop	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	reduce insert over rowwise reducing folding axis row-wise horizontally
@@ -1791,6 +1804,7 @@ Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along ne
 Xv(Cv{(⍵,⍨⊂⍺⍺)⍪⍺,⍺∘.(⍎⍺⍺)⍵})Yv	Formatted function table for function Cv with Xv down and Yv across	Dop	Dyadic Function	Monadic Operator	Function Application	matrix
 X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺) ⍺⍺ (⍵⍵ ⍵)}g Y	Over: (g X) f (g Y)	Dop	Dyadic Function	Dyadic Operator	Function Application	ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing
 (Xv{(⍵⍵⌷⍨∘⊂⍺⍺∘⍳)@(∊∘⍺⍺)⊢⍵}Yv)Y	Replacing elements of Y in set Xv with corresponding element from Yv	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update cells items
+I f{⍉2⊥(-⍺⍺/0>b)⍪⍺⍺/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise application of f between I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary 2s two's twos
 Is f{a+.×⍺⍺(⊃⍵)-(a←-/⍵÷-⍺)×0.5-⍳⍺}Nv	Definite integral of scalar function f in range Nv[1]…Nv[2] with Is steps	Dop	Dyadic Function	Monadic Operator	Mathematical	integration numeric approximation ∫ integrate
 M f{⊃+/,(∘.⍺⍺⍨0 1)×(1-⍺)⍺∘.×(1-⍵)⍵}N	Probabilistic function corresponding to Boolean function f	Dop	Dyadic Function	Monadic Operator	Mathematical	fuzzy probability chance
 Xv(Av{(1+⍺⍺)⊃¨((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Yv	Mesh vectors Xv and Yv under control of Av (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing
