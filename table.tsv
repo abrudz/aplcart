@@ -1172,6 +1172,7 @@ X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals wit
 Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector of Bv indicated by Av	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	
+Cv(⎕THIS#.{⍺←⊢ ⋄ ⍺ ⍺⍺.⎕NL ⍵})Nv	Names public to this object, optionally filtered	Tacit	Function		System	namelist classes instance public fields methods properties objects
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?
 (⊃((+⌿÷≢),≢÷1⊥÷)⍣≡)Nv	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
