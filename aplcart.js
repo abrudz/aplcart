@@ -4,7 +4,7 @@ I=_=>{
   var s=new URLSearchParams(location.search)
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
   fetch("table.tsv").then(d=>d.text()).then(d=>{
-    p=d.toLowerCase().split("\r\n").splice(1)
+    p=d.toLowerCase().split(/\r?\n/g).splice(1)
     t.innerHTML=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
     F(Q(q.value=s.get("q")))})}
 Q=_=>{
