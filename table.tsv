@@ -1,5 +1,5 @@
 SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS
-⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ list
+⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ voidlist
 ⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default
 X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright
 X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright
@@ -747,6 +747,7 @@ Mv(+.÷)Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	s
 (819⌶≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	upper-case? large? caps? capitals? capital? majuscules? majuscule?
 (1=2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows
+(∊1⎕NPARTS⊢)Dv	Absolute path name	Tacit	Monadic Function		System	filesystem name file folder directory full normalised normalized simplified simplify
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements
 +∘÷/∘⍳Js	Continued fraction: 1+÷2+÷3+÷4+÷5+÷6+÷…Js	Tacit	Monadic Function		Mathematical	series sequence
 Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Function		Index Generation	
@@ -849,7 +850,7 @@ Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing
 (1,⍨2≠/⊢)Yv	Which elements differ from next ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths
 (~∨/∘,)B	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄
-Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	combine merge list string character joiner
+Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	combine merge list string character joiner joining merging combining
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose
 (?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods
@@ -937,6 +938,7 @@ Xv(∊∧.∧∊⍨)Yv	Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Pro
 Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematical	sum
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
 Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+bx y=ax+b
+(∧/127≥⎕UCS∘∊)D	Is D entirely ASCII-only	Tacit	Monadic Function		Text	plain exclusively
 {⍵.##}⍣≡Y	Reference to toot ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate
 (∧/' '∘=)D	Mask for blank rows	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks
@@ -994,6 +996,7 @@ Iv((+\⊢)∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Ta
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elemetnts at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
+('ASSERTION FALURE'⎕SIGNAL 8/⍨0∘∊)B	Signal an error if any condition is not met	Tacit	Monadic Function		System	throw
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing	
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries
 (7|2⎕NQ#'DateToIDN',⊂)Jv	Day of week (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar
@@ -1003,7 +1006,7 @@ Is(×∘×⍨∘≢↑↓)Bv	Shift Bv forward or backward Is positions	Tacit	Dya
 (⊢⍴⍨2,⍨2÷⍨≢)Yv	Reshaping vector Yv into a two-column matrix	Tacit	Monadic Function		Structural	2-column table list
 Is(⊢↑⍨⊢∘≢,⊣)Ym	Adjust Ym to width Is (positive Is to pad/chop on right, negative Is to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2
-X(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
+Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing strings lists
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum
 (+/⍒∘|⊃¨⊂)Nv	Accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	floats precisionloss imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text
@@ -1127,6 +1130,7 @@ Iv(⊢↑⍨⊢∘⍴+|∘-∘⍴)Y	Increasing the dimensions of Y to multiples 
 Is(⊢↑⍨∘-∘⌊2÷⍨+∘≢)Dv	Centering text line Dv into a field of width Is	Tacit	Dyadic Function		Text	centre align
 Iv(⌷⍤0 99⌷∘⊃⍤0⍨∘⍳∘≢⊣)Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Tacit	Function		Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
+Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 X((1+∘≢⊣)-⍳⍨∘⊖⍨)Y	Last indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof zero locating items elements location
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
@@ -1475,6 +1479,7 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?
 {3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived primtive? primitives? functions? train? trains?
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec()
+Cv{⊃,/⍺∘,¨⍵}Dv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	string list joiner combiner joining combining merge merging
 X{+/∧\⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending
 X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending
 Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered sorted dimension
@@ -1831,7 +1836,7 @@ realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 ]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running
 int.frac	Decimal Point	Syntax	Array		Expression	period rational
 ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period
-⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table
+⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table matrix empty void
 1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam
 1112⌶Js	Parallel Execution Threshold	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam
 127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe ibeam
@@ -1873,6 +1878,18 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹ ibeam
 900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam
 950⌶⍬	Loaded Libraries	I-beam	Constant		System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam
+⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00
+⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J  U+0D 0x0Ah \u0A %0A newline linefeed
+⎕UCS 11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K  U+00 0x00h \u00 %00 tabulation
+⎕UCS 12	Form Feed character (FF)	Constant	Expression		Text	\f ^L  U+00 0x00h \u00 %00
+⎕UCS 127	Delete character (DEL)	Constant	Expression		Text	\e ^[  U+0A 0x0Dh \u0D %0D carriagereturn
+⎕UCS 13	Carriage Return character (CR)	Constant	Expression		Text	\r ^M  U+0D 0x0Dh \u0D %0D carriagereturn
+⎕UCS 13 10	Carriage Return-Line Feed pair (CRLF)	Constant	Expression		Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A %0D%0A enter linebreak windows
+⎕UCS 26	End-Of-File character (EOF)	Constant	Expression		Text	SUB ^Z  U+0A 0x0Dh \u0D %0D carriagereturn
+⎕UCS 27	Escape character (ESC)	Constant	Expression		Text	\e ^[  U+0A 0x0Dh \u0D %0D carriagereturn
+⎕UCS 7	Bell character (BEL)	Constant	Expression		Text	\a ^G U+07 0x07h \u07 %07 beep
+⎕UCS 8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 %08
+⎕UCS 9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^I  U+00 0x00h \u00 %00 tabulation
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣
 :Implements Constructor	Function is a class constructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
@@ -2015,12 +2032,12 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base
 ⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment
-⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending
+⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending echo print
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize
-charvec←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput
-⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove
+x←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput
+⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove print
+charvec←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
 name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove
-x←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput
 :Implements Trigger *	Function is a global trigger function: called when any any global variable in the same namespace is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 :Implements Constructor :Base expr	Function is a class constructor which calls the base constructor with the result of 'expr' as argument	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
 0::any error	Covers all errors (errors 1–999)				Error Message	catch errno try errorhandling trapping exception
@@ -2151,6 +2168,7 @@ As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Convers
 (X+Y)×Z	Precedence: Z×X+Y	Syntax			Expression	roundparentheses grouping roundparens
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	testif
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	testif
+⊃1⎕NPARTS''	Current directory	Expression			System	folder cd pwd _CWDS _CWPS print working name filesystem
 {ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table
 :Implements Method {InterfaceName.MethodName}	Function implements method 'MethodName' whose syntax is specified by interface 'InterfaceName'	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation
