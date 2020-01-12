@@ -2129,7 +2129,7 @@ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definit
 X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose
 Xv(8⌶)Yv	Inverted Table Index-of (Xv⍳Yv)	I-beam	Dyadic Function		Index Generation	iota indicesin indexof position columndatabase matrix ibeam
 X(1159⌶)Y	Update Function Time and User Stamp	I-beam	Function		System	⎕at properties operator ibeam
-Mv(219⌶)Jv	Compress/Decompress Vector of Short Integers	I-beam	Function		Data Conversion	lz4 zlib gzip deflate uncompress inflate list ibeam
+Mv(219⌶)Jv	Compress/Decompress Vector of Short Integers	I-beam	Function		Data Conversion	lz4 zlib gzip deflate deflation uncompression inflate inflation list ibeam
 Is(1500⌶)Y	Hash Array	I-beam	Function		Array Properties	performance hashing ibeam
 Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance ibeam
 As(220⌶)Y	Serialise/Deserialise Array	I-beam	Function		Data Conversion	ibeam
@@ -2286,3 +2286,4 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
+Mv(⊢×+.×)∘(⊢÷2*∘÷⍨+.×⍨)Nv	Component of Mv in direction of Nv	Tacit	Dyadic Function		Mathematical	euclidean vectors parts
