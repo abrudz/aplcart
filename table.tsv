@@ -393,6 +393,7 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals
 1000∘|IA	Last part of packed numeric code ABBB	Tacit	Monadic Function		Data Conversion	unpack
 2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	testif
+256∘|J	Convert from signed short integers to unsigned short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 0∘<N	Strictly positive?	Tacit	Monadic Function		Mathematical	testif
 0∘≤N	Non-negative?	Tacit	Monadic Function		Mathematical	testif nonnegative?
 0∘=N	Zero?	Tacit	Monadic Function		Mathematical	testif
@@ -516,6 +517,7 @@ Am∨.∧Bm	Extending a transitive binary relation	Tacit	Dyadic Function		Boolea
 Mv⌈.×Nv	Maximum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	greatestif largest biggest
 Mm⌊.+Nm	Extending a distance table to next leg	Tacit	Dyadic Function		Mathematical	extension matrix
 Mv⌊.×Nv	Minimum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	smallest least
+Mv+.÷Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 Mv-.÷Nv	Sum of alternating reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic Function		Comparison	cells items lists
 X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	list
@@ -733,7 +735,6 @@ X(∧\≠)Y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Co
 (⍉0/⍪)Yv	Using sample row Yv to form an initially empty matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize table
 Xv(⊣/⍷)Ym	Boolean rows of Ym starting with X	Tacit	Dyadic Function		Sets	findfirstin search locatefirst binary base-2 base2
 Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Function		Text	find locate positionof locating location 1st
-Mv(+.÷)Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 (*∘0.5)N	Square Root	Tacit	Monadic Function		Mathematical	squareroot sqrt ²√ ^0.5 ^.5
 (÷1⊥÷)Nv	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Monadic Function		Mathematical	electronics electrics circuits Ω series inparallel
 (⊥⍨⌽)Bv	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at start beginning
@@ -1195,6 +1196,7 @@ X({(w/⍺)@{w}⊃⌽w f←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a number
 ''''∘{⍺,⍺,⍨⍵/⍨1+⍺=⍵}Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	binary base-2 base2
 Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Tacit	Dyadic Function		Mathematical	
+Mv(⊢×+.×)∘(⊢÷2*∘÷⍨+.×⍨)Nv	Component of Mv in direction of Nv	Tacit	Dyadic Function		Mathematical	euclidean vectors parts
 (⊃((+⌿÷≢),×⌿*∘÷≢)⍣≡)Nv	Arithmetic-geometric mean	Tacit	Monadic Function		Mathematical	average AGM() GAM() AG() GA() geometric-arithmetic common
 X(⊢⌷⍨∘⊂∘⍋(⊂⍤¯1⊢)∊(⊂⍤¯1⊣))Y	Move items X to end of Y	Tacit	Dyadic Function		Sets	major cells elements trailing ending
 (⊃((×⌿*∘÷≢),≢÷1⊥÷)⍣≡)Nv	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
@@ -1310,6 +1312,7 @@ tree←graph dfns.span fm	Breadth-first span tree for graph ⍺ from vertex ⍵	
 tree←graph dfns.dfspan from	Depth-first spanning tree: graph ⍺ from vertex ⍵	Dfn	Function		Structural	depth-firstsearch spanningtree abstraction depthfirstsearch dfs
 tree←wgraph dfns.wspan from	Spanning tree for weighted graph ⍺ from ⍵	Dfn	Function		Structural	weightedgraph spanningtree
 tree←wug dfns.wmst root	Minimum Spanning Tree for weighted graph ⍺	Dfn	Function		Structural	weightedgraph spanningtree mininumspanningtree
+u←bits dfns.uns i	Unsigned from signed integers	Dfn	Function		Data Conversion	typeconversion pervasivefunction nativefile cast
 y←dfns.Cholesky x	Decomposition of Hermitian positive-definite matrix	Dfn	Function		Mathematical	Choleskydecomposition table
 yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function		Structural	testif subvector? subset? sub-sequence? subsequence? substring sub-string sub-vector sub-list sublist
 yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function		Mathematical	date CouncilofNicaea canonpaschalis pervasivefunction histogram
@@ -2286,4 +2289,3 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
-Mv(⊢×+.×)∘(⊢÷2*∘÷⍨+.×⍨)Nv	Component of Mv in direction of Nv	Tacit	Dyadic Function		Mathematical	euclidean vectors parts
