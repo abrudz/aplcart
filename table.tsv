@@ -1271,7 +1271,8 @@ dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function		Structural	gra
 digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function		Mathematical	k-adicnumbers shortlex bijectivenumeration unary kadicnumbers
 digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function		Mathematical	FastFourierTransform
 enc←dfns.rep name	Encapsulate function/operator	Dfn	Function		Data Conversion	functionarray encapsulatefunction
-entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function		Text	informationtheory
+entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function		Text	informationtheory string
+(-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Function		Mathematical	informationtheory text message string
 i←bits dfns.int u	Signed from unsigned integers	Dfn	Function		Data Conversion	typeconversion pervasivefunction nativefile cast
 indx←brks dfns.range nums	Numeric range classification	Dfn	Function		Comparison	
 indx←notespace dfns.index class	⍵-index of notes in space ⍺	Dfn	Function		Text	blank
@@ -1287,6 +1288,7 @@ nvec←dfns.factors numb	Prime factors of ⍵	Dfn	Function		Mathematical	primenu
 nvec←dfns.fibonacci num	Tail-recursive Fibonacci	Dfn	Function		Mathematical	tailrecursion accumulator fibonaccinumber goldenmean continuedfraction
 nvec←dfns.sieve nvec	Sieve of Eratosthenes	Dfn	Function		Mathematical	primenumber
 nvec←dfns.ripple nvec	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing grade carddeck diversions riffleshuffle
+{⍵⌷⍨⊂⍋⍒2|⍳≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing grade carddeck diversions riffleshuffle
 nvec←dfns.roots triple	Real roots of quadratic	Dfn	Function		Mathematical	realrootsofquadratic complexnumbers
 nvec←p dfns.nicediv q	⍵ similar integers with sum ⍺	Dfn	Function		Mathematical	histogram
 num←dfns.factorial num	Tail recursive factorial	Dfn	Function		Mathematical	tailrecursion accumulator
@@ -1298,7 +1300,8 @@ p←s dfns.birthday n	Probability of same birthday	Dfn	Function		Mathematical	pa
 paths←item dfns.in array	Locations of item ⍺ in array ⍵	Dfn	Function		Index Generation	find pick cell element locate
 pvec←dfns.stpaths tree	Spanning tree paths	Dfn	Function		Structural	graph spanningtree
 precedes←this dfns.le that	Total array ordering (TAO) comparison	Dfn	Function		Mathematical	quicksort Totalarrayordering order(ofarrays) comparearrays lexically lexicographically sorting reordering
-prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function		Mathematical	Bayesformula
+prob←cond dfns.bayes prior	Bayes' formula	Dfn	Function		Mathematical	Bayesformula statistical statistics probability probabilities
+Mv(×÷+.×)Nv	Bayes' formula	Tacit	Function		Mathematical	Bayesformula statistical statistics probability probabilities
 rslt←code dfns.type array	Widen ⍵ to type ⍺	Dfn	Function		Data Conversion	dataconversion ⎕DR
 rslt←indx dfns.from array	Select (1↓⍴⍵)-cells from array ⍵	Dfn	Function		Selection	arrayindexing
 rslt←indx dfns.select avec	⍺-selection of items from vector ⍵	Dfn	Function		Selection	indexedassignment destructiveassignment purefunction list major cells elements
@@ -1369,7 +1372,8 @@ C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	D
 alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment
 stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function		Text	lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors interpreter programming joylang
 sum←{digs←6} dfns.chksum array	Simple ⍺-digit checksum	Dfn	Function		Mathematical	hashing
-sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) columns	Dfn	Function		Mathematical	addition columnsum infiniteprecision
+sumvec←{base←10} dfns.colsum cols	Sum of (default decimal) digit columns with carry	Dfn	Function		Mathematical	addition columnsum infiniteprecision ripple
+Is(⊣{⍬(⊢↓⍨0=⍴)+⌿1 0⌽0,0 ⍺⊤⍵}⍣≡1⊥⊢)Jm	Sum of digit columns with carry	Dfn	Function		Mathematical	addition columnsum infiniteprecision ripple
 cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function		Text	tabexpansion horizontaltabs adjacent1s flipflopRS
 cvecs←{nv←0} dfns.tokens cvec	Lex of APL src line	Dfn	Function		Text	parsing lexicalscan parse dyalog
 cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function		Text	border box-drawingcharacters displayofarrays boxing boxdrawingcharacters boxed enclosed
@@ -1695,22 +1699,30 @@ cvec←larg (fn dfns.nats) rarg	Natural number arithmetic	Dop		Monadic Operator	
 indx←(fun dfns.bsearch) range	Binary search	Dop		Monadic Operator	Lookup	binarysearch boolean base-2 base2
 rslt←b (f dfns.kcell) p	Relationship between point and k-cell	Dop		Monadic Operator	Mathematical	boundary hypercube
 rslt←count (fun dfns.pow) argt	Explicit function power	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber
+Is f{⍺⍺⍣⍺⊢⍵}Y	Explicit function power: apply f on Is repeated Is times	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber
 rslt←ival (func dfns.foldl) vals	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding
-rslt←ival (accm dfns.ravt subs) tree	Trav: parent-first, ravt: parent last	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens
-rslt←ival (accm dfns.trav subs) tree	Generic depth-first tree traversal	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens dsf
+f{↑⍺⍺⍨/(⌽⍵),⊂⍺}Y	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding
+rslt←ival (accm dfns.ravt subs) tree	Generic depth-first parent-last tree	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens child-first
+rslt←ival (accm dfns.trav subs) tree	Generic depth-first parent-first tree	Dop		Dyadic Operator	Function Application	currying typenotation fibonaccinumber N-Queens NQueens dsf child-last
 rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator	Structural	accumulator lambdaexpression minworkspace parsing lists cons vectors
 rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator	Boolean/Logical	conditionaloperator booleanfunctions truthtables
 rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors segmented sub-lists subvectors sublists
+Iv f{⊃,/⍺⍺/¨⍺⊂⍵}Y	Segmented reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors partitioned sub-lists subvectors sublists
 rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator	Mathematical	determinant innerproduct SAX
 rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting
+f{⍺⍺ ⍵:⍵⍵ ⍵ ⋄ 0}g Y	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting
 rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting
-rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator	Text	variablewise blank
+f{⍺⍺ ⍵:1 ⋄ ⍵⍵ ⍵}g Y	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting
+rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator	Function Application	variablewise blank namespace
+f{⍵.(⍺⍺∘⍎¨⎕NL ¯2)}Y	Apply f on each variable in each namespace in Y	Dop		Monadic Operator	Function Application	variablewise blank namespace
 rslt←(fun dfns.file) fname	Apply function to native file tie	Dop		Monadic Operator	Native Files	nativefile railwaydiagram
 rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operator	Function Application	functionpower palindrome arithmetic-geometricmean goldenmean arithmeticgeometricmean ⍣≡
 rslt←(func dfns.acc) argt	Accumulating reduction	Dop		Monadic Operator	Function Application	
+f{⊃⍺⍺{⍵,⍨⊂⍺ ⍺⍺⊃⍬⍴⍵}/1↓⍬(⊢,∘⊂⍴)¯1⌽⍵}Y	Accumulating reduction	Dop		Monadic Operator	Function Application	
 rslt←(func dfns.until cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
 rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator
 rslt←(dewy dfns.do) rarg	Apply no-result function “en passant”	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
+f{⍎'⍺⍺ ⍵ ⋄ ⍵' ⋄ ⍺⍺}Y	Apply no-result function “en passant”	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator	Function Application	conditionaloperator Helsingør hyperator co-operator cooperator
 rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
 rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator
