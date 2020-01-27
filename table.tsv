@@ -941,7 +941,7 @@ Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematica
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical	
 Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+bx y=ax+b
 (∧/127≥⎕UCS∘∊)D	Is D entirely ASCII-only	Tacit	Monadic Function		Text	plain exclusively
-{⍵.##}⍣≡Y	Reference to toot ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers
+{⍵.##}⍣≡Y	Reference to root ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate
 (∧/' '∘=)D	Mask for blank rows	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction
@@ -965,7 +965,7 @@ M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadi
 (+/∘|2-/⊢)Nv	Length of path given as complex points	Tacit	Monadic Function		Mathematical	linelength perimeter coordinates vertices
 (⌈/-⌊/)∘,N	Range of N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum
-(⊢⌷⍨∘⊂?⍨)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements
+(⊢⌷⍨∘⊂?⍨∘≢)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements
 (⊢⌽⍨¯1+⍳∘≢)Ym	Align the diagonals of a matrix into columns (with wrap-around)	Tacit	Dyadic Function		Structural	table
 X(⍳|⍨1+∘≢⊣)Y	First indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof 1st zero locating items elements location missing unfound
 (⌽⌽,0,-)∘⍳Js	Integers from -Js to Js	Tacit	Monadic Function		Mathematical	whole numbers natural symmetric negative positive
@@ -1012,9 +1012,9 @@ Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Taci
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum
 (+/⍒∘|⊃¨⊂)Nv	Accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	floats precisionloss imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text
-(+\∊⍨∘⍳+/)Jv	Changing lengths IV of subvectors to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing
+(+\∊⍨∘⍳+/)Jv	Changing lengths Jv of subvectors to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing
 Xm(⍉⍴⍨∘⌽∘⍴⍨)Yv	Matrix with shape of Xm and Xv as its columns	Tacit	Monadic Function		Boolean/Logical	fill mold mould table
-X(⊃∘⍸⍷)¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Function		Index Generation	elements cells lookup indexof each
+X⊃∘⍸∘⍷¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Function		Index Generation	elements cells lookup indexof each
 (2*∘÷⍨+.×⍨)Nv	Length of vector Nv	Tacit	Monadic Function		Mathematical	absolute value magnitude distance from origin 0 zero
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero cells items
 M(+/∘×∘.-⍨)N	Test relations (¯2…2) of elements of N to ranges M (2=¯1↑⍴M)	Tacit	Dyadic Function		Comparison	cells items
@@ -1097,7 +1097,7 @@ Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	
 (+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?
 (+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?
 Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+b^x y=a^x+b curve
-(+/∘,÷(×/⍴))N	Arithmetic mean value of all elements, also for an empty array	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells items
+(+/∘,÷(×/⍴))N	Arithmetic mean value of all elements	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells items
 ((¯1↓⊢,⍨1↑0∘⍴)⍤1)Y	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items
 (⊢∧(∧\∨\=⊢))B	First group of ones	Tacit	Monadic Function		Boolean/Logical	sequence run trues truths 1st
 ((×⌿2 2⍴1,⍴)⍴2 1 3∘⍉)Y	Juxtapositioning planes of rank 3 array Y	Tacit	Dyadic Function		Structural	merge layers
@@ -1112,12 +1112,12 @@ Ms{⍵⌷⍨⊂⍋⍋⍺×⍋⍵}A	Sort A according to Ms (1: ascending, 0: unor
 ' '@{2=⌈\' 0'⍳⍵}D	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 Iv(⊢↑⍨⊢∘≢⍨↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items
 Is(⊢∘-∘≢↑↓⍨∘-⍨)Yv	Shifting vector XV right with IS (padding on left)	Tacit	Dyadic Function		Selection	rightshift list
-Is(⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise
+Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise
 (0~⍨¯1-2-/∘⍸1,1,⍨~)Bv	Lengths of groups of ones in Bv	Tacit	Monadic Function		Boolean/Logical	runs 1s trues truths
 X(⊢⌷⍨∘⊂∘⍋⌷⍨∘⊂)Jv	Sorting indices Jv according to data X	Tacit	Dyadic Function		Index Generation	permute
-Is(⍉⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
+Is(⍉⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
 (⍳∘≢+.×⍨1 ¯1∘.=⍉)Jm	Changing connection matrix Jm (¯1 to 1) to a node matrix	Tacit	Monadic Function		Mathematical	graph connectivity table
-(2*∘÷⍨1⊥×⍨÷⊢∘≢)N	Quadratic mean	Tacit	Monadic Function		Mathematical	Root square rms()
+(2*∘÷⍨1⊥×⍨÷≢)N	Quadratic mean	Tacit	Monadic Function		Mathematical	Root square rms()
 (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	Cartesian metric Pythagorean d() matrix
 M((*0-⊣)×*÷⊢∘!)N	Poisson distribution of states N with average M	Tacit	Dyadic Function		Mathematical	
 X(1+(≢⊣)-⍳⍨∘⌽⍨)Y	Last index of (⍳): Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof finding locating locate positionof items elements location
@@ -1134,13 +1134,13 @@ Iv(⌷⍤0 99⌷∘⊃⍤0⍨∘⍳∘≢⊣)Y	Merging Y[1] Y[2] Y[3], … under
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise
 Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
-X((1+∘≢⊣)-⍳⍨∘⊖⍨)Y	Last indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof zero locating items elements location
+X(⍳⍨∘⊖⍨-⍨1+∘≢⊣)Y	Last indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof zero locating items elements location
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	major cells items list
 Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model correct y=ab^x
 ({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
-X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Tacit	Dyadic Function		Mathematical	look-up matrix
+X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Dop	Dyadic Function	Monadic Operator	Mathematical	look-up matrix
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix
 0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Circular/Trigonometric	Heron's formula herons
@@ -1155,8 +1155,8 @@ M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematic
 Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical	
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
-Ms((9 11○⊣)+.×(9 11∘.○⊢))N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
-X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
+Ms((9 11○⊣)+.×9 11∘.○⊢)N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze
+X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Dfn	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
 M(⊢∘××⊣×∘⌈¯0.5+∘|÷⍨)N	Rounding N to nearest M (favouring towards 0)	Tacit	Dyadic Function		Mathematical	precision favoring
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away from 0)	Tacit	Dyadic Function		Mathematical	precision favoring
 M(+⌿⊣∘.*⍨∘∪⊢∨⊢∘⍳)Js	Sum of M'th powers of positive divisors of Js	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
