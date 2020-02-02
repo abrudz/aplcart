@@ -1079,7 +1079,7 @@ Is(,(⊣↑1⍴⍨⊢)⍤0)Jv	Expansion mask (left argument for ⍀) for fields 
 ((1↓⊢,1↑0∘⍴)⍤1)Y	Rightmost neighboring elements (padding at edge)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items
 X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1st binary base-2 base2
 ((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function		Sets	nub distinctitems uniqueelemenets matrix items elements
-('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO 8601:2005 LST
+('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 ISO-8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO-8601:2005 LST
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring
@@ -1673,7 +1673,7 @@ Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose�
 Mv{⍵⍀⍨~(⍳(≢⍺)+≢⍵)∊(⌊⍺)+⍳≢⍺}Y	Adding an empty cell into Y at fractional positions Mv	Dfn	Monadic Function		Structural	expand insert item element
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
-{'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime ISO8601:2006-09
+{'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime ISO-8601:2006-09 ISO8601:2006-09
 Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	testif contains
 Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ←→ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	sequence list
 {+/∧∘⍉⍨∧/⍵[;a⍴1;]≤2 1 3⍉⍵[;2⍴⍨a←≢⍵;]}N	Number of areas intersecting areas in N (⍴N ←→ (n × 2 × dim))	Dfn	Monadic Function		Mathematical	
