@@ -989,9 +989,8 @@ Mv(+.×⍨÷1⊥⊣)Nm	Weighted average of rows of Nm with weights Mv	Tacit	Dyad
 Iv(,⌿1+⊢⊤¯1+⊣)Jv	Indices of Iv'th elements in ravel order of an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex cells items axes
 Iv Jv⍕⍨∘(∊,⍤0/)N	Formatting N with Jv decimals in fields of width Iv	Tacit	Dyadic Function		Text	widths
 (+/2 1∘⊃∘⎕VFI⍤1)Dm	Sum of numbers in character matrix Dm	Tacit	Monadic Function		Data Conversion	table
-M((1-⊣)×1-⊢)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 (⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	give
-M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq
+M((1-⊣)×1-⊢)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 (⍋(≢,⊂)¨)Yv	Ascending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical
 (⍒(≢,⊂)¨)Yv	Descending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
 Iv((+\⊢)∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating
@@ -1026,6 +1025,7 @@ X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1�
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical	
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC
 (⊢⎕NS ⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text
+M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq
 M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq
 Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths
 Ms(⊢×÷∘(⌈/))N	Scale N so the maximum elemenent is Ms	Tacit	Dyadic Function		Mathematical	clamp rescale adjust
