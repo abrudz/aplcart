@@ -746,7 +746,7 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 (⍕≡⊢)Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif
 (1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise
 (819⌶≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	upper-case? large? caps? capitals? capital? majuscules? majuscule?
-(1=2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif
+(1=2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif num? nums? datatype data-type
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows
 (∊1⎕NPARTS⊢)Dv	Absolute path name	Tacit	Monadic Function		System	filesystem name file folder directory full normalised normalized simplified simplify
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements
@@ -820,7 +820,7 @@ Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning
 Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function		Text	lettercase caseless caseinsensitive normalize
-(0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif
+(0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type
 1∘(⎕A⍳819⌶)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals
 Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ←→ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without
