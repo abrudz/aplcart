@@ -1473,7 +1473,6 @@ cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function
 Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick list major cells elements 1st
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering
 {(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering
-{(⍎⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	import load fetch get include from .dws ns
 Cv{⍎⍺,'←⍵'}Y	Assign values Y to names Cv	Dfn	Dyadic Function		System	assignment name-value names-values dynamic variable
 caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function		Text	diversions capitalisation 1st
 {files}←{type←''} dfns.mp3 dirs	Create playlist(s) for music directories	Dfn	Function		Native Files	MP3(mediaplayer) mediaplayer(MP3) diversions
@@ -1494,10 +1493,12 @@ Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered Nondecreasing? sorted dimension
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
+{⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	put store dyalog transcript text
 X{2=⎕NC⍵:⍎⍵⋄⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item
 {⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif
+{(⍎⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	import load fetch get include from .dws ns
 {(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get
 {fns}←{space←⎕THIS} dfns.fnrepl (from to)	Function string replacement	Dfn	Function		Text	stringreplacement
 {9.4 9.6∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv a class?	Dfn	Monadic Function		System	are classes?
