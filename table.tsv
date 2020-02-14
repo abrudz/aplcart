@@ -159,13 +159,14 @@ name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copu
 →	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop
 →0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return
 →Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow goto switch 1st
-⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ
-⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ alfa
+⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ rarg
+⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ alfa larg
 Z f⍨X,Y	Avoiding parentheses by swapping arguments in (X,Y) f Z	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis frown
 X∘.g Y	Outer Product: g between each item of X and every item of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element
 expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		Identity	lev lefttack where
 ∇∇	Dop Self	Primitive	Ambivalent Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse triangledown downtriangle carrot
 ↑Xv Yv …	N-row matrix from N vectors	Primitive	Monadic Function		Structural	rows table lists
+⍺←Y	Default left argument in Dfn/Dop	Primitive	Dyadic Function		Expression	leftarg larg fallback fall-back preset value define
 ⍵⍵	Dop Right Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	omega rightop
 ⍺⍺	Dop Left Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	alpha leftop
 ⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension
