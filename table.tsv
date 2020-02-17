@@ -763,7 +763,7 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 M(⊢×1-⊣)N	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance ⇍ Mpq
 M(⊣×1-⊢)N	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq
 A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation
-M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine
+M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine ⌾
 M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation
 (1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1
