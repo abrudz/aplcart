@@ -291,7 +291,7 @@ r←{selector} ⎕AT names	Syntactical attributes of named functions or operator
 r←{encoding} ⎕UCS vec	Map characters to/from Unicode code points	System	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping convert UniversalCodedCharacterSet UniversalCharacterSet
 r←{xml_options} ⎕XML data	XML string to/from APL array	System	Function	Data Conversion	System Function	extensiblemarkuplanguage xhtmltag xmltag
 {0}←⎕SIGNAL 0	Reset error-related system constants	System	Function	Error Message	System	clear
-{boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove item )erase cell element drop without
+{boolvec}←⎕EX names	Delete named objects from the active workspace (1 if each name is now free for use, else 0)	System	Function	System	System Function	expunge erase remove items )erase drop functions variables operators namespaces GUI classes interfaces instances names
 {counts}←destination ⎕NMOVE sources	Move files/directories from 'sources' to 'destination'	System	Function	Native Files	System Function	moving renaming rename
 {counts}←destination ⎕NCOPY sources	Copy files/directories from 'sources' to 'destination'	System	Function	Native Files	System Function	copying
 {num}←⎕DL num	Delay and return seconds actually delayed	System	Function	System	System Function	await sleep idle
@@ -371,7 +371,7 @@ t←{properties}1(⎕NINFO⍠1)tns/files	Return values of properties 1 for tns/f
 {r}←{action} ⎕NQ object event {params}	Enqueue an event for processing	System	Function	Native Files	System	push request
 {tn}←{bytes} ⎕FRESIZE tn {pn}	Compact exclusively-tied file tn and set its max size	System	Function	Component Files	System Function	dcf maximum limit clamp
 {counts}←{flags}(⎕NDELETE⍠1)files	Delete files (with ? and * globbing, if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop wildcards drop without
-{0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include item object otherworkspace )copy cell element
+{0⍴⊂''}←{names} ⎕CY file	Copy (optionally selected) names from saved ws	System	Function	File Access	System Function	import load use transfer import load include items otherworkspace )copy functions variables operators namespaces GUI objects classes interfaces instances
 {r}←{msg} ⎕SIGNAL errno/{nvpairs}…	Signal an error; nvpairs set ⎕DMX props	System	Function	Error Message	System	throw emulate
 name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (from offset)	System	Function	File Access	System Function	memorymap array mmap() input output load save get put fetch import export native
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change lock status of file region 0:unlock, 1:read, 2:write (optional timeout in seconds)	System	Function	Native Files	System Function	restrict access seal passcode
@@ -1938,7 +1938,7 @@ bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell dos operatingsystem commandprocessor
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear drop without
 )CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off ⎕save
-)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge item cell element drop without
+)ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	remove ⎕ex expunge items drop without names functions variables operators namespaces GUI objects classes interfaces instances
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading vector
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue
 )SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset cutback stack
@@ -2162,7 +2162,7 @@ As(85⌶)Dv	Execute (⍎) Silent Expression	I-beam	Dyadic Function		Data Convers
 )NS {name}	Create new global namespace called name	Non-syntax			System Command	⎕NS
 )INTERFACES {nm}	List interfaces in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.5 ¯9.7 vector start leading
 )CLASSES {nm}	List classes in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯9.4 vector start leading
-)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include item object otherworkspace )pcopy ⎕cy cell element
+)COPY ws {nms}	Copy (selected) contents of workspace ws to active workspace	Non-syntax		File Access	System Command	import use load transfer include items otherworkspace )pcopy ⎕cy names functions variables operators namespaces GUI objects classes interfaces instances
 )CS {space}	Change current namespace	Non-syntax			System Command	into out of # ⎕se ⎕cs
 )DROP {ws}	Erase file containing workspace ws	Non-syntax			System Command	delete remove expunge without
 )ED {etype} nms	Open Editor for named objects of type etype	Non-syntax			System Command	modify code source definition define value ⎕ed
