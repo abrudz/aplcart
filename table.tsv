@@ -1185,7 +1185,7 @@ Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyad
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix
 (⊢⊂⍨1,1↓≢↑2</'aeiouyäö'∊⍨819⌶)Dv	Syllabisation of a Finnish word Dv	Tacit	Monadic Function		Text	Syllabization syllables
 Av(∧{⍵∧s∊⍺/s←+\2</0,⍵}⊢)Bv	Groups of ones in Bv pointed to by at least one 1 in Av	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
-(1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵⋄⍵})Y	Convert any rank APL array to JSON	Tacit	Monadic Function		Data Conversion	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
+(1⎕JSON{1<≢⍴⍵:∇¨⊂⍤¯1⊢⍵ ⋄ ⍵})Y	Convert any rank APL array to JSON	Tacit	Monadic Function		Data Conversion	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
 ' '∘(1↓,(/⍨)1(⊢∨⌽)0,≠)Dv	Remove leading, trailing, and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 (⊢⊆⍨∘(~∧≠\)=∘'''')Dv	Extract text (without quotes) in expression	Tacit	Monadic Function		Text	strings remove
 ('/'@(' '∘=)∘⍕100|1⌽3∘↑)Jv	Date (⎕TS format) to M/D/YY	Tacit	Monadic Function		Text	ANSI INCITS 30-1997 (R2008) NIST FIPS PUB 4-2 American USA
@@ -1222,7 +1222,7 @@ I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
 {(⊣/⍵)/⍨(⌈/=⊢)⊢/⍵}{⍺(≢⍵)}⌸Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of all unordered combinations of Is out of Js without replacement	Tacit	Dyadic Function		Mathematical	combinatorics selections unordered without replacement list vector table remove
-Is(⊣|∘⊃{0=⍵:1 0⋄(⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Multiplicative inverse of Js modulo Is (fast)	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
+Is(⊣|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Multiplicative inverse of Js modulo Is (fast)	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
 (,(/⍨)(<\∘,(⊢=⍴⍴⌈⌿)∧⊢=∘⍉⌽∘⍴⍴⌊/))Nm	Value of saddle point	Tacit	Monadic Function		Mathematical	
 dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function		System	
@@ -1452,7 +1452,7 @@ hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function		Text	gl
 cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function		Text	box-drawingcharacters diversions boxdrawingcharacters asciiart unicode linedrawingcharacters lines boxes
 cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function		Text	displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters enclosed
 lines←{tabs←0 {ctype←80}} dfns.getfile filename	Text file ⍵ as nested vector	Dfn	Function		Native Files	nativefile textfile Unicode list
-M{⎕DIV←1⋄⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dyadic Function		Mathematical	over ⁄
+M{⎕DIV←1 ⋄ ⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dyadic Function		Mathematical	over ⁄
 Is{1@⍵⊢⍺ ⍺⍴0}Jv	Adjacency matrix of size Is from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector
 crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating
@@ -1461,7 +1461,7 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 boolean
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?
-{0::0⋄1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
+{0::0 ⋄ 1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct
 Mv{⌽-↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list
@@ -1495,7 +1495,7 @@ Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Functio
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	put store dyalog transcript text
-X{2=⎕NC⍵:⍎⍵⋄⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable
+X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item
 {⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif
@@ -1653,7 +1653,7 @@ M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍵)×1○○2×?0×⍵}N	Normally distributed nu
 Is(⊣{⍬(⊢↓⍨0=⍴)+⌿1 0⌽0,0 ⍺⊤⍵}⍣≡1⊥⊢)Jm	Sum of digit columns with carry	Dfn	Function		Mathematical	addition columnsum infiniteprecision ripple
 I{(12⍴7⍴31 30)[⍺]-(⍺=2)×2-0≠.=400 100 4∘.|⍵}J	Number of days in months I of years J	Dfn	Dyadic Function		Mathematical	calendar lengths gregorian
 {(⍳⍵)((,[⍳2]⊢,⍤1 0~)⍤1)⍣⍵⍉⍪⍬}Js	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table
-Is{⍺>⍵:0⋄⊃⌽1(+\×)⍣(⍵-⍺)⍨⍳⍺}Js	Count partitions of a set of Js objects into Is non-empty subsets: S(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to partitions Stirling numbers of the second kind 𝔖(n,k) 𝕾(n,k)
+Is{⍺>⍵:0 ⋄ ⊃⌽1(+\×)⍣(⍵-⍺)⍨⍳⍺}Js	Count partitions of a set of Js objects into Is non-empty subsets: S(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to partitions Stirling numbers of the second kind 𝔖(n,k) 𝕾(n,k)
 I{⍉2⊥(-∨/0>b)⍪∨/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise OR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq 2s two's twos
 I{⍉2⊥(-∧/0>b)⍪∧/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise AND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq 2s two's twos
 I{⍉2⊥(-</0>b)⍪</2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise converse nonimplication	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply 2s two's twos
@@ -1667,7 +1667,7 @@ I{⍉2⊥(-⍲/0>b)⍪⍲/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list
 Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[1]⍴0),(Iv[2]⍴1),…	Dfn	Dyadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths
-Is{⍺>⍵:0⋄⊃⌽⊃(+\×)/1,⍨⌽⍺,/⍳⍵-1}Js	Count permutations of a set of Js objects that have Is cycles: s(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to permute disjoint Stirling numbers of the first kind
+Is{⍺>⍵:0 ⋄ ⊃⌽⊃(+\×)/1,⍨⌽⍺,/⍳⍵-1}Js	Count permutations of a set of Js objects that have Is cycles: s(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to permute disjoint Stirling numbers of the first kind
 {(⊢+.×¯1*2</,∘0)(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify buckets bin groups intervals cells items
 Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose” of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table
@@ -1838,7 +1838,7 @@ M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/pro
 Xm(Av{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Ym	Mesh matrices Xm and Ym along rows under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix row-wise
 Xm(Av{(1+⍺⍺)⊃¨⍤0 1⊢((~⍺⍺)⍀⍺),¨(⍺⍺⍀⍵)})Ym	Mesh matrices Xm and Ym along columns under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix column-wise
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	table
-Is(As{⍺>⍵:0⋄⊃⌽⊃(+\×)/1,⍨⌽⊣\⍣⍺⍺⊢⍺,/⍳⍵-1})Js	Stirling number of the As'th kind (0:first, 1:second): S(n,k)	Dop	Dyadic Function	Monadic Operator	Mathematical	combinatorics 𝔖(n,k) 𝕾(n,k)
+Is(As{⍺>⍵:0 ⋄ ⊃⌽⊃(+\×)/1,⍨⌽⊣\⍣⍺⍺⊢⍺,/⍳⍵-1})Js	Stirling number of the As'th kind (0:first, 1:second): S(n,k)	Dop	Dyadic Function	Monadic Operator	Mathematical	combinatorics 𝔖(n,k) 𝕾(n,k)
 Iv(Is{(⊂(1+≢⍵)⌊⍋(⍳≢⍵),⍺⍴⍨⍺⍺×≢⍺)⌷⍵⍪⍵⍵}Y)Z	Inserting Is Y's into Z after indices Iv	Dop	Dyadic Function	Dyadic Operator	Structural	
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand
 Xv(Am{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⊢⍺),¨(⍺⍺\⍤1⊢⍵)})Yv	Mesh vectors Xv and Yv in multiple ways under control of Am (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing differently
@@ -2305,3 +2305,5 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
+X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine
+Cv{⍺←⊢ ⋄ r←⍺⎕NS⍬ ⋄ r⊣'r'⎕NS¨⍵}Y	Combine namespaces Y into a new namespace (optionally named Cv)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	merge
