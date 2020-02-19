@@ -17,10 +17,11 @@ a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;col
 a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#s,#w{border-radius:1em;border:.25ex solid currentcolor}
-#s{position:absolute:right:2.4em;bottom:0em}
+#s{position:absolute;right:2.4em;bottom:0em}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
 #x{margin:0 0.75em 0 -1.5em}
+#c{right:0.1em;position:relative}
 p{top:1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1ex 0}
 ::-ms-clear{display:none}
 @media(max-width:1320px){s{display:none}}
