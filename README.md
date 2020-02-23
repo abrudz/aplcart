@@ -14,7 +14,7 @@ Note that Internet Explorer is not supported.
 
 The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
 
-Access-keys are <kbd>Alt</kbd>+<kbd>⇧ Shift</kbd> (<kbd>∧ control</kbd>+<kbd>⌥ option</kbd> on macOS)
+[Access-keys](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) are:
 
 - Hit [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
 - Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
