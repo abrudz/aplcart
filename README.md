@@ -14,9 +14,7 @@ Note that Internet Explorer is not supported.
 
 The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
 
-[Access-keys](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) are:
-
-- Hit [here](https://abrudz.github.io/aplcart) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+- Hit [here](https://abrudz.github.io/aplcart) and start typing ([access-key](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
 - Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
 - Hit [<kbd>×</kbd>](https://abrudz.github.io/aplcart) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
