@@ -1534,6 +1534,7 @@ I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Funct
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC
+X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine
 {' '∧.=⍞:⍵ ⋄ ⍵}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session as file Dv	Dfn	Monadic Function		System	put store dyalog .dse
@@ -1610,6 +1611,7 @@ A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin on
 {(,⍵)/1+s⊤¯1+⍳×/s←⍴⍵}Jm	Changing connectivity matrix Jm to a connectivity list	Dfn	Monadic Function		Mathematical	graph connection table vector
 Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1⌽⍺}Nv	Convolution	Dfn	Monadic Function		Mathematical	convolute
 Is{0 1↓(2↑1+⍺)⍕⍵∘.+,10*⍺}Jv	Format with leading zeroes for non-negative Jv in fields of width Is	Dfn	Dyadic Function		Data Conversion	pad fill align zeros 0s tostringify falses falsehoods start beginning
+Cv{⍺←⊢ ⋄ r←⍺⎕NS⍬ ⋄ r⊣'r'⎕NS¨⍵}Y	Combine namespaces Y into a new namespace (optionally named Cv)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	merge
 X{(⊃0⍴⊂)@(~∊∘⍺)⊢⍵}Y	Replacing elements of Y not in set X with prototypical elements	Dfn	Dyadic Function		Structural	blanks spaces 0s zeros zeros fill substitute merge aamend replace update cells items zeroes falses falsehoods
 X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value X	Dfn	Dyadic Function		Expression	fallback
 {⍵⌷⍨⊂⍋{(819⌶⍵)⍵}¨⍵}Y	Sorting Y in case-insensitive alphabetical order	Dfn	Monadic Function		Text	up increasing caseinsensitive reordering ordering
@@ -2287,6 +2289,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'UpDown'	Spin buttons	GUI Object			Action	WindowsForms WinForms Create new
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists
+2⎕NQ#'GetEnvironment' 'DYALOG'	Install directory	Constant	Expression		System	installation folder location dyalog.executables binaries
 op←{⍺⍺ ⍵}	Prototypical monadic Dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 op←{⍵⍵ ⍵}	Prototypical dyadic Dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 op←{⍺⍺ ⍺}	Prototypical monadic Dop deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
@@ -2305,5 +2308,3 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL
-X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine
-Cv{⍺←⊢ ⋄ r←⍺⎕NS⍬ ⋄ r⊣'r'⎕NS¨⍵}Y	Combine namespaces Y into a new namespace (optionally named Cv)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	merge
