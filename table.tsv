@@ -869,11 +869,11 @@ X(6≠⍳+3×⍸)Y	Is Y is outside range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function
 (∪⊢∨¯1↓⍳)Js	Proper divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization
 (⍳⍨∪⍳⊢)Y	Index of first instance of each major cell	Tacit	Monadic Function		Sets	items elements indicesof location 1st
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Mathematical	sort() up increasing sorting reordering ordering
-(⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Mathematical	testif ascending? increasing? rising? up ordered sorted
+(⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Mathematical	testif ascending? increasing? rising? up ordered? sorted?
 (⊢≡∘⍋⍋)Yv	Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	testif
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Mathematical	sort() down decreasing sorting reordering ordering
 (⊢⌷⍨1⌷⍒)Y	Maximum major cell of Y	Tacit	Monadic Function		Mathematical	greatestif largest biggest lexicographically item element
-(⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered decreasing? sorted
+(⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?
 X(∧\∘⌽=)Y	Indicate trailing elements that are equal	Tacit	Dyadic Function		Comparison	show matching onright cells items masking indicating ending
 X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Function		Comparison	show different onright cells items masking indicating ending
 (+\¯1↓1∘,)Jv	Starting positions of subvectors having lengths Jv	Tacit	Monadic Function		Index Generation	sub-vectors sub-lists sublists
@@ -929,8 +929,8 @@ X(1≠6 9⍸⍳+3×⍸)Y	Is Y is outside range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Fu
 (≢∘∪⊢∨⍳)Js	Number-of-divisors of Js	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5
 Is(⍋×∘⍋∘⍋)Y	Choosing grading direction (¯1,0,1) dynamically during execution	Tacit	Dyadic Function		Mathematical	sorting ascending descending grade
 (+\+\∘⍳)Js	First Js figurate numbers	Tacit	Monadic Function		Mathematical	1st
-(∧⌿⊢=⌈⍀)N	Are columns of N in ascending order?	Tacit	Monadic Function		Comparison	testif vertical raising sorted growing
-(∧⌿⊢=⌊⍀)N	Are columns of N in descending order?	Tacit	Monadic Function		Comparison	testif vertical falling sorted shrinking
+(∧⌿⊢=⌈⍀)N	Are columns of N in ascending order?	Tacit	Monadic Function		Comparison	testif vertical raising? sorted? growing?
+(∧⌿⊢=⌊⍀)N	Are columns of N in descending order?	Tacit	Monadic Function		Comparison	testif vertical falling? sorted? shrinking?
 Bs(⊢⍉⍨1 2⌽⍨⊣)Ym	Transpose matrix Ym on condition Bs	Tacit	Dyadic Function		Structural	conditional table
 Xs(,∘⌽∘⍉⍣4)Ym	Surround matrix Ym with scalar Xs	Tacit	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging table
 (Bv∊⍨⊢∘⊂⌺3 3)Bm	Conway's Game of Life: next generation given Bv of 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
@@ -975,8 +975,8 @@ Cv(⊢⊆⍨∘~∊⍨)Dv	Split vector Dv at any sequence of characters in Cv	Ta
 (⊢∊⍨∘⍳⌈/)Jv	Conversion of set of indices Jv to a mask	Tacit	Monadic Function		Boolean/Logical	indicate masking indicating
 (+/∘∪⊢∨⍳)Js	Sum of positive divisors of Js	Tacit	Monadic Function		Mathematical	sigma σ(n)
 X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering
-(⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered sorted
-(⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered sorted
+(⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?
+(⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths
 (××∘⌈¯0.5+|)N	Rounding to nearest whole number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()
@@ -1488,10 +1488,10 @@ Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn
 Cv{⊃,/⍺∘,¨⍵}Dv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	string list joiner combiner joining combining merge merging
 X{+/∧\⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending
 X{+/∧\⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending
-Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered sorted dimension
-Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered sorted dimension
-Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered Nonincreasing? sorted dimension
-Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered Nondecreasing? sorted dimension
+Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension
+Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension
+Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nonincreasing? sorted? dimension
+Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nondecreasing? sorted? dimension
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	put store dyalog transcript text
