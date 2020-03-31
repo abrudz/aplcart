@@ -563,7 +563,7 @@ C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry
 Av+.×⍨Nv	Summation over subsets of Nv specified by Av	Tacit	Dyadic Function		Mathematical	
 Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Function		Comparison	testif hasdifferent cells items
-Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists
+Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists rows
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply sorting reordering ordering
 ⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists
 I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range
@@ -602,9 +602,9 @@ M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Func
 (¯1∘↑)Ym	Last row as a row matrix (row vector)	Tacit	Monadic Function		Selection	bottommostrow trailing table list ending
 (*∘3)N	Cube	Tacit	Monadic Function		Mathematical	³ ^3
 (,∘1)Y	Append a column of 1s	Tacit	Monadic Function		Structural	ones trues truths
-Xv(,⍤0)Yv	Two-column matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists
-Xv(,⍤1)Ym	Prefix vector to each row of matrix	Tacit	Dyadic Function		Structural	prepend rows list table
-Xm(,⍤1)Yv	Postfix vector to each row of matrix	Tacit	Dyadic Function		Structural	append rows list table
+Xv(,⍤0)Yv	Two-column matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists columns
+Xv(,⍤1)Ym	Prefix vector to each row of matrix	Tacit	Dyadic Function		Structural	prepend rows list table rows
+Xm(,⍤1)Yv	Postfix vector to each row of matrix	Tacit	Dyadic Function		Structural	append rows list table rows
 (,⍤0)Y	Increment rank by one after last dimension	Tacit	Monadic Function		Structural	addtrailingaxis GhostBuster columnmatrixfromvector dimensions axes axis
 (⍪∘1)Y	Append a row of 1s	Tacit	Monadic Function		Structural	ones trues truths
 Is(⊃⌽)Yv	Pick item of vector Yv at cyclic offset Is (like ⎕IO←0, default Is:¯1)	Tacit	Dyadic Function		Selection	element cell list
