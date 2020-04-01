@@ -551,7 +551,6 @@ A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	
 ⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick cell element dimension 1st
 ⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural	list cells items
 X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	chipmunk
-X⌷⍨∘⊂J	Major cells of X at positions J	Tacit	Dyadic Function		Selection	index items elements
 Iv⌷⍨∘⊂Jv	Generate consolidated left argument for successive transposes Iv⍉Jv⍉Y	Tacit	Dyadic Function		Structural	optimise optimize
 X⍳⍨∘⌽Y	Position of last X in Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition vtv
 C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector
@@ -617,6 +616,7 @@ Bs(⊃⌽)Yv	Picking based on cyclic offset (as ⎕IO=0)	Tacit	Dyadic Function		
 (9 11○⊂)N	Split complex array into two-element vector of real array and imaginary array	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values list tuple
 Is(1⌷⊖)Y	Select major cell of Y at cyclic offset Is (like ⎕IO←0, default Is:¯1)	Tacit	Dyadic Function		Selection	element item
 (1⌷⊖)Y	Tail: Last major cell	Tacit	Monadic Function		Selection	Y[-1;] X[-1;] Y[-1] X[-1] Y[¯1;] X[¯1;] Y[¯1] X[¯1] trailing element item ending
+Im(⌷⍤¯1 99)Y	Select: each major cell of Im selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index
 (¯1+⍳)Js	First Js integers	Tacit	Monadic Function		Mathematical	whole numbers natural 1st
 (⍳≢)Y	Indices of Major Cells of Y	Tacit	Monadic Function		Index Generation	enumerate number count items elements
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation	
@@ -653,7 +653,7 @@ As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		St
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill
 ↑∘,∘⊂Y	Increment rank by one before first dimension	Tacit	Monadic Function		Structural	addleadingaxis GhostBuster rowmatrixfromvector dimensions axes axis 1st
-I⌷⍨∘⊂⍨Y	Select major cells I of Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements
+Iv⌷⍨∘⊂⍨Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index
 X⍳⍨∘⌽⍨Y	Last indices in X of major cells Y, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings
@@ -913,6 +913,7 @@ X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table
 (↑∘,∘⊂⍤¯1)Y	Increment rank by one before major cells	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis items elements
+Iv(⌷⍨∘⊃⍨⍤0 99)Y	Select: each element of Iv selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements
 (+/1=⊢∨⍳)Js	Euler's totient function	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)
 (⍳⍨=⍳∘≢)Y	Indicator of first occurrence of each unique major cell of Y	Tacit	Monadic Function		Comparison	item element 1st
