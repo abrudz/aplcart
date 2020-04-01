@@ -331,9 +331,8 @@ r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (o
 {counts}←{flags} ⎕NDELETE files	Delete files (if flags 1, tolerate 'file not found')	System	Function	Native Files	System Function	erase remove expunge )drop drop without
 {created}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make
 {end_offset}←x ⎕NREPLACE tn offset {type}	Write x to file at offset as type	System	Function	Native Files	System Function	overwrite
-{exported}←{flags} ⎕EXPORT nm	Specify fns to be exported by an OLEClient	System	Function	Native Files	System	
-{linenos}←{linenos} ⎕STOP name	Enable/report the current state of stops for a function	System	Function	System	System Function	halt inspect breakpoint
-{linenos}←{linenos} ⎕TRACE name	Enable/report the current state of tracing for a function	System	Function	System	System Function	monitor
+{linenos}←{linenos} ⎕STOP name	Set/report the current state of stops for a function	System	Function	System	System Function	halt inspect breakpoint
+{linenos}←{linenos} ⎕TRACE name	Set/report the current state of tracing for a function	System	Function	System	System Function	monitor
 {names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	modify code source definition define value )editing
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 {old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this )cs
@@ -351,6 +350,7 @@ r←{tn} (reg_ex ⎕S trans) text	Search text for PCRE reg_ex returning trans (o
 {tn}←file ⎕FTIE tn {pn}	Exclusively tie component file	System	Function	Component Files	System Function	dcf single
 {tn}←ax_mx ⎕FSTAC tn {pn}	Set access matrix for file tn	System	Function	Component Files	System Function	dcf table
 {tn}←{bytes} ⎕NRESIZE tn	Resize file to have specified size	System	Function	Native Files	System Function	cap limit clamp
+{types}←{types} ⎕EXPORT names	Set/report the export type of names referenced by ⎕PATH	System	Function	System	System	expose
 (↑⍣≡0∘⎕JSON)Y	Convert JSON to high rank APL array	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize table highrank matrix table multidimensional
 ⎕CT←(0≤1E¯14≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←645	System	Variable		Mathematical	comparison tolerance fuzz IEEE754 64-bit binaryfloatingpoint representation
 ⎕DCT←(0≤1E¯28≤2*¯32)	Max ratio between numbers considered equal when ⎕FR←1287	System	Variable		Mathematical	comparison tolerance fuzz IEEE754-2008 128-bit decimalfloatingpoint representation
@@ -1567,6 +1567,7 @@ Mv{⍺+2-/⌈\0,+\⍺-⍵}Nv	Work done for demand Nv with capacity Mv	Dfn	Dyadic
 A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified by A (one mask per column)	Dfn	Dyadic Function		Mathematical	major cells items indicate masking indicating
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Yv	The Is'th subvector of Yv (subvectors separated by Yv[1])	Dfn	Dyadic Function		Selection	
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Dv	Extracting field number Is from Dv (field separated by first element of Dv)	Dfn	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
+{⎕ED 2⎕FIX⍣(0∊⎕NC⍵),⊂,⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	preserve keep save remember white-spaces indents indentation code autoformatting auto-formatting layout custom as-is
 Ms{⍺←0 ⋄ ⍺,⍨⍵÷⌽⍳≢⍵}Nv	Integral of polynomial Nv with descending coefficients and optional constant Ms	Dfn	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
 Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (excluding phase)	Dfn	Dyadic Function		Comparison	testif vectors same? equivalent? equal?
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element
