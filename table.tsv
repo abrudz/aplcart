@@ -569,6 +569,7 @@ I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span di
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-<
 M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼
 Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
+M(⌊÷)N	Integer Division	Tacit	Dyadic Function		Mathematical	intdiv() % // divmod()
 I(1+|)J	Incrementing cyclic counter J with upper limit I	Tacit	Dyadic Function		Mathematical	
 M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals
@@ -646,7 +647,7 @@ X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index 
 (0⊥⍴)Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape
 M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase convert conversion
 (≢⍕)Js	Number of digit positions in Js (depends on ⎕PP)	Tacit	Monadic Function		Mathematical	digits
-Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision
+Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision banking banker's bank's bank
 (⍎⍕)Nv	Reshaping only one-element numeric vector Nv into a scalar (leave longer vectors as-is)	Tacit	Monadic Function		Structural	1-element singleton lists
 (⍎⍕)Nv	Rounding to ⎕PP precision	Tacit	Monadic Function		Mathematical	system
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without
@@ -1528,7 +1529,7 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending
 {n=≢∪n|⍵+⍳n←≢⍵}Jv	Valid siteswap pattern?	Dfn	Monadic Function		Mathematical	testif juggling beat
-Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick
+Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick banking banker's bank's bank (⍎⍕)
 I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	Dfn	Dyadic Function		Selection	without remove indices delete drop
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st
 I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering
