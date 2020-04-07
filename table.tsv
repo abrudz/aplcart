@@ -521,8 +521,8 @@ Mv⌊.×Nv	Minimum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	sma
 Mv+.÷Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 Mv-.÷Nv	Sum of alternating reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence
 Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic Function		Comparison	cells items lists
-X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	list
-Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2
+X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	list compare equality
+Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2 compare equality
 Nv×.*B	Products over subsets of Nv specified by B	Tacit	Dyadic Function		Mathematical	sub-sets
 Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix
 Iv∘.×Jv	Multiplication Table fIv down and Jv across	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix
