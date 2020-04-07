@@ -457,7 +457,7 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st
 1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths
 ,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells ending
-X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements
+X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements zip pair
 ,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists
 1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths
