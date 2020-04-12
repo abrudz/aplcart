@@ -221,7 +221,7 @@ X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primit
 ⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities
 ⎕LX←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include vector
-⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd randominteger randomfloat randomness source randomlink
+⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded Lehmer linear congruential generator Mersenne Twister OS Operating
 ⎕TRAP←trap_spec	Define error handling	System	Function	Error Message	System	try catch
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet
 ⎕WSID←name	The name of the active workspace	System	Function	Workspace	System Function	filename currentworkspace )wsid workspaceidentification
@@ -1500,7 +1500,7 @@ Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nondecreasing? sorted? dimension
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters
 Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	segment chop split separate chunks
-{⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	put store dyalog transcript text
+{⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	put store dyalog transcript text scrollback scroll-back
 X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item
 {⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces
