@@ -41,6 +41,9 @@ Array Properties | Boolean/Logical | Comparison | Data Conversion | Expression |
 ```
 space-separated synonyms (e.g. first 1st) and alternative spellings (e.g. normalise normalize)
 ```
-
+**TIO (optional)**
+```
+Try it online URL (e.g. https://tio.run/##SyzI0U2pTMzJT/8PBAA)
+```
 ---
 **Note:** By submitting this issue, you permit your contribution to be [used without restriction](../../blob/master/LICENSE).
