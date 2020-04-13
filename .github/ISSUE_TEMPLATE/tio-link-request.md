@@ -12,7 +12,7 @@ assignees: abrudz
 paste code here
 ```
 
-**TIO (optional)**
+**TIO (required)**
 ```
 Try it online URL (e.g. https://tio.run/##SyzI0U2pTMzJT/8PBAA)
 ```
