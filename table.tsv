@@ -1,4 +1,4 @@
-SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS	TIO
+SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATEGORY	KEYWORDS	TIO
 ⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ voidlist	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9a5ReNS5UMHgUe8Wg///AQ
 ⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS1SUDBUMFIw/v8fAA
 X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex91LvYWOFR1yIF9cjKSvX//wE
