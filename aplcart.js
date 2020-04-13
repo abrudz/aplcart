@@ -4,8 +4,11 @@ I=_=>{
   var s=new URLSearchParams(location.search)
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
   fetch("table.tsv").then(d=>d.text()).then(d=>{
-    p=d.toLowerCase().split(/\r?\n/g).splice(1)
-    t.innerHTML=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).replace(/.*/,'<tbody>').replace(/\r?\n/g,'<tr><td>').replace(/\t/g,'<td>')+'</tbody>'
+    p=d.split(/\r?\n/g).splice(1)
+    u=p.map(p=>p.split("\t")[7])
+    p=p.map(x=>x.toLowerCase())
+    var i=-1
+    ti=t.innerHTML=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).replace(/.*/,'<tbody>').replace(/\r?\n/g,x=>{i++;return'<tr><td'+(u[i]?' title="Try it online!" onclick="window.open(\''+u[i]+'\')"':'')+'>'}).replace(/\t/g,'<td>').replace(/(<td>[^<]*){6}<tr>/g,'<tr>')+'</tbody>'
     F(Q(q.value=s.get("q")))})}
 Q=_=>{
   var f,l=q.value.toLowerCase().split(' '),r=t.rows,n=0

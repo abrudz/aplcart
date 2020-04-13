@@ -3,7 +3,7 @@
       :Access public
       :Trap 0
           table←⎕CSV⍠'Separator'(⎕UCS 9)⍠'QuoteChar' ''⍠'IfExists' 'Replace'⊂#.Boot.AppRoot,'table.tsv'
-          {⎕SIGNAL ⍵}(7≠cols)/⊂('EN' 5)('Message'('Table has ',(⍕cols←⊃⌽⍴table),' instead of 7 columns'))
+          {⎕SIGNAL ⍵}(8≠cols)/⊂('EN' 5)('Message'('Table has ',(⍕cols←⊃⌽⍴table),' instead of 7 columns'))
           Add _.Redirect'/index.html'
       :Else
           Add _.h1(⎕←⎕DMX.Message)
