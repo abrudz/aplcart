@@ -1445,6 +1445,7 @@ X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	t
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically	
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically	
 Xv{⍺[1+⍵]}B	Indexing two-element vector Xv with Boolean values B	Dfn	Dyadic Function		Selection	list binary base-2 base2	
+Cv{≢⍺⎕S⍬⊢⍵}Dv	Count number of matches for PCRE regex Cv in Dv	Dfn	Dyadic Function		Text	regexp reg_ex tally occurrences perlcompatibleregularexpression number	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Q1Yso1YwzVqx91LnrUuwsoGPyod82jLiBna626b2ZxMQgVFGSqKyg86p2rkJJfmpSTqpuTWlKSWlT8/z8A
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function		Mathematical	chesspuzzle knight'stour knightstour graph treesearching diversions torus	
 pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber	
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems	
