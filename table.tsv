@@ -1,35 +1,35 @@
 SYNTAX	DESCRIPTION	CLASS	TYPE	GROUP	CATERGORY	KEYWORDS	TIO
 ⍬	Empty Numeric Vector	Primitive	Array		Expression	zilde emptylist emptynumericlist zerotilde emptyvector null emptyset none ∅ voidlist	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9a5ReNS5UMHgUe8Wg///AQ
-⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUI9UVHnUuVHjUtQjE/v8fAA
+⊢Y	Same: Y	Primitive	Monadic Function		Identity	dex righttack sameright default	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS1SUDBUMFIw/v8fAA
 X dop Y⊢Z	Separate dyadic operator's right operand from its right argument (same as (X dop Y)Z )	Primitive	Dyadic Function		Identity	dex righttack sameright	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex91LvYWOFR1yIF9cjKSvX//wE
-X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright	
-X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boolean/Logical	falsy falsey 0	
-⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack	
-X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where	
-X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1	
-+Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	greek cross plus ¯10○ ¯10∘○ conj() conjugating	
-+N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	greek cross conjugate negateimaginary	
-M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	greek cross plus addition	
--N	Negate: 0-N	Primitive	Monadic Function		Mathematical	minus hyphen invert additiveinverse opposite dash negation signchange − negating	
-M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −	
-×N	Direction ('Signum' if N is real)	Primitive	Monadic Function		Mathematical	cross sgn() sign() trend	
-M×N	Multiplying M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product	
-M×N	Probabilistic AND	Primitive	Dyadic Function		Mathematical	fuzzy probability chance conjunction Kpq	
-A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Function		Boolean/Logical	zero cells items	
-M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek	
-A∨B	Logical OR	Primitive	Dyadic Function		Boolean/Logical	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq	
-M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^	
-A∧B	Logical AND	Primitive	Dyadic Function		Boolean/Logical	gate conjunction caret wedge hat circumflex Kpq ^	
-⌈N	Rounding up to integer	Primitive	Monadic Function		Mathematical	upstile roundup ceiling seiling up() ceil()	
-M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger	
-⌊N	Rounding down to integer	Primitive	Monadic Function		Mathematical	downstile rounddown down() floor()	
-M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile lesser smaller min()	
-⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension	
-⌽Ym	Reflect vertically	Primitive	Monadic Function		Structural	mirroring reflecting reflection right-left rightleft leftright left-right	
-I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile rotating shifting cyclically dimension lists	
-⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing ⌽[1] dimension start beginning	
-⊖Ym	Reflect horizontally	Primitive	Monadic Function		Structural	mirroring reflecting reflection up-down updown down-up downup	
-I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar rotating cyclically dimension lists start beginning	
+X⊢Y	Right: Y	Primitive	Dyadic Function		Identity	dex righttack sameright	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVHnUtUlAPUv//HwA
+X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boolean/Logical	falsy falsey 0	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtUlBPS8wpTlX//x8A
+⊣Y	Same: Y	Primitive	Monadic Function		Identity	lev lefttack	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS1WUDBUMFIw/v8fAA
+X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVHnUtVlAPUv//HwA
+X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtVlBPS8wpTlX//x8A
++Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	greek cross plus ¯10○ ¯10∘○ conj() conjugating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0FQz1jBQMskwUDq03zTq03kxBPTEpWf3/fwA
++N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	greek cross conjugate negateimaginary	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE7QNvYwUDq039Dq03uj/fwA
+M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	greek cross plus addition	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBVMFLQVDA24UMS0geSh9SYKhv//AwA
+-N	Negate: 0-N	Primitive	Monadic Function		Mathematical	minus hyphen invert additiveinverse opposite dash negation signchange − negating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0FYz1jBQOrTdXMPj/HwA
+M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFcwVLBV0FUy5oAKmCoYKJkABI6CUyf//AA
+×N	Direction ('Signum' if N is real)	Primitive	Monadic Function		Mathematical	cross sgn() sign() trend	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT1cw1jNUOLTeSMFAwTjL5P9/AA
+M×N	Multiplying M and N	Primitive	Dyadic Function		Mathematical	cross times multiplication ∙ ⋅ · product	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFA6tN1Yw0TNVODwdzDy03kTBiAsqa6xgqGACkjE0@P8fAA
+M×N	Probabilistic AND	Primitive	Dyadic Function		Mathematical	fuzzy probability chance conjunction Kpq	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQz0TIHYCEgoHJ4O4v3/DwA
+A×N	Selecting elements satisfying condition A, others to 0	Primitive	Dyadic Function		Boolean/Logical	zero cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgdAAjA9PVzAGMkyA2PT/fwA
+M∨N	Greatest Common Divisor of M and N	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMTRUMFYwUzBUedaxQMAZxTBQM/v8HAA
+A∨B	Logical OR	Primitive	Dyadic Function		Boolean/Logical	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHHCiANYhn@/w8A
+M∧N	Lowest Common Multiple of M and N	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMTRUMFYwUzBUedSxXMAZxTBQM/v8HAA
+A∧B	Logical AND	Primitive	Dyadic Function		Boolean/Logical	gate conjunction caret wedge hat circumflex Kpq ^	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHHciANYhn@/w8A
+⌈N	Rounding up to integer	Primitive	Monadic Function		Mathematical	upstile roundup ceiling seiling up() ceil()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XQoGOuZKBxaDyKNFQz@/wcA
+M⌈N	Maximum of M and N	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9QwVDq03UnjU06FgAWYb65n8/w8A
+⌊N	Rounding down to integer	Primitive	Monadic Function		Mathematical	downstile rounddown down() floor()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XQpGOuZKBxaDyKNFQz@/wcA
+M⌊N	Minimum of M and N	Primitive	Dyadic Function		Mathematical	downstile lesser smaller min()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9QwVDq03UnjU06VgAWYb65n8/w8A
+⌽Y	Reverse last axis of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9exVUC8pSswtVv//HwA
+⌽Ym	Reflect vertically	Primitive	Monadic Function		Structural	mirroring reflecting reflection right-left rightleft leftright left-right	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGevAlD6/38A
+I⌽Y	Rotate vectors along last axis of Y	Primitive	Dyadic Function		Structural	circlestile rotating shifting cyclically dimension lists	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR717FVQ90gsCS5JzEtR54KKH1pvBJYxVDACqjFRMFUw@/8fAA
+⊖Y	Reverse leading axis of Y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing ⌽[1] dimension start beginning	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwVjBZNHvVse9W42MuF61DcVJPioaxpQ/v9/AA
+⊖Ym	Reflect horizontally	Primitive	Monadic Function		Structural	mirroring reflecting reflection up-down updown down-up downup	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGsaUPb/fwA
+I⊖Y	Rotate vectors along leading axis of Y	Primitive	Dyadic Function		Structural	circlebar rotating cyclically dimension lists start beginning	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkoGCoYKRwaL2hwqOuaQpAhf//AwA
 ÷N	Reciprocal: 1÷N	Primitive	Monadic Function		Mathematical	multiplicativeinverse opposite obelus inverting reciprocating per	
 M÷N	Dividing M by N	Primitive	Dyadic Function		Mathematical	division over ⁄ divide per	
 |N	Magnitude (absolute value)	Primitive	Monadic Function		Mathematical	verticalbar pipe stile stroke verticalline modulo modulus amplitude 10○ 10∘|	
@@ -2061,7 +2061,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical		
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation	
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base	
-⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment	
+⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment	https://tio.run/##SyzI0U2pTMzJT/8PBI@6FuUl5qY@apugHqkOAA
 ⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending echo print	
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize	
 x←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput	
