@@ -99,20 +99,20 @@ A⍲B	Logical NAND	Primitive	Dyadic Function		Boolean/Logical	shefferstroke nota
 X,Y	Catenate: Join along last axis	Primitive	Dyadic Function		Structural	comma concatenate juxtapose horizontally dimension row-wise rowwise by	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBV0FEwUTBXM/v8HAA
 Xm,Ys	Append scalar to each row of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate rows table	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMFo0e9Wx71bjbhetQ3FSQCltJRsLT8/x8A
 Xm,Yv	Append elements of vector to respective rows of matrix	Primitive	Dyadic Function		Structural	extend with next merge join concatenate table list	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMFo0e9Wx71bjbhetQ3FSQCltJRMFCwtPz/HwA
-⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells	
-⍪Y	Ravel planes of rank 3 array Y to form rows of a matrix	Primitive	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table	
-⍪Yv	Reshaping vector Yv into a one-column matrix	Primitive	Monadic Function		Structural	1-column table list	
-X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack X,[1]Y dimension column-wise columnwise start beginning	
-Xm⍪Ys	Append scalar to each column of matrix	Primitive	Dyadic Function		Structural	extend with over merge join concatenate columns table	
-Xm⍪Yv	Append elements of vector to respective columns of matrix	Primitive	Dyadic Function		Structural	extend with over merge join concatenate table list	
-⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe unbox open contentof Y[1] X[1] element cell 1st	
-Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom	
-⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize enclosing	
-Av⊂Y	Partitioned enclose of Y according to Av (along last axis)	Primitive	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension	
-⊆Y	Nest: Y if already nested, else scalar containing Y	Primitive	Monadic Function		Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose	
-Mv⊆Y	Partition Y according to Mv (along last axis)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk dimension	
-⌷Y	Materialise items of Y in workspace	Primitive	Monadic Function		Identity	squishquad squad materialize defaultproperty elements identify .net unpack collection cells	
-Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom	
+⍪Y	Table: Reshape into 2-dimensional array	Primitive	Monadic Function		Structural	commabar ravelcells flattencells razecells	https://tio.run/##SyzI0U2pTMzJT///P6OyILUouTQpVeFR2wQFIwh81LvlUe9mQzOuR31TQcKPelcpwBX@/w8A
+⍪Y	Ravel planes of rank 3 array Y to form rows of a matrix	Primitive	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWKPelcpgBT8/w8A
+⍪Yv	Reshaping vector Yv into a one-column matrix	Primitive	Monadic Function		Structural	1-column table list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9a5SMFIwVjD5/x8A
+X⍪Y	Catenate First: Join along leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack X,[1]Y dimension column-wise columnwise start beginning	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V0Fov//BwA
+Xm⍪Ys	Append scalar to each column of matrix	Primitive	Dyadic Function		Structural	extend with over merge join concatenate columns table	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V2lYPD/PwA
+Xm⍪Yv	Append elements of vector to respective columns of matrix	Primitive	Dyadic Function		Structural	extend with over merge join concatenate table list	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V2lYK5goWD5/z8A
+⊃Y	First item of Y	Primitive	Monadic Function		Selection	disclose rightshoe unbox open contentof Y[1] X[1] element cell 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTUrqIfnF6Wo//8PAA
+Iv⊃Y	Reach into Y along path given by Iv	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR51NSuoh@cXpahzQcWMwGIahgpGmhrGCiYKppoIGUMMuf//AQ
+⊂Y	Enclose: Scalar containing Y	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize enclosing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMNYwUjDW5oLxHXU2YIgjB//8B
+Av⊂Y	Partitioned enclose of Y according to Av (along last axis) beginning enclosures on 1s	Primitive	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FFXE5A0UjBWMPn/HwA
+⊆Y	Nest: Y if already nested, else scalar containing Y	Primitive	Monadic Function		Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUSzIyi9W5oLxHXW1oIhAeiEoswaIMKvH/PwA
+Mv⊆Y	Partition Y according to Mv (along last axis) beginning partitions on increases	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQyA0BAIH3W1AUkjBWMFEwVTLrg0SAgEQdKPejeb/v8PAA
+⌷Y	Materialise items of Y in workspace	Primitive	Monadic Function		Identity	squishquad squad materialize defaultproperty elements identify .net unpack collection cells	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCEgtag4P49LAQisAoryC1KLSioVUlLTEktzShTSSnNy/BJzUyHSjsnJqUAdBaVJOZnJCsUZiUWpKWAZEHjU0a5QklpR8qhtgntqCVxYASao7lupALQxTx1ZB8Rc17wUmM1cIA7YYVyP@qa6eUYAyeAgZ5grQYJAs2BcKO9Rz3aoyP//AA
+Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkBBR81LNdAagEIQQV@P8fAA
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Monadic Function		Index Generation	iota integers ints countto sequence numbers range ɩ ι positions locations 1… 1... cells elements	
 X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota indexin indexof ɩ ι finding locating locate positionof 1st items elements location	
 Xv⍳Y	Index of keys Y in key vector Xv	Primitive	Dyadic Function		Index Generation	find locate positionof locating location list	
