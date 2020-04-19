@@ -693,6 +693,7 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 (0≠/⊢)Yv	Zeros, same shape plus one	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods	
 Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit	
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿⍴ ≢, ⍴, cells items	
+(=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise	
 (⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise	
 (1∘↑⍤1)Ym	First column as a column matrix (column vector)	Tacit	Monadic Function		Selection	leftmostcolumn leading 1st table list start beginning	
@@ -852,6 +853,7 @@ Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function
 (⊢>¯1↓0,⊢)Bv	First ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st	
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without	
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table	
+(⊢⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQedS161LvFUAdIPOqYYaCpYKxg8v8/AA
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing	
 (1,⍨2≠/⊢)Yv	Which elements differ from next ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths	
 (~∨/∘,)B	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄	
@@ -914,6 +916,7 @@ M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		M
 (100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	% vertically columnwise	
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast item element	
 (⊢⍴⍨¯2↑1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize	
+(⍴⍴0,1⍴⍨⍴)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal	
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table	
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table	
 (↑∘,∘⊂⍤¯1)Y	Increment rank by one before major cells	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis items elements	
@@ -951,8 +954,7 @@ Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values 
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate	
 (∧/' '∘=)D	Mask for blank rows	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks bitmask bit-mask	
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction	
-(⍴⍴0,{1}¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table	
-(⍴⍴1,{0}¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table	
+(⍴⍴1,{0}¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal	
 (∨\' '∘≠)D	Locate leading blanks	Tacit	Monadic Function		Boolean/Logical	spaces beginning mask indicate indications start bitmask bit-mask	
 Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items	
 (∨/'  '∘⍷)D	Does D have any duplicated spaces? (per row)	Tacit	Monadic Function		Text	testif repeated blanks? double multiple line	
@@ -1225,6 +1227,7 @@ Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maxima (⌈/) of elements of subv
 I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length	
 '*/'∘(≠\(<\⍷)∨∘⌽(<\⍷∘⌽))D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*	
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0	
+Iv(≥∘(2⊃⊢,-)∧≤∘⊃)⍨∘(-/¨∘⍳2∘⍴)Jv	Iv (k or k₁ k₂) band matrix of size Jv (n or m n)	Tacit	Dyadic Function		Mathematical	banded tridiagonal pentadiagonal heptadiagonal tri-diagonal penta-diagonal hepta-diagonal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVDq03UtB41Ln0UccMDaNHXc2Puhbp6Go@6lj@qHMJUAwoovmodwVIVlf/EIh@1LvZCExt0VQwVTD7/x8A
 '\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs	
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical	
 {(⊣/⍵)/⍨(⌈/=⊢)⊢/⍵}{⍺(≢⍵)}⌸Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements	
@@ -1467,6 +1470,8 @@ crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating	
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor self-contained	
 {⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof	
+{1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2	
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 boolean	
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?	
@@ -1489,6 +1494,9 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode	
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing	
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem	
+{1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
 {3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfns? tradops?	
 {3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?	
 {3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived primtive? primitives? functions? train? trains?	
@@ -1514,6 +1522,7 @@ Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?
 {9.4 9.6∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv a class?	Dfn	Monadic Function		System	are classes?	
 {9.5 9.7∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an interface?	Dfn	Monadic Function		System	are interfaces?	
 {⍵⌿⍨1,∨/2≢⌿⍵}Ym	Removing consecutive duplicate rows from ordered matrix Ym	Dfn	Monadic Function		Sets	table	
+Is{⍺=-⍨/¨⍳2⍴⍵}Jv	Is-diagonal matrix of size Jv (n or m n)	Dfn	Dyadic Function		Mathematical	general k-diagonal	https://tio.run/##ATMAzP9hcGwtZHlhbG9n///ijpXihpDCrzIge@KNuj0t4o2oL8Ko4o2zMuKNtOKNtX0gNiA3//8
 {⍵\⍨1 0⍴⍨⊃⌽⍴⍵}D	Spacing out text	Dfn	Monadic Function		Text	insert blanks expanded spaces	
 Av{⍵⌷⍨⊂⌽⍒+\⍺}Y	Reversal (⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural		
 X{⍺.##=⍵.##}Y	Are X and Y sibling objects?	Dfn	Dyadic Function		Systems	testif siblings? sameparents	
@@ -2311,13 +2320,13 @@ op←{⍵⍵ ⍺}	Prototypical dyadic Dop deriving dyadic functions	Syntax	Dyadi
 +/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning	
 :Implements Trigger name1{,name2,name3,…}	Function is a trigger function: called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation	
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents	
-)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for  tdno)	Non-syntax			System Command	stack ⎕si ⎕xsi 1st	
+)SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for tdno)	Non-syntax			System Command	stack ⎕si ⎕xsi 1st	
 )SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st	
-⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input	
+⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx71znvUNvlR74pHnYvA7Anq4RmJJfYK6v//l2RkFgMA
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types	
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px	
-'-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host	
-{(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	load fetch get include from dfns.dws	
-({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	
-1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine	
-⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	
+'-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9R1zUzU6x71rnjU1awMFAp3V3cM8AlLLSrOzM9T//8fAA
+{(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	load fetch get include from dfns.dws	https://tio.run/##SyzI0U2pTMzJT/8PBNUaj3r7HvVufdQ31S/4Ue8aTT0gyzlSAShUq56SlleszgUi9ZITcxQMLc3MFAwNAQ
+({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA
+1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine	https://tio.run/##SyzI0U2pTMzJT/8PBIaPevbqPOpdYfmod4u6ujoaFwA
+⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8
