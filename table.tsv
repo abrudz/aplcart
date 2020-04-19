@@ -853,7 +853,6 @@ Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function
 (⊢>¯1↓0,⊢)Bv	First ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st	
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without	
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table	
-(⊢⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQedS161LvFUAdIPOqYYaCpYKxg8v8/AA
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing	
 (1,⍨2≠/⊢)Yv	Which elements differ from next ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths	
 (~∨/∘,)B	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄	
@@ -917,6 +916,7 @@ M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		M
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast item element	
 (⊢⍴⍨¯2↑1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize	
 (⍴⍴0,1⍴⍨⍴)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal	
+(2∘⍴⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m,n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table	
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table	
 (↑∘,∘⊂⍤¯1)Y	Increment rank by one before major cells	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis items elements	
@@ -1227,7 +1227,6 @@ Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maxima (⌈/) of elements of subv
 I((31-2|7|¯1+⊣)-(2=⊣)×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length	
 '*/'∘(≠\(<\⍷)∨∘⌽(<\⍷∘⌽))D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*	
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0	
-Iv(≥∘(2⊃⊢,-)∧≤∘⊃)⍨∘(-/¨∘⍳2∘⍴)Jv	Iv (k or k₁ k₂) band matrix of size Jv (n or m n)	Tacit	Dyadic Function		Mathematical	banded tridiagonal pentadiagonal heptadiagonal tri-diagonal penta-diagonal hepta-diagonal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVDq03UtB41Ln0UccMDaNHXc2Puhbp6Go@6lj@qHMJUAwoovmodwVIVlf/EIh@1LvZCExt0VQwVTD7/x8A
 '\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs	
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical	
 {(⊣/⍵)/⍨(⌈/=⊢)⊢/⍵}{⍺(≢⍵)}⌸Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements	
@@ -1465,19 +1464,19 @@ cmat←{marker←'*'} dfns.draw cmat	Draw over '*'s	Dfn	Function		Text	box-drawi
 cmat←{dec←0 {cen←0}} dfns.disp array	Boxed sketch of nested array	Dfn	Function		Text	displayofarrays boxing Kumquat box-drawingcharacters nestedarray boxdrawingcharacters enclosed	
 lines←{tabs←0 {ctype←80}} dfns.getfile filename	Text file ⍵ as nested vector	Dfn	Function		Native Files	nativefile textfile Unicode list	
 M{⎕DIV←1 ⋄ ⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dyadic Function		Mathematical	over ⁄	
-Is{1@⍵⊢⍺ ⍺⍴0}Jv	Adjacency matrix of size Is from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	
 crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem	
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating	
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor self-contained	
 {⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof	
-{1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8
-{¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w
+{1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2	
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 boolean	
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?	
 {0::0 ⋄ 1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct	
 Mv{⌽-↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus	
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask	
+Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list	
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas	
 {⍵⌿⍨2|⍳≢⍵}Y	Removing every second cellof Y	Dfn	Dyadic Function		Selection	filter even odd parity	
@@ -1494,9 +1493,9 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode	
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing	
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem	
-{1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
-{2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
-{3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
+{3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8
 {3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfns? tradops?	
 {3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?	
 {3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived primtive? primitives? functions? train? trains?	
@@ -1522,7 +1521,7 @@ Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?
 {9.4 9.6∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv a class?	Dfn	Monadic Function		System	are classes?	
 {9.5 9.7∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an interface?	Dfn	Monadic Function		System	are interfaces?	
 {⍵⌿⍨1,∨/2≢⌿⍵}Ym	Removing consecutive duplicate rows from ordered matrix Ym	Dfn	Monadic Function		Sets	table	
-Is{⍺=-⍨/¨⍳2⍴⍵}Jv	Is-diagonal matrix of size Jv (n or m n)	Dfn	Dyadic Function		Mathematical	general k-diagonal	https://tio.run/##ATMAzP9hcGwtZHlhbG9n///ijpXihpDCrzIge@KNuj0t4o2oL8Ko4o2zMuKNtOKNtX0gNiA3//8
+Is{⍺=-⍨/¨⍳2⍴⍵}Jv	Is-diagonal matrix of size Jv (n or m,n)	Dfn	Dyadic Function		Mathematical	general k-diagonal	https://tio.run/##ATMAzP9hcGwtZHlhbG9n///ijpXihpDCrzIge@KNuj0t4o2oL8Ko4o2zMuKNtOKNtX0gNiA3//8
 {⍵\⍨1 0⍴⍨⊃⌽⍴⍵}D	Spacing out text	Dfn	Monadic Function		Text	insert blanks expanded spaces	
 Av{⍵⌷⍨⊂⌽⍒+\⍺}Y	Reversal (⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural		
 X{⍺.##=⍵.##}Y	Are X and Y sibling objects?	Dfn	Dyadic Function		Systems	testif siblings? sameparents	
@@ -1684,6 +1683,7 @@ I{⍉2⊥(->/0>b)⍪>/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise
 I{⍉2⊥(-≠/0>b)⍪≠/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise XOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq 2s two's twos	
 I{⍉2⊥(-⍱/0>b)⍪⍱/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise NOR	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq 2s two's twos	
 I{⍉2⊥(-⍲/0>b)⍪⍲/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise NAND	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq 2s two's twos	
+Iv{⍺(≥∘(2⊃⊢,-)∧≤∘⊃)⍨-/¨⍳2⍴⍵}Jv	Iv (k or k₁ k₂) band matrix of size Jv (n or m,n)	Dfn	Dyadic Function		Mathematical	banded tridiagonal pentadiagonal heptadiagonal tri-diagonal penta-diagonal hepta-diagonal	https://tio.run/##AVMArP9hcGwtZHlhbG9n///ijpXihpAxIMKvMiB74o26KOKJpeKImCgy4oqD4oqiLC0p4oin4omk4oiY4oqDKeKNqC0vwqjijbMy4o204o21fSA1IDb//w
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis	
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	major cells items list	
 Xv{'`\d+`'⎕R(⍕⍺⊃⍨∘⍎1↓¯1↓⍎∘'Match')⍵}Dv	Replace backtick-quoted (e.g. `1`) indices in Dv with elements from Xv	Dfn	Dyadic Function		Text	strings variable characters charvector charvecs interpolation substitution expansion	
