@@ -6,7 +6,7 @@ I=_=>{
   fetch("table.tsv").then(d=>d.text()).then(d=>{
     p=d.split(/\r?\n/g).splice(1)
     u=p.map(p=>p.split("\t")[7])
-    p=p.map(x=>x.toLowerCase())
+    p=p.map(x=>x.toLowerCase().replace(/http.*/,"▸"))
     var i=-1
     ti=t.innerHTML=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).replace(/.*/,'<tbody>').replace(/\r?\n/g,x=>{i++;return'<tr><td'+(u[i]?' title="Try it online!" onclick="window.open(\''+u[i]+'\')"':'')+'>'}).replace(/\t/g,'<td>').replace(/(<td>[^<]*){6}<tr>/g,'<tr>')+'</tbody>'
     F(Q(q.value=s.get("q")))})}
