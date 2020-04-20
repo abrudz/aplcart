@@ -154,64 +154,63 @@ X⍎Dv	Execute Dv within namespace X (name or reference)	Primitive	Dyadic Functi
 Iv⍕Y	Format Y using ({width}, decimals) pairs Iv	Primitive	Dyadic Function		Data Conversion	downtackjot thorn itoa tostringify totext representation round ⎕fmt	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFB71TlUw1jM0MlUw0DMwMOKCSpgRljI0MjZRgIFHvXMVNNIyU3NSFPLySxTKM1NSFVLz8kvTMzT//wcA
 X f&Y	Spawn: f between X and Y in a new thread	Primitive	Monadic Function	Monadic Operator	System	ampersand greenthreading launch run	https://tio.run/##bY69DoJAEIR7n2IrrxCN@NNYEytja305ViCBW3IcUWJs7TA2lj6GjY9zL3JygiZGp9vsfDPD83QYVjylyNoAU16Z0@Vg6ofHIHQnhgvmmfM1WIGp70doZOpb@4NtKYVOSPYaQ8MBW@MOdKyQO4otidgrs@9/UaRgPJpDgYJkWLzhyWAKM/gvB@MeRakRCspQx4mMIJEgSqVQ6q60i2IbnujPbL@p@glzG1oGfNAEgrI8RY3WPgE
 f&Y	Spawn: f on Y in a new thread	Primitive	Dyadic Function	Monadic Operator	System	ampersand et and greenthreading launch run	https://tio.run/##ZY47DsIwEER7TrEVLviI8GmoUyJaastekkiOHTkbQYRo6UA0lByDC@Uixg4BgdhitdLsmxleqJGsuTKJczEqXjen64G1F8olGzaXW7yC5vw4gt93kEGBbaUFZUb3vOwBYGvcAaUWeWBauh/9AMbCZLyAEoXRsnxz08EM5vA3gcM9iooQSpMjpZlOINMgKmtRUxfVubANz@hTNfIp3z4h@fUOEZABYfJCIaFzTw
-Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QdA3zUNQzNFIzMFYwNNRU0LB71bNNUUA9wVNcAChmaaSooPOqdq6DkmVeWWlSSmqIQkpiUk6rgmZeSWqHgn6bEBTFHwdzYEqhTwUABNwCbE5KaW5BflFhUqeCSWZSaXJJfVKn0/z8A
+Ns⌶Y	I-beam: Call experimental system-related monadic function Ns	Primitive	Monadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTMjS0f9WxTMFBQeNQ7V0EpJDW3IL8osahSwSWzKDW5JL@oUun/fwA
 name f←Y	Modified Assignment (tradfns/tradops only)	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMDLiBDG8gy4nrUNxVIA7n//wMA
 name←Y	Assignment	Primitive	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means	https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkd9U4EMIPf/fwA
-∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot	
-→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop	
-→0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return	
-→Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow goto switch 1st	
-⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ rarg	
-⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ alfa larg	
-Z f⍨X,Y	Avoiding parentheses by swapping arguments in (X,Y) f Z	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis frown	
-X∘.g Y	Outer Product: g between each item of X and every item of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element	
-expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		Identity	lev lefttack where	
-∇∇	Dop Self	Primitive	Ambivalent Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse triangledown downtriangle carrot	
-↑Xv Yv …	N-row matrix from N vectors	Primitive	Monadic Function		Structural	rows table lists	
-⍺←Y	Default left argument in Dfn/Dop	Primitive	Dyadic Function		Expression	leftarg larg fallback fall-back preset value define	
-⍵⍵	Dop Right Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	omega rightop	
-⍺⍺	Dop Left Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	alpha leftop	
-⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension	
-I⌽[ax]Y	Rotate vectors along axis ax of Y	Primitive	Dyadic Function		Structural	circlestile rotating shifting cyclically dimension lists	
-↓[ax]Y	Split: Nest sub-arrays (from axis ax)	Primitive	Monadic Function		Structural	downarrow subarray dimension	
-Iv↓[ax]Y	Drop Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut cells elements dimensions delete without	
-↑[ax]Y	Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop without	
-Iv↑[ax]Y	Take Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	uparrow first last beginning leading trailing head tail cells elements dimensions 1st start ending	
-Iv/[ax]Y	Replicate along axis ax	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat dimension	
-f/[ax]Y	Reduce: f between all items of Y on axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	slash insert solidus over reducing folding cells elements dimension	
-,[ax]Y	Ravel with Axis: insert new axis between ⌊ax and ⌈ax	Primitive	Monadic Function		Structural	increaserank expandrank comma addaxis dimension	
-,[ax]Y	Ravel with Axes: combine axes	Primitive	Monadic Function		Structural	decreaserank reducerank comma removeaxes removeaxis dimensions	
-X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma combine juxtapose dimension	
-⊂[ax]Y	Enclose: Contain axes ax inside scalars	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize axis enclosing dimensions	
-Av⊂[ax]Y	Partitioned enclose of Y according to Av (along axis ax)	Primitive	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension	
-Mv⊆[ax]Y	Partition Y according to Mv (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk dimension	
-Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom dimensions	
-Iv\[ax]Y	Expand axis ax of Y	Primitive	Dyadic Function		Selection	reversesolidus slope dimension	
-f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension row-wise horizontally lists	
-name f∘⊢←Y	Modified Assignment (dfns/dops only)	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	
-(f∘Y)Z	Curry: f between Z and Y, that is, Z f Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring	
-X(f⍤Js)Y	Rank: f on or between trailing rank-Js subarrays	Primitive	Dyadic Function	Dyadic Operator	Function Application	jotdiaeresis ö paw sub-array dimensions axes ending	
-(f⍤Jv)Y	Rank: f on or between trailing rank-Jv subarrays	Primitive	Monadic Function	Dyadic Operator	Function Application	jotdiaeresis ö paw sub-array dimensions axes ending	
-X@{B}Y	Unpack a vector X into an array based on mask B	Primitive	Monadic Function	Dyadic Operator	Structural	list indicate masking indicating bitmask bit-mask	
-X(f@N)Y	At: apply X∘f to modify positions N in Y	Primitive	Dyadic Function	Dyadic Operator	Function Application	substitute merge amend replace update	
-X(f@g)Y	At: apply X∘f to modify positions identified by Boolean mask (g Y) in Y	Primitive	Dyadic Function	Dyadic Operator	Function Application	substitute merge amend replace update indicate masking indicating binary base-2 base2 bitmask bit-mask	
-(X@N)Y	At: use values in X to replace positions N in Y	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge amend update	
-(X@g)Y	At use values in X to replace positions identified by Boolean mask (g Y) in Y	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge amend update indicate masking indicating binary base-2 base2 bitmask bit-mask	
-(Xv@Js)Ym	Amend row Is of matrix Ym	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge replace update table	
-(f@N)Y	At: apply f to modify positions N in Y	Primitive	Monadic Function	Dyadic Operator	Function Application	amend update	
-(f@g)Y	At: apply f (or X∘f) to modify positions identified by Boolean mask (g Y) in Y	Primitive	Monadic Function	Dyadic Operator	Function Application	amend update indicate masking indicating binary base-2 base2 bitmask bit-mask	
-X(f⍣Js)Y	Power: apply X∘f on Y Js times	Primitive	Dyadic Function	Dyadic Operator	Iteration	application poweroperator stardiaeresis inverse repeated repeating inversion inverting iterating looping	
-X(f⍣Js)Y	Power: X∘f on Y Js times	Primitive	Dyadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis while until inverse repeat inversion	
-X(f⍣g)Y	Power: iterating X∘f on Y until condition Y g f Y is true	Primitive	Dyadic Function	Dyadic Operator	Iteration	apply application poweroperator stardiaeresis powerlimit fixedpoint repeated fixpoint converge while repeating looping	
-X(f⍣g)Y	Power: iterates X∘f on Y until condition Y g X f Y is true	Primitive	Dyadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while repeat	
-(f⍣Js)Y	Power: apply f on Y Js times	Primitive	Monadic Function	Dyadic Operator	Iteration	application poweroperator stardiaeresis inverse repeated repeating inversion inverting iterating looping	
-(f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y of size and (optionally step) Jm	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond tessellate tile cellularautomaton gameoflife vanneumann moore neighbourhoods neighborhoods	
-X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	Dyadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog	
-X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode	
-(f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode	
-(name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector	
-(name1 name2)←name2 name1	Swap variable values	Primitive	Dyadic Function		Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	
-X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items	
+∇	Dfn Self	Primitive	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot	https://tio.run/##SyzI0U2pTMzJT///3y0xueRR24RqBWTwqHeuAkgivygzMQfI26rHBRHe@qhziaGVgiGKyuLcxBywKiuFtMy8zOKM1BSY8sPTH3W0gxi6hsg68ksyUovKM4tTrRSKUpNLi4pTuWq5HvVNBToEZK2C6f//AA
+→	Abort (cut stack back one frame)	Primitive	Monadic Function		Expression	rightarrow stop	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcRpm4QkZKTOBVQHwgpFQAF3ZPXuYPUoRrhD1QPVAQA
+→0	Return: Leave function and return to caller	Primitive	Niladic Function		Expression	rightarrow :Return	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcRpm2SAJGakzgVUCMIKRUABd2QN7mANKGa4Q9UD1QEA
+→Jv	Branch to first line or label in Jv (does nothing if Jv is empty)	Primitive	Niladic Function		Expression	rightarrow goto switch 1st	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcRpmxTs7RmAJGwEFAYJWSGJGatzAfVzAfUDAA
+⍵	Dfn/Dop Right Argument	Primitive	Array		Expression	omega rightarg ω ꞷ rarg	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUqh/1btU2rFUw/f8fAA
+⍺	Dfn/Dop Left Argument	Primitive	Array		Expression	alpha leftarg α ɑ alfa larg	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUqh/17tI2rFUw/f8fAA
+Z f⍨X,Y	Avoiding parentheses by swapping arguments in (X,Y) f Z	Primitive	Dyadic Function	Monadic Operator	Function Application	commute switch tildediaeresis frown	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVdB/1rlAwNDg83ej/fwA
+X∘.g Y	Outer Product: g between each item of X and every item of Y	Primitive	Monadic Function	Dyadic Operator	Mathematical	jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUedczQOzxdwUTBVMFMwfz/fwA
+expr⊣name←Y	Combining two lines into one	Primitive	Dyadic Function		Identity	lev lefttack where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTKEosOT3/Uu9lE4VHXYhAPKGho8P8/AA
+∇∇	Dop Self	Primitive	Ambivalent Monadic Function, Dyadic Function	Monadic Operator;Dyadic Operator	Expression	deldel recurse triangledown downtriangle carrot	https://tio.run/##SyzI0U2pTMzJT///Pz4gv/xR24RqBVTwqHeuQkF@eWqRQn5BalFiSX6RlUJiQUFOJVBmKxAplGTmphZzQZSCBGwNrEDCqCZA1WYWKxhYKaRl5mUWZ6SmQDXtAiKFRx3tQKQBUadrqAkTBpkEMiC/JCO1qDyzONVKoSg1ubSoOJWrlutR31SgixU0qg21gQprFUBeUDDWVDD9/x8Ahttps://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU1UUA/JTFYHkolgMj9V/f9/AAhttps://tio.run/##SyzI0U2pTMzJT///vyg/v@RR24RqBTB41DsXiHeVZCiAxLkgQruA8kZw6ZTUtMTSnBKFknyF4sIimJqtWoe3A1Vy1XI96psKVg8yQMESyoVw/v8HAA
+↑Xv Yv …	N-row matrix from N vectors	Primitive	Monadic Function		Structural	rows table lists	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU1UUA/JTFYHkolgMj9V/f9/AAhttps://tio.run/##SyzI0U2pTMzJT///vyg/v@RR24RqBTB41DsXiHeVZCiAxLkgQruA8kZw6ZTUtMTSnBKFknyF4sIimJqtWoe3A1Vy1XI96psKVg8yQMESyoVw/v8HAA
+⍺←Y	Default left argument in Dfn/Dop	Primitive	Dyadic Function		Expression	leftarg larg fallback fall-back preset value define	https://tio.run/##SyzI0U2pTMzJT///vyg/v@RR24RqBTB41DsXiHeVZCiAxLkgQruA8kZw6ZTUtMTSnBKFknyF4sIimJqtWoe3A1Vy1XI96psKVg8yQMESyoVw/v8HAA
+⍵⍵	Dop Right Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	omega rightop	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVtKsf9e5SeNS7FYhAVO3h6Qom//8DAA
+⍺⍺	Dop Left Operand	Primitive	Array, Monadic Function, Dyadic Function		Expression	alpha leftop	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVtKsf9e5SAGIItbVWweT/fwA
+⌽[ax]Y	Reverse axis ax of Y	Primitive	Monadic Function		Structural	circlestile reversing dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGdvtGGsAlDF//8A
+I⌽[ax]Y	Rotate vectors along axis ax of Y	Primitive	Dyadic Function		Structural	circlestile rotating shifting cyclically dimension lists	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkoGCoYKRwaL2hwqOevdGGsQpAtf//AwA
+↓[ax]Y	Split: Nest sub-arrays (from axis ax)	Primitive	Monadic Function		Structural	downarrow subarray dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qG1ytGGsAlDF//8A
+Iv↓[ax]Y	Drop Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	downarrow split remove trim cut cells elements dimensions delete without	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkCJSYHG0UqwBU8/8/AA
+↑[ax]Y	Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)	Primitive	Monadic Function		Structural	uparrow axis dimensions delete drop without	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU2MNtAzjVVQ98gsUAeS@QXq//8DAA
+Iv↑[ax]Y	Take Iv items along axes ax of Y	Primitive	Dyadic Function		Selection	uparrow first last beginning leading trailing head tail cells elements dimensions 1st start ending	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkCJSYGG0UqwBU8/8/AA
+Iv/[ax]Y	Replicate along axis ax	Primitive	Dyadic Function		Selection	compress slash solidus filter copy repeat dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkpGCgYKigH20YqwBU9f8/AA
+f/[ax]Y	Reduce: f between all items of Y on axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	slash insert solidus over reducing folding cells elements dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSSkrR9tGKsAVPD/PwA
+,[ax]Y	Ravel with Axis: insert new axis between ⌊ax and ⌈ax	Primitive	Monadic Function		Structural	increaserank expandrank comma addaxis dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0og31TGMV1N3y89X//wcA
+,[ax]Y	Ravel with Axes: combine axes	Primitive	Monadic Function		Structural	decreaserank reducerank comma removeaxes removeaxis dimensions	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWI60UYKxrEKIDX//wMA
+X,[ax]Y	Laminate: Join along new axis	Primitive	Dyadic Function		Structural	comma combine juxtapose dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBV0og30TGMVTBRMFcz@/wcA
+⊂[ax]Y	Enclose: Contain axes ax inside scalars	Primitive	Monadic Function		Structural	leftshoe boxing scalarise scalarize axis enclosing dimensions	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWKPupqijRSMYxVAqv7/BwA
+Av⊂[ax]Y	Partitioned enclose of Y according to Av (along axis ax)	Primitive	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKoYADEj7qaog1jFYDK/v8HAA
+Mv⊆[ax]Y	Partition Y according to Mv (along axis ax)	Primitive	Dyadic Function		Selection	segment chop split cut separate chunk dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGIIhEYKj7raog1jFYDK/v8HAA
+Iv⌷[ax]Y	Index Y using indices Iv along axes ax	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom dimensions	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKk8Khne7RRrAJQyf//AA
+Iv\[ax]Y	Expand axis ax of Y	Primitive	Dyadic Function		Selection	reversesolidus slope dimension	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKoYADEhgox0YaxCkBl//8DAA
+f\[ax]Y	Scan: f between items of Y in progressively longer vectors along axis ax	Primitive	Monadic Function	Monadic Operator	Function Application	backslash slope cumulativereduce rowwise scanning cells elements dimension row-wise horizontally lists	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJKIdE20YqwCU//8fAA
+name f∘⊢←Y	Modified Assignment (also dfns/dops)	Primitive	Dyadic Function	Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSBIBLIe9W4Fs5OgbDAnIKe0GMjXhvASIfyOGY@6FgFFDSHqYYoMYYqSuGq5HvVNBQoB7VAw/v8fAA
+(f∘Y)Z	Curry: f between Z and Y, that is, Z f Y	Primitive	Monadic Function	Dyadic Operator	Composition	small little tiny jot composewith bind ring	https://tio.run/##SyzI0U2pTMzJT///v6AotUzhUdsEBd1HHTMMuR71TQVxwKJGxlzFhUUlYFktoKyBnilMHiwOJgzNFCwM//8HAA
+X(f⍤Jv)Y	Rank: f between trailing rank-Jv subarrays	Primitive	Dyadic Function	Dyadic Operator	Function Application	jotdiaeresis ö paw sub-array dimensions axes ending	https://tio.run/##SyzI0U2pTMzJT///Py83sUThUdsEBWMFk0e9Wx71bjY0UkACj3rnKuSV5qYWZSYrAJUWZVZwPeqbCtJgaKBgZKBgbKCgof2od4mBgqGmAtgwsJbi5MScxKJihYKc0mKFstTkkvyi4v//AQ
+(f⍤Js)Y	Rank: f on trailing rank-Js subarrays	Primitive	Monadic Function	Dyadic Operator	Function Application	jotdiaeresis ö paw sub-array dimensions axes ending	https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMgNH7Uu@VR72ZDI65HfVNBgho6j3qXGGkqgFRxJecmlkCVghSqJyYlV1VUqisoPOqdq5CckViUmFySWqQAVFWUWQE34VFvN9AMQ6AZIO1QANKRXpSYkqpbWqCQVKlQlF/@/z8A
+X@{B}Y	Unpack a vector X into an array based on mask B	Primitive	Monadic Function	Dyadic Operator	Structural	list indicate masking indicating bitmask bit-mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QjIqPUHaoNFAyB0AAIDWsV1BOTklNS09T//wcA
+X(f@N)Y	At: apply X∘f to modify positions N in Y	Primitive	Dyadic Function	Dyadic Operator	Function Application	substitute merge amend replace update	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0Dk93MFIw0VQwVDBSMFYwUTD9/x8A
+X(f@g)Y	At: apply X∘f to modify positions identified by Boolean mask (g Y) in Y	Primitive	Dyadic Function	Dyadic Operator	Function Application	substitute merge amend replace update indicate masking indicating binary base-2 base2 bitmask bit-mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0Dk93MFIw0VQwVDBSMFYwUTD9/x8A
+(X@N)Y	At: use values in X to replace positions N in Y	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge amend update	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DByMFEw0FQwVjBSMFUwUTP//BwA
+(X@g)Y	At use values in X to replace positions identified by Boolean mask (g Y) in Y	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge amend update indicate masking indicating binary base-2 base2 bitmask bit-mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUtdQdNIwedcyo0VQwVDBSMFYwUTBVUHjUO1fBKT8/JzUxT6E4NSc1uSQzPw@owACC//8HAA
+(Xv@Js)Ym	Amend row Is of matrix Ym	Primitive	Monadic Function	Dyadic Operator	Structural	substitute merge replace update table	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJKJhoWDpYKSpAFTx/z8A
+(f@N)Y	At: apply f to modify positions N in Y	Primitive	Monadic Function	Dyadic Operator	Function Application	amend update	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dm93MFIw0VQwVDBSMFYwUTD9/x8A
+(f@g)Y	At: apply f (or X∘f) to modify positions identified by Boolean mask (g Y) in Y	Primitive	Monadic Function	Dyadic Operator	Function Application	amend update indicate masking indicating binary base-2 base2 bitmask bit-mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10DB61DGjRlPBUMFIwVjBRMFUQeFR71yFoNSy1KLixByF/DSF4tIk3cSiosRKoCJjBdP//wE
+X(f⍣Js)Y	Power: apply X∘f on Y Js times	Primitive	Dyadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis while until inverse repeat inversion application repeated repeating inverting iterating looping	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFTS0H/UuNtZUMP3/HwA
+X(f⍣g)Y	Power: iterating X∘f on Y until condition Y g f Y is true	Primitive	Dyadic Function	Dyadic Operator	Iteration	apply application poweroperator stardiaeresis powerlimit fixedpoint repeated fixpoint converge while repeating looping	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFbQfdcw4vP1R72JbBcP//wE
+(f⍣Js)Y	Power: apply f on Y Js times	Primitive	Monadic Function	Dyadic Operator	Iteration	application poweroperator stardiaeresis inverse repeated repeating inversion inverting iterating looping	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB91zNB@1LvYWFPB9P9/AA
+(f⍣g)Y	Power: iterates X∘f on Y until condition Y g X f Y is true	Primitive	Dyadic Function	Dyadic Operator	Iteration	poweroperator stardiaeresis powerlimit fixedpoint fixpoint converge while repeat	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0Abiw9sf9S62VTD8/x8A
+(f⌺Jm)Y	Stencil: f on (possibly overlapping) rectangles of Y of size and (optionally step) Jm	Primitive	Monadic Function	Dyadic Operator	Function Application	diamondquad quaddiamond tessellate tile cellularautomaton gameoflife vanneumann moore neighbourhoods neighborhoods	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUTBRMHvVuedS72dCMCygPEgKpVdCoftTV9Kh3a@2jnl3GCsaaCkANMAUa1dr6Omhy//8DAA
+X(Ns⌶)Y	I-beam: Call experimental system-related dyadic function Ns	Primitive	Dyadic Function	Monadic Operator	System	ibeam systemservice special foreign dyalog	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QdA3zUNQzNFIzMFYwNNRU0LB71bNNUUA9wVNcAChmaaSooPOqdq6DkmVeWWlSSmqIQkpiUk6rgmZeSWqHgn6b0/z8A
+X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PyDLSEHDWMFEkwsupQGTe9S7QN05P7cgMblE3UATofT/fwA
+(f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01BPVFYDsIAX1CiCjd4GCuqezuoKhpoK6oxOQARSaqwBSU5RakJOYnJqiUJ5ZkgFW7Jmel1@UmZeu4JxYnPr/PwA
+(name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ
+(name1 name2)←name2 name1	Swap variable values	Primitive	Dyadic Function		Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA
+X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK9QdNB51dD3qmKHu6OrpH6quqaDu4erj46/g6Oei4O7v7@IU6ar@/z8A
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element	
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ	
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without	
@@ -1960,7 +1959,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 :Access WebMethod	Same as :Access Public with :Attribute System.Web.Services.WebMethodAttribute	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET	
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation beginning leading	
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨	
-:GoTo J	Branch to line or label J	Syntax	Control	Keyword	Expression	switch →	
+:GoTo J	Branch to line or label J	Syntax	Control	Keyword	Expression	switch →	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcixcs8PyVcI9vYMQJIxAsqAhKyQxIzVuYBGcAGNAAA
 :Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens greenthreading	
 :Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit	
 :Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx│:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣	
@@ -1972,6 +1971,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 :While	:While bx ⋄ block ⋄ :AndIf bx│:OrIf bx ⋄ block ⋄ :Until bx	Syntax	Control	Structure	Expression	loop do iteration ⍣	
 :With	:With ns ⋄ block ⋄ :EndWith	Syntax	Control	Structure	Expression	scope namespace object	
 bx:Y	Dfn/Dop Guard (conditional result)	Syntax			Expression	if ternary	
+name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump target	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcRpmxTs7RmAJGwEFAYJWSGJGatzAfVzAfUDAA
 #	Reference to workspace root namespace	Constant			System	top hashtag numbersign poundsign	
 '	Character delimiter	Syntax	Array		Expression	quote apostrophe string text	
 ⍝	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb	
