@@ -28,6 +28,22 @@ The site may take some seconds to load due to the information being processed by
 
 DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For example, [searching for `!aplcart 42`](https://duckduckgo.com/?q=!aplcart+42) redirects to APLcart. This also means that if you set your browser's default search engine to DuckDuckGo, you can search APLcart directly from your browser address bar by prefixing your search with `!aplcart`.
 
+## Application ntegration
+
+### Dyalog Windows IDE
+
+The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is pressed with the cursor on an unknown word:
+
+- Options ▸ Configure ▸ Help/DMX ▸ Use online help for non-Dyalog topics ▸ URL: `https://aplcart.info/?q=%s`
+
+### Dyalog RIDE
+
+RIDE allows adding a website to its menu bar:
+
+- Edit ▸ Preferences ▸ Menu, then below `&Help` insert <code>&APLcart =https://aplcart.info</code>
+
+You can now press <kbd>Alt</kbd>-<kbd>Alt</kbd>,<kbd>a</kbd> to launch APLcart.
+
 ## URL API ("permalinks")
 
 After clicking [<kbd>#</kbd>](https://aplcart.info?q=42) simply copy the current address from your browser's address bar to share the current query. Note that your current theme is intentionally not included, to avoid blinding the recipient. Note that the result for such a URL isn't permanent; it depends on APLcart's content at the time of usage.
