@@ -1159,7 +1159,7 @@ Iv(⊢↑⍨⊢∘⍴+|∘-∘⍴)Y	Increasing the dimensions of Y to multiples 
 Is(⊢↑⍨∘-∘⌊2÷⍨+∘≢)Dv	Centering text line Dv into a field of width Is	Tacit	Dyadic Function		Text	centre align	
 Iv(⌷⍤0 99⌷∘⊃⍤0⍨∘⍳∘≢⊣)Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Tacit	Function		Selection	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing	
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise	
-Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing	
+Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut partition segment separate chop divide chunk dividing split()	
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic	
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength	
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength	
@@ -1462,7 +1462,8 @@ X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	t
 X{</⍒⍺⍵}Y	Is X lexically greater than or equal to Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically	
 X{>/⍒⍺⍵}Y	Is X lexically less than Y?	Dfn	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically	
 Xv{⍺[1+⍵]}B	Indexing two-element vector Xv with Boolean values B	Dfn	Dyadic Function		Selection	list binary base-2 base2	
-Cv{≢⍺⎕S⍬⊢⍵}Dv	Count number of matches for PCRE regex Cv in Dv	Dfn	Dyadic Function		Text	regexp reg_ex tally occurrences perlcompatibleregularexpression	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Q1Yso1YwzVqx91LnrUuwsoGPyod82jLiBna626b2ZxMQgVFGSqKyg86p2rkJJfmpSTqpuTWlKSWlT8/z8A
+Cv{≢⍺⎕S 3⊢⍵}Dv	Count number of matches for PCRE regex Cv in Dv	Dfn	Dyadic Function		Text	regexp reg_ex tally occurrences perlcompatibleregularexpression	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Q1Yso1YwzVqx91LnrUuwsoGPyod82jLiBna626b2ZxMQgVFGSqKyg86p2rkJJfmpSTqpuTWlKSWlT8/z8A
+Cv{(⊢/¨r)↓¨⍵⊂⍨(⍳≢⍵)∊1+⊃¨r←(⍺,'|^')⎕S 0 1⊢⍵}Dv	Split Dv at occurrences of PCRE regex Cv (removes separators)	Dfn	Dyadic Function		Text	regularexpression regexp pattern split() cut partition segment separate chop divide chunk dividing	https://tio.run/##SyzI0U2pTMzJT///Pyg1PbggJ7PkUduEao1HXYv0D60o0nzUNvnQike9Wx91NT3qXaHxqHfzo85FQL7mo44uQ@1HXc1ARUANQIldOuo1ceqaj/qmBisYKBgCDQAqq@VST8ksLlAHijpHqqek5RWrcwHZQB0gYQV1fX17dQWYxQrqHqlFqfr6@kmp@ilFien5ecX6RChHqFb//x8A
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function		Mathematical	chesspuzzle knight'stour knightstour graph treesearching diversions torus	
 pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber	
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems	
