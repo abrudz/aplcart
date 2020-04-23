@@ -1082,9 +1082,9 @@ Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	
 (*∘○0J2×⊢÷⍨1+⍳)Js	Js spokes of unit wheel	Tacit	Monadic Function		Circular/Trigonometric	circle points distributed	
 (*∘○0J2×⊢÷⍨0,⍳)Js	Regular unit polygon of Js edges	Tacit	Monadic Function		Circular/Trigonometric	star triangle square pentagon hexagon octagon	
 (⍳∘⊃∘⌽∘≢⍪⊢)Ym	Attach column numbers to a matrix	Tacit	Monadic Function		Index Generation	headings table	
-Is(⊢⌷⍨∘⊂∘⍋⌷⍤1)Y	Sort Y ascending according to column Is	Tacit	Dyadic Function		Mathematical	sort() up increasing sorting reordering ordering bycolumn	
+Is(⊢⌷⍨∘⊂∘⍋⌷⍤1)Y	Sort Y ascending according to column Is	Tacit	Dyadic Function		Mathematical	sort() major cells elements items of array up increasing sorting reordering ordering bycolumn specific	
 Xv(⊢⌷⍨∘⊂∘⍋∊⍨)Yv	Move items Xv to end of Yv	Tacit	Dyadic Function		Sets	major cells elements trailing ending	
-Is(⊢⌷⍨∘⊂∘⍒⌷⍤1)Y	Sort Y descending according to column Is	Tacit	Dyadic Function		Mathematical	sort() down decreasing sorting reordering ordering bycolumn	
+Is(⊢⌷⍨∘⊂∘⍒⌷⍤1)Y	Sort Y descending according to column Is	Tacit	Dyadic Function		Mathematical	sort() major cells elements items of array down decreasing sorting reordering ordering bycolumn specific	
 (¯1⌽+\∊⍨∘⍳+/)Jv	Changing lengths IV of subvectors to starting indicators	Tacit	Monadic Function		Boolean/Logical	partitions	
 (∨\∧∘⌽∨\∘⌽)B	Mask for selecting between first and last 1 on each row	Tacit	Monadic Function		Boolean/Logical	masking trim ones 1st bitmask bit-mask	
 (⌊⊢+2÷⍨0.5≠2|⊢)N	Rounding, to nearest even integer for 0.5 = 1||N	Tacit	Monadic Function		Mathematical	precision whole number favoring	
@@ -1563,7 +1563,7 @@ Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Functio
 Is{p÷⍨⌊0.5+⍵×p←10*⍺}N	Rounding N to Is decimal places (Fast ⍎Is⍕N)	Dfn	Dyadic Function		Mathematical	precision speed optimised optimized quick banking banker's bank's (⍎⍕)	
 I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	Dfn	Dyadic Function		Selection	without remove indices delete drop	
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st	
-I{⍵[⍋⍵[;⍺];]}Ym	Sort matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering	
+I{⍵[⍋⍵[;⍺];]}Ym	Sort rows of matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering specific columns	
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list	
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC	
