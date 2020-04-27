@@ -1896,13 +1896,16 @@ realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 int.frac	Decimal Point	Syntax	Array		Expression	period rational	
 ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period	
 ⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table empty void	
-1111⌶Jv	Number of Threads	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam	
-1112⌶Js	Parallel Execution Threshold	I-beam	Function		Function Application	multithreading parallelprocessing performance affinity ibeam	
+1111⌶Jv	Number of Threads	I-beam	Monadic Function		Function Application	multithreading parallelprocessing performance affinity ibeam	
+1112⌶Js	Parallel Execution Threshold	I-beam	Monadic Function		Function Application	multithreading parallelprocessing performance affinity ibeam	
 127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe ibeam	
-180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Function		Data Conversion	code oo classes private instance ibeam	
-181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Function		Array Properties	datarepresentation internalrepresentation ibeam	
-200⌶Dv	Syntax Colouring	I-beam	Function		Data Conversion	coloring highlighting parse parsing tokentypes ibeam	
-2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Function		System	freememory ibeam	
+180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Monadic Function		Data Conversion	code oo classes private instance ibeam	
+183⌶Dv	Name classes for pieces of function/operator Dv	I-beam	Monadic Function		Data Conversion	⎕XR explainrepresentation trains derived functions operators	https://tio.run/##SyzI0U2pTMzJT///37Es/VHbBO1HPfsPb3/UuYjrUd9UIB9I@gUpqAMl1aEihhbGj3q2gUX@/wcA
+181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Monadic Function		Array Properties	datarepresentation internalrepresentation ibeam	
+200⌶Dv	Syntax Colouring	I-beam	Monadic Function		Data Conversion	coloring highlighting parse parsing tokentypes ibeam	
+2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Monadic Function		System	freememory ibeam	
+2007⌶0	Disable global triggers	I-beam	Monadic Function		System		
+2007⌶1	Enable global triggers	I-beam	Monadic Function		System		
 201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes ibeam	
 2014⌶Y	Remove Data Binding	I-beam	Function		Array Properties	disconnect databinding delete drop without ibeam	
 2016⌶Yv	Create .NET Delegate	I-beam	Function		Array Properties	make new ibeam	
@@ -1912,26 +1915,31 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel')	I-beam	Function		System	scaling highresolution hires retina px ibeam	
 2100⌶0	Export Workspace to in-Memory .NET Assembly	I-beam	Constant		System	ibeam	
 2101⌶0	Close .NET AppDomain	I-beam	Constant		System	ibeam	
+2350⌶⎕NULL	List auto-completed user commands	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input report show	
+2350⌶Dv	Set list of user commands for auto-complete	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input	
 2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam	
 2401⌶Bs	Expose Root Properties	I-beam	Function		System	dotting ibeam	
 2501⌶0	Discard parked incoming .NET threads	I-beam	Constant		System	ibeam	
 2501⌶Bs	Discard incoming .NET thread on exit	I-beam	Function		System	ibeam	
+2502⌶0	Discard existing used .NET threads	I-beam	Function		System	ibeam	parked
 2503⌶Js	Mark Thread as Uninterruptible	I-beam	Function		System	greenthreading launch run suspend suspension ibeam	
 2520⌶Bs	Use Separate Thread For .NET	I-beam	Function		System	ibeam	
-2701⌶Bs	Continue Autosave	I-beam	Function		System	)continue ibeam	
+2704⌶Bs	Continue Autosave	I-beam	Function		System	)continue ibeam	
 3002⌶Bs	Disable Component Checksum Validation	I-beam	Function		System	dcf ibeam	
 3501⌶0	Connected to the RIDE	I-beam	Constant		System	remoteintegrateddevelopmentenvironment ibeam	
 3502⌶Yv	Manage RIDE Connections	I-beam	Function		System	remoteintegrateddevelopmentenvironment ibeam	
+3503⌶Dv	Cross-platform equivalent of ⎕WC'MsgBox' (unofficial)	I-beam	Function		System	ride dialog box remoteintegrateddevelopmentenvironment ibeam display Create new notification boxed enclosed	
 4000⌶⍬	Fork New Task	I-beam	Constant		System	aix multithreading parallel ibeam	
 4001⌶Dv	Change User	I-beam	Function		System	aix multithreading parallel ibeam	
 4002⌶⍬	Reap Forked Tasks	I-beam	Constant		System	aix multithreading parallel ibeam	
 4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH ibeam	
+4070⌶Y	Dyalog registry location and user documents folder	I-beam	Constant		System	folder key home
 50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam	
 5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector ibeam	
 5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector ibeam	
 5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop without ibeam	
 5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text ibeam	
-60⌶D	Partition lines of D into APL tokens	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut identifiers ibeam	
+60⌶D	Partition lines of D into APL tokens (unofficial)	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut identifiers ibeam	
 600⌶Js	Trap Control	I-beam	Function		System	debugging repl try catch error handling ibeam	
 739⌶0	Temporary Directory	I-beam	Constant		System	tmp ibeam	
 8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹ ibeam	
@@ -2198,6 +2206,7 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 0(7162⌶)Dv	Translate JSON name to valid APL name (mangle if necessary)	I-beam	Function		Data Conversion	representation identifier ⎕json namemangling ibeam mangled	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww0zA3NjB71bNNUT0xK1q2orFL//x8A
 1(7162⌶)Dv	Translate possibly mangled APL name to JSON name (demangle if mangled)	I-beam	Function		Data Conversion	representation identifier ⎕json namemangling ibeam demangled	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww1zA3NjB71bNNUf9Q7MzEpGUiamAKJisoq9f//AQ
 0(85⌶)Dv	Execute (⍎) expression and signal ERROR 85 if it has no result, otherwise return result	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam no-result missing unshy un-shy	https://tio.run/##SyzI0U2pTMzJT/8PBAYaFqaPerZpqptoG6lzwXmJj9omGCLxq2uN1QE
+Is(86⌶)Dv	Execute (⍎) Is frames up the stack	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam in different stack-frames stackframes	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGr3/HyFR71rarncIXxDDQuzRz3bNNUf9W5Vr@V61DcVKApUq2Bi9P8/AA
 1(85⌶)Dv	Execute (⍎) expression and signal ERROR 85 if result is shy or missing, otherwise return result	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression shy noresult ibeam no-result	https://tio.run/##SyzI0U2pTMzJT/8PBIYaFqaPerZpqptoG6lzwXmJj9omGKoDAA
 (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector	
 {R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional	
