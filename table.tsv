@@ -1913,10 +1913,12 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 2022⌶0	Flush Session Caption	I-beam	Constant		System	titlebar ibeam	
 2023⌶0	Close all Windows	I-beam	Constant		System	shut ibeam	
 2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel')	I-beam	Function		System	scaling highresolution hires retina px ibeam	
+2036⌶0	Disable auto-status (unofficial)	I-beam	Monadic Function		System	window pop-up popup hide suppress deactivate	
+2036⌶1	Ensable auto-status (unofficial)	I-beam	Monadic Function		System	window pop-up popup show allow activate	
 2100⌶0	Export Workspace to in-Memory .NET Assembly	I-beam	Constant		System	ibeam	
 2101⌶0	Close .NET AppDomain	I-beam	Constant		System	ibeam	
-2350⌶⎕NULL	List auto-completed user commands	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input report show	
-2350⌶Dv	Set list of user commands for auto-complete	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input	
+2350⌶⎕NULL	List auto-completed user commands (unofficial)	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input report show	
+2350⌶Dv	Set list of user commands for auto-complete (unofficial)	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input	
 2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam	
 2401⌶Bs	Expose Root Properties	I-beam	Function		System	dotting ibeam	
 2501⌶0	Discard parked incoming .NET threads	I-beam	Constant		System	ibeam	
@@ -1933,7 +1935,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 4001⌶Dv	Change User	I-beam	Function		System	aix multithreading parallel ibeam	
 4002⌶⍬	Reap Forked Tasks	I-beam	Constant		System	aix multithreading parallel ibeam	
 4007⌶⍬	Signal Counts	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH ibeam	
-4070⌶Y	Dyalog registry location and user documents folder	I-beam	Constant		System	folder key home
+4070⌶Y	Dyalog registry location and user documents folder (unofficial)	I-beam	Constant		System	folder key home
 50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam	
 5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector ibeam	
 5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector ibeam	
@@ -2206,7 +2208,7 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 0(7162⌶)Dv	Translate JSON name to valid APL name (mangle if necessary)	I-beam	Function		Data Conversion	representation identifier ⎕json namemangling ibeam mangled	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww0zA3NjB71bNNUT0xK1q2orFL//x8A
 1(7162⌶)Dv	Translate possibly mangled APL name to JSON name (demangle if mangled)	I-beam	Function		Data Conversion	representation identifier ⎕json namemangling ibeam demangled	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww1zA3NjB71bNNUf9Q7MzEpGUiamAKJisoq9f//AQ
 0(85⌶)Dv	Execute (⍎) expression and signal ERROR 85 if it has no result, otherwise return result	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam no-result missing unshy un-shy	https://tio.run/##SyzI0U2pTMzJT/8PBAYaFqaPerZpqptoG6lzwXmJj9omGCLxq2uN1QE
-Is(86⌶)Dv	Execute (⍎) Is frames up the stack	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam in different stack-frames stackframes	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGr3/HyFR71rarncIXxDDQuzRz3bNNUf9W5Vr@V61DcVKApUq2Bi9P8/AA
+Is(86⌶)Dv	Execute (⍎) Is frames up the stack (unofficial)	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam in different stack-frames stackframes	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGr3/HyFR71rarncIXxDDQuzRz3bNNUf9W5Vr@V61DcVKApUq2Bi9P8/AA
 1(85⌶)Dv	Execute (⍎) expression and signal ERROR 85 if result is shy or missing, otherwise return result	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression shy noresult ibeam no-result	https://tio.run/##SyzI0U2pTMzJT/8PBIYaFqaPerZpqptoG6lzwXmJj9omGKoDAA
 (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector	
 {R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional	
