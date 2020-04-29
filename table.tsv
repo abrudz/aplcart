@@ -699,7 +699,6 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 ~∘' '¨D	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces spaces drop without	
 (¯2-/⊢)N	Deltas: (N[2]-N[1])(N[3]-N[2])(N[4]-N[3])…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps	
 (¯2÷/⊢)N	Ratio of each number in a list to its predecessor: (N[2]÷N[1])(N[3]÷N[2])(N[4]÷N[3])…	Tacit	Monadic Function		Mathematical	pairwiseratios vector	
-(+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs	
 (⌈/|)N	Largest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally biggest greatestif maximum absolute value	
 (⌊/|)N	Smallest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally least minimum absolute value	
 (0=/⊢)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s trues truths	
@@ -707,6 +706,7 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit	
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿⍴ ≢, ⍴, cells items	
 (=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A
+(+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs	
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise	
 (⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise	
 (1∘↑⍤1)Ym	First column as a column matrix (column vector)	Tacit	Monadic Function		Selection	leftmostcolumn leading 1st table list start beginning	
@@ -787,12 +787,13 @@ M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic 
 (180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Circular/Trigonometric		
 (○4×*∘2)N	Area of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball	
 (*∘÷∘3)N	Cube Root	Tacit	Monadic Function		Mathematical	squareroot cbrt ³√ ∛ ^0.333 ^.333 ^(1/3)	
-(⊢-⌊⌿)N	Normalise y so that minimum item is 0	Tacit	Monadic Function		Mathematical	normalize zero smallest least cell element	
-Is(+⌿÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage	
-(⊢=⌈⌿)N	Locate all instances of maximum of N	Tacit	Monadic Function		Boolean/Logical	indicate where equal to maxima maximums location masking indicating	
 (×/1↓⍴)Y	Number of elements in major cells	Tacit	Monadic Function		Array Properties	shape items	
 (×/¯1↓⍴)Y	Number of rows in array Y (also of vector)	Tacit	Monadic Function		Array Properties	list	
 (3÷⍨×/)Nv	Volume of pyramid with height, width, length Nv	Tacit	Monadic Function		Mathematical	lengths sides	
+(⊢-⌊⌿)N	Normalise N so that minimum item is 0	Tacit	Monadic Function		Mathematical	normalize zero smallest least cell element	
+(⊢÷+⌿)N	Normalise N so that sum is 1	Tacit	Monadic Function		Mathematical	normalize one	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOrxd@1HPfk0FYwVDBRMFw///AQ
+Is(+⌿÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage	
+(⊢=⌈⌿)N	Locate all instances of maximum of N	Tacit	Monadic Function		Boolean/Logical	indicate where equal to maxima maximums location masking indicating	
 (+⌿÷≢)N	Arithmetic mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() mean()	
 X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left argument X)	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled list	
 Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural		
@@ -818,9 +819,9 @@ X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dy
 (1<≢∘∪)Y	Are any major cells distinct?	Tacit	Monadic Function		Sets	testif anydifferent? anyunequal? anyunique? items elements	
 (1≥≢∘∪)Y	Are all major cells identical?	Tacit	Monadic Function		Sets	testif allsame? allequal? nounique? items elements	
 (∪⊢∨⍳)Js	All divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization	
+(,¨,\)Yv	Prefixes of a vector	Tacit	Monadic Function		Structural	string text	
 (≠⍀∨⊢)B	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths	
 (~∧≠⍀)B	Places between pairs of ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths	
-(,¨,\)Yv	Prefixes of a vector	Tacit	Monadic Function		Structural	string text	
 (⍉∘⍪⍤1)Y	Increment rank by one before rows	Tacit	Monadic Function		Structural	insert new additional dimensions axes axis	
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table	
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable 1st	
@@ -1497,9 +1498,9 @@ Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list	
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas	
 {⍵⌿⍨2|⍳≢⍵}Y	Removing every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity	
+Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask	
 X{+⌿∧⍀⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	matching onleft cells items start beginning	
 X{+⌿∧⍀⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	different onleft cells items start beginning	
-Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask	
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements	
 Xm{(↓⍺)⍳↓⍵}Ym	Fast: A simple vector comprising as many items as there are rows in Ym, where each item is the number of the first row in Xm that matches each row in Ym	Dfn		Performance	Index Generation	speed optimised optimized quick list major cells elements 1st	
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering	
@@ -1858,6 +1859,7 @@ Mv f{⍵+.×⍨(⍳≢⍺)⌽⍤0 1⍺⍺⌽⍺}Nv	Generalised convolution	Dop	D
 Mv(Ms{⍺⍺⊥⍺⌹⍵∘.*⌽¯1+⍳≢⍵})Nv	Interpolated value of series Mv=f(Nv) at Ms	Dop	Dyadic Function	Monadic Operator	Mathematical	extrapolate	
 X(f{↑[⍵⍵](⊂AX)f⊂[⍵⍵]⍵}ax)Y	Run f on axes of Y	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions	
 X f{⍺ ⍺⍺⍤(-⌊/≢∘⍴¨⍺⍵)⊢⍵}Y	Apply f with leading axis agreement	Dop	Dyadic Function	Monadic Operator	Function Application	conformity conforming axes frames major minor cells	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwNFIwMFIwNFLSrH/XuUgBiMFqiofuop0v/UeeiRx0zHvVuObQCLLxV81HXIiBVq2CsYKRgApSw0H/Uu9n4/38A
+Av{↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵}Ym	Partition (⊂) Ym along both axes (Av can be one or two partitioning vectors)	Dop	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B
 f{⍉2⊥(-⍺⍺/0>b)⍪⍺⍺/2⊥⍣¯1⊢b←⍵}J	2's-complement bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary 2s two's twos	
 Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier matrix with Mv control points	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model interpolation table	
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change changing converting conversion	
