@@ -1155,6 +1155,7 @@ Ms((9 11○⊣)+.×9 11∘.○⊢)N	Rectangular scale of complex N by complex fa
 ((819⌶=⊢)∧819⌶⍨∘1=⊢)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral?	
 ((819⌶≠⊢)-819⌶⍨∘1≠⊢)D	Detect case of characters (1:uppercase, ¯1:lowercase, 0:neither)	Tacit	Monadic Function		Text	query determine report	
 ((819⌶≠⊢)∧819⌶⍨∘1≠⊢)D	Are characters of D titlecase?	Tacit	Monadic Function		Text	title-case? digraphs? ligatures?	
+Cv⎕S{⍵.(1↓Lengths↑¨Offsets↓¨⊂Block)}Dv	Search text for PCRE regex(es) Cv returning vector of vector of capturing groups	Tacit		Monadic Operator	System Function	regexp find locate perlcompatibleregularexpression locating location capture \1 \2 \3 \4 \5 \6 \7 \8 \9 subpatterns sub-patterns	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUNWLKtTUVNGJStDXVFYCCwdWPerfqaRg@apvsk5qXXpJR/Kht4qEV/mlpxaklQPbkQysedTU55eQnZ2vWKqhnpObk5CsYGhkrmJiaqSuoJxbkKBibGaj//w8A
 ((⊃∘⌽⍸)⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise horizontally	
 0∘(1+<+∘⌊10⍟∘|⊢+=)J	Number of digit positions in integers in J	Tacit	Monadic Function		Mathematical	digits	
 Is(⊢↑⍨⊢∘≢+|∘-∘≢)Y	Increasing the leading dimension of Y to multiple of Is	Tacit	Dyadic Function		Structural	1st axis divisibleby pad extend first start beginning	
