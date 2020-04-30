@@ -708,6 +708,7 @@ Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 (=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A
 (+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs	
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise	
+(⌈⌿|)N	Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normal L-∞	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0POrZX6OpYKxg8v8/AA
 (⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise	
 (1∘↑⍤1)Ym	First column as a column matrix (column vector)	Tacit	Monadic Function		Selection	leftmostcolumn leading 1st table list start beginning	
 (¯1∘↑⍤1)Ym	Last column as a column matrix (column vector)	Tacit	Monadic Function		Selection	rightmostcolumn trailing table list ending	
@@ -924,6 +925,7 @@ M(○××3÷⍨⊢)N	Volume of cone with height M and radius N	Tacit	Dyadic Func
 I(⊣*⍨1+÷⍨)N	Effective rate of interest with nominal rate N for I periods	Tacit	Dyadic Function		Mathematical		
 As○⍨∘(¯10+~)⍨N	Mirror complex N in x-axis if As	Tacit	Dyadic Function		Circular/Trigonometric	conjugate negateimaginary	
 M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		Mathematical	signum	
+(⊢÷⌈⌿∘|)N	Normalisation by Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normalise L∞-normalize L∞-normalization L-∞	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgKOKKosO34oyI4oy/4oiYfCkgMyA0//8
 (×⌿*∘÷≢)N	Geometric mean	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean	
 (100×⊢÷⍤1 0+/)N	Row-wise percentage per row	Tacit	Monadic Function		Mathematical	% horizontally rowwise	
 (100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	% vertically columnwise	
@@ -998,8 +1000,10 @@ X(⍳|⍨1+∘≢⊣)Y	First indices in X of major cells Y, 0 if not found	Tacit
 Cv(⊢⊆⍨∘~∊⍨)Dv	Split vector Dv at any sequence of characters in Cv	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions	
 (⊢∊⍨∘⍳⌈/)Jv	Conversion of set of indices Jv to a mask	Tacit	Monadic Function		Boolean/Logical	indicate masking indicating bitmask bit-mask converting change changing	
 (+/∘∪⊢∨⍳)Js	Sum of positive divisors of Js	Tacit	Monadic Function		Mathematical	sigma σ(n)	
+(⊃∘⍋∘|⊃⊢)Nv	First number with smallest magnitude	Tacit	Monadic Function		Mathematical	minimum absolute value closest nearest to 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ai3G0jWgDhdizQVjBUOrTdRMPr/HwA
 X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering	
 (⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?	
+(⊃∘⍒∘|⊃⊢)Nv	First number with largest magnitude	Tacit	Monadic Function		Mathematical	maximum absolute value biggest farthest furthest away from 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA
 (⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?	
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st	
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths	
@@ -1053,7 +1057,6 @@ Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Funct
 M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq	
 M(1-(1-⊣)×1-⊢)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq	
 Is((-⊣)↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths	
-Ms(⊢×÷∘(⌈/))N	Scale N so the maximum element is Ms	Tacit	Dyadic Function		Mathematical	clamp rescale adjust	
 (2 2⍴∘(-@2)2 1 1 2∘○)Ns	Rotation matrix for angle Ns (in radians) counter-clockwise	Tacit	Monadic Function		Mathematical	table	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning	
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical		
@@ -1125,6 +1128,7 @@ Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default I
 (0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix	
 0.01∘(⊣×∘⌊0.5+÷⍨)N	Rounding to nearest hundredth (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring	
 0.05∘(⊣×∘⌊0.5+÷⍨)N	Rounding currencies to nearest 5 subunits	Tacit	Monadic Function		Mathematical	cents nickels ¢5¢	
+Is(⊣*∘÷⍨1⊥*⍨∘|)N	Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LdZ61DHj8PZHvSsMH3Ut1QLSQH6NpoKxgsn//wA
 (+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?	
 (+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?	
 Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+b^x y=a^x+b curve	
@@ -1164,6 +1168,7 @@ Is(⊢↑⍨∘-∘⌊2÷⍨+∘≢)Dv	Centering text line Dv into a field of wi
 Iv(⌷⍤0 99⌷∘⊃⍤0⍨∘⍳∘≢⊣)Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Tacit	Function		Selection	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing	
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise	
 Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing split() segments partitions	
+Is(⊢÷⊣*∘÷⍨1⊥*⍨∘|)N	Normalisation by Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LTq8/VHXYq1HHTOAjN4Vho@6lmoBaSC/RlPBWMHk/38A
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic	
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength	
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength	
@@ -1584,6 +1589,7 @@ Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at po
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Removing multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending	
 {⍵⌽⍨+/∧\' '=⍵}D	Justifying left	Dfn	Monadic Function		Text	leftalign left-align	
 Av{¯2-⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Sums over (+/) subvectors of N indicated by Av	Dfn	Dyadic Function		Mathematical	segmented partitioned sub-vectors	
+Ms{⍵×⍺÷⍵[⊃⍒|⍵]}Nv	Scale Nv so the maximum element is Ms	Dfn	Dyadic Function		Mathematical	clamp rescale adjust largest highest biggest normalise normalize	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wVqh/1bj08/VHvrsPbgazoR13Nj3on1QCZsbUKh9YbAbHh//8A
 {⍵/⍨∨\' '∨.≠⍵}Dm	Remove leading blank columns	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without	
 {⍵⌿⍨∨\⍵∨.≠' '}Dm	Remove leading blank rows	Dfn	Monadic Function		Text	delete allspaces drop start beginning space without	
 {⍵[⍋⍵+.≠' ';]}Dm	Sorting words in list Dm according to word length	Dfn	Monadic Function		Text	vector	
@@ -1792,6 +1798,7 @@ commit←(⎕NS'') dfns.UndoRedo	Derive undo/redo function	Dop		Monadic Operator
 tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Operator	System	derivedfunction combinator hook fork box-drawingcharacters boxdrawingcharacters	
 {⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally remove	
 f{⍉⍺⍺⍉⍵}Y	Applying to columns action f defined on rows	Dop	Monadic Function	Monadic Operator	Function Application		
+f{⍵÷⍺⍺ ⍵}N	Normalise to norm given by f equal to 1	Dop	Monadic Function	Monadic Operator	Mathematical	normalise arbitrary custom f=1 vector list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H/Xsr37Uu/Xw9ke9u4BIAciuVTBWMFQwUTD8/x8A
 f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending	
 f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	plotting	
 f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criteria f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items	
