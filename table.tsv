@@ -739,6 +739,7 @@ Xv(∨/∊)Yv	Do Xv and Yv have any elements in common?	Tacit	Dyadic Function		S
 Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	testif subset? containedin ⊆	
 X(1⍳⍨∊)Y	Index of first occurrence in X of any item of Y	Tacit	Dyadic Function		Index Generation	cell element find locate 1st position find location	
 (∪≡⊢)Y	Are all major cells of Y unique?	Tacit	Monadic Function		Sets	testif alldifferent noduplicates nodups items elements binary base-2 base2	
+(∪⍳⊢)Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA
 Is(⊢∩∧)Jv	Elements of Jv divisible by Is	Tacit	Dyadic Function		Mathematical	filter divisors cells items	
 Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote cells items	
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖	
