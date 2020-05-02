@@ -1187,7 +1187,7 @@ Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic p
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Function		Mathematical	informationtheory text message string	
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items	
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq	
-Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending	
+Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending    https://tio.run/##SyzI0U2pTMzJT///P03hUdsEBQ3DR22TdTT0H/Wu0DTUeNS16FHHikc9ezUNdB51LtDk4nrUNxWkrAxEGOsAEVChwqPezaYwGWOFNIUyGEddHVWHhtGj3i3GmjpABtCGzSZAFlgErj4oNTe/LDMvXSEnNTEFSOsoFKUWpCaWpKboKJQUJWbmgOSMiq3UYTqMUKwjSrsxknawa///BwA
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical		
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords	
 M(⊢∘××⊣×∘⌈¯0.5+∘|÷⍨)N	Rounding N to nearest M (favouring towards 0)	Tacit	Dyadic Function		Mathematical	precision favoring	
@@ -1538,7 +1538,7 @@ Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv 
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	store dyalog transcript text scrollback scroll-back	
 X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable	
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item	
-{⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces	
+{⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces  https://tio.run/##rVAxTsNAEOz9ipGbLVDEG1CqSFRAS7GxN7HF5fZ0vnCyEKkQRSJHaShpqPgA4j/3kXCOKOjJFquZXe3MaNmZSd2z0eXxmPZv6fWApzR8Xabhc0MApeE702fQbIGx1JoesxE9WIlAoxFBM63H5rw68Yjq68w6x1Vrl1Sk4R1TXTn2gtiGpvh1IlwQMr7JiNL24z8mOf4fl9AI/NravEFoVwJdnGYhKthlBa4a6cBzfZQxTdVTxyZQ2r2I5bmR26vru@I@S5yuJxXKs7@lRHnOB5Q/
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif	
 {(⍎⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	load fetch get include from .dws	
 {(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get	
@@ -1556,8 +1556,8 @@ X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an eleme
 {1 0 1(,∘.∧)⍣⍵⊢1}Js	Cantor set iteration Js	Dfn	Monadic Function		Mathematical	fractal ternary middle third	
 X{⍵↓⍨-⊥⍨⍵∊⍺}Yv	Removing elements in X from end of vector Yv	Dfn	Dyadic Function		Selection	trim trailing right cells items list ending	
 X{⍵↓⍨⊥⍨⌽⍵∊⍺}Yv	Removing elements in X from beginning of vector Yv	Dfn	Dyadic Function		Selection	trim leading left cells items list start	
-{⍵/⍨∨⌿' '≠⍵}Dm	Removing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without	
-{⍵⌿⍨∨/' '≠⍵}Dm	Removing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without	
+{⍵/⍨∨⌿' '≠⍵}Dm	Removing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without	https://tio.run/##dU69SgNBEO7vKb5uGjWQSuzsRYsIqVLM5ZZkyd7ucbchBrEREaOu2FgKlnmAWPsu8yI6G1G0yDDFNzPfz3Dj9qsluzD51JKnl/GSOnaR5OHGeC6dGRyfnBejMlyAgqdC0iuGBk1rfcTCxink/hrsq@8h885OEQNqnhnYCMOdNW3edMbAGa6sn/Riy9YpQOnYzzAObl777qAo9AW5fc6mNUdsYVodoi9pQ0AfWqzNGdAPmwZTbjStoz2lb1T5exnqV2Ee/@cc0d8gbxYZXUp670lay91aHj8IJKs3XV0h2@1IUukX
+{⍵⌿⍨∨/' '≠⍵}Dm	Removing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove delete drop space without	https://tio.run/##dY6/SgRBDMb7fYqvS6MeXCV29qLFCVdZZN1wN9zczLIzsh5iIyL@W7GxFCzvAbT2XfIimkGUawwpviRf8gu3frtZsY@zLwt9ejldUWKfSR@uJXDtZbJ/cFyd1PEcFANVOrxiKmg7FzJ6l@fQ@ytwaH6K4js6RI5Y8kLgMoSTk650kgi8cOPCbJQ7dt4Eas9hgS72aaeqjK83z@XikjOK3MVYh3cCxrBgSy6Cfq00mXNrnERbMKOt/U2m9k88yxuEPdpEBOmLutDhQx8/dVjr7XpEIL17s9Ylyq1/MLb6DQ
 {⌽@(1,≢⍵)⊢⍵}Y	Interchange first and last major cells	Dfn	Monadic Function		Structural	exchange swap head tail leading trailing elements items 1st start beginning ending	
 Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	Dfn	Dyadic Function		Selection	least items elements	
 {⍵/⍨∨\⍵≠' '}Dv	Remove leading blanks	Dfn	Monadic Function		Text	delete spaces beginning start drop without	
@@ -1574,7 +1574,7 @@ I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	D
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st	
 I{⍵[⍋⍵[;⍺];]}Ym	Sort rows of matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering specific columns	
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list	
-{⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	
+{⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	https://tio.run/##vZG/SsRAEMb7PMVHmgH1OLG0E6sDucI/5QmbZL0st7cTNisxiI2I6EnExlIQq3sBX2hf5NwNFj7AxQ9mdr4p5sfsiEqPilZonm@C/Ot73lIttCP/8iCNyLQ8Ozo5T2YZ34DYUJL47gNTdhKuDGGF0srMkWlhFqgrkcskTPGPb/Cr@1vffY99tz7wT@vx/h6B/PNn6N2B0Gty1T9sdItJrBZGNkDJDRwHW8RUWa6kRcO2CC4yIjGI/gdF/c7HvKyElWiUK/9wQZfYCTTsEkL3FBRNqFdf219yUNjvbS/qCO6nqxq15kbaw2Rmr41TS4lRjnTos6ZIB//V9Ac
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC	
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine	
 {' '∧.=⍞:⍵ ⋄ ⍵}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback	
@@ -1587,7 +1587,7 @@ Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cypher for uppercase D (Is:encryp
 Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated	
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method	
 Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at point Ms	Dfn	Dyadic Function		Mathematical		
-{⍵/⍨2∨/0,⍨' '≠⍵}Dv	Removing multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending	
+{⍵/⍨2∨/0,⍨' '≠⍵}Dv	Removing multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending	https://tio.run/##vZG9SgQxFIX7eYrDIATUZcXSTqwWxMKfcovMzHVn2GzukImMg9iIiK6s2FgKYrUv4AvlRdabqaxEWPUUyTm3uB8n0bUZFJ02PFmJwtNL3qlGG6/C4y1ZnRk62T88TcYZX0KxVUkSFq84Yk/wJcGQLio7QWa0naKpdU6JLAl3zwjzm6uw@BiGxXI33C@HO9viFFR4eJPxNRR6jc77i63pMIpuaqkFSm7hWWIRj9pxTQ4tu0JSxESoSP2YtjZHah/wrNaO0Fa@/AKWKpsbwsKWgkyPoWIQP3///ZbfwtbF9C3Pmpj73VWDxnBLbi8ZuwvrqxlhkCP9h49Nkf75s6af
 {⍵⌽⍨+/∧\' '=⍵}D	Justifying left	Dfn	Monadic Function		Text	leftalign left-align	
 Av{¯2-⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Sums over (+/) subvectors of N indicated by Av	Dfn	Dyadic Function		Mathematical	segmented partitioned sub-vectors	
 Ms{⍵×⍺÷⍵[⊃⍒|⍵]}Nv	Scale Nv so the maximum element is Ms	Dfn	Dyadic Function		Mathematical	clamp rescale adjust largest highest biggest normalise normalize	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wVqh/1bj08/VHvrsPbgazoR13Nj3on1QCZsbUKh9YbAbHh//8A
@@ -1633,7 +1633,7 @@ Av{≠⍀b⍀2≠⌿0⍪⍵⌿⍨b←⍺∨⍵}Bv	Not leading zeroes (∨\) in e
 {1↓∊':'@1∘⍕¨100+3↑3↓⍵}Jv	Date (⎕TS format) to hh:mm:ss	Dfn	Monadic Function		Text	timestamp 24-hour clock	
 Mv{¯2-⌿0⍪(2≠/⍺⍪0)⌿+⍀⍵}Nv	Sum elements of Nv marked by successive identicals in Mv	Dfn	Dyadic Function		Mathematical	partitioned segmented major cells items	
 Iv{¯2-⌿0⍪(⊂+\⍺)⌷+⍀⍵}N	Sums over (+/) subvectors of N, lengths in Iv	Dfn	Dyadic Function		Mathematical	segmented partitioned sub-vectors	
-{⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm	Removing trailing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove trim right delete drop ending space without	
+{⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm	Removing trailing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove trim right delete drop ending space without	https://tio.run/##dU67TgMxEOzvK6bbBpKQko4eQRGkNFDs5azEis8@3TkKEaJBCBHgEA0lEmU@IJT8zP4IWfMSRRhZ2vHuzsxy5XaLBbsw/lDI4/NoQQ27SHJ/bTznzgwODk@yszycg4KnTNoXDA2q2vqIuY0TyN0V2Bdfn7R3fIQYUPLUwEYYbqypU6cxBs5wYf24G2u2Tglyx36KUXCz0jedLNMT5OYpmZYc8Unb5V4PfWnXBPShYH2Mb9CPhAYTrjSyoR3VrFX@OxnqaWEWsT11n/7GejNP7ELat660K3l4l9vVqRYCKevI8lVHl0j@/0SrxQY
 Av{g[⍋(+\⍺)[g←⍋⍵]]}Y	Grade up (⍋) for sorting subarrays of Y indicated by Av	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings	
 Av{g[⍋(+\⍺)[g←⍒⍵]]}Y	Grade down (⍒) for sorting subarrays of Y indicated by Av	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings	
 {⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Function		Boolean/Logical	truesat ⍸⍣¯1 inversion	
@@ -1649,7 +1649,7 @@ X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Df
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?	
 X{⍺⍪⍵/⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements	
 Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with height and width Mv and length Ns	Dfn	Dyadic Function		Mathematical	lengths sides	
-{⍵↓⍨-+/∧\⌽Dm∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without	
+{⍵↓⍨-+/∧\⌽Dm∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without	https://tio.run/##dY4xSwNBEIX7@xWvm0KTaErBwl5MESGNFnPekizZ7B53K2cQG5EQ1BNBLK3jD9DSPzN/JM6iEQt9bPF29s37lkvXKebswnitkofnsznV7CLJ3Y3xnDszPDg8zk7zcAEKnjJpXzAyKCvrIxobJ5Dba7Avvi4pNzhCDJjx1MBGGK6tqdKkNgbOcGH9uBcrtk4Ncsd@iio0dTfLlC@Lx9Q444hkd3fQl/aNgD5UrIfxLdrkaTjhUmE1bUPDuvvzMtJPhfOIP3h79BvoTZPcpbTvsniS9rWz1ZPl6kTuP9JoueruE@gKqfwfrlZ8Ag
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof	
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st	
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements	
@@ -1688,7 +1688,7 @@ Iv{⍵⌷⍨⊂⌽⍒+\(⍳≢⍵)∊+\1,⍺}Y	Reversal (⊖) of subvectors of Y
 Is{0+.≠(10*⌽0,⍳⍺)∘.|⌊⍵×10*⍺}N	Number of decimals (up to Is) of elements of N	Dfn	Dyadic Function		Mathematical	digits cells items	
 {,⍉3↑(⎕D,⎕A)[1+16 16⊤¯1+'UTF-8'⎕UCS ⍵]}Dv	Conversion of characters to hexadecimal byte representation	Dfn	Monadic Function		Data Conversion	ord() num() hex() utf8 converting change changing	
 X{⍵⍴⍨(1⍴⍨-/≢∘⍴¨⍺⍵),⍴⍵}Y	Increasing rank of Y to rank of X	Dfn	Dyadic Function		Structural		
-{⍵/⍨(∨\∧∘⌽∨\∘⌽)' '≠⍵}Dv	Removing leading and trailing blanks	Dfn	Monadic Function		Text	trim left right spaces start beginning ending	
+{⍵/⍨(∨\∧∘⌽∨\∘⌽)' '≠⍵}Dv	Removing leading and trailing blanks	Dfn	Monadic Function		Text	trim left right spaces start beginning ending	https://tio.run/##vZDNSgMxFIX38xSHQYgWSvfuxFVBFPzZWSHtXDuDaTIkkXEQNyIyVkfcCG4EcdO@gEtf5r6IJqMLH0A9hOSe/PCdXFmqflZLZaYfQXz/OKmFk8oLvr0iLceK9ja29pPR2JxBGC2ShNtnHDgCzy8hdYZ4srMNb@CI4HOyJBy0gSKZFXo68FYWKhRwpZyQSwKErx/i@3Nu3wbcLle5WR5ys@Dmie/ev0ys1gQE37yEWxcQ6DQ87hajVY1hrE40VUBuqpgAyOJUWlOSRWVsFlzERnyQ6NJvmlkpLaEqfP4jTUD0VgLxCD2BsL0LIeLg@etv0b@bF30HKBycMhXZ9WRkT7UvZoT@BOn/NyZF@uffTz8B
 Av{(b∧⍺)⍱c⍀2<⌿0⍪(c←b∨⍺)⌿b←~⍵}B	Not first zero (≤\) in each subvector of B indicated by Av	Dfn	Dyadic Function		Boolean/Logical	segmented partitioned 1st	
 Xv{(↑∘⍵⍪⍺↑⍨1∘↓)(⍴⍵)⌈0,≢⍺}Ym	Appending vector Xv to the end of matrix Ym, adjusting width of both as necessary	Dfn	Dyadic Function		Structural	inserting stack bottom ontop on-top under table list trailing	
 {' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski	
