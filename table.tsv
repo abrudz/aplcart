@@ -1187,7 +1187,7 @@ Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (arithmetic p
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Function		Mathematical	informationtheory text message string	
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items	
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq	
-Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending    https://tio.run/##SyzI0U2pTMzJT///P03hUdsEBQ3DR22TdTT0H/Wu0DTUeNS16FHHikc9ezUNdB51LtDk4nrUNxWkrAxEGOsAEVChwqPezaYwGWOFNIUyGEddHVWHhtGj3i3GmjpABtCGzSZAFlgErj4oNTe/LDMvXSEnNTEFSOsoFKUWpCaWpKboKJQUJWbmgOSMiq3UYTqMUKwjSrsxknawa///BwA
+Xs(1↓,(/⍨)1(⊢∨⌽)0,≠)Yv	Removing leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending	https://tio.run/##SyzI0U2pTMzJT///P03hUdsEBQ3DR22TdTT0H/Wu0DTUeNS16FHHikc9ezUNdB51LtDk4nrUNxWkrAxEGOsAEVChwqPezaYwGWOFNIUyGEddHVWHhtGj3i3GmjpABtCGzSZAFlgErj4oNTe/LDMvXSEnNTEFSOsoFKUWpCaWpKboKJQUJWbmgOSMiq3UYTqMUKwjSrsxknawa///BwA
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical		
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords	
 M(⊢∘××⊣×∘⌈¯0.5+∘|÷⍨)N	Rounding N to nearest M (favouring towards 0)	Tacit	Dyadic Function		Mathematical	precision favoring	
