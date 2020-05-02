@@ -1538,7 +1538,7 @@ Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv 
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	store dyalog transcript text scrollback scroll-back	
 X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable	
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item	
-{⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces  https://tio.run/##rVAxTsNAEOz9ipGbLVDEG1CqSFRAS7GxN7HF5fZ0vnCyEKkQRSJHaShpqPgA4j/3kXCOKOjJFquZXe3MaNmZSd2z0eXxmPZv6fWApzR8Xabhc0MApeE702fQbIGx1JoesxE9WIlAoxFBM63H5rw68Yjq68w6x1Vrl1Sk4R1TXTn2gtiGpvh1IlwQMr7JiNL24z8mOf4fl9AI/NravEFoVwJdnGYhKthlBa4a6cBzfZQxTdVTxyZQ2r2I5bmR26vru@I@S5yuJxXKs7@lRHnOB5Q/
+{⍵/⍨~'  '⍷⍵}Dv	Removing multiple blanks	Dfn	Monadic Function		Text	consecutive spaces	https://tio.run/##rVAxTsNAEOz9ipGbLVDEG1CqSFRAS7GxN7HF5fZ0vnCyEKkQRSJHaShpqPgA4j/3kXCOKOjJFquZXe3MaNmZSd2z0eXxmPZv6fWApzR8Xabhc0MApeE702fQbIGx1JoesxE9WIlAoxFBM63H5rw68Yjq68w6x1Vrl1Sk4R1TXTn2gtiGpvh1IlwQMr7JiNL24z8mOf4fl9AI/NravEFoVwJdnGYhKthlBa4a6cBzfZQxTdVTxyZQ2r2I5bmR26vru@I@S5yuJxXKs7@lRHnOB5Q/
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif	
 {(⍎⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	load fetch get include from .dws	
 {(⍎⍵⎕NS⍬).⎕CY⍵}Dv	Import workspace content to namespace	Dfn	Monadic Function		System	load include fetch get	
