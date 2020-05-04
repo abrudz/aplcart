@@ -345,8 +345,8 @@ r←{tn} (regex ⎕S trans) text	Search text for PCRE regex returning trans (opt
 {created}←{flags} ⎕MKDIR dir	Create or ensure existence of directory dir	System	Function	Native Files	System Function	md newfolder make	
 {end_offset}←x ⎕NREPLACE tn offset {type}	Write x to file tied with number tn at offset as type	System	Function	Native Files	System Function	overwrite	
 {linenos}←{linenos} ⎕MONITOR name	Set/report the current state of performance monitoring for a function	System	Function	System	System Function	define query speed measure	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJbvn51onWSVwKColAnr2pgYECED/q3WIAFEoCCj3q2ZkIZBaBmV0Geqbaidp6h6cncQFN4DJUMFIwVnjUN9XX388zxD9IQR1onrqCwqPeuQrBqSUKufl5mSX5RVxAUQVsAKQuqDRPIa00L7kkMz@PC2gU0CINIOUXpKPuk5mXqq6gDlRRDKScA0KBZEh@SWIOkPbTd1R/1LsKYbcmsuW@EIsVCktTiyr//wcA
-{linenos}←{linenos} ⎕STOP name	Set/report the current state of stops for a function	System	Function	System	System Function	define query halt inspect breakpoint	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZBPSk1Lb8oVR0hkJuZkpKDLJCUWpmfl6LOBdTKZQwSDA7xD1BQB5qizgUkAA
-{linenos}←{linenos} ⎕TRACE name	Set/report the current state of tracing for a function	System	Function	System	System Function	define query monitor	https://tio.run/##SyzI0U2pTMzJT////1FHu4JGskKK5qO2CS7BPgrF2ZkF1onWSVwKColAIaPD0421TYCcJCBHw0jB@FHvFvXEpOSU1DR1zUSg@KO2SX6uESGHpz/q3QzSCxRSB9EFqSkKOZl5qepcCiB5q2SgfvV8IF/hUXeLQgqIV1Ker84FtJ/LQMFQAWi0gomCqcKjvqkhQY7OrgrqQNeoc4GcZPj/PwA
+{linenos}←{linenos} ⎕STOP name	Set/report the current state of stops for a function	System	Function	System	System Function	S∆ define query halt inspect breakpoint	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZBPSk1Lb8oVR0hkJuZkpKDLJCUWpmfl6LOBdTKZQwSDA7xD1BQB5qizgUkAA
+{linenos}←{linenos} ⎕TRACE name	Set/report the current state of tracing for a function	System	Function	System	System Function	T∆ define query monitor	https://tio.run/##SyzI0U2pTMzJT////1FHu4JGskKK5qO2CS7BPgrF2ZkF1onWSVwKColAIaPD0421TYCcJCBHw0jB@FHvFvXEpOSU1DR1zUSg@KO2SX6uESGHpz/q3QzSCxRSB9EFqSkKOZl5qepcCiB5q2SgfvV8IF/hUXeLQgqIV1Ker84FtJ/LQMFQAWi0gomCqcKjvqkhQY7OrgrqQNeoc4GcZPj/PwA
 {names}←{types} ⎕ED names	Open one or more objects (names) in the editor	System	Function	System	System Function	modify code source definition define value )editing	
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary	
 {old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	Data Conversion	System Function	change namespace into current ⎕this )cs converting changing	
@@ -2041,7 +2041,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]FN.Defs	List single-line dfns, dops, derived functions and trains	Non-syntax	Ucmd	FN	User command	commands to operators ]Defs	
 ]FN.Latest	List functions modified since a specified date (default is today), most-recently-changed first	Non-syntax	Ucmd	FN	User command	commands operators ]Latestif 1st	
 ]FN.ReorderLocals	Sort local names in the header of tradfns and tradops	Non-syntax	Ucmd	FN	User command	commands to functions operators ]ReorderLocals sorting reordering ordering	
-]FILE.CD	Report (and, optionally, change) the current directory	Non-syntax	Ucmd	FILE	User command	commands files ]CD changing converting conversion	
+]FILE.CD	Report (and, optionally, change) the current directory	Non-syntax	Ucmd	FILE	User command	commands pwd current working files ]CD changing converting conversion	
 ]FILE.Compare	Compare two component files	Non-syntax	Ucmd	FILE	User command	commands to ]Compare	
 ]FILE.Collect	Split a single file into (up to 999) smaller files	Non-syntax	Ucmd	FILE	User command	commands ]Split chop cut pieces	
 ]FILE.Open	Open a file or directory with the specified application	Non-syntax	Ucmd	FILE	User command	commands files ]Open	
