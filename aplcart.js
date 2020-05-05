@@ -4,11 +4,17 @@ I=_=>{
   var s=new URLSearchParams(location.search)
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
   fetch("table.tsv").then(d=>d.text()).then(d=>{
-    p=d.split(/\r?\n/g).splice(1)
-    u=p.map(p=>p.split("\t")[7])
-    p=p.map(x=>x.toLowerCase().replace(/http\S+$/,"▸"))
-    var i=-1
-    ti=t.innerHTML=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).replace(/.*/,'<tbody>').replace(/\r?\n/g,x=>{i++;return'<tr><td'+(u[i]?' title="Try it online!" onclick="window.open(\''+u[i]+'\')"':'')+'>'}).replace(/\t/g,'<td>').replace(/(<td>[^<]*){6}<tr>/g,'<tr>')+'</tbody>'
+    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
+    c=ps.map(r=>r[0])
+    e=ps.map(r=>r[1])
+    u=ps.map(r=>r[7])
+    h=ps.map(r=>r[8])
+    p=d.split(/\r?\n/g).splice(1).map(x=>x.toLowerCase().replace(/http\S+$/,"▸"))
+    ti=""
+    for(var i=0;i<c.length;i++){
+      ti+='<tr><td>'+(u[i]?'<a href="'+u[i]+'" target="_blank" title="Try it online!"></a>':'')+c[i]+'</td><td>'+(h[i]?'<a href="'+h[i]+'" target="_blank" title="Documentation">?</a>':'')+e[i]+'</td></tr>'
+      }
+    t.innerHTML=ti
     F(Q(q.value=s.get("q")))})}
 Q=_=>{
   var f,l=q.value.toLowerCase().split(' '),r=t.rows,n=0
