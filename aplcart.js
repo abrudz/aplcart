@@ -9,7 +9,7 @@ I=_=>{
     e=ps.map(r=>r[1])
     u=ps.map(r=>r[7])
     h=ps.map(r=>r[8])
-    p=d.split(/\r?\n/g).splice(1).map(x=>x.toLowerCase().replace(/http\S+$/,"▸"))
+    p=d.split(/\r?\n/g).splice(1).map(x=>x.toLowerCase().replace(/http\S+\t/,"(>)").replace(/http\S+$/,"(?)"))
     ti=""
     for(var i=0;i<c.length;i++){
       ti+='<tr><td>'+(u[i]?'<a href="'+u[i]+'" target="_blank" title="Try it online!"></a>':'')+c[i]+'</td><td>'+(h[i]?'<a href="'+h[i]+'" target="_blank" title="Documentation">?</a>':'')+e[i]+'</td></tr>'

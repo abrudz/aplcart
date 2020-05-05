@@ -17,7 +17,7 @@ a:hover{color:#000}
 #a{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#s,#w,td a{border-radius:1em;border:.25ex solid currentcolor}
 td a{margin-right:0.75em;color:#bbb}
-td:first-child a:before{content:'';border:0.6ex solid transparent;border-left:1ex solid currentcolor;display:inline-block;position:relative;margin-left:0.3ex;line-height:0;border-right:none}
+td:first-child a:before{content:'';border:0.6ex solid transparent;border-left:1ex solid currentcolor;display:inline-block;position:relative;margin-left:0.33ex;line-height:0;border-right:none}
 #s{position:absolute;right:2.4em;bottom:0em}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #e{margin:0 .5em}
