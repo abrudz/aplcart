@@ -29,7 +29,7 @@ The site may take some seconds to load due to the information being processed by
 
 DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For example, [searching for `!aplcart 42`](https://duckduckgo.com/?q=!aplcart+42) redirects to APLcart. This also means that if you set your browser's default search engine to DuckDuckGo, you can search APLcart directly from your browser address bar by prefixing your search with `!aplcart`.
 
-## Application ntegration
+## Application Integration
 
 ### Dyalog Windows IDE
 
