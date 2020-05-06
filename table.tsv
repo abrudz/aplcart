@@ -1438,7 +1438,7 @@ rslt←{eval←1} dfns.lisp expr	Evaluator for a subset of Scheme	Dfn	Function		
 rvec←{exclude←⍬} dfns.refs ref	Vector of sub-space references	Dfn	Function		Array Properties	namespacereferences ⎕WX root-space rootspace list		
 table←{opts←⍬} dfns.cmpx exprs	Approximate expression timings	Dfn	Function		System	performance expressioncomparison compare histogram ⎕ML time milliseconds speed commands consumption computing resources ]RunTime ]performance.runtime measure elapsed ms comparison tuning tune		
 to←{dirn←1} dfns.polar fm	Polar from/to cartesian coordinates	Dfn	Function		Data Conversion	polarcoordinates cartesiancoordinates converting change changing		
-tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function		Text	parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser		
+tree←{trace←0} defn dfns.parse expr	Bunda-Gerth parse of expression ⍵	Dfn	Function		Text	parsing currying Bunda-Gerthparser bindingstrength BIDMAS BundaGerthparser apl expression		
 {⎕IO+⍵}J	Changing an index origin dependent argument to act as ⎕IO=0	Dfn	Monadic Function		Index Generation	change converting conversion		
 expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function		Mathematical	parsing polymorphism		
 {⍵:X ⋄ Y}Bs	Ternary: if Bs then execute and return X else execute and return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:		
