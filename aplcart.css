@@ -6,7 +6,7 @@ i{display:none}
 body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
 .b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
 div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidden}
-#t{width:100%;table-layout:fixed;color:#333;white-space:pre-wrap}
+#t{width:100%;table-layout:fixed;color:#333;white-space:pre-wrap;word-wrap: break-word}
 tr:hover td{color:#000}
 td{padding:.5em}
 #z{margin-top:1ex;display:inline-block;width:calc(100% - 1.75em)}
