@@ -210,7 +210,6 @@ X(f⍠Zv)Y	Variant: f qualified by Zv between X and Y	Primitive	Dyadic Function	
 (f⍠Zv)Y	Variant: f qualified by Zv on Y	Primitive	Monadic Function	Dyadic Operator	System	colonquad quadcolon option setting mode	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01BPVFYDsIAX1CiCjd4GCuqezuoKhpoK6oxOQARSaqwBSU5RakJOYnJqiUJ5ZkgFW7Jmel1@UmZeu4JxYnPr/PwA	https://help.dyalog.com/latest/#Language/Primitive%20Operators/Variant.htm#Variant
 (name1 name2)←Y	Multiple assignment	Primitive	Dyadic Function		Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 (name1 name2)←name2 name1	Swap variable values	Primitive	Dyadic Function		Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
-X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Primitive	Monadic Function	Dyadic Operator	Function Application	substitute merge amend update cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK9QdNB51dD3qmKHu6OrpH6quqaDu4erj46/g6Oei4O7v7@IU6ar@/z8A	
 ⎕NULL	The null item	System	Constant		System Function	void emptycell .net nil cell element	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlLOvi4J6SmaRgr76//8A	https://help.dyalog.com/latest/#Language/System%20Functions/null.htm
 ⎕A	The letters from A to Z	System	Constant		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlLOvi4J6TrGCvvr//wA	https://help.dyalog.com/latest/#Language/System%20Functions/a.htm
 ⎕CLEAR	Clear the active workspace	System	Constant	System	System Function	new refresh empty # erase delete remove purge expunge reset all )clear drop without	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WMExLzM3MYfLyjUvBSzApcAFlXHKLEqxwiMfkFhUlF9iBVaHkP//PyA/J6dS4VHbBIVHfVP9XMOhCrmAPKigs49jcLACWB0A	https://help.dyalog.com/latest/#Language/System%20Functions/clear.htm
@@ -391,7 +390,6 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 {exit_context}←{exit_keys {initial_context}} ⎕SR {fields}	Allows user to edit/interact with form defined by ⎕SM	System	Function	System	System Function	read fetch run screen map text-based pseudo-graphics window inputs asynchronous terminal management		https://help.dyalog.com/latest/#Language/System%20Functions/sr.htm
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change region lock status (0:unlock, 1:read, 2:write, optional timeout in seconds) of file tied with number tn	System	Function	Native Files	System Function	restrict access seal passcode changing converting conversion		https://help.dyalog.com/latest/#Language/System%20Functions/nlock.htm
 {name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new		https://help.dyalog.com/latest/#Language/System%20Functions/wc.htm
-1∘⌽Y	Rightmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items		
 +⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice		
 ×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2		
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation		
@@ -405,6 +403,7 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice		
 0∘⌈N	Ensure that N is non-negative (negatives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		
 0∘⌊N	Ensure that N is non-positive (positives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		
+1∘⌽Y	Rightmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items		
 ¯1∘⌽Y	Leftmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		
 1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals		
 1000∘|IA	Last part of packed numeric code ABBB	Tacit	Monadic Function		Data Conversion	unpack converting change changing		
@@ -737,6 +736,7 @@ X(⌊/⍳)Y	Index of first occurrence in X of any major cell of Y	Tacit	Dyadic F
 (+/∊)N	Sum of all atoms in N	Tacit	Monadic Function		Mathematical	sumall +⌿∊ grandtotal sumitems		
 Xv(∨/∊)Yv	Do Xv and Yv have any elements in common?	Tacit	Dyadic Function		Sets	testif anyshared? anycommon? cells items		
 Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	testif subset? containedin ⊆		
+X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Tacit	Monadic Function	Monadic Operator	Structural	substitute merge amend update cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK9QdNB51dD3qmKHu6OrpH6quqaDu4erj46/g6Oei4O7v7@IU6ar@/z8A	
 X(1⍳⍨∊)Y	Index of first occurrence in X of any item of Y	Tacit	Dyadic Function		Index Generation	cell element find locate 1st position find location		
 (∪≡⊢)Y	Are all major cells of Y unique?	Tacit	Monadic Function		Sets	testif alldifferent noduplicates nodups items elements binary base-2 base2		
 (∪⍳⊢)Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA	
@@ -1649,7 +1649,6 @@ X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Df
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
 X{⍺⍪⍵/⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
 Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with height and width Mv and length Ns	Dfn	Dyadic Function		Mathematical	lengths sides		
-{⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA	
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st		
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements		
@@ -1663,6 +1662,7 @@ X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value
 {(⎕SE.SALT.New'HttpCommand'('GET'⍵)).Run.Data}Dv	Download file from URL Dv	Dfn	Monadic Function		System	curl online internet http:// https:// wget fetch		
 {-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row table		
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine tables lists		
+{⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA	
 Xv{⍵⌿⍨⍺∧.=⍨⍵↑[2]⍨≢⍺}Ym	Rows of matrix Ym starting with Xv	Dfn	Dyadic Function		Selection	table		
 Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients Nv	Dfn	Dyadic Function		Mathematical			
 Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Function		Mathematical	crosscorrelation crosscorrelate cross-correlate		
