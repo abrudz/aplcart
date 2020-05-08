@@ -582,7 +582,8 @@ Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s
 I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range		
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-<		
 M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼		
-Ms(0⌈⌊)Ns	Force Ns numbers to range 0≤Ns≤Ms	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–		
+M(0⌈⌊)N	Force numbers N to range 0≤N≤M	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–		
+M(⌊∘-⍣2)N	Force numbers N to range (-M)≤N≤M	Tacit	Dyadic Function		Mathematical	clamp restrictrange between ±M	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFTQe9XQ96pih@6h3sZGmgoGCocKh9UYKJkDS9P9/AA	
 M(⌊÷)N	Integer Division	Tacit	Dyadic Function		Mathematical	intdiv() % // divmod()		
 I(1+|)J	Incrementing cyclic counter J with upper limit I	Tacit	Dyadic Function		Mathematical			
 M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian		
@@ -931,7 +932,7 @@ M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		M
 (100×⊢÷⍤1 0+/)N	Row-wise percentage per row	Tacit	Monadic Function		Mathematical	% horizontally rowwise		
 (100×⊢÷⍤1+⌿)N	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	% vertically columnwise		
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast item element		
-(⊢⍴⍨¯2↑1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize		
+(⊢⍴⍨¯2↑1 1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize make	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RgDI1HnUtAnIf9a44tN7oUdtEQwVDHSBfU0E9UZ2LJOVJySRpMFIwBtIgbSmpaer//wMA	
 (⍴⍴0,1⍴⍨⍴)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal		
 (0 1≡≢∘⍴,≡)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwUDB81LnwUeeiRx0zHvVu0QFyNIFSfkHqQA3qBFT5Q1T9/w8A	
 (2∘⍴⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m,n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B	
@@ -1259,7 +1260,7 @@ Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matr
 Is(⊣|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Multiplicative inverse of Js modulo Is (fast)	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic		
 (,(/⍨)(<\∘,(⊢=⍴⍴⌈⌿)∧⊢=∘⍉⌽∘⍴⍴⌊/))Nm	Value of saddle point	Tacit	Monadic Function		Mathematical			
 '&[^;]+;'⎕R{3⊃,⎕XML⍠'Whitespace' 'Preserve'⊢'<_>',⍵.Match,'</_>'}Dv	Evaluate XML-style escape sequences	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs		
-dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL		
+dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL		http://dfns.dyalog.com/n_esh.htm
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function		System			
 graph←graph dfns.gperm perm	⍵-permutation of vertices of graph ⍺	Dfn	Function		Mathematical	unweightedgraph		
 graph←graph dfns.insnode vertex	Insert vertex ⍵ in graph ⍺	Dfn	Function		Mathematical			
