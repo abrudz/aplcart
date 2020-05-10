@@ -1900,64 +1900,70 @@ f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Gr
 Xv(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Yv	Mesh vectors Xv and Yv differently in each column under control of Am (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing multiple		
 Xm(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Ym	Mesh matrices Xm and Ym differently for each column under control of Am (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix multiple column-wise		
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand		
-mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa		
-realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary		
-¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating		
-○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏		
-]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running		
-int.frac	Decimal Point	Syntax	Array		Expression	period rational		
-ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period		
-⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table empty void		
-1111⌶Jv	Number of Threads	I-beam	Monadic Function		Function Application	multithreading parallelprocessing performance affinity ibeam		
-1112⌶Js	Parallel Execution Threshold	I-beam	Monadic Function		Function Application	multithreading parallelprocessing performance affinity ibeam		
-127⌶⍬	Overwrite Free Pockets	I-beam	Constant		System	memory wipe ibeam		
-180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Monadic Function		Data Conversion	code oo classes private instance ibeam converting change changing		
-181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Monadic Function		Array Properties	datarepresentation internalrepresentation ibeam		
-183⌶Dv	Name classes for pieces of function/operator Dv	I-beam	Monadic Function		Data Conversion	⎕XR explainrepresentation trains derived functions operators converting change changing	https://tio.run/##SyzI0U2pTMzJT///37Es/VHbBO1HPfsPb3/UuYjrUd9UIB9I@gUpqAMl1aEihhbGj3q2gUX@/wcA	
-200⌶Dv	Syntax Colouring	I-beam	Monadic Function		Data Conversion	coloring highlighting parse parsing tokentypes ibeam converting change changing		
-2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Monadic Function		System	freememory ibeam		
-2007⌶0	Disable global triggers	I-beam	Monadic Function		System			
-2007⌶1	Enable global triggers	I-beam	Monadic Function		System			
-201⌶⍬	Syntax Colour Tokens	I-beam	Constant		Data Conversion	coloring highlighting parse parsing tokentypes ibeam converting change changing		
-2014⌶Y	Remove Data Binding (Windows only)	I-beam	Function		Array Properties	disconnect databinding delete drop without ibeam		
-2016⌶Yv	Create .NET Delegate (Windows only)	I-beam	Function		Array Properties	make new ibeam		
-2017⌶Dv	Identify .NET Type (Windows only)	I-beam	Function		Array Properties	ibeam		
-2022⌶0	Flush Session Caption (Windows only)	I-beam	Constant		System	titlebar ibeam		
-2023⌶0	Close all Windows	I-beam	Constant		System	shut ibeam		
-2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel', Windows only)	I-beam	Function		System	scaling highresolution hires retina px ibeam		
-2036⌶0	Disable auto-status (unofficial)	I-beam	Monadic Function		System	window pop-up popup hide suppress deactivate		
-2036⌶1	Enable auto-status (unofficial)	I-beam	Monadic Function		System	window pop-up popup show allow activate		
-2100⌶0	Export Workspace to in-Memory .NET Assembly (Windows only)	I-beam	Constant		System	ibeam		
-2101⌶0	Close .NET AppDomain (Windows only)	I-beam	Constant		System	ibeam		
-2350⌶Dv	Set list of user commands for auto-complete (unofficial)	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input		
-2400⌶Bs	Set Workspace Save Options	I-beam	Function		System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam		
-2401⌶Bs	Expose Root Properties	I-beam	Function		System	dotting ibeam		
-2501⌶0	Discard parked incoming .NET threads (Windows only)	I-beam	Constant		System	ibeam		
-2501⌶Bs	Discard incoming .NET thread on exit (Windows only)	I-beam	Function		System	ibeam		
-2502⌶0	Discard existing used .NET threads (Windows only)	I-beam	Function		System	ibeam	parked	
-2503⌶Js	Mark Thread as Uninterruptible	I-beam	Function		System	greenthreading launch run suspend suspension ibeam		
-2520⌶Bs	Use Separate Thread For .NET	I-beam	Function		System	ibeam		
-2704⌶Bs	Continue Autosave	I-beam	Function		System	)continue ibeam		
-3002⌶Bs	Disable Component Checksum Validation	I-beam	Function		System	dcf ibeam		
-3501⌶0	Connected to the RIDE	I-beam	Constant		System	remoteintegrateddevelopmentenvironment ibeam		
-3502⌶Yv	Manage RIDE Connections	I-beam	Function		System	remoteintegrateddevelopmentenvironment ibeam		
-3503⌶Dv	Cross-platform equivalent of ⎕WC'MsgBox' (unofficial)	I-beam	Function		System	ride dialog remoteintegrateddevelopmentenvironment ibeam display Create new notification boxed enclosed		
-4000⌶⍬	Fork New Task (UX only)	I-beam	Constant		System	aix multithreading parallel ibeam		
-4001⌶Dv	Change User (UX only)	I-beam	Function		System	aix multithreading parallel ibeam changing		
-4002⌶⍬	Reap Forked Tasks (UX only)	I-beam	Constant		System	aix multithreading parallel ibeam		
-4007⌶⍬	Signal Counts (UX only)	I-beam	Constant		System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH ibeam		
-4070⌶Y	Dyalog registry location and user documents folder (unofficial, Windows only)	I-beam	Constant		System	key home		
-50100⌶Js	Line Count	I-beam	Function		System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam		
-5176⌶0	List Loaded Files	I-beam	Constant		System	⎕fix source text vector ibeam		
-5177⌶⍬	List Loaded File Objects	I-beam	Constant		System	⎕fix source text vector ibeam		
-5178⌶Yv	Remove Loaded File Object Info	I-beam	Function		System	⎕fix source text delete drop without ibeam		
-5179⌶Yv	Loaded File Object Info	I-beam	Function		System	⎕fix source text ibeam		
-60⌶D	Partition lines of D into APL tokens (unofficial)	I-beam	Monadic Function		Text	tokenise tokenize parser dyalog split chop cut identifiers ibeam segments partitions		
-600⌶Js	Trap Control	I-beam	Function		System	debugging repl try catch error handling ibeam		
-739⌶0	Temporary Directory	I-beam	Constant		System	tmp ibeam		
-8415⌶Nm	Singular Value Decomposition	I-beam	Function		Mathematical	⌹ ibeam		
-900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function		Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam		
-950⌶⍬	Loaded Libraries	I-beam	Constant		System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		
+mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏		http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
+]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running		http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
+int.frac	Decimal Point	Syntax	Array		Expression	period rational		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period		http://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
+⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table empty void	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DBQMHvVuMdBUeNS5UOFR75pHXUuA5P//AA	
+1111⌶Jv	Number of Threads	I-beam	Monadic Function	Monadic Operator	Function Application	multithreading parallelprocessing performance affinity ibeam	https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NQOBR7xYDriQ0PhdQNVBIAawz8VHHiiSFR12LFQyB4FHPNgVDdQUsokbq//8DAA	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Number%20Of%20Threads.htm
+1112⌶Js	Parallel Execution Threshold	I-beam	Monadic Function	Monadic Operator	Function Application	multithreading parallelprocessing performance affinity ibeam	https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Parallel%20Execution%20Threshold.htm
+127⌶⍬	Overwrite Free Pockets	I-beam	Constant	Monadic Operator	System	memory wipe ibeam		http://help.dyalog.com/latest/#Language/Primitive%20Operators/Overwrite%20Free%20Pockets.htm
+180⌶Dv	Canonical Representation (⎕CR) for methods	I-beam	Monadic Function	Monadic Operator	Data Conversion	code oo classes private instance ibeam converting change changing	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZ61FHu0JwanJRagmXgsKj3rkKwRkZjxqWgcS5rFzzUsDquLge9U191DZB4VHnIigrWU/D0MLgUc82TQV1iH51bIqADOcguIr//wE	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Canonical%20Representation.htm
+181⌶Y	Unsqueezed Type (⎕DR)	I-beam	Monadic Function	Monadic Operator	Array Properties	datarepresentation internalrepresentation ibeam	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlEuQguGjtomGCoYGBgZcUHFDC8NHPduQJP7/BwA	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Unsqueezed%20Type.htm
+183⌶Dv	Name classes for pieces of function/operator Dv	I-beam	Monadic Function	Monadic Operator	Data Conversion	⎕XR explainrepresentation trains derived functions operators converting change changing	https://tio.run/##SyzI0U2pTMzJT///37Es/VHbBO1HPfsPb3/UuYjrUd9UIB9I@gUpqAMl1aEihhbGj3q2gUX@/wcA	
+200⌶Dv	Syntax Colouring	I-beam	Monadic Function	Monadic Operator	Data Conversion	coloring highlighting parse parsing tokentypes ibeam converting change changing		
+2002⌶Js	Specify Workspace Available (⎕WA)	I-beam	Monadic Function	Monadic Operator	System	freememory ibeam		
+2007⌶0	Disable global triggers	I-beam	Monadic Function	Monadic Operator	System			
+2007⌶1	Enable global triggers	I-beam	Monadic Function	Monadic Operator	System			
+201⌶⍬	Syntax Colour Tokens	I-beam	Constant	Monadic Operator	Data Conversion	coloring highlighting parse parsing tokentypes ibeam converting change changing		
+2014⌶Y	Remove Data Binding (Windows only)	I-beam	Monadic Function	Monadic Operator	Array Properties	disconnect databinding delete drop without ibeam		
+2016⌶Yv	Create .NET Delegate (Windows only)	I-beam	Monadic Function	Monadic Operator	Array Properties	make new ibeam		
+2017⌶Dv	Identify .NET Type (Windows only)	I-beam	Monadic Function	Monadic Operator	Array Properties	ibeam		
+2022⌶0	Flush Session Caption (Windows only)	I-beam	Constant	Monadic Operator	System	titlebar ibeam		
+2023⌶0	Close all Windows	I-beam	Constant	Monadic Operator	System	shut ibeam		
+2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel', Windows only)	I-beam	Monadic Function	Monadic Operator	System	scaling highresolution hires retina px ibeam		
+2036⌶0	Disable auto-status (unofficial)	I-beam	Monadic Function	Monadic Operator	System	window pop-up popup hide suppress deactivate		
+2036⌶1	Enable auto-status (unofficial)	I-beam	Monadic Function	Monadic Operator	System	window pop-up popup show allow activate		
+2100⌶0	Export Workspace to in-Memory .NET Assembly (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		
+2101⌶0	Close .NET AppDomain (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		
+2350⌶Dv	Set list of user commands for auto-complete (unofficial)	I-beam	Constant	Monadic Operator	System	ibeam ucmd ] autocomplete autocompletion session input		
+2400⌶Bs	Set Workspace Save Options	I-beam	Monadic Function	Monadic Operator	System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam		
+2401⌶Bs	Expose Root Properties	I-beam	Monadic Function	Monadic Operator	System	dotting ibeam		
+2501⌶0	Discard parked incoming .NET threads (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		
+2501⌶Bs	Discard incoming .NET thread on exit (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam		
+2502⌶0	Discard existing used .NET threads (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam	parked	
+2503⌶Js	Mark Thread as Uninterruptible	I-beam	Monadic Function	Monadic Operator	System	greenthreading launch run suspend suspension ibeam		
+2520⌶Bs	Use Separate Thread For .NET	I-beam	Monadic Function	Monadic Operator	System	ibeam		
+2704⌶Bs	Continue Autosave	I-beam	Monadic Function	Monadic Operator	System	)continue ibeam		
+3002⌶Bs	Disable Component Checksum Validation	I-beam	Monadic Function	Monadic Operator	System	dcf ibeam		
+3501⌶0	Connected to the RIDE	I-beam	Constant	Monadic Operator	System	remoteintegrateddevelopmentenvironment ibeam		
+3502⌶Yv	Manage RIDE Connections	I-beam	Monadic Function	Monadic Operator	System	remoteintegrateddevelopmentenvironment ibeam		
+3503⌶Dv	Cross-platform equivalent of ⎕WC'MsgBox' (unofficial)	I-beam	Monadic Function	Monadic Operator	System	ride dialog remoteintegrateddevelopmentenvironment ibeam display Create new notification boxed enclosed		
+4000⌶⍬	Fork New Task (UX only)	I-beam	Constant	Monadic Operator	System	aix multithreading parallel ibeam		
+4001⌶Dv	Change User (UX only)	I-beam	Monadic Function	Monadic Operator	System	aix multithreading parallel ibeam changing		
+4002⌶⍬	Reap Forked Tasks (UX only)	I-beam	Constant	Monadic Operator	System	aix multithreading parallel ibeam		
+4007⌶⍬	Signal Counts (UX only)	I-beam	Constant	Monadic Operator	System	SIGHUP SIGINT SIGQUIT SIGTERM SIGWINCH ibeam		
+4070⌶Y	Dyalog registry location and user documents folder (unofficial, Windows only)	I-beam	Constant	Monadic Operator	System	key home		
+50100⌶Js	Line Count	I-beam	Monadic Function	Monadic Operator	System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam		
+5176⌶0	List Loaded Files	I-beam	Constant	Monadic Operator	System	⎕fix source text vector ibeam		
+5177⌶⍬	List Loaded File Objects	I-beam	Constant	Monadic Operator	System	⎕fix source text vector ibeam		
+5178⌶Yv	Remove Loaded File Object Info	I-beam	Monadic Function	Monadic Operator	System	⎕fix source text delete drop without ibeam		
+5179⌶Yv	Loaded File Object Info	I-beam	Monadic Function	Monadic Operator	System	⎕fix source text ibeam		
+60⌶D	Partition lines of D into APL tokens (unofficial)	I-beam	Monadic Function	Monadic Operator	Text	tokenise tokenize parser dyalog split chop cut identifiers ibeam segments partitions		
+600⌶Js	Trap Control	I-beam	Monadic Function	Monadic Operator	System	debugging repl try catch error handling ibeam		
+739⌶0	Temporary Directory	I-beam	Constant	Monadic Operator	System	tmp ibeam		
+8415⌶Nm	Singular Value Decomposition	I-beam	Monadic Function	Monadic Operator	Mathematical	⌹ ibeam		
+{Cv}(8667⌶)Js Cv	Save (names Cv) into shared code file Dv	I-beam	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	System	saving storing putting		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Function	Monadic Operator	System	attaching to workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+8666⌶⎕NULL	Assimilate shared code files	I-beam	Constant	Monadic Operator	System	copy referenced objects into workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+8666⌶0⍴⊂''	Detach shared code files	I-beam	Constant	Monadic Operator	System	detaching all from workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+8659⌶⍬	List shared code files	I-beam	Constant	Monadic Operator	System	report workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+Is(8659⌶)Jv	List names (of name classes Jv) for share code file in slot Is	I-beam	Dyadic Function	Monadic Operator	System	report workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam		
+950⌶⍬	Loaded Libraries	I-beam	Constant	Monadic Operator	System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		
 ⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00		
 ⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J U+0D 0x0Ah \u0A %0A newline linefeed		
 ⎕UCS 11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K U+00 0x00h \u00 %00 tabulation		
