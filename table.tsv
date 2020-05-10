@@ -1900,13 +1900,13 @@ f{' ∘'[1+(⊢∘.=⍨∘⌽¯1+⌊/+∘⍳1+⌈/-⌊/)⌊0.5+⍺⍺ ⍵]}Nv	Gr
 Xv(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Yv	Mesh vectors Xv and Yv differently in each column under control of Am (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing multiple		
 Xm(Am{⍉(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⍉⍺),¨(⍺⍺\⍤1⍉⍵)})Ym	Mesh matrices Xm and Ym differently for each column under control of Am (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix multiple column-wise		
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+¯1↓0,⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] after Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand		
-mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
-realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
-¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
-○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏		http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
-]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running		http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
-int.frac	Decimal Point	Syntax	Array		Expression	period rational		http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
-ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period		http://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
+mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwMFGwVDF2NueAiWkbG//8DAA	http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+realJimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTdU0FIw0DPlggoYeBkBBYz@/wcA	http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTdU0FYw5oJyDRV0FYz//wcA	http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+○2	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQeTe82@v8fAA	http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
+]name	Invoke user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd calling running	https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSuYGAEA	http://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
+int.frac	Decimal Point	Syntax	Array		Expression	period rational	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9YwUDk9XMNYz@f8fAA	http://help.dyalog.com/latest/#Language/Introduction/Variables/Numbers.htm
+ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point period	https://tio.run/##SyzI0U2pTMzJT///Xz1RXeFR31S/YIVHvWu4EvXKEosUHrVNUDAx4gIKg1hgsf//AQ	http://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
 ⍬⊤⍬	zero-by-zero numeric matrix	Constant			Expression	0⍴0 table empty void	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DBQMHvVuMdBUeNS5UOFR75pHXUuA5P//AA	
 1111⌶Jv	Number of Threads	I-beam	Monadic Function	Monadic Operator	Function Application	multithreading parallelprocessing performance affinity ibeam	https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NQOBR7xYDriQ0PhdQNVBIAawz8VHHiiSFR12LFQyB4FHPNgVDdQUsokbq//8DAA	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Number%20Of%20Threads.htm
 1112⌶Js	Parallel Execution Threshold	I-beam	Monadic Function	Monadic Operator	Function Application	multithreading parallelprocessing performance affinity ibeam	https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	http://help.dyalog.com/latest/#Language/Primitive%20Operators/Parallel%20Execution%20Threshold.htm
@@ -1934,7 +1934,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 2401⌶Bs	Expose Root Properties	I-beam	Monadic Function	Monadic Operator	System	dotting ibeam		
 2501⌶0	Discard parked incoming .NET threads (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		
 2501⌶Bs	Discard incoming .NET thread on exit (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam		
-2502⌶0	Discard existing used .NET threads (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam	parked	
+2502⌶0	Discard existing used .NET threads (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam parked		
 2503⌶Js	Mark Thread as Uninterruptible	I-beam	Monadic Function	Monadic Operator	System	greenthreading launch run suspend suspension ibeam		
 2520⌶Bs	Use Separate Thread For .NET	I-beam	Monadic Function	Monadic Operator	System	ibeam		
 2704⌶Bs	Continue Autosave	I-beam	Monadic Function	Monadic Operator	System	)continue ibeam		
@@ -2000,9 +2000,9 @@ Is(8659⌶)Jv	List names (of name classes Jv) for share code file in slot Is	I-b
 :With	:With ns ⋄ block ⋄ :EndWith	Syntax	Control	Structure	Expression	scope namespace object		
 bx:Y	Dfn/dop Guard (conditional result)	Syntax			Expression	if ternary		
 name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump target	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcRpmxTs7RmAJGwEFAYJWSGJGatzAfVzAfUDAA	
-#	Reference to workspace root namespace	Constant			System	top hashtag numbersign poundsign		
-'	Character delimiter	Syntax	Array		Expression	quote apostrophe string text		
-⍝	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb		
+#	Reference to workspace root namespace	Constant			System	top hashtag numbersign poundsign	https://tio.run/##SyzI0U2pTMzJT/8PBGWJRQqP2iYoqBfl55eoc6knqis86pvqF6zwqHcNV6IeUBooq56TmpimzsUFlAGpBQsjOMogLgA	http://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
+'	Character delimiter	Syntax	Array		Expression	quote apostrophe string text	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OS1blgHFN1BVsF0///AQ	http://help.dyalog.com/latest/#Language/Introduction/Variables/Characters.htm
+⍝	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK1OL1RUUHvXOVYCJ5OWrcyHzE3OK8xXy8kvU//8HAA	http://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Statements.htm
 )CMD cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell dos operatingsystem commandprocessor		
 )CLEAR	Clear active workspace	Non-syntax			System Command	new refresh empty erase delete remove purge expunge reset all ⎕clear drop without		
 )CONTINUE	Save active workspace as CONTINUE and terminate session	Non-syntax			System Command	exit stop close ⎕off )off ⎕save		
@@ -2184,7 +2184,7 @@ name←⍞	Assignment of character vector without needing to double quotes	Expre
 errno::Y	Dfn/dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try		
 →Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf		
 →⎕LC	Continuing execution	Expression			Expression	resume thread		
-##	Reference to parent namespace of the current namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor		
+##	Reference to parent namespace of the current namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor	https://tio.run/##SyzI0U2pTMzJT/8PBOqJeknqCo/6pvoFKzzqXcMFZD1qm6AAFNVTVgYA	http://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
 X (Y Z)	Stranding: (⊂X),⊂(⊂Y),(⊂Z)	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation		
 X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		
