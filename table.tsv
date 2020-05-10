@@ -1962,21 +1962,21 @@ Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Fun
 8666⌶0⍴⊂''	Detach shared code files	I-beam	Constant	Monadic Operator	System	detaching all from workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 8659⌶⍬	List shared code files	I-beam	Constant	Monadic Operator	System	report workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 Is(8659⌶)Jv	List names (of name classes Jv) for share code file in slot Is	I-beam	Dyadic Function	Monadic Operator	System	report workspace		http://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
-900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam		
-950⌶⍬	Loaded Libraries	I-beam	Constant	Monadic Operator	System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		
-⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00		
-⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J U+0D 0x0Ah \u0A %0A newline linefeed		
-⎕UCS 11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K U+00 0x00h \u00 %00 tabulation		
-⎕UCS 12	Form Feed character (FF)	Constant	Expression		Text	\f ^L U+00 0x00h \u00 %00		
-⎕UCS 127	Delete character (DEL)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D %0D carriagereturn		
-⎕UCS 13	Carriage Return character (CR)	Constant	Expression		Text	\r ^M U+0D 0x0Dh \u0D %0D carriagereturn		
-⎕UCS 13 10	Carriage Return-Line Feed pair (CRLF)	Constant	Expression		Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A %0D%0A enter linebreak windows		
-⎕UCS 26	End-Of-File character (EOF)	Constant	Expression		Text	SUB ^Z U+0A 0x0Dh \u0D %0D carriagereturn		
-⎕UCS 27	Escape character (ESC)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D %0D carriagereturn		
-⎕UCS 7	Bell character (BEL)	Constant	Expression		Text	\a ^G U+07 0x07h \u07 %07 beep		
-⎕UCS 8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 %08		
-⎕UCS 9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^I U+00 0x00h \u00 %00 tabulation		
-⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then		
+900⌶Y	Called Monadically (tradfns/tradops only)	I-beam	Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam		http://help.dyalog.com/latest/#Language/Primitive%20Operators/Called%20Monadically.htm
+950⌶⍬	Loaded Libraries	I-beam	Constant	Monadic Operator	System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		http://help.dyalog.com/latest/#Language/Primitive%20Operators/Loaded%20Libraries.htm
+⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPD/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J U+0D 0x0Ah \u0A %0A newline linefeed	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGjw/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K U+00 0x00h \u00 %00 tabulation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj4/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 12	Form Feed character (FF)	Constant	Expression		Text	\f ^L U+00 0x00h \u00 %00	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj0/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 127	Delete character (DEL)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D %0D carriagereturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGhk/v8/AA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 13	Carriage Return character (CR)	Constant	Expression		Text	\r ^M U+0D 0x0Dh \u0D %0D carriagereturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj8/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 13 10	Carriage Return-Line Feed pair (CRLF)	Constant	Expression		Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A %0D%0A enter linebreak windows	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGisYGjw/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 26	End-Of-File character (EOF)	Constant	Expression		Text	SUB ^Z U+0A 0x0Dh \u0D %0D carriagereturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGT2/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 27	Escape character (ESC)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D %0D carriagereturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGT@/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 7	Bell character (BEL)	Constant	Expression		Text	\a ^G U+07 0x07h \u07 %07 beep	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYP7/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 %08	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPH/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⎕UCS 9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^I U+00 0x00h \u00 %00 tabulation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPn/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
+⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Tz81LVFR51tyhA@SXl@er//wMA	http://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Statements.htm
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣		
 :Implements Constructor	Function is a class constructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
 :Implements Destructor	Function is a class destructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
