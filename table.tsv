@@ -391,64 +391,64 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 {exit_context}←{exit_keys {initial_context}} ⎕SR {fields}	Allows user to edit/interact with form defined by ⎕SM	System	Function	System	System Function	read fetch run screen map text-based pseudo-graphics window inputs asynchronous terminal management		https://help.dyalog.com/latest/#Language/System%20Functions/sr.htm
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change region lock status (0:unlock, 1:read, 2:write, optional timeout in seconds) of file tied with number tn	System	Function	Native Files	System Function	restrict access seal passcode changing converting conversion		https://help.dyalog.com/latest/#Language/System%20Functions/nlock.htm
 {name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new		https://help.dyalog.com/latest/#Language/System%20Functions/wc.htm
-+⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice		
-×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2		
-?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation		
-=⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths		
-≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		
++⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
+×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
+?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Deal.htm
+=⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Equal.htm
+≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Not%20Equal.htm
 X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Function Application	to from dummy onrightargument		
-1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next		
-¯1∘-J	2's-complement bit-wise NOT	Tacit	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos		
-0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods		
-100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	conversion converting change changing		
-3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice		
-0∘⌈N	Ensure that N is non-negative (negatives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		
-0∘⌊N	Ensure that N is non-positive (positives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		
-1∘⌽Y	Rightmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items		
-¯1∘⌽Y	Leftmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		
-1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals		
-1000∘|IA	Last part of packed numeric code ABBB	Tacit	Monadic Function		Data Conversion	unpack converting change changing		
-2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	testif		
-256∘|J	Convert from signed short integers to unsigned short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing		
-0∘<N	Strictly positive?	Tacit	Monadic Function		Mathematical	testif		
-0∘≤N	Non-negative?	Tacit	Monadic Function		Mathematical	testif nonnegative?		
-0∘=N	Zero?	Tacit	Monadic Function		Mathematical	testif		
-0∘≥N	Non-positive?	Tacit	Monadic Function		Mathematical	testif nonpositive?		
-0∘>N	Strictly negative?	Tacit	Monadic Function		Mathematical	testif		
-0∘≠N	Non-zero?	Tacit	Monadic Function		Mathematical	testif nonzero?		
-1∘↓Y	Behead: Remove first major cell	Tacit	Monadic Function		Selection	drop chop leading element item 1st delete start beginning without		
-¯1∘↓Y	Curtail: Remove last major cell	Tacit	Monadic Function		Selection	drop chop trailing element item delete ending without		
-⍬∘⍴Y	First element of Y as a scalar	Tacit	Monadic Function		Selection	1st cell item		
-10∘*N	Anti-logarithm	Tacit	Monadic Function		Mathematical	log⁻¹ log^1 antilogarithm		
-10∘⍟N	Logarithm	Tacit	Monadic Function		Mathematical	log() log-10 log10() 10-log		
-0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()		
-0∘○N	Triangle side as function of side (hypotenuse≤1)	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		
-1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sin() sinus		
-10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude		
-11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()		
-12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle ∠		
-2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus		
-3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens		
-4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()		
-4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		
-5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinh() sinushyperbolicus		
-6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosh() cosinushyperbolicus		
-7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh() tangenshyperbolicus		
-8∘○N	icos ←→ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary conh()		
-9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()		
-¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arsin() asin() arcussinus sin⁻¹() sin^-1()		
-¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate		
-¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	imaginary complex itimes		
-¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	antiphase phasor cis()		
-¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()		
-¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctan() atan() arcustangens tan⁻¹() tan^-1()		
-¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()		
-¯4∘○N	Triangle side (≥1) as function of hypotenuse	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		
-¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()		
-¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()		
-¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		
-¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()		
-¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity		
+1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
+¯1∘-J	2's-complement bit-wise NOT	Tacit	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Subtract.htm
+0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
+100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	conversion converting change changing		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
+3∘×N	Triple: 3×N	Tacit	Monadic Function		Mathematical	thrice		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
+0∘⌈N	Ensure that N is non-negative (negatives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Maximum.htm
+0∘⌊N	Ensure that N is non-positive (positives become zero)	Tacit	Monadic Function		Mathematical	clamp limit restrict		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Minimum.htm
+1∘⌽Y	Rightmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighbours neighbors lefthand bitshift cells items		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Rotate.htm
+¯1∘⌽Y	Leftmost neighbouring elements (cyclically)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Rotate.htm
+1∘|N	Fractional part of number	Tacit	Monadic Function		Mathematical	decimals		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Residue.htm
+1000∘|IA	Last part of packed numeric code ABBB	Tacit	Monadic Function		Data Conversion	unpack converting change changing		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Residue.htm
+2∘|J	Parity of J (is J odd?)	Tacit	Monadic Function		Mathematical	testif		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Residue.htm
+256∘|J	Convert from signed short integers to unsigned short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Residue.htm
+0∘<N	Strictly positive?	Tacit	Monadic Function		Mathematical	testif		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Less.htm
+0∘≤N	Non-negative?	Tacit	Monadic Function		Mathematical	testif nonnegative?		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Less%20Or%20Equal.htm
+0∘=N	Zero?	Tacit	Monadic Function		Mathematical	testif		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Equal.htm
+0∘≥N	Non-positive?	Tacit	Monadic Function		Mathematical	testif nonpositive?		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Greater%20Or%20Equal.htm
+0∘>N	Strictly negative?	Tacit	Monadic Function		Mathematical	testif		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Greater.htm
+0∘≠N	Non-zero?	Tacit	Monadic Function		Mathematical	testif nonzero?		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Not%20Equal.htm
+1∘↓Y	Behead: Remove first major cell	Tacit	Monadic Function		Selection	drop chop leading element item 1st delete start beginning without		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Drop.htm
+¯1∘↓Y	Curtail: Remove last major cell	Tacit	Monadic Function		Selection	drop chop trailing element item delete ending without		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Drop.htm
+⍬∘⍴Y	First element of Y as a scalar	Tacit	Monadic Function		Selection	1st cell item		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Reshape.htm
+10∘*N	Anti-logarithm	Tacit	Monadic Function		Mathematical	log⁻¹ log^1 antilogarithm		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Power.htm
+10∘⍟N	Logarithm	Tacit	Monadic Function		Mathematical	log() log-10 log10() 10-log		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Logarithm.htm
+0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+0∘○N	Triangle side as function of side (hypotenuse≤1)	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sin() sinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle ∠		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinh() sinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosh() cosinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh() tangenshyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+8∘○N	icos ←→ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary conh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arsin() asin() arcussinus sin⁻¹() sin^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	imaginary complex itimes		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	antiphase phasor cis()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctan() atan() arcustangens tan⁻¹() tan^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯4∘○N	Triangle side (≥1) as function of hypotenuse	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension		
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st		
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise		
@@ -463,23 +463,23 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum		
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical			
 ≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical			
-1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar		
+1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
 ⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st		
 ⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st		
 +⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise		
 -⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise		
 ×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise		
-0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st		
-1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths		
+0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
+1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
 ,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells ending		
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements zip pair		
 ,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions		
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists		
-1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths		
+1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
 ⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st		
-1∘⌷Y	Head: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning		
-0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot		
-1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃		
+1∘⌷Y	Head: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20with%20Axes.htm
+0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
+1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
 X f⍣≡Y	Limit: apply X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
 f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
 +\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal		
@@ -495,13 +495,13 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 ≠\B	Parity: Connect odd and even ones	Tacit	Monadic Function		Mathematical	bitmask bit-mask 1s running trues truths mask		
 ⌈⍀N	Progressive maxima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically		
 ⌊⍀N	Progressive minima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically		
-1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table		
+1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
 ⊥⍨Bv	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at end		
 0∘⊥N	Last major cell of numeric array	Tacit	Monadic Function		Selection	item element		
-100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format		
-2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list		
-0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals		
-0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked		
+100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
+2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
+0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
+0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
 name⊢←Y	In-place update	Tacit	Derived Function	Monadic Operator	Expression	inplace replace value reassign re-assign		
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension		
 name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis	Tacit	Dyadic Function	Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st		
