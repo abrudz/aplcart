@@ -774,10 +774,10 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 ∘.+⍨∘⍳Js	Addition Table for Numbers up to Js	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix integers		
 ∘.×⍨∘⍳Js	Multiplication Table for Numbers up to Js	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix integers		
 ∘.⌈⍨∘⍳Js	Maximum table of 1…Js	Tacit	Monadic Function		Mathematical	matrix		
-∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table remove		
-∘.≤⍨∘⍳Bm	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table		
-∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table		
-∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table remove		
+∘.<⍨∘⍳Js	Upper triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table remove		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQs3nUuwJIP@rdrGD6/z8A
+∘.≤⍨∘⍳Js	Upper triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S55FHvCiDrUe9mBdP//wE
+∘.≥⍨∘⍳Js	Lower triangular matrix with diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S59FHvCiDrUe9mBdP//wE
+∘.>⍨∘⍳Js	Lower triangular matrix without diagonal: Js by Js	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table remove		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQs3vUuwJIP@rdrGD6/z8A
 M(⊢×1-⊣)N	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance ⇍ Mpq		
 M(⊣×1-⊢)N	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq		
 A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation changing converting conversion		
@@ -1123,10 +1123,10 @@ Is(⊢⍴⍨⊣,⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled row-wise)	
 (⊢⍳⍨⌷⍨∘⊂∘⍒⍨)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling do		
 Is(⍉⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise		
 Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default Is:≢Y) groups as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal	https://tio.run/##SyzI0U2pTMzJT///PzQvKrNA4VHbBIWaRx0zHvVuBpGdix51LQIxupoe9ewAsrnKEovAitQTk5JTUtPUuR71TQXxDRUgBgDlYUJGmELGmEImmEKmmEJmmELmmEIWmEIKCKH//wE	
-(⊢≡∘.<⍨∘⍳∘≢)Bm	Is Bm an upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove		
-(⊢≡∘.≤⍨∘⍳∘≢)Bm	Is Bm an upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?		
-(⊢≡∘.≥⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?		
-(⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove		
+(⊢≡∘.<⍨∘⍳∘≢)Bm	Is Bm an upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDD2bR70rgPSj3s0gsnORpgJUjbGC8aPeLYYKaJCLTCMMoKQBOUYgaQaTBuQYAdcMgf//AwA
+(⊢≡∘.≤⍨∘⍳∘≢)Bm	Is Bm an upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDL1HnUse9a4Ash71bgaRnYs0FaCqjBWMH/VuMVRAg1xkG2IAJQ3IMwRJO5g0IM8QuHYI/P8fAA
+(⊢≡∘.≥⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDL1HnUsf9a4Ash71bgaRnYs0FaCqjBWMH/VuMVRAg1xkGWIAhCDtBuQbYgA1BG4U@YYgGfX/PwA
+(⊢≡∘.>⍨∘⍳∘≢)Bm	Is Bm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDD27R70rgPSj3s0gsnORpgJUjbGC8aPeLYYKaJCLDCMMgBCk2YBcIwygRsANItcIJIP@/wcA
 (0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix		
 0.01∘(⊣×∘⌊0.5+÷⍨)N	Rounding to nearest hundredth (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring		
 0.05∘(⊣×∘⌊0.5+÷⍨)N	Rounding currencies to nearest 5 subunits	Tacit	Monadic Function		Mathematical	cents nickels ¢5¢		
