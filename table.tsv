@@ -1829,14 +1829,14 @@ Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dy
 (Ms{⍺⍺⌈⍵⍵⌊⍵}Ns)N	Force N to range Ms≤N≤Ns	Dop	Monadic Function	Dyadic Operator	Mathematical	clamp limitrange between –		
 rslt←{larg} {''} dfns.vof F vof G vof ··· rarg	Vector of functions	Dop		Dyadic Operator	Structural	functionarray vectoroffunctions fork co-operator cooperator list		https://dfns.dyalog.com/n_vof.htm
 As f{⍺:⍺⍺ ⍵ ⋄ ⍵⍵ ⍵}g Y	Ternary: if As then apply f to Y else apply g to Y1	Dop	Dyadic Function	Dyadic Operator	Function Application	conditionaloperator inlineiff ternaryiff ?:		
-{⍺(⍺⍺ ⍵⍵ ⊢)⍵}	Church Boolean AND	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq		
-{⍵(⍺⍺ ⍵⍵ ⊢)⍺}	Church Boolean NAND	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	⍲ shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼		
-{⍺(⊣ ⍺⍺ ⍵⍵)⍵}	Church Boolean OR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq		
-{⍵(⊣ ⍺⍺ ⍵⍵)⍺}	Church Boolean NOR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	⍱ peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽		
-{⍺(⍵⍵ ⍺⍺ ⊣)⍵}	Church Boolean Implication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq		
-{⍵(⍵⍵ ⍺⍺ ⊣)⍺}	Church Boolean Nonimplication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	> abjunction ⇏ not butnot Lpq		
-{⍺(⍺⍺ ⍵⍵ ⊣)⍵}	Church Boolean Converse Implication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying		
-{⍵(⍺⍺ ⍵⍵ ⊣)⍺}	Church Boolean Converse Nonimplication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	< ⇍ Mpq		
+X{⍺(⍺⍺ ⍵⍵ ⊢)⍵}Y	Church Boolean AND	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq		
+X{⍵(⍺⍺ ⍵⍵ ⊢)⍺}Y	Church Boolean NAND	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	⍲ shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼		
+X{⍺(⊣ ⍺⍺ ⍵⍵)⍵}Y	Church Boolean OR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq		
+X{⍵(⊣ ⍺⍺ ⍵⍵)⍺}Y	Church Boolean NOR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	⍱ peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽		
+X{⍺(⍵⍵ ⍺⍺ ⊣)⍵}Y	Church Boolean Implication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq		
+X{⍵(⍵⍵ ⍺⍺ ⊣)⍺}Y	Church Boolean Nonimplication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	> abjunction ⇏ not butnot Lpq		
+X{⍺(⍺⍺ ⍵⍵ ⊣)⍵}Y	Church Boolean Converse Implication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying		
+X{⍵(⍺⍺ ⍵⍵ ⊣)⍺}Y	Church Boolean Converse Nonimplication	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	< ⇍ Mpq		
 Iv f{⊃,/⍺⍺/¨⍺⊂⍵}Y	Segmented reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors partitioned sub-lists subvectors sublists		
 Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise sub-vectors sub-lists partitioned subvectors sublists row-wise horizontally		
 f{⍵.(⍺⍺∘⍎¨⎕NL ¯2)}Y	Apply f on each variable in each namespace in Y	Dop		Monadic Operator	Function Application	variablewise blank		
