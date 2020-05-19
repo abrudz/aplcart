@@ -2397,7 +2397,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 :Implements Trigger name1{,name2,name3,…}	Function is a trigger function: called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents		
 )SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for tdno)	Non-syntax			System Command	stack ⎕si ⎕xsi 1st		https://help.dyalog.com/latest/#Language/System%20Commands/si.htm
-)SINL{n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st		https://help.dyalog.com/latest/#Language/System%20Commands/sinl.htm
+)SINL {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st		https://help.dyalog.com/latest/#Language/System%20Commands/sinl.htm
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx71znvUNvlR74pHnYvA7Anq4RmJJfYK6v//l2RkFgMA	
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types		https://help.dyalog.com/latest/#Language/Control%20Structures/signature.htm
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px		
