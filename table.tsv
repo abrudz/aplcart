@@ -2286,7 +2286,7 @@ Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Fun
 80=⎕DR''	Is this Dyalog APL Unicode?	Constant			System	testif		
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	testif		
 ⊃1⎕NPARTS''	Current directory	Expression			System	folder cd pwd _CWDS _CWPS print working name filesystem		
-{ns}⎕SE.UCMD Dv	Execute user command Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running		
+{ns}⎕SE.UCMD Dv	Execute user command, arguments, modifiers Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running		
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table		
 :Implements Method {InterfaceName.MethodName}	Function implements method 'MethodName' whose syntax is specified by interface 'InterfaceName'	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
 #⎕WG'APLVersion'	Report interpreter version	Constant			Expression	dyalogapl-version build exe system		
