@@ -705,7 +705,7 @@ Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 (=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A	
 (+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs		
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise		
-(⌈⌿|)N	Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normal L-∞	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0POrZX6OpYKxg8v8/AA	
+(⌈⌿|)N	Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normal L-∞ ℓ∞ ℓ-∞ Linf	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0POrZX6OpYKxg8v8/AA	
 (⌊⌿|)N	Smallest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnswise horizontally least minimum absolute value vertically columnwise row-wise rowwise		
 (1∘↑⍤1)Ym	First column as a column matrix (column vector)	Tacit	Monadic Function		Selection	leftmostcolumn leading 1st table list start beginning		
 (¯1∘↑⍤1)Ym	Last column as a column matrix (column vector)	Tacit	Monadic Function		Selection	rightmostcolumn trailing table list ending		
@@ -1137,7 +1137,7 @@ Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default I
 (0=⊢∘.|⍨∘⍳⌈/)Jv	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix		
 0.01∘(⊣×∘⌊0.5+÷⍨)N	Rounding to nearest hundredth (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring		
 0.05∘(⊣×∘⌊0.5+÷⍨)N	Rounding currencies to nearest 5 subunits	Tacit	Monadic Function		Mathematical	cents nickels ¢5¢		
-Is(⊣*∘÷⍨1⊥*⍨∘|)N	Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LdZ61DHj8PZHvSsMH3Ut1QLSQH6NpoKxgsn//wA	
+Is(⊣*∘÷⍨1⊥*⍨∘|)N	Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p ℓp ℓ-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LdZ61DHj8PZHvSsMH3Ut1QLSQH6NpoKxgsn//wA	
 (+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?		
 (+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?		
 Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+b^x y=a^x+b curve		
@@ -1180,7 +1180,7 @@ Is(⊢↑⍨∘-∘⌊2÷⍨+∘≢)Dv	Centering text line Dv into a field of wi
 Iv(⌷⍤0 99⌷∘⊃⍤0⍨∘⍳∘≢⊣)Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Tacit	Function		Selection	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing		
 Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise rows		
 Cv(⊢∘≢⍨↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separators)	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing split() segments partitions		
-Is(⊢÷⊣*∘÷⍨1⊥*⍨∘|)N	Normalisation by Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LTq8/VHXYq1HHTOAjN4Vho@6lmoBaSC/RlPBWMHk/38A	
+Is(⊢÷⊣*∘÷⍨1⊥*⍨∘|)N	Normalisation by Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LTq8/VHXYq1HHTOAjN4Vho@6lmoBaSC/RlPBWMHk/38A	
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic		
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
