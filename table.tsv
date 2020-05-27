@@ -1818,7 +1818,7 @@ rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop
 rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator		https://dfns.dyalog.com/
 rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator		https://dfns.dyalog.com/
 refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator	Function Application	functionarray		https://dfns.dyalog.com/n_fnarray.htm
-z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator	Sets	FinnAPLIdiomList		https://dfns.dyalog.com/n_bags.htm
+z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator	Sets			https://dfns.dyalog.com/n_bags.htm
 {larg}(fn dfns.Depth k)rarg	Apply fn at depths k	Dop		Dyadic Operator	Function Application	rank dimensions axes levels		https://dfns.dyalog.com/n_Depth.htm
 array←{ascan} (fn dfns.ascana) array	Associative higher rank scan	Dop		Monadic Operator	Function Application	scanoperators dimensions scanning high-rank any-rank highrank anyrank axes		https://dfns.dyalog.com/
 sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	Eidenumbers rationalnumber balancedternary skewedfour		https://dfns.dyalog.com/n_ratsum.htm
@@ -1922,7 +1922,7 @@ Is f{⍺←≢⍴⍵ ⋄ (⍺⊃⍴⍵)⍺⍺/[⍺]⍵}Y	Reduction (/) with f in
 X(f{↑[⍵⍵](⊂[⍵⍵]⍺)⍺⍺⊂⍵}ax)Y	Run f on axes of X	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions		
 (X{(⊂⍋(⍳≢⍵),⌊⍺⍺)⌷⍵,⍺⍺}Nv)Y	Insert X at fractional positions Nv in Y (≢Nv)=≢X	Dop	Monadic Function	Dyadic Operator	Structural	slotin		
 Is(Js{(⍋⍋⍺⍺,⍳≢⍴⍵)⍉⍵⍴⍨⍺,⍴⍵})Y	Is-replicate along new dimension at fractional dimension Ms	Dop	Dyadic Function	Monadic Operator	Structural	copy repeat addaxis increaserank axis		
-X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) argument(s) before applying main function (f)	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	circlediaeresis ⍥ Ö ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing		
+X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ (⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y	Over: preprocess (g) argument(s) before applying main function (f)	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	circlediaeresis ⍥ Ö hoof ontop composewith functioncomposition (gX)f(gY) (gX)fgY (fX)g(fY) (fX)gfY comparing		
 Xv(Cv{(⍵,⍨⊂⍺⍺)⍪⍺,⍺∘.(⍎⍺⍺)⍵})Yv	Formatted function table for function Cv with Xv down and Yv across	Dop	Dyadic Function	Monadic Operator	Function Application	matrix		
 (Xv{(⍵⍵⌷⍨∘⊂⍺⍺∘⍳)@(∊∘⍺⍺)⊢⍵}Yv)Y	Replacing elements of Y in set Xv with corresponding element from Yv	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update cells items		
 I f{⍉2⊥(-⍺⍺/0>b)⍪⍺⍺/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-wise application of f between I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary 2s two's twos		
@@ -2139,7 +2139,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]UCMD.UMonitor	Gather user command execution data	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]UMonitor performance tuning tune		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiF@ubnZZbkFyno2tsDAA
 ]UCMD.UNew	Create one or more new user commands (optionally using a GUI)	Non-syntax	Ucmd	UCMD	User command	manage framework ]UNew wizard make own custom personalise personalize		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiF@qWWK@ja2wMA
 ]UCMD.UDebug	Facilitate debugging of user commands	Non-syntax	Ucmd	UCMD	User command	manage framework ]UDebug test stop error trace		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiFuqQmlaYr6NrbAwA
-]UCMD.ULoad	Load a user command's script into the current namespace	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]ULoad fetch import get		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiF@uQnpijo2tsDAA
+]UCMD.ULoad	Load a user command's script into the current namespace	Non-syntax	Ucmd	UCMD	User command	commands manage framework ]ULoad fetch import get source file		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiF@uQnpijo2tsDAA
 ]UCMD.UReset	Refresh cache of all user command definitions	Non-syntax	Ucmd	UCMD	User command	commands framework ]UReset reload restart		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiFBqUWp5Yo6NrbAwA
 ]UCMD.USetup	Run Setup from setup.dyalog	Non-syntax	Ucmd	UCMD	User command	commands framework ]USetup autostart autoexec user's		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiFBqeWlBYo6NrbAwA
 ]UCMD.UVersion	Report version information of a user command	Non-syntax	Ucmd	UCMD	User command	commands framework ]UVersion		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Hhjr7uuiFhqUWFWfm5yno2tsDAA
