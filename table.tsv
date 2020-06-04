@@ -453,34 +453,34 @@ X ⊢∘f Y	Ignore left argument (call f monadically)	Tacit	Dyadic Function		Fun
 ⍬∘⍴Y	First element of Y as a scalar	Tacit	Monadic Function		Selection	1st cell item		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Reshape.htm
 10∘*N	Common anti-logarithm	Tacit	Monadic Function		Mathematical	log⁻¹() log^1() lg⁻¹() lg10^1() log10⁻¹() log10^1() lg10⁻¹() lg10^1() log₁₀⁻¹() log₁₀^1() lg₁₀⁻¹() lg₁₀^1() antilogarithm		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Power.htm
 10∘⍟N	Common logarithm	Tacit	Monadic Function		Mathematical	log() log-10 log10() 10-log₁₀() lg() lg-10 lg10() 10-lg₁₀()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Logarithm.htm
-0∘○N	cos ←→ sin: (1-N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cop()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-0∘○N	Triangle side as function of side (hypotenuse≤1)	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	sin() sinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	abs() modulo modulus amplitude		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	im()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	argument arc() angle ∠ atan2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	cos() cosinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	tan() tangens		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-4∘○N	sinh → cosh: (1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	sinh() sinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	cosh() cosinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	tanh() tangenshyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-8∘○N	icos ←→ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary conh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	re()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arsin() asin() arcussinus sin⁻¹() sin^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯10∘○N	+N	Tacit	Monadic Function		Circular/Trigonometric	complexconjugate		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	imaginary complex itimes		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	antiphase phasor cis()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctan() atan() arcustangens tan⁻¹() tan^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary cohn()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯4∘○N	Triangle side (≥1) as function of hypotenuse	Tacit	Dyadic Function		Circular/Trigonometric	Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯8∘○N	icos ←→ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯9∘○N	N	Tacit	Monadic Function		Circular/Trigonometric	identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+0∘○N	cos ↔ sin: (1-N*2)*.5 (more precise cos arcsin N or sin arccos N)	Tacit	Monadic Function		Circular/Trigonometric	0○ pythagorean complementary cop()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+0∘○N	Triangle side as function of side (hypotenuse≤1)	Tacit	Dyadic Function		Circular/Trigonometric	0○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+1∘○N	Sine N	Tacit	Monadic Function		Circular/Trigonometric	1○ sin() sinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+10∘○N	Magnitude of N	Tacit	Monadic Function		Circular/Trigonometric	10○ abs() modulo modulus amplitude		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+11∘○N	Imaginary part of N	Tacit	Monadic Function		Circular/Trigonometric	11○ im()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	12○ argument arc() angle ∠ atan2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	2○ cos() cosinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	3○ tan() tangens		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	sinh → cosh: (1+N*2)*.5 (more precise cosh arsinh N)	Tacit	Monadic Function		Circular/Trigonometric	4○ pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	4○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	5○ sinh() sinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	6○ cosh() cosinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+7∘○N	Hyperbolic tangent N	Tacit	Monadic Function		Circular/Trigonometric	7○ tanh() tangenshyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+8∘○N	icos ↔ isin: (-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	8○ pythagorean complementary conh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+9∘○N	Real part of N	Tacit	Monadic Function		Circular/Trigonometric	9○ re()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯1∘○N	Arcsine N	Tacit	Monadic Function		Circular/Trigonometric	¯1○ inverse arsin() asin() arcussinus sin⁻¹() sin^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯10∘○N	+N (complex conjugate)	Tacit	Monadic Function		Circular/Trigonometric	¯10○ complexconjugate		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯11∘○N	N×0J1	Tacit	Monadic Function		Circular/Trigonometric	¯11○ imaginary complex itimes i× 𝑖×		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	¯12○ antiphase phasor cis()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	¯2○ inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	¯3○ inverse arctan() atan() arcustangens tan⁻¹() tan^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5 (more precise sinh arcosh N)	Tacit	Monadic Function		Circular/Trigonometric	¯4○ pythagorean complementary cohn()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯4∘○N	Triangle side (≥1) as function of hypotenuse	Tacit	Dyadic Function		Circular/Trigonometric	¯4○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	¯5○ inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	¯6○ inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	¯7○ inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯8∘○N	icos ↔ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	¯8○ pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯9∘○N	N (identity)	Tacit	Monadic Function		Circular/Trigonometric	¯9○ identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension		
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st		
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise		
@@ -556,8 +556,8 @@ f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Mon
 ⍉∘⌽Ym	Rotate 90° counter-clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn counterclockwise		
 ⍉∘⍪Yv	Forming first row of a matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize 1st table		
 ⍉∘⍪Yv	Reshaping vector Yv into a one-row matrix	Tacit	Monadic Function		Structural	1-row table list		
-M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply		
-M-.×N	Alternating Matrix Product of M and N (¯1↑M ←→ 1↑⍴N)	Tacit	Dyadic Function		Mathematical			
+M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ↔ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply		
+M-.×N	Alternating Matrix Product of M and N (¯1↑M ↔ 1↑⍴N)	Tacit	Dyadic Function		Mathematical			
 Am∨.∧Bm	Extending a transitive binary relation	Tacit	Dyadic Function		Boolean/Logical	extension base-2 base2		
 Mv⌈.×Nv	Maximum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	greatestif largest biggest		
 Mm⌊.+Nm	Extending a distance table to next leg	Tacit	Dyadic Function		Mathematical	extension matrix		
@@ -676,7 +676,7 @@ Ms(⍳,)Ns	Catalogue of all pairs from ⍳Ms and ⍳Ns	Tacit	Dyadic Function		In
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?		
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave elementof ∉ cells elements binary base-2 base2		
 (∊∘⍬)Y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		
-X(∊⍤1)Y	Which elements of X belong to corresponding row of Y (≢X ←→ ≢Y)	Tacit	Dyadic Function		Sets	testif memberof isin membership containedin has cells items		
+X(∊⍤1)Y	Which elements of X belong to corresponding row of Y (≢X ↔ ≢Y)	Tacit	Dyadic Function		Sets	testif memberof isin membership containedin has cells items		
 X(1=⍸)Y	Is Y is within range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif ≤Y< ≤X< tao totalarrayordering interval inrange?		
 X(1≠⍸)Y	Is Y is outside range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif >Y≥ >X≥ tao totalarrayordering interval outsiderange?		
 (≢⍸)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue count tally 1s ones truths		
@@ -880,7 +880,7 @@ Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (819⌶819⌶⍨∘1)D	Normalise Case	Tacit	Monadic Function		Text	lettercase caseless caseinsensitive normalize		
 (0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type		
 1∘(⎕A⍳819⌶)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing		
-Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ←→ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins		
+Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ↔ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins		
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without		
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	table lists		
 Xv∘.{⍺⍵}Yv	Catalogue of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix		
@@ -1584,7 +1584,7 @@ Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		
 Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nonincreasing? sorted? dimension		
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nondecreasing? sorted? dimension		
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters		https://dfns.dyalog.com/n_wrapnote.htm
-Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ←→ ⍴Y)	Dfn	Dyadic Function		Structural	chop split separate chunks segments		
+Iv{⍵⊆⍨⍺/⍳≢⍺}Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Dfn	Dyadic Function		Structural	chop split separate chunks segments		
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	store dyalog transcript text scrollback scroll-back		
 X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable		
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item		
@@ -1768,12 +1768,12 @@ Is{⍺>⍵:0 ⋄ ⊃⌽⊃(+\×)/1,⍨⌽⍺,/⍳⍵-1}Js	Count permutations of 
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify buckets bin groups intervals cells items		
 Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose” of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table		
 Mv{⍵⍀⍨~(⍳(≢⍺)+≢⍵)∊(⌊⍺)+⍳≢⍺}Y	Adding an empty cell into Y at fractional positions Mv	Dfn	Monadic Function		Structural	expand insert item element		
-Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
-Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ←→ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
+Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ↔ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
+Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ↔ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
 {'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime ISO-8601:2006-09 ISO8601:2006-09		
 Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	testif contains		
-Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ←→ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	sequence list		
-{+/∧∘⍉⍨∧/⍵[;a⍴1;]≤2 1 3⍉⍵[;2⍴⍨a←≢⍵;]}N	Number of areas intersecting areas in N (⍴N ←→ (n × 2 × dim))	Dfn	Monadic Function		Mathematical			
+Iv{1++\1+((⍳+/⍺)∊+\1,⍺)\⍵-¯1↓1,⍺+⍵}Jv	Vector (Jv[1]+⍳Iv[1]),(Jv[2]+⍳Iv[2]),(Jv[3]+⍳Iv[3]),… (≢Iv ↔ ≢Jv)	Dfn	Dyadic Function		Boolean/Logical	sequence list		
+{+/∧∘⍉⍨∧/⍵[;a⍴1;]≤2 1 3⍉⍵[;2⍴⍨a←≢⍵;]}N	Number of areas intersecting areas in N (⍴N ↔ (n × 2 × dim))	Dfn	Monadic Function		Mathematical			
 Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create (optionally named Cv) namespace with name-value pairs Yv	Dfn	Ambivalent Monadic Function, Dyadic Function		Data Conversion	object new namevalue dictionary array converting change changing		
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering table		
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove		
