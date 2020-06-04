@@ -2265,8 +2265,8 @@ f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of argu
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto		
 Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where trues truths		
 ~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick nonempty? hascontent?		
-;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variable scope localise localize declaration declare declaring 1st		
-f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variable scope localise localize locals declaration declare declaring [0]		
+;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize declaration declare declaring 1st		
+f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize locals declaration declare declaring [0]		
 ]name -?	Print help for user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd documentation instructions	https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSvo2gMA	https://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists zip()		
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick		
