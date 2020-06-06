@@ -569,7 +569,7 @@ X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Compari
 Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2 compare equality		
 Nv×.*B	Products over subsets of Nv specified by B	Tacit	Dyadic Function		Mathematical	sub-sets		
 Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix		
-Iv∘.×Jv	Multiplication Table fIv down and Jv across	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix		
+Iv∘.×Jv	Multiplication Table for Iv down and Jv across	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix		
 M,.×N	Mid product of M and N	Tacit	Dyadic Function		Mathematical	midproduct		
 X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets			
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomial at point Ms	Tacit	Dyadic Function		Mathematical	polynomium		
