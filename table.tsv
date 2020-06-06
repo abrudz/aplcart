@@ -740,6 +740,8 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit		
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿⍴ ≢, ⍴, cells items		
 (=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A	
+∘.⊢⍨Yv	Square matrix with Yv as rows	Tacit	Monadic Function		Mathematical	tomatrix	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S16FHvCgVDBSMFYwWT//8B	
+∘.⊣⍨Yv	Square matrix with Yv as columns	Tacit	Monadic Function		Mathematical	tomatrix	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S1@FHvCgVDBSMFYwWT//8B	
 (+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs		
 (⌈⌿|)N	Largest column-wise magnitude found in N	Tacit	Monadic Function		Mathematical	columnwise horizontally biggest greatestif maximum absolute value vertically row-wise rowwise		
 (⌈⌿|)N	Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normal L-∞ ℓ∞ ℓ-∞ Linf	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0POrZX6OpYKxg8v8/AA	
