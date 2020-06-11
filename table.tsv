@@ -1698,7 +1698,7 @@ X{(-≢⍴⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to rank of X	Dfn	Dyadic Fu
 X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototypical elements	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update cells items zeroes falses falsehoods		
 X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove		
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
-X{⍺⍪⍵/⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
+X{⍺⍪⍵⌿⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
 Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with height and width Mv and length Ns	Dfn	Dyadic Function		Mathematical	lengths sides		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st		
