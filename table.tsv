@@ -1650,7 +1650,7 @@ Is{⍵⌿⍨(⍋⍒⍵)∊⍳⍺}Y	The Is largest cells of Y in order of occurre
 {2∧/0,≠\⍵=''''}Dv	Locations of texts between and excluding quotes	Dfn	Monadic Function		Text	strings		
 Is{(-⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to Is	Dfn	Dyadic Function		Structural	number dimensions pad axes		
 Is{⍵⍪(⍺-≢⍵)⌿¯1↑⍵}Y	Extending Y with last cell of Y to length Is	Dfn	Dyadic Function		Structural	filling enlongating item element		
-X{⍺⌿⍨(≢⍵)>⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements		
+X{⍺⌿⍨(≢⍵)≥⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements		
 {⍵⌷⍨⊂0~⍨⊢/0,⊢⌸⍵}Y	Modes: most frequently occuring major cells	Dfn	Monadic Function		Set	items elements		
 kmap←{xk←(⊂,⊂∘kind)⎕NL-⍳10} dfns.kk fnop	Kind Koloring of d-fnop named ⍵	Dfn	Function		Text	namecolouring coloring Kolouring parsing Bunda-Gerthparser polymorphism selfie BundaGerthparser coloring tokens types syntax syntactic		https://dfns.dyalog.com/n_kk.htm
 {0::⎕DMX⊣⎕DMX.(⎕EX⎕NL)2 ⋄ .}Y	New root namespace (Y is ignored)	Dfn	Monadic Function		System	own parent ancestor self-contained		
