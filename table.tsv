@@ -2057,7 +2057,7 @@ name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump t
 )ERASE nms	Delete named objects from the active workspace	Non-syntax			System Command	clear remove ⎕ex expunge items drop without functions variables operators namespaces GUI classes interfaces instances		https://help.dyalog.com/latest/#Language/System%20Commands/erase.htm
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading vector		https://help.dyalog.com/latest/#Language/System%20Commands/holds.htm
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue		https://help.dyalog.com/latest/#Language/System%20Commands/off.htm
-)SIC	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset cutback exit stack debugger tracer tracing		https://help.dyalog.com/latest/#Language/System%20Commands/sic.htm
+)SIC {n}	Reset state indicator and empty event queue/clear top n suspensions	Non-syntax			System Command	)reset cutback exit stack debugger tracer tracing		https://help.dyalog.com/latest/#Language/System%20Commands/sic.htm
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor ⎕sh linux macos aix rasbianpios		https://help.dyalog.com/latest/#Language/System%20Commands/sh.htm
 )name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling		https://help.dyalog.com/17.1/index.htm?name
 0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple?		
