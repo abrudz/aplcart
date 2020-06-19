@@ -1441,7 +1441,7 @@ nvec←{axis} dfns.dscan nvec	Divide scan	Dfn	Function		Mathematical	scanoperato
 nvec←{sepr} dfns.ltov lvec	Lines to nested vector	Dfn	Function		Text	linevector list		https://dfns.dyalog.com/n_ltov.htm
 nested←{left} dfns.eis right	Enclose-if-simple / link	Dfn	Function		Structural	encloseifsimple		https://dfns.dyalog.com/n_eis.htm
 path←wgraph dfns.wpath (from to)	Quickest path from/to ⍵ in weighted graph ⍺	Dfn	Function		Mathematical	weightedgraph destructiveassignment indexedassignment		https://dfns.dyalog.com/n_wpath.htm
-rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function		Text	definefunction sessioninput ⎕SE REPL		https://dfns.dyalog.com/n_din.htm
+rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function		Text	definefunction sessioninput ⎕SE REPL multiline		https://dfns.dyalog.com/n_din.htm
 rslt←{array} dfns.iotag array	Generalized iota	Dfn	Function		Mathematical	generialisediota generializediota generalized⍳ generalised⍳ Unicode alphabetical abcdefghijklmopqrstuvwxyz interval range steps sequence		https://dfns.dyalog.com/n_iotag.htm
 rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function		Text	compression spaces delete remove without		https://dfns.dyalog.com/n_dab.htm
 rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function		Text	compression spaces consecutive delete remove without		https://dfns.dyalog.com/n_dmb.htm
@@ -2090,7 +2090,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 ]FN.Align	Align end-of-line comments	Non-syntax	Ucmd	FN	User command	commands to functions operators ]Align		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpOeZkpucp6NrbAwA
 ]FN.Calls	Produce the calling tree of a function in a class/namespace/scriptfile	Non-syntax	Ucmd	FN	User command	commands to functions operators ]Calls		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpOSfm5BQr6NrbAwA
 ]FN.Compare	Compare two functions	Non-syntax	Ucmd	FN	User command	commands to operators ]Compare		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpOefnFiQWpSro2tsDAA
-]FN.DInput	Define a multi-line dfn, dop or derived function/operator, or execute a multi-line expression	Non-syntax	Ucmd	FN	User command	commands functions operators ]DInput		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpuXjmFZSWKOja2wMA
+]FN.DInput	Define a multi-line dfn, dop or derived function/operator, or execute a multi-line expression	Non-syntax	Ucmd	FN	User command	commands functions operators ]DInput multiline		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpuXjmFZSWKOja2wMA
 ]FN.Defs	List single-line dfns, dops, derived functions and trains	Non-syntax	Ucmd	FN	User command	commands to operators ]Defs		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpuaSmFSvo2tsDAA
 ]FN.Latest	List functions modified since a specified date (default is today), most-recently-changed first	Non-syntax	Ucmd	FN	User command	commands operators ]Latestif 1st		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////Huvnp@SSWpBaXKOja2wMA
 ]FN.ReorderLocals	Sort local names in the header of tradfns and tradops	Non-syntax	Ucmd	FN	User command	commands to functions operators ]ReorderLocals sorting reordering ordering		https://tio.run/##SyzI0U2pTMzJT///qG@qc6R6cWJOibrCo@4WhdS8xKSc1GBHn5D////HuvnpBaXmF6WkFvnkJyfmFCvo2tsDAA
