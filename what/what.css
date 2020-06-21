@@ -1,0 +1,15 @@
+@font-face{font-family:P;src:local('APL333'),url(/apl333.ttf)}
+@font-face{font-family:M;src:local('APL385 Unicode'),url(/apl385.ttf)}
+i{display:none}
+*{font-family:P}
+body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
+.b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
+pre,code{font-family:M}
+a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
+  -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none}
+a:hover{color:#000}
+#a{letter-spacing:-.25ex;font-size:133%}
+#e,#s,#w{border-radius:1em;border:.25ex solid currentcolor;margin:0 .5ex}
+#w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
+#q{margin-top:1em}
+p{margin-left:1em;font-size:x-large}
