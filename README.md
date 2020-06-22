@@ -15,9 +15,15 @@ APLcart can also be used for exercising your APL skills:
 
 *→ See also [the video introduction](https://dyalog.tv/Dyalog19/?v=r3owA7tfKE8).*
 
-**Note that APLcart is not intended for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes. Rather, APLcart is for finding out *how to do* things.**
+### Notes
 
-The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
+- APLcart is for finding out *how to do* things, not for finding out, for example, what a symbol means or what a system function does. Please use the <a href="https://help.dyalog.com/latest/" target="_blank">language documentation</a> for such purposes.
+
+- The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
+
+- All code in APLcart assumes the latest version of Dyalog APL Unicode edition and system defaults, for example `⎕IO←1`, `⎕ML←1`, `⎕DIV←0`.
+
+### Interface
 
 - Hit [here](https://aplcart.info) and start typing ([access-key](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
 - [Some entries](https://aplcart.info?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
