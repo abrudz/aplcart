@@ -713,6 +713,7 @@ Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic F
 ⌽∘⍉∘⌽Ym	Reflect counter-diagonally	Tacit	Monadic Function		Structural	mirroring reflecting reflection counterdiagonally		
 Is⌿∘⍉∘⍪Yv	Matrix with Is rows, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table		
 Xs+.=∘,Y	Number of occurrences of scalar Xs in array Y	Tacit	Dyadic Function		Comparison	count tally		
+M(⊢-|)N	Largest whole multiple of M less than or equal to N	Tacit	Dyadic Function		Mathematical	without less nodivisionremainder bar() noresidual intmultiples smaller ≤	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0HnUt0q3RVLAEcQwNFQwtFYwMFIwM//8HAA	
 (×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals		
 (⊢=+)N	Is N real?	Tacit	Monadic Function		Mathematical	testif		
 (⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif whole number?		
