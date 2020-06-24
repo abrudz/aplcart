@@ -1,9 +1,0 @@
->>> INSERT
-f⍥g Y	Over: f on the result of g on Y, that is, f g Y	Primitive	Monadic Function	Dyadic Operator	Composition	circlediaeresis hoof composewith functioncomposition
-⎕C Y	Casefold	System	Monadic Function		Text	lettercase caseless caseinsensitive normalize normalise
-1∘⎕C Y	Uppercase	System	Monadic Function		Text	casemap lettercase 1⎕C toupper
-¯1∘⎕C Y	Lowercase	System	Monadic Function		Text	casemap lettercase ¯1⎕C tolower
-X f⍤⊣Y	Ignore right argument (call f monadically on X)	Tacit	Dyadic Function		Function Application	to from dummy onleftargument
-' '∘(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Dv	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
-
-<<<< REMOVE
