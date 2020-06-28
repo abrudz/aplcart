@@ -23,3 +23,4 @@ article:first-child{margin-bottom:.5em}
 h2{margin:0 0 .5ex 0;font-weight:unset}
 #c{overflow-y:auto;height:calc(100vh - 4.8em);margin-top:1ex}
 footer{text-align:right}
+#u{width:100%;text-align:center;position:absolute;bottom:0;left:0}
