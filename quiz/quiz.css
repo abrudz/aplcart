@@ -5,11 +5,21 @@ i{display:none}
 body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
 .b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
 pre,code{font-family:M}
+img{margin-bottom:4px;opacity:90%;}
+#a{position:relative;top:6.5px;height:16px;margin-right:.6ex;border-radius:1em;border:.25ex solid currentcolor;width:16px}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none}
 a:hover{color:#000}
-#a{letter-spacing:-.25ex;font-size:133%}
-#e,#s,#w{border-radius:1em;border:.25ex solid currentcolor;margin:0 .5ex}
+a:hover img{opacity:1}
+#e{margin:0 .5em}
+#e,#s,#w{border-radius:1em;border:.25ex solid currentcolor}
+#s,#w{margin:0 .3em}
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #q{margin-top:1em}
-p{margin-left:1em;font-size:x-large}
+#m{letter-spacing:-.25ex;font-size:133%}
+p,#p1,#p2{margin-left:1em;font-size:larger;min-height:1.1em}
+article{background:#fff;padding:1ex;}
+article:first-child{margin-bottom:.5em}
+h2{margin:0 0 .5ex 0;font-weight:unset}
+#c{overflow-y:auto;height:calc(100vh - 4.8em);margin-top:1ex}
+footer{text-align:right}
