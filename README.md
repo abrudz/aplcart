@@ -6,10 +6,7 @@ APLcart is a searchable collection of over two thousand short APL phrases intend
 
 Note that Internet Explorer is not supported.
 
-APLcart can also be used for exercising your APL skills:
-
-- [aplcart.info/task](https://aplcart.info/task) will ask you to write a function for a given task.
-- [aplcart.info/what](https://aplcart.info/what) will ask you to explain what the given function does.
+APLcart can also be used for [exercising your APL skills](https://aplcart.info/quiz).
 
 ## Usage
 
