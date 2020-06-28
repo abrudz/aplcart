@@ -16,7 +16,10 @@ Fixes #
 
 If you've made changes to `table.tsv`:
 
-- [ ] from your APL session, check that `Test'path/aplcart/table.tsv'` returns `1`
+- [ ] from your APL session, check that the table is well-formatted
+  - `]link.import # path/aplcart`
+  - `Test'path/aplcart/table.tsv'` should return `1`
+  
 ---
 
 If you've made code or styling changes:
