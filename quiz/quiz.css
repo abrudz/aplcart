@@ -13,7 +13,7 @@ a:hover{color:#000}
 a:hover img{opacity:1}
 #e{margin:0 .5em}
 #e,#s,#w{border-radius:1em;border:.25ex solid currentcolor}
-#s,#w{margin:0 .3em}
+#s,#w{margin:0 .3em;position:relative}
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #q{margin-top:1em}
 #m{letter-spacing:-.25ex;font-size:133%}
