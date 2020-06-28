@@ -1314,7 +1314,7 @@ X({(d/⍺)@{d}⊃⌽(d f)←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a numb
 I((31-2|7|¯1+⊣)-2∘=⍤⊣×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length		
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion		
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0		
-'\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs		
+'\\(u...)?.'⎕R{0⎕JSON'""',⍵.Match,'""'}Dv	Evaluate JSON-style escape sequences	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs		
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical		
 ((⊣/⊢⍤/⍨∘(⌈/=⊢)⊢/){⍺(≢⍵)}⌸)Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements		
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of all unordered combinations of Is out of Js without replacement	Tacit	Dyadic Function		Mathematical	combinatorics selections list vector table remove		
