@@ -20,5 +20,5 @@ Q=_=>{
     for(var j=0;j<l.length;j++){f=p[i].indexOf(l[j])>-1;if(!f)break}
     n+=!(r[i].hidden=!f)}
   z.textContent="Showing "+n+" of "+r.length}
-W=x=>F(b.className=x?x:"wb"[1+"wb".indexOf(b.className[0])])
+W=x=>{F(b.className=x?x:"wb"[1+"wb".indexOf(b.className[0])]);um.href="/quiz?"+b.className}
 X=_=>F(Q(q.value=""))

@@ -15,4 +15,4 @@ Q2=_=>{
   c2=(x=>x[Math.floor(Math.random()*x.length)])(ps);a=c2[0].match(/^[a-z]*/i)[0];w=c2[0].match(/[a-z]*$/i)[0]
   q2.innerHTML=`What does the following ${c2[3].match(/\w+/)[0].toLowerCase()} ${c2[5].toLowerCase()} function compute when given ${a?E(a)+" and ":""}${E(w)}?<p><code>${c2[0]}</code></p>`
 }
-W=x=>b.className=x?x:"wb"[1+"wb".indexOf(b.className[0])]
+W=x=>{b.className=x?x:"wb"[1+"wb".indexOf(b.className[0])];um.href="/?"+b.className}
