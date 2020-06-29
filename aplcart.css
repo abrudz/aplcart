@@ -13,7 +13,7 @@ td{padding:.5em}
 #q{width:calc(100vw - 15.1em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-a:hover{color:#000}
+a:hover,a:focus{color:#000}
 #m{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#s,#w,#a,td a{border-radius:1em;border:.25ex solid currentcolor}
 td a{margin-right:0.75em;color:#bbb}
