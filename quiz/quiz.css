@@ -17,7 +17,7 @@ a:hover img{opacity:1}
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 #q{margin-top:1em}
 #m{letter-spacing:-.25ex;font-size:133%}
-p,#p1,#p2{margin-left:1em;font-size:larger;min-height:1.1em}
+p,#p1,#p2{margin-left:1em;font-size:larger;min-height:1.15em}
 article{background:#fff;padding:1ex;}
 article:first-child{margin-bottom:.5em}
 h2{margin:0 0 .5ex 0;font-weight:unset}
