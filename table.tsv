@@ -389,7 +389,7 @@ r←{tn} (regex ⎕S trans) text	Search text for PCRE regex returning trans (opt
 {r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	File Access	System Function	archive store )save		https://help.dyalog.com/latest/#Language/System%20Functions/save.htm
 {tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading		https://help.dyalog.com/latest/#Language/System%20Functions/tput.htm
 {tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading delete drop without		https://help.dyalog.com/latest/#Language/System%20Functions/tget.htm
-{tn}←⎕FHOLD tn {pn}	Hold tied file tied with number tn and optionally passnumber pn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthreading table		https://help.dyalog.com/latest/#Language/System%20Functions/fhold.htm
+{tn}←⎕FHOLD tn {pn}	Hold tied file tied with number tn and optionally passnumber pn (can be a matrix of tn {pn})	System	Function	Component Files	System Function	dcf block wait synchronisation synchronization parallel threading greenthreading		https://help.dyalog.com/latest/#Language/System%20Functions/fhold.htm
 {tn}←file ⎕NTIE tn {file_mode}	Tie a file with number tn in the specified mode (tn 0 to generate tn)	System	Function	Native Files	System Function		https://tio.run/##SyzI0U2pTMzJT///Xz0xKVn9Ud9Uv4DQEPW0zJxUvZKKEnWukjyFR20TFBAiICUhnq4KBlxAFkgKJBDsGeWqUJL3/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ntie.htm
 {tn}←file ⎕FCOPY tn {pn}	Create copy of named file tied to tn (pn is optional passnumber)	System	Function	Component Files	System Function	dcf duplicate	https://tio.run/##SyzI0U2pTMzJT///vyTPUeFR2wQF9bTMnFRHdYVHfVPdnINcHUNcFQy4SvKcEJJOUEn/gEgFoC4uIAckpwGk/Tz93Pwf9S4w1FTX0ktJTlP//x8A	https://help.dyalog.com/latest/#Language/System%20Functions/fcopy.htm
 {tn}←file ⎕FCREATE tn {64}	Create new component in file tied with number tn	System	Function	Component Files	System Function	dcf touch make	https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUV3hUd9UN@cgV8cQVwUDLrCgE5ogkPOobYKCBpD28/Rz83/Uu8BQU11LLyU5Tf3/fwA	https://help.dyalog.com/latest/#Language/System%20Functions/fcreate.htm
@@ -434,11 +434,11 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 {rarg}←lock {secs} ⎕NLOCK tn {offset} {bytes}	Change region lock status (0:unlock, 1:read, 2:write, optional timeout in seconds) of file tied with number tn	System	Function	Native Files	System Function	restrict access seal passcode changing converting conversion		https://help.dyalog.com/latest/#Language/System%20Functions/nlock.htm
 {name}←{name} ⎕WC type {ordered_props} {nvpairs} …	Create an instance of a built-in type and set property values	System	Function	Native Files	System	window gui new		https://help.dyalog.com/latest/#Language/System%20Functions/wc.htm
 +⍨N	Double: 2×N	Tacit	Monadic Function		Mathematical	twice		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
-×⍨N	Square	Tacit	Monadic Function		Mathematical	² ^2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
+×⍨N	Square: N*2	Tacit	Monadic Function		Mathematical	² ^2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
 ?⍨Js	Random Permutation of length Js	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Deal.htm
 =⍨Y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Equal.htm
 ≠⍨Y	Zeros, same shape and structure	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Not%20Equal.htm
-1∘+N	Increment	Tacit	Monadic Function		Mathematical	increase next		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
+1∘+N	Increment: N+1	Tacit	Monadic Function		Mathematical	increase next		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
 ¯1∘-J	2's-complement bit-wise NOT	Tacit	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Subtract.htm
 0∘×N	Zero array of shape, size, and structure of N	Tacit	Monadic Function		Structural	zeroes zeros fill mold mould 0s falses falsehoods		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
 100∘×N	Percentage corresponding to rate N	Tacit	Monadic Function		Mathematical	conversion converting change changing		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Multiply.htm
@@ -892,8 +892,8 @@ Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning		
 Mv(1⊥∘|-)Nv	Manhattan distance between two points in N-space	Tacit	Dyadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgPDQekMFQwUNw0ddSx91zKjR1QSKGYNk/v8HAA	
 Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital		
-(1∘⎕C≠⊢)D	Are characters of D lowercase?	Tacit	Monadic Function		Text	lower-case? small? minuscules? minuscule?		
-(¯1∘⎕C≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	upper-case? large? caps? capitals? capital? majuscules? majuscule?		
+(1∘⎕C≠⊢)D	Are characters of D lowercase?	Tacit	Monadic Function		Text	is lower-case? small? minuscules? minuscule?		
+(¯1∘⎕C≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	is upper-case? large? caps? capitals? capital? majuscules? majuscule?		
 (0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type		
 (⎕A⍳1∘⎕C)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing		
 Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ↔ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins		
@@ -1862,6 +1862,7 @@ tree←{slant←1}(fn dfns.dft) spread	Display of function tree	Dop		Monadic Ope
 {⍺⍺/,⍵}Y	Reduction with f without respect to shape	Dop	Monadic Function		Function Application	reduce insert over rowwise reducing folding row-wise horizontally remove		
 f{⍉⍺⍺⍉⍵}Y	Applying to columns action f defined on rows	Dop	Monadic Function	Monadic Operator	Function Application			
 f{⍵÷⍺⍺ ⍵}N	Normalise to norm given by f equal to 1	Dop	Monadic Function	Monadic Operator	Mathematical	normalise arbitrary custom f=1 vector list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H/Xsr37Uu/Xw9ke9u4BIAciuVTBWMFQwUTD8/x8A	
+{⊃,/⍪⌿⍵}Ym	Join matrix of matrixes to single matrix	Dop	Monadic Function		Structural	combine merge raze separated chunked segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table blockmatrix	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B	
 f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending		
 f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	plotting		
 f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criteria f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items		
@@ -1930,7 +1931,7 @@ Mv f{⍵+.×⍨(⍳≢⍺)⌽⍤0 1⍺⍺⌽⍺}Nv	Generalised convolution	Dop	D
 Mv(Ms{⍺⍺⊥⍺⌹⍵∘.*⌽¯1+⍳≢⍵})Nv	Interpolated value of series Mv=f(Nv) at Ms	Dop	Dyadic Function	Monadic Operator	Mathematical	extrapolate		
 X(f{↑[⍵⍵](⊂AX)f⊂[⍵⍵]⍵}ax)Y	Run f on axes of Y	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions		
 X f{⍺ ⍺⍺⍤(-⌊/≢∘⍴¨⍺⍵)⊢⍵}Y	Apply f with leading axis agreement	Dop	Dyadic Function	Monadic Operator	Function Application	conformity conforming axes frames major minor cells	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwNFIwMFIwNFLSrH/XuUgBiMFqiofuop0v/UeeiRx0zHvVuObQCLLxV81HXIiBVq2CsYKRgApSw0H/Uu9n4/38A	
-Av{↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵}Ym	Partition (⊂) Ym along both axes (Av can be one or two partitioning vectors)	Dop	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B	
+Av{↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵}Ym	Partition (⊂) Ym along both axes (Av can be one or two partitioning vectors)	Dop	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B	
 f{⍉2⊥(-⍺⍺/0>b)⍪⍺⍺/2⊥⍣¯1⊢b←⍵}J	2's-complement bit-wise application of f over Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary 2s two's twos		
 Nm(Is{(⍪⍺⍺÷⍨⍳⍺⍺)⊥⍺+.×⍵})Mv	Is-point spline of Nm Bezier matrix with Mv control points	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model interpolation table		
 X(f{⍺←⊢ ⋄ ⍺(⍺⍺⊣⊢)⍣⍵⍵⊢⍵}Bs)Y	If: replace/apply if Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	conditional amend change changing converting conversion		
