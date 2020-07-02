@@ -2,6 +2,7 @@ var ps
 I=_=>{
   var s=new URLSearchParams(location.search)
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
+  um.href="/?"+b.className
   fetch("/table.tsv").then(d=>d.text()).then(d=>{
     ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
     .filter(x=>-1===x[0].indexOf("dfns.") && ["Tacit", "Dfn"].includes(x[2]) && ["Monadic Function", "Dyadic Function"].includes(x[3]) && x[4]==="")
