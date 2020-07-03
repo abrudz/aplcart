@@ -119,7 +119,7 @@ Av⊂Y	Partitioned enclose of Y according to Av (along last axis) beginning encl
 Mv⊆Y	Partition Y according to Mv (along last axis) beginning partitions on increases	Primitive	Dyadic Function		Selection	chop split cut separate chunk dimension segments	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQyA0BAIH3W1AUkjBWMFEwVTLrg0SAgEQdKPejeb/v8PAA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Partition.htm
 ⌷Y	Materialise items of Y in workspace	Primitive	Monadic Function		Identity	squishquad squad materialize defaultproperty elements identify .net unpack collection cells	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCEgtag4P49LAQisAoryC1KLSioVUlLTEktzShTSSnNy/BJzUyHSjsnJqUAdBaVJOZnJCsUZiUWpKWAZEHjU0a5QklpR8qhtgntqCVxYASao7lupALQxTx1ZB8Rc17wUmM1cIA7YYVyP@qa6eUYAyeAgZ5grQYJAs2BcKO9Rz3aoyP//AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Materialise.htm
 Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad squad indexinto selectfrom getting picking indexing selecting major minor cells	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkBBR81LNdAagEIQQV@P8fAA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20with%20Axes.htm
-⍳Js	Integers from 1 to Js	Primitive	Monadic Function		Index Generation	iota integers ints countto sequence numbers range ɩ ι positions locations 1… 1...	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMDT4/x8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Generator.htm
+⍳Js	Integers from 1 to Js	Primitive	Monadic Function		Index Generation	iota unsigned integers ints countto sequence numbers range ɩ ι positions locations 1… 1...	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMDT4/x8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Generator.htm
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Monadic Function		Index Generation	iota sequence ɩ ι positions locations cells elements naturals numbers	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMFIw/v8fAA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Generator.htm
 X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota indexin indexof ɩ ι finding locating locate positionof 1st items elements location	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1d4VHvZqCAs5s6V25iiQJI2ljB6FHvFqC4GRdUA1gGqM5Uwez/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm
 Xv⍳Y	Index of keys Y in key vector Xv	Primitive	Dyadic Function		Index Generation	find locate positionof locating location list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZNS1RXUnfKTgKRzYlGOusKj3s0wAZDk//8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm
@@ -681,7 +681,7 @@ Is(⊃⌽)Yv	Pick item of vector Yv at cyclic offset Is (like ⎕IO←0, default
 Is(1⌷⊖)Y	Select major cell of Y at cyclic offset Is (like ⎕IO←0, default Is:¯1)	Tacit	Dyadic Function		Selection	element item		
 (1⌷⊖)Y	Tail: Last major cell	Tacit	Monadic Function		Selection	Y[-1;] X[-1;] Y[-1] X[-1] Y[¯1;] X[¯1;] Y[¯1] X[¯1] trailing element item ending		
 Im(⌷⍤¯1 99)Y	Select: each major cell of Im selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index		
-(¯1+⍳)Js	First Js integers from 1 to Js-1	Tacit	Monadic Function		Mathematical	whole numbers naturals 1st		
+(¯1+⍳)Js	Integers from 0 to Js-1	Tacit	Monadic Function		Mathematical	whole numbers naturals 1st		
 (⍳≢)Y	Indices of Major Cells of Y	Tacit	Monadic Function		Index Generation	enumerate number count items elements		
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation			
 (⍳∘1)N	Index of first 1 in N	Tacit	Monadic Function		Index Generation	indexof one locate find positionof location 1st		
@@ -776,11 +776,11 @@ Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		St
 Xs(≠⊆⊢)Yv	Cut Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions		
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple?		
 (⊂≢⊆)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	testif nested?		
-(2×¯1+⍳)Js	First Js even integers	Tacit	Monadic Function		Mathematical	numbers 1st		
-(¯1+2×⍳)Js	First Js odd integers	Tacit	Monadic Function		Mathematical	numbers 1st		
+(¯1+2×⍳)Js	Odd integers from 1 to 2×Js	Tacit	Monadic Function		Mathematical	numbers 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031DY6PP1R72ZNBVMubKJm//8DAA	
 (⍳¯1↑⍴)Y	Indices of trailing axis of Y	Tacit	Monadic Function		Array Properties	shape dimension ending		
 X(⌈/⍳)Y	Index of last occurrence in X of any major cell of Y	Tacit	Dyadic Function		Index Generation	element find locate location indexin indexof positionof locating cells items		
 X(⌊/⍳)Y	Index of first occurrence in X of any major cell of Y	Tacit	Dyadic Function		Index Generation	element find locate 1st location indexin indexof positionof locating cells items		
+(0,2×⍳)Js	Even integers from 0 to 2×Js	Tacit	Monadic Function		Mathematical	numbers 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DHSMDk9/1LtZU8GUC1PM7P9/AA	
 (~0∘∊)B	All	Tacit	Monadic Function		Boolean/Logical	forall true givenany tautology universalquantification ∀		
 (~1∘∊)B	Not Any	Tacit	Monadic Function		Boolean/Logical	none notany		
 (+/∊)N	Sum of all atoms in N	Tacit	Monadic Function		Mathematical	sumall +⌿∊ grandtotal sumitems		
