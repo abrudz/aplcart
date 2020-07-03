@@ -22,7 +22,9 @@ APLcart can also be used for [exercising your APL skills](https://aplcart.info/q
 
 ### Interface
 
-- Hit [here](https://aplcart.info) and start typing ([access-key](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
+
+- Hit [here](https://aplcart.info) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
 - [Some entries](https://aplcart.info?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
 - [Some entries](https://aplcart.info?q=(?)) have a <kbd>?</kbd> which can be clicked to open online documentation
 - Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
