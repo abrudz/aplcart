@@ -1304,6 +1304,7 @@ Mv(+⌿∘↑(,\0×⊣)(1↓,)¨×∘⊂)Nv	Product of polynomials	Tacit	Dyadic 
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit Grey code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression base-2 base2		
 '*/'∘(≠\⍷∨∘⌽⍥(<\)⍷∘⌽)D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*		
 (⊢/=(⎕D,⎕A~'GIOQ')⊃⍨1+31|∘⍎9∘↑)Dv	Is Dv a valid Finnish social security number? (10=≢Dv)	Tacit	Monadic Function		Text	testif SSN		
+(⍕,{2↑'thstndrd'↓⍨2×⊃⍵⌽∊1 0 8\⊂10↑0,⍳3})Js	Ordinal suffix for positive integer Js	Tacit	Monadic Function		Text	numbers ordinals suffixes 0th 1st 2nd 3rd 4th	https://tio.run/##SyzI0U2pTMzJT///378oReFR2wSFR71TdaqNHrVNVC/JKC7JSylKUX/UNvlR7wqjw9MfdTU/6t36qGfvo44uQwUDBYuYR11NhgZAxQY6j3o3G9dyPeqbCjIEZJgBEufQCqC0oZEhsryhARj8/w8A	
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍋⍵]]}Y	Minima (⌊/) of elements of subvectors of Y indicated by Av	Tacit	Dyadic Function		Mathematical	segmented partitioned array minimums smallest least major cells items		
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maxima (⌈/) of elements of subvectors of Y indicated by Av	Tacit	Dyadic Function		Mathematical	segmented partitioned array maximums greatestif largest biggest major cells items		
 (×/({(¯1+⍺*⍵+1)÷⍺-1}⌿2∘dfns.pco))Js	Sum of positive divisors of Js (fast +/∘∪⊢∨⍳)	Tacit	Monadic Function		Mathematical	sigma σ(n)	https://tio.run/##SyzI0U2pTMzJT///X70gOV/9Ud9U50j1lLS8YnUuIPtR2wQFjcPT9TWqNQ6tN9R@1LtL61HvVm1DzcPbgWxdw9pHPfuNHnXMAGrV1FQwNPr/HwA	
