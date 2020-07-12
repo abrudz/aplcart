@@ -264,8 +264,12 @@ r←⎕STACK	Definition of each function on the stack	System	Constant	Workspace	
 r←⎕STATE name	Details of the usage of name at each level of the stack	System	Function	Workspace	System Function	definition )sinl	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn51kDMpaAAJIH86ke9fY96t9YCBaDSCurp@fnqXEANXDBN6XBNIN6jvqnBIY4hrgrqaVCF//8DWQA	https://help.dyalog.com/latest/#Language/System%20Functions/state.htm
 r←⎕VR name	Source of function or operator as a simple vector	System	Function	Data Conversion	System Function	code representation list converting change changing	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApMKCFNSBWtT//wcA	https://help.dyalog.com/latest/#Language/System%20Functions/vr.htm
 r←0 ⎕JSON data	Convert JSON text to APL array	System	Function	Data Conversion	System Function	from JSON2APL javascriptobjectnotation import parse deserialise deserialize converting change changing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFIAMr2B/PwX1aEMdIx2l3MS8SqVY9f//AQ	https://help.dyalog.com/latest/#Language/System%20Functions/json.htm
+r←0 ⎕DT dates	Validate (⎕TS or Dyalog date number) date-times	System	Dyadic Function	Array Properties	System Function	InternationalDayNumber? Gregoriancalendar? serialnumber? dates? date? ⎕TS? IDN? validation validating allowed legal		https://help.dyalog.com/latest/#Language/System%20Functions/dt.htm
 r←1 ⎕JSON data	Convert APL array to JSON text	System	Function	Data Conversion	System Function	from APL2JSON javascriptobjectnotation export generate serialise serialize converting change changing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PyDLSEE9NzGvUv3/fwA	https://help.dyalog.com/latest/#Language/System%20Functions/json.htm
 r←type ⎕DR x	Interpret internal representation as array of type 'type'	System	Function	Array Properties	System Function	datarepresentation internalrepresentation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRWALJcgBRMjLqiQhQGmkDFUyAAIDREYQwua/P//AA	https://help.dyalog.com/latest/#Language/System%20Functions/dr.htm
+r←type ⎕DT dates	Convert (⎕TS or Dyalog date number) date-times to type	System	Dyadic Function	Data Conversion	System Function	InternationalDayNumber Gregoriancalendar serialnumber converting change changing dates ⎕TS-style IDN		https://help.dyalog.com/latest/#Language/System%20Functions/dt.htm
+r←type1 0 ⎕DT dates	Validate type1 date-times	System	Dyadic Function	Array Properties	System Function	Gregoriancalendar? dates? date? validation validating allowed legal		https://help.dyalog.com/latest/#Language/System%20Functions/dt.htm
+r←type1 type2 ⎕DT dates	Convert type1 date-times to type2	System	Dyadic Function	Data Conversion	System Function	Gregoriancalendar converting change changing dates		https://help.dyalog.com/latest/#Language/System%20Functions/dt.htm
 ref←⎕THIS	Reference to the current namespace	System	Namespace	Data Conversion	System Function	here myself converting change changing	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6AApEI8PIO5NP2CFfK4NJ1BJJoUghvsqgcVBAA	https://help.dyalog.com/latest/#Language/System%20Functions/this.htm
 refs←⎕INSTANCES class	Current instances of class	System	Function	Data Conversion	System Function	children derived converting change changing	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WMExLzM3MYfLyjUvBSzApcAFlXHKLEqxwiMfkFhUlF9iBVaHJM@l4ZpamV@U@qhtwqO@qX6u4VAjNPWAXBc3BXWItDqXRkB@Tk6lAlCdAlQhxES4QrC8OhcXkAtV5OkXHOLo5@waDHMWNimQe/7/BwA	https://help.dyalog.com/latest/#Language/System%20Functions/instances.htm
 tdno←⎕TNUMS	Report the numbers of all current threads	System	Constant	System	System Function	synchronising synchronizing synchronisation synchronization parallelisation parallelization threading greenthreading	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUg0sSi0pSU9R1gAIuPmoGesZcOKUM4VJBpXl5mXnpYKkQv1DfYLhMeGJmCUzGxUfBQM@ISE1wi/Dr@f8fAA	https://help.dyalog.com/latest/#Language/System%20Functions/tnums.htm
@@ -520,6 +524,7 @@ X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tupl
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists		
 1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
 ⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st		
+1 1∘⊂Y	First element (as vector) and remaining elements	Tacit	Dyadic Function		Structural	headtail split divide separate dividing leading		
 1∘⌷Y	Head: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20with%20Axes.htm
 0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
 1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
@@ -930,7 +935,7 @@ Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic
 Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	combine merge list string character joiner joining merging combining		
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose		
 (?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element		
-Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing		
+Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining		
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods		
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element		
 I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function		Index Generation	1st		
@@ -1489,8 +1494,8 @@ cmp←{cmp←1} dfns.packT exp	Simple text vector packager	Dfn	Function		Storage
 cmp←{cmp←1} dfns.packU exp	Unique packing	Dfn	Function		Storage	compression		https://dfns.dyalog.com/n_packU.htm
 cols←{base←1} dfns.mayan numb	Mayan numbers	Dfn	Function		Mathematical	numbersystem stela calendar date astronomy vigesimalnumbersystem abacus		https://dfns.dyalog.com/n_mayan.htm
 crep←{tabs csep←4} dfns.refmt crep	Reformat dfn/op representation	Dfn	Function		Text	functionsformatting sourcecode layout		https://dfns.dyalog.com/n_refmt.htm
-dates←{g←¯53799} dfns.date daynos	⎕TS format from day number	Dfn	Function		Data Conversion	InternationalDayNumber Gregoriancalendar serialnumber 1752 converting change changing		https://dfns.dyalog.com/n_date.htm
-daynos←{g←17520902} dfns.days dates	Day number from ⎕TS format	Dfn	Function		Data Conversion	InternationalDayNumber Gregoriancalendar serialnumber converting change changing		https://dfns.dyalog.com/n_days.htm
+dates←{g←¯53799} dfns.date daynos	⎕TS format from day number	Dfn	Function		Data Conversion	IDN InternationalDayNumber Gregoriancalendar serialnumber 1752 converting change changing		https://dfns.dyalog.com/n_date.htm
+daynos←{g←17520902} dfns.days dates	Day number from ⎕TS format	Dfn	Function		Data Conversion	IDN InternationalDayNumber Gregoriancalendar serialnumber converting change changing		https://dfns.dyalog.com/n_days.htm
 names←{expr←0} dfns.externs dfn	External references from dfn ⍵	Dfn	Function		System	externalreferences xref		https://dfns.dyalog.com/n_externs.htm
 nvec←{denoms←1 5 6 10 26 39 43} dfns.stamps value	Postage stamps for ⍵	Dfn	Function		Mathematical	postagestamps graph balancedternary		https://dfns.dyalog.com/n_stamps.htm
 num←{num←2} dfns.root num	⍺'th root	Dfn	Function		Mathematical	defaultleftargument ⍺throot		https://dfns.dyalog.com/n_root.htm
@@ -2307,6 +2312,8 @@ Is(86⌶)Dv	Execute expression Dv (⍎Dv) but Is frames up the stack (unofficial
 Is(8659⌶)Jv	List names (of name classes Jv) for share code file in slot Is	I-beam	Dyadic Function	Monadic Operator	System	report workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance ibeam		https://help.dyalog.com/latest/#Language/Primitive%20Operators/Memory%20Manager%20Statistics.htm
 Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Function	Monadic Operator	System	attaching to workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
+Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text		https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+¯1⎕DT'Z'	Current UTC date and time	Constant	Expression		Data Conversion	now datetime zulutime zulu-time		
 (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector		
 {R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional		
 (name1 name2)←Y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
@@ -2450,6 +2457,7 @@ op←{⍺⍺ ⍺}	Prototypical monadic dop deriving dyadic functions	Syntax	Dyad
 op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 ⍎⌽⍕⌈*○≡⍬	Meaning of life (modern)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything new updated		
 +/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning		
+3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents		
 ⊢2⎕NQ#'GetEnvironment' 'DYALOG'	Install directory	Constant	Expression		System	installation folder location dyalog.executables binaries		
