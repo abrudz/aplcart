@@ -26,7 +26,7 @@ a:hover,a:focus{color:#000;text-decoration-color:unset}
 #u{position:absolute;left:0;width:100%;text-align:center;bottom:0}
 p{top:1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1ex 0}
 ::-ms-clear{display:none}
-@media(max-width:760px){s{display:none}}
+@media(max-width:920px){s{display:none}}
 @media(max-width:320px){
   #e,#x,#c{display:none}
   #q{border-radius:0;width:calc(100vw - 9.5em);padding-right:unset}
