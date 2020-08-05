@@ -996,7 +996,7 @@ M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		M
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast item element		
 (2 2⍴2 1 1 2-@2⍤○⊢)Ns	Rotation matrix for angle Ns (in radians) counter-clockwise	Tacit	Monadic Function		Mathematical	table		
 (⊢⍴⍨¯2↑1 1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize make	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RgDI1HnUtAnIf9a44tN7oUdtEQwVDHSBfU0E9UZ2LJOVJySRpMFIwBtIgbSmpaer//wMA	
-(0 1≡≢∘⍴,≡)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwUDB81LnwUeeiRx0zHvVu0QFyNIFSfkHqQA3qBFT5Q1T9/w8A	
+(1≡≡∧⍬≡⍴)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwfNS5EIQ6lj/qXQNi9G7RBEr5BakDNagTUOUPUfX/PwA	
 (2∘⍴⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m,n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B	
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table		
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
@@ -1591,9 +1591,9 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
-{3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfns? tradops?		
+{3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfn? tradfns? tradops?		
 {3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?		
-{3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived primtive? primitives? functions? train? trains?		
+{3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived derv? dervs? tacits? primtive? primitives? functions? train? trains?		
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing		
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
 Xv{⊃,/⍺∘,¨⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging		
@@ -1737,6 +1737,7 @@ Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients N
 Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Function		Mathematical	crosscorrelation crosscorrelate cross-correlate		
 {⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍵}Nv	Auto-correlation	Dfn	Monadic Function		Mathematical	autocorrelation serialcorrelation auto-correlate serial-correlate		
 Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar Xs	Dfn	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging ndimensional n-dimensional block cuboid 3d-array 4d-array		
+((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
 X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 {(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick blanks lists ending		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
@@ -1919,7 +1920,7 @@ f{⍎'⍺⍺ ⍵ ⋄ ⍵' ⋄ ⍺⍺}Y	Apply no-result function “en passant”
 f{↑⍺⍺⍨/(⌽⍵),⊂⍺}Y	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding		
 f{⍺⍺¨⍣(~0∊⍴⍵)⊢⍵}Y	For each: f on items of Y unless Y is empty	Dop	Monadic Function	Monadic Operator	Function Application	foreach mapping cells noelements avoid prototype conditionally apply void		
 X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Dop	Dyadic Function	Monadic Operator	Mathematical	look-up matrix		
-PO←X(Is{⍺⍺⊃⍸⍺≡¨⊂⍵})Y	Position of the Is'th Y in X	Dop	Dyadic Function	Monadic Operator	Index Generation	nthindexin nthindexof nthposition		
+X(Is{⍺⍺⊃⍸⍺≡¨⊂⍵})Y	Position of the Is'th Y in X	Dop	Dyadic Function	Monadic Operator	Index Generation	nthindexin nthindexof nthposition		
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	converting change changing		
 X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements		
 (Xs{⍺⍺@(⍵⍵∘⊣)⍵}Bv)Y	Replacing elements of Y satisfying Bv with Xs	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update major cells items indicate masking indicating		
@@ -2290,7 +2291,7 @@ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definit
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists zip()		
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick		
 ...	Syntax error to stop execution	Non-syntax			System	halt		
-⎕NL-⍳9	List names of existing members	Expression		Workspace		available active names namelist all types nameclasses name-classes	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD089F91LvZ8v9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/nl.htm
+⎕NL-⍳9	List names of existing members	Expression		Workspace		available active names namelist all types nameclasses name-classes everything	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD089F91LvZ8v9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/nl.htm
 ⎕SE.Dyalog.Serial Y	Set or query (if Y is empty) serial number	Tradfn	Monadic Function		System	report license licence licensing licencing get fetch renew initialise initialize serialnumber account dss+ unregistered unregistration deregistered deregistration		
 name f∘⊢←Y	Modified Assignment (also dfns/dops)			Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSBIBLIe9W4Fs5OgbDAnIKe0GMjXhvASIfyOGY@6FgFFDSHqYYoMYYqSuGq5HvVNBQoB7VAw/v8fAA	https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/MultiLine%20Dynamic%20Functions.htm
 ⎕THIS.name←Y	Create new global (also in dfns/dops)	Syntax			Expression	new assignment assigning value variable function operator		
