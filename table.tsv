@@ -820,6 +820,7 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 (2∘⊥⍣¯1)J	Binary representation of J	Tacit	Monadic Function		Mathematical	digits base2 base-2 Boolean		
 (⍉≡⌹)Nm	Is Nm an Orthogonal matrix?	Tacit	Monadic Function		Mathematical	testif Orthogonal?		
 (⍕≡⊢)Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif		
+(1↓0∘⍕)Js	Show all digits of integer Js (unknown digits as “_”)	Tacit	Monadic Function		Text	display print decimals full non-exponential format normal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSM9UwMjUyNXA0NuKAiGoaP2iYbPOqY8ah3qiaS/P//AA	
 (1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise		
 (1=2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif num? nums? datatype data-type		
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows		
@@ -908,6 +909,7 @@ Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit
 Xv∘.{⍺⍵}Yv	Catalogue of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix		
 A(1-⊢×1-⊣)B	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying		
 A(1-⊣×1-⊢)B	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq		
+(1≡≡∧⍬≡⍴)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwfNS5EIQ6lj/qXQNi9G7RBEr5BakDNagTUOUPUfX/PwA	
 M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Mathematical	atan2() arctan2() atn2() arctn2() atng2() arctng2()		
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths		
 Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list		
@@ -996,7 +998,6 @@ M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		M
 X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last cell of Y	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	onlast item element		
 (2 2⍴2 1 1 2-@2⍤○⊢)Ns	Rotation matrix for angle Ns (in radians) counter-clockwise	Tacit	Monadic Function		Mathematical	table		
 (⊢⍴⍨¯2↑1 1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize make	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RgDI1HnUtAnIf9a44tN7oUdtEQwVDHSBfU0E9UZ2LJOVJySRpMFIwBtIgbSmpaer//wMA	
-(1≡≡∧⍬≡⍴)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwfNS5EIQ6lj/qXQNi9G7RBEr5BakDNagTUOUPUfX/PwA	
 (2∘⍴⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m,n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B	
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table		
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
@@ -1597,6 +1598,7 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing		
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
 Xv{⊃,/⍺∘,¨⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging		
+((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
 X{+⌿∧⍀⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending		
 X{+⌿∧⍀⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending		
 Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension		
@@ -1737,7 +1739,6 @@ Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients N
 Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Function		Mathematical	crosscorrelation crosscorrelate cross-correlate		
 {⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍵}Nv	Auto-correlation	Dfn	Monadic Function		Mathematical	autocorrelation serialcorrelation auto-correlate serial-correlate		
 Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar Xs	Dfn	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging ndimensional n-dimensional block cuboid 3d-array 4d-array		
-((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
 X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 {(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn		Performance	Text	speed optimised optimized quick blanks lists ending		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
@@ -1912,6 +1913,7 @@ Iv f{⊃,/⍺⍺/¨⍺⊂⍵}Y	Segmented reduction	Dop		Monadic Operator	Functio
 Av f{⊃,/⍺⍺\¨⍺⊂⍵}Y	Segmented scan: like f\ but starting over whenever indicated by Av	Dop	Dyadic Function	Monadic Operator	Function Application	cumulativereduce rowwise sub-vectors sub-lists partitioned subvectors sublists row-wise horizontally		
 f{⍵.(⍺⍺∘⍎¨⎕NL ¯2)}Y	Apply f on each variable in each namespace in Y	Dop		Monadic Operator	Function Application	variablewise blank		
 X f{⍺←⊢ ⋄ ⍺⍺ ⍺ ⍵⍵ ⍵}g Y	Atop: f X g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY		
+X(Is{⍺⍺⊃⍸⍺≡¨⊂⍵})Y	Position of the Is'th Y in X	Dop	Dyadic Function	Monadic Operator	Index Generation	nthindexin nthindexof nthposition		
 Bv(Is{⍵⌿⍨⍺⍺=+\⍺})Yv	The Is'th subvector of Yv (subvectors indicated by Bv)	Dop	Dyadic Function	Monadic Operator	Selection			
 (Ms{⍺⍺+⍵⍵×¯1+⍳⍵}Ns)Js	Arithmetic progression vector: Js elements starting at Ms with step Ns	Dop	Monadic Function	Dyadic Operator	Mathematical	list sequence seq() cells items		
 f{⍎'⍺⍺ ⍵ ⋄ ⍵' ⋄ ⍺⍺}Y	Apply no-result function “en passant”	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction		
@@ -1920,7 +1922,6 @@ f{⍎'⍺⍺ ⍵ ⋄ ⍵' ⋄ ⍺⍺}Y	Apply no-result function “en passant”
 f{↑⍺⍺⍨/(⌽⍵),⊂⍺}Y	Fold (reduce) from the left	Dop		Monadic Operator	Function Application	reduction typenotation reducing folding		
 f{⍺⍺¨⍣(~0∊⍴⍵)⊢⍵}Y	For each: f on items of Y unless Y is empty	Dop	Monadic Function	Monadic Operator	Function Application	foreach mapping cells noelements avoid prototype conditionally apply void		
 X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Dop	Dyadic Function	Monadic Operator	Mathematical	look-up matrix		
-X(Is{⍺⍺⊃⍸⍺≡¨⊂⍵})Y	Position of the Is'th Y in X	Dop	Dyadic Function	Monadic Operator	Index Generation	nthindexin nthindexof nthposition		
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	converting change changing		
 X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements		
 (Xs{⍺⍺@(⍵⍵∘⊣)⍵}Bv)Y	Replacing elements of Y satisfying Bv with Xs	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update major cells items indicate masking indicating		
@@ -2476,4 +2477,4 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine	https://tio.run/##SyzI0U2pTMzJT/8PBIaPevbqPOpdYfmod4u6ujoaFwA	
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8	
 ⎕SIGNAL⊂⎕DMX.(('EN'EN)('Message'(OSError{⍵,2⌽(×≢3⊃⍺)/'") ("',3⊃⍺}Message)))	Re-signal last caught error to caller	Constant	Expression		Error Message	emulate re-throw rethrow resignal trapped	https://tio.run/##SyzI0U2pTMzJT///qG9qSJBjgP6j3hWP2iYYKCg86p2rkJyTmlikEOLpr16skFpUlF@kUFKUWFCQmZf@////Rx3tCm75@QppmTmpXAoKViFAKQUDIAsEgMb5ubuGwCVdc4pTEVLBnu5@jj6PupqAbBffCD0NDXVXPyDS1FD3TS0uTkxPVdfwD3YF2Vj9qHerjtGjnr0ah6c/6lxk/Kir@VHvLk19dSVNBQ0ldR2oQC1Un6amJti6vBSQc7iAbuQCulE9L79ENyO1KFWvpKJEHQA	
-⎕DMX.(OSError{⍵,2⌽(×≢3⊃⍺)/'") ("',3⊃⍺}Message{⍵,⍺,⍨': '/⍨×≢⍺}⊃DM)	Construct first line of printed error message	Constant	Expression		Error Message	extract fetch get 1st	https://tio.run/##SyzI0U2pTMzJT////1FHu0Jucfqjtglu@fkKaZk5qVwKClYhRYkFCgZAFgg86pvq5@4aApd0zSlOhUpBdAIVuPhG6Gn4B7sWFeUXVT/q3apj9Khnr8bh6Y86Fxk/6mp@1LtLU19dSVNBQ0ldBypQ65taXJyYngpWDuQD8Qp1KwV1fSAN1ghSA1Tq4qsJtjUvBeQqLqCDuYAWQh2snpdfopuRWpSqV1JRov7/PwA	
+⎕DMX.(OSError{⍵,2⌽(×≢3⊃⍺)/'") ("',3⊃⍺}Message{⍵,⍺,⍨': '/⍨×≢⍺}⊃DM)	Construct first line of printed error message	Constant	Expression		Error Message	--extract fetch get 1st	https://tio.run/##SyzI0U2pTMzJT////1FHu0Jucfqjtglu@fkKaZk5qVwKClYhRYkFCgZAFgg86pvq5@4aApd0zSlOhUpBdAIVuPhG6Gn4B7sWFeUXVT/q3apj9Khnr8bh6Y86Fxk/6mp@1LtLU19dSVNBQ0ldBypQ65taXJyYngpWDuQD8Qp1KwV1fSAN1ghSA1Tq4qsJtjUvBeQqLqCDuYAWQh2snpdfopuRWpSqV1JRov7/PwA	
