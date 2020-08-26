@@ -1122,7 +1122,7 @@ Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Funct
 Mv(2*∘÷⍨1⊥2*⍨-)Nv	Euclidean distance between two points in N-space	Tacit	Dyadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMoFDDSOtRx4zD2x/1rjB81LUUyOtdoasJlDBWMFEw@P8fAA	
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC		
 (⊢⎕NS ⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text		
-{⊃,/⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening raze razing flatten() items		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@g/6mo7tOJR79baR72LH3UuVNBQT0xMVFdQT0pKUtfU0FBPTk4G8hCkpoJ6SkoKkNJ41NWknpqaqq75/z8A
+{⊃,/⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@g/6mo7tOJR79baR72LH3UuVNBQT0xMVFdQT0pKUtfU0FBPTk4G8hCkpoJ6SkoKkNJ41NWknpqaqq75/z8A	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning		
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical			
 ((⊂∘⍋⌷⊢)⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
