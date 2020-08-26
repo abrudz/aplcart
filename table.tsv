@@ -2394,7 +2394,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'ActiveXContainer'	Represents the application hosting a Dyalog APL ActiveXControl	GUI Object			Miscellaneous	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/ActiveXContainer.htm
 {name}⎕WC'ActiveXControl'	Represents an ActiveX control written in Dyalog APL	GUI Object			Miscellaneous	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/ActiveXControl.htm
 {name}⎕WC'Animation'	Displays simple animations from .AVI files	GUI Object			Information	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/Animation.htm
-{name}⎕WC'Bitmap'	Defines a bitmap	GUI Object			Resource	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/Bitmap.htm
+{name}⎕WC'Bitmap'	Defines a bitmap	GUI Object			Resource	WindowsForms WinForms Create new bitmap bmp png gif image		https://help.dyalog.com/latest/#GUI/Objects/Bitmap.htm
 {name}⎕WC'BrowseBox'	Prompts user to browse for a folder or other resource.	GUI Object			Input & Selection	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/BrowseBox.htm
 {name}⎕WC'ButtonEdit'	Text input field with dropdown button	GUI Object			Input & Selection	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/ButtonEdit.htm
 {name}⎕WC'Button'	Selects an option	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/Button.htm
