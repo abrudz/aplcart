@@ -507,36 +507,36 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 ∧/Bv	Are all true?	Tacit	Monadic Function		Boolean/Logical	forall ∀ binary base-2 base2 testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSzXVzCAQS5MUUMsMoYg@P8/AA	
 ⌈/N	Maximum of N	Tacit	Monadic Function		Mathematical	supremum	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XToK5haKBiaKhgZKVgYKBiZKRgaciHLGoChIYSGyQCBsYLxo94tCkZAKWMFMwVTBRMFcwVLBQuoEnV1FFNwqf7/HwA	
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTpK5haKBiaKhgZKVgYKBiZKRgaciHLGoChIYSGyQCBsYLxo94tCkZAKWMFMwVTBRMFcwVLBQuoEnV1FFNwqf7/HwA	
-÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical			
-≠/B	Boolean Parity	Tacit	Monadic Function		Boolean/Logical			
-1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
-⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st		
-⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st		
-+⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise		
--⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise		
-×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise		
-0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
+÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOb9dXMFQw4kLlKhhjCCiYYBFSMP3/HwA	
+≠/B	Boolean Parity (Even)	Tacit	Monadic Function		Boolean/Logical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS7QN@RC5iigc9EFDIAQRBr@/w8A	
+1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAEjcy4kEcNHHTP00cQgqhSMDRSMTbGphcj8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
+⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuRY969iOp@P8fAA	
+⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuxY969iOp@P8fAA	
++⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvFkMFIwVjLoioujqUoaD9qGc/soL//wE	
+-⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFTB@FHvFuPD0x/1bjblgoirq0MZCrqPevajKvn/HwA	
+×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwETB@FHvlke9mw2NuCCi6upQhsLh6Y969iOr@P8fAA	
+0∘⌿Y	Empty array along first axis	Tacit	Monadic Function		Structural	dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAETBWMg81HvZkMjLoiUujoXkhqDRx0zHvXsR1b3/z8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
 X f⍤⊢Y	Ignore left argument (call f monadically on Y)	Tacit	Dyadic Function		Function Application	to from dummy onrightargument		http://help.dyalog.com/18.0/index.htm#Language/Primitive%20Operators/Atop.htm?Highlight=%E2%8D%A4
 X f⍤⊣Y	Ignore right argument (call f monadically on X)	Tacit	Dyadic Function		Function Application	to from dummy onleftargument		http://help.dyalog.com/18.0/index.htm#Language/Primitive%20Operators/Atop.htm?Highlight=%E2%8D%A4
-1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
-,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells ending		
-X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements zip pair		
-,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions		
-Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists		
-1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
-⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st		
+1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0FEwVTBTMFew4IIIqqtzocgaKxg/6t3yqHez5f//AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
+,¨Y	Increment rank by one before trailing dimension	Tacit	Monadic Function		Structural	insert new additional last dimensions axes axis items elements cells ending	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEDzq3WzKhSymc2gFWPD/fwA	
+X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements zip pair	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLiCgqmCmYK5gs6hFQqGBgqGhgqGRly45E3//wcA	
+,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIynT0cSrjQjfOWMH4Ue@WR72bLTVROBgG4lKo8P8/AA	
+Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCGBgpmCiYKVgoGBooGBpxIUsb6ejjkzbBkP7/HwA	
+1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XMeNS7SsFIwfhR7xaL//8B	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
+⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIyh71rtLHqZAL3UBjBeNHvVse9W621EThYDESl1KF//8B	
 1 1∘⊂Y	First element (as vector) and remaining elements	Tacit	Dyadic Function		Structural	headtail split divide separate dividing leading		
 1∘⌷Y	Head: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20with%20Axes.htm
-0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
-1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
+0∘∊B	Not All	Tacit	Monadic Function		Boolean/Logical	notall somenot	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNTRpWAIgVxYhA0UDP//BwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
+1∘∊B	Any	Tacit	Monadic Function		Boolean/Logical	thereexists forsome existentialquantification ∃	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XMeNTRpWAAgVwYwoZAaPD/PwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
 X f⍣≡Y	Limit: apply X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
 f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
-+\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal		
-∨\B	All ones after the first one	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask		
-∨\B	Not leading zeroes (turn on all zeroes after first one)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st start beginning mask		
-∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask		
-⌈\N	Progressive maxima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally		
-⌊\N	Progressive minima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally		
++\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0YxQMYZALIWakYKJgpmChYGjw/z8A	
+∨\B	All ones after the first 1	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMgBNEG//8DAA	
+∨\B	Not leading zeroes (turn on all zeroes after first 1)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st start beginning mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMoCYT//wMA	
+∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSyPUTAEQgMgBNGG//8DAA	
+⌈\N	Progressive maxima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTEKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
+⌊\N	Progressive minima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTFKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
 <\B	All zeros except the first one (turn off all ones after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0s zeroes falses falsehoods 1st mask		
 ≤\B	All ones after the first zero (turn on all zeroes after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask		
 ≤\B	Not first zero (turn on all zeroes after first zero)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st mask		
