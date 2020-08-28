@@ -1033,7 +1033,7 @@ Xv(∊∧.∧∊⍨)Yv	Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Pro
 (+/÷1⌈0⊥⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean		
 Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematical	sum		
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical			
-Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+bx y=ax+b		
+Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model y=a+bx y=ax+b		
 (∧/127≥⎕UCS∘∊)D	Is D entirely ASCII-only	Tacit	Monadic Function		Text	plain exclusively		
 {⍵.##}⍣≡Y	Reference to root ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers		
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate		
@@ -1200,7 +1200,7 @@ Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default I
 Is(⊣*∘÷⍨1⊥*⍨∘|)N	Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p ℓp ℓ-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LdZ61DHj8PZHvSsMH3Ut1QLSQH6NpoKxgsn//wA	
 (+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?		
 (+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?		
-Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model y=a+b^x y=a^x+b curve		
+Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model y=a+b^x y=a^x+b curve		
 (+/∘,÷(×/⍴))N	Arithmetic mean value of all elements	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells items		
 ((¯1↓⊢,⍨1↑0∘⍴)⍤1)Y	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		
 (⊃⍤⌽⍤⍸⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise horizontally		
@@ -1239,7 +1239,7 @@ Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mat
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	major cells items list		
-Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model correct y=ab^x		
+Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x		
 ({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list		
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix		
@@ -1276,7 +1276,7 @@ Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spik
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
 (⌽∘⍳∘≢⌽⊢,(0 ¯1+≢)⍴0∘⍴)Yv	Diagonal matrix with elements of Yv (filled appropriately)	Tacit	Monadic Function		Structural	cells items table		
 I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest N	Tacit	Dyadic Function		Mathematical	loan		
-Mv(*⊢∘⍟(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting model correct y=ab^x curve		
+Mv(*⊢∘⍟(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x curve		
 X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals with cut-offs X	Tacit	Dyadic Function		Mathematical	bins groups ranges buckets		
 '\^[@-_]'⎕R{⎕UCS¯64+⎕UCS 1↓⍵.Match}Dv	Evaluate control character sequences (like ^J)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_		
 Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector of Bv indicated by Av	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning		
@@ -1926,7 +1926,7 @@ X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	D
 X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements		
 (Xs{⍺⍺@(⍵⍵∘⊣)⍵}Bv)Y	Replacing elements of Y satisfying Bv with Xs	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update major cells items indicate masking indicating		
 X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY backcompose back-compose reverse-compose reversecompose into		
-Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Descending coefficients of Is-degree polynomial fit given x-values Mv and y-values Nv	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting model best leastsquaresfit		
+Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Descending coefficients of Is-degree polynomial fit given x-values Mv and y-values Nv	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting regression model best leastsquaresfit		
 f{(⊂⍵⍳⍨∪⍵)⌷⍺⍺∪⍵}Y	Fast: Apply costly monadic function f on repetitive arguments	Dop	Monadic Function	Monadic Operator	Function Application	performance memoisation memoization quick speed		
 I f{⍉2⊥⍺⍺/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise application of f between positive integers I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
 Iv(Is{⍵\⍨,⍺∘.>¯1+⍳⍺⍺})Yv	Justifying left fields of Yv (lengths Iv) to length Is	Dop	Dyadic Function	Monadic Operator	Text	leftalign left-align		
