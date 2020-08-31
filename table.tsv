@@ -537,43 +537,43 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 ∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSyPUTAEQgMgBNGG//8DAA	
 ⌈\N	Progressive maxima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTEKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
 ⌊\N	Progressive minima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTFKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
-<\B	All zeros except the first one (turn off all ones after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0s zeroes falses falsehoods 1st mask		
-≤\B	All ones after the first zero (turn on all zeroes after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask		
-≤\B	Not first zero (turn on all zeroes after first zero)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st mask		
+<\B	All zeros except the first 1 (turn off all 1s after the first 1)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0s zeroes falses falsehoods 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRsYhQMFAxh@P9/AA	
+≤\B	All ones after the first zero (turn on all zeroes after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B	
+≤\B	Not first zero (turn on all zeroes after first zero)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B	
 ≠\B	Convert reflected Gray code to binary	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask base-2 base2 mask Conversion converting change changing		
 ≠\B	Parity: Connect odd and even ones	Tacit	Monadic Function		Mathematical	bitmask bit-mask 1s running trues truths mask		
-⌈⍀N	Progressive maxima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically		
-⌊⍀N	Progressive minima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically		
-1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
-⊥⍨Bv	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at end		
-0∘⊥N	Last major cell of numeric array	Tacit	Monadic Function		Selection	item element		
-100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
-2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
-0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
-0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
+⌈⍀N	Progressive maxima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically	https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XjU2wBi//8PAA	
+⌊⍀N	Progressive minima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically	https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XrU2wBi//8PAA	
+1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvlke9my25IMLq6lCGoYLho44Zj3o7kdT8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
+⊥⍨Bv	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at end	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx51LX3Uu0LBUMEAioHw/38A	
+0∘⊥N	Last major cell of numeric array	Tacit	Monadic Function		Selection	item element	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS1VOFR72ZLLjQxYwXjR71bQDL//wMA	
+100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwedcx41LVUwdDSzFLBXMHI8P9/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
+2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMHnXMeNS1VMEACA25MAQNFQywCWKoNAQZ8P8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
+0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwfdcx41LVEwULP3PT/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
+0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwNwPhRx4xHXUsUDC3NLA3MjQz//wcA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
 C f⍥⎕C D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lettercase caseinsensitively comparison lookup apply caselessly  ignorecase		
-{0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught		
-+∘-N	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical			
--∘+N	Mirror complex N in y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal		
-⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn		
+{0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWoVNEwUTBXMNBXUHZ2c1f//BwA	
++∘-N	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H3XM0FU4tN7cy/j/fwA	
+-∘+N	Mirror complex N in y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA	
+⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ	
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical			
-Is/∘⍪Yv	Matrix with Is columns, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table		
-⊂∘⊃Y	Corner element of a (non-empty) array Y[1;1;1…]	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st		
-Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence		
-⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table		
-,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items		
-C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st		
-Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif		
-I∊∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2		
+Is/∘⍪Yv	Matrix with Is columns, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMFPQfdcx41LtKwVDBSMH4/38A	
+⊂∘⊃Y	Corner element of a (non-empty) array Y[1;1;1…]	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvFgUjBR19hUe9my25IJLq6lCGwqOupkcdMx51NWOq/f8fAA	
+Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GSsYP@rd8qh3s6WmwuHpjzpmAJkKxv//AwA	
+⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwETB@FHvFgM9I1MuqOij3s2POmY86lyEJPf/PwA	
+,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
+C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA	
+Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
+I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 X f⍣¯1⍣≡Y	Limit: apply inverse of X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA	
 f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A	
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list		
-⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table		
+⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCGBgrGD/q3fKod7MlF7Lco66maMNYJNn//wE	
 ⍉∘+Nm	Conjugate Transpose	Tacit	Monadic Function		Mathematical	self-adjoint selfadjoin Yᴴ Y^H Y† Y^† Aᴴ A^H A† A^†		
-⌽∘⍉Ym	Rotate 90° clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn		
-⍉∘⌽Ym	Rotate 90° counter-clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn counterclockwise		
-⍉∘⍪Yv	Forming first row of a matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize 1st table		
-⍉∘⍪Yv	Reshaping vector Yv into a one-row matrix	Tacit	Monadic Function		Structural	1-row table list		
+⌽∘⍉Ym	Rotate 90° clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPevY@6pjxqLcTSe7/fwA	
+⍉∘⌽Ym	Rotate 90° counter-clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn counterclockwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPejsfdcx41LMXSe7/fwA	
+⍉∘⍪Yv	Forming first row of a matrix for later expansion	Tacit	Monadic Function		Structural	default initialise initialize 1st table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAFDBSMFYy4kwUe9nY86ZjzqXQWR@v8fAA	
+⍉∘⍪Yv	Reshaping vector Yv into a one-row matrix	Tacit	Monadic Function		Structural	1-row table list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAFDBSMFYy4kwUe9nY86ZjzqXQWR@v8fAA	
 M+.×N	Dot/Vector/Cross/Matrix Product of M and N (¯1↑M ↔ 1↑⍴N)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply		
 M-.×N	Alternating Matrix Product of M and N (¯1↑M ↔ 1↑⍴N)	Tacit	Dyadic Function		Mathematical			
 Am∨.∧Bm	Extending a transitive binary relation	Tacit	Dyadic Function		Boolean/Logical	extension base-2 base2		
