@@ -8,7 +8,7 @@ X⊢Y	Church Boolean false (X if false, else Y)	Primitive	Dyadic Function		Boole
 X⊣Y	Left: X	Primitive	Dyadic Function		Identity	lev lefttack sameleft defer ignore where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVHnUtVlAPUv//HwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Left.htm
 X⊣Y	Church Boolean true (X if true, else Y)	Primitive	Dyadic Function		Boolean/Logical	truthy 1	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtVlBPS8wpTlX//x8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Left.htm
 +Y	Conjugate ('Identity' if Y not complex)	Primitive	Monadic Function		Mathematical	greek cross plus ¯10○ ¯10∘○ conj() conjugating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0FQz1jBQMskwUDq03zTq03kxBPTEpWf3/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Conjugate.htm
-+N	Mirror complex N in x-axis	Primitive	Monadic Function		Circular/Trigonometric	greek cross conjugate negateimaginary	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE7QNvYwUDq039Dq03uj/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Conjugate.htm
++N	Mirror complex N across x-axis	Primitive	Monadic Function		Circular/Trigonometric	greek cross conjugate negateimaginary mirroring reflecting reflection	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE7QNvYwUDq039Dq03uj/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Conjugate.htm
 M+N	Adding N to M	Primitive	Dyadic Function		Mathematical	greek cross plus addition	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBVMFLQVDA24UMS0geSh9SYKhv//AwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Add.htm
 -N	Negate: 0-N	Primitive	Monadic Function		Mathematical	minus hyphen invert additiveinverse opposite dash negation signchange − negating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0FYz1jBQOrTdXMPj/HwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Negative.htm
 M-N	Subtracting N from M	Primitive	Dyadic Function		Mathematical	minus dash hyphen subtraction difference −	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFcwVLBV0FUy5oAKmCoYKJkABI6CUyf//AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Subtract.htm
@@ -142,7 +142,7 @@ f\Y	Scan: f between items of Y in progressively longer vectors along last axis	P
 Iv⍀Y	Expand leading axis of Y	Primitive	Dyadic Function		Selection	reversesolidusbar slopebar Iv\[1] dimension start beginning	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUoomCoYKBgBCQf9TYoABX9/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Expand.htm
 f⍀Y	Scan First: f between items of Y in progressively longer vectors along first axis	Primitive	Monadic Function	Monadic Operator	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise f\[1] scanning major cells elements dimension 1st column-wise vertically lists	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUooqD9qLdBASj7/z8A	https://help.dyalog.com/latest/#Language/Primitive%20Operators/Scan%20First.htm
 ⍉Y	Transpose: Reverse order of axes of Y	Primitive	Monadic Function		Structural	circlebackslash cant reverseaxes ^T ⸆ ᵀ reordering ordering reversing dimensions	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBCMFYwWTR71bHvVuNjLhetQ3FSim8Ki3UwEo/f8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Monadic.htm
-⍉Ym	Reflect diagonally	Primitive	Monadic Function		Structural	mirroring reflecting reflection	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBCMF40e9Wx71bjbjetQ3FSig8Ki3UwEo9/8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Monadic.htm
+⍉Ym	Reflect diagonally	Primitive	Monadic Function		Structural	mirroring reflecting reflection mirror across	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBCMF40e9Wx71bjbjetQ3FSig8Ki3UwEo9/8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Monadic.htm
 Iv⍉Y	Reorder the axes of Y	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes reordering dimensions	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwVjBZNHvVse9W42MuF61DcVJGgIFDRSeNTbqQBU9v8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
 X f⌸Y	Key: f between unique X values and their corresponding items of Y	Primitive	Dyadic Function	Monadic Operator	Sets	keys equalquad quadequal groups grouped classify bins buckets major cells elements	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnRLzgFBdofpR7y6FR71bax/17FAwVjBUMAFiUwVLLqhCXV1dLmx6dLT1ydAFt8lQwQiozwSox@z/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Operators/Key.htm
 f⌸Y	Key: f between unique Y values and their first-axis indices	Primitive	Monadic Function	Monadic Operator	Sets	keys equalquad quadequal groups grouped classify bins buckets major cells elements locations	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/XuUnjUu7X2Uc8OBXWnxDwgVP//HwA	https://help.dyalog.com/latest/#Language/Primitive%20Operators/Key.htm
@@ -554,7 +554,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 C f⍥⎕C D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lettercase caseinsensitively comparison lookup apply caselessly  ignorecase		
 {0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWoVNEwUTBXMNBXUHZ2c1f//BwA	
 +∘-N	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H3XM0FU4tN7cy/j/fwA	
--∘+N	Mirror complex N in y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA	
+-∘+N	Mirror complex N across y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal mirroring reflecting reflection	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA	
 ⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ	
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical			
 Is/∘⍪Yv	Matrix with Is columns, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMFPQfdcx41LtKwVDBSMH4/38A	
@@ -727,7 +727,7 @@ X⍳⍨∘⌽⍨Y	Last indices in X of major cells Y, counted from the rear	Taci
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions		
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings		
 +\⍣2∘⍳Js	First Js triangular pyramidal numbers	Tacit	Monadic Function		Mathematical	figurative tetrahedral oeisA000292 oeisA292 1st		
-⌽∘⍉∘⌽Ym	Reflect counter-diagonally	Tacit	Monadic Function		Structural	mirroring reflecting reflection counterdiagonally		
+⌽∘⍉∘⌽Ym	Reflect counter-diagonally	Tacit	Monadic Function		Structural	mirroring reflecting reflection counterdiagonally mirror		
 Is⌿∘⍉∘⍪Yv	Matrix with Is rows, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table		
 Xs+.=∘,Y	Number of occurrences of scalar Xs in array Y	Tacit	Dyadic Function		Comparison	count tally		
 M(⊢-|)N	Largest whole multiple of M less than or equal to N (N rounded down to closest smaller multiple of M)	Tacit	Dyadic Function		Mathematical	without less nodivisionremainder bar() noresidual intmultiples smaller ≤ integer unit floor	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0HnUt0q3RVLAEcQwNFQwtFYwMFIwM//8HAA	
@@ -989,7 +989,7 @@ M(⊢+⊣×0=⊢)N	Replacing zeroes in N with corresponding elements of M	Tacit	
 (⊢⍴⍨1⌈¯2↑⍴)Yv	Reshaping non-empty lower-rank array Yv into a matrix	Tacit	Monadic Function		Structural	table		
 M(○××3÷⍨⊢)N	Volume of cone with height M and radius N	Tacit	Dyadic Function		Circular/Trigonometric	lengths		
 I(⊣*⍨1+÷⍨)N	Effective rate of interest with nominal rate N for I periods	Tacit	Dyadic Function		Mathematical			
-As○⍨∘(¯10+~)⍨N	Mirror complex N in x-axis if As	Tacit	Dyadic Function		Circular/Trigonometric	conjugate negateimaginary		
+As○⍨∘(¯10+~)⍨N	Mirror complex N across x-axis if As	Tacit	Dyadic Function		Circular/Trigonometric	conjugate negateimaginary mirroring reflecting reflection		
 M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		Mathematical	signum		
 (⊢÷⌈⌿∘|)N	Normalisation by Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normalise L∞-normalize L∞-normalization L-∞	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgKOKKosO34oyI4oy/4oiYfCkgMyA0//8	
 (×⌿*∘÷≢)N	Geometric mean	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean		
