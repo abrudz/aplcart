@@ -558,13 +558,13 @@ C f⍥⎕C D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lett
 ⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ	
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical			
 Is/∘⍪Yv	Matrix with Is columns, each consisting of Yv	Tacit	Dyadic Function		Structural	fill table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMFPQfdcx41LtKwVDBSMH4/38A	
+Iv⍴∘⊂Y	Array of shape Iv filled with copies of Y	Tacit	Dyadic Function		Structural	copy repeat repetitions duplicate reshape	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFIwVHvVuedQx41FXk4J6YlKy@v//AA	
 ⊂∘⊃Y	Corner element of a (non-empty) array Y[1;1;1…]	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvFgUjBR19hUe9my25IJLq6lCGwqOupkcdMx51NWOq/f8fAA	
 Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GSsYP@rd8qh3s6WmwuHpjzpmAJkKxv//AwA	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwETB@FHvFgM9I1MuqOij3s2POmY86lyEJPf/PwA	
 ,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
 C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA	
 Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
-I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 X f⍣¯1⍣≡Y	Limit: apply inverse of X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA	
 f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A	
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list		
@@ -623,6 +623,7 @@ X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	ch
 Iv⌷⍨∘⊂Jv	Generate consolidated left argument for successive transposes Iv⍉Jv⍉Y	Tacit	Dyadic Function		Structural	optimise optimize		
 X⍳⍨∘⌽Y	Position of last X in Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition vtv		
 C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector		
+I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence		
 +\∘⍳Js	First Js triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217 1st		
 -\∘⍳Js	Alternating series (1,-1,2,-2, …) of length Js	Tacit	Monadic Function		Mathematical	oeisA001057 oeisA1057		
@@ -866,10 +867,10 @@ Xv(,,⍤0 1⍨)Yv	Inserting Xv after every element of Yv	Tacit	Dyadic Function		
 (2>/⍪∘0)B	Last ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs blocks 1s trues truths		
 (⊃⌽∘⍴)Y	Number of items in trailing axis	Tacit	Monadic Function		Array Properties	count length() cells len() cells elements dimension ending		
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	cell element		
-Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	duplicate reshape		
+Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	copy repeat repetitions duplicate reshape	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgMyAo4oaR4o204oiY4oqCKSAnYWJjJ///	
 (↑,∘⊂)Y	Increment rank by inserting a new dimension before the leading one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add beginning first 1st rowmatrixfromvector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNlHnUceMR11NmgrqiUnJ6ly4ZI0VTIBiQFnH//8B	
 (⍳∘≢⍴)Y	Indices of dimensions of Y	Tacit	Monadic Function		Array Properties	shape axes		
-(,∘⍳⍴)Y	All Indices Of Y	Tacit	Monadic Function		Index Generation	indicesof		
+(,∘⍳⍴)Y	All indices Of Y	Tacit	Monadic Function		Index Generation	indicesof		
 Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	testif superset? contains ⊇		
 X(∊⍨×⍳)Y	Changing index of an unfound element to zero (slow)	Tacit	Dyadic Function		Index Generation	missing cell item change converting conversion		
 I(~∊∘⍳)Js	Boolean vector of length Js with zeros in locations I	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2		
