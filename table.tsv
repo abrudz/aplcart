@@ -2295,6 +2295,7 @@ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definit
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick		
 ...	Syntax error to stop execution	Non-syntax			System	halt		
 ⎕NL-⍳9	List names of existing members	Expression		Workspace		available active names namelist all types nameclasses name-classes everything	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD089F91LvZ8v9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/nl.htm
+31↓⎕UCS⍳126	Printable ASCII	Constant	Expression		Text	characters	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDR@1TQayQ52DH/VuNjQy@/8fAA	
 ⎕SE.Dyalog.Serial Y	Set or query (if Y is empty) serial number	Tradfn	Monadic Function		System	report license licence licensing licencing get fetch renew initialise initialize serialnumber account dss+ unregistered unregistration deregistered deregistration		
 name f∘⊢←Y	Modified Assignment (also dfns/dops)			Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSBIBLIe9W4Fs5OgbDAnIKe0GMjXhvASIfyOGY@6FgFFDSHqYYoMYYqSuGq5HvVNBQoB7VAw/v8fAA	https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/MultiLine%20Dynamic%20Functions.htm
 ⎕THIS.name←Y	Create new global (also in dfns/dops)	Syntax			Expression	new assignment assigning value variable function operator		
