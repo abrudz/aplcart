@@ -2274,9 +2274,9 @@ X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwis
 X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		
 X(f op g)Y	Dyadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		
 X(f op)Y	Monadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	declaration [0] declaring defining		
-f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector		
+f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector header		
 (X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		
-{X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence		
+{X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		
 (f op g)Y	Dyadic tradop header for deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		
@@ -2321,8 +2321,8 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Function	Monadic Operator	System	attaching to workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text		https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 ¯1⎕DT'Z'	Current UTC date and time	Constant	Expression		Data Conversion	now datetime zulutime zulu-time		
-(X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector		
-{R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional		
+(X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector header		
+{R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional header		
 (name1 name2)←Y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 (name1 name2)←name2 name1	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 :Attribute name {ConstructorArgs}	Descriptive tag that provides additional information to .NET	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation metadata		https://help.dyalog.com/latest/#Language/Control%20Structures/attribute.htm
