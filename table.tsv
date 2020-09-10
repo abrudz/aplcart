@@ -2081,7 +2081,7 @@ name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump t
 )HOLDS	List tokens currently held (acquired by :Hold)	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading vector		https://help.dyalog.com/latest/#Language/System%20Commands/holds.htm
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue		https://help.dyalog.com/latest/#Language/System%20Commands/off.htm
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor ⎕sh linux macos aix rasbianpios		https://help.dyalog.com/latest/#Language/System%20Commands/sh.htm
-)name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling		https://help.dyalog.com/17.1/index.htm?name
+)name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling		https://help.dyalog.com/latest/#Language/System%20Commands/Introduction.htm
 0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple?		
 1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? nonscalar?		
 ≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank dimensions axes		
@@ -2187,21 +2187,20 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical			
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical			
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation		
-⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base		
+⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base		https://help.dyalog.com/latest/#Language/System%20Functions/base.htm
 2350⌶⎕NULL	List auto-completed user commands (unofficial)	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input report show		
 8666⌶⎕NULL	Assimilate shared code files	I-beam	Constant	Monadic Operator	System	copy referenced objects into workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 ⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment	https://tio.run/##SyzI0U2pTMzJT/8PBI@6FuUl5qY@apugHqkOAA	
 name⊢←Y	In-place update of existing global variable (also in dfns/dops)	Syntax			Expression	inplace replace value reassignment re-assignment reassigning re-assigning		
 name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension		
 name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st		
-⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending echo print		
+⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending echo print		https://help.dyalog.com/latest/#Language/System%20Functions/Evaluated%20Input%20Output.htm
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize		
-x←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput		
-⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove print		
-charvec←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput		
-name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove		
-:Implements Trigger *	Function is a global trigger function: called when any global variable in the same namespace is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
-:Implements Trigger *	Delare function as a trigger function called when any global variable is changed in the same namespace	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Global%20Triggers.htm
+x←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput		https://help.dyalog.com/latest/#Language/System%20Functions/Evaluated%20Input%20Output.htm
+⍞←x	Output x to session without trailing newline via stderr (without trailing line break)	Syntax	Assignment		Expression	quotequad quadquote ending remove print		https://help.dyalog.com/latest/#Language/System%20Functions/Character%20Input%20Output.htm
+charvec←⍞	Return one line of user input from stdin	Syntax	Array		Expression	quotequad quadquote characterinput rawinput		https://help.dyalog.com/latest/#Language/System%20Functions/Character%20Input%20Output.htm
+name←⍞	Assignment of character vector without needing to double quotes	Expression			Text	characterinput gets is copula let define naming denotes means list remove		https://help.dyalog.com/latest/#Language/System%20Functions/Character%20Input%20Output.htm
+:Implements Trigger *	Declare function as a trigger function called when any global variable is changed in the same namespace	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Global%20Triggers.htm
 :Implements Constructor :Base expr	Function is a class constructor which calls the base constructor with the result of 'expr' as argument	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		
 0::any error	Covers all errors (errors 1–999)				Error Message	catch errno try errorhandling trapping exception		
 1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa		https://help.dyalog.com/latest/#Language/Errors/WS%20FULL.htm
@@ -2256,7 +2255,7 @@ name←⍞	Assignment of character vector without needing to double quotes	Expre
 90::EXCEPTION	A Microsoft .NET object threw an exception				Error Message	trap catch errno		https://help.dyalog.com/latest/#Language/Errors/EXCEPTION.htm
 92::TRANSLATION ERROR	The system cannot convert a character from Unicode to an Atomic Vector (⎕AV) index or vice versa				Error Message	trap catch errno ⎕avu classic codepage characterset charset encoding sbcs list Conversion converting change changing		https://help.dyalog.com/latest/#Language/Errors/TRANSLATION%20ERROR.htm
 99::INTERNAL ERROR	Severe system error — save your work(space), and report the issue to Dyalog				Error Message	trap catch errno blank		https://help.dyalog.com/latest/#Language/Errors/INTERNAL%20ERROR.htm
-errno::Y	Dfn/dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try		
+errno::Y	Dfn/dop Error Guard (result upon listed error)	Syntax			Expression	errorguard trap catch try		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/Guards.htm
 →Bs⍴0	Conditional Return: Leave function and return to caller if Bs		Control		Expression	rightarrow :ReturnIf		
 →⎕LC	Continuing execution	Expression			Expression	resume thread		
 ##	Reference to parent namespace of the current namespace	Constant			System	workspace top hashhash hashash outercontainer levelup father mother ancestor	https://tio.run/##SyzI0U2pTMzJT/8PBOqJeknqCo/6pvoFKzzqXcMFZD1qm6AAFNVTVgYA	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Namespaces.htm
@@ -2268,19 +2267,19 @@ errno::Y	Dfn/dop Error Guard (result upon listed error)	Syntax			Expression	erro
 ⍺←Y	Default left argument in dfn/dop				Expression	leftarg larg fallback fall-back preset value define	https://tio.run/##SyzI0U2pTMzJT///vyg/v@RR24RqBTB41DsXiHeVZCiAxLkgQruA8kZw6ZTUtMTSnBKFknyF4sIimJqtWoe3A1Vy1XI96psKVg8yQMESyoVw/v8HAA	https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/Default%20Left%20Argument.htm
 )ED ∇ nms	Create one or more functions (nms) in the Editor	Non-syntax			System Command	creating new definition define value ⎕ed		https://help.dyalog.com/latest/#Language/System%20Commands/ed.htm
 )ED → nms	Create one or more character vectors (nms) in the Editor	Non-syntax			System Command	creating new definition define value ⎕ed		https://help.dyalog.com/latest/#Language/System%20Commands/ed.htm
-X (Y Z)	Stranding: (⊂X),⊂(⊂Y),(⊂Z)	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation		
-X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		
-X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		
-X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		
-X(f op g)Y	Dyadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		
-X(f op)Y	Monadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	declaration [0] declaring defining		
-f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector header		
-(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		
-{X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		
-(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		
-(f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		
-(f op g)Y	Dyadic tradop header for deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		
-(f op)Y	Monadic tradop header for deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	declaration [0] declaring defining		
+X (Y Z)	Stranding: (⊂X),⊂(⊂Y),(⊂Z)	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation		https://help.dyalog.com/latest/#Language/Introduction/Variables/Vector%20Notation.htm
+X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+∇ X(f op g)Y	Dyadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
+∇ X(f op)Y	Monadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
+∇ f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Namelists.htm
+(X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+{X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
+(f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+(f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
+∇ (f op g)Y	Dyadic tradop header for deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
+∇ (f op)Y	Monadic tradop header for deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick		
 1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple?		
 0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	testif speed optimised optimized quick empty? norows? 1st		
@@ -2288,8 +2287,8 @@ f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of argu
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto		
 Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where trues truths		
 ~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick nonempty? hascontent?		
-;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize declaration declare declaring 1st		
-f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize locals declaration declare declaring [0]		
+;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize declaration declare declaring 1st		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Locals%20Lines.htm
+∇ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize locals declaration declare declaring [0]		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Global%20Local%20Names.htm
 ]name -?	Print help for user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd documentation instructions	https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSvo2gMA	https://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
 ↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose vtv cell element 1st lists zip()		
 ⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick		
@@ -2304,7 +2303,7 @@ name f∘⊢←Y	Modified Assignment (also dfns/dops)			Monadic Operator	Express
 60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	trap catch errno		https://help.dyalog.com/latest/#Language/Errors/FULL-SCREEN%20ERROR.htm
 56::FIELD CONTENTS/TYPE MISMATCH	Field contents assigned to ⎕SM does not conform with the given field type e.g. character content with numeric type				Error Message	trap catch errno		https://help.dyalog.com/latest/#Language/Errors/FIELD%20CONTENTS/TYPE%20MISMATCH.htm
 57::FIELD TYPE/BEHAVIOUR UNRECOGNISED	Field type or behaviour code assigned to ⎕SM is invalid				Error Message	trap catch errno behavior		https://help.dyalog.com/latest/#Language/Errors/FIELD%20TYPE%20BEHAVIOUR%20UNRECOGNISED.htm
-X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose		
+X[Iv Jv …]	Indexing (scatter-point)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Indexing.htm
 0(220⌶)Jv	Deserialise Array	I-beam	Function		Data Conversion	serialisation serialization serialize ibeam fromsint signed integer representation converting change changing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4qB2FDDyMjgUc82TSMFo0e9W4wUzBUMFSy4IAoMYJLF//8DAA	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Serialise%20Array.htm
 0(7162⌶)Dv	Translate JSON name to valid APL name (mangle if necessary)	I-beam	Function		Data Conversion	representation identifier ⎕json namemangling ibeam mangled converting change changing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww0zA3NjB71bNNUT0xK1q2orFL//x8A	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/JSON%20Translate%20Name.htm
 0(85⌶)Dv	Execute expression Dv (⍎Dv) and signal ERROR 85 if it has no result, otherwise return result	I-beam	Dyadic Function		Data Conversion	eval() evaluate apl compute run call parseexpression noresult ibeam no-result missing unshy un-shy converting change changing	https://tio.run/##SyzI0U2pTMzJT/8PBAYaFqaPerZpqptoG6lzwXmJj9omGCLxq2uN1QE	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Execute%20Expression.htm
@@ -2321,8 +2320,8 @@ Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management perfo
 Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Function	Monadic Operator	System	attaching to workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text		https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 ¯1⎕DT'Z'	Current UTC date and time	Constant	Expression		Data Conversion	now datetime zulutime zulu-time		
-(X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector header		
-{R}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional header		
+∇ (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Namelists.htm
+∇ {Z}←f Y	Shy Tradfn/Tradop result	Syntax			Definition	curlybraces function operator hideresult traditional header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 (name1 name2)←Y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 (name1 name2)←name2 name1	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 :Attribute name {ConstructorArgs}	Descriptive tag that provides additional information to .NET	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation metadata		https://help.dyalog.com/latest/#Language/Control%20Structures/attribute.htm
@@ -2361,9 +2360,9 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text		http
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table		
 :Implements Method {InterfaceName.MethodName}	Function implements method 'MethodName' whose syntax is specified by interface 'InterfaceName'	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Interfaces/Interfaces.htm
 #⎕WG'APLVersion'	Report interpreter version	Constant			Expression	dyalogapl-version build exe system		
-f←{⍵}	Prototypical monadic dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
-f←{⍺}	Prototypical dyadic dfn	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
-{_← … }	Shy dfn/dop result	Syntax			Definition	curlybraces function operator hideresult traditional		
+f←{⍵}	Prototypical monadic dfn	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/Dynamic%20Functions%20and%20Operators.htm
+f←{⍺}	Prototypical dyadic dfn	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/Dynamic%20Functions%20and%20Operators.htm
+{_← … }	Shy dfn/dop result	Syntax			Definition	curlybraces function operator hideresult traditional		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/Shy%20Result.htm
 ≢⍕!⍋⎕D	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything golf		
 X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose		
 ∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick indicate masking blanks start beginning binary base-2 base2 bitmask bit-mask		
