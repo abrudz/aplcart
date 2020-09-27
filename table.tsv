@@ -1651,7 +1651,7 @@ svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku 
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
-{' '∧.=⍞:⍵ ⋄ ⍵}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
+{' '∧.=X←⍞:⍵ ⋄ X}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse		
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration as file Dv	Dfn	Monadic Function		System	put store dyalog .dse		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove		
@@ -1721,7 +1721,7 @@ X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototy
 X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove		
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
 X{⍺⍪⍵⌿⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
-Mv{L←2*∘÷⍨+.×⍨ ⋄ L⍺,L⍵÷2}Ns	Length of edges of pyramid with height and width Mv and length Ns	Dfn	Dyadic Function		Mathematical	lengths sides		
+Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st		
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements		
@@ -1803,7 +1803,7 @@ Cv{('\P{',⍺,'}')'.'⎕S 3⍠'Mode' 'D'⍠'DotAll'1⊢⍵}Dv	Do characters in D
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove		
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)∊(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove		
 Iv{1(↑⌊⍵⌈↓)(2 2⍴¯1 1 1 ¯0.1)+.×10*(-⊃⌽⍺),-/⍺+⍺>99 0}N	Clamp non-negative N to fit in ⍕ field Iv[1 2]	Dfn	Dyadic Function		Text	limitrange format		
-Mv{n←(⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢ ⋄ (n⍺)+.×(n⍵)}Nv	Sample Pearson correlation coefficient	Dfn	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
+Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
 Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length of longest common substring	Dfn	Dyadic Function		Text	match		
 {'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'-|-|',⊂⍕⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table		
 Cv{(⊢/¨r)↓¨⍵⊂⍨(⍳≢⍵)∊1+⊃¨r←(⍺,'|^')⎕S 0 1⊢⍵}Dv	Split Dv at occurrences of PCRE regex Cv (removes separators)	Dfn	Dyadic Function		Text	regularexpression regexp pattern split() cut separate chop divide chunk dividing segments partitions	https://tio.run/##SyzI0U2pTMzJT///Pyg1PbggJ7PkUduEao1HXYv0D60o0nzUNvnQike9Wx91NT3qXaHxqHfzo85FQL7mo44uQ@1HXc1ARUANQIldOuo1ceqaj/qmBisYKBgCDQAqq@VST8ksLlAHijpHqqek5RWrcwHZQB0gYQV1fX17dQWYxQrqHqlFqfr6@kmp@ilFien5ecX6RChHqFb//x8A	
@@ -1896,8 +1896,8 @@ X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f
 f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
 X f{⊃⌽⍸~⍺ ⍺⍺ ⍵}Y	Index of last element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2		
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose		
-f{⍺⍺ ⍵:1 ⋄ ⍵⍵ ⍵}g Y	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting		
-f{⍺⍺ ⍵:⍵⍵ ⍵ ⋄ 0}g Y	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting		
+f{⍺⍺ ⍵:1 ⋄ ⍵⍵ ⍵}g Y	Sequential OR test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting short-circuit minimal evaluation McCarthy		
+f{⍺⍺ ⍵:⍵⍵ ⍵ ⋄ 0}g Y	Sequential AND test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting short-circuit minimal evaluation McCarthy		
 M(A{⍺×⍵*¯1*⍺⍺})N	Conditionally multiply (where A=0) or divide (where A=1)	Dop	Dyadic Function	Monadic Operator	Mathematical	per-element item cell		
 Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dyadic Function	Monadic Operator	Structural	major cells items delete remove without		
 (Ms{⍺⍺⌈⍵⍵⌊⍵}Ns)N	Force N to range Ms≤N≤Ns	Dop	Monadic Function	Dyadic Operator	Mathematical	clamp limitrange between –		
@@ -1960,7 +1960,7 @@ X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ ⍺⍺⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y
 f{⊃⍺⍺{⍵,⍨⊂⍺ ⍺⍺⊃⍬⍴⍵}/1↓⍬(⊢,∘⊂⍴)¯1⌽⍵}Y	Accumulating reduction	Dop		Monadic Operator	Function Application			
 Xv(Av{(1+⍺⍺)⊃¨((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Yv	Mesh vectors Xv and Yv under control of Av (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 Mv(Ns{⍺⍺{⍺⍺|⍺×⍺⍺|×⍨⍵}⌿⍺*⍤1⊖0⍪2⊥⍣¯1⊢⍵})Jv	Modulo power (fast non-overflowing Ns|Mv*Jv)	Dop	Dyadic function	Monadic Operator	Mathematical	powermodulo powmodulo modular exponentiation modulus bmodpow() pow() expmod() exp() bcpowmod() mpz_powm() @powermod() mod_exp()		
-X(f{⍺←⊢ ⋄ r⊣⍺ ⍺⍺{r,∘⊂←⍺ ⍺⍺ ⍵}⍣⍵⍵⊃r←⊂⍵}Y)Z	Iterate: ⍣ but with intermediary results	Dop	Monadic Function, Dyadic Function	Dyadic Operator	Iteration	apply application repeated converge while repeating looping power intermediaries		
+X(f{⍺←⊢ ⋄ r⊣⍺ ⍺⍺{r,∘⊂←⍺ ⍺⍺ ⍵}⍣⍵⍵⊃r←⊂⍵}Y)Z	Iterate: ⍣ but with intermediary results	Dop	Monadic Function, Dyadic Function	Dyadic Operator	Iteration	apply application repeated converge while repeating looping power intermediaries intermediate all sequence		
 M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/probabilistic functions I (0-15)	Dop	Dyadic Function	Monadic Operator	Mathematical	Logical application numbered enumerated operation apply fuzzy probability chance		
 Xm(Av{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Ym	Mesh matrices Xm and Ym along rows under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix row-wise		
 Xm(Av{(1+⍺⍺)⊃¨⍤0 1⊢((~⍺⍺)⍀⍺),¨(⍺⍺⍀⍵)})Ym	Mesh matrices Xm and Ym along columns under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix column-wise		
