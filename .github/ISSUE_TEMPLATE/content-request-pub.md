@@ -1,6 +1,6 @@
 ---
 name: Content request (pub)
-about: Suggest additional content for APLcart/pub
+about: Suggest additional content for APLcart's list of publications ([aplcart.info/pub](https://aplcart.info/pub))
 title: Please add [SHORT DESCRIPTION]
 labels: pub
 assignees:
