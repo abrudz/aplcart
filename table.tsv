@@ -1286,6 +1286,7 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	remove		
 Cv(⎕THIS#.{⍺←⊢ ⋄ ⍺ ⍺⍺.⎕NL ⍵})Nv	Names public to this object, optionally filtered	Tacit	Function		System	namelist classes instance fields methods properties objects		
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?		
+Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Xs(⎕FIX'file://',⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked		
 ' '∘(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Dv	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without		
 (⊃((+⌿÷≢),≢÷1⊥÷)⍣≡)Nv	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic		
@@ -1324,6 +1325,7 @@ X({(d/⍺)@{d}⊃⌽(d f)←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a numb
 (-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones		
 I((31-2|7|¯1+⊣)-2∘=⍤⊣×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length		
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion		
+Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0		
 '\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences (like \n and \u000a)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs backspace bs \b horizontaltab ht \t linefeed lf \n formfeed ff \f carriagereturn cr \r crlf cr+lf \r\n		
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical		
@@ -1648,10 +1650,10 @@ I{⍵⌷⍨⊂⍺~⍨⍳≢⍵}Y	Major cells of Y except those enumerated in I	D
 Av{⍵⌷⍨⊂⍋⍺++\⍺}Y	Rotate first major cells (1⊖) of subvectors of Y indicated by Av	Dfn	Dyadic Function		Structural	sub-vectors sub-lists sublists items elements 1st		
 I{⍵[⍋⍵[;⍺];]}Ym	Sort rows of matrix Ym according to column(s) I	Dfn	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering specific columns		
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list		https://dfns.dyalog.com/n_sudoku.htm
+{' '∧.=X←⍞:⍵ ⋄ X}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
-{' '∧.=X←⍞:⍵ ⋄ X}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse		
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration as file Dv	Dfn	Monadic Function		System	put store dyalog .dse		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove		
@@ -1721,7 +1723,6 @@ X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototy
 X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove		
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
 X{⍺⍪⍵⌿⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
-Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st		
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements		
@@ -1803,7 +1804,6 @@ Cv{('\P{',⍺,'}')'.'⎕S 3⍠'Mode' 'D'⍠'DotAll'1⊢⍵}Dv	Do characters in D
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove		
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)∊(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove		
 Iv{1(↑⌊⍵⌈↓)(2 2⍴¯1 1 1 ¯0.1)+.×10*(-⊃⌽⍺),-/⍺+⍺>99 0}N	Clamp non-negative N to fit in ⍕ field Iv[1 2]	Dfn	Dyadic Function		Text	limitrange format		
-Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
 Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length of longest common substring	Dfn	Dyadic Function		Text	match		
 {'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'-|-|',⊂⍕⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table		
 Cv{(⊢/¨r)↓¨⍵⊂⍨(⍳≢⍵)∊1+⊃¨r←(⍺,'|^')⎕S 0 1⊢⍵}Dv	Split Dv at occurrences of PCRE regex Cv (removes separators)	Dfn	Dyadic Function		Text	regularexpression regexp pattern split() cut separate chop divide chunk dividing segments partitions	https://tio.run/##SyzI0U2pTMzJT///Pyg1PbggJ7PkUduEao1HXYv0D60o0nzUNvnQike9Wx91NT3qXaHxqHfzo85FQL7mo44uQ@1HXc1ARUANQIldOuo1ceqaj/qmBisYKBgCDQAqq@VST8ksLlAHijpHqqek5RWrcwHZQB0gYQV1fX17dQWYxQrqHqlFqfr6@kmp@ilFien5ecX6RChHqFb//x8A	
@@ -2050,14 +2050,17 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 ⎕UCS 8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 %08	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPH/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
 ⎕UCS 9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^I U+00 0x00h \u00 %00 tabulation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPn/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
 ⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Tz81LVFR51tyhA@SXl@er//wMA	https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Statements.htm
+:Namespace	Declare container object without accesss restrictions	Syntax	Control	Structure	Expression	containerise containerize containerisation containerization locale scope symbol-table dotting		https://help.dyalog.com/latest/Content/Language/Control%20Structures/namespace.htm
 :If	:If bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf	Syntax	Control	Structure	Expression	conditional ternary branch ⍣	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAoKVp5pCoZAWgEspl6ZWqwOEnXNS/FMg0obIKTz8pFkgQZxPeqbChRXAJr1/z8A	https://help.dyalog.com/latest/#Language/Control%20Structures/if.htm
 :Implements Constructor	Function is a class constructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIHnW0KziX5BeBOQoKVo7JyalAyYLSpJzMZJigZ25BTmpual4JUFd@XnFJUWkyQsujvqmP2iaoe2QqqsNM5LJyzUsB2/L/P1DazzVcIRkA	https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Constructors/Constructors.htm
 :Implements Destructor	Function is a class destructor	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIHnW0K7iU5BeBOQoKVp65BTmpual5JcUKKanFJUWlyQjJR31TH7VNUHeqTFVUh2nmsnLNSwEb@P8/UN7PNVwhGQA	https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Constructors/Destructors.htm
+:Interface	Declare protocol for object methods	Syntax	Control	Structure	Expression	interfacing trait api		https://help.dyalog.com/latest/Content/Language/Control%20Structures/interface.htm
 :Access Overridable	Allow derived class to redefine method (tradfn) for when it is called inside base class code	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation virtual		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Class%20Members/Methods/Superceding%20Base%20Class%20Methods.htm
 :Access Override	Redefine base class method (tradfn) so it can be called from inside base class code	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation Overrides		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Class%20Members/Methods/Superceding%20Base%20Class%20Methods.htm
 :Access Public	Make class method (tradfn) visible and callable from outside the class	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Class%20Members/Methods/Methods.htm
 :Access Shared	Make class method (tradfn) run in class rather than in instance of class	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation static		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Class%20Members/Methods/Shared%20Methods.htm
 :Access WebMethod	Same as :Access Public with :Attribute System.Web.Services.WebMethodAttribute	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET		https://help.dyalog.com/latest/#DotNet/Writing%20Web%20Services/Exporting%20Methods.htm
+:Class	Declare object template with optional fields, methods, and properties	Syntax	Control	Structure	Expression	oop object-oriented programming encapsulation capsule access restriction		https://help.dyalog.com/latest/Content/Language/Control%20Structures/class.htm
 :Continue	Start iteration of the immediately surrounding :For/:Repeat/:While loop	Syntax	Control	Keyword	Expression	continuation beginning leading		https://help.dyalog.com/latest/#Language/Control%20Structures/continue.htm
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨		https://help.dyalog.com/latest/#Language/Control%20Structures/for.htm
 :GoTo J	Branch to line or label J	Syntax	Control	Keyword	Expression	switch →	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcixcs8PyVcI9vYMQJIxAsqAhKyQxIzVuYBGcAGNAAA	https://help.dyalog.com/latest/#Language/Control%20Structures/goto.htm
@@ -2066,6 +2069,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 :Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx│:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣		https://help.dyalog.com/latest/#Language/Control%20Structures/repeat.htm
 :Repeat	:Repeat ⋄ block ⋄ :EndRepeat	Syntax	Control	Structure	Expression	loop iteration ⍣		https://help.dyalog.com/latest/#Language/Control%20Structures/repeat.htm
 :Return	Abort (cut stack back one frame)	Syntax	Control	Keyword	Expression	→0 stop		https://help.dyalog.com/latest/#Language/Control%20Structures/return.htm
+:Section	Split function/script up into sections with no effect on execution	Syntax	Control	Structure	Expression	no-op collapse expand editor hide show organise organize code organisation organization		https://help.dyalog.com/latest/Content/Language/Control%20Structures/section.htm
 :Select	:Select ax ⋄ :Case val│:CaseList val ⋄ block ⋄ :Else ⋄ block ⋄ :EndSelect	Syntax	Control	Structure	Expression	switch inspect multiwaybranch		https://help.dyalog.com/latest/#Language/Control%20Structures/select.htm
 :Trap	:Trap ecode ⋄ block ⋄ :Case ecode│:CaseList ecode ⋄ block ⋄ :Else ⋄ block ⋄ :EndTrap	Syntax	Control	Structure	Expression	try catch errorhandling trapping exception		https://help.dyalog.com/latest/#Language/Control%20Structures/trap.htm
 :While	:While bx ⋄ block ⋄ :AndIf bx│:OrIf bx ⋄ block ⋄ :EndWhile	Syntax	Control	Structure	Expression	loop do iteration ⍣		https://help.dyalog.com/latest/#Language/Control%20Structures/while.htm
