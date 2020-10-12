@@ -638,7 +638,7 @@ Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Functi
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply		
 ⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists		
 I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range		
-M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-<		
+M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison		
 M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼		
 M(0⌈⌊)N	Force numbers N to range 0≤N≤M	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–		
 M(⌊÷)N	Integer Division	Tacit	Dyadic Function		Mathematical	intdiv() % // divmod()		
@@ -2320,7 +2320,7 @@ Is(86⌶)Dv	Execute expression Dv (⍎Dv) but Is frames up the stack (unofficial
 Is(8659⌶)Jv	List names (of name classes Jv) for share code file in slot Is	I-beam	Dyadic Function	Monadic Operator	System	report workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 Iv(2000⌶)Jv	Memory Manager Statistics	I-beam	Function		System	management performance ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Memory%20Manager%20Statistics.htm
 Iv(8666⌶)Dv	Attach shared code file Dv (for name classes Iv)	I-beam	Dyadic Function	Monadic Operator	System	attaching to workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
-Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text		https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA	https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text			https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 ¯1⎕DT'Z'	Current UTC date and time	Constant	Expression		Data Conversion	now datetime zulutime zulu-time		
 (name1 name2)←Y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
 (name1 name2)←name2 name1	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables	https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA	https://help.dyalog.com/latest/#Language/Introduction/Namespaces/Distributed%20Assignment.htm
