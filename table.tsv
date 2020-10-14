@@ -532,16 +532,14 @@ Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Fun
 X f⍣≡Y	Limit: apply X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
 f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point		
 +\N	Cumulative sum	Tacit	Monadic Function		Mathematical	runningtotal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0YxQMYZALIWakYKJgpmChYGjw/z8A	
-∨\B	All ones after the first 1	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMgBNEG//8DAA	
-∨\B	Not leading zeroes (turn on all zeroes after first 1)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st start beginning mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMoCYT//wMA	
-∧\B	All ones to the first zero	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSyPUTAEQgMgBNGG//8DAA	
+∨\B	Turn on all 1s after first 1 (indicate all elements except leading 0s)	Tacit	Monadic Function		Boolean/Logical	flip change changing inverting negating bitmask bit-mask zeros zeroes trues truths ones falses falsehoods 1st start beginning mask not	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMoCYT//wMA	
+∧\B	Turn off all 1s after first 0 (indicate all elements until the first 0)	Tacit	Monadic Function		Boolean/Logical	flip change changing inverting negating bitmask bit-mask ones zero false trues truths falsehood 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSyPUTAEQgMgBNGG//8DAA	
 ⌈\N	Progressive maxima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTEKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
 ⌊\N	Progressive minima (row-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan rowwise horizontally	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTFKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A	
-<\B	All zeros except the first 1 (turn off all 1s after the first 1)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0s zeroes falses falsehoods 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRsYhQMFAxh@P9/AA	
-≤\B	All ones after the first zero (turn on all zeroes after the first)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask 0 trues truths 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B	
-≤\B	Not first zero (turn on all zeroes after first zero)	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask zeros 0s falses falsehoods 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B	
-≠\B	Convert reflected Gray code to binary	Tacit	Monadic Function		Boolean/Logical	bitmask bit-mask base-2 base2 mask Conversion converting change changing		
-≠\B	Parity: Connect odd and even ones	Tacit	Monadic Function		Mathematical	bitmask bit-mask 1s running trues truths mask		
+<\B	Turn off all 1s after first 1 (indicate only the first 1)	Tacit	Monadic Function		Boolean/Logical	flip change changing inverting negating bitmask bit-mask zeros zeroes falses ones trues truths falsehoods 1st mask	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRsYhQMFAxh@P9/AA	
+≤\B	Turn on all 0s after first 0 (indicate all elements except the first 0)	Tacit	Monadic Function		Boolean/Logical	flip change changing inverting negating bitmask bit-mask zeros zeroes falsehoods 1st mask not	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B	
+≠\B	Convert reflected Gray code to binary	Tacit	Monadic Function		Boolean/Logical	flip change changing inverting negating bitmask bit-mask base-2 base2 mask Conversion converting change changing		
+≠\B	Parity: Connect odd and even ones	Tacit	Monadic Function		Mathematical	flip change changing inverting negating bitmask bit-mask 1s running trues truths mask		
 ⌈⍀N	Progressive maxima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically	https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XjU2wBi//8PAA	
 ⌊⍀N	Progressive minima (column-wise)	Tacit	Monadic Function		Mathematical	running cumulative scan columnwise vertically	https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XrU2wBi//8PAA	
 1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvlke9my25IMLq6lCGoYLho44Zj3o7kdT8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
@@ -1283,6 +1281,7 @@ Ms(0J1⊥(1↓⊢∘⊖)×⊢÷⊣-¯1↑⊢)Nm	Perspective projection of Nm fro
 Av(∧∨⊢{⍵\2</0,⍵/⍺}∨)Bv	First one (<\) in each subvector of Bv indicated by Av (fast ∊<\¨Av⊂Bv)	Tacit	Dyadic Function		Boolean/Logical	speed quick sub-vector 1st		
 Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spikes	Tacit	Dyadic Function		Boolean/Logical	signal on/off		
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
+Cv(Xs#.{⍺←⊢ ⋄ ⍺ ⍺⍺.⎕NL ⍵})Nv	Names public to object Xs, optionally filtered by first letters Cv	Tacit	Ambivalent Monadic Function, Dyadic Function		System	namelist classes instance fields methods properties objects		
 (⌽∘⍳∘≢⌽⊢,(0 ¯1+≢)⍴0∘⍴)Yv	Diagonal matrix with elements of Yv (filled appropriately)	Tacit	Monadic Function		Structural	cells items table		
 I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest N	Tacit	Dyadic Function		Mathematical	loan		
 Mv(*⊢∘⍟(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x curve		
@@ -1291,7 +1290,6 @@ X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals wit
 Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector of Bv indicated by Av	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning		
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens		
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	remove		
-Cv(Xs#.{⍺←⊢ ⋄ ⍺ ⍺⍺.⎕NL ⍵})Nv	Names public to object Xs, optionally filtered by first letters Cv	Tacit	Ambivalent Monadic Function, Dyadic Function		System	namelist classes instance fields methods properties objects		
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?		
 Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Xs(⎕FIX'file://',⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked		
