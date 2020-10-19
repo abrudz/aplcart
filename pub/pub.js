@@ -22,3 +22,4 @@ Q=_=>{
   z.textContent="Showing "+n+" of "+r.length}
 W=x=>{F(b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])]);um.href="/quiz?"+b.className}
 X=_=>F(Q(q.value=""))
+P=x=>Q(q.value=((new RegExp("\\("+x+"\\)")).test(q.value)?"":"("+x+") ")+q.value.replace(/ *\([itv]\) */ig," ").trim())
