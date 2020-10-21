@@ -9,13 +9,15 @@ div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidde
 #t{width:100%;color:#333;white-space:pre-wrap;word-wrap: break-word}
 td{padding:.5em}
 #z{margin-top:1ex;display:inline-block;width:calc(100% - 1.75em)}
-#q{width:calc(100vw - 15.1em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
-body>a,span>a{text-decoration:none;display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
+#q{width:calc(100vw - 15.2em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
+body>a,span>a{text-decoration:none;display:inline-block;text-align:center;z-index:1;line-height:1em;color:unset;
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+body>a,#o>a{width:1em}
 #m{letter-spacing:-.25ex;font-size:133%}
 #e,#x,#c,#s,#w,#a{border-radius:1em;border:.25ex solid currentcolor}
 s{text-decoration:none}
 td a{color:inherit;text-decoration-color:#ddd}
+a{cursor:pointer}
 a:hover,a:focus{color:#000;text-decoration-color:unset}
 #a{position:absolute;right:4.5em;bottom:0em;height:1em}
 #s{position:absolute;right:2.4em;bottom:0em}
@@ -26,7 +28,7 @@ a:hover,a:focus{color:#000;text-decoration-color:unset}
 #u{position:absolute;left:0;width:100%;text-align:center;bottom:0}
 p{top:1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1ex 0}
 ::-ms-clear{display:none}
-@media(max-width:920px){s{display:none}}
+@media(max-width:930px){s{display:none}}
 @media(max-width:320px){
   #e,#x,#c{display:none}
   #q{border-radius:0;width:calc(100vw - 9.5em);padding-right:unset}

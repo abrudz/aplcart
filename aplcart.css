@@ -10,7 +10,7 @@ div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidde
 tr:hover td{color:#000}
 td{padding:.5em}
 #z{margin-top:1ex;display:inline-block;width:calc(100% - 1.75em)}
-#q{width:calc(100vw - 15.1em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
+#q{width:calc(100vw - 15.2em);border:none;border-radius:0 1em 1em 0;font-size:medium;padding-right:1.1em}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover,a:focus{color:#000}
