@@ -1664,8 +1664,8 @@ svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku 
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
-{2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
-{2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
+{2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
+{2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove		
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
@@ -2374,6 +2374,7 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text			htt
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	testif		
 ⊃1⎕NPARTS''	Current directory	Expression			System	folder cd pwd _CWDS _CWPS print working name filesystem		
 {ns}⎕SE.UCMD Dv	Execute user command, arguments, modifiers Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running		
+2⎕NQ⎕SE'FileWrite'	Save Session configuration (including ]box and ]rows settings) to default session file	Expression			System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table		
 :Implements Method {InterfaceName.MethodName}	Function implements method 'MethodName' whose syntax is specified by interface 'InterfaceName'	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Interfaces/Interfaces.htm
 ∇ (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Namelists.htm
