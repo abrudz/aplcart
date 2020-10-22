@@ -573,6 +573,7 @@ f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Mon
 Iv⊢⍤\Y	Expand last axis of Y (forces \ to be a function even with a function on its left)	Tacit	Dyadic Function		Selection	forcing coerce coercing functionify functionize make into being functionise train tacit reversesolidus slope dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1IwUYhRMFew4IIKGioYQHGMgrpHYon6//8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Expand.htm
 Iv⊢⍤⍀Y	Expand leading axis of Y (forces ⍀ to be a function even with a function on its left)	Tacit	Dyadic Function		Selection	forcing coerce coercing functionify functionize make into being functionise train tacit reversesolidusbar slopebar Iv\[1] dimension start beginning	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUoomCoYKBgBCQf9TYoABX9/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Expand.htm
 ⊂[1]Ym	Enclose columns of a matrix	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCGBgrGD/q3fKod7MlF7Lco66maMNYJNn//wE	
+⊂[1]Ym	Convert table to inverted table (character data as vectors of vectors)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into inverting inversion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqO2iYdWPOpqijaM1VQwUjB@1LtF3TFJXcFQwVxB3TklNU0dJPr/PwA	
 ⍉∘+Nm	Conjugate Transpose	Tacit	Monadic Function		Mathematical	self-adjoint selfadjoin Yᴴ Y^H Y† Y^† Aᴴ A^H A† A^†		
 ⌽∘⍉Ym	Rotate 90° clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPevY@6pjxqLcTSe7/fwA	
 ⍉∘⌽Ym	Rotate 90° counter-clockwise	Tacit	Monadic Function		Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn counterclockwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPejsfdcx41LMXSe7/fwA	
@@ -713,6 +714,7 @@ X(⍋⍳)Y	Grade up of Y according to key X	Tacit	Dyadic Function		Index Generat
 (⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	find locate positionof biggest greatestif maximum lexicographically lexically locating location		
 X(⍒⍳)Y	Grade down of Y according to key X	Tacit	Dyadic Function		Index Generation	custom sort order descending		
 (⍋⍒)Y	Descending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down		
+(⍉↑)Yv	Convert inverted table to table (character data as vectors of vectors)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkdtEzUVNNQdk9QV1J1TUtPUgTxDBSMgaa5grPn/PwA	
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes		
 X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith		
 X(1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	testif contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable		
@@ -967,6 +969,7 @@ Is(⊃∘⍒⌷⊢)Y	Is-largest (default: the largest) major cell of Y	Tacit	Mon
 X(∧\∘⌽=)Y	Indicate trailing elements that are equal	Tacit	Dyadic Function		Comparison	show matching onright cells items masking indicating ending		
 X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Function		Comparison	show different onright cells items masking indicating ending		
 (+\¯1↓1∘,)Jv	Starting positions of subvectors having lengths Jv	Tacit	Monadic Function		Index Generation	sub-vectors sub-lists sublists		
+(↑¨⊂[1])Ym	Convert table to inverted table (character data as matrices	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into inverting inversion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJTCo66maMNYBSMF40e9W9Qdk9QVDBXMFdSdU1LT1EGi//8DAA	
 (⊢⍉⍨1*⍴)Y	Main diagonal of any rank array	Tacit	Monadic Function		Selection	maindiagonal nwse nw-se majordiagonal		
 (⌽⍉⍨1*⍴)Y	Anti-diagonal of any rank array	Tacit	Monadic Function		Selection	minordiagonal antidiagonal nesw ne-sw		
 X(⍸⍷⍨∘⊂)Y	Positions of item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof subarray sub-array subsequence sub-sequence cell element		
@@ -1076,6 +1079,7 @@ X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathem
 (⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?		
 (⊃∘⍒∘|⊃⊢)Nv	First number with largest magnitude	Tacit	Monadic Function		Mathematical	maximum absolute value biggest farthest furthest away from 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA	
 (⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?		
+(⍉∘↑⊂⍤¯1¨)Yv-	Convert inverted table to table (character data as matrices; keep trailing spaces)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkcdMx61TXzU1fSod8mh9YaHVmgqaBgpmDzq3aLumKSg4JySmqYOFDJUMAKS5grGmv//AwA	
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st		
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths		
 (××∘⌈¯0.5+|)N	Rounding to nearest whole number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()		
@@ -1337,6 +1341,7 @@ Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation co
 ((⊣/⊢⍤/⍨∘(⌈/=⊢)⊢/){⍺(≢⍵)}⌸)Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements		
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of all unordered combinations of Is out of Js without replacement	Tacit	Dyadic Function		Mathematical	combinatorics selections list vector table remove		
 (,⊢⍤/⍨(⊢=⍴⍴⌈⌿)<\⍤,⍤∧⊢=∘⍉⌽∘⍴⍴⌊/)Nm	Value of saddle point	Tacit	Monadic Function		Mathematical			
+(⍉∘↑{(+/∨\' '≠⌽⍵)↑¨↓⍵}¨@(2=≢∘⍴¨))Yv	Convert inverted table to table (character data as matrices; remove trailing spaces)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkcdMx61TazW0NZ/1LEiRl1B/VHngkc9ex/1btUEih9a8ahtMpBde2iFg4aR7aPORSD1vVsOrdDUVNAwUjABstUdkxQUnFNS09SBQoYKRkDSXMFY8/9/AA	
 Is(⊣|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Multiplicative inverse of Js modulo Is (fast)	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic		
 '&[^;]+;'⎕R{3⊃,⎕XML⍠'Whitespace' 'Preserve'⊢'<_>',⍵.Match,'</_>'}Dv	Evaluate XML-style escape sequences (like &#10; and &#x0a;)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs quote &quot; apostrophe &apos; less-than lessthan &lt; greater-than greaterthan &gt; ampersand &amp;		
 dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL		https://dfns.dyalog.com/n_esh.htm
@@ -1579,7 +1584,7 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean		
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
-{0::0 ⋄ 1⊣8⌶⍨⍵}Y	Validate inverted table	Dfn	Monadic Function		Array Properties	matrix check correct		
+{0::0 ⋄ 1⊣8⌶⍨⍵}Yv	Validate inverted table (character data as matrices)	Dfn	Monadic Function		Array Properties	validating validation of matrix checking for correctness	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wSFagMrKwOFR90tCoaPuhZbPOrZ9qh3xaPerbUKGkYKJo96t6g7JikoOKekpqlrKmgYKhgBSXMFY00usvSrO6rDTfj/HwA	
 Mv{⌽-↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ	
@@ -1659,8 +1664,8 @@ svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku 
 {⍵/⍨2∨/0,' '≠⍵}Dv	Removing leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
-{2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
-{2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
+{2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
+{2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove		
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
@@ -2305,7 +2310,7 @@ Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		
 31↓⎕UCS⍳126	Printable ASCII	Constant	Expression		Text	characters	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDR@1TQayQ52DH/VuNjQy@/8fAA	
 ⎕SE.Dyalog.Serial Y	Set or query (if Y is empty) serial number	Tradfn	Monadic Function		System	report license licence licensing licencing get fetch renew initialise initialize serialnumber account dss+ unregistered unregistration deregistered deregistration		
 name f∘⊢←Y	Modified Assignment (also dfns/dops)			Monadic Operator	Expression	leftarrow gets is copula let redefine naming denotes means inplace update	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSBIBLIe9W4Fs5OgbDAnIKe0GMjXhvASIfyOGY@6FgFFDSHqYYoMYYqSuGq5HvVNBQoB7VAw/v8fAA	https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/DynamicFunctions/MultiLine%20Dynamic%20Functions.htm
-⎕THIS.name←Y	Create new global (also in dfns/dops)	Syntax			Expression	new assignment assigning value variable function operator		
+⎕THIS.name←Y	Create new global (also in dfns/dops)	Syntax			Expression	new assignment assigning value variable function operator scope don't no shadowing defeating circumventing auto-shadow name∘←Y		
 :Include <ns>	Import methods from one a namespace to this class	Syntax	Control	Keyword	Expression	import copy into functions operators members library libraries		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Including%20Namespaces%20in%20Classes.htm
 35::FILE ACCESS ERROR - CONVERTING FILE	Operating system did not allow APL to upgrade component file structure				Error Message	trap catch errno Conversion change changing		https://help.dyalog.com/latest/#Language/Errors/FILE%20ACCESS%20ERROR%20-%20CONVERTING%20FILE.htm
 60::FULL-SCREEN ERROR	The required full screen capabilities are not available to ⎕SM				Error Message	trap catch errno		https://help.dyalog.com/latest/#Language/Errors/FULL-SCREEN%20ERROR.htm
@@ -2369,6 +2374,7 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text			htt
 82=⎕DR''	Is this Dyalog APL Classic?	Constant			System	testif		
 ⊃1⎕NPARTS''	Current directory	Expression			System	folder cd pwd _CWDS _CWPS print working name filesystem		
 {ns}⎕SE.UCMD Dv	Execute user command, arguments, modifiers Dv under program control (from within 'ns')	Tradfn	Ambivalent Monadic Function, Dyadic Function		Function Application	evaluate calling running		
+2⎕NQ⎕SE'FileWrite'	Save Session configuration (including ]box and ]rows settings) to default session file	Expression			System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 (1 1⍉Xm)←Yv	Reassign main diagonal of matrix	Syntax			Expression	assignment gets is copula let redefine name naming denotes means inplace update table		
 :Implements Method {InterfaceName.MethodName}	Function implements method 'MethodName' whose syntax is specified by interface 'InterfaceName'	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Interfaces/Interfaces.htm
 ∇ (X Y Z)←f	Tradfn/Tradop result name list (collects)	Syntax			Definition	declaration [0] declaring defining names packing vector header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Namelists.htm
