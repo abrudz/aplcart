@@ -1119,6 +1119,7 @@ Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Taci
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text		
 (+\∊⍨∘⍳+/)Jv	Changing lengths Jv of subvectors to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing change converting conversion segments		
 Xm(⍉⍴⍨∘⌽∘⍴⍨)Yv	Matrix with shape of Xm and Xv as its columns	Tacit	Monadic Function		Boolean/Logical	fill mold mould table		
+(0~⍨∘,∘⍉⊢⌸)Y	Progressive index of (⍳) cyclic uniques (∪) without replacement	Tacit	Monadic Function		Index Generation	indexin indexof meshing cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQyFUCkhkHdo94Vjzpm6ADxo97OR12LHvXs0FRQT0wqSkxOTAFR6lxQLSiC0Zmx//8DAA	
 (2*∘÷⍨+.×⍨)Nv	Length of vector Nv	Tacit	Monadic Function		Mathematical	absolute value magnitude distance from origin 0 zero		
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero cells items		
 M(+/∘×∘.-⍨)N	Test relations (¯2…2) of elements of N to ranges M (2=¯1↑⍴M)	Tacit	Dyadic Function		Comparison	cells items		
@@ -1746,6 +1747,7 @@ X{(⊃0⍴⊂)@(~∊∘⍺)⊢⍵}Y	Replacing elements of Y not in set X with pr
 X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value X	Dfn	Dyadic Function		Expression	fallback		
 {⍵⌷⍨⊂⍋{(⎕C⍵)⍵}¨⍵}Y	Sorting Y in case-insensitive alphabetical order	Dfn	Monadic Function		Text	up increasing caseinsensitive reordering ordering		
 {(⎕SE.SALT.New'HttpCommand'('GET'⍵)).Run.Data}Dv	Download file from URL Dv	Dfn	Monadic Function		System	curl online internet http:// https:// wget fetch		
+{(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵}Yv	Mesh major cells of elements of Yv	Dfn	Monadic Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing cyclically list high-rank higher-rank arrays	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqNR51NT3q7X7U0fWod/OjjhmPOhcdWvGod6vmo57tj7qaH/Wu0gfyahXUE5OS1YGaXNQdnZxdXN3UuUg1QcNEwehR7xb1xMSkpOTklBR1TQ0jiIijo5OTuub//wA	
 {-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row table		
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine tables lists		
 {⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm	Removing trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA	
