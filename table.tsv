@@ -1318,7 +1318,7 @@ Is(∧/+=¯1+∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js betrothed numbers?	Tacit
 Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Tacit	Dyadic Function		Mathematical			
 Mv(⊢×+.×)∘(⊢÷2*∘÷⍨+.×⍨)Nv	Component of Mv in direction of Nv	Tacit	Dyadic Function		Mathematical	euclidean vectors parts		
 (⊃((+⌿÷≢),×⌿*∘÷≢)⍣≡)Nv	Arithmetic-geometric mean	Tacit	Monadic Function		Mathematical	average AGM() GAM() AG() GA() geometric-arithmetic common		
-Mv(+⌿∘↑(,\0×⊣)(1↓,)¨×∘⊂)Nv	Product of polynomials	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients		
+Mv(+⌿∘↑(,\0×⊣)(1↓,)¨×∘⊂)Nv	Product of polynomials with descending coefficients	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients		
 (⊃((×⌿*∘÷≢),≢÷1⊥÷)⍣≡)Nv	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric		
 ({'⎕'/⍨¯1+≢⍵}⌸⊢,⍨∘⍳⌈/)Jv	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical			
 (2÷⍨1⊥⊢⌷⍨∘⊂⍋⌷⍨∘⊂∘⌈2÷⍨0 1+≢)Nv	Median of non-empty Nv	Tacit	Monadic Function		Mathematical	average		
@@ -1591,7 +1591,7 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean		
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
 {0::0 ⋄ 1⊣8⌶⍨⍵}Yv	Validate inverted table (character data as matrices)	Dfn	Monadic Function		Array Properties	validating validation of matrix checking for correctness	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wSFagMrKwOFR90tCoaPuhZbPOrZ9qh3xaPerbUKGkYKJo96t6g7JikoOKekpqlrKmgYKhgBSXMFY00usvSrO6rDTfj/HwA	
-Mv{⌽-↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
+Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ	
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list		
