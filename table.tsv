@@ -1012,6 +1012,7 @@ X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last
 Iv(⌷⍨∘⊃⍨⍤0 99)Y	Select: each element of Iv selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index		
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements		
 (+/1=⊢∨⍳)Js	Euler's totient function (fastest up to about 1000)	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tPUNbR91LXrUseJR72ZNBUMDA4P//wE	
+(⍳∘≢↑¨⊂)Y	Prefixes	Tacit	Monadic Function		Structural	array matrix table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokdtEw@teNTVpKmg7ujk7KLOhUfFo95VEEX//wMA	
 (⍳⍨=⍳∘≢)Y	Indicator of first occurrence of each unique major cell of Y	Tacit	Monadic Function		Comparison	item element 1st		
 M(⊢×∘~∊⍨)N	Zeroing elements of N that are found in M	Tacit	Dyadic Function		Sets	arein membersof 0ing cells items		
 Cv(~⍤∊⍨⊆⊢)Dv	Split vector Dv at any sequence of characters in Cv	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions		
@@ -1591,7 +1592,6 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean		
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
 {0::0 ⋄ 1⊣8⌶⍨⍵}Yv	Validate inverted table (character data as matrices)	Dfn	Monadic Function		Array Properties	validating validation of matrix checking for correctness	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wSFagMrKwOFR90tCoaPuhZbPOrZ9qh3xaPerbUKGkYKJo96t6g7JikoOKekpqlrKmgYKhgBSXMFY00usvSrO6rDTfj/HwA	
-Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ	
 {⍵/⍨1,2≢⌿⍵}Yv	Removing consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list		
@@ -1617,6 +1617,7 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived derv? dervs? tacits? primtive? primitives? functions? train? trains?		
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing		
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
+Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
 Xv{⊃,/⍺∘,¨⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging		
 ((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
 X{+⌿∧⍀⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending		
