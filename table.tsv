@@ -1132,7 +1132,7 @@ X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1�
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical			
 Mv(2*∘÷⍨1⊥2*⍨-)Nv	Euclidean distance between two points in N-space	Tacit	Dyadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMoFDDSOtRx4zD2x/1rjB81LUUyOtdoasJlDBWMFEw@P8fAA	
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC		
-(⊢⎕NS ⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text		
+(⊢⎕NS⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text		
 {⊃,/⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@g/6mo7tOJR79baR72LH3UuVNBQT0xMVFdQT0pKUtfU0FBPTk4G8hCkpoJ6SkoKkNJ41NWknpqaqq75/z8A	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning		
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical			
@@ -1776,6 +1776,7 @@ Av{≠⍀⍵≠⍺⍀2≠⌿0⍪⍺⌿≠⍀¯1↓0⍪⍵}B	Running parity (≠�
 X{⍺,[1+2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as column matrices in catenation beneath each other	Dfn	Dyadic Function		Structural	combine tables lists		
 {⍵/⍨¯1↓1,1(⊢∨⌽)' '∨.≠⍵}Dm	Remove duplicate blank columns	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space without		
 {⍵⌿⍨¯1↓1,1(⊢∨⌽)⍵∨.≠' '}Dm	Remove duplicate blank rows	Dfn	Monadic Function		Text	delete allspaces repeated extraneous multiple drop space without		
+X{⍎⍵,'←(⍺⍎''⎕NS'')⍵'}Dv	Change parent (##) of namespace Dv to be namespace X (ref or name)	Dfn	Dyadic Function		System	reparenting re-parenting adopting hierachy		
 Mv{⍵×2+.*∘÷⍨(⍺*2)+×⍨⍵÷2}Ns	Area of pyramid with height and width Mv and length Ns (excluding base)	Dfn	Dyadic Function		Mathematical	lengths bottom sides		
 X{(⊥⍨∘⌽↓⍵↓⍨∘-⊥⍨)⍵∊⍺}Yv	Removing elements in X from beginning and end of vector Yv	Dfn	Dyadic Function		Selection	trim leading trailing left right cells items list start ending		
 {,⍉2(⍴⍨⍴(⍳⍵)↑⍨*)⌈2⍟⍵}Js	Playing order in a cup for Js ranked players	Dfn	Monadic Function		Index Generation	single-elimination knockout sudden death tournament		
