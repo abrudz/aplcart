@@ -1314,6 +1314,7 @@ X(Bv{(⍺⍺⌿⍺)@(⍸⍺⍺)⊢⍵})Y	Mask Operator: Merge X and Y using Bv (
 (,⌷⍨∘⊂∘⍋1⊥⍴⊤¯1+∘⍳×/∘⍴)Ym	Diagonal ravel	Tacit	Monadic Function		Structural			
 Mv((1∘⌽⍤⊣×¯1⌽⊢)-¯1∘⌽⍤⊣×1⌽⊢)Nv	Vector (cross) product of vectors	Tacit	Dyadic Function		Mathematical	lists		
 Is(∧/+=¯1+∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js betrothed numbers?	Tacit	Dyadic Function		Mathematical	testif betrothed? quasiamicable? quasi-amicable?		
+((⎕FUNTIE⊢⊢⎕FREAD⍤,¯1+2↓∘⍳/2↑⎕FSIZE)⎕FSTIE∘0)Dv	Read all components from component file Dv	Tacit	Monadic Function	Component Files	System	dcf get retrieve load copy fetch	https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gQqAwkpGD4/z8A	
 ''''∘(⊣,⊣,⍨⊢⊢⍤/⍨1+=)Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎		
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	binary base-2 base2		
 Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Tacit	Dyadic Function		Mathematical			
