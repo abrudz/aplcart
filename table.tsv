@@ -1346,6 +1346,7 @@ I((31-2|7|¯1+⊣)-2∘=⍤⊣×2-0≠.=400 100 4∘.|⊢)J	Number of days in mo
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion		
 Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0		
+As{((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵}Bv	Convert bits Bv representing a signed integer of As-endianess (0:big, 1:little) into a number	Tacit	Dyadic Function		Data Conversion	⎕DR 163 16-bit 323 32-bit 643 64-bit 1283 128-bit 2563 256-bit 5123 512-bit 10243 1024-bit 645 1287 sint big-endian little-endian be le to-float	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFao1NA6tN9R61NWseXi60aOupUDWo84FOpqPuqY96l38qHfXo65FGhaHtz/qXfGoc9Gj3q2aFo96twDpWgUzk0dtEw0VDLmoYlodzLj//wE	
 '\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences (like \n and \u000a)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs backspace bs \b horizontaltab ht \t linefeed lf \n formfeed ff \f carriagereturn cr \r crlf cr+lf \r\n		
 (2*∘÷⍨((≢×+.*∘2)-2*⍨+⌿)÷≢×¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical		
 ((⊣/⊢⍤/⍨∘(⌈/=⊢)⊢/){⍺(≢⍵)}⌸)Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements		
