@@ -1740,7 +1740,7 @@ Av{g[⍋(+\⍺)[g←⍒⍵]]}Y	Grade down (⍒) for sorting subarrays of Y indic
 M{×11○(⍵-1↓⍺)×+2-/⍺}Ns	Sign of point Ns relative to edges of M	Dfn	Dyadic Function		Mathematical	signum		
 Iv{(¯1+⊃⍵)+?⍺⍴1--/⍵}Jv	Iv-shaped array of random numbers in range Jv[1]…Jv[2] (inclusively, with replacement)	Dfn	Dyadic Function		Index Generation	between integers		
 Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Yv into partitions of length Iv	Dfn	Dyadic Function		Structural	chop split separate chunks segments		
-{⍵.((⊂,∘⊂⍎)¨⎕NL¯2)}Y	Extract name-value pairs from namespaces Y	Dfn	Monadic Function		Data Conversion	object unpack namevalue dictionary array contents converting change changing		
+{⍵.((⊂,∘⊂⍎)¨⎕NL¯2)}Y	Extract name-value pairs from namespaces Y	Dfn	Monadic Function		Data Conversion	object unpack namevalue dictionary array contents converting change changing get names and their values		
 X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Dfn	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location		
 X{(-≢⍴⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to rank of X	Dfn	Dyadic Function		Structural	conform align number dimensions pad axes		
 X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototypical elements	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update cells items zeroes falses falsehoods		
