@@ -1376,7 +1376,7 @@ vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function		St
 vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function		Structural	graph spanningtree		https://dfns.dyalog.com/n_stpath.htm
 vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function		Structural	words split text list partitions		https://dfns.dyalog.com/n_segs.htm
 m←dfns.m91 n	McCarthy's M91 function	Dfn	Function		Mathematical			https://dfns.dyalog.com/n_m91.htm
-mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table		https://dfns.dyalog.com/n_cmat.htm
+mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table combinations		https://dfns.dyalog.com/n_cmat.htm
 mat←dfns.pmat n	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table		https://dfns.dyalog.com/n_pmat.htm
 match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	testif comparenamespaces namespacecomparison blank identical equal sameas equivalent		https://dfns.dyalog.com/n_refmatch.htm
 bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function		Mathematical	Hungarianmethod maximise optimise graph independentzeros zeroes 0s		https://dfns.dyalog.com/n_assign.htm
