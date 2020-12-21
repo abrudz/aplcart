@@ -672,6 +672,7 @@ M(¯3○÷)N	Angle of right triangle with height M and width N	Tacit	Dyadic Func
 (¯5○÷)N	Hyperbolic area cosecant	Tacit	Monadic Function		Circular/Trigonometric	inverse acsch() csch^-1() csch⁻¹() acosech() cosech^-1() cosech⁻¹() arcsch() arcosech() arccsch() arccosech() cosecanshyperbolicus		
 (¯6○÷)N	Hyperbolic area secant	Tacit	Monadic Function		Circular/Trigonometric	inverse asech() sech^-1() sech⁻¹() arsech() arcsech() secanshyperbolicus		
 (¯7○÷)N	Hyperbolic area cotangent	Tacit	Monadic Function		Circular/Trigonometric	inverse acoth() actgh() ctgh^-1() ctgh⁻¹() acotgh() cotgh^-1() cotgh⁻¹() acotnh() cotnh^-1() cotnh⁻¹() actnh() ctnh^-1() ctnh⁻¹() arctgh() arcoth() arcotgh() arctnh() arccoth() arcctgh() arccotgh() arcctnh() cotangenshyperbolicus		
+(¯1*~)B	Map 0/1 to ¯1/1	Tacit	Monadic Function		Data Conversion	convert Booleans signum unit direction sgn zeros zeroes ones negative positive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031KrTVDBUMABiIPn/PwA	
 (-∘1)N	Decrement	Tacit	Monadic Function		Mathematical	decrease previous		
 (1∘-)N	Probabilistic inverse (NOT)	Tacit	Monadic Function		Mathematical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ¬ negate inverting		
 (÷∘100)N	Rate corresponding to percentage N	Tacit	Monadic Function		Mathematical	conversion converting change changing		
@@ -1542,6 +1543,7 @@ expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function	
 Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic Function		Structural	table lists		
 Ms{0 ⍺⊤⍵}N	Integer quotient and remainder (new leading length-2 axis) of N divided by Ms	Dfn	Dyadic Function		Mathematical	divisionremainder divide % divmod() residual fractional parts	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoNFB717nrUteRR79ZaBUMDBUNDBUMjBUPj//8B	
 dfns.mmind ⎕A[?4⍴6]	Mastermind or “cows and bulls”	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL		https://dfns.dyalog.com/n_mmind.htm
+{isolate} ⎕SE.Dyalog.Utils.repObj Y	String representation of array (without refs)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	representing generate toexpression for show definition stringify serialise serialize serialisation serialization		
 distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian distributed		https://dfns.dyalog.com/n_NormRand.htm
 sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function		System	parentspace ancestorspace namespacereferences blank		https://dfns.dyalog.com/n_up.htm
 cvec←{maxcols←⎕PW} dfns.tree space	Display of namespace tree	Dfn	Function		System	workspace name-clashproblem nameclashproblem blank		https://dfns.dyalog.com/n_tree.htm
