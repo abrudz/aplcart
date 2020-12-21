@@ -389,7 +389,7 @@ r←{tn} (regex ⎕S trans) text	Search text for PCRE regex returning trans (opt
 {names}←{etypes} ⎕ED names	Open one or more objects (names) of types etypes in the Editor	System	Function	System	System Function	create creating modify code source definition define value )editing		https://help.dyalog.com/latest/#Language/System%20Functions/ed.htm
 {name}←{name} ⎕NA fn_desc	Associate name with external DLL function	System	Function	System	System Function	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary		https://help.dyalog.com/latest/#Language/System%20Functions/na.htm
 {old_ns}←{names} ⎕CS ns	Switch to a ns, optionally exporting names	System	Function	System	System Function	change navigate enter namespace into current ⎕this )cs converting changing	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pjpHqqeWJeaoc4HYweqpFQVgpp@PwqH1xgA	https://help.dyalog.com/latest/#Language/System%20Functions/cs.htm
-{ref}←{flags} ⎕FIX source	Define objects from source (vector of vectors or file name starting with 'file://')	System	Function	Data Conversion	System Function	⎕fx code operator namespace class interface lists converting change changing	https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCHUrv8Tc1OKCxORUhbT8fHUF9bLEokdtE0yMgEwr17wUuLQ6F1AHUAakTA@o6P9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/fix.htm
+{ref}←{flags} ⎕FIX source	Define objects from source (vector of vectors or file name starting with 'file://')	System	Function	Data Conversion	System Function	⎕fx code operator namespace class interface lists converting change changing load open fetch get bringin import	https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCHUrv8Tc1OKCxORUhbT8fHUF9bLEokdtE0yMgEwr17wUuLQ6F1AHUAakTA@o6P9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/fix.htm
 {r}←{flag} ⎕SAVE file	Save active ws (with stack if flag=0) in file with 0 returned on reload of saved ws, else 1	System	Function	File Access	System Function	archive store )save		https://help.dyalog.com/latest/#Language/System%20Functions/save.htm
 {tdno}←{tkval} ⎕TPUT tktype	Add tokens to pool and return any tdno this unblocks	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading		https://help.dyalog.com/latest/#Language/System%20Functions/tput.htm
 {tkval}←{timeout} ⎕TGET tktype	Remove tokens of types tktype from the token pool	System	Function	System	System Function	synchronisation synchronization parallel threading greenthreading delete drop without		https://help.dyalog.com/latest/#Language/System%20Functions/tget.htm
@@ -730,7 +730,8 @@ Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without		
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text		
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill		
-Iv⌷⍨∘⊂⍨Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements getting picking selecting permutation permuting		
+Iv⌷⍨∘⊂⍨Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements getting picking selecting		
+Iv⌷⍨∘⊂⍨Y	Permute: Reorder major cells of Y according tot permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
 X⍳⍨∘⊖⍨Y	Index of last occurrence of major cells Y in X, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location reverse back trailing ending	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OKEpMTU0CUusKj3s2Pelc86pjxqGsakAGSVf//HwA	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions		
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings		
@@ -1010,7 +1011,7 @@ X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table		
 (,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
 (↑∘,∘⊂⍤¯1)Y	Increment rank by inserting a new dimension after the leading one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add beginning first 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNvFRxwwdIH7U1fSod8mh9YaaCkYKxgomQGmgQsf//wE	
-Iv(⌷⍨∘⊃⍨⍤0 99)Y	Select: each element of Iv selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index		
+Iv(⌷⍨∘⊃⍨⍤0 99)Y	Select: each element of Iv selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements theindexer		
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements		
 (+/1=⊢∨⍳)Js	Euler's totient function (fastest up to about 1000)	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tPUNbR91LXrUseJR72ZNBUMDA4P//wE	
 (⍳∘≢↑¨⊂)Y	Prefixes	Tacit	Monadic Function		Structural	array matrix table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokdtEw@teNTVpKmg7ujk7KLOhUfFo95VEEX//wMA	
