@@ -882,7 +882,7 @@ Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	copy repeat r
 (⍳∘≢⍴)Y	Indices of dimensions of Y	Tacit	Monadic Function		Array Properties	shape axes		
 (,∘⍳⍴)Y	All indices Of Y	Tacit	Monadic Function		Index Generation	indicesof		
 Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	testif superset? contains ⊇		
-X(∊⍨×⍳)Y	Changing index of an unfound element to zero (slow)	Tacit	Dyadic Function		Index Generation	missing cell item change converting conversion		
+Xv(∊⍨×⍳)Yv	Changing index of an unfound element to zero (slow)	Tacit	Dyadic Function		Index Generation	missing cell item change converting conversion		
 I(~∊∘⍳)Js	Boolean vector of length Js with zeros in locations I	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2		
 X(⊃∘⍸≠)Y	Index of first differing element in X and Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof unequal different 1st locating cell item difference location		
 Xv(⍸-∊⍨)Yv	Indices of items of Yv in right-inclusive intervals with cut-offs Xv	Tacit	Dyadic Function		Index Generation	left-exclusive intervalindex iotaunderbar bins groups ranges buckets classes classifying classification items (a,b] ]a,b] ⍺<x≤b	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHV09/UPVFTQe9e7QfdTR9ah3haaCukuko4@/uzoXVJGRgomCGaoSQ6CgMVDYFChh/v8/AA	
