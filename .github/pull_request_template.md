@@ -1,4 +1,4 @@
-Before submitting this Pull Request, please go thorugh the following checklist: 
+Before submitting this Pull Request, please go through the following checklist: 
 
 ---
 
