@@ -41,6 +41,9 @@ DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For 
 
 ## Application Integration
 
+### User Command
+Copy `APLcart.dyalog` to your `MyUCMDs` folder. This folder is located under `$HOME` on Linux and macOS and under `%USERPROFILE%\Documents` on Windows.
+
 ### Dyalog Windows IDE
 
 The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is pressed with the cursor on an unknown word:
