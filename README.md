@@ -24,16 +24,17 @@ APLcart can also be used for [exercising your APL skills](https://aplcart.info/q
 
 See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
 
-- Hit [here](https://aplcart.info) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+- Hit [here](https://aplcart.info) and start typing (access-key <kbd>q</kbd> — for _**q**uery_ — to re-focus)
+- Insert leading and trailing slashes to [use regex](https://aplcart.info?q=%2F\b11\b%2F) (access-key <kbd>r</kbd>  ― for _**r**egex_ ― to toggle)
 - [Some entries](https://aplcart.info?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
 - [Some entries](https://aplcart.info?q=(?)) have a <kbd>?</kbd> which can be clicked to open online documentation
-- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
-- Hit [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
-- Hit [<kbd>×</kbd>](https://aplcart.info?q=) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
-- Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
-- Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>B</kbd> for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W</kbd> for **W**hite)
-- Hit the result list to enable movement keys for scrolling (access-key <kbd>Z</kbd>)
-- Hit [the input field](https://aplcart.info) at the top to start a new query (access-key <kbd>E</kbd> — for _**Q**uery_)
+- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
+- Hit [<kbd>×</kbd>](https://aplcart.info?q=) at the end of the input field to clear it (access-key <kbd>x</kbd> — for _e**x**punge_)
+- Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>c</kbd> — for _**c**opy_)
+- Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>b</kbd> for _**b**lack_, <kbd>g</kbd> for _**g**rey_, <kbd>w</kbd> for _**w**hite_)
+- Hit the result list to enable movement keys for scrolling (access-key <kbd>z</kbd>)
+- Hit [the input field](https://aplcart.info) at the top to start a new query (access-key <kbd>e</kbd> — for _**q**uery_)
 
 ## DuckDuckGo support
 

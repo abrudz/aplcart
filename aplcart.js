@@ -18,8 +18,11 @@ I=_=>{
 Q=_=>{
   var f,l=q.value.toLowerCase().split(' '),r=t.rows,n=0
   for(var i=0;i<r.length;i++){
-    for(var j=0;j<l.length;j++){f=p[i].indexOf(l[j])>-1;if(!f)break}
+    for(var j=0;j<l.length;j++){w=l[j];f=(w[0]+w[wl=w.length-1]=="//"?(new RegExp(w.slice(1,wl),"iu")).test(p[i]):p[i].indexOf(l[j])>-1);if(!f)break}
     n+=!(r[i].hidden=!f)}
   z.textContent="Showing "+n+" of "+r.length}
+R=_=>{qs=q.selectionStart;qe=q.selectionEnd
+  if((v=q.value)[0]+v[vl=v.length-1]=="//"){q.value=v.slice(1,vl);q.selectionStart=qs-1;q.selectionEnd=qe-1
+    }else{q.value="/"+v+"/";q.selectionStart=qs+1;q.selectionEnd=qe+1};Q()}
 W=x=>{F(b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])]);um.href="/quiz?"+b.className}
 X=_=>F(Q(q.value=""))
