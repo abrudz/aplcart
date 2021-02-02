@@ -1,6 +1,6 @@
 C=_=>{
   history.replaceState({},document.title,location.pathname+(q.value?"?q="+encodeURIComponent(q.value):""))
-  F(navigator.clipboard.writeText(location.pathname))
+  F(navigator.clipboard.writeText(location))
 }
 F=_=>q.focus()
 I=_=>{

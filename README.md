@@ -6,7 +6,7 @@ APLcart is a searchable collection of over two thousand short APL phrases intend
 
 Note that Internet Explorer is not supported.
 
-APLcart can also be used for [exercising your APL skills](https://aplcart.info/quiz).
+APLcart can also be used for [exercising your APL skills](#quiz).
 
 ## Usage
 
@@ -28,13 +28,44 @@ See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how t
 - Insert leading and trailing slashes to [use regex](https://aplcart.info?q=%2F\b11\b%2F) (access-key <kbd>r</kbd>  ― for _**r**egex_ ― to toggle)
 - [Some entries](https://aplcart.info?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
 - [Some entries](https://aplcart.info?q=(?)) have a <kbd>?</kbd> which can be clicked to open online documentation
-- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the source code (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to reload the main page
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
 - Hit [<kbd>×</kbd>](https://aplcart.info?q=) at the end of the input field to clear it (access-key <kbd>x</kbd> — for _e**x**punge_)
-- Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>c</kbd> — for _**c**opy_)
+- Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current query to the address bar and to your clipboard (access-key <kbd>c</kbd> — for _**c**opy_)
+- Hit <kbd>:octocat:</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit <kbd>♥</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
 - Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>b</kbd> for _**b**lack_, <kbd>g</kbd> for _**g**rey_, <kbd>w</kbd> for _**w**hite_)
 - Hit the result list to enable movement keys for scrolling (access-key <kbd>z</kbd>)
 - Hit [the input field](https://aplcart.info) at the top to start a new query (access-key <kbd>e</kbd> — for _**q**uery_)
+
+## Quiz
+
+You can use APLcart to exercise your APL skills by solving various types of tasks:
+
+* Writing a function for a given task
+* Explaining the purpose of a given function
+* Filling in an obscured symbol
+
+While APLcart does not feature checking of your answer (indeed, there can often be various answers to any given task), you can compare your answer to APLcart's.
+
+### Interface
+
+See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
+
+- Hit [here](https://aplcart.info/quiz) and choose task type, and figure out the answer. You may want to use [an APL interpreter](https://aplwiki.com/wiki/Running_APL).
+- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the main APLcart page (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
+- Hit one of the <kbd>Reveal</kbd> buttons to reveal APLcart's answer (there may be other correct answers) to that task
+- Hit one of the <kbd>Next…</kbd> buttons to proceed to the next task of that type
+- Hit <kbd>:octocat:</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit <kbd>♥</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
+- Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>b</kbd> for _**b**lack_, <kbd>g</kbd> for _**g**rey_, <kbd>w</kbd> for _**w**hite_)
+
+The access keys for the  <kbd>Reveal</kbd> and <kbd>Next…</kbd> buttons are the first letter of the second word on each button:
+
+* Writing a function for a given task: <kbd>c</kbd> to _reveal **c**ode_ and <kbd>t</kbd> for _next **t**ask_
+* Explaining the purpose of a given function: <kbd>p</kbd> to  _reveal **p**urpose_ and <kbd>f</kbd> for _next **f**unction_
+* Filling in an obscured symbol: <kbd>o</kbd> to _reveal **o**bscured_ and <kbd>q</kbd> for _next **q**uest_
 
 ## DuckDuckGo support
 
@@ -46,13 +77,13 @@ DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For 
 
 The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is pressed with the cursor on an unknown word:
 
-- Options ▸ Configure ▸ Help/DMX ▸ Use online help for non-Dyalog topics ▸ URL: `https://aplcart.info/?q=%s`
+- Options ▸ Configure ▸ Help/DMX ▸ Use online help for non-Dyalog topics ▸ URL: `https://aplcart.info?q=%s`
 
 ### Dyalog RIDE
 
 RIDE allows adding a website to its menu bar:
 
-- Edit ▸ Preferences ▸ Menu, then below `&Help` insert <code>&APLcart =https://aplcart.info</code>
+- Edit ▸ Preferences ▸ Menu, then below &Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
 
 You can now press <kbd>Alt</kbd>-<kbd>Alt</kbd>,<kbd>a</kbd> to launch APLcart.
 
@@ -99,8 +130,7 @@ To answer *how do I* questions, APLcart currently searches over 2000 entries:
 - and other entries [submitted](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=) by users like you!
 
 ## Features wish list
-- links to documentation
-- links to TIO examples (in progress)
+- more links to TIO examples
 
 Got an idea for improving the site? [Suggest it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=enhancement&template=feature_request.md&title=)
 
