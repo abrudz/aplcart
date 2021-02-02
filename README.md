@@ -32,8 +32,8 @@ See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how t
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
 - Hit [<kbd>×</kbd>](https://aplcart.info?q=) at the end of the input field to clear it (access-key <kbd>x</kbd> — for _e**x**punge_)
 - Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current query to the address bar and to your clipboard (access-key <kbd>c</kbd> — for _**c**opy_)
-- Hit <kbd>:octocat:</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
-- Hit <kbd>♥</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
+- Hit <kbd>:octocat:︎</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit <kbd>♥︎</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
 - Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>b</kbd> for _**b**lack_, <kbd>g</kbd> for _**g**rey_, <kbd>w</kbd> for _**w**hite_)
 - Hit the result list to enable movement keys for scrolling (access-key <kbd>z</kbd>)
 - Hit [the input field](https://aplcart.info) at the top to start a new query (access-key <kbd>e</kbd> — for _**q**uery_)
@@ -57,8 +57,8 @@ See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how t
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
 - Hit one of the <kbd>Reveal</kbd> buttons to reveal APLcart's answer (there may be other correct answers) to that task
 - Hit one of the <kbd>Next…</kbd> buttons to proceed to the next task of that type
-- Hit <kbd>:octocat:</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
-- Hit <kbd>♥</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
+- Hit <kbd>:octocat:︎</kbd> in the bottom right corner to access APLcart's source-code on GitHub (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit <kbd>♥︎</kbd> in the bottom right corner to donate to the author (access-key <kbd>d</kbd> — for _**d**onate_)
 - Hit [<kbd>◐</kbd>](https://aplcart.info?w) in the bottom right corner to cycle theme (access-keys <kbd>b</kbd> for _**b**lack_, <kbd>g</kbd> for _**g**rey_, <kbd>w</kbd> for _**w**hite_)
 
 The access keys for the  <kbd>Reveal</kbd> and <kbd>Next…</kbd> buttons are the first letter of the second word on each button:
