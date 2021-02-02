@@ -1,4 +1,7 @@
-C=_=>F(history.replaceState({},document.title,location.pathname+(q.value?"?q="+encodeURIComponent(q.value):"")))
+C=_=>{
+  history.replaceState({},document.title,location.pathname+(q.value?"?q="+encodeURIComponent(q.value):""))
+  F(navigator.clipboard.writeText(location.pathname))
+}
 F=_=>q.focus()
 I=_=>{
   var s=new URLSearchParams(location.search)
