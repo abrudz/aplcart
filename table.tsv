@@ -786,7 +786,7 @@ Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		St
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flatten row-wise rowwise		
 (⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten column-wise columnwise		
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods		
-Xs(≠⊆⊢)Yv	Cut Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions		
+Xs(≠⊆⊢)Yv	Cut Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	split by delimiter delimited text separate chop divide chunk dividing partitions		
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple?		
 (⊂≢⊆)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	testif nested?		
 (¯1+2×⍳)Js	Odd integers from 1 to 2×Js	Tacit	Monadic Function		Mathematical	numbers 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031DY6PP1R72ZNBVMubKJm//8DAA	
@@ -1020,7 +1020,7 @@ X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic
 (⍳∘≢↑¨⊂)Y	Prefixes	Tacit	Monadic Function		Structural	array matrix table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokdtEw@teNTVpKmg7ujk7KLOhUfFo95VEEX//wMA	
 (⍳⍨=⍳∘≢)Y	Indicator of first occurrence of each unique major cell of Y	Tacit	Monadic Function		Comparison	item element 1st		
 M(⊢×∘~∊⍨)N	Zeroing elements of N that are found in M	Tacit	Dyadic Function		Sets	arein membersof 0ing cells items		
-Cv(~⍤∊⍨⊆⊢)Dv	Split vector Dv at any sequence of characters in Cv	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions		
+Cv(~⍤∊⍨⊆⊢)Dv	Split vector Dv at any sequence of characters in Cv	Tacit	Dyadic Function		Text	split by delimiter delimited text cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions		
 Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalence		
 (¯2-/∘⍸,∘1)Iv	Segment lengths from beginning indices	Tacit	Monadic Function		Data Conversion	chunk start leading converting change changing segments partitions		
 (¯2-/∘⍸,∘1)Bv	Changing starting indicators Bv of subvectors to lengths	Tacit	Monadic Function		Boolean/Logical	partitions change converting conversion segments		
