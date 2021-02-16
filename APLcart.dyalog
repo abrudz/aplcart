@@ -19,7 +19,7 @@
       args←×≢input.Arguments
       fmt←0≡input.raw
      
-      :If fmt≤input.url∨input.browser∨input.window∨list∨args
+      :If fmt≤input.url∨input.browser∨input.popup∨list∨args
           theme←input.theme∊'bw'
           :If input.url
               '-list and -raw conflict with -url'⎕SIGNAL 11↑⍨list>fmt
@@ -37,7 +37,7 @@
           :If input.browser
               {}⎕SE.UCMD'open ',url
           :EndIf
-          :If input.window
+          :If input.popup
               hr←⍎'⎕SE.Dyalog.APLcartWindow'⎕WC'HtmlRenderer'('URL'url)
               hr.(⎕WS'Event'('DoPopup' 'Popup'))
               hr.Popup←'⎕SE.Dyalog.APLcartPopup'∘{
@@ -46,7 +46,7 @@
                   ⍺ ⎕WC'HtmlRenderer'uu
               }
           :EndIf
-          :If list∨args∧input.url⍱input.window∨input.browser
+          :If list∨args∧input.url⍱input.popup∨input.browser
               n←≢r←(input.raw≡'all')Q input.Arguments
               help←''
               :Select input.list
