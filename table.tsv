@@ -495,8 +495,8 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	¯7○ inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯8∘○N	icos ↔ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	¯8○ pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯9∘○N	N (identity)	Tacit	Monadic Function		Circular/Trigonometric	¯9○ identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3SVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
-⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3WVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
+⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3SVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
+⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3WVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09RUMFYwUjBVMFEy5IGLq6lCGAhAYKxg/6t3yqHezJYYsUCtC9v9/AA	
 Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathematical	windowedsum cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFLT1gYSRgjGI5IKIqqtDGQpgYKpg@qh3y6PezZYY8sYg7Qj5//8B	
 -/N	Row-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series horizontally rowwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR09RVMFQwNFAxNFYwMFIxMFYwN/v8HAA	
@@ -510,8 +510,8 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOb9dXMFQw4kLlKhhjCCiYYBFSMP3/HwA	
 ≠/B	Boolean Parity (Even)	Tacit	Monadic Function		Boolean/Logical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS7QN@RC5iigc9EFDIAQRBr@/w8A	
 1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAEjcy4kEcNHHTP00cQgqhSMDRSMTbGphcj8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
-⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuRY969iOp@P8fAA	
-⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuxY969iOp@P8fAA	
+⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuRY969iOp@P8fAA	
+⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuxY969iOp@P8fAA	
 +⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvFkMFIwVjLoioujqUoaD9qGc/soL//wE	
 -⌿N	Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFTB@FHvFuPD0x/1bjblgoirq0MZCrqPevajKvn/HwA	
 ×⌿N	Product of N (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwETB@FHvlke9mw2NuCCi6upQhsLh6Y969iOr@P8fAA	
@@ -521,10 +521,10 @@ X f⍤⊣Y	Ignore right argument (call f monadically on X)	Tacit	Dyadic Function
 1∘,Y	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0FEwVTBTMFew4IIIqqtzocgaKxg/6t3yqHez5f//AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
 ,¨Y	Ensure that all elements are vectors	Tacit	Monadic Function		Structural	items elements cells lists uniformity make force to be	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEDzq3WzKhSymc2gFWPD/fwA	
 X,¨Y	Join corresponding items	Tacit	Monadic Function		Structural	juxtapose tuples cells elements zip pair	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLiCgqmCmYK5gs6hFQqGBgqGhgqGRly45E3//wcA	
-,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIynT0cSrjQjfOWMH4Ue@WR72bLTVROBgG4lKo8P8/AA	
+,/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their last axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge joinhorizontally cells elements dimensions idiom	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIynT0cSrjQjfOWMH4Ue@WR72bLTVROBgG4lKo8P8/AA	
 Is,/Yv	All possible subvectors of length Is (Yv must be simple)	Tacit	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCGBgpmCiYKVgoGBooGBpxIUsb6ejjkzbBkP7/HwA	
 1∘⍪Y	Preface a row of 1s	Tacit	Monadic Function		Structural	ones trues truths	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XMeNS7SsFIwfhR7xaL//8B	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Catenate%20Laminate.htm
-⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIyh71rtLHqZAL3UBjBeNHvVse9W621EThYDESl1KF//8B	
+⍪/Yv	Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes	Tacit	Monadic Function	Performance	Structural	speed optimised optimized quick combine merge stack joinvertically major cells elements dimensions 1st idiom	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIyh71rtLHqZAL3UBjBeNHvVse9W621EThYDESl1KF//8B	
 1 1∘⊂Y	First element (as vector) and remaining elements	Tacit	Dyadic Function		Structural	headtail split divide separate dividing leading		
 1∘⌷Y	Head: First major cell of Y	Tacit	Monadic Function		Selection	Y[1;] X[1;] Y[1] X[1] leading element item 1st start beginning		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20with%20Axes.htm
 ⍳⍨Nv	Assign ranking based on non-descending scores Nv (ties all get highest ranking of used slots)	Tacit	Monadic Function		Mathematical	places place-values positions shared allotted allocation allocate ranks	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5@1LtCwRgMTRUsgNDI8P9/AA	
@@ -552,7 +552,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwfdcx41LVEwULP3PT/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
 0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwNwPhRx4xHXUsUDC3NLA3MjQz//wcA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
 C f⍥⎕C D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lettercase caseinsensitively comparison lookup apply caselessly  ignorecase		
-{0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWoVNEwUTBXMNBXUHZ2c1f//BwA	
+{0}Y	Fast: 0 irrespective of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zero naught idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWoVNEwUTBXMNBXUHZ2c1f//BwA	
 +∘-N	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H3XM0FU4tN7cy/j/fwA	
 -∘+N	Mirror complex N across y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal mirroring reflecting reflection	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA	
 ⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ	
@@ -606,7 +606,7 @@ name←X∘∪	Create a “union-with” function with a hashed principal argume
 name←∩∘Y	Create an “intersection-with” function with a hashed principal argument (fast X⍳Y for subsequent values of X)	Tacit	Monadic Function		Sets	performance hasharray hash-array hash-table		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Search%20Functions%20and%20Hash.htm
 name←X∘⍋	Create a “grade-ascending-according-to” function with a hashed principal argument (fast X⍋Y for subsequent values of Y)	Tacit	Monadic Function		Index Generation	performance hasharray hash-array hash-table		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Search%20Functions%20and%20Hash.htm
 name←X∘⍒	Create a “grade decending according to” function with a hashed principal argument (fast X⍒Y for subsequent values of Y)	Tacit	Monadic Function		Index Generation	performance hasharray hash-array hash-table		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Search%20Functions%20and%20Hash.htm
-{0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s zeros cell element falses falsehoods		
+{0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s zeros cell element falses falsehoods idiom		
 X(f⍤0)Y	Run f on scalars	Tacit	Dyadic Function	Monadic Operator	Function Application	apply		
 Mv(f⍤0 1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise		
 Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise list dimensions axes horizontally		
@@ -624,7 +624,7 @@ X g⍨∘f⍨∘h Y	Split-Compose: apply g between (f X) and (h Y), that is (f X
 A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2		
 ∨/∘,B	Are any true?	Tacit	Monadic Function		Boolean/Logical	testif forany thereexists ∃ ⋁		
 ∧/∘,B	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀		
-⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick cell element dimension 1st		
+⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick cell element dimension 1st idiom		
 ⊂⍤¯1∘↑Yv	Pad elements of vector of arrays Yv to equal shape	Tacit	Monadic Function		Structural	list cells items		
 X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	chipmunk		
 Iv⌷⍨∘⊂Jv	Generate consolidated left argument for successive transposes Iv⍉Jv⍉Y	Tacit	Dyadic Function		Structural	optimise optimize		
@@ -1462,7 +1462,7 @@ y←dfns.Cholesky x	Decomposition of Hermitian positive-definite matrix	Dfn	Func
 yes←larg dfns.subvec rarg	Is ⍺ a subvector of ⍵?	Dfn	Function		Structural	testif subvector? subset? sub-sequence? subsequence? substring sub-string sub-vector sub-list sublist		https://dfns.dyalog.com/n_subvec.htm
 yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function		Mathematical	date CouncilofNicaea canonpaschalis pervasivefunction histogram		https://dfns.dyalog.com/n_easter.htm
 z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function		Mathematical	FastFourierTransform convolution polynomial convolute		https://dfns.dyalog.com/n_xtimes.htm
-X{}Y	Fast: X and Y are ignored (no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet sink dump		
+X{}Y	Fast: X and Y are ignored (no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet sink dump idiom		
 X⊣⍣Bs⊢Y	Ternary: if Bs then return X else return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:		
 cvec←dfns.dice ?6 6	Interpret a throw of dice	Dfn	Function		Text	guard diversions		https://dfns.dyalog.com/n_dice.htm
 v←2 dfns.pco ⍵	prime factors and exponents	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
@@ -1509,7 +1509,7 @@ tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Da
 (depth leaves)←dfns.tview tree	TreeView style from nested array	Dfn	Function		Data Conversion	converting change changing		https://dfns.dyalog.com/n_tview.htm
 {name}←dfns.fix rep	Fix function/operator rep	Dfn	Function		Data Conversion	fixfunction converting change changing		https://dfns.dyalog.com/n_fix.htm
 {protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function		System	workspacemerge		https://dfns.dyalog.com/n_wsmerge.htm
-X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair list cell element		
+X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair list cell element idiom		
 C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch dfs		https://dfns.dyalog.com/n_scc.htm
 alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment		https://dfns.dyalog.com/n_apportion.htm
 stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function		Text	lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors interpreter programming joylang		https://dfns.dyalog.com/n_joy.htm
@@ -1619,8 +1619,8 @@ Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	D
 X{+⌿∧⍀⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	matching onleft cells items start beginning		
 X{+⌿∧⍀⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	different onleft cells items start beginning		
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements		https://dfns.dyalog.com/n_cols.htm
-{(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering		
-{(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering		
+{(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering idiom		
+{(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering idiom		
 Cv{⍎⍺,'←⍵'}Y	Assign values Y to names Cv	Dfn	Dyadic Function		System	assignment name-value names-values dynamic variable		
 caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Function		Text	diversions capitalisation 1st		https://dfns.dyalog.com/n_von.htm
 {files}←{type←''} dfns.mp3 dirs	Create playlist(s) for music directories	Dfn	Function		Native Files	MP3(mediaplayer) mediaplayer(MP3) diversions		https://dfns.dyalog.com/n_mp3.htm
@@ -1694,7 +1694,7 @@ defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]de
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
-{(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove removing erasing erase eliminate eliminating delete deleting		
+{(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove removing erasing erase eliminate eliminating delete deleting idiom		
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
 Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
@@ -1784,7 +1784,7 @@ Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Functi
 {⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍵}Nv	Auto-correlation	Dfn	Monadic Function		Mathematical	autocorrelation serialcorrelation auto-correlate serial-correlate		
 Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar Xs	Dfn	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging ndimensional n-dimensional block cuboid 3d-array 4d-array centered centred place in larger		
 X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
-{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick blanks lists ending split from table		
+{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick blanks lists ending split from table idiom		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
 Av{(⍺⌿⍵)∧a⌿1⊖a←⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on each subvector of Bv partioned by Av (fast ∧⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector major cells items ∧/¨Av⊂[1]Bv		
 Av{(⍺⌿⍵)≥a⌿1⊖a←⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on each subvector of Bv partitioned by Av (fast ∨⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector cell item ∨/¨Av⊂[1]Bv		
@@ -2138,16 +2138,16 @@ name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump t
 )OFF	Terminate the session	Non-syntax			System Command	exit stop close ⎕off )continue	https://tio.run/##SyzI0U2pTMzJT/8PBJr@bm5cJRmZxQrl@XnqJQqpRUX5RQA	https://help.dyalog.com/latest/#Language/System%20Commands/off.htm
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor ⎕sh linux macos aix rasbianpios		https://help.dyalog.com/latest/#Language/System%20Commands/sh.htm
 )name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling		https://help.dyalog.com/latest/#Language/System%20Commands/Introduction.htm
-0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple?		
-1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? nonscalar?		
-≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank dimensions axes		
-⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick list dimensions axes		
+0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom		
+1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? nonscalar? idiom		
+≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank dimensions axes idiom		
+⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick list dimensions axes idiom		
 *○N	Fast: Euler's idiom (accurate when N is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick		
 ⌈/⍬	Negative “infinity” (the smallest representable value)	Constant			Expression	system internal representation lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞ mostnegative least number		
 ⌊/⍬	Positive “infinity” (the largest representable value)	Constant			Expression	system internal representation upper limit ∞ ∞ ¯ negativeinfinity ∞ mostpositive biggest greatestif number		
-⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east cell element		
-Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths		
-0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick		
+⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east cell element idiom		
+Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths idiom		
+0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick idiom		
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension		https://help.dyalog.com/latest/#Language/Primitive%20Operators/Axis%20with%20Dyadic%20Operand.htm
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator		https://help.dyalog.com/latest/#Language/Primitive%20Operators/Axis%20with%20Monadic%20Operand.htm
 ]MSWIN.Assemblies	List all .NET assemblies currently loaded into memory	Non-syntax	Ucmd	MSWIN	User command	commands Microsoft Windows operating system ]Assemblies .dlls .so .dylib Framework Core assembly sharedlibraries sharedlibrary dynamiclinkedlibraries dynamiclinkedlibrary		
@@ -2248,8 +2248,8 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 8666⌶⎕NULL	Assimilate shared code files	I-beam	Constant	Monadic Operator	System	copy referenced objects into workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 ⊢name←Y	Output assigned value	Syntax			Expression	passthroughvalue yieldassignment	https://tio.run/##SyzI0U2pTMzJT/8PBI@6FuUl5qY@apugHqkOAA	
 name⊢←Y	Update (in dfns/dops) a variable in closest scope where localised or in global scope if not localised anyhere	Syntax			Expression	inplace in-place replace value reassignment re-assignment reassigning re-assigning modify modified out-of-scope semi-global auto-localise auto-localize auto-localising auto-localizing allocation allocated shadowed		
-name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension		
-name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st		
+name,←Y	Fast: 'name' redefined to be its value with Y catenated along its last axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension idiom		
+name⍪←Y	Fast: 'name' redefined to be its value with Y catenated along its first axis			Performance	Expression	speed optimised optimized quick amend append extend accumulate concatenate dimension 1st idiom		
 ⎕←x	Output x to the session via stdout (with trailing line break)	Syntax	Assignment		Expression	quad evaluatedinput ending echo print		https://help.dyalog.com/latest/#Language/System%20Functions/Evaluated%20Input%20Output.htm
 ⎕RL←⍬	Randomising random numbers	Expression			Index Generation	link initialise initialize RNG generator randomise randomize		
 x←⎕	Evaluate user input (from stdin) and return result	Syntax	Array		Expression	quad evaluatedinput		https://help.dyalog.com/latest/#Language/System%20Functions/Evaluated%20Input%20Output.htm
@@ -2331,17 +2331,17 @@ X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparenth
 {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
-0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick		
-1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple?		
-0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	testif speed optimised optimized quick empty? norows? 1st		
-⊃⌽,Y	Fast: The item in the bottom right of Y	Expression		Performance	Selection	speed optimised optimized quick last bottom-right southeast south-east cell element		
-M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto		
-Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where trues truths		
-~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick nonempty? hascontent?		
+0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick idiom		
+1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom		
+0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	testif speed optimised optimized quick empty? norows? 1st idiom		
+⊃⌽,Y	Fast: The item in the bottom right of Y	Expression		Performance	Selection	speed optimised optimized quick last bottom-right southeast south-east cell element idiom		
+M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto idiom		
+Av/⍳⍴Yv	Fast: The positions in Yv corresponding to the 1s in Av	Expression		Performance	Index Generation	speed optimised optimized quick ones where trues truths idiom		
+~0∊⍴Y	Fast: Is Y non-empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick nonempty? hascontent? idiom		
 ;X;Y;Z	Tradfn/Tradop locals line localisation of names X, Y, Z (before first code)	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize declaration declare declaring 1st lines		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Locals%20Lines.htm
 ]name -?	Print help for user command 'name'	Non-syntax				rightsquarebracket rightbracket usercommand ucmd documentation instructions	https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSvo2gMA	https://help.dyalog.com/latest/#UserGuide/The%20APL%20Environment/User%20Commands.htm
-↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
-⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick int()		
+↓⍉↑Yv	Fast: A nested vector comprising vectors that each correspond to a position in the original vectors of Yv – the first vector contains the first item from each vector in Yv, padded to be the same length as the largest vector, and so on	Expression		Performance	Structural	speed optimised optimized quick transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing idiom		
+⌊0.5+N	Fast: Round to nearest integer	Expression		Performance	Mathematical	speed optimised optimized quick int() idiom		
 ...	Syntax error to stop execution	Non-syntax			System	halt		
 ⎕NL-⍳9	List names of existing members	Expression		Workspace		available active names namelist all types nameclasses name-classes everything	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD089F91LvZ8v9/AA	https://help.dyalog.com/latest/#Language/System%20Functions/nl.htm
 31↓⎕UCS⍳126	Printable ASCII	Constant	Expression		Text	characters	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDR@1TQayQ52DH/VuNjQy@/8fAA	
@@ -2402,7 +2402,7 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text			htt
 )VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6 vector start leading		https://help.dyalog.com/latest/#Language/System%20Commands/vars.htm
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename ⎕wsid		https://help.dyalog.com/latest/#Language/System%20Commands/wsid.htm
 2÷¯1+5*÷2	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638		
-+/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones trues truths start beginning		
++/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones trues truths start beginning idiom		
 17×2-645=⎕FR	Arithmetic precision of the system (in decimals)	Constant			Mathematical	comparison tolerance fuzz IEEE754 floatingpoint		
 100⊥100|3↑⎕TS	Packing current date (YYMMDD)	Constant			System	Encoding		
 ∇ f;X;Y;Z	Tradfn/Tradop header line localisation of names X, Y, Z	Syntax			Definition	localization shadow variables symbols identifiers scope stack frame scope localise localize locals declaration declare declaring [0]		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Global%20Local%20Names.htm
@@ -2423,7 +2423,7 @@ f←{⍺}	Prototypical dyadic dfn	Syntax	Dyadic Function		Definition	direct dyna
 ''''	Quote character	Constant	Expression		Text	apostrophe ’ U+27 0x27 %27 quotationmark prime singlequoted in string symbol escape literal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUgYALxk5OzFNXL1H//x8A	https://help.dyalog.com/latest/#Language/Introduction/Variables/Characters.htm
 ≢⍕!⍋⎕D	Meaning of life (short)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything golf		
 X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets subscript choose		
-∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick indicate masking blanks start beginning binary base-2 base2 bitmask bit-mask		
+∧\' '=D	Fast: A Boolean mask indicating the leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick indicate masking blanks start beginning binary base-2 base2 bitmask bit-mask idiom		
 8666⌶0⍴⊂''	Detach shared code files	I-beam	Constant	Monadic Operator	System	detaching all from workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow gets is copula let redefine naming denotes means inplace update cells elements		
 (⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	large arbitrary precision infinite bignum high decimals		
@@ -2514,14 +2514,14 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'TreeView'	Displays a hierarchical collection of items	GUI Object			Input & Selection	WindowsForms WinForms Create new elements cells		https://help.dyalog.com/latest/#GUI/Objects/TreeView.htm
 {name}⎕WC'UpDown'	Spin buttons	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638		
-~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists		
+~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom		
 )SAVE {-force} {ws}	Save active workspace, optionally with new name ws (overwrite any existing if -force)	Non-syntax			System Command	archive store ⎕save		https://help.dyalog.com/latest/#Language/System%20Commands/save.htm
 op←{⍺⍺ ⍵}	Prototypical monadic dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍵⍵ ⍵}	Prototypical dyadic dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍺⍺ ⍺}	Prototypical monadic dop deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 ⍎⌽⍕⌈*○≡⍬	Meaning of life (modern)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything new updated		
-+/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning		
++/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning idiom		
 3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents		
