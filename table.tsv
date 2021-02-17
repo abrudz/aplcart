@@ -1977,7 +1977,7 @@ X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dy
 (Xs{⍺⍺@(⍵⍵∘⊣)⍵}Bv)Y	Replacing elements of Y satisfying Bv with Xs	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update major cells items indicate masking indicating		
 X f{⍺←⊢ ⋄ (⍺⍺ ⍺) ⍵⍵ ⍵}g Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY backcompose back-compose reverse-compose reversecompose into		
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Descending coefficients of Is-degree polynomial fit given x-values Mv and y-values Nv	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting regression model best leastsquaresfit		
-f{(⊂⍵⍳⍨∪⍵)⌷⍺⍺∪⍵}Y	Fast: Apply costly monadic function f on repetitive arguments	Dop	Monadic Function	Monadic Operator	Function Application	performance memoisation memoization quick speed		
+f{(⊂⍵⍳⍨∪⍵)⌷⍺⍺∪⍵}Y	Apply costly monadic function f on repetitive arguments	Dop	Monadic Function	Monadic Operator	Function Application	performance memoisation memoization memoise memoize memoising memoizing quicker speed-up faster		
 I f{⍉2⊥⍺⍺/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise application of f between positive integers I and J	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
 Iv(Is{⍵\⍨,⍺∘.>¯1+⍳⍺⍺})Yv	Justifying left fields of Yv (lengths Iv) to length Is	Dop	Dyadic Function	Monadic Operator	Text	leftalign left-align		
 X f{⍺←⊢ ⋄ ⍺⍺⍣(⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, g Y times	Dop	Dyadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping iterate		
