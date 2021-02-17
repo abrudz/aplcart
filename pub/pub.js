@@ -7,6 +7,7 @@ I=_=>{
   um2.href="/quiz?"+b.className
   fetch("pub.tsv").then(d=>d.text()).then(d=>{
     ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x]))
+    .trim()
     .replace(/.+\r?\n/,'<tr><td>')
     .replace(/\[(.+?)\]\(([\S\b]+)\)/g,'<a href="$2" target="_blank">$1</a>')
     .replace(/\t[^\t]*\r?\n/g,"</td></tr>\r\n<tr><td>")

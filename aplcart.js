@@ -10,7 +10,7 @@ I=_=>{
   um.href="/quiz?"+b.className
   if(s.get("self")!=null){document.querySelectorAll("[target]").forEach(e=>e.target="_self");um.href+="&self"}
   fetch("table.tsv").then(d=>d.text()).then(d=>{
-    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
+    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).trim().split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
     c=ps.map(r=>r[0])
     e=ps.map(r=>r[1])
     u=ps.map(r=>r[7])

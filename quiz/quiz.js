@@ -5,7 +5,7 @@ I=_=>{
   um.href="/?"+b.className
   if(s.get("self")!=null){document.querySelectorAll("[target]").forEach(e=>e.target="_self");um.href+="&self"}
   fetch("/table.tsv").then(d=>d.text()).then(d=>{
-    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
+    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).trim().split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
     .filter(x=>-1===x[0].indexOf("dfns.") && ["Tacit", "Dfn"].includes(x[2]) && ["Monadic Function", "Dyadic Function"].includes(x[3]) && x[4]==="")
     Q1();Q2();Q3()})}
 E=x=>(["any","a numeric","an integer","a Boolean","a character"]["XMIACYNJBD".indexOf(x[0])%5]+(x[1]?[" scalar"," vector"," matrix"]["svm".indexOf(x[1])]:" array")+(x?" <code>"+x+"</code>":""))
