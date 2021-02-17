@@ -19,7 +19,7 @@
       args←×≢input.Arguments
       fmt←0≡input.raw
      
-      :If fmt≤input.url∨input.browser∨input.window∨list∨args
+      :If fmt≤input.url∨input.browser∨input.popup∨list∨args
           theme←input.theme∊'bw'
           :If input.url
               '-list and -raw conflict with -url'⎕SIGNAL 11↑⍨list>fmt
@@ -37,8 +37,8 @@
           :If input.browser
               {}⎕SE.UCMD'open ',url
           :EndIf
-          :If input.window
-              hr←⍎'⎕SE.Dyalog.APLcartWindow'⎕WC'HtmlRenderer'('URL'url)
+          :If input.popup
+              hr←⍎'⎕SE.Dyalog.APLcartpopup'⎕WC'HtmlRenderer'('URL'url)
               hr.(⎕WS'Event'('DoPopup' 'Popup'))
               hr.Popup←'⎕SE.Dyalog.APLcartPopup'∘{
                   uu←'URL'(⊃⍬⍴2⌽⍵)
@@ -46,7 +46,7 @@
                   ⍺ ⎕WC'HtmlRenderer'uu
               }
           :EndIf
-          :If list∨args∧input.url⍱input.window∨input.browser
+          :If list∨args∧input.url⍱input.popup∨input.browser
               n←≢r←(input.raw≡'all')Q input.Arguments
               help←''
               :Select input.list
@@ -96,7 +96,7 @@
           r,←⊂'-raw=all    return raw eight-column matrix'
           r,←⊂''
           r,←⊂'-browser    open website in browser'
-          r,←⊂'-popup      open website in a popup window'
+          r,←⊂'-popup      open website in a popup popup'
           r,←⊂'-url        return URL for online query (not valid with -list or -raw)'
           r,←⊂'-theme=b|w  use black or white theme in browser/popup (default: grey)'
           r,←⊂''
@@ -104,7 +104,7 @@
           r,←⊂'    ]APLcart remove blanks -l=5  ⍝ list first five results for "remove blanks"'
           r,←⊂'    ]APLcart /highest|lowest/    ⍝ list up to 10 results for "highest" or "lowest"'
           r,←⊂'    ]APLcart -b                  ⍝ open APLcart in browser'
-          r,←⊂'    ]APLcart -p -t=b             ⍝ open black APLcart GUI'
+          r,←⊂'    ]APLcart -p -t=b             ⍝ open APLcart in popup window using black theme'
           r,←⊂'    ]APLcart -u                  ⍝ internet address for APLcart'
           r,←⊂'    ]table←APLcart -r=all        ⍝ database dump'
           r,←⊂''
