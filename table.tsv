@@ -1832,6 +1832,8 @@ Iv{(⍳+/Iv,Jv)∊+\1+¯1↓0,⍵\⍨(⍳+/Iv)∊+\Iv}Jv	Vector (Iv[1]⍴1),(Jv[
 Is{⍺>⍵:0 ⋄ ⊃⌽⊃(+\×)/1,⍨⌽⍺,/⍳⍵-1}Js	Count permutations of a set of Js objects that have Is cycles: s(Js,Is)	Dfn	Dyadic Function		Mathematical	combinatorics ways to permute disjoint Stirling numbers first kind		
 {(⊢+.×¯1*2</,∘0)(×\1,6⍴5 2)['IVXLCDM'⍳⍵]}Dv	Evaluate Roman numeral	Dfn	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral		
 Is{+/((⊢×⍺÷⌈/)⍵-⌊/⍵)∘.≥¯1+⍳⍺}Nv	Classification of elements Nv into Is ranges of equal size	Dfn	Dyadic Function		Mathematical	classify buckets bin groups intervals cells items		
+Is{⊃⍣(1=≡⍵)⊢20 ¯1⎕DT(¯1 20⎕DT⊆⍵)+3600⊥⍺,-/20⎕DT'ZJ'}J	Convert ⎕TS-style timestamps from local time zone to UTC+Is	Dfn	Dyadic Function		Data Conversion	TZ time-zone timezone Juliett adjust offset UTC- adjust time-stamp datetime date-time		
+Is{⊃⍣(1=≡⍵)⊢20 ¯1⎕DT(¯1 20⎕DT⊆⍵)-3600⊥⍺,-/20⎕DT'ZJ'}J	Convert ⎕TS-style timestamps from UTC+Is to local time zone	Dfn	Dyadic Function		Data Conversion	TZ time-zone timezone Juliett adjust offset UTC- adjust time-stamp datetime date-time		
 Is{((a×⌽)⍴2 1 3⍉⍵⍴⍨1⌽⍺,⊢)(⍴⍵)÷a←1,⍺}Ym	“Transpose” of matrix Ym with column fields of width Is	Dfn	Dyadic Function		Structural	fieldwidth table		
 Mv{⍵⍀⍨~(⍳(≢⍺)+≢⍵)∊(⌊⍺)+⍳≢⍺}Y	Adding an empty cell into Y at fractional positions Mv	Dfn	Monadic Function		Structural	expand insert item element		
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ↔ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
