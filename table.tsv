@@ -1436,7 +1436,7 @@ nvec←dfns.roots triple	Real roots of quadratic	Dfn	Function		Mathematical	real
 nvec←p dfns.nicediv q	⍵ similar integers with sum ⍺	Dfn	Function		Mathematical	histogram		https://dfns.dyalog.com/n_nicediv.htm
 num←dfns.factorial num	Tail recursive factorial	Dfn	Function		Mathematical	tailrecursion accumulator		https://dfns.dyalog.com/n_factorial.htm
 num←dfns.mean nvec	Arithmetic mean	Dfn	Function		Mathematical	localnames standarddeviation APL'88 APL88 1988		https://dfns.dyalog.com/n_mean.htm
-num←dfns.det nmat	Determinant of square matrix	Dfn	Function		Mathematical	Gaussianmethod Hilbertmatrix table		https://dfns.dyalog.com/n_det.htm
+num←dfns.det nmat	Determinant of square matrix	Dfn	Function		Mathematical	Gaussianmethod Hilbertmatrix det() |A| det(A) det(Nm) |Nm|		https://dfns.dyalog.com/n_det.htm
 num←dfns.osc num	Oscillate - probably returns 1	Dfn	Function		Mathematical	cashprize wondrousnumber Gödel,Escher,Bach Goedel,Escher,Bach GödelEscherBach GodelEscherBach GoedelEscherBach engineer'sproof engineersproof		https://dfns.dyalog.com/n_osc.htm
 num←num dfns.gcd num	Greatest Common Divisor	Dfn	Function		Mathematical	greatestcommondivisor leastcommonmultiple tailrecursion		https://dfns.dyalog.com/n_gcd.htm
 p←s dfns.birthday n	Probability of same birthday	Dfn	Function		Mathematical	paradox		https://dfns.dyalog.com/n_birthday.htm
@@ -1588,7 +1588,7 @@ pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	F
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems		https://dfns.dyalog.com/n_turtle.htm
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods		
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children		https://dfns.dyalog.com/n_maze.htm
-{-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row table		
+{-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row |A| det(A) det(Nm) |Nm|		
 {2⊥~2⊥⍣¯1⊢⍵}J	Bit-wise NOT for positive integers	Dfn	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion		
 {3=⌊⎕NC⊆,⍵}Dv	Is Dv a function?	Dfn	Monadic Function		System	fn? are functions?		
 {4=⌊⎕NC⊆,⍵}Dv	Is Dv an operator?	Dfn	Monadic Function		System	op? are operators?		
@@ -1775,7 +1775,7 @@ X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value
 {(⎕SE.SALT.New'HttpCommand'('GET'⍵)).Run.Data}Dv	Download file from URL Dv	Dfn	Monadic Function		System	curl online internet http:// https:// wget fetch		
 {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳2*≢⍵}Y	Powerset: All subsets of Y, including the empty set (0⌿Y) and Y itself	Dfn	Monadic Function		Sets	power-set all combinations	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qGsRkNR@1LvZSOtR5yKgsloFdUcnZxd1LvINMFYwetS7Rd0x0SnJOVn9/38A	
 {(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵}Yv	Mesh major cells of elements of Yv	Dfn	Monadic Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing cyclically list high-rank higher-rank arrays	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqNR51NT3q7X7U0fWod/OjjhmPOhcdWvGod6vmo57tj7qaH/Wu0gfyahXUE5OS1YGaXNQdnZxdXN3UuUg1QcNEwehR7xb1xMSkpOTklBR1TQ0jiIijo5OTuub//wA	
-{-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row table		
+{-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row det() |A| det(A) det(Nm) |Nm|		
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine tables lists		
 {⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm	Remove trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without removing erasing erase eliminate eliminating deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA	
 Xv{⍵⌿⍨⍺∧.=⍨⍵↑[2]⍨≢⍺}Ym	Rows of matrix Ym starting with Xv	Dfn	Dyadic Function		Selection	table		
@@ -1879,7 +1879,7 @@ rslt←ival (accm dfns.trav subs) tree	Generic depth-first parent-first tree	Dop
 rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator	Structural	accumulator lambdaexpression minworkspace parsing lists cons vectors		https://dfns.dyalog.com/
 rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator	Boolean/Logical	conditionaloperator Booleanfunctions truthtables		https://dfns.dyalog.com/n_logic.htm
 rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors segmented sub-lists subvectors sublists		https://dfns.dyalog.com/n_pred.htm
-rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator	Mathematical	determinant innerproduct SAX		https://dfns.dyalog.com/n_alt.htm
+rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator	Mathematical	determinant permanent innerproduct SAX immanant Imm() Immλ() Imm(A) Immλ(A) Imm(Nm) Immλ(Nm) perm() perm(A) perm(Nm) per() per(A) per(Nm)		https://dfns.dyalog.com/n_alt.htm
 rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting		https://dfns.dyalog.com/n_and.htm
 rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting		https://dfns.dyalog.com/
 rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator	Function Application	variablewise blank namespace		https://dfns.dyalog.com/n_vwise.htm
