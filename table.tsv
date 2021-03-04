@@ -726,6 +726,7 @@ M(⊥⍣¯1)N	N in Base M	Tacit	Dyadic Function		Mathematical	tobase conversion 
 Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	precision banking banker's bank's		
 (⍎⍕)Nv	Reshaping only one-element numeric vector Nv into a scalar (leave longer vectors as-is)	Tacit	Monadic Function		Structural	1-element singleton lists		
 (⍎⍕)Nv	Rounding to ⎕PP precision	Tacit	Monadic Function		Mathematical	system		
+(2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif num? nums? datatype data-type		
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without removing erasing erase eliminate eliminating deleting		
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text		
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill		
@@ -831,7 +832,6 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 (⍕≡⊢)Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif		
 (1↓0∘⍕)Js	Show all digits of integer Js (unknown digits as “_”)	Tacit	Monadic Function		Text	display print decimals full non-exponential format normal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSM9UwMjUyNXA0NuKAiGoaP2iYbPOqY8ah3qiaS/P//AA	
 (1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise		
-(1=2|⎕DR)Y	Is Y numeric?	Tacit	Monadic Function		Array Properties	testif num? nums? datatype data-type		
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows		
 (∊1⎕NPARTS⊢)Dv	Absolute path name	Tacit	Monadic Function		System	filesystem folder directory full normalised normalized simplified simplify		
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements		
@@ -2331,7 +2331,6 @@ X(Z g h)Y	Fork: Z g X h Y	Syntax	Dyadic Function	Train	Expression	pointwise taci
 X(f g h)Y	Fork: (X f Y)g(X h Y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 X(f g)Y	Atop: f X g Y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 (X g h)Y	Fork: X g h Y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
-{X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 (f g h)Y	Fork: (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 (f g)Y	Atop: f g Y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick idiom		
@@ -2379,6 +2378,7 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text			htt
 ∇ X(f op g)Y	Dyadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 ∇ X(f op)Y	Monadic tradop header for deriving dyadic functions	Syntax	Dyadic Function	Monadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 ∇ f(X Y Z)	Tradfn/Tradop right argument name list (enforces correct number of arguments and distributes values)	Syntax			Definition	declaration [0] declaring defining names unpacking vector header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Namelists.htm
+∇ {X}f Y	Optional Left Tradfn/Tradop Argument	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 ∇ (f op g)Y	Dyadic tradop header for deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 ∇ (f op)Y	Monadic tradop header for deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	declaration [0] declaring defining		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/TradFns/Model%20Syntax.htm
 )XLOAD {ws}	Load workspace ws without executing ⎕LX	Non-syntax		File Access	System Command	open fetch get quiet latentexpression autoexec boot		https://help.dyalog.com/latest/#Language/System%20Commands/xload.htm
