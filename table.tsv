@@ -1302,6 +1302,7 @@ Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spik
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
 Cv(Xs#.{⍺←⊢ ⋄ ⍺ ⍺⍺.⎕NL ⍵})Nv	Names public to object Xs, optionally filtered by first letters Cv	Tacit	Ambivalent Monadic Function, Dyadic Function		System	namelist classes instance fields methods properties objects		
 (⌽∘⍳∘≢⌽⊢,(0 ¯1+≢)⍴0∘⍴)Yv	Diagonal matrix with elements of Yv (filled appropriately)	Tacit	Monadic Function		Structural	cells items table		
+'/*'∘(≠\⍷∨¯1⌽∘⌽⍷∘⌽)D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*		
 I(⊢÷∘⍉1-(1+⊢)∘.×∘-⊣)N	Annuity coefficient: I periods at interest N	Tacit	Dyadic Function		Mathematical	loan		
 Mv(*⊢∘⍟(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x curve		
 X({¯1+≢⍵}⌸⍸,⍨0,∘⍳∘≢⊣)Y	Distribution of Y into intervals with cut-offs X	Tacit	Dyadic Function		Mathematical	bins groups ranges buckets		
@@ -1337,7 +1338,6 @@ Mv(+⌿∘↑(,\0×⊣)(1↓,)¨×∘⊂)Nv	Product of polynomials with descendi
 (2÷⍨1⊥⊢⌷⍨∘⊂⍋⌷⍨∘⊂∘⌈2÷⍨0 1+≢)Nv	Median of non-empty Nv	Tacit	Monadic Function		Mathematical	average		
 (≢÷⍨≢÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 Var(X) dispersion		
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit reflected Gray code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression base-2 base2		
-'*/'∘(≠\⍷∨∘⌽⍥(<\)⍷∘⌽)D	Position of /*comments*/	Tacit	Monadic Function		Text	cstylecomments *//*		
 (⊢/=(⎕D,⎕A~'GIOQ')⊃⍨1+31|∘⍎9∘↑)Dv	Is Dv a valid Finnish social security number? (10=≢Dv)	Tacit	Monadic Function		Text	testif SSN		
 (⍕,{2↑'thstndrd'↓⍨2×⊃⍵⌽∊1 0 8\⊂10↑0,⍳3})Js	Ordinal suffix for positive integer Js	Tacit	Monadic Function		Text	numbers ordinals suffixes 0th 1st 2nd 3rd 4th	https://tio.run/##SyzI0U2pTMzJT///378oReFR2wSFR71TdaqNHrVNVC/JKC7JSylKUX/UNvlR7wqjw9MfdTU/6t36qGfvo44uQwUDBYuYR11NhgZAxQY6j3o3G9dyPeqbCjIEZJgBEufQCqC0oZEhsryhARj8/w8A	
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍋⍵]]}Y	Minima (⌊/) of elements of subvectors of Y indicated by Av	Tacit	Dyadic Function		Mathematical	segmented partitioned array minimums smallest least major cells items		
