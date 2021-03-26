@@ -973,7 +973,7 @@ Is(⊃∘⍒⌷⊢)Y	Is-largest (default: the largest) major cell of Y	Tacit	Mon
 X(∧\∘⌽=)Y	Indicate trailing elements that are equal	Tacit	Dyadic Function		Comparison	show matching onright cells items masking indicating ending		
 X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Function		Comparison	show different onright cells items masking indicating ending		
 (+\¯1↓1∘,)Jv	Starting positions of subvectors having lengths Jv	Tacit	Monadic Function		Index Generation	sub-vectors sub-lists sublists		
-(↑¨⊂[1])Ym	Convert table to inverted table (character data as matrices	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into inverting inversion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJTCo66maMNYBSMF40e9W9Qdk9QVDBXMFdSdU1LT1EGi//8DAA	
+(↑¨⊂[1])Ym	Convert table to inverted table (character data as matrices)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into inverting inversion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJTCo66maMNYBSMF40e9W9Qdk9QVDBXMFdSdU1LT1EGi//8DAA	
 (⊢⍉⍨1*⍴)Y	Main diagonal of any rank array	Tacit	Monadic Function		Selection	maindiagonal nwse nw-se majordiagonal		
 (⌽⍉⍨1*⍴)Y	Anti-diagonal of any rank array	Tacit	Monadic Function		Selection	minordiagonal antidiagonal nesw ne-sw		
 X(⍸⍷⍨∘⊂)Y	Positions of item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof subarray sub-array subsequence sub-sequence cell element		
@@ -2444,7 +2444,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow gets is copula let redefine naming denotes means inplace update cells elements		
 (⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	large arbitrary precision infinite bignum high decimals		
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop		
-⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell		
+⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv		
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st		
 0=⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic?		
 2=⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic?		
