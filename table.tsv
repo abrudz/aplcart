@@ -1126,7 +1126,7 @@ Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators)	Taci
 (+/⍒∘|⊃¨⊂)Nv	Accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	floats precisionloss imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list		
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text		
 (+\∊⍨∘⍳+/)Jv	Changing lengths Jv of subvectors to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing change converting conversion segments		
-Xm(⍉⍴⍨∘⌽∘⍴⍨)Yv	Matrix with shape of Xm and Xv as its columns	Tacit	Monadic Function		Boolean/Logical	fill mold mould table		
+Xm(⍉⍴⍨∘⌽∘⍴⍨)Yv	Matrix with shape of Xm and Yv as its columns	Tacit	Monadic Function		Boolean/Logical	fill mold mould table		
 (0~⍨∘,∘⍉⊢⌸)Y	Progressive index of (⍳) cyclic uniques (∪) without replacement	Tacit	Monadic Function		Index Generation	indexin indexof meshing cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQyFUCkhkHdo94Vjzpm6ADxo97OR12LHvXs0FRQT0wqSkxOTAFR6lxQLSiC0Zmx//8DAA	
 (2*∘÷⍨+.×⍨)Nv	Length of vector Nv	Tacit	Monadic Function		Mathematical	absolute value magnitude distance from origin 0 zero		
 (+/÷1⌈+.≠∘0)N	Row averages of non-zero elements (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean nonzero cells items		
