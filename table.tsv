@@ -911,6 +911,7 @@ Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning		
 Mv(1⊥∘|-)Nv	Manhattan distance between two points in N-space	Tacit	Dyadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgPDQekMFQwUNw0ddSx91zKjR1QSKGYNk/v8HAA	
 Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital		
+(¯1⊥¨⍪⍀)N	An array that begins with 1↑N and has pair-wise sums 1↓N	Tacit	Monadic function		Mathematical	2+⌿⍣¯1⊢ 2+/⍣¯1⊢ inverse pairwise summation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq03fNS19NAKnRhNBWMdEwVTIDTjgsoaKWjr41Dy/z8A	
 (1∘⎕C≠⊢)D	Are characters of D lowercase?	Tacit	Monadic Function		Text	is lower-case? small? minuscules? minuscule?		
 (¯1∘⎕C≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	is upper-case? large? caps? capitals? capital? majuscules? majuscule?		
 (0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type		
@@ -1236,7 +1237,6 @@ Is(⊣⊥⊣|(+/⊥⍣¯1))J	Digital sum in base Is	Tacit	Dyadic Function		Mathe
 (~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without removing erasing erase eliminate eliminating deleting		
 Cv{∇⌊⎕DL⍵⊣0#.⎕SAVE⍺}&Ns	Save workspace as Cv every Ns seconds	Tacit	Dyadic Function		System	auto-save autosave automatic backup back-up continuous in the background		
 Ms{⍵⌷⍨⊂⍋⍋⍺×⍋⍵}A	Sort A according to Ms (1: ascending, 0: unordered, ¯1: descending)	Tacit	Monadic Function		Mathematical	sorting reordering ordering		
-{⍵↓⍨-⊥⍨' '=⍵}Dv	Remove trailing blanks	Dfn	Monadic Function		Text	delete spaces drop ending without removing erasing erase eliminate eliminating deleting		
 ('MDCLXVI'/⍨(0,6⍴2 5)⊤⊢)Js	Generate Roman numeral (purely additive, no refinements)	Tacit	Monadic Function		Mathematical	to from decimal number romannumeral arabicnumerals latinnumeral		
 ' '@{2=⌈\' 0'⍳⍵}D	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s falses falsehoods start beginning		
 Is(⊢∘-∘≢↑↓⍨∘-⍨)Yv	Shifting vector XV right with IS (padding on left)	Tacit	Dyadic Function		Selection	rightshift list		
@@ -1639,7 +1639,6 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing		
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
 Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
-Xv{⊃⍪/1↓,(⊂⍺),⍪⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using strings list joiner combiner joining combining merge merging		
 ((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
 X{+⌿∧⍀⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending		
 X{+⌿∧⍀⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending		
@@ -1691,6 +1690,7 @@ Is{,⌿1+⍵⊤⍺?×/⍵}Jv	Deal: Is random items from ⍳Jv (without replaceme
 svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku problem ⍵	Dfn	Function		Mathematical	diversions gameofsudoku YouTube list		https://dfns.dyalog.com/n_sudoku.htm
 {' '∧.=X←⍞:⍵ ⋄ X}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
 {⍵/⍨2∨/0,' '≠⍵}Dv	Remove leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
+{⍵↓⍨-⊥⍨' '=⍵}Dv	Remove trailing blanks	Dfn	Monadic Function		Text	delete spaces drop ending without removing erasing erase eliminate eliminating deleting		
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
@@ -1725,6 +1725,7 @@ Av{⍵⌷⍨⊂1⌈⌈\⍺×⍳≢⍺}Y	Copying each cell of Y until before next
 Mv{⍺+2-⌿⌈⍀0⍪+⍀⍺-⍵}Nv	Work done for demand N with capacity M	Dfn	Dyadic Function		Mathematical	orders capacities production supply demands supplies		
 {(⎕D,⎕A)[1+16⊥⍣¯1⊢⍵]}Js	Convert to hexadecimal	Dfn	Monadic Function		Mathematical	tobase16 base-16 ₁₆ dec2hex hex() Conversion converting change changing		
 A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified by A (one mask per column)	Dfn	Dyadic Function		Mathematical	major cells items indicate masking indicating bitmask bit-mask		
+Xv{⊃⍪/1↓,(⊂⍺),⍪⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using strings list joiner combiner joining combining merge merging		
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Yv	The Is'th subvector of Yv (subvectors separated by Yv[1])	Dfn	Dyadic Function		Selection			
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Dv	Extracting field number Is from Dv (field separated by first element of Dv)	Dfn	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st		
 {⎕ED 2⎕FIX⍣(0∊⎕NC⍵),⊂,⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
