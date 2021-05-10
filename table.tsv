@@ -870,8 +870,8 @@ Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	St
 (1,2≠/⊢)Yv	Starting points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items starts beginnings		
 (1,2≠/⊢)Yv	Which elements differ from previous ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighboring neighbours neighbors lefthand cells items 1s trues truths		
 (⌈/,∘0)N	Positive maximum, at least zero (also for empty N)	Tacit	Monadic Function		Mathematical	largest biggest		
-(2</0∘,)B	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2		
-(2>/,∘0)B	Boolean last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s trues truths binary base-2 base2		
+(2</0∘,)B	First ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2 groups runs sequences blocks		
+(2>/,∘0)B	Last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s trues truths binary base-2 base2 groups runs sequences blocks		
 Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		Structural	vectorise vectorize serialise serialize list table		
 Xv(,,⍤0 1⍨)Yv	Inserting Xv after every element of Yv	Tacit	Dyadic Function		Structural	merge cell item		
 (2>/⍪∘0)B	Last ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs blocks 1s trues truths		
@@ -940,7 +940,6 @@ Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Struc
 (⊣×¯12○⊢)⌿N	Join magnitude and radians major cells by removing leading axis	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine reduce start beginning converting change changing remove erasing erase eliminate eliminating delete deleting		
 (∧/2=⌿⊢)Ym	Comparison of successive rows	Tacit	Dyadic Function		Comparison			
 Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function		Structural	substitute merge amend replace update item element		
-(⊢>¯1↓0,⊢)Bv	First ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st		
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table		
 (⍴⍴0,1⍨¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table		
