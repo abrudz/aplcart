@@ -631,6 +631,7 @@ Iv⌷⍨∘⊂Jv	Generate consolidated left argument for successive transposes I
 C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector text		
 I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence		
+,[⍳2]Y	Merge the leading two axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA	
 ⊂⍤¯1∘⍉Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ATAAz/9hcGwtZHlhbG9n///ijpXihpAg4oqC4o2kwq8x4oiY4o2JIDMgNOKNtOKNszEy//8	
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated		
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry		
@@ -1057,6 +1058,7 @@ Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values 
 ((,÷∨)∘1)Ns	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing		
 (∨\' '∘≠)D	Locate leading blanks	Tacit	Monadic Function		Boolean/Logical	spaces beginning mask indicate indications start bitmask bit-mask		
 Is{¯2-/[⍺]⍵}N	Differences of successive elements of N along direction Is	Tacit	Dyadic Function		Mathematical	deltas changes steps cells items		
+Is{,[⍳⍺]⍵}Y	Merge the leading Is axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hURkjqFCtU40UMmj3l2xj3q31qLKGuGVNcaQ/f8fAA	
 (∨/'  '∘⍷)D	Does D have any duplicated spaces? (per row)	Tacit	Monadic Function		Text	testif repeated blanks? double multiple line string		
 (+.≠∘' ')D	Word lengths of words in list D	Tacit	Monadic Function		Text	vector string		
 (⊥⍨' '=⌽)Dv	Number of leading blanks	Tacit	Monadic Function		Text	prefixspaces spaces start beginning string		
