@@ -1115,7 +1115,7 @@ M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy pr
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes		
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA	
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A string		
-('ASSERTION FAILURE'⎕SIGNAL 8/⍨0∘∊)B	Signal an error if any condition is not met	Tacit	Monadic Function		System	throw unittest unit-test roger's hui's		
+{⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}B	Signal an error if any condition is not met (optional left argument: message on failure)	Tacit	Monadic Function		System	throw unittest unit-test roger's hui's	https://tio.run/##SyzI0U2pTMzJT///P7G4OLWoROFR2wSF6ke9u4C0OkQoMz9PIS0xM6e0KFVd4VF3i4LBo46uR71brYCqFB71TQ32dPdz9FGwAMsVZ1QCdRrUws0ztTNUMFE4tN6ICypgDBMAAA	
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries		
 (7|2⎕NQ#'DateToIDN',⊂)Jv	Day of week (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar		
