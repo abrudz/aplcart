@@ -970,7 +970,7 @@ X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Functio
 Is(⊃∘⍋⌷⊢)Y	Is-smallest (default: the smallest) major cell of Y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA	
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Selection	sort() up increasing sorting reordering ordering		
 (⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Array Properties	testif ascending? increasing? rising? up ordered? sorted? nondecreasing		
-(⊢≡∘⍋⍋)Yv	Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	testif		
+(⊢≡∘⍋⍋)Yv	Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	testif permutation? 1…ns		
 Is(⊃∘⍒⌷⊢)Y	Is-largest (default: the largest) major cell of Y	Tacit	Monadic Function		Selection	greatestof maximum biggest lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNR76RHPdsfdS3SVABrhinAIf3/PwA	
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Selection	sort() down decreasing sorting reordering ordering		
 (⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?		
