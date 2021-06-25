@@ -1114,7 +1114,7 @@ M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy pr
 (,[0.5]∘'¯')Dv	Underlines a string (1=⎕IO)	Tacit	Monadic Function		Text	underscore		
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes		
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA	
-Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A string		
+Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue linefeed newline 0x0A U+0A U+000A string		
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries		
 (7|2⎕NQ#'DateToIDN',⊂)Jv	Day of week (Sunday:0) given Jv:Y M D	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar		
