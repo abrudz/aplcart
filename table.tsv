@@ -732,6 +732,7 @@ Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	
 As↓⍨∘-⍨Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without removing erasing erase eliminate eliminating deleting		
 Is↑⍨∘-⍨Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text string		
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill		
+,∘⊆∘,Y	Normalise scalar/vector/vector of scalars/vectors to vector of vectors	Tacit	Monadic Function		Structural	normalize nested nesting flexible consistent input		
 Iv⌷⍨∘⊂⍨Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements getting picking selecting		
 Iv⌷⍨∘⊂⍨Y	Permute: Reorder major cells of Y according tot permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
 X⍳⍨∘⊖⍨Y	Index of last occurrence of major cells Y in X, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location reverse back trailing ending	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OKEpMTU0CUusKj3s2Pelc86pjxqGsakAGSVf//HwA	
@@ -1612,6 +1613,7 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof		
 {1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w	
+{⌊0.5+!⍵÷○1}N	Derangement	Dfn	Monadic Function		Mathematical	[n!/e] ⌊n!/e⌉ !n dn n¡ subfactorial deMontmort number		
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean string		
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
