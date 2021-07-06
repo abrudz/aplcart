@@ -948,7 +948,6 @@ Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table		
 (⍴⍴0,1⍨¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table		
-(⍴⍴1,0⍨¨)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table		
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing		
 (1,⍨2≠/⊢)Yv	Which elements differ from next ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths		
 (~∨/∘,)B	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄		
@@ -1017,7 +1016,6 @@ X f@(1↑⍨∘-≢)Y	Apply function f (optionally with left argument X) to last
 (⊢⍴⍨¯2↑1 1,⍴)Ym	Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize make	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RgDI1HnUtAnIf9a44tN7oUdtEQwVDHSBfU0E9UZ2LJOVJySRpMFIwBtIgbSmpaer//wMA	
 (2∘⍴⍴1,⍴∘0)Jv	Diagonal matrix of size Jv (n or m,n)	Tacit	Monadic Function		Mathematical	mono-diagonal banded	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B	
 (,⍨⍴0,⍴∘1)Js	Non-diagonal matrix of order Js	Tacit	Monadic Function		Mathematical	nondiagonal table		
-(,⍨⍴1,⍴∘0)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
 (↑∘,∘⊂⍤¯1)Y	Increment rank by inserting a new dimension after the leading one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add beginning first 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNvFRxwwdIH7U1fSod8mh9YaaCkYKxgomQGmgQsf//wE	
 Iv(⌷⍨∘⊃⍨⍤0 99)Y	Select: each element of Iv selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements theindexer		
 X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic Function		Sets	isin containedin has memberof higher high-rank any-rank highrank anyrank items elements		
@@ -1079,6 +1077,7 @@ M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadi
 (3÷⍨2∘*-¯1∘*)Js	Jacobsthal number	Tacit	Monadic Function		Mathematical	sequence Ernst J(n) A001045() A1045()		
 (+/∘|2-/⊢)Nv	Length of path given as complex points	Tacit	Monadic Function		Mathematical	linelength perimeter coordinates vertices		
 Is(-⍤⊣↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths		
+(,⍨⍴1↑⍨1∘+)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
 (⌈/-⌊/)∘,N	Range (difference between largest and smallest element) in N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes of		
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum		
 (⊢⌽⍨¯1+⍳∘≢)Ym	Align the diagonals of a matrix into columns (with wrap-around)	Tacit	Dyadic Function		Structural	table		
@@ -1168,6 +1167,7 @@ Xm↑↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with 
 (××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (⌊+1∘|>∘?0∘×)N	Stochastic rounding to integer	Tacit	Monadic Function		Mathematical	precision whole number probabilistic		
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()		
+(⊢⌽⍤⍴⍴1↑⍨1+≢)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table ident() id() I()		
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements		
 Is(⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise rows		
 Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns		
