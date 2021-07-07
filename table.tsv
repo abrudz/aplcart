@@ -1121,6 +1121,7 @@ Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
 Is(×∘×⍨∘≢↑↓)Bv	Shift Bv forward or backward Is positions	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
+(⌽⍤⍴⍴1↑⍨1+≢)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table ident() id() I()		
 (⊢⍴⍨2,⍨2÷⍨≢)Yv	Reshaping vector Yv into a two-column matrix	Tacit	Monadic Function		Structural	2-column table list		
 Is(⊢↑⍨⊢∘≢,⊣)Ym	Adjust Ym to width Is (positive Is to pad/chop on right, negative Is to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit		
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2		
@@ -1167,7 +1168,6 @@ Xm↑↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with 
 (××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (⌊+1∘|>∘?0∘×)N	Stochastic rounding to integer	Tacit	Monadic Function		Mathematical	precision whole number probabilistic		
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()		
-(⌽⍤⍴⍴1↑⍨1+≢)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table ident() id() I()		
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements		
 Is(⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise rows		
 Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns		
@@ -2042,13 +2042,13 @@ X f{⍺←{⍵ ⋄ ⍺⍺} ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y
 f{⊃⍺⍺{⍵,⍨⊂⍺ ⍺⍺⊃⍬⍴⍵}/1↓⍬(⊢,∘⊂⍴)¯1⌽⍵}Y	Accumulating reduction	Dop	Monadic Function	Monadic Operator	Function Application			
 Xv(Av{(1+⍺⍺)⊃¨((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Yv	Mesh vectors Xv and Yv under control of Av (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 Mv(Ns{⍺⍺{⍺⍺|⍺×⍺⍺|×⍨⍵}⌿⍺*⍤1⊖0⍪2⊥⍣¯1⊢⍵})Jv	Modulo power (fast non-overflowing Ns|Mv*Jv)	Dop	Dyadic function	Monadic Operator	Mathematical	powermodulo powmodulo modular exponentiation modulus bmodpow() pow() expmod() exp() bcpowmod() mpz_powm() @powermod() mod_exp()		
-X(f{⍺←⊢ ⋄ r⊣⍺ ⍺⍺{r,∘⊂←⍺ ⍺⍺ ⍵}⍣⍵⍵⊃r←⊂⍵}Y)Z	Iterate: ⍣ but with intermediary results	Dop	Monadic Function, Dyadic Function	Dyadic Operator	Iteration	apply application repeated converge while repeating looping power intermediaries intermediate all sequence iterate iterating		
 M(I{+⌿(⍺⍺⊤⍨4⍴2)×⍤¯1↑,(1-⍺)⍺∘.×(1-⍵)⍵})N	Boolean/probabilistic functions I (0-15)	Dop	Dyadic Function	Monadic Operator	Mathematical	Logical application numbered enumerated operation apply fuzzy probability chance		
 Xm(Av{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍺),¨(⍺⍺\⍵)})Ym	Mesh matrices Xm and Ym along rows under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix row-wise		
 Xm(Av{(1+⍺⍺)⊃¨⍤0 1⊢((~⍺⍺)⍀⍺),¨(⍺⍺⍀⍵)})Ym	Mesh matrices Xm and Ym along columns under control of Av (0:cell from Xm, 1:cell from Ym, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing matrix column-wise		
 (X{⍺⍺(⍵⍵⌷⍨∘⊂⍳)@(⍸(≢⍺⍺)≥⍺⍺⍳⍵)⊢⍵}Y)Z	Replacing major cells of Z that appear in X with the corresponding major cell from Y	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLSx/qPeVeqJSUWJyYkpIEqdC6pCHc7S0DBSMH7Uu0U9MTExKSlJXVOh@lHvLiDSeNS7FYR6tj/qXfGoY8ajrqZHvZs1HYDiOzQedS6CqNJ81LkUwgJKApVrPuoCymytVYAZ6@jo6OTkpK6pCXLV//8A	
 (Is{(⍺⍺*¯1 1)(×⍴⍵↑⍨⊢)(⍴⍵)+⍵⍵,⍨⍺⍺|-≢⍵}Js)Ym	Ravel of a matrix to Is columns with a gap of Js	Dop	Monadic Function		Structural	table		
 Is(As{⍺>⍵:0 ⋄ ⊃⌽⊃(+\×)/1,⍨⌽⊣\⍣⍺⍺⊢⍺,/⍳⍵-1})Js	Stirling number of the As'th kind (0:first, 1:second): S(n,k)	Dop	Dyadic Function	Monadic Operator	Mathematical	combinatorics 𝔖(n,k) 𝕾(n,k)		
+X(f{⍺←⊢ ⋄ r⊣⍺ ⍺⍺{⍺←⊢ ⋄ r,∘⊂←⍺ ⍺⍺ ⍵}⍣⍵⍵⊃r←⊂⍵}Y)Z	Iterate: ⍣ but with intermediary results	Dop	Monadic Function, Dyadic Function	Dyadic Operator	Iteration	apply application repeated converge while repeating looping power intermediaries intermediate all sequence iterate iterating		
 Iv(Is{(⊂(1+≢⍵)⌊⍋(⍳≢⍵),⍺⍴⍨⍺⍺×≢⍺)⌷⍵⍪⍵⍵}Y)Z	Inserting Is Y's into Z after indices Iv	Dop	Dyadic Function	Dyadic Operator	Structural			
 (Iv{⍵⍀⍨(⍳(≢⍵)++/⍺⍺)∊+\1+⍺⍺\⍨⍵⍵∊⍨⍳≢⍵}Jv)Y	Open a gap of Iv[i] before Y[Jv[i]] (for all i)	Dop	Monadic Function	Dyadic Operator	Structural	gaps expand		
 Xv(Am{(1+⍺⍺)⊃¨⍤1⊢((~⍺⍺)\⍤1⊢⍺),¨(⍺⍺\⍤1⊢⍵)})Yv	Mesh vectors Xv and Yv in multiple ways under control of Am (0:cell from Xv, 1:cell from Yv, …)	Dop	Dyadic Function	Monadic Opertor	Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing differently		
