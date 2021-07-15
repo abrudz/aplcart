@@ -1146,7 +1146,7 @@ Mv(2*∘÷⍨1⊥2*⍨-)Nv	Euclidean distance between two points in N-space	Taci
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC		
 (10⊥∘,∘⍉10∘⊥⍣¯1)Jv	Encode a vector of positive integers as equal-width fields of digits in an integer	Tacit	Monadic Function		Data Representation	serialise serialize serialisation serialization join	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DA0edS191DFDB4gf9XYCuUAaKNK7@NB6Q00FY0MFQwUjcwWD//8B	
 (⊢⎕NS⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text removing erasing erase eliminate eliminating delete deleting string		
-{⊃,/⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening flattened raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@g/6mo7tOJR79baR72LH3UuVNBQT0xMVFdQT0pKUtfU0FBPTk4G8hCkpoJ6SkoKkNJ41NWknpqaqq75/z8A	
+{⊃,/,¨⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening flattened raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@jrHFrxqKsNSPRurX3Uu/hR50IFDfXExER1BfWkpCR1TQ0N9eTkZCAPQWoqqKekpAApjUddTeqpqanqmv//AwA	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning string		
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical			
 ((⊂∘⍋⌷⊢)⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
