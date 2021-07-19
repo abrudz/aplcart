@@ -2435,7 +2435,7 @@ Cv(1200⌶)N	Format date-time	I-beam	Dyadic Function	Monadic Operator	Text	strin
 )TID {tdno}	Switch to thread tdno or report current thread number	Non-syntax			System Command	synchronisation synchronization parallel threading greenthreading ⎕tid		https://help.dyalog.com/latest/#Language/System%20Commands/tid.htm
 )VARS {nm}	List variables in current namespace, optionally beginning with {nm}	Non-syntax			System Command	information listing report ¯2.1 ¯2.2 ¯2.3 ¯2.6 vector start leading		https://help.dyalog.com/latest/#Language/System%20Commands/vars.htm
 )WSID {ws}	Set or report the name of the active workspace	Non-syntax			System Command	identification filepath filename ⎕wsid		https://help.dyalog.com/latest/#Language/System%20Commands/wsid.htm
-2÷¯1+5*÷2	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638		
+2÷¯1+5*÷2	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDm8/tN5Q21Tr8Haj//8B	
 +/∧\B	Fast: The number of leading 1s in each row of B	Expression		Performance	Boolean/Logical	speed optimised optimized quick ones trues truths start beginning idiom		
 17×2-645=⎕FR	Arithmetic precision of the system (in decimals)	Constant			Mathematical	comparison tolerance fuzz IEEE754 floatingpoint		
 100⊥100|3↑⎕TS	Packing current date (YYMMDD)	Constant			System	Encoding		
@@ -2547,7 +2547,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'TrackBar'	A slider control for analogue input/output	GUI Object			Input & Selection	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/TrackBar.htm
 {name}⎕WC'TreeView'	Displays a hierarchical collection of items	GUI Object			Input & Selection	WindowsForms WinForms Create new elements cells		https://help.dyalog.com/latest/#GUI/Objects/TreeView.htm
 {name}⎕WC'UpDown'	Spin buttons	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
-+∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638		
++∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
 )SAVE {-force} {ws}	Save active workspace, optionally with new name ws (overwrite any existing if -force)	Non-syntax			System Command	archive store ⎕save		https://help.dyalog.com/latest/#Language/System%20Commands/save.htm
 op←{⍺⍺ ⍵}	Prototypical monadic dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
