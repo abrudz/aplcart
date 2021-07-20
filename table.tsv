@@ -1146,7 +1146,6 @@ Mv(2*∘÷⍨1⊥2*⍨-)Nv	Euclidean distance between two points in N-space	Taci
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC		
 (10⊥∘,∘⍉10∘⊥⍣¯1)Jv	Encode a vector of positive integers as equal-width fields of digits in an integer	Tacit	Monadic Function		Data Representation	serialise serialize serialisation serialization join	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DA0edS191DFDB4gf9XYCuUAaKNK7@NB6Q00FY0MFQwUjcwWD//8B	
 (⊢⎕NS⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text removing erasing erase eliminate eliminating delete deleting string		
-{⊃,/,¨⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening flattened raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@jrHFrxqKsNSPRurX3Uu/hR50IFDfXExER1BfWkpCR1TQ0N9eTkZCAPQWoqqKekpAApjUddTeqpqanqmv//AwA	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning string		
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical			
 ((⊂∘⍋⌷⊢)⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
@@ -1230,6 +1229,7 @@ Is(⊣*∘÷⍨1⊥*⍨∘|)N	Is-norm	Tacit	Dyadic Function		Mathematical	Lp-nor
 (+⍨=1+1⊥∘∪⊢∨⍳)Js	Is Js an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?		
 (+⍨=¯1+1⊥∘∪⊢∨⍳)Js	Is Js a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?		
 Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model y=a+b^x y=a^x+b curve		
+{⊃,/,¨⊆¨⍵}⍣≡Y	Enlist (∊Y) but keep leaf simple arrays intact	Tacit	Monadic Function		Structural	leaves subarrays sub-arrays flattening flattened raze razing flatten() items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@jrHFrxqKsNSPRurX3Uu/hR50IFDfXExER1BfWkpCR1TQ0N9eTkZCAPQWoqqKekpAApjUddTeqpqanqmv//AwA	
 (+/∘,÷(×/⍴))N	Arithmetic mean value of all elements	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells items		
 ((¯1↓⊢,⍨1↑0∘⍴)⍤1)Y	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		
 (⊃⍤⌽⍤⍸⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise horizontally string		
@@ -1418,7 +1418,7 @@ code←dfns.morse text	Conversion to/from Morse code	Dfn	Function		Data Conversi
 coded←dfns.base64 plain	Base64 encoding and decoding as used in MIME	Dfn	Function		Representation	Base64encoding		https://dfns.dyalog.com/n_base64.htm
 d←L dfns.dist R	Levenshtein distance	Dfn	Function		Mathematical	stringcomparison fuzzy		https://dfns.dyalog.com/n_dist.htm
 dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function		Structural	graph spanningtree		https://dfns.dyalog.com/n_stdists.htm
-digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function		Mathematical	k-adicnumbers shortlex bijectivenumeration unary kadicnumbers		https://dfns.dyalog.com/n_adic.htm
+digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function		Mathematical	k-adicnumbers shortlex bijectivenumeration unary kadicnumbers spreadsheet Excel columns labels titles		https://dfns.dyalog.com/n_adic.htm
 digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function		Mathematical	FastFourierTransform		https://dfns.dyalog.com/n_xpower.htm
 enc←dfns.rep name	Encapsulate function/operator	Dfn	Function		Data Conversion	functionarray encapsulatefunction converting change changing		https://dfns.dyalog.com/n_rep.htm
 entropy←dfns.shannon string	Shannon entropy of message ⍵	Dfn	Function		Text	informationtheory		https://dfns.dyalog.com/n_shannon.htm
@@ -1703,6 +1703,7 @@ X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namesp
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	RIDE put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove removing erasing erase eliminate eliminating delete deleting idiom string		
+Cv{⍺⎕S'&'⍠'OM'1⊢⍵}Dv	Find all matches (even overlapping) for regex Cv in Dv	Dfn	Dyadic Function		Text	occurrences	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE/XUFaof9e4C8oPV1dQf9S5Q9/dVN3zUtehR79ZaoHxSYmKy@v//AA	
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find string regex regexp		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
 Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
