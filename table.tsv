@@ -510,7 +510,7 @@ Is+/N	Running sum of Is consecutive elements of N	Tacit	Dyadic Function		Mathema
 ⌊/N	Minimum of N	Tacit	Monadic Function		Mathematical	infirmum smallest lowest	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTpK5haKBiaKhgZKVgYKBiZKRgaciHLGoChIYSGyQCBsYLxo94tCkZAKWMFMwVTBRMFcwVLBQuoEnV1FFNwqf7/HwA	
 ÷/N	Alternating product of N	Tacit	Monadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOb9dXMFQw4kLlKhhjCCiYYBFSMP3/HwA	
 ≠/B	Boolean Parity (Even)	Tacit	Monadic Function		Boolean/Logical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS7QN@RC5iigc9EFDIAQRBr@/w8A	
-1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAEjcy4kEcNHHTP00cQgqhSMDRSMTbGphcj8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
+1∘/Y	Ensure minimum rank 1 (reshaping scalar into one-element vector)	Tacit	Monadic Function		Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar normalise normalize normalisation normalization	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAEjcy4kEcNHHTP00cQgqhSMDRSMTbGphcj8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Replicate.htm
 ⊢⌿Y	Fast: The last sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick bottommostrow subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuRY969iOp@P8fAA	
 ⊣⌿Y	Fast: The first sub-array along the first axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick topmostrow subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvlke9my25IILq6lCGwqOuxY969iOp@P8fAA	
 +⌿N	Sum of N (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvFkMFIwVjLoioujqUoaD9qGc/soL//wE	
@@ -1167,6 +1167,7 @@ Xm↑↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with 
 (××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (⌊+1∘|>∘?0∘×)N	Stochastic rounding to integer	Tacit	Monadic Function		Mathematical	precision whole number probabilistic		
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()		
+Iv(⊣⍴⊢⌿⍤⊣⍴⍤1⊢)Ym	Tiling a matrix Ym over a matrix of shape Iv	Tacit	Dyadic Function		Structural	tiling 2d array size sizing reshape reshaping tessellation tesselation tessellating tesselating tessellate tesselate tiles covering rectangles		
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements		
 Is(⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise rows		
 Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns		
@@ -1762,7 +1763,6 @@ Iv{¯2-⌿0⍪(⊂+\⍺)⌷+⍀⍵}N	Sums over (+/) subvectors of N, lengths in 
 {⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm	Remove trailing blank columns	Dfn	Monadic Function		Text	all-space allspace empty remove trim right delete drop ending space without removing erasing erase eliminate eliminating deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FIwUDA0e9W5RBzKAIFEBAhIhLHUFTR0F9ZoadS64@upHvVv1H/WueNSz91HHihggpa6gDmTpPepcAJSqJdLA//8B	
 Av{g[⍋(+\⍺)[g←⍋⍵]]}Y	Grade up (⍋) for sorting each subarray of Y indicated by Av	Dfn	Dyadic Function		Index Generation	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells upgrade ascending		
 Av{g[⍋(+\⍺)[g←⍒⍵]]}Y	Grade down (⍒) for sorting each subarray of Y indicated by Av	Dfn	Dyadic Function		Index Generation	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells downgrade descending		
-{⍺←0⌈⊃⌈/⍵ ⋄ 1@⍵⊢⍺⍴0}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Monadic Function		Boolean/Logical	truesat ⍸⍣¯1 inversion		
 {s←0 ⋄ ⌈/{s⊢←0⌈s+⍵}¨⍵}Nv	Largest sum of any contiguous subvector	Dfn	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm		
 M{×11○(⍵-1↓⍺)×+2-/⍺}Ns	Sign of point Ns relative to edges of M	Dfn	Dyadic Function		Mathematical	signum		
 Iv{(¯1+⊃⍵)+?⍺⍴1--/⍵}Jv	Iv-shaped array of random numbers in range Jv[1]…Jv[2] (inclusively, with replacement)	Dfn	Dyadic Function		Index Generation	between integers		
@@ -1818,6 +1818,7 @@ Mv{⍵×2+.*∘÷⍨(⍺*2)+×⍨⍵÷2}Ns	Area of pyramid with height and width
 X{(⊥⍨∘⌽↓⍵↓⍨∘-⊥⍨)⍵∊⍺}Yv	Remove elements in X from beginning and end of vector Yv	Dfn	Dyadic Function		Selection	trim leading trailing left right cells items list start ending removing erasing erase eliminate eliminating delete deleting		
 {,⍉2(⍴⍨⍴(⍳⍵)↑⍨*)⌈2⍟⍵}Js	Playing order in a cup for Js ranked players	Dfn	Monadic Function		Index Generation	single-elimination knockout sudden death tournament		
 Iv{+⍀(1↑⍵),i⌿(¯2-⌿⍵)÷i←1+⍺}N	Interpolate Iv values between major cells of N	Dfn	Dyadic Function		Mathematical	fill items elements inserting interpolated		
+{⍺←0⌈⊃⌈/⍵ ⋄ r←⍺⍴0 ⋄ r[⍵]+←1 ⋄ r}Yv	Inverse of monadic ⍸ with optional result shape as left argument	Dfn	Monadic Function		Boolean/Logical	truesat ⍸⍣¯1 inversion		
 Iv{⍵⌷⍨⊂⌽⍒+\(⍳≢⍵)∊+\1,⍺}Y	Reversal (⊖) of subvectors of Y having lengths Iv	Dfn	Dyadic Function		Structural			
 Is{0+.≠(10*⌽0,⍳⍺)∘.|⌊⍵×10*⍺}N	Number of decimals (up to Is) of elements of N	Dfn	Dyadic Function		Mathematical	digits cells items		
 {,⍉3↑(⎕D,⎕A)[1+16 16⊤¯1+'UTF-8'⎕UCS ⍵]}Dv	Conversion of characters to hexadecimal byte representation	Dfn	Monadic Function		Data Conversion	ord() num() hex() utf8 converting change changing		
