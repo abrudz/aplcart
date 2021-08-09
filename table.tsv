@@ -1754,7 +1754,8 @@ I{⍉2⊥>/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise nonimplication for positive inte
 I{⍉2⊥≠/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq		
 I{⍉2⊥⍱/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq		
 I{⍉2⊥⍲/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NAND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq		
-{⌊2÷⍨(⍋⍋NV)+⌽⍋⍋⌽⍵}Y	Cardinals Up (ranking, shareable)	Dfn	Monadic Function		Index Generation	ascendingcardinalnumbers		
+{⌊2÷⍨(⍋⍋⍵)+⌽⍋⍋⌽⍵}Y	Cardinals Up (ranking, shareable)	Dfn	Monadic Function		Index Generation	ascendingcardinalnumbers		
+{⌊2÷⍨(⍋⍒⍵)+⌽⍋⍒⌽⍵}Y	Cardinals Down (ranking, shareable)	Dfn	Monadic Function		Index Generation	descendingcardinalnumbers		
 Ns{+/⍵××\1,⍺÷⍳¯1+≢⍵}Nv	Value of Taylor series with coefficients Nv at point Ns	Dfn	Dyadic Function		Mathematical			
 Av{≠⍀b⍀2≠⌿0⍪⍵⌿⍨b←⍺∨⍵}Bv	Not leading zeroes (∨\) in each subvector of Bv indicated by Av (fast ∊∨\¨Av⊂Nv)	Dfn	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists zeros 0s falses falsehoods start beginning scan		
 {1↓∊':'@1∘⍕¨100+3↑3↓⍵}Jv	Date (⎕TS format) to hh:mm:ss	Dfn	Monadic Function		Text	timestamp 24-hour clock string		
