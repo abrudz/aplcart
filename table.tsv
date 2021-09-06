@@ -478,7 +478,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	12○ argument arc() angle ∠ atan2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	2○ cos() cosinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	3○ tan() tangens		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-4∘○N	sinh → cosh: (1+N*2)*.5 (more precise cosh arsinh N)	Tacit	Monadic Function		Circular/Trigonometric	4○ pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	sinh → cosh: (1+N*2)*.5 (more precise cosh arsinh N or sin arccos N)	Tacit	Monadic Function		Circular/Trigonometric	4○ pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	4○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	5○ sinh() sinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	6○ cosh() cosinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
@@ -491,7 +491,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ¯12∘○N	*N×0J1	Tacit	Monadic Function		Circular/Trigonometric	¯12○ antiphase phasor cis()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯2∘○N	Arccosine N	Tacit	Monadic Function		Circular/Trigonometric	¯2○ inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯3∘○N	Arctangent N	Tacit	Monadic Function		Circular/Trigonometric	¯3○ inverse arctan() atan() arcustangens tan⁻¹() tan^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5 (more precise sinh arcosh N)	Tacit	Monadic Function		Circular/Trigonometric	¯4○ pythagorean complementary cohn()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+¯4∘○N	cosh → sinh: (N+1)×((N-1)÷N+1)*.5 (more precise sinh arcosh N or tan arcsec N)	Tacit	Monadic Function		Circular/Trigonometric	¯4○ pythagorean complementary cohn()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯4∘○N	Triangle side (≥1) as function of hypotenuse	Tacit	Dyadic Function		Circular/Trigonometric	¯4○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯5∘○N	Hyperbolic arsin N	Tacit	Monadic Function		Circular/Trigonometric	¯5○ inverse arcsine asinh() arcsinh() arcussinushyperbolicus arsinh() area sinh⁻¹() sinh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯6∘○N	Hyperbolic arcos N	Tacit	Monadic Function		Circular/Trigonometric	¯6○ inverse arccosine acosh() arccosh() arcuscosinushyperbolicus arcosh() area cosh⁻¹() cosh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
@@ -1885,6 +1885,7 @@ Cv{((⎕DL⌈2E¯6×≢⍺)⊢⎕NEW'HTMLRenderer'(('HTML'⍺)('Visible'0))).Pri
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove removing erasing erase eliminate eliminating delete deleting		
 X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)∊(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove removing erasing erase eliminate eliminating delete deleting		
 Iv{1(↑⌊⍵⌈↓)(2 2⍴¯1 1 1 ¯0.1)+.×10*(-⊃⌽⍺),-/⍺+⍺>99 0}N	Clamp non-negative N to fit in ⍕ field Iv[1 2]	Dfn	Dyadic Function		Text	limitrange format string		
+{#.(⎕CY⍵⊣⍵⎕CY⍨'⎕',¨⎕A(∊⍨⊂⊢)'LxSmTrapWsidTnameCtDivIoMlPpRlRtlWxUsingAvuDctFr'⊣⎕EX⎕NL-⍳9)}Dv	Load workspace ws without executing ⎕LX	Dfn	Monadic Function		System	open fetch get quiet latentexpression autoexec boot ⎕xload )xload		
 '`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match}Dv	Replace backtick-quoted (e.g. `2+3`) expressions with their result	Dfn	Monadic Function		Text	strings variable characters charvector charvecs interpolation substitution expansion template literals string	https://tio.run/##SyzI0U2pTMzJT///P/FR2wRjrkd9U4G0gnqChrp6dJy6eqyWunpNdFxCrKZWgjpQMqj6Ue/UR719ho/aJh9aDyIf9W7V800sSc6oVVDPSM3JyU8w1E5MKM8vyklR//8fAA	
 Cv{⊃⌽⊃(⊢⌈(⌈\(⍵=⊣)+0,¯1↓⊢))/(⌽⍺),⊂0⊣¨⍵}Dv	Length of longest common substring	Dfn	Dyadic Function		Text	match string		
 {'+'@(⊂1 1)∘⌽∘⍉⍣4⊃(⍪∘⌽∘⍉)/'-|-|',⊂⍕⍵}Dm	ASCII frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table string		
