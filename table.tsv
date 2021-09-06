@@ -498,6 +498,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	¯7○ inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯8∘○N	icos ↔ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	¯8○ pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯9∘○N	N (identity)	Tacit	Monadic Function		Circular/Trigonometric	¯9○ identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+f∘g⍨Y	Hook: apply g between Y and (g Y), that is Y f g Y	Tacit	Monadic Function		Composition	hook		
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3SVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3WVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09RUMFYwUjBVMFEy5IGLq6lCGAhAYKxg/6t3yqHezJYYsUCtC9v9/AA	
@@ -1902,7 +1903,6 @@ Iv{m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊�
 X g⍨∘f⍨ Y	Reversed Compose: (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	composewith functioncomposition fXgY backcompose back-compose reverse-compose reversecompose into		
 rslt←pick dfns.of F of G of H … arg	Pick'th fn applied to arg	Dop		Dyadic Operator	Function Application	functionarray conditionaloperator co-operator cooperator		https://dfns.dyalog.com/n_of.htm
 f@{B}Y	Where: Execute f on condition B mask	Dop	Dyadic Function	Monadic Operator	Function Application	amend update indicate masking indicating bitmask bit-mask		
-rslt←{larg} I _fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator		
 vec←(fun dfns.traj) arg	Function limit 'trajectory'	Dop		Monadic Operator	Mathematical	debugging Newton-Raphson sequence NewtonRaphson		https://dfns.dyalog.com/n_traj.htm
 vect←(fn dfns.ascan) vect	Associative vector scan	Dop		Monadic Operator	Function Application	scanoperators list scanning		https://dfns.dyalog.com/n_scan.htm
 cvec←larg (fn dfns.nats) rarg	Natural number arithmetic	Dop		Monadic Operator	Mathematical	naturalnumber infiniteprecision expressiontransformation		https://dfns.dyalog.com/n_nats.htm
@@ -1926,10 +1926,10 @@ rslt←(func dfns.until cond) argt	Conditional function power	Dop		Dyadic Operat
 rslt←(func dfns.while cond) argt	Conditional function power	Dop		Dyadic Operator	Function Application	conditionaloperator		https://dfns.dyalog.com/n_while.htm
 rslt←(dewy dfns.do) rarg	Apply no-result function “en passant”	Dop		Monadic Operator	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction		https://dfns.dyalog.com/n_do.htm
 rslt←(if dfns.cond then cond else) arg	Proposition:consequence:alternative	Dop		Dyadic Operator	Function Application	conditionaloperator Helsingør hyperator co-operator cooperator		https://dfns.dyalog.com/n_cond.htm
-rslt←{larg} I dfns._fk J fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator		https://dfns.dyalog.com/n_fork.htm
-rslt←{larg} I dfns.fk J fk K rarg	Slower but elegant simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	hook co-operator cooperator		https://dfns.dyalog.com/n_fork.htm
 refs←(fn dfns.fnarray) fns	Array of functions	Dop		Monadic Operator	Function Application	functionarray		https://dfns.dyalog.com/n_fnarray.htm
 z←l (fn dfns.bags) r	Multisets/bags	Dop		Monadic Operator	Sets			https://dfns.dyalog.com/n_bags.htm
+rslt←{larg} I dfns._fk J dfns.fk_ K rarg	Simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	co-operator cooperator		https://dfns.dyalog.com/n_fork.htm
+rslt←{larg} I dfns.fk J dfns.fk K rarg	Slower but elegant simulation of “fork” syntax	Dop		Dyadic Operator	Function Application	co-operator cooperator		https://dfns.dyalog.com/n_fork.htm
 {larg}(fn dfns.Depth k)rarg	Apply fn at depths k	Dop		Dyadic Operator	Function Application	rank dimensions axes levels		https://dfns.dyalog.com/n_Depth.htm
 array←{ascan} (fn dfns.ascana) array	Associative higher rank scan	Dop		Monadic Operator	Function Application	scanoperators dimensions scanning high-rank any-rank highrank anyrank axes		https://dfns.dyalog.com/n_scan.htm
 sum←{larg} (digs dfns.ratsum) rarg	⍺⍺-rational sum of ⍺ and ⍵	Dop		Monadic Operator	Mathematical	Eidenumbers rationalnumber balancedternary skewedfour		https://dfns.dyalog.com/n_ratsum.htm
