@@ -498,7 +498,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 ¯7∘○N	Hyperbolic artan N	Tacit	Monadic Function		Circular/Trigonometric	¯7○ inverse arctangent atanh() arctanh() arcustangenshyperbolicus artanh() area tanh⁻¹() tanh^-1()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯8∘○N	icos ↔ -isin: -(-1+N*2)*.5	Tacit	Monadic Function		Circular/Trigonometric	¯8○ pythagorean complementary nconh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 ¯9∘○N	N (identity)	Tacit	Monadic Function		Circular/Trigonometric	¯9○ identity		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-f∘g⍨Y	Hook: apply g between Y and (g Y), that is Y f g Y	Tacit	Monadic Function		Composition	hook		
+f∘g⍨Y	Hook: apply f between Y and (g Y), that is Y f g Y	Tacit	Monadic Function		Composition	hook		
 ⊢/Y	Fast: The last sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick rightmostcolumn subarray dimension idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3SVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
 ⊣/Y	Fast: The first sub-array along the last axis of Y	Tacit	Monadic Function	Performance	Selection	speed optimised optimized quick leftmostcolumn subarray dimension 1st idiom	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3WVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B	
 +/N	Sum of N (row-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09RUMFYwUjBVMFEy5IGLq6lCGAhAYKxg/6t3yqHezJYYsUCtC9v9/AA	
