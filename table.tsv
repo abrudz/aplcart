@@ -1209,7 +1209,6 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing string		
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items		
-Iv(↓↑⍨×⍤⊣×⍴⍤⊢)Y	Shift each dimension of Y by corresponding amount in Iv	Tacit	Dyadic Function		Structural	rotating shift-out shift-in shiftout shifting non-cyclically noncyclically ⌽ ⊖ padding-rotation rotate with		
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2		
 X(1-⍳⍨∘⊖⍨-∘≢⊣)Y	Index of: Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition reverse-iota reverseiota findinglast locatinglast locatelast positionoflast items elements lastlocation searching	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1dQcNQ91Hv5ke9Kx51zHjUNQ3I0AWxOhc96lqsCVTq7KbOlZtYogDSaKxg9Kh3C1C5GRfUKJAMfhNMFcz@/wcA	
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial with descending coefficients Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate		
@@ -1279,6 +1278,7 @@ Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mat
 Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x		
 ({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 {⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}B	Signal an error if any condition is not met (optional left argument: message on failure)	Tacit	Monadic Function		System	throw unittest unit-test roger's hui's	https://tio.run/##SyzI0U2pTMzJT///P7G4OLWoROFR2wSF6ke9u4C0OkQoMz9PIS0xM6e0KFVd4VF3i4LBo46uR71brYCqFB71TQ32dPdz9FGwAMsVZ1QCdRrUws0ztTNUMFE4tN6ICypgDBMAAA	
+Iv(↓↑⍨⍴⍤⊢××⍤⊣+0=⊣)Y	Shift each dimension of Y by corresponding amount in Iv	Tacit	Dyadic Function		Structural	rotating shift-out shift-in shiftout shifting non-cyclically noncyclically ⌽ ⊖ padding-rotation rotate with		
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list		
 (⊃∘.×3∘⊃∘.*⍨1+2∘⊃)N	Compound interest for principals N[1] at rates N[2] in times N[3]	Tacit	Monadic Function		Mathematical	values table matrix		
 0.5∘(⊣*⍨+.××.-0,⊢)N	Area of triangle with side lengths N	Tacit	Monadic Function		Circular/Trigonometric	Heron's formula herons		
