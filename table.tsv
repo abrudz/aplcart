@@ -1209,6 +1209,7 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing string		
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items		
+Iv(↓↑⍨×⍤⊣×⍴⍤⊢)Y	Shift each dimension of Y by corresponding amount in Iv	Tacit	Dyadic Function		Structural	rotating shift-out shift-in shiftout shifting non-cyclically noncyclically ⌽ ⊖ padding-rotation rotate with		
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2		
 X(1-⍳⍨∘⊖⍨-∘≢⊣)Y	Index of: Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition reverse-iota reverseiota findinglast locatinglast locatelast positionoflast items elements lastlocation searching	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1dQcNQ91Hv5ke9Kx51zHjUNQ3I0AWxOhc96lqsCVTq7KbOlZtYogDSaKxg9Kh3C1C5GRfUKJAMfhNMFcz@/wcA	
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial with descending coefficients Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate		
