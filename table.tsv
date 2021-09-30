@@ -2313,7 +2313,7 @@ name←⍞	Assignment of character vector without needing to double quotes	Expre
 0::any error	Covers all errors (errors 1–999)				Error Message	catch errno try errorhandling trapping exception		
 1::WS FULL	There is insufficient workspace in which to perform an operation				Error Message	trap catch errno size memory resources maxws ⎕wa		https://help.dyalog.com/latest/#Language/Errors/WS%20FULL.htm
 10::LIMIT ERROR	A system limit is exceeded				Error Message	trap catch errno		https://help.dyalog.com/latest/#Language/Errors/LIMIT%20ERROR.htm
-1000::any exception	Covers all exceptions (errors 1001–1009)			Exception	Error Message	system interrupts catch errno try errorhandling trapping		
+1000::any exception	Covers all exceptions (errors 1001–1008)			Exception	Error Message	system interrupts catch errno try errorhandling trapping		
 1001::STOP VECTOR	Execution stopped due to ⎕STOP or stop bit set from editor			Exception	Error Message	system interrupts trap catch errno halt inspect breakpoint list		
 1002::WEAK INTERRUPT	Execution stopped by weak interrupt			Exception	Error Message	system interrupts trap catch errno		
 1003::INTERRUPT	Execution stopped by strong interrupt			Exception	Error Message	system interrupts trap catch errno		https://help.dyalog.com/latest/#Language/Errors/INTERRUPT.htm
