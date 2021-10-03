@@ -1000,6 +1000,7 @@ Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZ
 (⌹≡⍉∘+)Nm	Is Nm a Unitary matrix?	Tacit	Monadic Function		Mathematical	testif Unitary?		
 (11=∘⎕DR 2∘⌿)Y	Is Y Boolean?	Tacit	Monadic Function		Array Properties	testif binary base-2 base2		
 (10⊥¯1+⎕D∘⍳)Dv	Safe conversion of string into integer	Tacit	Monadic Function		Data Conversion	eval() evaluate atoi() execute secure number converting change changing text		
+(⊃∘⊃⎕NINFO⍠1)Dv	Get actual lettercase for filename Dv (on insensitive OSs)	Tacit	Monadic Function		System	report extract real true letter-case lettercasing letter-casing of file-name case-insensitive caseinsensitive Windows MacOS case-preserving casepreserving stored spelling		
 (¯1∘⎕C=1∘⎕C)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral? string		
 {0<⎕NC⊆,⍵}Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists? loaded? set?		
 {0=⎕NC⊆,⍵}Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't exist? not exists? missing?		
