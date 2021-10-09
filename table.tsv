@@ -788,7 +788,7 @@ Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus		
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items		
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths		
-Xs(,,⍤0)Yv	Inserting Xs after each element of Yv	Tacit	Dyadic Function		Structural	cell item		
+Xs(,,⍤0)Yv	Inserting Xs before each element of Yv	Tacit	Dyadic Function		Structural	cell item interleave alternate		
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()		
 Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		Structural	merge cell item		
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods		
