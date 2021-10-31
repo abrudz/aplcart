@@ -942,7 +942,7 @@ Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Fun
 (××∘⌊|)N	Rounding towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp		
 I(!×∘!⊣)J	Number of ordered of combinations of I out of J	Tacit	Dyadic Function		Mathematical	combinatorics permutations		
 M(≤∘|×⊢)N	Rounding to zero values of N within M of zero	Tacit	Dyadic Function		Mathematical	precision fuzz 0		
-Is(⊢∘≢↑↓)Yv	Shifting vector Yv left with Is (padding on right)	Tacit	Dyadic Function		Selection	leftshift list		
+Is(⊢∘≢↑↓)Y	Shifting vector Yv left/up Is positions (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list		
 Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list		
 (○4÷3÷*∘3)N	Volume of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball		
 (1=∘?⍴∘2)Jv	Random Boolean array of shape Jv	Tacit	Monadic Function		Boolean/Logical	base2 binary base-2		
@@ -1128,7 +1128,7 @@ Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
-Is(×∘×⍨∘≢↑↓)Bv	Shift Bv forward or backward Is positions	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes		
+Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is positive, padding on right/bottom) or backward/right/down (if Is is negative, padding on left/top)	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes bitshift		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
 (⌽⍤⍴⍴1↑⍨1+≢)Nm	Identity matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	diagonal table ident() id() I()		
 (⊢⍴⍨2,⍨2÷⍨≢)Yv	Reshaping vector Yv into a two-column matrix	Tacit	Monadic Function		Structural	2-column table list		
@@ -1990,8 +1990,8 @@ X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f
 f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
 X f{⊃⌽⍸~⍺ ⍺⍺ ⍵}Y	Index of last element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2		
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose		
-f{⍺⍺ ⍵:1 ⋄ ⍵⍵ ⍵}g Y	Sequential OR test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting short-circuit minimal evaluation McCarthy		
-f{⍺⍺ ⍵:⍵⍵ ⍵ ⋄ 0}g Y	Sequential AND test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting short-circuit minimal evaluation McCarthy		
+f{⍺⍺ ⍵:1 ⋄ ⍵⍵ ⍵}g Y	Sequential OR test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting shortcircuiting short-circuiting minimal evaluation McCarthy		
+f{⍺⍺ ⍵:⍵⍵ ⍵ ⋄ 0}g Y	Sequential AND test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting shortcircuiting short-circuiting minimal evaluation McCarthy		
 M(A{⍺×⍵*¯1*⍺⍺})N	Conditionally multiply (where A=0) or divide (where A=1)	Dop	Dyadic Function	Monadic Operator	Mathematical	per-element item cell		
 Iv(A{⍵↓⍨⍺⍺×⍺})Y	Conditional drop of Iv elements from array Y	Dop	Dyadic Function	Monadic Operator	Structural	major cells items delete remove without removing erasing erase eliminate eliminating deleting		
 (Ms{⍺⍺⌈⍵⍵⌊⍵}Ns)N	Force N to range Ms≤N≤Ns	Dop	Monadic Function	Dyadic Operator	Mathematical	clamp limitrange between –		
