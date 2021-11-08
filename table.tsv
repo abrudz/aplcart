@@ -1783,8 +1783,7 @@ X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototy
 X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove removing erasing erase eliminate eliminating delete deleting		
 X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
 X{⍺⍪⍵⌿⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
-{⍵⊢∘⊂⌸⍨⍥,+/↑⍳⍴⍵}Ym	SW-NE diagonals of Ym as vector of vectors	Dfn	Monadic Function		Structural	extract collect		
-{⍵⊂⍤⊢⌸⍥,⍨+/↑⍳⍴⍵}Ym	Extract the anti-diagonals of a matrix (without wrap-around)	Dfn	Monadic Function		Structural	table		
+{⍵⊂⍤⊢⌸⍥,⍨+/↑⍳⍴⍵}Ym	Extract the anti-diagonals of a matrix (without wrap-around) as vector of vectors	Dfn	Monadic Function		Structural	table SW-NE extract collect select		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st		
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements		
