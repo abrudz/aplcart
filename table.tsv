@@ -620,7 +620,7 @@ X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic
 (f⍣¯1)Y	Inverse: find Z such that Y ≡ f Z	Tacit	Monadic Function	Monadic Operator	Function Application	f⁻¹(x) f′(x) fʹ(x) opposite revert		
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points		
 ×∘|⍨N	Square without changing sign	Tacit	Monadic Function		Mathematical	change converting conversion		
-?⍨∘≢Y	Random Permutation vector for Y	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation randomise randomize		
+?⍨∘≢Y	Random Permutation vector for Y	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation randomise randomize randomlypermute		
 Xm↑⍨∘≢Ym	Vertically lengthening matrix Xm to be compatible (for ,) with Ym	Tacit	Monadic Function		Structural	compatibility sameheight adjust column-wise columnwise table		
 M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³√ ∛ ∜		
 A*∘~⍨N	Conditional change of elements of N to one according to A	Tacit	Dyadic Function		Mathematical	1 cells items changing converting conversion		
@@ -2594,6 +2594,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 32×1+'4'∊⊃#⎕WG'APLVersion'	Report Interpreter bit-width	Constant			System	bit-length bitlength bitwidth architecture amd64 x86-64 x64 x86_64 32-bit 64-bit 32b 64b IA-32 Intel 64	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMjQ5PN9RWN1F/1NH1qKtZGSgc7q7uGOATllpUnJmfp/7/PwA	
 '%ISO%'(1200⌶)1⎕DT'J'	Current ISO timestamp	Constant			Data Conversion	ISO-8601:2006-09 ISO8601:2006-09 datetime date-time string		
 3⊃⊃¯1⎕DT ¯1+1⎕DT⊂0 12⊤1+12⊥2↑⎕TS	Number of days in the current month	Constant			System			
+(⎕NS⍬).(_←enableSALT⊣⎕CY'salt')	Enable SALT when not in session file	Expression			System	start ucmds usercommands ]	https://tio.run/##SyzI0U2pTMzJT///X@NR31S/4Ee9azT1NOIftU1IzUtMykkNdvQJedS1GCjnHKlenJhToq75/39sSmZxQU5ipcKj3s5HvavUHQN81AE	
 {(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	load fetch get include from dfns.dws	https://tio.run/##SyzI0U2pTMzJT/8PBNUaj3r7HvVufdQ31S/4Ue8aTT0gyzlSAShUq56SlleszgUi9ZITcxQMLc3MFAwNAQ	
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA	
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine string	https://tio.run/##SyzI0U2pTMzJT/8PBIaPevbqPOpdYfmod4u6ujoaFwA	
