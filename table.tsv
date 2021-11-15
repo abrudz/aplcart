@@ -1126,7 +1126,7 @@ Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an arr
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA	
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue linefeed newline 0x0A U+0A U+000A string		
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
-(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries		
+(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries cli		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
 Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is positive, padding on right/bottom) or backward/right/down (if Is is negative, padding on left/top)	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes bitshift		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
@@ -1514,12 +1514,12 @@ nested←{left} dfns.eis right	Enclose-if-simple / link	Dfn	Function		Structural
 path←wgraph dfns.wpath (from to)	Quickest path from/to ⍵ in weighted graph ⍺	Dfn	Function		Mathematical	weightedgraph destructiveassignment indexedassignment		https://dfns.dyalog.com/n_wpath.htm
 rslt←dfns.din ''	Evaluation of multi-line D-expression	Dfn	Function		Text	definefunction sessioninput ⎕SE REPL multiline string		https://dfns.dyalog.com/n_din.htm
 rslt←{array} dfns.iotag array	Generalized iota	Dfn	Function		Mathematical	generialisediota generializediota generalized⍳ generalised⍳ Unicode alphabetical abcdefghijklmopqrstuvwxyz interval range steps sequence		https://dfns.dyalog.com/n_iotag.htm
-rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function		Text	compression spaces delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dab.htm
-rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function		Text	compression spaces consecutive delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dmb.htm
-rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function		Text	compression spaces delete remove trailing without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_deb.htm
-rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function		Text	compression spaces delete remove start beginning without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dlb.htm
-rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function		Text	compression spaces delete remove ending without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dtb.htm
-rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function		Text	compression spaces delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dxb.htm
+rslt←{blank} dfns.dab argt	Drop All Blanks	Dfn	Function		Text	rab compression spaces delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dab.htm
+rslt←{blank} dfns.dmb argt	Drop Multiple Blanks	Dfn	Function		Text	rmb compression spaces consecutive delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dmb.htm
+rslt←{blank} dfns.deb argt	Drop Ending Blanks	Dfn	Function		Text	reb compression spaces delete remove trailing without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_deb.htm
+rslt←{blank} dfns.dlb argt	Drop Leading Blanks	Dfn	Function		Text	rlb compression spaces delete remove start beginning without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dlb.htm
+rslt←{blank} dfns.dtb argt	Drop Trailing Blanks	Dfn	Function		Text	rtb compression spaces delete remove ending without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dtb.htm
+rslt←{blank} dfns.dxb argt	Drop eXtraneous Blanks	Dfn	Function		Text	rxb compression spaces delete remove without removing erasing erase eliminate eliminating deleting string		https://dfns.dyalog.com/n_dxb.htm
 tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Data Conversion	treesformatting converting change changing		https://dfns.dyalog.com/n_tnest.htm
 {size}←cvec dfns.utf8put fid	Character vector ⍺ to UTF-8 file ⍵	Dfn	Function		Native Files	text encoding Unicode list write save dump string		https://dfns.dyalog.com/n_utf8put.htm
 (depth leaves)←dfns.tview tree	TreeView style from nested array	Dfn	Function		Data Conversion	converting change changing		https://dfns.dyalog.com/n_tview.htm
@@ -1811,7 +1811,7 @@ Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Functi
 {⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍵}Nv	Auto-correlation	Dfn	Monadic Function		Mathematical	autocorrelation serialcorrelation auto-correlate serial-correlate		
 Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar Xs	Dfn	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging ndimensional n-dimensional block cuboid 3d-array 4d-array centered centred place in larger		
 X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
-{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing blank spaces removed	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick blanks lists ending split from table idiom matrix to removing string		
+{(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing spaces removed	Dfn	Monadic Function	Performance	Text	dtb speed optimised optimized quick blanks lists ending split from table idiom matrix to removing string		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
 Av{(⍺/⍵)∧z/1⌽z←⍺/⍨⍺≥⍵}Bv	All-true (∧/) in each subvector of Bv indicated by Av (fast ∧/¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists reduce reductions		
 Av{(⍺⌿⍵)∧a⌿1⊖a←⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on each subvector of Bv partioned by Av (fast ∧⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector major cells items ∧/¨Av⊂[1]Bv		
@@ -2485,7 +2485,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 (,name)←⊂Y	Structural assignment: Replace all items, shape unchanged	Syntax			Expression	leftarrow gets is copula let redefine naming denotes means inplace update cells elements		
 (⎕FR⎕PP)←1287 34	System setting for exact integer arithmetic up to 34 digits	Expression			Mathematical	large arbitrary precision infinite bignum high decimals		
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop		
-⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv		
+⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv cmdline cli		
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st		
 0=⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic?		
 2=⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic?		
