@@ -2594,7 +2594,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 '-64'~⍨⊃#⎕WG'APLVersion'	Report Operating System	Constant			System	OS platform host	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9R1zUzU6x71rnjU1awMFAp3V3cM8AlLLSrOzM9T//8fAA	
 32×1+'4'∊⊃#⎕WG'APLVersion'	Report Interpreter bit-width	Constant			System	bit-length bitlength bitwidth architecture amd64 x86-64 x64 x86_64 32-bit 64-bit 32b 64b IA-32 Intel 64	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMjQ5PN9RWN1F/1NH1qKtZGSgc7q7uGOATllpUnJmfp/7/PwA	
 '%ISO%'(1200⌶)1⎕DT'J'	Current ISO timestamp	Constant			Data Conversion	ISO-8601:2006-09 ISO8601:2006-09 datetime date-time string		
-3⊃⊃¯1⎕DT ¯1+1⎕DT⊂0 12⊤1+12⊥2↑⎕TS	Number of days in the current month	Constant			System			
+3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥¯1+2↑⎕TS	Number of days in the current month	Constant			System			
 (⎕NS⍬).(_←enableSALT⊣⎕CY'salt')	Enable SALT when not in session file	Expression			System	start ucmds usercommands ]	https://tio.run/##SyzI0U2pTMzJT///X@NR31S/4Ee9azT1NOIftU1IzUtMykkNdvQJedS1GCjnHKlenJhToq75/39sSmZxQU5ipcKj3s5HvavUHQN81AE	
 {(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	load fetch get include from dfns.dws	https://tio.run/##SyzI0U2pTMzJT/8PBNUaj3r7HvVufdQ31S/4Ue8aTT0gyzlSAShUq56SlleszgUi9ZITcxQMLc3MFAwNAQ	
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA	
