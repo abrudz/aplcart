@@ -752,7 +752,7 @@ M(⊢-|)N	Largest whole multiple of M less than or equal to N (N rounded down to
 (⊢=+)N	Is N real?	Tacit	Monadic Function		Mathematical	testif		
 (⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif whole number?		
 (⊢≠+)N	Is N complex?	Tacit	Monadic Function		Mathematical	testif		
-(⌽≡⊢)Dv	Is Dv a palindrome?	Tacit	Monadic Function		Text	testif string		
+(⌽≡⊢)Dv	Is Dv a palindrome?	Tacit	Monadic Function		Text	testif string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvXsfdS58FHXIk0F9aLE5NTkxCJ1LmySQAmQvPr//wA	
 I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical	width representation required digits positions		
 (¯2○1○⊢)N	Complementary Angle	Tacit	Monadic Function		Circular/Trigonometric	○/		
 (1⍴⍨≢)Ym	Vector having as many ones as Ym has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list		
