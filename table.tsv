@@ -637,7 +637,7 @@ C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function
 I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence		
 ,[⍳2]Y	Merge the leading two axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA	
-⊂⍤¯1∘⍉Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ATAAz/9hcGwtZHlhbG9n///ijpXihpAg4oqC4o2kwq8x4oiY4o2JIDMgNOKNtOKNszEy//8	
+(↓⍉)Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ASkA1v9hcGwtZHlhbG9n///ijpXihpAgKOKGk@KNiSkgMyA04o204o2zMTL//w	
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated		
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry		
 Av+.×⍨Nv	Summation over subsets of Nv specified by Av	Tacit	Dyadic Function		Mathematical			
