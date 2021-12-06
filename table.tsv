@@ -637,7 +637,6 @@ C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function
 I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence		
 ,[⍳2]Y	Merge the leading two axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA	
-(↓⍉)Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ASkA1v9hcGwtZHlhbG9n///ijpXihpAgKOKGk@KNiSkgMyA04o204o2zMTL//w	
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated		
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry		
 Av+.×⍨Nv	Summation over subsets of Nv specified by Av	Tacit	Dyadic Function		Mathematical			
@@ -720,6 +719,7 @@ X(⍋⍳)Y	Grade up of Y according to key X	Tacit	Dyadic Function		Index Generat
 (⊃⍒)Y	Index of Largest	Tacit	Monadic Function		Comparison	find locate positionof biggest greatestif maximum lexicographically lexically locating location		
 X(⍒⍳)Y	Grade down of Y according to key X	Tacit	Dyadic Function		Index Generation	custom sort order descending		
 (⍋⍒)Y	Descending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down ordinality		
+(↓⍉)Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ASkA1v9hcGwtZHlhbG9n///ijpXihpAgKOKGk@KNiSkgMyA04o204o2zMTL//w	
 (⍉↑)Yv	Convert inverted table to table (character data as vectors of vectors)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkdtEzUVNNQdk9QV1J1TUtPUgTxDBSMgaa5grPn/PwA	
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes		
 X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith		
@@ -795,7 +795,7 @@ Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		St
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flattening flattened row-wise rowwise		
 (⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flattening flattened column-wise columnwise		
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods		
-Xs(≠⊆⊢)Yv	Split Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	text cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string		
+Xs(≠⊆⊢)Yv	Split Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9dUVNB51LnjU1faoa5GmgnpGak5Ovn5JRmpRqn55flFOivr//wA	
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple?		
 (⊂≢⊆)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	testif nested?		
 (¯1+2×⍳)Js	Odd integers from 1 to 2×Js	Tacit	Monadic Function		Mathematical	numbers 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031DY6PP1R72ZNBVMubKJm//8DAA	
@@ -1077,6 +1077,8 @@ Is{,[⍳⍺]⍵}Y	Merge the leading Is axes of Y	Tacit	Monadic Function		Structu
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces spaces ending string		
 ((⊃2⊃⎕VFI)⍤1)D	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe converting change changing string		
 ((⎕EM⍳32767)⍳⊆)D	Error/interrupt number(s) for message(s) D	Tacit	Monadic Function		Error Message	text errors messages ⎕EM⍣¯1 inverse string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQ0gLSr76PezcZG5mbmmkDGo642TQV1Tz8X1wgF16Ag/yB1BfUwR59QVzjP0y8EyAwNCAGyQzx9Xf1DQ9T//wcA	
+(2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
+(2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries cli		
 X⊃∘⍸∘⍷¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Function		Index Generation	elements cells lookup indexof each		
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ		
 Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Function		Mathematical	oblique		
@@ -1125,8 +1127,6 @@ M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy pr
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes		
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA	
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue linefeed newline 0x0A U+0A U+000A string		
-(⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
-(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries cli		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
 Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is positive, padding on right/bottom) or backward/right/down (if Is is negative, padding on left/top)	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes bitshift		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
@@ -2601,9 +2601,9 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 '%ISO%'(1200⌶)1⎕DT'J'	Current ISO timestamp	Constant			Data Conversion	ISO-8601:2006-09 ISO8601:2006-09 datetime date-time string		
 (⎕NS⍬).(_←enableSALT⊣⎕CY'salt')	Enable SALT when not in session file	Expression			System	start ucmds usercommands ]	https://tio.run/##SyzI0U2pTMzJT///X@NR31S/4Ee9azT1NOIftU1IzUtMykkNdvQJedS1GCjnHKlenJhToq75/39sSmZxQU5ipcKj3s5HvavUHQN81AE	
 {(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'	Import dfns workspace into a namespace called dfns so dfn can be called using dfns.name	Expression			System	load fetch get include from dfns.dws	https://tio.run/##SyzI0U2pTMzJT/8PBNUaj3r7HvVufdQ31S/4Ue8aTT0gyzlSAShUq56SlleszgUi9ZITcxQMLc3MFAwNAQ	
-3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥¯1+2↑⎕TS	Number of days in the current month	Constant			System			
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA	
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine string	https://tio.run/##SyzI0U2pTMzJT/8PBIaPevbqPOpdYfmod4u6ujoaFwA	
+Is{3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥⍺,⍵-1}Js	Number of days in month Js of year Is	Constant			System	calendar length this		
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8	
 '-'@(4+5×⍳4)⊢(⎕D,⎕C⎕A)[4(9+|)@20⊢5@15?36⍴16]	Generate random UUID	Expression			Text	GUID version-4 variant-1 4.1 universally globally unique identifier generation generating randomised randomized string		
 ⎕SIGNAL⊂⎕DMX.(('EN'EN)('EM'EM)('Message'(OSError{⍵,2⌽(×≢⊃⍬⍴2⌽⍺,⊂'')/'") ("',o←⊃⍬⍴2⌽⍺}Message)))	Re-signal last caught error to caller (works with any ⎕IO and ⎕ML)	Constant	Expression		Error Message	emulate re-throw rethrow resignal trapped	https://tio.run/##SyzI0U2pTMzJT///qG9qSJBjgP6j3hWP2iYYKCg86p2rkJyTmlikEOLpr16skFpUlF@kUFKUWFCQmZf@////Rx3tCm75@QppmTmpXAoKViFAKQUDIAsEgMb5ubuGwCVdc4pTEVLBnu5@jj6PupqAbBffCD0NDXVXPyDSBNK@QASkfVOLixPTU9U1/INdQTZXP@rdqmP0qGevxuHpjzoXPepqftS75lHvFpDQo95dOkDD1NU19dWVNBU0lNR18oGeQFdTCzVTU1MT7KS8FJCTuYD@4AL6Qz0vv0Q3I7UoVa@kokQdAA	
