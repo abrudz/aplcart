@@ -695,6 +695,7 @@ Is(⊃⌽)Yv	Pick item of vector Yv at cyclic offset Is (like ⎕IO←0, default
 (¯1 1×⊂)N	∓N by juxtaposition	Tacit	Monadic Function		Mathematical	minusplus		
 (10 12○⊂)N	Split complex array into two-element vector of magnitude array and angle array	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts absolute values list tuple converting change changing		
 (9 11○⊂)N	Split complex array into two-element vector of real array and imaginary array	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values list tuple converting change changing		
+(⊂⍤¯1)Y	Enclose each major cell for any rank Y	Tacit	Monadic Function		Structural	dimensions higher high-rank any-rank highrank anyrank items elements axes cells		
 Is(1⌷⊖)Y	Select major cell of Y at cyclic offset Is (like ⎕IO←0, default Is:¯1)	Tacit	Dyadic Function		Selection	element item		
 (1⌷⊖)Y	Tail: Last major cell	Tacit	Monadic Function		Selection	Y[-1;] X[-1;] Y[-1] X[-1] Y[¯1;] X[¯1;] Y[¯1] X[¯1] trailing element item ending		
 Im(⌷⍤¯1 99)Y	Select: each major cell of Im selects a cell from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index		
@@ -794,6 +795,7 @@ Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		St
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods		
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flattening flattened row-wise rowwise		
 (⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flattening flattened column-wise columnwise		
+(,⊂⍤¯1)Y	Vector of major cells for any rank Y	Tacit	Monadic Function		Structural	vectorise vectorize list dimensions higher high-rank any-rank highrank anyrank items elements axes		
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods		
 Xs(≠⊆⊢)Yv	Split Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9dUVNB51LnjU1faoa5GmgnpGak5Ovn5JRmpRqn55flFOivr//wA	
 (⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple?		
@@ -1591,7 +1593,6 @@ cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function		T
 {cmds←''} dfns.hexdump file	Hex dump of native file	Dfn	Function		Native Files	hexadecimal macro nativefile destructiveassignment endian offsiderule		https://dfns.dyalog.com/n_hexdump.htm
 {name}←{ref} dfns.ambiv namelist	Ambivalise traditional function	Dfn	Function		System	Ambivalize ambivalent tradfn		https://dfns.dyalog.com/n_ambiv.htm
 {tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function		Text	turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers vectors string		https://dfns.dyalog.com/n_bf.htm
-{⊂⍤¯1⊢1/⍵}Y	Vector of major cells for any rank	Dfn	Monadic Function		Structural	vectorise vectorize list dimensions higher high-rank any-rank highrank anyrank items elements axes		
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double items elements		
 As{⊖⍣⍺⊢⍵}Y	Reverse Y on condition As	Dfn	Dyadic Function		Structural	conditional		
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically		
