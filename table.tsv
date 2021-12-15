@@ -1082,8 +1082,8 @@ Is{,[⍳⍺]⍵}Y	Merge the leading Is axes of Y	Tacit	Monadic Function		Structu
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces spaces ending string		
 ((⊃2⊃⎕VFI)⍤1)D	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe converting change changing string		
 ((⎕EM⍳32767)⍳⊆)D	Error/interrupt number(s) for message(s) D	Tacit	Monadic Function		Error Message	text errors messages ⎕EM⍣¯1 inverse string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQ0gLSr76PezcZG5mbmmkDGo642TQV1Tz8X1wgF16Ag/yB1BfUwR59QVzjP0y8EyAwNCAGyQzx9Xf1DQ9T//wcA	
-(2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
-(2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	envvars cmdline shell call startup values settings registry entries cli		
+(⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
+(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	query envvars cmdline shell call startup values settings registry entries cli		
 X⊃∘⍸∘⍷¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Function		Index Generation	elements cells lookup indexof each		
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ		
 Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Function		Mathematical	oblique		
@@ -2594,7 +2594,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents string		
-⊢2⎕NQ#'GetEnvironment' 'DYALOG'	Install directory	Constant	Expression		System	installation folder location dyalog.executables binaries		
+⊢2⎕NQ#'GetEnvironment' 'DYALOG'	Install directory	Constant	Expression		System	query installation folder location dyalog.executables binaries		
 )SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for tdno)	Non-syntax			System Command	stack ⎕si ⎕xsi 1st		https://help.dyalog.com/latest/#Language/System%20Commands/si.htm
 )SINL {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st		https://help.dyalog.com/latest/#Language/System%20Commands/sinl.htm
 :Require file://[path]<file>	Load other source files prior to this one	Syntax	Control	Keyword	Expression	script libriry libraries dependency dependencies dictate order fetch open		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Including%20Script%20Files.htm
