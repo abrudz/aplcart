@@ -574,6 +574,7 @@ Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function
 ,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
 C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st text	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA	
 Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
+⍸@⊢B	Replace 1s in Boolean array B with their enumeration	Tacit	Monadic Function		Boolean/Logical	identify label indices where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5weNS1SMFQwQCIQSSY/v8fAA	
 X f⍣¯1⍣≡Y	Limit: apply inverse of X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA	
 f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A	
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list		
@@ -1082,8 +1083,6 @@ Is{,[⍳⍺]⍵}Y	Merge the leading Is axes of Y	Tacit	Monadic Function		Structu
 (⊥⍨' '∘=)Dv	Number of trailing blanks	Tacit	Monadic Function		Text	suffixspaces spaces ending string		
 ((⊃2⊃⎕VFI)⍤1)D	Conversion of each row to a number (default zero)	Tacit	Monadic Function		Data Conversion	text characters numbers eval() evaluate execute atoi() secure safe converting change changing string		
 ((⎕EM⍳32767)⍳⊆)D	Error/interrupt number(s) for message(s) D	Tacit	Monadic Function		Error Message	text errors messages ⎕EM⍣¯1 inverse string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQ0gLSr76PezcZG5mbmmkDGo642TQV1Tz8X1wgF16Ag/yB1BfUwR59QVzjP0y8EyAwNCAGyQzx9Xf1DQ9T//wcA	
-(⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
-(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	query envvars cmdline shell call startup values settings registry entries cli		
 X⊃∘⍸∘⍷¨∘⊂⍨Y	Indices (⍳) in X of items of Y	Tacit	Dyadic Function		Index Generation	elements cells lookup indexof each		
 Ms(+÷××⊣!+)Ns	Beta function	Tacit	Dyadic Function		Mathematical	B(x,y) Β(x,y) B() Β() beta() Ꞵ		
 Ms(⊢+¯11○⊣×9○⊢)N	Skew N in y-axis by fraction Ms	Tacit	Dyadic Function		Mathematical	oblique		
@@ -1132,6 +1131,8 @@ M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy pr
 Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex axes		
 (↑⍴¨∘'⎕')J	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA	
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue linefeed newline 0x0A U+0A U+000A string		
+(⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
+(⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	query envvars cmdline shell call startup values settings registry entries cli		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
 Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is positive, padding on right/bottom) or backward/right/down (if Is is negative, padding on left/top)	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes bitshift		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
