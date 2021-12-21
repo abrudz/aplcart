@@ -652,7 +652,8 @@ I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span di
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison		
 M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼		
 M(0⌈⌊)N	Force numbers N to range 0≤N≤M	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–		
-M(⌊÷)N	Integer Division	Tacit	Dyadic Function		Mathematical	intdiv() % // divmod()		
+M(⌊÷)N	Floored division	Tacit	Dyadic Function		Mathematical	integer intdiv() % // divmod() F-division	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTc0UAAiGK3xqKfr8HZNIN8YjIHw/38A	
+M((××∘⌊|)÷)N	Truncated division	Tacit	Dyadic Function		Mathematical	integer intdiv() % // divmod() T-division	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTc0UAAiGK2hcXj64emPOmY86umq0Ty8XRMoYwzGQPj/PwA	
 I(1+|)J	Incrementing cyclic counter J with upper limit I	Tacit	Dyadic Function		Mathematical			
 M(|-)N	Absolute distance between X and Y	Tacit	Dyadic Function		Mathematical	magnitudeof cartesian		
 (1||)N	Magnitude of fractional part of N	Tacit	Monadic Function		Mathematical	absolutedecimals		
@@ -1010,7 +1011,7 @@ Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZ
 (¯1∘⎕C=1∘⎕C)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral? string		
 {0<⎕NC⊆,⍵}Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists? loaded? set?		
 {0=⎕NC⊆,⍵}Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't exist? not exists? missing?		
-{¯1≠⎕NC⊆,⍵}Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity allowed? valid? name? legal? dyalog permitted?		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
+{¯1≠⎕NC⊆,⍵}Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity identifiers names allowed? valid? name? legal? dyalog permitted?		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
 (⍳∘' '⍤1)D	Indices of first blanks in rows of array D	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally string		
 ({⍞}¨⍳)Jv	Input of ×/Jv strings	Tacit	Monadic Function		Expression	multi characterinput rawinput stdin		
 X⌷⍨∘⊂∘⍋∘⍋Y	Reorder X according to the order of Y	Tacit	Dyadic Function		Mathematical	meshing sorting reordering ordering		
