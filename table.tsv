@@ -999,7 +999,7 @@ X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Funct
 (⌽⍉⍨1*⍴)Y	Anti-diagonal of any rank array	Tacit	Monadic Function		Selection	minordiagonal antidiagonal nesw ne-sw		
 X(⍸⍷⍨∘⊂)Y	Positions of item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof subarray sub-array subsequence sub-sequence cell element		
 Mv(×÷+.×)Nv	Bayes' formula	Tacit	Dyadic Function		Mathematical	Bayesformula statistical statistics probability probabilities		
-(0=1|*∘0.5)N	Indicate which numbers in N are square numbers.	Tacit	Monadic Function		Mathematical	square? squares?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DGwNa7Qedcww0DPVVDBUMFIwVjBRMFUwUzBXsFCwVDA0@P8fAA	
+(=∘⌊⍨*∘0.5)N	Indicate which numbers in N are square numbers.	Tacit	Monadic Function		Mathematical	square? squares? perfect integers	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bB91zHjU0/Wod4UWkGWgZ6qpYKhgpGCsYKJgqmCmYK5goWCpYGjw/z8A	
 (1.8÷⍨¯32∘+)N	Fahrenheit to Celsius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celsius c2f() ctof() converting change changing		
 Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Function		Mathematical			
 (1+⍴⊥¯1∘+)Jm	Conversion of indices Jm of array to indices of ravelled array	Tacit	Monadic Function		Index Generation	raveled converting change changing		
