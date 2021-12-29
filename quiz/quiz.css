@@ -2,8 +2,9 @@
 @font-face{font-family:M;src:local('APL385 Unicode'),url(/apl385.ttf)}
 i{display:none}
 *{font-family:P}
-body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
-.b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
+body{color:#222;overflow:hidden;position:relative;font-size:16px;content:"w";background:#ddd}     .w{background:#ddd;filter:invert(0)}
+@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)}} .g{background:#444;filter:invert(.85)}
+@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)  }} .b{background:#222;filter:invert(1)}
 pre,code{font-family:M}
 img{margin-bottom:4px;opacity:90%;}
 #a{position:relative;top:6.5px;height:16px;margin-right:.6ex;border-radius:1em;border:.25ex solid currentcolor;width:16px}
