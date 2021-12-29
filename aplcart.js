@@ -6,7 +6,7 @@ C=_=>{
 F=_=>q.focus()
 I=_=>{
   var s=new URLSearchParams(location.search)
-  b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
+  b.className=0==s.get("b")?"b":0==s.get("g")?"g":0==s.get("w")?"w":window.getComputedStyle(b).content[1]
   um.href="/quiz?"+b.className
   if(s.get("self")!=null){document.querySelectorAll("[target]").forEach(e=>e.target="_self");um.href+="&self"}
   fetch("table.tsv").then(d=>d.text()).then(d=>{
@@ -29,5 +29,5 @@ Q=_=>{
 R=_=>{qs=q.selectionStart;qe=q.selectionEnd
   if((v=q.value)[0]+v[vl=v.length-1]=="//"){q.value=v.slice(1,vl);q.selectionStart=qs-1;q.selectionEnd=qe-1
     }else{q.value="/"+v+"/";q.selectionStart=qs+1;q.selectionEnd=qe+1};Q()}
-W=x=>{F(b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])]);um.href="/quiz?"+b.className}
+W=x=>{F(b.className=x?x:"wbg"[1+"wb".indexOf(b.className)]);um.href="/quiz?"+b.className}
 X=_=>F(Q(q.value=""))

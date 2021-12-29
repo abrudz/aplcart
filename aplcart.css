@@ -3,8 +3,9 @@
 i{display:none}
 *{font-family:P;text-decoration:none}
 #q,td:first-child{font-family:M}
-body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
-.b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
+body{color:#222;overflow:hidden;position:relative;font-size:16px;content:"w";background:#ddd}     .w{background:#ddd;filter:invert(0)}
+@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)}} .g{background:#444;filter:invert(.85)}
+@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)  }} .b{background:#222;filter:invert(1)}
 div{background:#fff;height:calc(100vh - 13ex);overflow-y:scroll;overflow-x:hidden}
 #t{width:100%;table-layout:fixed;color:#333;white-space:pre-wrap;word-wrap: break-word}
 tr:hover td{color:#000}
