@@ -1,0 +1,29 @@
+i{display:none}
+@media(max-width:1320px){s{display:none}}
+body{grid-template-rows:2em 2em auto 2em;grid-template-columns:7em auto 2em 2em 2em;
+ height:calc(100vh - 0.25em);margin:0.25em 0.5em 0 0.5em;overflow-y:hidden}
+label{grid-column:1/2;align-self:center;justify-self: right;}
+#q{grid-column:2/3;justify-self: stretch;align-self:center}
+a{display:inline-block;align-self:center;height:1em;width:1em;justify-self:center}
+p{grid-column: 1/-1;align-self:center;justify-self:stretch;margin:0 0.5em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+div{grid-column:1/-1;grid-row:3/4;overflow-y:scroll;overflow-x:hidden;white-space:pre-wrap;word-wrap:break-word}
+#t{width:100%;table-layout:fixed}
+td{padding:.5em}
+#z{align-self:center;justify-self:right}
+@font-face{font-family:P;src:local('APL333'),url(apl333.ttf)}
+@font-face{font-family:M;src:local('APL385 Unicode'),url(apl385.ttf)}
+*{font-family:P;text-decoration:none}
+#q,td:first-child{font-family:M}
+body{color:#222;display:grid;font-size:16px;     content:"w";background:#ddd                    } .w{background:#ddd;filter:invert(0)  }
+@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)}} .g{background:#444;filter:invert(.85)}
+@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)  }} .b{background:#222;filter:invert(1)  }
+div{background:#fff;color:#333}
+tr:hover td{color:#000}
+#q{border:none;font-size:medium}
+a{text-align:center;line-height:1em;color:unset;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+a:hover,a:focus{color:#000}
+.o,td a{border-radius:1em;border:.25ex solid currentcolor}
+td a{margin-right:0.75em;color:#bbb}
+td:first-child a:before{display:inline-block;position:relative;content:'';margin-left:0.33ex;line-height:0;
+ border:0.6ex solid transparent;border-left:1ex solid currentcolor;border-right:none}
+#w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%);position:relative}
