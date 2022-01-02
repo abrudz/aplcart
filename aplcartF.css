@@ -1,0 +1,27 @@
+@font-face{font-family:P;src:local('APL333'),url(apl333.ttf)}         *{font-family:P;text-decoration:none}
+@font-face{font-family:M;src:local('APL385 Unicode'),url(apl385.ttf)} #q,td:first-child{font-family:M}
+i{display:none}
+html,body{height:100%}
+body{display:flex;flex-flow:column;margin:0;font-size:16px;
+  overflow:hidden;position:relative;color:#222;  content:"w";background:#ddd                   }  .w{background:#ddd;filter:invert(0)}
+@media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)}} .g{background:#444;filter:invert(.85)}
+@media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)  }} .b{background:#222;filter:invert(1)}
+.h{display:grid;grid-template-columns:7em auto 2em 2em 2em;padding:0.5em}
+label{justify-self:right}
+#q{grid-column:2/3;place-self:center stretch;border:none;font-size:medium}
+p{grid-column:1/-1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1ex 0 0 0}
+a:hover,a:focus,tr:hover td{color:#000}
+.o,td a{height:1em;border-radius:1em;border:.25ex solid currentcolor;width:1em;line-height:1em}
+a{place-self:center;display:inline-block;text-align:center;color:unset;
+  -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#y{background:#fff;height:100%;flex: 1 1 auto;position:relative;margin:0 0.5em}
+#k{overflow-y:scroll;overflow-x:hidden;position:absolute;top:0;left:0;right:0;bottom:0;height:100%;width:100%;box-sizing:border-box}
+#t{width:100%;table-layout:fixed;color:#333;white-space:pre-wrap;word-wrap:break-word}
+td{padding:.5em}
+td a{margin-right:0.75em;color:#bbb}
+td:first-child a:before{display:inline-block;position:relative;margin-left:0.33ex;line-height:0;content:'';
+  border:0.6ex solid transparent;border-left:1ex solid currentcolor;border-right:none}
+#u{text-align:center}
+#w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
+@media(max-width:1320px){s{display:none}}
+@media(max-width:420px){.o{display:none} .h{grid-template-columns:7em auto} #u{text-align:right}}
