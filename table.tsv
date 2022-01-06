@@ -1061,7 +1061,7 @@ Iv(+\⍤⊢∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	T
 (+\+\∘⍳)Js	First Js figurate numbers	Tacit	Monadic Function		Mathematical	1st		
 (∧⌿⊢=⌈⍀)N	Are columns of N in ascending order?	Tacit	Monadic Function		Comparison	testif vertical raising? sorted? growing?		
 (∧⌿⊢=⌊⍀)N	Are columns of N in descending order?	Tacit	Monadic Function		Comparison	testif vertical falling? sorted? shrinking?		
-(+⍀1⍪2≢⌿⊢)Y	Increment on change: Array of same shape as Y beginning with 1 and increasing for each change in adjancent values	Tacit	Monadic Function		Comparison	incrementing changing neighbouring neighboring elements items cumulative group enumerate enumeration	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tB/1Nhg@6l1l9Khz0aOe/Y@6FmkqqPtmFheDUEFBpvr//wA	
+(+⍀1⍪2≢⌿⊢)Y	Increment on change: Array of same shape as Y beginning with 1 and increasing for each change in adjacent values	Tacit	Monadic Function		Comparison	incrementing changing neighbouring neighboring elements items cumulative group enumerate enumeration	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tB/1Nhg@6l1l9Khz0aOe/Y@6FmkqqPtmFheDUEFBpvr//wA	
 Bs(⊢⍉⍨1 2⌽⍨⊣)Ym	Transpose matrix Ym on condition Bs	Tacit	Dyadic Function		Structural	conditional table		
 Xs(,∘⌽∘⍉⍣4)Ym	Surround matrix Ym with scalar Xs	Tacit	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging table		
 X(1⍳⍨⊃⍤¯1⍤⍷)Y	Index of first consecutive occurrence of major cells of X in Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof subarray sub-array locating items elements location 1st		
