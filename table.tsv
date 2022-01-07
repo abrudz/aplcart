@@ -887,14 +887,14 @@ Is(+⌿÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollin
 X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left argument X)	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	columnheadings columnnumbers ⍢, flattened flattening ravelled raveled list		
 Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural			
 (⍴⍨0∘,)Js	Initialise a matrix with Js columns and no rows	Tacit	Monadic Function		Structural	table		
-(1,2≠/⊢)Yv	Starting points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items starts beginnings		
-(1,2≠/⊢)Yv	Which elements differ from previous ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighboring neighbours neighbors lefthand cells items 1s trues truths		
 (⌈/,∘0)N	Positive maximum, at least zero (also for empty N)	Tacit	Monadic Function		Mathematical	largest biggest		
 (2</0∘,)B	First ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2 groups runs sequences blocks		
 (2>/,∘0)B	Last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s trues truths binary base-2 base2 groups runs sequences blocks		
 Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		Structural	vectorise vectorize serialise serialize list table		
-Xv(,,⍤0 1⍨)Yv	Inserting Xv after every element of Yv	Tacit	Dyadic Function		Structural	merge cell item		
+Xv(,,⍤0 1⍨)Yv	Inserting Xv after every element of Yv	Tacit	Dyadic Function		Structural	merge cell item inserting interspersing intersperse		
 (2>/⍪∘0)B	Last ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs blocks 1s trues truths		
+(1⍪2≢⌿⊢)Y	Indicate starting points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	beginnnings masking Booleans binary base-2 base2 sequences leading runs identical major cells items starts		
+(1⍪2≢⌿⊢)Y	Indicate which elements differ from previous ones (non-empty Yv)	Tacit	Monadic Function		Comparison	masking Booleans binary base-2 base2 sequences runs testif neighboring neighbours neighbors lefthand major cells items 1s trues truths		
 (⊃⌽∘⍴)Y	Number of items in trailing axis	Tacit	Monadic Function		Array Properties	count length() cells len() cells elements dimension ending		
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	cell element		
 Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	copy repeat repetitions duplicate reshape	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgMyAo4oaR4o204oiY4oqCKSAnYWJjJ///	
@@ -968,7 +968,7 @@ Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing		
 (1,⍨2≠/⊢)Yv	Which elements differ from next ones (non-empty Yv)	Tacit	Monadic Function		Comparison	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths		
 (~∨/∘,)B	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄		
-Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	combine merge list strings character joiner joining merging combining		
+Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	combine merge list strings character text .join() joiner joining merging combining intersperse between interject inserting interspersing		
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose		
 (?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element		
 Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining		
@@ -1193,7 +1193,6 @@ Iv(⊣⍴⊢⌿⍤⊣⍴⍤1⊢)Ym	Tiling a matrix Ym over a matrix of shape Iv	
 Iv(⊢⍴⍨⊣,1↓⊢∘⍴)Y	Reshape as in J (outer shape Iv with inner shape of major cells of Y)	Tacit	Dyadic Function		Structural	Jlanguage $ items elements		
 Is(⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise rows		
 Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns		
-(1,¯1↓2≠⌿⊢↑⍨1+≢)Yv	Beginning points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating starting starts beginnings leading binary base-2 base2		
 Xs(⊢⊢⍤/⍨2∨/1,≠)Yv	Remove consecutive duplicate Xs's from vector Yv	Tacit	Dyadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 X(↑⊂⍤¯1⍤⊢,⊂⍤⊣)Y	Appending X as additional major cell of Y, adjusting dimensions of both as necessary	Tacit	Dyadic Function		Structural	inserting stack bottom ontop on-top under table list trailing matrix vector expand to matching shapes join merge		
 (*∘○0J2×⊢÷⍨1+⍳)Js	Js spokes of unit wheel	Tacit	Monadic Function		Circular/Trigonometric	circle points distributed		
@@ -1915,6 +1914,7 @@ Iv{⊂[2×⍳k](,s,⍪r)⍴⍵↑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)↑�
 Cv{(⊢/¨r)↓¨⍵⊂⍨(⍳≢⍵)∊1+⊃¨r←(⍺,'|^')⎕S 0 1⊢⍵}Dv	Split Dv at occurrences of PCRE regex Cv (removes separators and keeps empty segments)	Dfn	Dyadic Function		Text	regularexpression regexp pattern split() cut separate chop divide chunk dividing segments partitions string regular expression delimiters	https://tio.run/##SyzI0U2pTMzJT///Pyg1PbggJ7PkUduEao1HXYv0D60o0nzUNvnQike9Wx91NT3qXaHxqHfzo85FQL7mo44uQ@1HXc1ARUANQIldOuo1ceqaj/qmBisYKBgCDQAqq@VST8ksLlAHijpHqqek5RWrcwHZQB0gYQV1fX17dQWYxQrqHqlFqfr6@kmp@ilFien5ecX6RChHqFb//x8A	
 Iv{⊂[¯1+2×⍳k](,s,⍪r)⍴⍵↑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)↑⍺-1}Y	Tesselate: Distribute Y's elements into evenly-sized tiles in an array of shape Iv (padding Y if necessary)	Dfn	Dyadic Function		Structural	partitioning tesselating tiling chopping splitting cutting separate separating chunking segmented segmenting subarrays sub-arrays subtables partitioned block-array dimensions blockarray	https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1LiD7UdsEBZC4gpGCsUL1o66m6EPrDbWNDk9/1Ls5O1ZDp1jnUe@qIs1HvVse9W591DbxUe@KosPTi4HaHvV0BB3eXgRkGWpr6GaDRDoXBYEosFpNsOJduoa1CiYKpiCxvqmO//8DAA	
 {(⍴⍵)⍴(,(+/b)∘.>¯1+⍳¯1↑⍴⍵)\(,b←⍵≠' ')/,⍵}D	Moving all blanks to end of each rows (fast (~,∩)∘' '⍤1)	Dfn	Monadic Function		Text	quick speed spaces trailing ending string		
+X{⍺{⍺⍴⍨≢⍵}@(⍸(|m)/m<0)⊢⍵⍀⍨m←(¯1+2×≢⍵)⍴1,-≢⍺}Y	Intersperse: Insert cell X between major cells in Y	Dfn	Dyadic Function		Structural	combine merge list strings character joiner joining merging combining between interject inserting interspersing		
 {2⌽∊(12((⊃'am' 'pm'⌽⍨≤),∘⍕|)4⊃⍵),':'@1∘⍕¨100+2↑4↓⍵}Jv	Date (⎕TS format) to H:mm:sstt	Dfn	Monadic Function		Text	timestamp am/pm 12-hour clock string		
 {⌽((0,⍳≢⍵)∘.=+⌿~b)+.×(-⍵)×.*b←t⊤¯1+⍳×/t←2⍴⍨≢⍵}Nv	Descending coefficients of polynomial with roots Nv	Dfn	Monadic Function		Mathematical	solve		
 X{⍺⌷⍨⊂(⍳≢⍺)~((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	dyadictilde butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT remove removing erasing erase eliminate eliminating delete deleting		
