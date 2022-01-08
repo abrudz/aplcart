@@ -823,7 +823,8 @@ X(1⍳⍨∊)Y	Index of first occurrence in X of any item of Y	Tacit	Dyadic Func
 (⊢≡∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHKk0F9cSk5BR1Lhwyier//wMA	
 (∪⍳⊢)Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA	
 Is(⊢∩∧)Jv	Elements of Jv divisible by Is	Tacit	Dyadic Function		Mathematical	filter divisors cells items		
-Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote cells items		
+Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote beginning cells items sort by non-membership non-members		
+Xv(~,∩)Yv	Move elements Yv (which are members of Xv) to the rear of Xv	Tacit	Dyadic Function		Sets	demote end cells items sort by non-membership non-members		
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖		
 (⊢/⍋)Y	Index of last maximum element of Y	Tacit	Monadic Function		Index Generation	find locate positionof greatestif biggest locating cell item location		
 (⊢/⍒)Y	Index of last minimum element of Y	Tacit	Monadic Function		Index Generation	find locate positionof smallest least locating cell item location		
