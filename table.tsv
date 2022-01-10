@@ -2192,7 +2192,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 :For	:For var :In│:InEach ax ⋄ block ⋄ :EndFor	Syntax	Control	Structure	Expression	loop count iteration ¨ iterate iterating		https://help.dyalog.com/latest/#Language/Control%20Structures/for.htm
 :GoTo J	Branch to line or label J	Syntax	Control	Keyword	Expression	switch →	https://tio.run/##SyzI0U2pTMzJT/8PBI862hXc8vO5FBQe9U191DZB3c1QHcixcs8PyVcI9vYMQJIxAsqAhKyQxIzVuYBGcAGNAAA	https://help.dyalog.com/latest/#Language/Control%20Structures/goto.htm
 :Hold	:Hold tkn ⋄ block ⋄ :Else ⋄ block ⋄ :EndHold	Syntax	Control	Structure	Expression	synchronisation synchronization parallel threading tokens greenthreading		https://help.dyalog.com/latest/#Language/Control%20Structures/hold.htm
-:Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit		https://help.dyalog.com/latest/#Language/Control%20Structures/leave.htm
+:Leave	Terminate execution :For/:Repeat/:While block	Syntax	Control	Keyword	Expression	break earlyexit loop		https://help.dyalog.com/latest/#Language/Control%20Structures/leave.htm
 :Repeat	:Repeat ⋄ block ⋄ :Until bx ⋄ :AndIf bx│:OrIf bx	Syntax	Control	Structure	Expression	loop iteration ⍣ iterate iterating		https://help.dyalog.com/latest/#Language/Control%20Structures/repeat.htm
 :Repeat	:Repeat ⋄ block ⋄ :EndRepeat	Syntax	Control	Structure	Expression	loop iteration ⍣ iterate iterating		https://help.dyalog.com/latest/#Language/Control%20Structures/repeat.htm
 :Return	Abort (cut stack back one frame)	Syntax	Control	Keyword	Expression	→0 stop		https://help.dyalog.com/latest/#Language/Control%20Structures/return.htm
