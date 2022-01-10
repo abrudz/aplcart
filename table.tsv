@@ -823,8 +823,8 @@ X(1⍳⍨∊)Y	Index of first occurrence in X of any item of Y	Tacit	Dyadic Func
 (⊢≡∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHKk0F9cSk5BR1Lhwyier//wMA	
 (∪⍳⊢)Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA	
 Is(⊢∩∧)Jv	Elements of Jv divisible by Is	Tacit	Dyadic Function		Mathematical	filter divisors cells items		
-Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote beginning cells items sort by non-membership non-members		
 Xv(~,∩)Yv	Move elements Yv (which are members of Xv) to the rear of Xv	Tacit	Dyadic Function		Sets	demote end cells items sort by non-membership non-members		
+Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote beginning cells items sort by non-membership non-members		
 Xv(∪~∩)Yv	Symmetric Set Difference	Tacit	Dyadic Function		Sets	⊖		
 (⊢/⍋)Y	Index of last maximum element of Y	Tacit	Monadic Function		Index Generation	find locate positionof greatestif biggest locating cell item location		
 (⊢/⍒)Y	Index of last minimum element of Y	Tacit	Monadic Function		Index Generation	find locate positionof smallest least locating cell item location		
@@ -1640,7 +1640,6 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof		
 {1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w	
-{⌊0.5+!⍵÷○1}N	Derangement	Dfn	Monadic Function		Mathematical	[n!/e] ⌊n!/e⌉ !n dn n¡ subfactorial deMontmort number		
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean string		
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
@@ -1698,6 +1697,7 @@ X{⍺.##=⍵.##}Y	Are X and Y sibling objects?	Dfn	Dyadic Function		Systems	test
 Is{⍵⌿⍨0=⍺|⍳≢⍵}Y	Taking every Is'th major cell of Y	Dfn	Dyadic Function		Selection	nth element item		
 Is{⍵⌿⍨0≠⍺|⍳≢⍵}Y	Remove every Is'th cell of Y	Dfn	Dyadic Function		Selection	filter item element removing erasing erase eliminate eliminating delete deleting		
 X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an element in X	Dfn	Dyadic Function		Selection	cell item table		
+{⌊0.5+(!⍵)÷*1}N	Derangement	Dfn	Monadic Function		Mathematical	[n!/e] ⌊n!/e⌉ !n dn n¡ subfactorial deMontmort number		
 {1 0 1(,∘.∧)⍣⍵⊢1}Js	Cantor set iteration Js	Dfn	Monadic Function		Mathematical	fractal ternary middle third iterate iterating		
 X{⍵↓⍨-⊥⍨⍵∊⍺}Yv	Remove elements in X from end of vector Yv	Dfn	Dyadic Function		Selection	trim trailing right cells items list ending removing erasing erase eliminate eliminating delete deleting		
 X{⍵↓⍨⊥⍨⌽⍵∊⍺}Yv	Remove elements in X from beginning of vector Yv	Dfn	Dyadic Function		Selection	trim leading left cells items list start removing erasing erase eliminate eliminating delete deleting		
