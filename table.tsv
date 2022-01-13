@@ -1607,7 +1607,7 @@ cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function		T
 {cmds←''} dfns.hexdump file	Hex dump of native file	Dfn	Function		Native Files	hexadecimal macro nativefile destructiveassignment endian offsiderule		https://dfns.dyalog.com/n_hexdump.htm
 {name}←{ref} dfns.ambiv namelist	Ambivalise traditional function	Dfn	Function		System	Ambivalize ambivalent tradfn		https://dfns.dyalog.com/n_ambiv.htm
 {tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function		Text	turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers vectors string		https://dfns.dyalog.com/n_bf.htm
-Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Bv	Dfn	Dyadic Function		Structural	replicate double items elements		
+Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Av	Dfn	Dyadic Function		Structural	replicate double items elements		
 As{⊖⍣⍺⊢⍵}Y	Reverse Y on condition As	Dfn	Dyadic Function		Structural	conditional		
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically		
 X{>/⍋⍺⍵}Y	Is X lexically greater than Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds		
