@@ -1,7 +1,9 @@
-<OpenSearchDescription>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
 <ShortName>APLcart</ShortName>
 <Description>Search APLcart: A novel approach to finding your way in APL</Description>
 <InputEncoding>UTF-8</InputEncoding>
 <Image width="16" height="16" type="image/x-icon">https://aplcart.info/favicon.ico</Image>
 <Url type="text/html" template="https://aplcart.info/?q={searchTerms}"/>
+<moz:SearchForm>https://aplcart.info/</moz:SearchForm>
 </OpenSearchDescription>
