@@ -1697,6 +1697,7 @@ X{⍺.##=⍵.##}Y	Are X and Y sibling objects?	Dfn	Dyadic Function		Systems	test
 Is{⍵⌿⍨0=⍺|⍳≢⍵}Y	Taking every Is'th major cell of Y	Dfn	Dyadic Function		Selection	nth element item		
 Is{⍵⌿⍨0≠⍺|⍳≢⍵}Y	Remove every Is'th cell of Y	Dfn	Dyadic Function		Selection	filter item element removing erasing erase eliminate eliminating delete deleting		
 X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an element in X	Dfn	Dyadic Function		Selection	cell item table		
+Iv{⍵⌷⍨⊂⍺∪⍳≢⍵}Y	Move major cells at positions Iv to the front/top	Dfn	Dyadic Function		Structural	index indices numbers bring promote element row item matrix table first	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwUqh/1bn3Us/1R74pHXU2Penc96lj1qHfzo85FQPFaBXWP1JycfPX//wE	
 {⌊0.5+(!⍵)÷*1}N	Derangement	Dfn	Monadic Function		Mathematical	[n!/e] ⌊n!/e⌉ !n dn n¡ subfactorial deMontmort number		
 {1 0 1(,∘.∧)⍣⍵⊢1}Js	Cantor set iteration Js	Dfn	Monadic Function		Mathematical	fractal ternary middle third iterate iterating		
 X{⍵↓⍨-⊥⍨⍵∊⍺}Yv	Remove elements in X from end of vector Yv	Dfn	Dyadic Function		Selection	trim trailing right cells items list ending removing erasing erase eliminate eliminating delete deleting		
@@ -1735,7 +1736,6 @@ Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression 
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
 Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
 Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated		
-I{⍵⌷⍨⊂⍒⍺∊⍨⍳≢⍵}Y	Move major cells at positions I to the front/top	Dfn	Dyadic Function		Structural	index indices numbers bring promote element row item matrix table first	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwUqh/1bn3Us/1R74pHXU2Peic96t31qKMLxO3d/KhzEVC2VkHdIzUnJ1/9/38A	
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method		
 Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at point Ms	Dfn	Dyadic Function		Mathematical			
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Remove multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu8LoUccKfQMdIEtdQf1R5wKgcK2CugIYeKaBqfy8nEoFTxArOy@1XEEhI79coSQfyE0BEQVF@QWpRQrl@UUpQF5xQWJyZl46SLH6//8A	
