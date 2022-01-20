@@ -73,6 +73,10 @@ DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For 
 
 ## Application Integration
 
+### Browsers
+
+APLcart supports [OpenSearch](https://en.wikipedia.org/wiki/OpenSearch) and as such can be added as search engine on various browsers, including Safari, Edge, Firefox, and Chrome.
+
 ### Dyalog Windows IDE
 
 The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is pressed with the cursor on an unknown word:
