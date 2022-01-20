@@ -1,0 +1,11 @@
+<OpenSearchDescription>
+<ShortName>APLcart</ShortName>
+<Description>
+Search APLcart: A novel approach to finding your way in APL
+</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Image width="16" height="16" type="image/x-icon">
+https://aplcart.info/favicon.ico
+</Image>
+<Url type="text/html" method="get" template="https://aplcart.info?q={searchTerms}"/>
+</OpenSearchDescription>
