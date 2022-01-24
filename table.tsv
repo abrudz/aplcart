@@ -2605,11 +2605,781 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 +/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning idiom string		
 3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
+⎕DMX.(Category EN)≡'XML conversion'1	Invalid left argument		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'10	Invalid '--' in comment		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'11	'>' expected		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'12	Attribute, '>' or '/>' expected		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'13	Invalid ']]>'		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'14	Invalid entity reference		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'15	Unterminated character reference		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'16	Invalid character reference		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'17	Invalid character from character reference		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'18	Tag mismatch		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'19	Tag imbalance		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'2	Invalid right argument		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'20	'=' expected		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'21	Quote expected at start of attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'22	Unterminated attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'23	'<' not allowed in attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'24	Numeric value expected in level column		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'25	Level must be a non-negative value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'26	Outer level must be 0		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'27	Level increment must be no greater than 1		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'28	Character vector expected in tag column		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'29	Invalid attribute array		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'3	Array has invalid number of columns		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'30	Attribute list should have two columns		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'31	Attribute list but no tag		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'32	Character vector expected for attribute name		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'33	Zero-length attribute name		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'34	Invalid attribute name		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'35	Numeric scalar or character vector expected for attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'36	Invalid xml:space attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'37	Numeric scalar or character vector expected in data column		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'38	Invalid character in data		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'39	Numeric value expected in type column		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'4	Unterminated comment		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'40	Invalid tag name		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'41	Invalid character in attribute value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'42	Orphaned data		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'43	Invalid option name		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'44	Invalid option value		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'45	Invalid column		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'46	Columns have inconsistent number of rows		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'5	Unterminated <![CDATA[		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'6	Too many levels of nesting		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'7	Invalid character		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'8	Unterminated markup		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'XML conversion'9	Unterminated processing instruction		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'1	Shared library could not be loaded		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'2	Bad parameter specification		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'3	The specified function could not be found		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'4	Callback is not a function		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'5	Callback is not a function name		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Name association'6	Null pointer returned for ⎕NA result of type A or Z		Name association	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'1	Invalid left argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'10	Unable to lock file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'11	Tie number not in use		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'12	Unable to open file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'13	read error		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'14	Unable to seek in file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'15	Tie number in use		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'16	Too many tied files		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'17	Unable to truncate file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'18	Unable to write to file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'19	Invalid element count		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'2	Invalid right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'20	Invalid file offset		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'21	Invalid length		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'22	Invalid conversion code		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'23	Invalid mode		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'24	Invalid lock type		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'25	Invalid timeout		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'26	The total number of bits in the right argument is not an exact multiple of the number of bits in the type given in the left argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'27	Left argument should be a character array		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'28	Invalid left argument: three elements only allowed with Classic Edition		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'29	Invalid left argument: 163 82 expected in the second and third elements		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'3	Invalid tie number		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'30	Translate vector should have 256 elements		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'31	Translate vector element value out of range		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'32	Missing left argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'33	Name too long		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'34	Left argument array could not be converted to the requested type		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'35	Array too large		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'36	Missing filename		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'37	Invalid directory name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'38	Invalid file or directory name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'39	Unable to delete directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'4	Unable to create file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'40	Already exists		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'41	Unable to create directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'42	Unable to set file attributes		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'43	Invalid user name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'44	Invalid group name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'45	Unable to normalise the file or directory name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'46	Right argument should be file name and optional flags		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'47	Left argument should be content, optional encoding and optional line ending		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'48	Invalid file name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'49	Invalid file encoding type		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'5	Unable to delete file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'50	Unable to decode the file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'51	Unable to encode the file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'52	Invalid text array		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'53	Invalid line ending		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'54	NEL line ending (133) not supported by the selected file encoding		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'55	Invalid option value		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'56	Invalid character value for variant option		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'57	Invalid numeric value for variant option		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'58	The number of columns must be explicitly specified because the 'Ragged' option is set.		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'6	File name mismatch		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'60	Invalid CSV source in right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'61	Invalid CSV source type in right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'62	Invalid column description in right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'63	Invalid header specification in right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'64	Invalid CSV destination in right argument		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'65	Invalid field value		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'66	Field too long		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'67	Incorrect record length		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'68	Unexpected end of input		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'69	Invalid field format		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'7	Unable to manipulate file descriptor		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'70	Invalid number of fields		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'71	Non-numeric data		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'72	Inconsistent column count		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'73	Inconsistent row count		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'74	Invalid file or directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'75	Invalid directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'76	Unable to open file		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'77	Invalid file encoding definition		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'78	Invalid file encoding definition (contains an invalid Unicode codepoint)		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'79	Invalid file encoding definition (contains duplicate Unicode codepoints)		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'8	File already tied		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'80	Unable to identify the temporary directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'81	Overwrite and append options are both set		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'82	Unable to generate a unique file name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'83	Mismatched number of source and destination names		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'84	Invalid source file or directory name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'85	Invalid destination file or directory name		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'86	Not an existing directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'87	Unable to move		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'88	. and .. cannot be copied into an existing directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'89	. and .. cannot be moved		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'9	Unable to read file status		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'90	Unable to scan directory		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'91	Unable to create link		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'92	The field separator, field quote character and escape character must all be different		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'93	Unable to read directory status		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'94	Cannot copy a directory into itself		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Native files'95	Directory depth		Native files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'1	Invalid value		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'2	Value out of range		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'3	The specified array is too large for this operation		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'4	32-bit interpreter limit		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'5	Numeric value required		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'6	Character value required		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'7	Ref not allowed here		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Numeric conversion'9	Boolean singleton value required		Numeric conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Isolates and futures'1	Future has no value		Isolates and futures	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Isolates and futures'3	invalid assignment into an isolate		Isolates and futures	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Isolates and futures'4	isolate function does not exist or is not valid		Isolates and futures	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Internal'1	Value is false		Internal	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Internal'2	Impossible conversion criteria		Internal	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Internal'3	Arithmetic overflow		Internal	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Internal'4	Display encountered an unexpected element type within an array		Internal	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'1	JSON import: unexpected end of input		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'10	JSON import: invalid object		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'11	Output failure		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'12	JSON export: value cannot be converted		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'13	JSON export: invalid matrix or sub-matrix		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'14	JSON export: level must be a non-negative integer		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'15	JSON export: level 0 expected		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'16	JSON export: non-zero level expected		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'17	JSON export: level increment must be no greater than 1		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'18	JSON export: invalid level increment		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'19	JSON export: Name must be a character vector or scalar		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'2	JSON import: end of input expected		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'20	JSON export: Name not expected		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'21	JSON export: Type must be an integer		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'22	JSON export: invalid type		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'23	JSON export: value does not match the specified type		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'25	JSON export: circular namespace reference		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'26	Invalid left argument		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'27	JSON import: invalid name		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'28	JSON import: duplicated name		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'29	JSON export: tabular data is invalid		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'3	JSON import: invalid character		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'30	JSON export: tabular data has invalid header name(s)		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'31	JSON export: tabular data has invalid row or column specification		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'4	JSON import: invalid number		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'5	JSON import: number out of range		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'6	JSON import: invalid string		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'7	JSON import: invalid hexadecimal digit		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'8	JSON import: invalid UTF-16 encoding		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'JSON conversion'9	JSON import: invalid array		JSON conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Compiler'1	Nameclass of non-local name has changed since compilation		Compiler	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Compiler'2	Detected bytecode from a previous version; please uncompile and recompile		Compiler	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'1	Tie number not in use		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'10	Unable to create file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'100	Invalid compression level		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'101	File type does not allow compression to be set		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'102	Invalid file type whilst compression is set		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'103	External variables do not support namespaces		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'11	Unable to open file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'12	Not a component file (bad magic number)		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'13	Not a component file (too short)		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'14	Unsupported archaic file architecture		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'15	Incompatible file architecture		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'16	Incompatible journal detected		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'17	Damaged free tree		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'18	Damaged component tree		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'19	FCHK was previously unable to recover this component		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'2	Tie number in use		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'20	Incorrect passnumber		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'21	Prohibited by access matrix		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'22	Unable to read file status		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'23	Unable to read file header		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'24	Unable to read file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'27	Invalid length in component header		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'28	Write access required for exclusive tie		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'29	Write access required - journal present		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'3	Invalid tie number		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'30	Write access required - file needs to be converted		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'31	File must be exclusively tied to adjust file header structure		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'32	Unable to write component data		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'33	File size limit reached		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'34	Unable to free space within file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'36	Insufficient space in file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'37	Unable to delete file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'38	Cannot exceed maximum component number		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'39	Unable to rename file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'4	File already tied		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'40	Unable to read one or more components whilst adding checksums		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'41	Unable to write journal		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'42	Unable to manipulate file descriptor		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'43	Unable to lock file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'44	Unable to seek in file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'45	Unable to checksum - invalid block length		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'46	Invalid left argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'47	Invalid right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'48	Invalid filename		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'49	Invalid component number		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'5	Too many tied files		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'50	No such component		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'51	Too few components in file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'52	File name mismatch		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'53	Invalid passnumber		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'54	The 'concurrent' option must only be used for validation		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'55	File not checksummed		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'56	Invalid file size		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'57	Option invalid with small span files		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'58	Component too big for a small span file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'59	One or more components would become too big for a small span file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'6	File must be exclusively tied		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'60	Duplicated option		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'61	Invalid option		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'62	Invalid option value		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'63	Invalid journaling level		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'64	Selected journaling level requires checksumming		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'65	Invalid checksumming level		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'66	File too big		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'67	File name buffer overflow		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'68	Unable to compact file		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'69	Component checksum mismatch		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'7	File opened read-only		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'70	User number override active: no access to other user's files		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'71	Invalid access matrix specification		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'72	File is read only due to an architectural conflict but write access is required for exclusive access		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'73	A name in the directory is too long		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'76	File error - invalid value in access matrix		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'77	Property name(s) or name/value pair(s) expected in left argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'78	Invalid property name		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'79	Invalid property value		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'8	File opened read-only because of the file architecture		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'80	Duplicated property setting		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'81	Filename and optional file size limit expected in left argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'83	Tie numbers or two-row matrix of tie numbers and passnumbers expected in right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'84	Tie number and optional passnumber expected in right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'85	Tie number and optional address size expected in right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'86	Tie number, component number and optional passnumber expected in right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'87	Tie number, component count and optional passnumber expected in right argument		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'88	Invalid span size		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'89	Invalid component count		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'9	File exists		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'90	Not a component file (nascent)		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'91	Component file does not support transactions		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'92	Operation disallowed whilst a transaction is taking place		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'93	Transactioning only supported in 64-bit, journaled and checksummed component files		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'94	No transaction ID is set		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'95	File still contains data from transaction which should be removed by the server		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'96	File must be tied in 'Frozen' mode		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'97	Unsupported transaction type		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'98	Small-span files are read-only; ⎕FCOPY can create a writable large-span copy		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Component file system'99	Invalid transaction level		Component file system	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'1	Invalid workspace address in core		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'10	Cannot extract workspace information		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'11	Failed to completely write the new aplcore		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'12	Operation not allowed in post-mortem mode		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'13	Core too aplcore not supported for this version		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'14	Conversion of 32 bit core using 64 bit APL not supported		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'2	Workspace structure in core has wrong length		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'3	Conversion of 64 bit core using 32 bit APL not supported		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'4	Problem with left argument		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'5	Problem with right argument		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'6	Core file is empty		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'7	Not enough address space to map core file		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'8	Not a proper core file		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Core to aplcore conversion'9	Core does not contain Dyalog's own address block		Core to aplcore conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data binding'1	Binding types cannot be redefined		Data binding	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data binding'2	The variable's name is too long		Data binding	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data binding'3	Cannot change rank of a databound array		Data binding	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data binding'4	Cannot change the number of columns in a databound matrix		Data binding	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data binding'5	Cannot databind to an array with rank greater than two		Data binding	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'1	Invalid left argument		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'10	Invalid compression level		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'11	Unable to decompress the source of a scripted object		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'2	Invalid compression library		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'3	Compression level cannot be specified for this compression library		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'4	Data too long for selected compressor		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'5	Invalid right argument		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'6	Invalid compressed data		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'7	Invalid compressed data and/or mismatched left argument		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'8	Compression library ran out of memory		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data compression'9	Compression library reported an unexpected error		Data compression	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'1	Array was created by a later version of the interpreter and cannot be processed		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'10	DECF will not fit into a double		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'11	Function is too old to convert with this version of APL		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'12	Object oriented namespace cannot be serialised		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'13	GUI Object cannot be serialised		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'14	Cannot send or receive complex arrays because APL_COMPLEX_AS_V12 is set		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'2	Read function terminated early. End of file		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'3	Read function returned error		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'4	Write function terminated early		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'5	Write function returned error		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'6	Array cannot be serialised		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'7	Incoming array is invalid		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'8	Namespace is not self contained		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Data exchange'9	Attempt to pass complex array		Data exchange	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Development environment'1	The editor can only be used within a Session		Development environment	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'1	Not supported on 32 bit or Classic Editions		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'10	Failed to unload one or more existing files		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'11	List of names contains invalid name		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'12	List of names can be a vector of vectors or a matrix		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'13	List of names must be character		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'14	Cannot obtain memory statistics from operating system		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'15	Operating system has provided more information than can be processed		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'16	External workspace unusable		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'17	External workspace failed to load: unsuitable address		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'18	External workspace failed to map		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'19	Different external workspace already loaded		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'3	Unexpected data		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'4	Filename should be a vector		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'5	Left argument should be a slot identifier		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'6	When used monadically the right argument must be an empty vector		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'7	Right argument should be a slot identifier and a file name		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'8	Right argument should be a vector of file names		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'External workspace'9	More filenames than are supported		External workspace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Externalise data'1	Namespace/object references are not allowed		Externalise data	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File Watcher functions'1	No support		File Watcher functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File Watcher functions'2	Can't watch this path		File Watcher functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File Watcher functions'3	Can't unwatch this		File Watcher functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'1	Cannot map file		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'10	Shape needs to be fully specified		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'11	File name must be a  character vector		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'12	Right argument must be a vector		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'13	Right argument has too many elements		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'14	Access code must be 'R' or 'W'		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'15	Offset must be numeric and a multiple of page size		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'16	Offset with 'W' not supported		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'17	Offset alignment must be a multiple of the word size (8 on 64 bit versions)		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'18	Offset exceeds file size		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'19	Left argument must have 1 to 16 elements		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'2	GetFileSizeEx() failed		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'20	Only one undefined shape element allowed in left argument		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'3	File too big		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'4	File too small		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'5	Too many Boolean elements		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'6	Cannot unmap file		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'7	Cannot map pages		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'8	Cannot synchronise file		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'9	Flushing file to disk failed		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'10	This property cannot be set on this type of object		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'11	The object name is too long		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'12	The event contains an invalid object or event name		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'13	The object could not be created		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'14	An incompatible comctl32.dll is loaded		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'15	The specified file is of the wrong type		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'16	MDI child limit reached		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'17	VScroll and HScroll must be between 0 and -3, depending on object type		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'18	Cannot clone a namespace with a GUI component		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'19	Cannot exclusively lock the clipboard		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'2	There was an error processing a property of the right argument		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'3	Font specifier must be a character scalar or vector or an object reference		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'4	RTFText must be a vector of 8 bit characters		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'5	⎕DQ can only process objects created on the same thread		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'6	Invalid property name		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'7	Invalid argument passed: character array expected		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'8	Invalid argument passed: numeric value or ICON object expected		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'GUI'9	This object cannot be saved to this type of file		GUI	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'1	Divide by zero		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'10	Unexpected name in signalled ⎕DMX specification		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'100	Unpaired syntactic element		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'101	⎕FR=645 limits arithmetic to the range +/-1.79E308 (approx)		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'102	Where right argument must be integer		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'11	Duplicate name in signalled ⎕DMX specification		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'12	Unexpected value in signalled ⎕DMX specification		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'13	Incorrect ⎕DMX specification format		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'14	Cannot provide a left argument with the given right argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'15	A signalled message must be a character vector or scalar		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'16	The selected random number generator is not implemented on this platform		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'17	Roll right argument must consist of non-negative integer(s)		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'18	Deal left argument must be non-negative		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'19	Deal right argument must be greater than or equal to the left argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'2	Invalid use of variant		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'20	The selected random number generator does not produce a sufficient range of values		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'21	Invalid random number generator selected		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'22	No result was provided when the context expected one		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'23	The function requires a left argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'24	The function does not take a left argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'25	Invalid use of variant: bad option value		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'26	An error occurred creating the ⎕DMX information		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'27	Deal right argument must be non-negative		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'28	Cannot :Hold within a high priority callback		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'29	Cannot TSYNC within a high priority callback		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'3	Out of memory		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'30	Cannot fork with more than one APL thread		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'31	Unable to format result		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'32	Argument must be single		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'33	Argument must be positive		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'34	Argument must be a symbol name		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'35	External function no longer exists		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'36	Unicode character not in ⎕AVU		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'39	Repeated axis		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'4	Not supported on this platform		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'40	Function tree too deep or contains cycle		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'41	Invalid left argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'42	Invalid right argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'43	Invalid axis		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'44	Missing right argument		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'45	Invalid date/time		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'46	Rank of resultant array would exceed maximum permitted		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'47	Execute did not return a result		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'48	Argument must be non-empty		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'49	Left argument must be non-empty		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'5	Invalid I-Beam function selection		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'50	Right argument must be non-empty		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'51	The CPU does not have the required SSE instructions		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'52	It must be that either the left and right frames match or one of them has length 0		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'53	File name is too long		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'54	Use of Interface is inappropriate		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'55	Use of Instance is inappropriate		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'56	Use of ⎕SE is inappropriate		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'57	Use of # is inappropriate		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'58	Use of ⎕DM is inappropriate		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'59	Argument type only supported for Classic versions		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'6	Can't change nameclass on assignment		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'60	I-Beam function has been withdrawn		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'61	I-Beam function is not supported by this interpreter		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'62	Operation cannot be completed with an "external" call on the stack		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'63	Command interpreter failed to start		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'64	Output truncated: line too long		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'65	Command interpreter failed to execute command		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'66	Command interpreter returned failure code		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'67	⎕RL indexed and selective assignment is not permitted		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'68	Invalid UTF-8 sequence		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'69	The program could not be created		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'7	Invalid modified assignment, or an attempt was made to change nameclass on assignment		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'70	The name is too long		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'71	Right operand: no result		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'72	Right operand: not Boolean		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'73	Right operand and argument ranks differ		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'74	Right operand and argument lengths differ		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'75	Array left argument conflicts with array left operand		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'77	Right operand rank too high		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'78	Unable to generate an initial random value because the system RNG is not available; ⎕RL must be set to provide an initial seed value		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'79	Left argument must be less than 2147483.648 seconds (2*31 milliseconds)		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'8	Invalid seed value		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'80	There is not enough space in the buffer. Increase the setting		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'81	Mismatched left and right argument lengths		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'82	Mismatched left and right argument shapes		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'83	Unmatched control structure		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'84	Unmatched {}		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'85	Undefined name		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'86	Mismatched left and right argument ranks		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'87	Cannot wait for an isolate within a high priority callback		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'88	Left argument must be sorted ascending		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'89	Invalid syntactic element		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'9	Invalid error number for signal		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'90	Invalid token		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'91	Right argument must be a vector of correct length		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'92	Where right argument must be non-negative		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'General'99	Invalid: The function may need to be refixed		General	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'1	Windows are open		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'10	Session namespace is referenced by #		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'11	Active calls to or from external functions or certain callbacks are present		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'12	There are pendent compiled functions		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'13	An external workspace is present		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'14	File exists		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'15	File exists and is not a workspace or session file		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'16	File could not be created		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'17	Open file limit has been reached		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'18	Write failed		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'19	Workspace not found		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'2	Variables are shared		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'20	Not a workspace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'21	Workspace too large		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'22	A session object is connected to a shared or external variable		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'23	Insufficient resources		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'24	Workspace generated by a later version of the interpreter		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'25	Cannot load a Conference Edition workspace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'27	Only aplcores/dumps generated by the same architecture can be loaded		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'3	Connection exists to an external object in session namespace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'30	⎕DM references session namespace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'33	Post-mortem workspace is loaded		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'34	Cannot attempt to load a new workspace over a post-mortem workspace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'35	Workspace cannot be saved in post-mortem mode		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'36	External workspace already exists		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'38	Load failed		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'39	Name not found		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'4	In session namespace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'40	Name not copied		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'41	Workspace predates version 11.0		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'42	Workspace references externalised data		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'43	64-bit version is needed to load this workspace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'44	Workspace contains an unsupported execution stack		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'5	State indicator contains a session namespace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'6	OLE clients are attached		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'7	Threads are running		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'8	Mapped files are present		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Load and save'9	# is referenced by session namespace		Load and save	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'10	This property can only be accessed with indexers		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'11	There is no IUnknown available from the server		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'12	Cannot set a readonly property		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'13	Cannot convert argument type		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'14	The call to the object succeeded but an error occurred saving the result in the workspace		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'2	The CLSID is not in a valid format		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'3	Cannot resolve name to a CLSID		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'4	There is no class factory for the server		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'5	There is no type library for the server		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'6	There is no running instance of the server		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'7	There is no IDispatch available from the server		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'8	There is not enough memory		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'OLE'9	There was a problem creating the object		OLE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'1	Access error		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'10	field values must be a name-value matrix		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'100	a private function cannot be defined in an interface		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'101	:Include can only be used in a class definition		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'102	diamonds are not permitted in this expression		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'103	this name or class is not permitted here		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'104	a dfn cannot be declared within dels		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'105	recursive class definition detected		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'106	too many Implements keywords detected		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'107	this function needs to take an argument		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'108	:Access is not permitted in this function		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'109	unbalanced quotes detected		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'11	a type must be specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'110	interface method has not been implemented		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'111	the included function has an invalid :Signature statement		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'112	the included function has an invalid :Implements statement		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'113	the line is too long		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'114	override or overridable is not permitted in a shared function		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'115	fix was cancelled by user		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'116	cannot read required file		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'117	:Require not permitted at this location		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'118	name already has a value, and cannot be overwritten by :Require		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'119	assignment is not permitted in a :Required file		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'12	invalid character		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'120	assignment is not permitted outside of a :Class or :Namespace		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'121	unnamed namespaces are not permitted when fixing multiple objects		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'122	cannot terminate this definition with :EndSection		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'123	Class was not successfully fixed		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'124	Base class has not been resolved		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'125	Include has not been resolved		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'126	Invalid :Using expression		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'13	invalid statement for return type		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'14	return type not specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'15	bad access type		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'16	bad implements type		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'17	invalid property name[s]		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'18	base class is not a class		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'19	base class is sealed		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'2	There were errors processing the script		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'20	: base expected		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'21	conflicting attributes given		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'22	invalid trigger target name[s]		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'23	declared interface member not found. Either the member does not exist or the function syntax is incompatible		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'24	no acceptable method to override. Either the method does not exist or the function syntax is incompatible		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'25	:Returns is no longer supported. Use :Signature instead		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'26	:ParameterList is no longer supported. Use :Signature instead		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'27	invalid name list		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'28	cannot find type		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'29	invalid interface name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'3	No matching constructor		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'30	invalid base class or interface declaration		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'31	only interfaces can be declared after the base class		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'32	recursive class definitions not permitted		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'33	invalid GUI base class specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'34	duplicate access statements not permitted		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'35	duplicate implements statements not permitted		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'36	unexpected access statement encountered		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'37	unrecognised keyword encountered		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'38	statement not permitted in an interface		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'39	name already has a value		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'4	attribute target must be ended with ">"		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'40	could not fix function		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'41	implementation in an interface is not allowed		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'42	function not terminated		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'43	error initializing field		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'44	a field must have a name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'45	only initializer available after field name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'46	an event must have a name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'47	invalid property function header		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'48	invalid or empty property declaration		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'49	property not terminated		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'5	attribute target must be named		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'50	duplicate property type specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'51	contradictory property type specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'52	unrecognized property type		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'53	a property must have a name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'54	filename must be enclosed in double quotes		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'55	unrecognised pragma		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'56	line pragma must include line number		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'57	line end pragma must include line count		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'58	filename not given in line pragma		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'59	include target can only be a namespace		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'6	invalid sub-target for attribute		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'60	include overwrites existing name.		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'61	no include target specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'62	statement not expected at this location		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'63	:Using or :Access must appear before all other statements in a class definition		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'64	statements are not permitted outside of a definition		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'65	item not permitted in an interface		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'66	this function cannot return a result		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'67	this function cannot take a left argument		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'68	this function cannot take an argument		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'69	a destructor cannot be public		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'7	attribute Type must be specified		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'70	a constructor cannot be private		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'71	a constructor cannot be shared		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'72	a destructor cannot be shared		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'73	public operators are not permitted		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'74	cannot terminate this definition with :EndNamespace		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'75	cannot terminate this definition with :EndClass		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'76	cannot terminate this definition with :EndInterface		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'77	cannot terminate this definition with :End		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'78	incomplete :Property declaration		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'79	only a Class can contain a field		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'8	error executing line		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'80	bad value for a field		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'81	:Access types can only be specified once		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'82	invalid :Access for a class		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'83	namespace, class, or interface not terminated		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'84	mismatched dels in definition		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'85	further statements not permitted		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'86	all line pragmas must refer to the same file		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'87	incomplete line pragma		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'88	an empty field initializer was encountered		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'89	a nested class cannot be unnamed		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'9	error retrieving field values		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'90	there must be white space between : and class name		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'91	invalid array specification		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'92	a namespace is not permitted at this location		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'93	a private class cannot be used in a signature		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'94	specified interface is not implemented		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'95	a property then implements an interface property can only define one property		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'96	a default property can only implement one named property		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'97	this property type should not implement a "shape" function		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'98	this property type must implement a "shape" function		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Object oriented programming'99	a function implementing an interface member cannot be private		Object oriented programming	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Profiling'1	Cannot change timer without first clearing collected data		Profiling	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Profiling'2	No timer in use		Profiling	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'RIDE'1	Disabled in this environment		RIDE	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'1	Right argument must be a name and a shape. Example: 'Beta' (3 15)		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'10	Left argument for the Cauchy distribution is a location value followed by a non-zero scale value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'11	Left argument for the Chi Squared distribution is a non-negative degree of freedom number		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'12	Left argument for the Exponential distribution is a non-negative rate number		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'13	Left argument for the F distribution is two positive numbers larger than epsilon		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'14	Left argument for the Gamma distribution is two non-negative numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'15	Left argument for the Inverse Gamma distribution is two non-negative numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'16	Left argument for the Laplace distribution is a location value followed by a non-negative scale value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'17	Left argument for the Logistic distribution is a location value followed by a non-negative scale value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'18	Left argument for the Log Normal distribution is a location value followed by a non-negative scale value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'19	Left argument for the Normal distribution is a location value followed by a non-negative scale value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'2	Supplied name is not a supported distribution		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'20	Left argument for the Poisson distribution is a non-negative rate value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'21	Left argument for the Student T distribution is a positive degree-of-freedom value greater than epsilon		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'22	Left argument for the Weibull distribution is two positive numbers greater than epsilon		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'3	Distribution name must be a character vector		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'4	Distribution is not yet implemented		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'5	Left argument for the Beta distribution must be two numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'6	Parameters for the Beta distribution must be positive numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'7	Left argument must be numeric interval. Example: 1.0  7.6		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'8	The parameter for the Bernoulli distribution is a probablity value between 0 and 1		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'9	Left argument for the Binomial distribution is the number of trials and a probability value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'1	Invalid escape sequence in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'10	Text too long		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'11	Input stream not tied		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'12	Output stream not tied		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'13	Input stream error		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'14	Output array cannot be written to a stream		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'15	Invalid regular expression format		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'16	Invalid transformation format		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'17	Invalid output destination		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'18	Invalid input source		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'19	Execution cannot resume because the version of the PCRE library has changed		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'2	Regular expression needed		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'20	Unicode to UTF-8 translation error		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'21	UTF-8 to Unicode translation error		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'22	Output stream translation error		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'24	Unterminated sequence in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'25	Subpattern reference out of range in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'26	Invalid numeric in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'27	Name expected between '<' and '>' in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'28	Invalid subpattern name in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'29	Invalid character in input stream		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'3	Regular expression optimisation		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'30	Too many regular expressions		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'31	Too many blocks		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'32	Too many subpatterns		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'33	Transformation function should return a value		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'34	Transformation function should return a character vector		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'35	Cannot optimise pattern		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'36	Invalid option value		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'37	Invalid hexadecimal codepoint		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'38	Invalid pattern		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'39	Regex support is not implemented on this platform		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'4	Invalid option value		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'5	Option only allowed with search		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'6	Option only allowed with replace		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'7	Option not allowed in line mode		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'8	PCRE library fatal error		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Search Replace'9	Invalid subpattern name		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'1	The file could not be opened		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'2	The file could not be opened for writing		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'3	An error occurred writing to the file		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'4	Only text can be written to a file		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'5	The prefix "file://" was expected		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'6	The type of code could not be inferred		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Source Code Files'7	The content of the file has changed since the object was fixed		Source Code Files	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'1	Left argument is not NOCMD or SHOWERR or UNDEF		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'2	Left argument has more than 1 numeric		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'3	Left argument numeric value has more than 1 element		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'4	Left argument contains non simple array		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'5	Number of result elements not as requested		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'6	Unexpected failure to convert argument to or from UTF-8		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'7	Word expansion failed		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'8	Right argument not character		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Word expansion'9	Element of right argument not vector		Word expansion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 (⎕NEW⊂'Clipboard').Text	Get text from Windows clipboard	Constant			System	paste retrieve obtain contents string		
 ⊢2⎕NQ#'GetEnvironment' 'DYALOG'	Install directory	Constant	Expression		System	query installation folder location dyalog.executables binaries		
 )SI {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for tdno)	Non-syntax			System Command	stack ⎕si ⎕xsi 1st		https://help.dyalog.com/latest/#Language/System%20Commands/si.htm
 )SINL {n} {-tid=tdno}	Display (first n /last if n<0 lines of) state indicator (for thread tdno) with local names	Non-syntax			System Command	stack list locals ⎕state vector 1st		https://help.dyalog.com/latest/#Language/System%20Commands/sinl.htm
 :Require file://[path]<file>	Load other source files prior to this one	Syntax	Control	Keyword	Expression	script libriry libraries dependency dependencies dictate order fetch open		https://help.dyalog.com/latest/#Language/Object%20Oriented%20Programming/Including%20Script%20Files.htm
+⎕DMX.(Category EN)≡'Date/Time functions'1	Unable to read system clock		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'10	Invalid character in format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'11	Invalid language declaration in format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'12	Invalid predefined pattern declaration in format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'13	Predefined pattern declarations must not be nested		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'14	Unknown language		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'15	Unterminated string in format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'16	'Dictionary' option value is not a namespace		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'17	'Language' option value is invalid		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'18	Member in the dictionary is not a namespace		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'19	Not defined in the dictionary		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'2	Invalid date-time		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'20	Member in the dictionary is malformed		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'3	Invalid input date-time type specification		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'4	Invalid output date-time type specification		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'5	Date-times which have year, month and day components or are formatted must be between 1 January 0001 and 28 February 4000 in the proleptic Gregorian calendar		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'6	Date-times must not be before 24 November -4714 in the Proleptic Gregorian Calendar		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'7	Time number type does not allow negative values		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'8	Invalid format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Date/Time functions'9	Invalid substitution format string		Date/Time functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'1	Only IDispatch can be obtained from a .NET object		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'2	A .NET exception has occurred. Check ⎕EXCEPTION for details		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'3	The .NET framework does not provide a function for this operation		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'4	There are no constructors available for the specified type		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'5	Can't fork with active bridge		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'.NET interface'6	Array must be a namespace reference or nested array		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx71znvUNvlR74pHnYvA7Anq4RmJJfYK6v//l2RkFgMA	
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types		https://help.dyalog.com/latest/#Language/Control%20Structures/signature.htm
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px		
