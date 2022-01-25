@@ -2061,6 +2061,7 @@ Iv(Is{⍵\⍨,⍺∘.>⌽¯1+⍳⍺⍺})Yv	Justifying right fields of Yv (length
 Is(Ms{⍺/[⌈⍺⍺],[⍺⍺]⍵})Y	Is-replicating along new dimension at fractional axis Ms	Dop	Dyadic Function	Monadic Operator	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFDQM9EyrH/Xu0o9@1NMBpIEoVicaynjUu7VWE6jI@FHvlke9m824ENqMyNNmSIK2//8B	
 I(X{(⊂⍺⌊1+≢⍵)⌷⍵⍪⍺⍺})Y	Giving a default value X for indices beyond end of Y	Dop	Dyadic Function	Monadic Operator	Selection	fallback indexing trailing ending		
 X(f{⍺←⊢ ⋄ ⎕IO←⍵⍵ ⋄ ⍺ ⍺⍺ ⍵}Bs)Y	Run f in origin Bs	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	indexorigin apply		
+f{⍺⍺⍨⍣¯1⊢⍵⍉⍨r⍴⍳2÷⍨r←⍴⍴⍵}Y	Inverse of outer product selfie (∘.f⍨⍣¯1)	Dop	Monadic Function	Monadic Operator	Function Application	∘.g⍨⍣¯1 diagonal table		
 Mv f{⍵+.×⍨(⍳≢⍺)⌽⍤0 1⍺⍺⌽⍺}Nv	Generalised convolution	Dop	Dyadic Function	Monadic Operators	Mathematical	generalized convolute		
 Mv(Ms{⍺⍺⊥⍺⌹⍵∘.*⌽¯1+⍳≢⍵})Nv	Interpolated value of series Mv=f(Nv) at Ms	Dop	Dyadic Function	Monadic Operator	Mathematical	extrapolate		
 X(f{↑[⍵⍵](⊂AX)f⊂[⍵⍵]⍵}ax)Y	Run f on axes of Y	Dop	Dyadic Function	Dyadic Operator	Function Application	onaxis apply dimensions		
