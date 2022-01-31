@@ -107,7 +107,7 @@ For example, for a white interface looking for "find", use [aplcart.info?w&q=fin
 
 ## Scope
 
-To answer *how do I* questions, APLcart currently searches over 2000 entries:
+To answer *how do I* questions, APLcart currently searches over 3000 entries:
 
 - General syntax, like `name f←Y`
 - Primitives, like `!`
