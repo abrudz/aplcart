@@ -1191,6 +1191,7 @@ M((××∘⌊|)÷)N	Truncated division	Tacit	Dyadic Function		Mathematical	integ
 (⊃{2⊃⎕VFI⍞},⊢)Ns	Giving a default value for input of scalar number	Tacit	Monadic Function		Mathematical	prompt fallback		
 '-'@(=∘' ')Y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format string		
 ((~,∩)∘' ')Dv	Moving all blanks to end of text	Tacit	Monadic Function		Text	spaces trailing ending string		
+X{⊃(⍋-⍒)⍺⍵}Y	General comparison according to Total Array Order (¯1:X precedes Y, 0:X≡Y, 1:X succeeds Y)	Tacit	Dyadic Function		Comparison	cmp() <=> >-< characters nested any array generalised generalized tao spaceship space-ship three-way compare comparing		
 (⍕' '@(0∘=))N	Formatting with zero values replaced with blanks	Tacit	Monadic Function		Text	hidden 0s empty cells items elements zeroes zeros spaces falses falsehoods string		
 Xm↑↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with Xm	Tacit	Dyadic Function		Structural	adjust width table		
 (××∘⌊|+1≤2||)N	Rounding to nearest even number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
