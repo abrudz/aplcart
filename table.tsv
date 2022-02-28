@@ -486,7 +486,7 @@ name←{type}{shape} ⎕MAP file {rw} {offset}	Associate name with mapped file (
 12∘○N	Phase of N	Tacit	Monadic Function		Circular/Trigonometric	12○ argument arc() angle ∠ atan2		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 2∘○N	Cosine N	Tacit	Monadic Function		Circular/Trigonometric	2○ cos() cosinus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 3∘○N	Tangent N	Tacit	Monadic Function		Circular/Trigonometric	3○ tan() tangens		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
-4∘○N	sinh → cosh: (1+N*2)*.5 (more precise cosh arsinh N or sin arccos N)	Tacit	Monadic Function		Circular/Trigonometric	4○ pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
+4∘○N	sinh → cosh: (1+N*2)*.5 (more precise cosh arsinh N or sec arctan N)	Tacit	Monadic Function		Circular/Trigonometric	4○ pythagorean complementary coh()		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 4∘○N	Triangle hypotenuse as function of side ratio	Tacit	Dyadic Function		Circular/Trigonometric	4○ Pythagorean trigonometry		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 5∘○N	Hyperbolic sine N	Tacit	Monadic Function		Circular/Trigonometric	5○ sinh() sinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
 6∘○N	Hyperbolic cosine N	Tacit	Monadic Function		Circular/Trigonometric	6○ cosh() cosinushyperbolicus		https://help.dyalog.com/latest/#Language/Primitive%20Functions/Circular.htm
@@ -1366,7 +1366,7 @@ X(Bv{(⍺⍺⌿⍺)@(⍸⍺⍺)⊢⍵})Y	Mask Operator: Merge X and Y using Bv (
 Mv((1∘⌽⍤⊣×¯1⌽⊢)-¯1∘⌽⍤⊣×1⌽⊢)Nv	Vector (cross) product of vectors	Tacit	Dyadic Function		Mathematical	lists		
 Is(∧/+=¯1+∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js betrothed numbers?	Tacit	Dyadic Function		Mathematical	testif betrothed? quasiamicable? quasi-amicable?		
 ((⎕FUNTIE⊢⊢⎕FREAD⍤,¯1+2↓∘⍳/2↑⎕FSIZE)⎕FSTIE∘0)Dv	Read all components from component file Dv	Tacit	Monadic Function	Component Files	System	dcf get retrieve load copy fetch	https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gQqAwkpGD4/z8A	
-''''∘(⊣,⊣,⍨⊢⊢⍤/⍨1+=)Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎ string		
+''''∘(⊣,⊣,⍨⊢⊢⍤/⍨1+=)Dv	Doubling quotes for execution	Tacit	Monadic Function		Text	serialise ⍎⍣¯1 inverse⍎ string double escape		
 0 1∘{(⍵,⍺)⍪⍺,∘.(⍎⍵)⍨⍺}Ds	Truth table: All possibilities of Boolean primitive Ds	Tacit	Monadic Function		Boolean/Logical	binary base-2 base2		
 Is(⊢∘≢÷⍨1⊥⊣*⍨⊢-⊢∘≢÷⍨1⊥⊢)Nv	Is'th moment of Nv	Tacit	Dyadic Function		Mathematical			
 Mv(⊢×+.×)∘(⊢÷2*∘÷⍨+.×⍨)Nv	Component of Mv in direction of Nv	Tacit	Dyadic Function		Mathematical	euclidean vectors parts		
