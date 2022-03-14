@@ -722,7 +722,6 @@ X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnoti
 X(∊⍤1)Y	Which elements of X belong to corresponding row of Y (≢X ↔ ≢Y)	Tacit	Dyadic Function		Sets	testif memberof isin membership containedin has cells items		
 X(1=⍸)Y	Is Y within the range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif ≤Y< ≤X< tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtH/Xu0FQw4MIiaIhN0AiboDE2QZP//wE	
 X(1≠⍸)Y	Is Y outside the range [ 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif >Y≥ >X≥ tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS541LtDU8GAC6uwIXZhI@zCxtiFTf7/BwA	
-(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue count tally 1s ones truths		
 (⊃⍸)B	Index of first satisfied condition in B	Tacit	Monadic Function		Index Generation	1st		
 X(⍸∊)Y	Indices of all occurrences of elements of X in Y	Tacit	Dyadic Function		Index Generation	locate find membersof positionsof locating cells items location		
 (⊃⍋)Y	Index of Smallest	Tacit	Monadic Function		Comparison	find locate positionof least minimum lexicographically lexically locating location		
@@ -735,7 +734,6 @@ X(⍒⍳)Y	Grade down of Y according to key X	Tacit	Dyadic Function		Index Gener
 (⍉↑)Yv	Convert inverted table to table (character data as vectors of vectors)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkdtEzUVNNQdk9QV1J1TUtPUgTxDBSMgaa5grPn/PwA	
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes		
 X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith		
-X(≡∨1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	testif contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable		
 X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-arrays sub-strings substrings subvectors sub-vectors sub-matrices submatrices sub-sequence subsequence segmented sub-lists partitioned sublists starting points		
 (0J1⊥⊖)Nm	Parallel projection of 3D object in Nm	Tacit	Monadic Function		Mathematical			
 (0⊥⍴)Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape		
@@ -801,6 +799,7 @@ Xs@(Ys∘=)Y	Replacing all values Ys in Y with Xs	Tacit	Monadic Function	Dyadic 
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus		
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus		
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items		
+(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue count tally 1s ones truths		
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths		
 Xs(,,⍤0)Yv	Inserting Xs before each element of Yv	Tacit	Dyadic Function		Structural	cell item interleave alternate		
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip() zip zipwith() zip-with zipwith		
@@ -923,6 +922,7 @@ M(⌊∘-⍣2)N	Force numbers N to range (-M)≤N≤M	Tacit	Dyadic Function		Mat
 (≠⍀∨⊢)B	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths		
 (~∧≠⍀)B	Places between pairs of ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths		
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flattening flattened reducing table		
+X(≡∨1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	testif contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable		
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable 1st		
 (⌊0.5+⊢)N	Rounding to nearest integer (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring closestinteger nearestinteger nint()		
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus dimensions axes		
@@ -1302,7 +1302,6 @@ Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mat
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	expand openup major cells items lists		
 Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x		
-({+/,⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 {⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}B	Signal an error if any condition is not met (optional left argument: message on failure)	Tacit	Ambivalent Monadic Function, Dyadic Function		System	throw unittest unit-test roger's hui's	https://tio.run/##SyzI0U2pTMzJT///P7G4OLWoROFR2wSF6ke9u4C0OkQoMz9PIS0xM6e0KFVd4VF3i4LBo46uR71brYCqFB71TQ32dPdz9FGwAMsVZ1QCdRrUws0ztTNUMFE4tN6ICypgDBMAAA	
 Iv(↓↑⍨⍴⍤⊢××⍤⊣+0=⊣)Y	Shift each dimension of Y by corresponding amount in Iv	Tacit	Dyadic Function		Structural	rotating shift-out shift-in shiftout shifting non-cyclically noncyclically ⌽ ⊖ padding-rotation rotate with		
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list		
@@ -1318,6 +1317,7 @@ X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix IM (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points beginnings table change converting conversion		
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Monadic Function		Mathematical	informationtheory text message string		
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items		
+({+/,⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical			
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords		
@@ -1872,6 +1872,7 @@ Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍋⍵]]}Y	Minimum (⌊/) in each subvector 
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maximum (⌈/) in each subvector of Y indicated by Av (fast ⌈/¨Av⊂Yv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells greatest biggest largest maxima reduce reductions		
 {(']'≢⊃⌽⍕⍵)⊣∘⍵.⎕DF⍵.⎕DF⎕NULL}Ys	Is object Ys named?	Dfn	Monadic Function		System	has name? ns namespace class interface	https://tio.run/##SyzI0U2pTMzJT///Xz0vMTc1Rf1R31S/4Ee9a7gS8/LzKnPzS4sVHrVNUIALAxkgfrWGeqz6o85Fj7qaH/XsfdQ79VHvVs1HXYsfdcwAsvSAqlzcEAyg5lAfn1oFsBWUGQF31v//AA	
 {' ⎕'[1+↑⊢∘(≠\)\↓1⍴⍨2⍴2*⍵]}Js	Sierpiński triangle of size Js	Dfn	Monadic Function		Mathematical	Sierpinski		
+{1+o-(m⌿o←⍋⍋⍵)[⍵⍳⍨⍵⌿⍨m←≠⍵]}Y	Occurrence Count: Enumerate each unique major cells separately	Dfn	Monadic Function		Index Generation			
 Is{⍺←1 ⋄ ⍺÷⍨3⊃⎕AI-(⍎¨⍺⍴⊂⍵)⊢3⊃⎕AI}Dv	Milliseconds to execute Dv (or average of Is executions)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	time speed performance		
 {n÷⍨⍵+.×⍨*○0J2×n÷⍨∘.×⍨¯1+⍳n←≢⍵}Nv	Inverse Discrete Fourier Transformation	Dfn	Monadic Function		Mathematical	iDFT() analysis Cooley-Tukey	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSq8w5vf9S74lHvVm29w9OBLK1H07sNvIwOT4dKdMyAiB9ab6j9qHdzHlDTo85FQPW1CkYKh9YbeQGxggGYNPEy@f8fAA	
 {s⍴1@(1+s[1]⊥⍵-1)⊢0⍴⍨×/s←0 0+⌈/,⍵}Jm	Changing connectivity list Jm to a connectivity matrix	Dfn	Monadic Function		Mathematical	graph connection table vector change converting conversion		
@@ -2004,7 +2005,6 @@ X(Xs{⍺⍺ ⍵})Y	Apply arrayified function Xs on Y (optionally with left argum
 f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending right reverse		
 f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	plotting		
 f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criteria f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items		
-X f{+/,⍺ ⍺⍺ ⍵}Y	The number of elements where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Boolean/Logical	count tally cells items binary base-2 base2		
 X f{⊃⍸⍺ ⍺⍺ ⍵}Y	Index of first element where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2		
 Is f{⍺⍺⍣⍺⊢⍵}Y	Explicit function power: apply f on Is repeated Is times	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber		
 rslt←cond (⍺⍺ dfns.else ⍵⍵) argt	Condition f else g …	Dop		Dyadic Operator	Function Application	conditionaloperator		https://dfns.dyalog.com/n_else.htm
@@ -2014,6 +2014,7 @@ rslt←{larg} (⍺⍺ dfns.memo cache) rarg	Function memoisation (apply ⍺⍺ f
 {rslt}←{larg} (fun dfns.time) rarg	Function application time	Dop		Monadic Operator	System	performance monitor timing		https://dfns.dyalog.com/n_time.htm
 rslt←{guess←1+⎕CT} (fn dfns.invr) argt	Inverse of real-valued function	Dop		Monadic Operator	Mathematical	functioninverse Newton-Raphson absolutezero NewtonRaphson inversion		https://dfns.dyalog.com/n_invr.htm
 rslt←{⍺←⊢} (new dfns.at sel) old	Prefix-friendly @	Dop		Dyadic Operator	Function Application	atoperator prefixagreement whereclause SigmaAPL semicolonseparator		https://dfns.dyalog.com/n_at.htm
+X f{+/,⍺ ⍺⍺ ⍵}Y	The number of elements where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Boolean/Logical	count tally cells items binary base-2 base2		
 X f{⊃⌽⍸⍺ ⍺⍺ ⍵}Y	Index of last element where Xv f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2		
 X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2		
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic		https://dfns.dyalog.com/n_repl.htm
