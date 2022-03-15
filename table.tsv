@@ -1656,7 +1656,7 @@ Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn
 Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ	
 {⍵/⍨1,2≢⌿⍵}Yv	Remove consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas		
-{⍵⌿⍨2|⍳≢⍵}Y	Remove every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity removing erasing erase eliminate eliminating delete deleting		
+{⍵⌿⍨1 0⍴⍨≢⍵}Y	Remove every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity removing erasing erase eliminate eliminating delete deleting		
 Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 X{+⌿∧⍀⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	matching onleft cells items start beginning		
 X{+⌿∧⍀⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	different onleft cells items start beginning		
@@ -1719,7 +1719,7 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 {⍵/⍨' '∨.≠⍵}Dm	Remove blank columns	Dfn	Monadic Function		Text	remove delete allspaces drop space without removing erasing erase eliminate eliminating deleting string		
 {⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	remove delete allspaces emptylines drop space without removing erasing erase eliminate eliminating deleting string		
 {(⎕NEW⊂'Clipboard').Text←⍵}D	Copy to Windows clipboard	Dfn	Monadic Function		System	cut put into		
-{⍵⌷⍨⊂⍋⍒2|⍳≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		
+{⍵⌷⍨⊂⍋⍒1 0⍴⍨≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse		
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending		
 (∪(⌿⍨)1≠⊢∘≢⌸)Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique items elements	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWs0njUs/9R7wpNw0edCx51LXrUMeNR56JHPTs0FdQTk4oSkxNTQJSi@v//AA	
