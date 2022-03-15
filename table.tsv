@@ -786,7 +786,7 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 (⌊/|)N	Smallest row-wise magnitude found in N	Tacit	Monadic Function		Mathematical	rowwise horizontally least minimum absolute value		
 (0=/⊢)Yv	Ones, same shape plus one	Tacit	Monadic Function		Boolean/Logical	1s trues truths		
 (0≠/⊢)Yv	Zeros, same shape plus one	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		
-Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit		
+Xv(+/≠)Yv	Hamming distance	Tacit	Dyadic Function		Mathematical	edit stringcomparison fuzzy		
 (×/⍴)Y	Count the number of elements in an array	Tacit	Monadic Function		Array Properties	tallyall ⍴, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿⍴ ≢, ⍴, cells items		
 (=/⍴)Ym	Is Ym a square matrix?	Tacit	Monadic Function		Array Properties	square? table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A	
 (+⌿|)N	Sum of magnitude of N	Tacit	Monadic Function		Mathematical	absolutesummation sumabs		
@@ -1451,7 +1451,7 @@ cmats←dfns.queens N	The N-Queens Problem	Dfn	Function		Mathematical	diversions
 cnos←file dfns.filefind string	Find 'string' ⍵ in component file ⍺	Dfn	Function		Component Files	componentfile text		https://dfns.dyalog.com/n_filefind.htm
 code←dfns.morse text	Conversion to/from Morse code	Dfn	Function		Data Conversion	Morsecode converting change changing string		https://dfns.dyalog.com/n_morse.htm
 coded←dfns.base64 plain	Base64 encoding and decoding as used in MIME	Dfn	Function		Representation	Base64encoding		https://dfns.dyalog.com/n_base64.htm
-d←L dfns.dist R	Levenshtein distance	Dfn	Function		Mathematical	stringcomparison fuzzy		https://dfns.dyalog.com/n_dist.htm
+d←L dfns.dist R	Levenshtein distance	Dfn	Function		Mathematical	edit stringcomparison fuzzy		https://dfns.dyalog.com/n_dist.htm
 dvec←dfns.stdists tree	Spanning-tree path lengths	Dfn	Function		Structural	graph spanningtree		https://dfns.dyalog.com/n_stdists.htm
 digs←alph dfns.adic numb	Bijective base-⍺ numeration	Dfn	Function		Mathematical	k-adicnumbers shortlex bijectivenumeration unary kadicnumbers spreadsheet Excel columns labels titles		https://dfns.dyalog.com/n_adic.htm
 digits←digits dfns.xpower number	Fast multi-digit power using FFT	Dfn	Function		Mathematical	FastFourierTransform		https://dfns.dyalog.com/n_xpower.htm
