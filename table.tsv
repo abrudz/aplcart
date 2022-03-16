@@ -716,6 +716,7 @@ Im(⌷⍤¯1 99)Y	Select: each major cell of Im selects a cell from Y	Tacit	Dyad
 (⍳∘1)N	Index of first 1 in N	Tacit	Monadic Function		Index Generation	indexof one locate find positionof location 1st		
 X(⍳⍤1)Y	Indices of elements of X in corresponding rows of X (X[i;]⍳Y[i;])	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof rowwise row-wise locating cells items location horizontally		
 Ms(⍳,)Ns	Catalogue of all pairs from ⍳Ms and ⍳Ns	Tacit	Dyadic Function		Index Generation	pairings tuples table matrix		
+(0∊≠)Y	Are any major cells identical?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? anyidentical? anydups? items elements		
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?		
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave elementof ∉ cells elements binary base-2 base2		
 (∊∘⍬)Y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods		
@@ -990,7 +991,6 @@ Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴
 X(6=⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif <Y< <X< tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMxsH/Vu1jY@PP1R7w5NBQMu3HKGeOSM8MgZ45Ez@f8fAA	
 (⍸1=⊢∨⍳)Js	Totatives of Js	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)		
 X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif ≥Y≥ ≥X≥ tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMwedS541LtZ2/jw9Ee9OzQVDLjwyRrilTXCK2uMV9bk/38A	
-(≢>≢∘∪)Y	Are any major cells identical?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? anyidentical? anydups? items elements	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUusgPiRx0zHnWs0lRQT0xKTlHnwiObqP7/PwA	
 (∪⊢∨¯1↓⍳)Js	Proper divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization		
 (⍳⍨∪⍳⊢)Y	Index of first instance of each major cell	Tacit	Monadic Function		Sets	items elements indicesof location 1st		
 Is(⊃∘⍋⌷⊢)Y	Is-smallest (default: the smallest) major cell of Y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA	
@@ -1653,10 +1653,10 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
 {0::0 ⋄ 1⊣8⌶⍨⍵}Yv	Validate inverted table (character data as matrices)	Dfn	Monadic Function		Array Properties	validating validation of matrix checking for correctness	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wSFagMrKwOFR90tCoaPuhZbPOrZ9qh3xaPerbUKGkYKJo96t6g7JikoOKekpqlrKmgYKhgBSXMFY00usvSrO6rDTfj/HwA	
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
+{⍵⌿⍨1 0⍴⍨≢⍵}Y	Remove every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity removing erasing erase eliminate eliminating delete deleting		
 Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv	Dfn	Dyadic Function		Mathematical	connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ	
 {⍵/⍨1,2≢⌿⍵}Yv	Remove consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas		
-{⍵⌿⍨1 0⍴⍨≢⍵}Y	Remove every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity removing erasing erase eliminate eliminating delete deleting		
 Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 X{+⌿∧⍀⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	matching onleft cells items start beginning		
 X{+⌿∧⍀⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	different onleft cells items start beginning		
@@ -1842,6 +1842,7 @@ Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv 
 Av{(⍺/⍵)∧z/1⌽z←⍺/⍨⍺≥⍵}Bv	All-true (∧/) in each subvector of Bv indicated by Av (fast ∧/¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists reduce reductions		
 Av{(⍺⌿⍵)∧a⌿1⊖a←⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on each subvector of Bv partioned by Av (fast ∧⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector major cells items ∧/¨Av⊂[1]Bv		
 Av{(⍺⌿⍵)≥a⌿1⊖a←⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on each subvector of Bv partitioned by Av (fast ∨⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector cell item ∨/¨Av⊂[1]Bv		
+Ms{(+⌿(⍵*⍺)÷≢⍵)*÷⍺}N	Generalised mean	Dfn	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic		
 {⍵/⍨(⊢∨≠\)⍵=''''}Dv	Extract text (including quotes) in expression	Dfn	Monadic Function		Text	strings string		
 {⍵⌽⍨-⌊2÷⍨+/∧\' '=⌽⍵}Dm	Centering flush left character array	Dfn	Monadic Function		Text	centre align string		
 Av{+⍀⍵-⍺⍀¯2-⌿0⍪⍺⌿+⍀¯1↓0⍪⍵}N	Cumulative sum (+⍀) in each subvector of N indicated by Av (fast ∊+\¨Av⊂Nv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells sums scan		
