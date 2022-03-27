@@ -887,7 +887,7 @@ M×⍥(1∘-)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy proba
 (3÷⍨×/)Nv	Volume of pyramid with height, width, length Nv	Tacit	Monadic Function		Mathematical	lengths sides		
 (⊢-⌊⌿)N	Normalise N so that minimum item is 0	Tacit	Monadic Function		Mathematical	normalize zero smallest least cell element		
 (⊢÷+⌿)N	Normalise N so that sum is 1	Tacit	Monadic Function		Mathematical	normalize one	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOrxd@1HPfk0FYwVDBRMFw///AQ	
-Is(+⌿÷⊣)N	N-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage		
+Is(+⌿÷⊣)N	Is-wise rolling average	Tacit	Dyadic Function		Mathematical	rollingmean windowedmean windowedaverage n-wise		
 (⊢=⌈⌿)N	Locate all instances of maximum of N	Tacit	Monadic Function		Boolean/Logical	indicate where equal to maxima maximums location masking indicating		
 (+⌿÷≢)N	Arithmetic mean of N	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() mean()		
 (1↑⍨⍤0-)I	Convert permutation vectors in I to permutation matrices	Tacit	Monadic Function		Mathematical	word representation matrixes index representation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB@1TXzUu@JR7xIDXU0FQwUTBSMFUwXj//8B	
