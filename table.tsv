@@ -800,7 +800,6 @@ Xs@(Ys∘=)Y	Replacing all values Ys in Y with Xs	Tacit	Monadic Function	Dyadic 
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus		
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus		
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items		
-(+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	+/, +⌿, sum all howmanytrue count tally 1s ones truths		
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths		
 Xs(,,⍤0)Yv	Inserting Xs before each element of Yv	Tacit	Dyadic Function		Structural	cell item interleave alternate		
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip() zip zipwith() zip-with zipwith		
