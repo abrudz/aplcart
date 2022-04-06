@@ -1334,7 +1334,7 @@ Ms(0J1⊥(1↓⊢∘⊖)×⊢÷⊣-¯1↑⊢)Nm	Perspective projection of Nm fro
 {⎕A[26|13+⎕A⍳⍵]}@(∊∘⎕A)D	Rot-13	Tacit	Monadic Function		Text	obfuscation obfuscate rot13 string		
 (⊢⊢⍤/⍨1(⊢∨⌽)' '∘≠)Dv	Cyclic compression of successive blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous spaces multiple remove drop without removing erasing erase eliminate eliminating deleting string		
 (≠\(⍳+/)∊(+\1∘,))Jv	Vector (Jv[1]⍴1),(Jv[2]⍴0),(Jv[3]⍴1),…	Tacit	Monadic Function		Boolean/Logical	sequence list alternating bits 1s 0s ones zeros zeroes falses falsehoods trues truths		
-({⍵⌷⍨⊂⍒⊢/⍵},∘≢⌸)Y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix		
+({⍵⌷⍨⊂⍒⊢/⍵}{⍺,≢⍵}⌸)Y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix		
 Av(∧∨⊢{⍵\2</0,⍵/⍺}∨)Bv	First one (<\) in each subvector of Bv indicated by Av (fast ∊<\¨Av⊂Bv)	Tacit	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists 1st scan		
 Av(≠\∨{⍺\2≠/0,⍺/⍵}⊢)Bv	State of switch given Bv on and Av off spikes	Tacit	Dyadic Function		Boolean/Logical	signal on/off		
 ({⍉(⊂∘⍋⌷⊢)⍤1⍉⍵}⍤2)Y	Sort each column in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
