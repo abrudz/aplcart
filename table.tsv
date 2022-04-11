@@ -2530,9 +2530,8 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop		
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv cmdline cli		
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st		
-1⌈⎕NC'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
-0=⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? called applied		
-2=⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic? called applied		
+0∊⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? called applied		
+2∊⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic? called applied		
 {Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Create%20Data%20Binding%20Source.htm
 {Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Compiler%20Control.htm
 {X}(2041⌶)Js	Override COM Default Value (Windows only)	I-beam	Function		System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Override%20COM%20Default%20Value.htm
@@ -2616,6 +2615,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'UpDown'	Spin buttons (Windows only)	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
+⊃1⌈⎕NC'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
 )SAVE {-force} {ws}	Save active workspace, optionally with new name ws (overwrite any existing if -force)	Non-syntax			System Command	archive store ⎕save		https://help.dyalog.com/latest/#Language/System%20Commands/save.htm
 op←{⍺⍺ ⍵}	Prototypical monadic dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍵⍵ ⍵}	Prototypical dyadic dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
