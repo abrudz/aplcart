@@ -2337,6 +2337,7 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical			
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical			
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation		
+⊃83⎕DR 256	Is the current machine big-endian?	Expression			System	computer architechture big-endian little-endian be endian-ness endianness endianess	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTVbGAPZLkEKRqZm//8DAA	
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base		https://help.dyalog.com/latest/#Language/System%20Functions/base.htm
 2350⌶⎕NULL	List auto-completed user commands (unofficial)	I-beam	Constant		System	ibeam ucmd ] autocomplete autocompletion session input report show		
 8666⌶⎕NULL	Assimilate shared code files	I-beam	Constant	Monadic Operator	System	copy referenced objects into workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
