@@ -2179,7 +2179,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 739⌶0	Temporary Directory	I-beam	Constant	Monadic Operator	System	tmp ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Temporary%20Directory.htm
 8415⌶Nm	Singular Value Decomposition	I-beam	Monadic Function	Monadic Operator	Mathematical	⌹ ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Singular%20Value%20Decomposition.htm
 8659⌶⍬	List shared code files	I-beam	Constant	Monadic Operator	System	report workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
-900⌶Y	Called Monadically? (tradfns/tradops only, Y can be any array)	I-beam	Monadic Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam monadic?		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
+900⌶Y	Called Monadically? (tradfns/tradops only, Y can be any array)	I-beam	Monadic Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam monadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
 950⌶⍬	Loaded Libraries	I-beam	Constant	Monadic Operator	System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Loaded%20Libraries.htm
 ⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPD/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
 ⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J U+0D 0x0Ah \u0A %0A newline linefeed string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGjw/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
@@ -2336,6 +2336,8 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 2 2 2 2⊤⍳16	Unit tesseract	Constant	Expression		Mathematical			
 2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical			
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical			
+2-900⌶⍬	Number of arguments used in call (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam monadic? monadically? or dyadic? dyadically? applied called		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
+~900⌶⍬	Called Dyadically? (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam dyadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation		
 ⊃83⎕DR 256	Is the current machine big-endian?	Expression			System	computer architechture big-endian little-endian be endian-ness endianness endianess	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTVbGAPZLkEKRqZm//8DAA	
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base		https://help.dyalog.com/latest/#Language/System%20Functions/base.htm
@@ -2528,8 +2530,9 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop		
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv cmdline cli		
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st		
-0=⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic?		
-2=⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic?		
+1⌈⎕NC'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
+0=⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? called applied		
+2=⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic? called applied		
 {Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Create%20Data%20Binding%20Source.htm
 {Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Compiler%20Control.htm
 {X}(2041⌶)Js	Override COM Default Value (Windows only)	I-beam	Function		System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Override%20COM%20Default%20Value.htm
