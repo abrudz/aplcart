@@ -1147,6 +1147,7 @@ Iv{1+⍺∘⊥¨⍵-1}Jv	Ravel order indices of elements at indices Jv in an arr
 Cv(⊣,(⎕UCS 10),⊢)Dv	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue linefeed newline 0x0A U+0A U+000A string		
 (⊢2⎕NQ#'GetBuildID',⊂)Dv	Checksum of file Dv	Tacit	Monadic Function		hashing			
 (⊢2⎕NQ#'GetEnvironment',⊂)D	Get the value of one or more environment variable/command line parameters	Tacit	Monadic Function		System	query envvars cmdline shell call startup values settings registry entries cli		
+Xm↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with Xm	Tacit	Dyadic Function		Structural	adjust width table		
 M(¯1+⊣*∘÷⍨1+⊢)N	Annual rate to modal rate	Tacit	Dyadic Function		Mathematical			
 Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is positive, padding on right/bottom) or backward/right/down (if Is is negative, padding on left/top)	Tacit	Dyadic Function		Boolean/Logical	leftshift rightshift bits bytes bitshift		
 (+/∘|⊢-1∘⌽)Nv	Circumference of polygon given as complex points	Tacit	Monadic Function		Mathematical	linelength coordinates vertices		
@@ -1192,7 +1193,6 @@ M((××∘⌊|)÷)N	Truncated division	Tacit	Dyadic Function		Mathematical	integ
 ((~,∩)∘' ')Dv	Moving all blanks to end of text	Tacit	Monadic Function		Text	spaces trailing ending string		
 X{⊃(⍋-⍒)⍺⍵}Y	General comparison according to Total Array Order (¯1:X precedes Y, 0:X≡Y, 1:X succeeds Y)	Tacit	Dyadic Function		Comparison	cmp() <=> >-< characters nested any array generalised generalized tao spaceship space-ship three-way compare comparing		
 (⍕' '@(0∘=))N	Formatting with zero values replaced with blanks	Tacit	Monadic Function		Text	hidden 0s empty cells items elements zeroes zeros spaces falses falsehoods string		
-Xm↑↑⍤1⍨∘⊃∘⌽∘⍴⍨Ym	Widening matrix Ym to be compatible with Xm	Tacit	Dyadic Function		Structural	adjust width table		
 (××∘⌊|+1≤2||)N	Rounding to nearest even number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (××∘⌊|+1>2||)N	Rounding to nearest odd number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
