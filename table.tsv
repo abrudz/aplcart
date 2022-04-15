@@ -734,7 +734,7 @@ X(⍒⍳)Y	Grade down of Y according to key X	Tacit	Dyadic Function		Index Gener
 (↓⍉)Ym	Matrix to vector of column vectors	Tacit	Monadic Function		Structural	split table lists into columns	https://tio.run/##ASkA1v9hcGwtZHlhbG9n///ijpXihpAgKOKGk@KNiSkgMyA04o204o2zMTL//w	
 (⍉↑)Yv	Convert inverted table to table (character data as vectors of vectors)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkdtEzUVNNQdk9QV1J1TUtPUgTxDBSMgaa5grPn/PwA	
 (⍉⍤2)Y	Transpose every submatrix of Y	Tacit	Monadic Function		Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes		
-X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof startswith		
+X(⊃⍷)Y	If Y begins with X	Tacit	Dyadic Function		Boolean/Logical	prefixof? startswith? prefix?		
 X(⍸⍷)Y	Positions of starts of subarrays X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-arrays sub-strings substrings subvectors sub-vectors sub-matrices submatrices sub-sequence subsequence segmented sub-lists partitioned sublists starting points		
 (0J1⊥⊖)Nm	Parallel projection of 3D object in Nm	Tacit	Monadic Function		Mathematical			
 (0⊥⍴)Y	Number of columns in Y	Tacit	Monadic Function		Array Properties	trailingshape		
@@ -1348,6 +1348,7 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens string		
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	remove removing erasing erase eliminate eliminating delete deleting		
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?		
+⌽@((<\∨1⌽<\)0,2>/⊢)⍣≡	Bubble sort	Tacit	Monadic Function		Mathematical	sinking	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA	
 Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Xs(⎕FIX'file://',⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked string		
 ' '∘(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Dv	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	remove delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without removing erasing erase eliminate eliminating deleting string		
@@ -1627,6 +1628,8 @@ nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function	
 pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber		https://dfns.dyalog.com/n_phinary.htm
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems		https://dfns.dyalog.com/n_turtle.htm
 Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods		
+Xv(+/∧\⍤=)Yv	Count number of leading elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	prefix matching onleft items start beginning match		
+Xv(+/∧\⍤≠)Yv	Count number of leading elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	prefix different onleft items start beginning differ		
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children string		https://dfns.dyalog.com/n_maze.htm
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row |A| det(A) det(Nm) |Nm|		
 {2⊥~2⊥⍣¯1⊢⍵}J	Bit-wise NOT for positive integers	Dfn	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion		
@@ -1657,8 +1660,6 @@ Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of
 {⍵/⍨1,2≢⌿⍵}Yv	Remove consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas		
 Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
-X{+⌿∧⍀⍺=⍵}Y	Count number of leading elements that are equal	Dfn	Dyadic Function		Comparison	matching onleft cells items start beginning		
-X{+⌿∧⍀⍺≠⍵}Y	Count number of leading elements that are unequal	Dfn	Dyadic Function		Comparison	different onleft cells items start beginning		
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements string		https://dfns.dyalog.com/n_cols.htm
 Cv{0::⍎⍵ ⋄ ⍎⍺}Dv	Execute Alternate: Execute Dv but if it errors, execute Cv	Dfn	Ambivalent Monadic Function,Dyadic Function		System	⎕EA APL2		
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering idiom		
@@ -1669,6 +1670,8 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode		https://dfns.dyalog.com/n_putfile.htm
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing		https://dfns.dyalog.com/n_test.htm
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem		https://dfns.dyalog.com/n_wsdiff.htm
+Xv(+/∧\⍤⌽⍤=)Yv	Count number of trailing elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright items end match		
+Xv(+/∧\⍤⌽⍤≠)Yv	Count number of trailing elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix different onright items end differ		
 {1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
@@ -1681,8 +1684,8 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
 Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
 ((⌽∨⊖)1∊¨⍳)Jv	All-zero matrix of shape Jv with ones along edges	Dfn	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w	
-X{+⌿∧⍀⌽⍺=⍵}Y	Count number of trailing elements that are equal	Dfn	Dyadic Function		Comparison	matching onright cells items ending		
-X{+⌿∧⍀⌽⍺≠⍵}Y	Count number of trailing elements that are unequal	Dfn	Dyadic Function		Comparison	different onright cells items ending		
+X(+/(∧\≡⍤¯1))Y	Count number of leading major cells that match between two arrays of equal length	Dfn	Dyadic Function		Comparison	prefix matching onleft cells items start beginning equal		
+X(+/(∧\≢⍤¯1))Y	Count number of leading major cells that differ between two arrays of equal length	Dfn	Dyadic Function		Comparison	prefix different onleft cells items start beginning unequal		
 Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension		
 Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension		
 Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nonincreasing? sorted? dimension		
@@ -1719,6 +1722,8 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 {⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	remove delete allspaces emptylines drop space without removing erasing erase eliminate eliminating deleting string		
 {(⎕NEW⊂'Clipboard').Text←⍵}D	Copy to Windows clipboard	Dfn	Monadic Function		System	cut put into		
 {⍵⌷⍨⊂⍋⍒1 0⍴⍨≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		
+X(+/(∧\∘⌽≡⍤¯1))Y	Count number of trailing major cells that match between two arrays of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright cells items end equal		
+X(+/(∧\∘⌽≢⍤¯1))Y	Count number of trailing major cells that differ between two arrays of equal length	Dfn	Dyadic Function		Comparison	suffix different onright cells items end unequal		
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse		
 {,[¯1↓⍳≢⍴⍵]1/⍵}Y	Matricise (like ⍪ but preserves trailing instead of leading shape)	Dfn	Monadic Function		Structural	matrix table matrify Matricize start beginning ending		
 (∪(⌿⍨)1≠⊢∘≢⌸)Y	Non-unique major cells	Dfn	Monadic Function		Sets	duplicated duplicates nonunique items elements	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWs0njUs/9R7wpNw0edCx51LXrUMeNR56JHPTs0FdQTk4oSkxNTQJSi@v//AA	
@@ -3415,4 +3420,3 @@ Is{3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥⍺,⍵-1}Js	Number of days in m
 '-'@(4+5×⍳4)⊢(⎕D,⎕C⎕A)[4(9+|)@20⊢5@15?36⍴16]	Generate random UUID	Expression			Text	GUID version-4 variant-1 4.1 universally globally unique identifier generation generating randomised randomized string		
 ⎕SIGNAL⊂⎕DMX.(('EN'EN)('EM'EM)('Message'(OSError{⍵,2⌽(×≢⊃⍬⍴2⌽⍺,⊂'')/'") ("',⊃⍬⍴2⌽⍺}Message)))	Re-signal last caught error to caller (works with any ⎕IO and ⎕ML)	Constant	Expression		Error Message	emulate re-throwing rethrowing re-raising reraising resignalling trapped	https://tio.run/##SyzI0U2pTMzJT///qG9qSJBjgP6j3hWP2iYYKCg86p2rkJyTmlikEOLpr16skFpUlF@kUFKUWFCQmZf@////Rx3tCm75@QppmTmpXAoKViFAKQUDIAsEgMb5ubuGwCVdc4pTEVLBnu5@jj6PupqAbBffCD0NDXVXPyDSBNK@QASkfVOLixPTU9U1/INdQTZXP@rdqmP0qGevxuHpjzoXPepqftS75lHvFpDQo95dOkDD1NU19dWVNBU0lNR10OVroeZpamqCnZOXAnIuF9APXEA/qOfll@hmpBal6pVUlKgDAA	
 ⎕DMX.(OSError{⍵,2⌽(×≢⊃⍬⍴2⌽⍺,⊂'')/'") ("',⊃⍬⍴2⌽⊆⍺}Message{⍵,⍺,⍨': '/⍨×≢⍺}⊃⍬⍴DM,⊂'')	Construct first line of printed error message (works with any ⎕IO and ⎕ML)	Constant	Expression		Error Message	extract fetch get 1st	https://tio.run/##SyzI0U2pTMzJT////1FHu0Jucfqjtglu@fkKaZk5qVwKClYhRYkFCgZAFgg86pvq5@4aApd0zSlOhUpBdAIVuPhG6Gn4B7sWFeUXVT/q3apj9Khnr8bh6Y86Fz3qan7Uu@ZR7xaQ0KPeXTqPuprU1TX11ZU0FTSU1HWMwQp21fqmFhcnpqeCdYOV9a5Qt1JQ1wfSEHOAauBmufhCjQE7KC8F5GAuoF@4gG6B@kU9L79ENyO1KFWvpKJE/f9/AA	
-⌽@((<\∨1⌽<\)0,2>/⊢)⍣≡	Bubble sort	Tacit	Monadic Function		Mathematical	sinking	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA	
