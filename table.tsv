@@ -1559,7 +1559,7 @@ cvec←{tabstops←8} dfns.xtabs cvec	Expand/compress HT chars	Dfn	Function		Tex
 cvecs←{nv←0} dfns.tokens cvec	Lex of APL src line	Dfn	Function		Text	parsing lexicalscan parse dyalog string		https://dfns.dyalog.com/n_tokens.htm
 cmat←{h v t←⍬ ⍬ 0} dfns.box text	Box the simple text array ⍵	Dfn	Function		Text	border box-drawingcharacters displayofarrays boxing boxdrawingcharacters boxed enclosed string		https://dfns.dyalog.com/n_box.htm
 cmat←{topbar←1} dfns.dsp array	Reduced version of disp	Dfn	Function		Text	boxing displayofarrays tape string		https://dfns.dyalog.com/n_dsp.htm
-cmp←{cmp←12} dfns.packZ exp	Abraham Lempel, Jacob Ziv, Terry Welch	Dfn	Function		Storage	packing compression suffixtrie Lempel-Ziv-Welch LempelZivWelch		https://dfns.dyalog.com/n_packZ.htm
+cmp←{cmp←12} dfns.packZ exp	LZW compression	Dfn	Function		Storage	packing compression suffixtrie Lempel-Ziv-Welch LempelZivWelch Abraham Jacob Terry		https://dfns.dyalog.com/n_packZ.htm
 cmp←{cmp←1} dfns.packX txt	TeXt Packer	Dfn	Function		Storage	packing compression string		https://dfns.dyalog.com/n_packX.htm
 cmp←{cmp←1} dfns.packN exp	Null packing	Dfn	Function		Storage	compression stuff		https://dfns.dyalog.com/n_packN.htm
 cmp←{cmp←1} dfns.packB exp	Pack a simple array	Dfn	Function		Storage	packing compression		https://dfns.dyalog.com/n_packB.htm
