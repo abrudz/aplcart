@@ -1388,7 +1388,7 @@ X({(d/⍺)@{d}⊃⌽(d f)←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a numb
 {⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph plotting		
 1∘(⌷{(⎕NS⍬)(⊣⊣⍎)⍕⍺'←⍵'}⍤1↓)Ym	Convert table (matrix with names in header row) into vector of record namespaces	Tacit	Monadic Function		Data Conversion	headings labels objects list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlFewv5@C4aOOGRqPerZXawBF/IIf9a7R1HjUtRiEevs0H/VOfdS7Sx2o4VHvVvXaR71LDB@1TdZUMFYwftS7Rd0vMTdVXUHdMR1ERmUWJOengFhO@UlA0sgQSBgbGBoYAengxJycShAfxDExNjAwVP//HwA	
 (-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones		
-(2*∘÷⍨(+.*∘2-≢÷⍨2*⍨+⌿)÷¯1+≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical corrected unbiased		
+((2*∘÷⍨+⌿÷¯1+≢)2*⍨⊢-+⌿÷≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical corrected unbiased		
 I((31-2|7|¯1+⊣)-2∘=⍤⊣×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length		
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion		
 Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
