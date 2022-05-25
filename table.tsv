@@ -233,6 +233,28 @@ name[I]f∘⊢←Y	Modified Indexed Assignment (tradfns/tradops only)	Primitive	
 ⎕OFF J	Terminate the APL session with exit code Y	System	Constant	System	System Function	repl return level stop close )off quit	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pvq7uSkYGhlzlWRkFiuU5@eplyikFhXlFwEA	https://help.dyalog.com/latest/#Language/System%20Functions/off.htm
 ⎕SE	Session object	System	Namespace	System	System Function	environment gui persistent utilities	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XApgVjqQBRTlgsmkw2Ue9U0N9gSJ//8PVA4A	https://help.dyalog.com/latest/#Language/System%20Functions/se.htm
 1∘⎕C Y	Uppercase	System	Monadic Function		Text	casemap lettercase 1⎕C toupper upper-case conversion converting change changing string 1(819⌶)		https://help.dyalog.com/latest/#Language/System%20Functions/c.htm?Highlight=%E2%8E%95C
+10∘⎕ATX Dv	Function result: 0:none or not a function, 1:explicit, ¯1:shy	System	Monadic Function	System	System function			https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+11∘⎕ATX Dv	Function valence: 0:niladic, 1:monadic, 2:dyadic, ¯2:ambival	System	Monadic Function	System	System function	arity		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+12∘⎕ATX Dv	Operator valence: 0:not an operator, 1:monadic, 2:dyadic	System	Monadic Function	System	System function	arity		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+20∘⎕ATX Dv	Author of last edit	System	Monadic Function	System	System function	who blame edited wrote saved		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+21∘⎕ATX Dv	Number of days passed between 1899-12-31 at 00:00 UTC and last edit	System	Monadic Function	System	System function	utc zulu savetimestamp definitiontimestamp		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+22∘⎕ATX Dv	Local timestamp at last edit (⎕TS-style)	System	Monadic Function	System	System function	juliett savetimestamp definitiontimestamp		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+23∘⎕ATX Dv	Number of bytes required for storage without sharing	System	Monadic Function	System	System function	kb loc size ⎕size		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+30∘⎕ATX Dv	Can source be displayed?	System	Monadic Function	System	System function	⎕lock allowed permitted permissions restricted restrictions		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+31∘⎕ATX Dv	Can execution be suspended mid-execution?	System	Monadic Function	System	System function	⎕lock allowed permitted permissions restricted restrictions		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+32∘⎕ATX Dv	Responds to weak interrupt?	System	Monadic Function	System	System function	⎕lock allowed permitted permissions restricted restrictions		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+40∘⎕ATX Dv	Syntactic supra-class: ¯1:invalid name, 0:undefined, 1:label, 2:variable, 3:function, 4:operator, 8:event, 9:object	System	Monadic Function	System	System function	syntax rôle role		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+41∘⎕ATX Dv	Syntactic sub-class: 0:none, 1:traditional/plain, 2:field/dynamic/instance, 3:property/derived/primitive, 4:class, 5:interface, 6:external, 7:external interface	System	Monadic Function	System	System function	classification type		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+42∘⎕ATX Dv	Full syntactic class (sum of supra- and sub-class)	System	Monadic Function	System	System function	classification type		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+50∘⎕ATX Dv	Source file name	System	Monadic Function	System	System function	text scm		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+51∘⎕ATX Dv	Source file encoding	System	Monadic Function	System	System function	text scm		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+52∘⎕ATX Dv	Source file checksum	System	Monadic Function	System	System function	text scm		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+53∘⎕ATX Dv	Source file line separators: 13:Carriage Return, 10:Line Feed, 13 10:Carriage Return followed by Line Feed, 133:New Line, 11:Vertical Tab, 12:Form Feed, 8232:Line Separator, 8233:Paragraph Separator	System	Monadic Function	System	System function	text scm		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+54∘⎕ATX Dv	Definition's offset from top of source	System	Monadic Function	System	System function	location linenumbers		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+55∘⎕ATX Dv	Number of lines in definition	System	Monadic Function	System	System function	loc linenumbers lines		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+60∘⎕ATX Dv	Verbatim source (as typed)	System	Monadic Function	System	System function	text autoformat preserve whitespace formatting precise as-typed		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+61∘⎕ATX Dv	Normalised source (with AUTOFORMAT=1 and TAB_STOPS=4)	System	Monadic Function	System	System function	text standard normalized		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
+62∘⎕ATX Dv	Most precise available source (verbatim with fallback to normalised)	System	Monadic Function	System	System function	text autoformat preserve whitespace formatting best precise as-typed		https://help.dyalog.com/latest/#Language/System%20Functions/atx.htm
 ¯1∘⎕C Y	Lowercase	System	Monadic Function		Text	casemap lettercase ¯1⎕C tolower lower-case conversion converting change changing string 0(819⌶)		https://help.dyalog.com/latest/#Language/System%20Functions/c.htm?Highlight=%E2%8E%95C
 ⎕LX←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload	https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkcd7Qogplt@PpcCmAWUAolyBZfmAnnaj3r2cwWXJxYA2dWPercqPOrdBUQgqpaL61HfVKC4ApDyc1ZQNzFSV1DPyy/JyMxLB7KABgFJoMFAEmgYiASao/7/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/lx.htm
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include vector	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAqPeucq5KVWlCjkZOalKmQWQ2gjLgWwknSgEqByLpgWEB8i86hvqo@zAlh7SQZQG0ynIUjt//9AswE	https://help.dyalog.com/latest/#Language/System%20Functions/path.htm
@@ -311,7 +333,7 @@ old_df←⎕DF ⎕NULL	Reset the display form of the current space to the defaul
 ax_mx←⎕FRDAC tn {pn}	Read access matrix of file tied with number tn (pn is optional passnumber)	System	Function	Component Files	System Function	dcf table	https://tio.run/##SyzI0U2pTMzJT///X704MSe1WC8lOU1d4VHfVDfnIFfHEFcFQy4NYwXjR71bjCwUjAwNTBUMzYwtTBUMFIwMzI2hHGNDhUPrDRUMNMEag0McnYHagMxHbRNAAkEuIIH//wE	https://help.dyalog.com/latest/#Language/System%20Functions/frdac.htm
 valid nums←{seps} ⎕VFI text	Validate numeric input: returns Boolean validity mask and numeric vector of converted input	System	Function	Data Conversion	System Function	verifyandfixinput atoi parse numbers fields formdata list check correct indicate masking indicating binary base-2 base2 bitmask bit-mask converting change changing string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVJibp4K6kYKukcKh9UbqXFAJdR11uKSxnqWOkZ6Jjo65mY76//8A	https://help.dyalog.com/latest/#Language/System%20Functions/vfi.htm
 vec←⎕NREAD tn type n {offset}	Read n items of specified type from file tied with number tn	System	Function	Native Files	System Function	load fetch get cells elements	https://tio.run/##SyzI0U2pTMzJT///Xz0xKVld4VHfVL@A0BAF9bTMnFS9kooSda6SPIVHbROQRMCKQjxdFQy4gCygHIgf5OroogBUamGgcGi9ITYJY5CEgsH//wA	https://help.dyalog.com/latest/#Language/System%20Functions/nread.htm
-children←{class} ⎕WN parent	Child objects (of class) of parent	System	Function	Native Files	System	window gui names	https://tio.run/##SyzI0U2pTMzJT///X11Zr8RQXeFR39RwZwX1kMzc1CJ1LpCgEbogkPeobQJY0E9BXVn9/38A	https://help.dyalog.com/latest/#Language/System%20Functions/wn.htm
+children←{class} ⎕WN parent	Child objects (of class) of parent	System	Function	Native Files	System Function	window gui names	https://tio.run/##SyzI0U2pTMzJT///X11Zr8RQXeFR39RwZwX1kMzc1CJ1LpCgEbogkPeobQJY0E9BXVn9/38A	https://help.dyalog.com/latest/#Language/System%20Functions/wn.htm
 cn←x ⎕FAPPEND tn {pn}	Append x to end of file tied with number tn (pn is optional passnumber)	System	Function	Component Files	System Function	dcf trailing ending	https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLiAHKA0SCjYM8pVoSSPi8vQyFhBPTEpGaLSMSDA1c8FJAESRxXBpgrTxP//AQ	https://help.dyalog.com/latest/#Language/System%20Functions/fappend.htm
 cns←{fchk_opts} ⎕FCHK file	Inspect and optionally repair file	System	Function	Component Files	System Function	dcf check externalvariable correct validate	https://tio.run/##SyzI0U2pTMzJT////1HfVLdQvxBPVwX1tMycVL2U5DR1BZCgc5CrY4irggEXkPOobQJEzMMbSdn//wA	https://help.dyalog.com/latest/#Language/System%20Functions/fchk.htm
 instance←⎕NEW class {conargs}	Create an instance of class	System	Function	Data Conversion	System Function	.new converting change changing	https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIrNwyU3NSFApKk3IykxWKEvNS8nP9SnOTUovA0o862n0Ts1PBbKBix@TkVKBWiGqYoGduQU5qbmpeCdDM/LzikqLS5JL8Iqjso76pj9omqDsXpSaWpKYoJJao6wCFQoIR0kE@CkAVCo9610DFkB0BlrI3MYI5hsvKNS8F7P7//zMNIRr7pvq5hgO9A2S4@CgYcmUaYYiDBTSAGjKNNPWQzQcA	https://help.dyalog.com/latest/#Language/System%20Functions/new.htm
@@ -857,9 +879,15 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 (⍕≡⊢)Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif		
 (1↓0∘⍕)Js	Show all digits of integer Js (unknown digits as “_”)	Tacit	Monadic Function		Text	display print decimals full non-exponential format normal string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSM9UwMjUyNXA0NuKAiGoaP2iYbPOqY8ah3qiaS/P//AA	
 (1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise string		
+(0<40∘⎕ATX)Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists? loaded? set?		
+(0≤40∘⎕ATX)Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity identifiers names allowed? valid? name? legal? dyalog permitted?		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
+(0=40∘⎕ATX)Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't exist? not exists? missing?		
+(3=40∘⎕ATX)Dv	Is Dv a function?	Tacit	Monadic Function		System	fn? are functions?		
+(4=40∘⎕ATX)Dv	Is Dv an operator?	Tacit	Monadic Function		System	op? are operators?		
 (2|⎕DR⍤1)Y	Which rows of Y are all numeric?	Tacit	Monadic Function		Array Properties	allnumberrows		
 (7|1⎕DT⊆)J	Day of week (Sunday:0)	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar		
 (∊1⎕NPARTS⊢)Dv	Absolute path name	Tacit	Monadic Function		System	filesystem folder directory full normalised normalized simplified simplify		
+(2⎕FIX 62∘⎕ATX)Dv	Enable preservation of whitespace for item Dv	Tacit	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is source-as-typed		
 {≢⍵}⌸Y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements		
 +∘÷/∘⍳Js	Continued fraction: 1+÷2+÷3+÷4+÷5+÷6+÷…Js	Tacit	Monadic Function		Mathematical	series sequence		
 Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Function		Index Generation			
@@ -945,8 +973,11 @@ Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (7|1⎕DT,¨)J	Day of week (Sunday:0) of first of January J	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar 1st year		
 I-⍥(1⎕DT⊆)J	Number of days between ⎕TS-style timestamps I and J	Tacit	Dyadic Function		Data Conversion	datetime date-time difference subtraction timedelta time-delta ∆t Δt day-count daycount		
 (0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type chars? characters?		
+(1 2 9∊⍨40∘⎕ATX)Dv	Is Dv an array?	Tacit	Monadic Function		System	are arrays? values? variables? constants?		
+(9.1=42∘⎕ATX)Dv	Is Dv a namespace?	Tacit	Monadic Function		System	are namespaces?		
 (⎕A⍳1∘⎕C)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing		
 Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ↔ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups classify bins		
+{0<≢60⎕ATX⍵}Dv	Is Dv scripted?	Tacit	Monadic Function		System	does objects have has script? ⎕FIXed source? text? sourced? ns namespace class interface		
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without removing erasing erase eliminate eliminating delete deleting		
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	table lists		
 Xv∘.{⍺⍵}Yv	Catalogue of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix		
@@ -1020,9 +1051,6 @@ Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZ
 (10⊥¯1+⎕D∘⍳)Dv	Safe conversion of string into integer	Tacit	Monadic Function		Data Conversion	eval() evaluate atoi() execute secure number converting change changing text		
 (⊃∘⊃⎕NINFO⍠1)Dv	Get actual lettercase for filename Dv (on insensitive OSs)	Tacit	Monadic Function		System	report extract real true letter-case lettercasing letter-casing of file-name case-insensitive caseinsensitive Windows MacOS case-preserving casepreserving stored spelling		
 (¯1∘⎕C=1∘⎕C)D	Do characters in D have no case?	Tacit	Monadic Function		Text	no-case? case-less? caseless? neutral? string		
-{0<⎕NC⊆,⍵}Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists? loaded? set?		
-{0=⎕NC⊆,⍵}Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't exist? not exists? missing?		
-{¯1≠⎕NC⊆,⍵}Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity identifiers names allowed? valid? name? legal? dyalog permitted?		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
 (⍳∘' '⍤1)D	Indices of first blanks in rows of array D	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally string		
 ({⍞}¨⍳)Jv	Input of ×/Jv strings	Tacit	Monadic Function		Expression	multi characterinput rawinput stdin		
 X⌷⍨∘⊂∘⍋∘⍋Y	Reorder X according to the order of Y	Tacit	Dyadic Function		Mathematical	meshing sorting reordering ordering		
@@ -1083,6 +1111,11 @@ Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyad
 Mv(⊢⌹1,∘⍪⊣)Nv	Coefficients of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model y=a+bx y=ax+b		
 (⊃∘⎕NGET 1,⍨⊂)Dv	Read Unicode text file Dv content as nested vector	Tacit	Monadic Function		System	native files fetch load ascii ansi Windows-1252 UTF-8 UTF-16LE UTF-16BE UTF-32LE UTF-32LE vtv lines strings string	https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6R2pOTr66gnp4flFOirrmo76pfgGhIQrquZVpmTmpeiUVJepcQMFHbRMUgOqbH3XMAClxdw1RMNR51LsCaIQmiuL//wE	
 (∧/127≥⎕UCS∘∊)D	Is D entirely ASCII-only	Tacit	Monadic Function		Text	plain exclusively string		
+(42∘⎕ATX∊3.1 4.1⍨)Dv	Is Dv a tradfn/tradop?	Tacit	Monadic Function		System	are traditional tradfn? tradfns? tradops?		
+(42∘⎕ATX∊3.2 4.2⍨)Dv	Is Dv a dfn/dop?	Tacit	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?		
+(42∘⎕ATX∊3.3 4.3⍨)Dv	Is Dv tacit?	Tacit	Monadic Function		System	are derived derv? dervs? tacits? primitive? primitives? functions? train? trains?		
+(42∘⎕ATX∊9.4 9.6⍨)Dv	Is Dv a class?	Tacit	Monadic Function		System	are classes?		
+(42∘⎕ATX∊9.5 9.7⍨)Dv	Is Dv an interface?	Tacit	Monadic Function		System	are interfaces?		
 {⍵.##}⍣≡Y	Reference to root ancestor namespaces of objects Y	Tacit	Monadic Function		System	parents ancestors ancestry containers		
 (¯97(|-⊣)⊢)Is	SWIFT check digit from Is bank number	Tacit	Monadic Function		Mathematical	correct validate		
 (∧/' '∘=)D	Mask for blank rows	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks bitmask bit-mask		
@@ -1322,7 +1355,6 @@ X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical			
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords		
-(2⎕FIX{9∊⎕NC⍵:⎕SRC⍎⍵ ⋄ ⎕NR⍵})Dv	Enable preservation of whitespace for item Dv	Tacit	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is source-as-typed		
 M(⊢∘××⊣×∘⌈¯0.5+∘|÷⍨)N	Rounding N to nearest M (favouring towards 0)	Tacit	Dyadic Function		Mathematical	precision favoring		
 M(⊢∘××⊣×∘⌊0.5+∘|÷⍨)N	Rounding N to nearest M (favouring away from 0)	Tacit	Dyadic Function		Mathematical	precision favoring		
 (~0∊×∘|≤∘.<⍨∘⍳∘≢)Bm	Is Bm an upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove strict removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ06gwedXQdnv6oY0bNo84lQErP5lHvCiD9qHcziOxcpKkAVWusYPyod4uhAhrkotAoAyhpQIlRSIaASQNKjIIbAoH//wMA	
@@ -1378,6 +1410,7 @@ Mv(+⌿∘↑(,\0×⊣)(1↓,)¨×∘⊂)Nv	Product of polynomials with descendi
 (⊃((×⌿*∘÷≢),≢÷1⊥÷)⍣≡)Nv	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric		
 ({'⎕'/⍨¯1+≢⍵}⌸⊢,⍨∘⍳⌈/)Jv	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical			
 (2÷⍨1⊥⊢⌷⍨∘⊂⍋⌷⍨∘⊂∘⌈2÷⍨0 1+≢)Nv	Median of non-empty Nv	Tacit	Monadic Function		Mathematical	average		
+((2*∘÷⍨+⌿÷¯1+≢)2*⍨⊢-+⌿÷≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical corrected unbiased		
 (≢÷⍨≢÷⍨(≢×+.*∘2)-2*⍨+⌿)Nv	Theoretical variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 Var(X) dispersion		
 (2∘*↑(⌽2*⍳)⊖∘⍉⍴∘2⊤2/∘⍳2∘*)Js	Js-bit reflected Gray code	Tacit	Monadic Function		Boolean/Logical	reflected binary minimum error cyclic permutation binary progression base-2 base2		
 (⊢/=(⎕D,⎕A~'GIOQ')⊃⍨1+31|∘⍎9∘↑)Dv	Is Dv a valid Finnish social security number? (10=≢Dv)	Tacit	Monadic Function		Text	testif SSN string		
@@ -1388,7 +1421,6 @@ X({(d/⍺)@{d}⊃⌽(d f)←~@1⎕VFI⍵}⍤1)D	Conversion of each row to a numb
 {⍉' +○⍟'[1+2⊥⍵∘.=⌽⍳⌈/,⍵]}Jm	Scatter plot of two series (one per row of Jm)	Tacit	Monadic Function		Mathematical	chart curve graph plotting		
 1∘(⌷{(⎕NS⍬)(⊣⊣⍎)⍕⍺'←⍵'}⍤1↓)Ym	Convert table (matrix with names in header row) into vector of record namespaces	Tacit	Monadic Function		Data Conversion	headings labels objects list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlFewv5@C4aOOGRqPerZXawBF/IIf9a7R1HjUtRiEevs0H/VOfdS7Sx2o4VHvVvXaR71LDB@1TdZUMFYwftS7Rd0vMTdVXUHdMR1ERmUWJOengFhO@UlA0sgQSBgbGBoYAengxJycShAfxDExNjAwVP//HwA	
 (-⍨\2(⊢⍴⍨÷⍨∘≢,⊣)∘⍸2≠/0,,∘0)Bv	Start and length of groups of 1s in Bv	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones		
-((2*∘÷⍨+⌿÷¯1+≢)2*⍨⊢-+⌿÷≢)Nv	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical corrected unbiased		
 I((31-2|7|¯1+⊣)-2∘=⍤⊣×2-0≠.=400 100 4∘.|⊢)J	Number of days in months I of years J	Tacit	Dyadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length		
 (((≢×+.*∘2)-2*⍨+⌿)÷≢×1⌈¯1+≢)Nv	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(X) dispersion		
 Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate		
@@ -1515,7 +1547,6 @@ n←¯1 dfns.pco ⍵	number of primes less than ⍵	Dfn	Dyadic Function		Mathema
 p←4 dfns.pco ⍵	next prime larger than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
 p←dfns.pco ⍵	⍵-th prime	Dfn	Monadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
 p←¯4 dfns.pco ⍵	next prime smaller than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
-(9∊⎕NC)Dv	Is Dv an object?	Dfn	Monadic Function		System	are objects?		
 graph←graph dfns.inslink (from to)	Insert edge ⍵ in graph ⍺	Dfn	Function		Mathematical			https://dfns.dyalog.com/n_inslink.htm
 graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function		Structural	unweightedgraph delete drop without removing erasing erase eliminate eliminating deleting		https://dfns.dyalog.com/n_remlink.htm
 array←(from repl) dfns.subs array	Vector substitution	Dfn	Function		Text	stringreplacement list string		https://dfns.dyalog.com/n_subs.htm
@@ -1552,6 +1583,7 @@ tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Da
 {name}←dfns.fix rep	Fix function/operator rep	Dfn	Function		Data Conversion	fixfunction converting change changing		https://dfns.dyalog.com/n_fix.htm
 {protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function		System	workspacemerge		https://dfns.dyalog.com/n_wsmerge.htm
 X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair list cell element idiom		
+(9=40∘⎕ATX)Dv	Is Dv an object?	Dfn	Monadic Function		System	are objects?		
 C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch dfs		https://dfns.dyalog.com/n_scc.htm
 alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment		https://dfns.dyalog.com/n_apportion.htm
 stack←{repl←0} dfns.joy program	Subset of the Joy language	Dfn	Function		Text	lists concatenative applicative Ackermann'sfunction Ackermannsfunction Metacircular vectors interpreter programming joylang string		https://dfns.dyalog.com/n_joy.htm
@@ -1634,10 +1666,6 @@ Xv(+/∧\⍤≠)Yv	Count number of leading elements that are unequal between two
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children string		https://dfns.dyalog.com/n_maze.htm
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row |A| det(A) det(Nm) |Nm|		
 {2⊥~2⊥⍣¯1⊢⍵}J	Bit-wise NOT for positive integers	Dfn	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion		
-{3=⌊⎕NC⊆,⍵}Dv	Is Dv a function?	Dfn	Monadic Function		System	fn? are functions?		
-{4=⌊⎕NC⊆,⍵}Dv	Is Dv an operator?	Dfn	Monadic Function		System	op? are operators?		
-{9.1=⎕NC⊆,⍵}Dv	Is Dv a namespace?	Dfn	Monadic Function		System	are namespaces?		
-{16::0 ⋄ 1⊣⎕SRC ⍵}Ys	Is object Ys scripted?	Dfn	Monadic Function		System	does have has script? ⎕FIXed source? text? sourced? ns namespace class interface	https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCAV1K7/E3NTigsTkVIXi/NKi5NQUdaCga14KXFydqzQPKqXwqG2CAlCnX/Cj3jVcQAaIX21oZmVl8Ki7xfBR12KgWHCQ86PerbUw4wgpgxv@/z8A	
 {⍵/1 0⍴⍨≢⍵}Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Dfn	Monadic Function		Boolean/Logical	1s 0s zeroes naughts falses falsehoods trues truths		
 Av{⍵⌷⍨⊂⍒⍺}Y	Moving cells of Y indicated by Av to the start of Y	Dfn	Dyadic Function		Structural	conditional promote promotion items elements beginning leading		
 hits←patn {w←'*'} dfns.match array	Find with wildcards	Dfn	Function		Text	globbing string		https://dfns.dyalog.com/n_match.htm
@@ -1653,7 +1681,6 @@ Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Lo
 {¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w	
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
 {∊⍕¨2⊥⍣¯1⊢⍵}Js	Binary format of decimal number Js	Dfn	Monadic Function		Text	base-2 base2 Boolean string		
-{1 2 9∊⍨⌊⎕NC⊆,⍵}Dv	Is Dv an array?	Dfn	Monadic Function		System	are arrays? values? variables? constants?		
 {0::0 ⋄ 1⊣8⌶⍨⍵}Yv	Validate inverted table (character data as matrices)	Dfn	Monadic Function		Array Properties	validating validation of matrix checking for correctness	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wSFagMrKwOFR90tCoaPuhZbPOrZ9qh3xaPerbUKGkYKJo96t6g7JikoOKekpqlrKmgYKhgBSXMFY00usvSrO6rDTfj/HwA	
 Iv{~⍺⌿1⍴⍨⍴⍵}Y	Locate fill elements formed by replicating Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 {⍵⌿⍨1 0⍴⍨≢⍵}Y	Remove every second cell of Y	Dfn	Dyadic Function		Selection	filter even odd parity removing erasing erase eliminate eliminating delete deleting		
@@ -1676,11 +1703,6 @@ Xv(+/∧\⍤⌽⍤≠)Yv	Count number of trailing elements that are unequal betw
 {1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
-{3.1 4.1∊⍨⎕NC,⊆⍵}Dv	Is Dv a tradfn/tradop?	Dfn	Monadic Function		System	are traditional tradfn? tradfns? tradops?		
-{3.2 4.2∊⍨⎕NC,⊆⍵}Dv	Is Dv a dfn/dop?	Dfn	Monadic Function		System	are direct? dynamic? functions? dfn? dfns? dops?		
-{3.3 4.3∊⍨⎕NC⊆,⍵}Dv	Is Dv tacit?	Dfn	Monadic Function		System	are derived derv? dervs? tacits? primitive? primitives? functions? train? trains?		
-{9.4 9.6∊⍨⎕NC⊆,⍵}Dv	Is Dv a class?	Dfn	Monadic Function		System	are classes?		
-{9.5 9.7∊⍨⎕NC⊆,⍵}Dv	Is Dv an interface?	Dfn	Monadic Function		System	are interfaces?		
 {16⊥¯1+⍵⍳⍨⎕D,⎕A}Dv	Convert from hexadecimal	Dfn	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing		
 Mv{⌽+⌿↑⌽¨⍺ ⍵}Nv	Sum of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	additionof plus		
 Mv{⌽-⌿↑⌽¨⍺ ⍵}Nv	Difference between polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	subtractionof minus		
@@ -1694,7 +1716,7 @@ Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nondecreasing? sorted? dimension		
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters string		https://dfns.dyalog.com/n_wrapnote.htm
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	store dyalog transcript text scrollback scroll-back string		
-X{2=⎕NC⍵:⍎⍵ ⋄ ⍺}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable		
+X{0=40⎕ATX⍵:⍺ ⋄ ⍎⍵}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable		
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item		
 {⍵/⍨~'  '⍷⍵}Dv	Remove multiple blanks	Dfn	Monadic Function		Text	consecutive spaces removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu6JOXUFB/VHvdiC3VkHdM00BBPLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnp6v//AwA	
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif string regex regexp		
@@ -1781,7 +1803,7 @@ A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified
 Xv{⊃⍪/1↓,(⊂⍺),⍪⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using strings list joiner combiner joining combining merge merging string		
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Yv	The Is'th subvector of Yv (subvectors separated by Yv[1])	Dfn	Dyadic Function		Selection			
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Dv	Extracting field number Is from Dv (field separated by first element of Dv)	Dfn	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st string		
-{⎕ED 2⎕FIX⍣(0∊⎕NC⍵),⊂,⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
+{⎕ED 2⎕FIX⍣(0=40⎕ATX⍵),⊂,⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
 Ms{⍺←0 ⋄ ⍺,⍨⍵÷⌽⍳≢⍵}Nv	Integral of polynomial Nv with descending coefficients and optional constant Ms	Dfn	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate		
 Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (excluding phase)	Dfn	Dyadic Function		Comparison	testif vectors same? equivalent? equal?		
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element		
@@ -1878,6 +1900,8 @@ Av{(b∧⍺)⍱c⍀2<⌿0⍪(c←b∨⍺)⌿b←~⍵}B	Not first zero (≤\) in 
 Is{⍺⍴,⌿1+(,⍵)⊤⍺?⍥(×/)⍵}Jv	Deal: Iv-shaped array of random items from ⍳Jv (without replacement)	Dfn	Dyadic Function		Index Generation	distinct cells elements remove multi-dimensional high-rank indices removing erasing erase eliminate eliminating delete deleting		
 {1⎕NQ(⎕NEW'Timer'(⊂'Event'('Select'⍵)))'Select'}Dv	Invoke system operation Dv (e.g. '[ThreadsResumeAll]')	Dfn	Monadic Function		System	enqueue magic builtin gui menubar under program control activate run execute evoke [action] built-in event action		
 {⍵+.×⍨*○0J¯2×n÷⍨∘.×⍨¯1+⍳n←≢⍵}Nv	Discrete Fourier Transformation	Dfn	Monadic Function		Mathematical	DFT() analysis Cooley-Tukey	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1dY7PP1R7wqtR9O7DbwOrTc6PD3v8HagwKOOGRCZQ@sNtR/1bs4DanjUuQioo1bBUMEoCyisYAAmgTjL6P9/AA	
+X{⍺(R⍨⍳R←≢⍤⊢⍴∘⍋∘⍋⍺⍳⍪⍨)⍵}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	dyadiciota indexin indexof matchingpositionof find locatecorresponding PDI remove removing erasing erase eliminate eliminating delete deleting		
+X{⍺(R⍨∊R←≢⍤⊢⍴∘⍋∘⍋⍺⍳⍪⍨)⍵}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	dyadicepsilon isin membership containedin hascorresponding mathcingmemberof PDE remove removing erasing erase eliminate eliminating delete deleting		
 {1↓(,1,⌽∨\⌽' '≠⍵)/,⍵,⍨⎕UCS 10}Cm	Linefeed-separated character vector constructed from the rows of Dm (which must be of depth 1) with trailing spaces removed	Dfn	Monadic Function		Text	dtb blanks lists ending split from table matrix to removing delimited segmented LF newline string		
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍋⍵]]}Y	Minimum (⌊/) in each subvector of Y indicated by Av (fast ⌊/¨Av⊂Yv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells smallest least minima reduce reductions		
 Av{⍵⌷⍨⊂g[⍺/⍋(+\⍺)[g←⍒⍵]]}Y	Maximum (⌈/) in each subvector of Y indicated by Av (fast ⌈/¨Av⊂Yv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells greatest biggest largest maxima reduce reductions		
@@ -1932,10 +1956,9 @@ Cv{⍺←⊢ ⋄ {⍵⊣⍵⍎(⊃⍺),'←⊃⌽⍺'}/⍵,⍺⎕NS⍬}Yv	Create
 Cv{('\P{',⍺,'}')'.'⎕S 3⍠'Mode' 'D'⍠'DotAll'1⊢⍵}Dv	Do characters in Dv have Unicode property Cv?	Dfn	Dyadic Function		Text	Other? Cc? Control? Cf? Format? Cn? Unassigned? Co? Private? use? Cs? Surrogate? Letter? Ll? Lower? case? letter? Lm? Modifier? Lo? Lt? Title? Lu? Upper? M? Mark? Mc? Spacing? mark? Me? Enclosing? Mn? Non-spacing? N? Number? Nd? Decimal? number? Nl? No? P? Punctuation? Pc? Connector? punctuation? Pd? Dash? Pe? Close? Pf? Final? Pi? Initial? Po? Ps? Open? S? Symbol? Sc? Currency? symbol? Sk? Sm? Mathematical? So? Z? Separator? Zl? Line? separator? Zp? Paragraph? Zs? Space? string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVqjXUYwKq1XUe9e7SUa9V11TXUwfKBisYP@pdoO6bn5KqrqDuog7iuOSXOObkqBs@6lr0qHdrrYK6R2pOTr6OQnh@UU6Kovr//wA	
 Cv{((⎕DL⌈2E¯6×≢⍺)⊢⎕NEW'HTMLRenderer'(('HTML'⍺)('Visible'0))).PrintToPDF⍵}Dv	Create PDF file named Dv with HTML/SVG content Cv	Dfn	Dyadic Function		Text	HyperText Markup Language XHTML Scalable Vector Graphics rendering printing portable document format printout hardcopy hard-copy create graphical		
 {s⍴r[g[⍋(,⍉(⌽s←⍴⍵)⍴⍳≢⍵)[g←⍋r←,⍵]]]}Y	Sorting rows of matrix Y into ascending order (Fast (⊂∘⍋⌷⊢)⍤1)	Dfn	Monadic Function		Mathematical	ordering table		
-X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive index of (⍳) without replacement	Dfn	Dyadic Function		Index Generation	dyadiciota indexin indexof matchingpositionof find locatecorresponding PDI remove removing erasing erase eliminate eliminating delete deleting		
-X{((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)∊(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive member of (∊) without replacement	Dfn	Dyadic Function		Sets	dyadicepsilon isin membership containedin hascorresponding mathcingmemberof PDE remove removing erasing erase eliminate eliminating delete deleting		
 Is{⍋j+(i|⍺)[j←+\⍵]≥+\1-⍵\¯1↓0,i←i-¯1↓0,i←⍸1⌽⍵}Bv	Permutation vector for Is-rotate on each subvector indicated by Bv (Fast ∊Is⌽¨⍵⊂⍳≢Bv)	Dfn	Dyadic Function		Index Generation	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists rotating shifting cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQKFECkkUL1o97uLG2NzJpHvbs0o7OAgtoxj3q3xj7qXKodY6gLZMYcWm/4qG2ygU4mUDJTF5n3qHeH4aOevUBFtQqGCgZQCGVxQW1ST0xKTkl1dHJ2UY8uiP3/HwA	
 Iv{1(↑⌊⍵⌈↓)(2 2⍴¯1 1 1 ¯0.1)+.×10*(-⊃⌽⍺),-/⍺+⍺>99 0}N	Clamp non-negative N to fit in ⍕ field Iv[1 2]	Dfn	Dyadic Function		Text	limitrange format string		
+X{⍺⌷⍨⊂(⍳≢⍺)~⍺(R⍨⍳R←≢⍤⊢⍴∘⍋∘⍋⍺⍳⍪⍨)⍵}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	dyadictilde butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT remove removing erasing erase eliminate eliminating delete deleting		
 {#.(⎕CY⍵⊣⍵⎕CY⍨'⎕',¨⎕A(∊⍨⊂⊢)'LxSmTrapWsidTnameCtDivIoMlPpRlRtlWxUsingAvuDctFr'⊣⎕EX⎕NL-⍳9)}Dv	Load workspace ws without executing ⎕LX	Dfn	Monadic Function		System	open fetch get quiet latentexpression autoexec boot ⎕xload )xload		
 Is{⍺|⊃⍵{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍺}Js	Multiplicative inverse of Js modulo Is (fast)	Dfn	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic		
 '`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match}Dv	Replace backtick-quoted (e.g. `2+3`) expressions with their result	Dfn	Monadic Function		Text	strings variable characters charvector charvecs interpolation substitution expansion template literals string	https://tio.run/##SyzI0U2pTMzJT///P/FR2wRjrkd9U4G0gnqChrp6dJy6eqyWunpNdFxCrKZWgjpQMqj6Ue/UR719ho/aJh9aDyIf9W7V800sSc6oVVDPSM3JyU8w1E5MKM8vyklR//8fAA	
@@ -1951,7 +1974,6 @@ X{⍺{⍺⍴⍨≢⍵}@(⍸(|m)/m<0)⊢⍵⍀⍨m←(¯1+2×≢⍵)⍴1,-≢⍺}
 {⌽((0,⍳≢⍵)∘.=+⌿~b)+.×(-⍵)×.*b←t⊤¯1+⍳×/t←2⍴⍨≢⍵}Nv	Descending coefficients of polynomial with roots Nv	Dfn	Monadic Function		Mathematical	solve		
 Is{i←⍸⍵≤⍺⊃{⍵[⍋⍵]}⍵[(⌈0.5*⍨⍺×n)?n←≢⍵] ⋄ i[⍺↑⍋⍵[i]]}Yv	Indices of smallest Is elements of Nv (Fast Is↑⍋Nv)	Dfn	Dyadic Function		Comparison	least minimum infirmum smallest lowest		
 Is{i←⍸⍵≥⍺⊃{⍵[⍒⍵]}⍵[(⌈0.5*⍨⍺×n)?n←≢⍵] ⋄ i[⍺↑⍒⍵[i]]}Yv	Indices of largest Is elements of Nv (Fast Is↑⍒Nv)	Dfn	Dyadic Function		Comparison	most maximum supremum biggest largest highest		
-X{⍺⌷⍨⊂(⍳≢⍺)~((≢⍺)⍴⍋⍋⍺⍳⍺⍪⍵)⍳(≢⍵)⍴⍋⍋⍺⍳⍵⍪⍺}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	dyadictilde butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT remove removing erasing erase eliminate eliminating delete deleting		
 {⊃{⍺@(⊂1 1)⌽⍉⍵}/'┌┐┘└',{⍺⍪⌽⍉⍵}/'─│─│',⊂⍕⍵}Dm	Unicode frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table string		
 Cv{((~(≢b↑⍵)↑'/'=⍺)/b↑⍵),(1↓b↓⍺),⍵↓⍨b←+/∧\⍺≠','}Dv	Editing Dv with Cv ('/' to delete and ',' to insert)	Dfn	Dyadic Function		Text	line editor remove drop without removing erasing erase eliminate eliminating deleting string		
 {(∨/a)⌿(⍴⍵)⍴(,a)\(,a←∧\('⍝'≠⍵)∨≠\⍵='''')/,⍵}Dm	Decommenting a matrix representation of a function (⎕CR)	Dfn	Monadic Function		Text	uncomment strip comments remove table delete drop without removing erasing erase eliminate eliminating deleting string		
@@ -2199,7 +2221,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 739⌶0	Temporary Directory	I-beam	Constant	Monadic Operator	System	tmp ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Temporary%20Directory.htm
 8415⌶Nm	Singular Value Decomposition	I-beam	Monadic Function	Monadic Operator	Mathematical	⌹ ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Singular%20Value%20Decomposition.htm
 8659⌶⍬	List shared code files	I-beam	Constant	Monadic Operator	System	report workspace		https://docs.dyalog.com/latest/Shared%20Code%20Files%20User%20Guide.pdf
-900⌶Y	Called Monadically? (tradfns/tradops only, Y can be any array)	I-beam	Monadic Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam monadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
+900⌶Y	Called Monadically? (tradfns/tradops only, Y can be any array)	I-beam	Monadic Function	Monadic Operator	Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc 40⎕ATX ibeam monadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
 950⌶⍬	Loaded Libraries	I-beam	Constant	Monadic Operator	System	⎕na .dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Loaded%20Libraries.htm
 ⎕UCS 0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 %00 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPD/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
 ⎕UCS 10	Line Feed (LF)	Constant	Expression		Text	\n ^J U+0D 0x0Ah \u0A %0A newline linefeed string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGjw/z8A	https://help.dyalog.com/latest/#Language/System%20Functions/ucs.htm
@@ -2356,8 +2378,8 @@ f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Functi
 2 2 2 2⊤⍳16	Unit tesseract	Constant	Expression		Mathematical			
 2 2 2⊤⍳8	Unit cube	Constant	Expression		Mathematical			
 2 2⊤⍳4	Unit square	Constant	Expression		Mathematical			
-2-900⌶⍬	Number of arguments used in call (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam monadic? monadically? or dyadic? dyadically? applied called		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
-~900⌶⍬	Called Dyadically? (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc ibeam dyadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
+2-900⌶⍬	Number of arguments used in call (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc 40⎕ATX ibeam monadic? monadically? or dyadic? dyadically? applied called		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
+~900⌶⍬	Called Dyadically? (tradfns/tradops only)	Expression			Function Application	arity ambivalent ambivalence variadic leftargument ⎕nc 40⎕ATX ibeam dyadic? applied		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Called%20Monadically.htm
 1 2 3 4 5 6 7 8 9 0,⎕	Input continuation	Syntax			Expression	linecontinuation		
 ⊃83⎕DR 256	Is the current machine big-endian?	Expression			System	computer architechture big-endian little-endian be endian-ness endianness endianess	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTVbGAPZLkEKRqZm//8DAA	
 ⎕BASE.name	Invoke the base class definition of name	Syntax	Namespace	System	System Function	template up :base		https://help.dyalog.com/latest/#Language/System%20Functions/base.htm
@@ -2551,8 +2573,8 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 ⍎Bs⍴'→'	Conditional Abort (cut stack back one frame if Bs)	Expression			Expression	stop		
 ⊢2⎕NQ#'GetCommandLineArgs'	Report the command line that Dyalog was started with	Constant			Expression	arguments call startup shell args argv cmdline cli		
 ⊢2⎕NQ#'TCPGetHostID'	Report current IP address (first if multiple)	Constant			Expression	Internet Protocol system myIPv4 1st		
-0∊⎕NC'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? called applied		
-2∊⎕NC'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic? called applied		
+0=40⎕ATX'⍺'	Called Monadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? called applied		
+0≠40⎕ATX'⍺'	Called Dyadically? (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called dyadic? called applied		
 {Xs}(2015⌶)Dv	Create Data Binding Source	I-beam	Function		Array Properties	connect ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Create%20Data%20Binding%20Source.htm
 {Xs}(400⌶)Y	Compiler Control	I-beam	Function		System	performance ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Compiler%20Control.htm
 {X}(2041⌶)Js	Override COM Default Value (Windows only)	I-beam	Function		System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Override%20COM%20Default%20Value.htm
@@ -2637,7 +2659,7 @@ X[I;J;…]	Indexing (slicing)	Syntax	Dyadic Function		Selection	squarebrackets s
 {name}⎕WC'UpDown'	Spin buttons (Windows only)	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
-⊃1⌈⎕NC'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
+1+0≠⎕ATX'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
 )SAVE {-force} {ws}	Save active workspace, optionally with new name ws (overwrite any existing if -force)	Non-syntax			System Command	archive store ⎕save		https://help.dyalog.com/latest/#Language/System%20Commands/save.htm
 op←{⍺⍺ ⍵}	Prototypical monadic dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍵⍵ ⍵}	Prototypical dyadic dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
