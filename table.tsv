@@ -859,7 +859,7 @@ Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items		
 (+/,)B	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths		
 Xs(,,⍤0)Yv	Inserting Xs before each element of Yv	Tacit	Dyadic Function		Structural	cell item interleave alternate		
-Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip() zip zipwith() zip-with zipwith		
+Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	faro weave dovetail the technique zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip() zip zipwith() zip-with zipwith		
 Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		Structural	merge cell item		
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods		
 (⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flattening flattened row-wise rowwise		
@@ -1353,7 +1353,7 @@ Cv(≢⍤⊣↓¨,⊂⍨⊣⍷,)Dv	Split Yv at occurrences of Xv (removes separa
 (⍳∘≢+.×⍨1 ¯1∘.=⍉)Jm	Changing connection matrix Jm (¯1 to 1) to a node matrix	Tacit	Monadic Function		Mathematical	graph connectivity table change converting conversion		
 (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jLQedcw4vP1R7wrDR11LgbzeFbqaj3qXGIKwgqUlkK8AVWuiYPSod4uBAggaAiGY/P8fAA	
 (⍉1+⍴⊤¯1+∘⍳×/∘⍴)Y	Matrix of all indices of Y (↑,⍳⍴Y for large Y)	Tacit	Monadic Function		Array Properties	element locations flat cell item table counter counting	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6Cg8ai301D7Ue@WR11LDq0HsjpmPOrdfHi6PpixRVPBWMFQwQTIMvwPAA	
-(↓(⌊/≢¨)↑⍉∘↑)Yv	Merge vectors in Yv alternately (↓⍉↑ that removes trailing elements from longer vectors)	Tacit	Monadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing list(zip()) remixing transposing transpose zip zipwith() zip-with zipwith	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVN1njU06X/qHPRoRWaj9omPurtfNQxA8jQVFD3yy9XV1DPLAYSJRmpIDIzN1X9/38A	
+(↓(⌊/≢¨)↑⍉∘↑)Yv	Merge vectors in Yv alternately (↓⍉↑ that removes trailing elements from longer vectors)	Tacit	Monadic Function		Structural	faro weave dovetail the technique zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing list(zip()) remixing transposing transpose zip zipwith() zip-with zipwith	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVN1njU06X/qHPRoRWaj9omPurtfNQxA8jQVFD3yy9XV1DPLAYSJRmpIDIzN1X9/38A	
 Ms((9 11○⊣)+.×9 11∘.○⊢)N	Rectangular scale of complex N by complex factor Ms	Tacit	Dyadic Function		Mathematical	resize stretch squeeze		
 ((¯1∘⎕C≠⊢)-1∘⎕C≠⊢)D	Detect case of characters (1:uppercase, ¯1:lowercase, 0:neither)	Tacit	Monadic Function		Text	query determine report string		
 ((¯1∘⎕C≠⊢)∧1∘⎕C≠⊢)D	Are characters of D titlecase?	Tacit	Monadic Function		Text	title-case? digraphs? ligatures? string		
@@ -1538,7 +1538,7 @@ nvec←from dfns.to unto	Sequence ⍺ … ⍵	Dfn	Function		Index Generation	ste
 nvec←dfns.factors numb	Prime factors of ⍵	Dfn	Function		Mathematical	primenumber		https://dfns.dyalog.com/n_factors.htm
 nvec←dfns.fibonacci num	Tail-recursive Fibonacci	Dfn	Function		Mathematical	tailrecursion accumulator fibonaccinumber goldenmean continuedfraction		https://dfns.dyalog.com/n_fibonacci.htm
 nvec←dfns.sieve nvec	Sieve of Eratosthenes	Dfn	Function		Mathematical	primenumber		https://dfns.dyalog.com/n_sieve.htm
-nvec←dfns.ripple nvec	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		https://dfns.dyalog.com/n_ripple.htm
+nvec←dfns.ripple nvec	Perfect Ripple Shuffle	Dfn	Function		Structural	faro weave dovetail the technique zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		https://dfns.dyalog.com/n_ripple.htm
 nvec←dfns.roots triple	Real roots of quadratic	Dfn	Function		Mathematical	realrootsofquadratic complexnumbers		https://dfns.dyalog.com/n_roots.htm
 nvec←p dfns.nicediv q	⍵ similar integers with sum ⍺	Dfn	Function		Mathematical	histogram		https://dfns.dyalog.com/n_nicediv.htm
 num←dfns.factorial num	Tail recursive factorial	Dfn	Function		Mathematical	tailrecursion accumulator		https://dfns.dyalog.com/n_factorial.htm
@@ -1781,7 +1781,7 @@ Is{Y⌿⍨(⍋⍋⍵)∊⍺}Y	The Is smallest cells of Y in order of occurrence	
 {⍵/⍨' '∨.≠⍵}Dm	Remove blank columns	Dfn	Monadic Function		Text	remove delete allspaces drop space without removing erasing erase eliminate eliminating deleting string		
 {⍵⌿⍨' '∨.≠⍵}Dm	Remove blank rows	Dfn	Monadic Function		Text	remove delete allspaces emptylines drop space without removing erasing erase eliminate eliminating deleting string		
 {(⎕NEW⊂'Clipboard').Text←⍵}D	Copy to Windows clipboard	Dfn	Monadic Function		System	cut put into		
-{⍵⌷⍨⊂⍋⍒1 0⍴⍨≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		
+{⍵⌷⍨⊂⍋⍒1 0⍴⍨≢⍵}Y	Perfect Ripple Shuffle	Dfn	Function		Structural	faro weave dovetail the technique zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle		
 X(+/(∧\∘⌽≡⍤¯1))Y	Count number of trailing major cells that match between two arrays of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright cells items end equal		
 X(+/(∧\∘⌽≢⍤¯1))Y	Count number of trailing major cells that differ between two arrays of equal length	Dfn	Dyadic Function		Comparison	suffix different onright cells items end unequal		
 Ms{¯2-/0,0⌈⍺-⍨+\⍵}Nv	FIFO stock Nv decremented by Ms	Dfn	Dyadic Function		Mathematical	first-in-first-out warehouse		
@@ -1891,7 +1891,7 @@ X{⍎⍵,'⍺'⍴⍨' '∧.=⍵}Dv	Execution of expression Dv with default value
 {(⎕SE.SALT.New'HttpCommand'('GET'⍵)).Run.Data}Dv	Download file from URL Dv	Dfn	Monadic Function		System	curl online internet http:// https:// wget fetch		
 {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳2*≢⍵}Y	Powerset: All subsets of Y, including the empty set (0⌿Y) and Y itself	Dfn	Monadic Function		Sets	power-set all combinations	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qGsRkNR@1LvZSOtR5yKgsloFdUcnZxd1LvINMFYwetS7Rd0x0SnJOVn9/38A	
 Av{~≠\z\2≠/0,~⍵/⍨z←⍺≥⍵}Bv	Cumulative all-true (∧\) in each subvectors of Bv indicated by Av (fast ∊∧\¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists scan		
-{(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵}Yv	Mesh major cells of elements of Yv	Dfn	Monadic Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing cyclically list high-rank higher-rank arrays	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqNR51NT3q7X7U0fWod/OjjhmPOhcdWvGod6vmo57tj7qaH/Wu0gfyahXUE5OS1YGaXNQdnZxdXN3UuUg1QcNEwehR7xb1xMSkpOTklBR1TQ0jiIijo5OTuub//wA	
+{(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵}Yv	Mesh major cells of elements of Yv	Dfn	Monadic Function		Structural	faro weave dovetail the technique zipper rippleshiffle riffleshuffle zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing cyclically list high-rank higher-rank arrays	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqNR51NT3q7X7U0fWod/OjjhmPOhcdWvGod6vmo57tj7qaH/Wu0gfyahXUE5OS1YGaXNQdnZxdXN3UuUg1QcNEwehR7xb1xMSkpOTklBR1TQ0jiIijo5OTuub//wA	
 {-/+/×/[2](2 3⍴0 1 2 0 2 1)⌽↑⍵ ⍵}Nm	Determinant of three-row matrix	Dfn	Monadic Function		Mathematical	det() 3-row 3row det() |A| det(A) det(Nm) |Nm|		
 X{⍺,[2÷⍨⌈/≢∘⍴¨⍺⍵]⍵}Y	Vectors as row matrices in catenation upon each other	Dfn	Dyadic Function		Structural	combine tables lists		
 {⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm	Remove trailing blank rows	Dfn	Monadic Function		Text	all-space allspace empty remove trim bottom delete drop ending space without removing erasing erase eliminate eliminating deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA	
@@ -1900,7 +1900,7 @@ Mv{⍵+.×(⍺∘*÷!)¯1+⍳≢⍵}Nv	Taylor series at point Mv, coefficients N
 Mv{⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍺}Nv	Cross-correlation	Dfn	Monadic Function		Mathematical	crosscorrelation crosscorrelate cross-correlate		
 {⍵+.×⍨(⍳≢⍺)⌽⍤0 1+⌽⍵}Nv	Auto-correlation	Dfn	Monadic Function		Mathematical	autocorrelation serialcorrelation auto-correlate serial-correlate		
 Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar Xs	Dfn	Dyadic Function		Structural	adding boxing frame framing padding layer all-around wrapper package packaging ndimensional n-dimensional block cuboid 3d-array 4d-array centered centred place in larger		
-X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
+X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	faro weave dovetail the technique zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 {(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing spaces removed	Dfn	Monadic Function	Performance	Text	dtb speed optimised optimized quick blanks lists ending split from table idiom matrix to removing string		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
 {⍺←⎕UCS 10 ⋄ 1↓¨⍺(=⊂⊢)⍺,⍵}Dv	.split() split-on cut-at Vector of character vectors constructed from the linefeed-separated character vector Dv (which must be of depth 1)	Dfn	Ambivalent Monadic Function, Dyadic Function		Text	from to delimited segmented LF newline string		
