@@ -1962,6 +1962,7 @@ I{⍉2⊥(-⍲/0>b)⍪⍲/2⊥⍣¯1⊢b←⍉⍺,[0.5]⍵}J	2's-complement bit-
 Av{⍵⌷⍨⊂z⍳⌈\z←⍋g[⍋(+\⍺)[g←⍋⍵]]}Y	Cumulative maximum (⌈⍀) in each subvector of Y indicated by Av (fast ∊⌈\¨Av⊂Yv)	Dfn	Dyafic Function		Comparison	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells maxima scan		
 Av{⍵⌷⍨⊂z⍳⌈\z←⍋g[⍋(+\⍺)[g←⍒⍵]]}Y	Cumulative minimum (⌊⍀) in each subvector of Y indicated by Av (fast ∊⌊\¨Av⊂Yv)	Dfn	Dyafic Function		Comparison	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells minima scan		
 Iv{⍺(≥∘(2⊃⊢,-)∧≤∘⊃)⍨-/¨⍳2⍴⍵}Jv	Iv (k or k₁,k₂) band matrix of size Jv (n or m,n)	Dfn	Dyadic Function		Mathematical	banded tridiagonal pentadiagonal heptadiagonal tri-diagonal penta-diagonal hepta-diagonal	https://tio.run/##AVMArP9hcGwtZHlhbG9n///ijpXihpAxIMKvMiB74o26KOKJpeKImCgy4oqD4oqiLC0p4oin4omk4oiY4oqDKeKNqC0vwqjijbMy4o204o21fSA1IDb//w	
+{⍵ ⍵⍴⍋+\a/(≢a←1↓⌽2/⍳⍵)⍴,∘-⍨1⍵}Js	Number Spiral of order Js	Dfn	Monadic Function		Mathematical	rotation concentric rectangular rings eVolutes spirals & time	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/VuVQDiR71bHvV2a8ck6ms86lyUCJQyfNQ2@VHPXiP9R72bgQo0gSp0HnXM0H3Uu8IQyK9VMP3/HwA	
 Iv{⍵⍴⍨⍺×@(<∘0)⍨(×/⍴⍵)÷×/⍺~0}Y	Reshape (⍴) Y to shape Iv, allowing ¯1 to automatically determine missing length	Dfn	Dyadic Function		Structural	mold form dimension array autoshape axis		
 Iv{(⍳(≢⍵)++/⍺)∊+\1+¯1↓0,⍺\⍨1⌽⍵}Bv	Expansion vector (left argument for \ or ⍀) to insert Iv[i] elements after i'th subvector (subvectors indicated by Bv)	Dfn	Dyadic Function		Structural	expand openup major cells items lists		
 {r⊣{2|⍵:1+3×⍵ ⋄ ⍵÷2}⍣{1=r,←⍵}⍵⊣r←⍬}Js	Collatz sequence for positive integer Js	Dfn	Monadic Function		Mahtematical	hailstone series Ulam conjecture Kakutani's problem Thwaites Hasse's algorithm 3n+1 Syracuse wondrousnumber	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqix51La42qnnUu9XKUNv48HQgQ@FRd4sCkD683aj2Ue/iakPbIh2gWqAIkLsVqL4IzFtTq2Bk/v8/AA	
@@ -1993,7 +1994,6 @@ Cv{((⎕DL⌈2E¯6×≢⍺)⊢⎕NEW'HTMLRenderer'(('HTML'⍺)('Visible'0))).Pri
 Is{⍋j+(i|⍺)[j←+\⍵]≥+\1-⍵\¯1↓0,i←i-¯1↓0,i←⍸1⌽⍵}Bv	Permutation vector for Is-rotate on each subvector indicated by Bv (Fast ∊Is⌽¨⍵⊂⍳≢Bv)	Dfn	Dyadic Function		Index Generation	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists rotating shifting cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQKFECkkUL1o97uLG2NzJpHvbs0o7OAgtoxj3q3xj7qXKodY6gLZMYcWm/4qG2ygU4mUDJTF5n3qHeH4aOevUBFtQqGCgZQCGVxQW1ST0xKTkl1dHJ2UY8uiP3/HwA	
 Iv{1(↑⌊⍵⌈↓)(2 2⍴¯1 1 1 ¯0.1)+.×10*(-⊃⌽⍺),-/⍺+⍺>99 0}N	Clamp non-negative N to fit in ⍕ field Iv[1 2]	Dfn	Dyadic Function		Text	limitrange format string		
 X{⍺⌷⍨⊂(⍳≢⍺)~⍺(R⍨⍳R←≢⍤⊢⍴∘⍋∘⍋⍺⍳⍪⍨)⍵}Y	Progressive without (~) without replacement	Dfn	Dyadic Function		Sets	dyadictilde butnot withoutmatching exceptcorresponding setdifference setsubtraction setminus PDT remove removing erasing erase eliminate eliminating delete deleting		
-{⍵ ⍵⍴⍋+\a/(≢a←1↓⌽2/⍳⍵)⍴,∘-⍨1⍵}Js	Number Spiral of order Js	Dfn	Monadic Function		Mathematical	rotation concentric rectangular rings eVolutes spirals & time	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/VuVQDiR71bHvV2a8ck6ms86lyUCJQyfNQ2@VHPXiP9R72bgQo0gSp0HnXM0H3Uu8IQyK9VMP3/HwA	
 {#.(⎕CY⍵⊣⍵⎕CY⍨'⎕',¨⎕A(∊⍨⊂⊢)'LxSmTrapWsidTnameCtDivIoMlPpRlRtlWxUsingAvuDctFr'⊣⎕EX⎕NL-⍳9)}Dv	Load workspace ws without executing ⎕LX	Dfn	Monadic Function		System	open fetch get quiet latentexpression autoexec boot ⎕xload )xload		
 Is{⍺|⊃⍵{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍺}Js	Multiplicative inverse of Js modulo Is (fast)	Dfn	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic		
 '`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match}Dv	Replace backtick-quoted (e.g. `2+3`) expressions with their result	Dfn	Monadic Function		Text	strings variable characters charvector charvecs interpolation substitution expansion template literals string	https://tio.run/##SyzI0U2pTMzJT///P/FR2wRjrkd9U4G0gnqChrp6dJy6eqyWunpNdFxCrKZWgjpQMqj6Ue/UR719ho/aJh9aDyIf9W7V800sSc6oVVDPSM3JyU8w1E5MKM8vyklR//8fAA	
@@ -2714,6 +2714,40 @@ Mv(16808⌶)'Weibull'Jv	Weibull distribution of shape Jv with parameters Mv (loc
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
 1+0≠⎕ATX'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
+'__fi__DDD'(1200⌶)⍳7	Short Finnish weekday names ('MA' 'TI'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fi__Dddd'(1200⌶)⍳7	Finnish weekday names ('Maanantai' 'Tiistai'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fr__DDD'(1200⌶)⍳7	Short French weekday names ('LUN.' 'MAR.'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fr__Dddd'(1200⌶)⍳7	French weekday names ('Lundi' 'Mardi'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__sv__DDD'(1200⌶)⍳7	Short Swedish weekday names ('MÅN' 'TIS'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__sv__Dddd'(1200⌶)⍳7	Swedish weekday names ('Måndag' 'Tisdag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__da__DDD'(1200⌶)⍳7	Short Danish weekday names ('MA' 'TI'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__da__Dddd'(1200⌶)⍳7	Danish weekday names ('Mandag' 'Tirsdag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__de__DDD'(1200⌶)⍳7	Short German weekday names ('MO' 'DI'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__de__Dddd'(1200⌶)⍳7	German weekday names ('Montag' 'Dienstag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__es__DDD'(1200⌶)⍳7	Short Spanish weekday names ('LU.' 'MA.'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__es__Dddd'(1200⌶)⍳7	Spanish weekday names ('Lunes' 'Martes'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__el__DDD'(1200⌶)⍳7	Short Greek weekday names ('ΔΕΥ' 'ΤΡΙ'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__el__Dddd'(1200⌶)⍳7	Greek weekday names ('Δευτέρα' 'Τρίτη'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__it__DDD'(1200⌶)⍳7	Short Italian weekday names ('LUN' 'MAR'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__it__Dddd'(1200⌶)⍳7	Italian weekday names ('Lunedì' 'Martedì'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ja__DDD'(1200⌶)⍳7	Short Japanese weekday names ('月' '火'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ja__Dddd'(1200⌶)⍳7	Japanese weekday names ('月曜日' '火曜日'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nb__DDD'(1200⌶)⍳7	Short Norwegian Bokmål weekday names ('MAN.' 'TIR.'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nb__Dddd'(1200⌶)⍳7	Norwegian Bokmål weekday names ('Mandag' 'Tirsdag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nl__DDD'(1200⌶)⍳7	Short Dutch weekday names ('MA' 'DI'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nl__Dddd'(1200⌶)⍳7	Dutch weekday names ('Maandag' 'Dinsdag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nn__DDD'(1200⌶)⍳7	Short Norwegian Nynorsk weekday names ('MÅ.' 'TY.'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nn__Dddd'(1200⌶)⍳7	Norwegian Nynorsk weekday names ('Måndag' 'Tysdag'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pl__DDD'(1200⌶)⍳7	Short Polish weekday names ('PON.' 'WT.'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pl__Dddd'(1200⌶)⍳7	Polish weekday names ('Poniedzialek' 'Wtorek'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pt__DDD'(1200⌶)⍳7	Short Portuguese weekday names ('SEG' 'TER'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pt__Dddd'(1200⌶)⍳7	Portuguese weekday names ('Segunda-feira' 'Terça-feira'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ru__DDD'(1200⌶)⍳7	Short Russian weekday names ('ПН' 'ВТ'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ru__Dddd'(1200⌶)⍳7	Russian weekday names ('Понедельник' 'Вторник'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__zh__DDD'(1200⌶)⍳7	Short Chinese weekday names ('周一' '周二'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__zh__Dddd'(1200⌶)⍳7	Chinese weekday names ('星期一' '星期二'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'DDD'(1200⌶)⍳7	Short English weekday names ('MON' 'TUE'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'Dddd'(1200⌶)⍳7	English weekday names ('Monday' 'Tuesday'…)	Expression			Text	days of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 )SAVE {-force} {ws}	Save active workspace, optionally with new name ws (overwrite any existing if -force)	Non-syntax			System Command	archive store ⎕save		https://help.dyalog.com/latest/#Language/System%20Commands/save.htm
 op←{⍺⍺ ⍵}	Prototypical monadic dop deriving monadic functions	Syntax	Monadic Function	Monadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 op←{⍵⍵ ⍵}	Prototypical dyadic dop deriving monadic functions	Syntax	Monadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
@@ -2723,6 +2757,40 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 +/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning idiom string		
 3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
+'__fi__MMM'(1200⌶)29×⍳12	Short Finnish month names ('TAMMI' 'HELMI'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fi__Mmmm'(1200⌶)29×⍳12	Finnish month names ('Tammikuu' 'Helmikuu'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fr__MMM'(1200⌶)29×⍳12	Short French month names ('JANV.' 'FÉVR.'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__fr__Mmmm'(1200⌶)29×⍳12	French month names ('Janvier' 'Février'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__sv__MMM'(1200⌶)29×⍳12	Short Swedish month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__sv__Mmmm'(1200⌶)29×⍳12	Swedish month names ('Januari' 'Februari'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__da__MMM'(1200⌶)29×⍳12	Short Danish month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__da__Mmmm'(1200⌶)29×⍳12	Danish month names ('Januar' 'Februar'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__de__MMM'(1200⌶)29×⍳12	Short German month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__de__Mmmm'(1200⌶)29×⍳12	German month names ('Januar' 'Februar'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__es__MMM'(1200⌶)29×⍳12	Short Spanish month names ('ENE.' 'FEB.'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__es__Mmmm'(1200⌶)29×⍳12	Spanish month names ('Enero' 'Febrero'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__el__MMM'(1200⌶)29×⍳12	Short Greek month names ('ΙΑΝ' 'ΦΕΒ'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__el__Mmmm'(1200⌶)29×⍳12	Greek month names ('Ιανουάριος' 'Φεβρουάριος'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__it__MMM'(1200⌶)29×⍳12	Short Italian month names ('GEN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__it__Mmmm'(1200⌶)29×⍳12	Italian month names ('Gennaio' 'Febbraio'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ja__MMM'(1200⌶)29×⍳12	Short Japanese month names ('1月' '2月'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ja__Mmmm'(1200⌶)29×⍳12	Japanese month names ('1月' '2月'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nb__MMM'(1200⌶)29×⍳12	Short Norwegian Bokmål month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nb__Mmmm'(1200⌶)29×⍳12	Norwegian Bokmål month names ('Januar' 'Februar'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nl__MMM'(1200⌶)29×⍳12	Short Dutch month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nl__Mmmm'(1200⌶)29×⍳12	Dutch month names ('Januari' 'Februari'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nn__MMM'(1200⌶)29×⍳12	Short Norwegian Nynorsk month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__nn__Mmmm'(1200⌶)29×⍳12	Norwegian Nynorsk month names ('Januar' 'Februar'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pl__MMM'(1200⌶)29×⍳12	Short Polish month names ('STY' 'LUT'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pl__Mmmm'(1200⌶)29×⍳12	Polish month names ('Styczen' 'Luty'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pt__MMM'(1200⌶)29×⍳12	Short Portuguese month names ('JAN' 'FEV'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__pt__Mmmm'(1200⌶)29×⍳12	Portuguese month names ('Janeiro' 'Fevereiro'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ru__MMM'(1200⌶)29×⍳12	Short Russian month names ('ЯНВ' 'ФЕВ'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__ru__Mmmm'(1200⌶)29×⍳12	Russian month names ('Январь' 'Февраль'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__zh__MMM'(1200⌶)29×⍳12	Short Chinese month names ('1月' '2月'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'__zh__Mmmm'(1200⌶)29×⍳12	Chinese month names ('一月' '二月'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'MMM'(1200⌶)29×⍳12	Short English month names ('JAN' 'FEB'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
+'Mmmm'(1200⌶)29×⍳12	English month names ('January' 'February'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 ⎕DMX.(Category EN)≡'XML conversion'1	Invalid left argument		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'XML conversion'10	Invalid '--' in comment		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'XML conversion'11	'>' expected		XML conversion	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
