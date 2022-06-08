@@ -609,7 +609,7 @@ f⍣≡Y	Limit: apply f until stable	Tacit	Monadic Function	Monadic Operator	Fun
 1 1∘⍉Ym	Main diagonal of matrix	Tacit	Monadic Function		Selection	table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvlke9my25IMLq6lCGoYLho44Zj3o7kdT8/w8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Transpose%20Dyadic.htm
 ⊥⍨Bv	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at end	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx51LX3Uu0LBUMEAioHw/38A	
 0∘⊥N	Last major cell of numeric array	Tacit	Monadic Function		Selection	item element	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS1VOFR72ZLLjQxYwXjR71bQDL//wMA	
-100∘⊥Jv	Joining  date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwedcx41LVUwdDSzFLBXMHI8P9/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
+100∘⊥Jv	Joining date YYYY M D to packed YYYYMMDD integer	Tacit	Monadic Function		Mathematical	format	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwedcx41LVUwdDSzFLBXMHI8P9/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
 2∘⊥Bv	Integer representation of logical vector Bv	Tacit	Monadic Function		Boolean/Logical	list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMHnXMeNS1VMEACA25MAQNFQywCWKoNAQZ8P8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Decode.htm
 0 1∘⊤N	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwfdcx41LVEwULP3PT/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
 0 100 100∘⊤Js	Separating packed YYYYMMDD date integer date	Tacit	Monadic Function		Mathematical	format split unpacked	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwNwPhRx4xHXUsUDC3NLA3MjQz//wcA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Encode.htm
@@ -3150,7 +3150,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 ⎕DMX.(Category EN)≡'File Watcher functions'3	Can't unwatch this		File Watcher functions	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'File mapping'1	Cannot map file		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'File mapping'10	Shape needs to be fully specified		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
-⎕DMX.(Category EN)≡'File mapping'11	File name must be a  character vector		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'File mapping'11	File name must be a character vector		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'File mapping'12	Right argument must be a vector		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'File mapping'13	Right argument has too many elements		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'File mapping'14	Access code must be 'R' or 'W'		File mapping	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
@@ -3478,7 +3478,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 ⎕DMX.(Category EN)≡'Random Number Generation'4	Distribution is not yet implemented		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'Random Number Generation'5	Left argument for the Beta distribution must be two numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'Random Number Generation'6	Parameters for the Beta distribution must be positive numbers		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
-⎕DMX.(Category EN)≡'Random Number Generation'7	Left argument must be numeric interval. Example: 1.0  7.6		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+⎕DMX.(Category EN)≡'Random Number Generation'7	Left argument must be numeric interval. Example: 1.0 7.6		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'Random Number Generation'8	The parameter for the Bernoulli distribution is a probablity value between 0 and 1		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'Random Number Generation'9	Left argument for the Binomial distribution is the number of trials and a probability value		Random Number Generation	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'Search Replace'1	Invalid escape sequence in transformation string		Search Replace	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
