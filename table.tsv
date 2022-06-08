@@ -1044,7 +1044,7 @@ Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic
 Xs(1↓∘,,⍤0)Yv	Join elements of vector Yv with separator Xs	Tacit	Dyadic Function		Structural	nested combine merge nested flat list strings character text .join() joiner joining merging combining intersperse between interject inserting interspersing		
 X(⊢∘≢↑⍪)Y	Shift before: Inserting X at front/left/top of Y, pushing corresponding cells off the back/right/bottom edge	Tacit	Dyadic function		Strurctural	» pushing		
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose		
-(?∘≢⊃⊢)Yv	Pick  random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element		
+(?∘≢⊃⊢)Yv	Pick random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element		
 Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining		
 (↑,∘⊂⍤1)Y	Increment rank by inserting a new dimension before the trailing one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add ending last	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNlHnUceMR11Nj3qXGGoqGCkYK5gAZYBqHP//BwA	
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods		
