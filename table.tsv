@@ -3566,6 +3566,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 ⎕DMX.(Category EN)≡'.NET interface'4	There are no constructors available for the specified type		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'.NET interface'5	Can't fork with active bridge		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
 ⎕DMX.(Category EN)≡'.NET interface'6	Array must be a namespace reference or nested array		.NET interface	Error Message	diagnosticmessageextended ⎕DMX.Message ⎕DMX.ENX ⎕DMX.Category			
+'R'∊4⊃#⎕WG'APLVersion'	Is interpreter a runtime?	Constant			System	development dllrt? packaged? bundled? executable	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUg9QfdXSZPOpqVgaKhLurOwb4hKUWFWfm56n//w8A	
 ⍞↓⍨≢⍞←'What? '	Prompt and response on same line	Syntax			Expression	input	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx71znvUNvlR74pHnYvA7Anq4RmJJfYK6v//l2RkFgMA	
 :Signature <rslttype←><name><arg1type arg1name>,…	Identify name and signature by which this function is exported as a method	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation .NET assembly types		https://help.dyalog.com/latest/#Language/Control%20Structures/signature.htm
 (⊃÷100÷⊢/)⎕WG'DevCaps'	Current real screen resolution before scaling	Expression			System	px		
