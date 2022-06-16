@@ -1837,7 +1837,6 @@ A{m+⍺⌈.×⍨⍵-m←⌊/⍵}Nv	Maxima of elements of subsets of Nv specified
 Xv{⊃⍪/1↓,(⊂⍺),⍪⍵}Yv	Join vector of vectors Yv using separator Xv	Dfn	Dyadic Function		Structural	text with using strings list joiner combiner joining combining merge merging string		
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Yv	The Is'th subvector of Yv (subvectors separated by Yv[1])	Dfn	Dyadic Function		Selection			
 Is{1↓⍵/⍨⍺=+\⍵=⊃⍵}Dv	Extracting field number Is from Dv (field separated by first element of Dv)	Dfn	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st string		
-{⎕ED 2⎕FIX⍣(0=40⎕ATX⍵),⊂,⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
 Ms{⍺←0 ⋄ ⍺,⍨⍵÷⌽⍳≢⍵}Nv	Integral of polynomial Nv with descending coefficients and optional constant Ms	Dfn	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate		
 Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (excluding phase)	Dfn	Dyadic Function		Comparison	testif vectors same? equivalent? equal?		
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element		
@@ -1981,6 +1980,7 @@ Av{(⍋⍵-⍨+\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺}Nv	Grade down in each subv
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍋⍵}Y	Grade up (⍋) for sorting subarrays of Y having lengths Iv (≢Y ↔ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
 Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) for sorting subarrays of Y having lengths Iv (≢Y ↔ +/Iv)	Dfn	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings		
 {'-- ::'@(2+3×⍳5)∊⍕¨(⊃,100+1∘↓)6↑⍵}Jv	Date and time (⎕TS format) to YYYY-MM-DD hh:mm:ss	Dfn	Monadic Function		Text	datetime ISO-8601:2006-09 ISO8601:2006-09 string		
+{⎕ED{2⎕FIX(⊢,⍵⊂⍨0=⍴)61⎕ATX⍵}⍣(0=≢60⎕ATX⍵)⊢⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed keeping save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
 Av{(x/⍵)≥(z/1⌽z←⍺/⍨⍺≥z)∧⍺/z←⍵∨x←1⌽⍺}Bv	Less than or equal reduction on each subvector of Bv indicated by Av (Fast ≤/¨Av⊂Bv)	Dfn	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists reduce	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXa1ToP@rdqvmoc6lGlb7ho569VUBFj3p3AUVXACmgeJXmo47lIBGIzNZHHSsqgCyQWqBoLdggCAaS//8DAA	
 M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍺+⍵)×1○○2×?0×⍺+⍵}N	Normally distributed numbers with mean M and standard deviation N	Dfn	Dyadic Function		Mathematical	Gaussian distribution random normrand() randnorm() nrand() randn()		
 Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	testif contains		
