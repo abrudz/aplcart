@@ -1,4 +1,5 @@
  File←{
+     f←⍵,(0=≢⍵)/'table.tsv',⍨⊃⎕NPARTS 50 ⎕ATX⊃⎕SI
      ⍺←⊢
-     ⍺ ⎕CSV⍠'Separator'(⎕UCS 9)⍠'QuoteChar' ''⍠'IfExists' 'Replace'⊂⍵
+     ⍺ ⎕CSV⍠'Separator'(⎕UCS 9)⍠'QuoteChar' ''⍠'IfExists' 'Replace'⊂f
  }
