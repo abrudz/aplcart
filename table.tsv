@@ -2224,7 +2224,8 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 2017⌶Dv	Identify .NET Type (Windows only)	I-beam	Monadic Function	Monadic Operator	Array Properties	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Identify%20NET%20Type.htm
 2022⌶0	Flush Session Caption (Windows only)	I-beam	Constant	Monadic Operator	System	titlebar ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Flush%20Session%20Caption.htm
 2023⌶0	Close all Windows	I-beam	Constant	Monadic Operator	System	shut ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Close%20All%20Windows.htm
-2031⌶7	List all system function names (unofficial)	I-beam	Constant	Monadic Operator	System	functions report	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDIwNH/VsM///HwA	
+2031⌶6	List all system primitive code points (unofficial)	I-beam	Constant	Monadic Operator	System	known to interpreter functions operators primitives' ⎕UCS built-ins report glyphs symbols squiggles	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVKhzsIKRgbHho55tZv//AwA	
+2031⌶7	List all system function names (unofficial)	I-beam	Constant	Monadic Operator	System	known to interpreter quad-functions sysfns report	"https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDIwNH/VsM///HwA	"	
 2035⌶Dv	Set Dyalog Pixel Type ('ScaledPixel'/'RealPixel', Windows only)	I-beam	Monadic Function	Monadic Operator	System	scaling highresolution hires retina px ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Set%20Dyalog%20Pixel%20Type.htm
 2036⌶0	Disable auto-status (unofficial)	I-beam	Monadic Function	Monadic Operator	System	window pop-up popup hide suppress deactivate		
 2036⌶1	Enable auto-status (unofficial)	I-beam	Monadic Function	Monadic Operator	System	window pop-up popup show allow activate		
