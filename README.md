@@ -4,9 +4,9 @@
 
 APLcart is a searchable collection of over two thousand short APL phrases intended for both beginners and professionals, with content provided by the community. Knowledge of basic APL syntax is a prerequisite. 
 
-Note that Internet Explorer is not supported.
-
 APLcart can also be used for [exercising your APL skills](#quiz).
+
+See [APL Wiki](https://aplwiki.com/wiki/APLcart) for background and history.
 
 ## Usage
 
@@ -19,6 +19,8 @@ APLcart can also be used for [exercising your APL skills](#quiz).
 - The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
 
 - All code in APLcart assumes the latest version of Dyalog APL Unicode edition and system defaults, for example `⎕IO←1`, `⎕ML←1`, `⎕DIV←0`.
+
+- Entries are meant for copying and pasting to the extent possible. Therefore, many entries are more involved than what might appear as necessary. For example, *Cube root* is listed as `(*∘÷∘3)N` instead of the straight-forward `N*÷3`. This is so that `*∘÷∘3` can be copied and used in defining `CubeRoot←*∘÷∘3` which would not be possible with the simpler expression.
 
 ### Interface
 
@@ -76,6 +78,10 @@ DuckDuckGo allows you to search APLcart directly using the `!aplcart` bang. For 
 ### Browsers
 
 APLcart supports [OpenSearch](https://en.wikipedia.org/wiki/OpenSearch) and as such can be added as search engine on various browsers, including Safari, Edge, Firefox, and Chrome.
+
+### Dyalog APL
+
+APLcart is supplied as the user command `]APLCart` and the API function `⎕SE.Dyalog.Utils.APLcart`. For information about the user command, enter `]APLcart -?`. The API function takes a query as right argument, and optionally `1` as left argument to return all columns (even hidden ones) from the database, rather than just the shown first 2. A full database dump can be done with `table←1⎕SE.Dyalog.Utils.APLcart''`
 
 ### Dyalog Windows IDE
 
