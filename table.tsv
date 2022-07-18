@@ -2101,7 +2101,7 @@ X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Bo
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic		https://dfns.dyalog.com/n_repl.htm
 f{f←⍺⍺ ⋄ ⎕OR'f'}⍬	Arrayify: Convert f into an array for use in an array of functions	Dop	Monadic Function	Monadic Operator	Function Application	function-array encapsulate encapsulation embedding toarray gerund		
 rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator	Function Application	conditionaloperator listoffunctions co-operator cooperator vector		https://dfns.dyalog.com/n_lof.htm
-X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition: g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	Queer-bird Q-combinator before jotunderbar composewith bind ringunderbar functioncomposition ⍛ reverse-compose fXgY backcompose back-compose reversecompose into reversed		
+X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition (Q-combinator): g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	Queer-bird Q-combinator before jotunderbar composewith bind ringunderbar functioncomposition ⍛ reverse-compose fXgY backcompose back-compose reversecompose into reversed		
 f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
 X f{⊃⌽⍸~⍺ ⍺⍺ ⍵}Y	Index of last element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item binary base-2 base2		
 X(As{⊃⍺⍺↓⍺⍵})Y	Selection of X or Y depending on condition As	Dop	Dyadic Function	Monadic Operator	Selection	conditional selector pick choose		
