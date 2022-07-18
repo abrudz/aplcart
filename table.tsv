@@ -2722,7 +2722,7 @@ Mv(16808⌶)'Weibull'Jv	Weibull distribution of shape Jv with parameters Mv (loc
 {name}⎕WC'UpDown'	Spin buttons (Windows only)	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
-1+0≠⎕ATX'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
+1+0≠40⎕ATX'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
 '__fi__DDD'(1200⌶)⍳7	Short Finnish weekday names ('MA' 'TI'…)	Expression			Text	weekdays of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 '__fi__Dddd'(1200⌶)⍳7	Finnish weekday names ('Maanantai' 'Tiistai'…)	Expression			Text	weekdays of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 '__fr__DDD'(1200⌶)⍳7	Short French weekday names ('LUN.' 'MAR.'…)	Expression			Text	weekdays of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
