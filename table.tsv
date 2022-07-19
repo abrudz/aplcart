@@ -2008,6 +2008,7 @@ Iv{⊂[¯1+2×⍳k](,s,⍪r)⍴⍵↑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)�
 X{⍺{⍺⍴⍨≢⍵}@(⍸(|m)/m<0)⊢⍵⍀⍨m←(¯1+2×≢⍵)⍴1,-≢⍺}Y	Intersperse: Insert cell X between major cells in Y	Dfn	Dyadic Function		Structural	combine merge list strings character joiner joining merging combining between interject inserting interspersing		
 {2⌽∊(12((⊃'am' 'pm'⌽⍨≤),∘⍕|)4⊃⍵),':'@1∘⍕¨100+2↑4↓⍵}Jv	Date (⎕TS format) to H:mm:sstt	Dfn	Monadic Function		Text	timestamp am/pm 12-hour clock string		
 {⌽((0,⍳≢⍵)∘.=+⌿~b)+.×(-⍵)×.*b←t⊤¯1+⍳×/t←2⍴⍨≢⍵}Nv	Descending coefficients of polynomial with roots Nv	Dfn	Monadic Function		Mathematical	solve		
+{1+⍉↑{1=⍵:,⊂,0 ⋄ (⊃,/)¨(⍳⍵)⌽¨⊂(∇,∘⊂!⍴⊢)⍵-1}⍵}Js	Numeric matrix of all permutations of length Js in unspecified order (faster than generating in lexicographical order)	Dfn	Monadic Function		Mathematical	combinatorics unsorted unordered without replacement list vector table		
 Is{i←⍸⍵≤⍺⊃{⍵[⍋⍵]}⍵[(⌈0.5*⍨⍺×n)?n←≢⍵] ⋄ i[⍺↑⍋⍵[i]]}Yv	Indices of smallest Is elements of Nv (Fast Is↑⍋Nv)	Dfn	Dyadic Function		Comparison	least minimum infirmum smallest lowest		
 Is{i←⍸⍵≥⍺⊃{⍵[⍒⍵]}⍵[(⌈0.5*⍨⍺×n)?n←≢⍵] ⋄ i[⍺↑⍒⍵[i]]}Yv	Indices of largest Is elements of Nv (Fast Is↑⍒Nv)	Dfn	Dyadic Function		Comparison	most maximum supremum biggest largest highest		
 {⊃{⍺@(⊂1 1)⌽⍉⍵}/'┌┐┘└',{⍺⍪⌽⍉⍵}/'─│─│',⊂⍕⍵}Dm	Unicode frame a matrix	Dfn	Monadic Function		Text	border boxed enclosed table string		
