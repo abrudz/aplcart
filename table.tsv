@@ -958,13 +958,13 @@ X f@(1⍴⍨⍴)Y	Handling array Y temporarily as a vector (optionally with left
 Xs@(1⍴⍨⍴)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural			
 (⍴⍨0∘,)Js	Initialise a matrix with Js columns and no rows	Tacit	Monadic Function		Structural	table		
 (⌈/,∘0)N	Positive maximum, at least zero (also for empty N)	Tacit	Monadic Function		Mathematical	largest biggest		
-(2</0∘,)B	First ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2 groups runs sequences blocks		
-(2>/,∘0)B	Last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s trues truths binary base-2 base2 groups runs sequences blocks		
 Xs(1↓∘,,)Ym	Matrix to vector using Xs as delimiter	Tacit	Dyadic Function		Structural	vectorise vectorize serialise serialize list table		
 Xv(,,⍤0 1⍨)Yv	Inserting Xv after every element of Yv	Tacit	Dyadic Function		Structural	merge cell item inserting interspersing intersperse		
-(2>/⍪∘0)B	Last ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs blocks 1s trues truths		
+(0⍪2>⌿⊢)N	Indicate increases in N	Tacit	Monadic Function		Mathematical	1s where increasing		
 (1⍪2≢⌿⊢)Y	Indicate starting points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	beginnnings masking Booleans binary base-2 base2 sequences leading runs identical major cells items starts		
 (1⍪2≢⌿⊢)Y	Indicate which elements differ from previous ones (non-empty Yv)	Tacit	Monadic Function		Comparison	masking Booleans binary base-2 base2 sequences runs testif neighboring neighbours neighbors lefthand major cells items 1s trues truths		
+(2<⌿0∘⍪)B	First ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2 groups runs sequences blocks		
+(2>⌿⍪∘0)B	Last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	runs blocks 1s trues truths beginningsofruns trues truths 1st binary base-2 base2 groups runs sequences blocks		
 (⊃⌽∘⍴)Y	Number of items in trailing axis	Tacit	Monadic Function		Array Properties	count length() cells len() cells elements dimension ending		
 (⊃⌽∘,)Y	The last item of Y	Tacit	Monadic Function		Selection	cell element		
 Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	copy repeat repetitions duplicate reshape	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgMyAo4oaR4o204oiY4oqCKSAnYWJjJ///	
@@ -1417,7 +1417,7 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 (+\'('∘=-¯1↓0,')'∘=)Dv	Depth of parentheses	Tacit	Monadic Function		Text	bracket brace nesting level parenthesis parens string		
 (⊢{⍎⍺,'←⍵'}⎕EX⊢⎕NS∘⍎)Dv	Make named namespace Dv into unnamed namespace	Tacit	Monadic Function		System	remove removing erasing erase eliminate eliminating delete deleting		
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?		
-⌽@((<\∨1⌽<\)0,2>/⊢)⍣≡	Bubble sort	Tacit	Monadic Function		Mathematical	sinking	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA	
+⌽@(1(⌽∨⊢)0<\⍤,2>/⊢)⍣≡Nv	Bubble sort	Tacit	Monadic Function		Mathematical	sinking	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA	
 Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
 Xs(⎕FIX'file://',⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked string		
 ' '∘(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Dv	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	remove delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without removing erasing erase eliminate eliminating deleting string		
