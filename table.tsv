@@ -284,7 +284,7 @@ name[I]f∘⊢←Y	Modified Indexed Assignment (also dfns/dops)	Primitive	Dyadic
 ¯1∘⎕C Y	Lowercase	System	Monadic Function		Text	casemap lettercase ¯1⎕C tolower lower-case conversion converting change changing string 0(819⌶)		https://help.dyalog.com/latest/#Language/System%20Functions/c.htm?Highlight=%E2%8E%95C
 ⎕LX←expression	Expression to be executed when workspace is loaded	System	Variable	Workspace	System Function	latentexpression autoexec bootstrap startup automatic ⎕load )load )xload	https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkcd7Qogplt@PpcCmAWUAolyBZfmAnnaj3r2cwWXJxYA2dWPercqPOrdBUQgqpaL61HfVKC4ApDyc1ZQNzFSV1DPyy/JyMxLB7KABgFJoMFAEmgYiASao/7/PwA	https://help.dyalog.com/latest/#Language/System%20Functions/lx.htm
 ⎕PATH ←nss	Set search path (blank-separated list of namespace names) for functions and operators	System	Variable	System	System Function	stdlib standardlibrary include vector	https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAqPeucq5KVWlCjkZOalKmQWQ2gjLgWwknSgEqByLpgWEB8i86hvqo@zAlh7SQZQG0ynIUjt//9AswE	https://help.dyalog.com/latest/#Language/System%20Functions/path.htm
-⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded Lehmer linear congruential Mersenne Twister OS Operating	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVEjw//8A	https://help.dyalog.com/latest/#Language/System%20Functions/rl.htm
+⎕RL←⍬ 1	Seed and Random Number Generator used by Roll/Deal	System	Variable		Index Generation	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded Lehmer linear congruential Mersenne Twister OS Operating set choose predetermine predeterminable	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVEjw//8A	https://help.dyalog.com/latest/#Language/System%20Functions/rl.htm
 ⎕SM←fields	Define character-based user interface	System	Variable	System	System Function	setup paint display screen map form text-based pseudo-graphics window inputs asynchronous terminal management	https://tio.run/##SyzI0U2pTMzJT/8PBCUKj9omKDzqm@rnGq7wqKtJPSQzN7VInQsoApIo4eIq0QOyXdwU1H0rnXPyk7PBcmBdJQA	https://help.dyalog.com/latest/#Language/System%20Functions/sm.htm
 ⎕TRAP←trap_spec	Define error handling	System	Variable	Error Message	System	try catch	https://tio.run/##SyzI0U2pTMzJT/8PBI/6poYEOQYoPGqboKBhaKig7qquoK6u7pSYopBYlF6am5pXolGsCRTR1DBAlkzOT0lVBAlzHd5uwGWoYKRgrKCtYKJgCgA	https://help.dyalog.com/latest/#Language/System%20Functions/trap.htm
 ⎕USING ←ns_specs	Set search path for .NET Namespace(s)	System	Variable	System	System Function	microsoft mscorlib.dll dotnet	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApPyCFNSBWtT//wcA	https://help.dyalog.com/latest/#Language/System%20Functions/using.htm
@@ -719,7 +719,7 @@ I(1=∨)J	Are I and J co-prime?	Tacit	Dyadic Function		Mathematical	coprime? rel
 I(0=|)J	Does I divide J?	Tacit	Dyadic Function		Mathematical	testif divides divisibility divisor ∣		
 I(0≠|)J	Does I not divide J?	Tacit	Dyadic Function		Mathematical	testif divisibility divisor ∤ dividing		
 (0≤≡)Y	Does Y have Uniform Depth?	Tacit	Monadic Function		Array Properties	testif uniform? orthogonal? rectangular?		
-(0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	testif simple?		
+(0=≡)Y	Is Y a Simple Scalar?	Tacit	Monadic Function		Array Properties	testif simple? flat?		
 (0>≡)Y	Does Y have Non-Uniform Depth?	Tacit	Monadic Function		Array Properties	testif ragged? nonuniform? nonorthogonal? nonrectangular?		
 Is(?⍴)Js	Choosing Is random elements of ⍳Js with replacement	Tacit	Dyadic Function		Mathematical	roll cells items		
 (⍬≡⍴)Y	Is Y a Scalar?	Tacit	Monadic Function		Array Properties	testif		
@@ -868,7 +868,7 @@ Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		St
 (,⊂⍤¯1)Y	Vector of major cells for any rank Y	Tacit	Monadic Function		Structural	vectorise vectorize list dimensions higher high-rank any-rank highrank anyrank items elements axes		
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods		
 Xs(≠⊆⊢)Yv	Split Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9dUVNB51LnjU1faoa5GmgnpGak5Ovn5JRmpRqn55flFOivr//wA	
-(⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple?		
+(⊂≡⊆)Y	Is Y a Simple Array?	Tacit	Monadic Function		Array Properties	testif simple? flat?		
 (⊂≢⊆)Y	Is Y a Nested Array?	Tacit	Monadic Function		Array Properties	testif nested?		
 (¯1+2×⍳)Js	Odd integers from 1 to 2×Js	Tacit	Monadic Function		Mathematical	numbers 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031DY6PP1R72ZNBVMubKJm//8DAA	
 (⍳¯1↑⍴)Y	Indices of trailing axis of Y	Tacit	Monadic Function		Array Properties	shape dimension ending		
@@ -2313,8 +2313,8 @@ name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump t
 )OFF	Terminate the session	Non-syntax			System Command	exit repl stop close ⎕off )continue	https://tio.run/##SyzI0U2pTMzJT/8PBJr@bm5cJRmZxQrl@XnqJQqpRUX5RQA	https://help.dyalog.com/latest/#Language/System%20Commands/off.htm
 )SH cmd	Execute cmd (cmd is mandatory on Windows, optional on UNIX)	Non-syntax			System Command	shell os operatingsystem commandprocessor ⎕sh linux macos aix rasbianpios		https://help.dyalog.com/latest/#Language/System%20Commands/sh.htm
 )name	invoke system command 'name'	Non-syntax				rightroundparentheses rightparenthesis systemcommand syscmd calling		https://help.dyalog.com/latest/#Language/System%20Commands/Introduction.htm
-0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom		
-1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? nonscalar? idiom		
+0=≡Y	Fast: Is Y a Simple Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom flat?		
+1=≡Y	Fast: Is Y a Simple Non-scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? nonscalar? idiom flat?		
 ≢⍴Y	Fast: The rank of Y as a scalar	Expression		Performance	Array Properties	speed optimised optimized quick numberofdimensions tensorrank dimensions axes idiom		
 ⍴⍴Y	Fast: The rank of Y as a 1-element vector	Expression		Performance	Array Properties	speed optimised optimized quick list dimensions axes idiom		
 *○N	Fast: Euler's idiom (accurate when N is a multiple of 0J0.5)	Expression		Performance	Mathematical	speed optimised optimized quick		
@@ -2521,7 +2521,7 @@ f(DOP g)Y	Dyadic operator (DOP) taking a function operand to derive a monadic op
 (f g h)Y	Fork (Φ-combinator): (f Y)g(h Y)	Syntax	Monadic Function	Train	Expression	Phoenix-bird S′-combinator pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 (f g)Y	Atop (B-combinator): f g Y	Syntax	Monadic Function	Train	Expression	Bluebird-bird tacit roundparentheses roundparens grouping derived fg 2train 2-train		https://help.dyalog.com/latest/#Language/Introduction/Trains.htm
 0=⍴⍴Y	Fast: Is Y a Scalar?	Expression		Performance	Array Properties	testif speed optimised optimized quick idiom		
-1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom		
+1=≡,Y	Fast: Is Y a Simple Array?	Expression		Performance	Array Properties	testif speed optimised optimized quick simple? idiom flat?		
 0=⊃⍴Y	Fast: Does Y have an empty first dimension?	Expression		Performance	Array Properties	testif speed optimised optimized quick empty? norows? 1st idiom		
 ⊃⌽,Y	Fast: The item in the bottom right of Y	Expression		Performance	Selection	speed optimised optimized quick last bottom-right southeast south-east cell element idiom		
 M⊃¨⊂Yv	Fast: The subset of Yv in the index positions defined by M (equivalent to Yv[M])	Expression		Performance	Selection	speed optimised optimized quick chipmunk selectfrom indexinto idiom		
