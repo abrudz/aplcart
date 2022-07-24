@@ -1139,8 +1139,7 @@ Xs(,∘⌽∘⍉⍣4)Ym	Surround matrix Ym with scalar Xs	Tacit	Dyadic Function	
 X(1⍳⍨⊃⍤¯1⍤⍷)Y	Index of first consecutive occurrence of major cells of X in Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof subarray sub-array locating items elements location 1st		
 (Bv∊⍨⊢∘⊂⌺3 3)Bm	Conway's Game of Life: next generation given Bv of 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 (∘.!⍨0,⍳)Js	Binomial coefficients until Js	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations pascalstriangle		
-Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Monadic Function		Sets	setequivalence sets?		
-Xv(∊∧.∧∊⍨)Yv	Is Xv permutation of Yv?	Tacit	Dyadic Function		Array Properties	testif		
+Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Monadic Function		Sets	testif setequivalence sets? equivalent?		
 (+/÷1⌈0⊥⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean		
 Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematical	sum		
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical			
@@ -1303,6 +1302,7 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 ('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 ISO-8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO-8601:2005 LST string		
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing		
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing string		
+X≡⍥{(⊂⍋⍵)⌷⍵}Y	Is Xv a permutation of Yv?	Tacit	Dyadic Function		Array Properties	testif anagrams? anagram? permutation? permutations?		
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items		
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2		
@@ -1463,9 +1463,9 @@ Mv+.×⍥((⊢÷2*∘÷⍨+.×⍨)⊢-+⌿÷≢)Nv	Sample Pearson correlation co
 {1∊⍵:-⎕TRAP←0 'C' '2 ⎕NQ ⎕SE''KeyPress'' ''TC''' ⋄ shy←0}B	Stop on the current line if any condition is met	Tacit	Monadic Function		System	⎕stop halt breakpoint break-point debug here statement stopif haltif		
 (⊃÷¯2÷2∘⊃-¯1 1×2*∘÷⍨(×⍨2∘⊃)-(×/4@2))Nv	Solutions of quadratic equation Nv₁x²+Nv₂x+Nv₃=0	Tacit	Monadic Function		Mathematical	coefficients f(x)=ax²+bx+c=0 f(x)=ax^2+bx+c=0		
 As{((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵}Bv	Convert bits Bv representing a signed integer of As-endianess (0:big, 1:little) into a number	Tacit	Dyadic Function		Data Conversion	⎕DR 163 16-bit 323 32-bit 643 64-bit 1283 128-bit 2563 256-bit 5123 512-bit 10243 1024-bit 645 1287 sint big-endian little-endian be le to-float	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFao1NA6tN9R61NWseXi60aOupUDWo84FOpqPuqY96l38qHfXo65FGhaHtz/qXfGoc9Gj3q2aFo96twDpWgUzk0dtEw0VDLmoYlodzLj//wE	
-'\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences (like \n and \u000a)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs backspace bs \b horizontaltab ht \t linefeed lf \n formfeed ff \f carriagereturn cr \r crlf cr+lf \r\n string		
 ((⊣/⊢⍤/⍨∘(⌈/=⊢)⊢/){⍺(≢⍵)}⌸)Y	Mode(s): Most frequent major cells of data	Tacit	Monadic Function		Mathematical	average items elements		
 ('⎕THIS'{'t'⎕NS⍺⊣t←⍵}∘⍎⍨⊢⊣⎕SHADOW⍤{⍵.⎕NL-⍳9})Ys	Unpack members of namespace Ys to the current namespace, localising those names in the process	Tacit	Monadic Function		System	destructure open import merge into here		
+'\\(u...)?.'⎕R{0⎕JSON'"',⍵.Match,'"'}Dv	Evaluate JSON-style escape sequences (like \n and \u000a)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs backspace bs \b horizontaltab ht \t linefeed lf \n formfeed ff \f carriagereturn cr \r crlf cr+lf \r\n string		
 ((∪∊⊆⍨(2⌷⍉201⌶⍬)['MINI_NAME' 'MINI_QUADVAR'⍳⍨3⌷⍉201⌶⍬]∊⍨∘∊200⌶)⎕NR)Dv	Global names used by tradfn/tradop Dv	Tacit	Monadic Function		System	globals unlocalised unlocalized un-localised un-localized not list find all identifiers symbols xref cross-reference	https://tio.run/##SyzI0U2pTMzJT////1FHu1t@vnVOfnJijvWjvqm@PgpcCkDa0/9R2wQDhUfdLQpgUSDPkEsBrAzIfNQ28VHv5vSc/KTEHC6gEVxANUBhBQ2NRx2rHnV0Pepqe9S7QsPoUc/2R72dRgaGj3q2Pepdoxmt7uvp5xnv5@jrqq4AYQeGOrqEOQapA80DajFG0xELMqx3xaOOGUCGkYEBUFQTaJdfkKaCOtDd6v//AwA	
 Is({⍵/⍨∧⌿2<⌿⍵}1+{(-⍺)↑⍳⍵}⊤∘⍳!×∘!⊣)Js	Numeric matrix of all unordered combinations of Is out of Js without replacement	Tacit	Dyadic Function		Mathematical	combinatorics selections list vector table remove removing erasing erase eliminate eliminating delete deleting		
 (,⊢⍤/⍨(⊢=⍴⍴⌈⌿)<\⍤,⍤∧⊢=∘⍉⌽∘⍴⍴⌊/)Nm	Value of saddle point	Tacit	Monadic Function		Mathematical			
