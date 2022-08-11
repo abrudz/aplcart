@@ -1055,9 +1055,9 @@ I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function
 (⊢!⍨0,⍳)Js	Coefficients of the binomial	Tacit	Monadic Function		Mathematical			
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
 Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
-X(6=⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif <Y< <X< tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMxsH/Vu1jY@PP1R7w5NBQMu3HKGeOSM8MgZ45Ez@f8fAA	
+X(6=⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif <Y< <X< tao totalarrayordering interval inrange? exclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMxsH/Vu1jY@PP1R7w5NBQMu3HKGeOSM8MgZ45Ez@f8fAA	
 (⍸1=⊢∨⍳)Js	Totatives of Js	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)		
-X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif ≥Y≥ ≥X≥ tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMwedS541LtZ2/jw9Ee9OzQVDLjwyRrilTXCK2uMV9bk/38A	
+X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif ≥Y≥ ≥X≥ tao totalarrayordering interval outsiderange? exclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMwedS541LtZ2/jw9Ee9OzQVDLjwyRrilTXCK2uMV9bk/38A	
 (∪⊢∨¯1↓⍳)Js	Proper divisors of Js	Tacit	Monadic Function		Mathematical	factorisation factorization		
 (⍳⍨∪⍳⊢)Y	Index of first instance of each major cell	Tacit	Monadic Function		Sets	items elements indicesof location 1st		
 Is(⊃∘⍋⌷⊢)Y	Is-smallest (default: the smallest) major cell of Y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA	
@@ -1122,9 +1122,9 @@ Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalenc
 (¯2-/∘⍸1∘,)Iv	Segment lengths from ending indices	Tacit	Monadic Function		Data Conversion	chunk trailing converting change changing segments partitions		
 (2÷⍨⍳+⍸)⍨Nv	Assign ranking based on non-descending scores Nv (ties all get average ranking of used slots)	Tacit	Monadic Function		Mathematical	places place-values positions shared allotted allocation allocate ranks	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lHvZu1HvTs0gUwFYzA0VbAAQiPD//8B	
 X(⊃∘⍸∘~∊)Y	Position of first item in X not in Y	Tacit	Dyadic Function		Index Generation	cell element 1st		
-X(1=4 9⍸⍳+3×⍸)Y	Is Y within the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif ≤Y≤ ≤X≤ tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtTRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A	
+X(1=4 9⍸⍳+3×⍸)Y	Is Y within the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif ≤Y≤ ≤X≤ tao totalarrayordering interval inrange? inclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtTRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A	
 X(1=6 9⍸⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif <Y≤ <X≤ tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtzRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A	
-X(1≠4 9⍸⍳+3×⍸)Y	Is Y outside the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif >Y> >X> tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wUbB81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A	
+X(1≠4 9⍸⍳+3×⍸)Y	Is Y outside the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif >Y> >X> tao totalarrayordering interval outsiderange? inclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wUbB81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A	
 X(1≠6 9⍸⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif ≥Y> ≥X> tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wU7B81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A	
 (1=≢∘∪∘,)Y	Are all elements of simple Y equal?	Tacit	Monadic Function		Comparison	testif allsame allmatch? cells items allidentical allequal	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUccqIKmjqWCkYPyod4t6ojoXQSVJ6v//AwA	
 (≢∘∪⊢∨⍳)Js	Number-of-divisors of Js	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5		
