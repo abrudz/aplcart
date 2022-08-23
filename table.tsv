@@ -2087,7 +2087,7 @@ f{⌽⍺⍺\⌽⍵}Y	Scan from end with f	Dop	Monadic Function	Dyadic Operator	F
 f{⍵+¯11○⍺⍺ ⍵}Nv	Plot of scalaroid function f for data Nv	Dop	Monadic Function	Dyadic Operator	Mathematical	plotting		
 X f{⍺∘⍺⍺¨⍵}Y	Each-Right: Pair up the entirety of X with each element of Y	Dop	Dyadic Function	Monadic Operator	Function Application	eachr map ᑈ	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVjBSMFXSqH/XuetQxA0T27jq04lHv1loFQwMFIwMFY4P//wE	
 X f{⍺⍺∘⍵¨⍺}Y	Each-Left: Pair up each element of X with the entirety of Y	Dop	Dyadic Function	Monadic Operator	Function Application	eachl map ᐵ ⍩	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVjBSMFXSqH/XuAqGOGY96tx5aAWTWKhgaKBgZKBgb/P8PAA	
-f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criterion f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items		
+f{⍵/⍨⍺⍺ ⍵}Yv	Filter to only those elements of Yv that satisfy scalar criterion criteria f	Dop	Monadic Function	Monadic Operator	Selection	filtering where cells items		
 X f{⊃⍸⍺ ⍺⍺ ⍵}Y	Index of first element where X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2		
 Is f{⍺⍺⍣⍺⊢⍵}Y	Explicit function power: apply f on Is repeated Is times	Dop		Monadic Operator	Function Application	poweroperator functionpower fibonaccinumber		
 rslt←cond (⍺⍺ dfns.else ⍵⍵) argt	Condition f else g …	Dop		Dyadic Operator	Function Application	conditionaloperator		https://dfns.dyalog.com/n_else.htm
