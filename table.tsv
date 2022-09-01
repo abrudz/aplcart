@@ -916,7 +916,7 @@ Cv(1⍳⍨⍷)Dv	First occurrence of string Cv in string Dv	Tacit	Dyadic Functio
 (1↓0∘⍕)Js	Show all digits of integer Js (unknown digits as “_”)	Tacit	Monadic Function		Text	display print decimals full non-exponential format normal string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSM9UwMjUyNXA0NuKAiGoaP2iYbPOqY8ah3qiaS/P//AA	
 (1 0⍕10 10⊤⍳)Js	Vertically stack digits of ⍳Is (helps locating column positions)	Tacit	Monadic Function		Text	locate location column-wise columnwise string		
 (0<40∘⎕ATX)Dv	Is Dv defined?	Tacit	Dyadic Function		System	used? unavailable? name identifier symboltable exists? loaded? set?		
-(0≤40∘⎕ATX)Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity identifiers names allowed? valid? name? legal? dyalog permitted?		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
+(0≤40∘⎕ATX)Dv	Is Dv a valid APL identifier?	Tacit	Monadic Function		System	testif symbol validity identifiers names allowed? valid? name? legal? dyalog permitted? variable function operator label		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
 (0=40∘⎕ATX)Dv	Is Dv undefined?	Tacit	Dyadic Function		System	free? available? name identifier symboltable doesn't exist? not exists? missing?		
 (3=40∘⎕ATX)Dv	Is Dv a function?	Tacit	Monadic Function		System	fn? are functions?		
 (4=40∘⎕ATX)Dv	Is Dv an operator?	Tacit	Monadic Function		System	op? are operators?		
@@ -1475,7 +1475,7 @@ Is(⊣|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵}⍨)Js	Mult
 (1⌽'$^','\*' '\?' '\W'⎕R'.*' '.' '\\&')Dv	Convert globbing pattern to regex	Tacit	Monadic Function		Text	patterns wildcards characters filenames shell matching string regular expression regexp	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB/17FVXiVPXUY/RUldQj7EHEeHqQOkgdT2QiB5IIEZNXVNBPTEp2d7evqKySi9FS/3/fwA	
 '&[^;]+;'⎕R{3⊃,⎕XML⍠'Whitespace' 'Preserve'⊢'<_>',⍵.Match,'</_>'}Dv	Evaluate XML-style escape sequences (like &#10; and &#x0a;)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs quote &quot; apostrophe &apos; less-than lessthan &lt; greater-than greaterthan &gt; ampersand &amp; string		
 '\\(u...|x..)?.'⎕R{0 ⎕JSON⍠'Dialect' 'JSON5'⊢'"',⍵.Match,'"'}Dv	Evaluate JS-style escape sequences (like \v and \x0a but not octal)	Tacit	Monadic Function		Text	javascript ecmascript es5 strings escapes characters charvector charvecs backspace bs \b horizontaltab ht \t linefeed lf \n formfeed ff \f carriagereturn cr \r crlf cr+lf \r\n string nullbyte zero \0 \x verticaltab		
-('(?!\d)[\wÀ-ÖØ-Ýßà-öø-üþ∆⍙Ⓐ-Ⓩ]+'⎕S'&')Dv	Find all APL identifiers in Dv	Tacit	Monadic Function		Text	symbols names dyalog search for locate identify extract isolate		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
+('(?!\d)[\wÀ-ÖØ-Ýßà-öø-üþ∆⍙Ⓐ-Ⓩ]+'⎕S'&')Dv	Find all APL identifiers in Dv	Tacit	Monadic Function		Text	symbols names dyalog search for locate identify extract isolate valid legal allowed variable function operator label		https://help.dyalog.com/latest/#Language/Introduction/Variables/Names.htm
 (⊃∘⊃({-⍺+.×⍨(+\-+/)@(∘.=⍨⍳∘≢)⍵×∘.≤⍨⍳≢⍵}/≢⍴⊂))Nm	Determinant of any square matrix	Tacit	Function		Mathematical	Bird'sMethod Bird'sAlgortihm det() |A| det(A) det(Nm) |Nm|		
 dfns.esh digits	Shell for Eide-number sums	Dfn	Function		Mathematical	Eidenumbers rationalnumber balancedternary hexadecimal REPL		https://dfns.dyalog.com/n_esh.htm
 TimeStamp←TieNo dfns.compidn CompNo	Component timestamp in IDN format	Dfn	Function		System			https://dfns.dyalog.com/n_compidn.htm
