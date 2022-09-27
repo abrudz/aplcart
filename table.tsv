@@ -1387,7 +1387,7 @@ X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix Im (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points beginnings table change converting conversion		
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Monadic Function		Mathematical	informationtheory text message string		
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items		
-({+/,⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
+({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical			
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords		
