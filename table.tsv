@@ -1002,6 +1002,7 @@ Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical
 (≢÷1⊥÷)N	Harmonic mean	Tacit	Monadic Function		Mathematical	average subcontrary H() HM() harmonicmean		
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning		
 Mv(1⊥∘|-)Nv	Manhattan distance between two points in N-space	Tacit	Dyadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgPDQekMFQwUNw0ddSx91zKjR1QSKGYNk/v8HAA	
+(3600÷⍨60∘⊥)Ns	Convert hours,minutes,seconds to decimal degrees/hours	Tacit	Monadic Function	Data Conversion		dms hms hrs hs degs arcminutes arcseconds amins asecs represent split combined ∘'" °′″ coordinates location position	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKDM2MDDDt@KNqDYw4oiY4oqlKSAxIDE1IDD//w	
 Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital		
 (¯1⊥¨⍪⍀)N	An array that begins with 1↑N and has pair-wise sums 1↓N	Tacit	Monadic function		Mathematical	2+⌿⍣¯1⊢ 2+/⍣¯1⊢ inverse pairwise summation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq03fNS19NAKnRhNBWMdEwVTIDTjgsoaKWjr41Dy/z8A	
 (1∘⎕C≠⊢)D	Are characters of D lowercase?	Tacit	Monadic Function		Text	is lower-case? small? minuscules? minuscule? string		
@@ -1081,6 +1082,7 @@ Ms(⊢⊥⍨1+⊣)N	Future value of cash flows N at interest Ms	Tacit	Dyadic Fun
 2∘(+⌿⊥⍣¯1)J	Hamming weight	Tacit	Monadic Function		Mathematical	population popcount sideways summation count() bitcount() cardinality() popcnt() bitsum() pcnt() ones 1s trues truths		
 (|¯11|1⊥+\)Jv	ISBN check digit generator from ten first digits Jv	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber correct validate 1st		
 (2⊥1⊖2⊥⍣¯1⊢)Js	Survivor number in the Josephus problem of order Js	Tacit	Monadic Function		Mathematical	flavius winnner remaining person surviving winning permutation		
+(××0 60 60⊤3600×|)Ns	Convert decimal degrees/hours to hours,minutes,seconds	Tacit	Monadic Function	Data Conversion		dms hms hrs hs degs arcminutes arcseconds amins asecs represent split combined ∘'" °′″ coordinates location position	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dk8/PN1AwQyEHnUtMTYzMDg8vUZTwVDPyPT/fwA	
 Iv(⊢⊤⍨10*⊣)J	Decoding numeric codes J packed with field widths Iv (ZYYYZZZ:1 3 2)	Tacit	Dyadic Function		Data Conversion	unpack converting change changing		
 (⌹≡⍉∘+)Nm	Is Nm a Unitary matrix?	Tacit	Monadic Function		Mathematical	testif Unitary?		
 (11=∘⎕DR 2∘⌿)Y	Is Y Boolean?	Tacit	Monadic Function		Array Properties	testif binary base-2 base2		
@@ -1238,7 +1240,7 @@ Xm(⍉⍴⍨∘⌽∘⍴⍨)Yv	Matrix with shape of Xm and Yv as its columns	Tac
 M(+/∘×∘.-⍨)N	Test relations (¯2…2) of elements of N to ranges M (2=¯1↑⍴M)	Tacit	Dyadic Function		Comparison	cells items		
 (⊢∘.<∘⍳⌈/)Iv	Matrix with Iv[i] leading zeroes on row i	Tacit	Monadic Function		Boolean/Logical	0s zeros falses falsehoods table start beginning		
 (⊢∘.≥∘⍳⌈/)Iv	Matrix with Iv[i] leading ones on row i	Tacit	Monadic Function		Boolean/Logical	1st trues truths first table start beginning		
-X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1⌷X,2⌷X	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval items elements		
+X(⌊¯3+0.6×⍳+3×⍸)Y	Test relations (¯2…2) of major cells Y to range 1⌷X , 2⌷X	Tacit	Dyadic Function		Comparison	tao totalarrayordering interval items elements		
 (∨.∧⍨∨⊢)⍣≡Bm	Transitive closure	Tacit	Monadic Function		Boolean/Logical	adjacency list matrix contingency table		
 (28+0≠.=400 100 4∘.|⊢)J	Number of days in February of year J (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length		
 Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Function		Mathematical			
@@ -1290,6 +1292,7 @@ Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Ta
 (+⍨<1⊥∘∪⊢∨⍳)Js	Is Js an abundant number?	Tacit	Monadic Function		Mathematical	testif abundant?		
 (+⍨=1⊥∘∪⊢∨⍳)Js	Is Js a perfect number?	Tacit	Monadic Function		Mathematical	testif perfect?		
 (+⍨>1⊥∘∪⊢∨⍳)Js	Is Js a deficient number?	Tacit	Monadic Function		Mathematical	testif deficient?		
+Mv(¯2+1⊥∘.<⍪∘.≤)N	Test relations (¯2…2) of elements of N to range 1⌷Mv , 2⌷Mv	Tacit	Dyadic Function		Comparison	numbers numeric interval items elements		
 2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets base-2 base2		
 (⍉1+⊢⊤¯1+∘⍳×/)Jv	All tuples of corresponding elements of ⍳¨Jv (for large Jv)	Tacit	Monadic Function		Index Generation	indices major cells items combinations	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6Cg8ai301D7UdeiR11LDq0HsjpmPOrdfHi6vqaCsYKhgsl/AA	
 (⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels string		
@@ -1372,6 +1375,7 @@ Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mat
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	expand openup major cells items lists		
 Mv(⊢(⊢+.×⌹)1,∘⍪⊣)Nv	Predicted values of least squares linear fit given X values Mv and Y values Nv	Tacit	Dyadic Function		Mathematical	best fitting regression model correct y=ab^x		
+({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 {⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}B	Signal an error if any condition is not met (optional left argument: message on failure)	Tacit	Ambivalent Monadic Function, Dyadic Function		System	throwing raising unittest unit-test roger's hui's	https://tio.run/##SyzI0U2pTMzJT///P7G4OLWoROFR2wSF6ke9u4C0OkQoMz9PIS0xM6e0KFVd4VF3i4LBo46uR71brYCqFB71TQ32dPdz9FGwAMsVZ1QCdRrUws0ztTNUMFE4tN6ICypgDBMAAA	
 Iv(↓↑⍨⍴⍤⊢××⍤⊣+0=⊣)Y	Shift each dimension of Y by corresponding amount in Iv	Tacit	Dyadic Function		Structural	rotating shift-out shift-in shiftout shifting non-cyclically noncyclically ⌽ ⊖ padding-rotation rotate with		
 Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros after indices Iv	Tacit	Dyadic Function		Boolean/Logical	0s zeroes falses falsehoods list		
@@ -1387,7 +1391,6 @@ X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix Im (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points beginnings table change converting conversion		
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Monadic Function		Mathematical	informationtheory text message string		
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items		
-({≢⍸⍵}⌺3 3∊¨3+0,¨⊢)Bm	Conway's Game of Life: next generation	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical			
 (⊢,[0.5]'¯'\⍨≠∘' ')Dv	Underlines non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords		
@@ -1846,6 +1849,14 @@ Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (ex
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element		
 Is{(+/[⍺]÷⍺⊃⍴)⍵}N	Average (mean value) of elements of N along direction Is	Dfn	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items		
 Av{⍵[⍋(+\⍺)-1⌽⍺]}Bv	¯1-rotate on each subvector of Bv indicated by Av (Fast ∊¯1⌽¨Av⊂Bv)	Dfn	Dyadic Function		Structural	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists rotating shifting cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXP@rdGv2ot1tDO@ZR7y5NXcNHPXuBjNhaBfXEpOQUVzd39f//AQ	
+Mv{(⍵<⊃⍺)∨⍵≥⊃⌽⍺}N	Is N outside the range [ 1⌷Mv , 2⌷Mv )	Dfn	Dyadic Function		Comparison	testif numbers numeric >Y≥ >X≥ ≤M< ≤N< interval outsiderange?		
+Mv{(⍵≥⊃⍺)∧⍵<⊃⌽⍺}N	Is N within the range [ 1⌷Mv , 2⌷Mv )	Dfn	Dyadic Function		Comparison	testif numbers numeric ≤Y< ≤X< ≤M< ≤N< interval inrange?		
+Mv{(⍵≤⊃⍺)∨⍵≥⊃⌽⍺}N	Is Y outside the range ( 1⌷X , 2⌷X )	Dfn	Dyadic Function		Comparison	testif numbers numeric ≥Y≥ ≥X≥ ≥M≥ ≥N≥ interval outsiderange? exclusive		
+Mv{(⍵≥⊃⍺)∧⍵≤⊃⌽⍺}N	Is N within the range [ 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric ≤Y≤ ≤X≤ ≤M≤ ≤N≤ interval inrange? inclusive		
+Mv{(⍵<⊃⍺)∨⍵>⊃⌽⍺}N	Is N outside the range [ 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric >Y> >X> >M> >N> interval outsiderange? inclusive		
+Mv{(⍵>⊃⍺)∧⍵<⊃⌽⍺}N	Is N within the range ( 1⌷Mv , 2⌷Mv )	Dfn	Dyadic Function		Comparison	testif numbers numeric <Y< <X< <M< <N< interval inrange? exclusive		
+Mv{(⍵≤⊃⍺)∨⍵>⊃⌽⍺}N	Is N outside the range ( 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric ≥Y> ≥X> ≥M> ≥N> interval outsiderange?		
+Mv{(⍵>⊃⍺)∧⍵≤⊃⌽⍺}N	Is N within the range ( 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric <Y≤ <X≤ <M≤ <N≤ interval inrange?		
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which		
 I{⍉2⊥∨/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise OR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq		
 I{⍉2⊥∧/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise AND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq		
@@ -2734,7 +2745,6 @@ Mv(16808⌶)'Weibull'Jv	Weibull distribution of shape Jv with parameters Mv (loc
 {name}⎕WC'UpDown'	Spin buttons (Windows only)	GUI Object			Action	WindowsForms WinForms Create new		https://help.dyalog.com/latest/#GUI/Objects/UpDown.htm
 +∘÷⍣=⍨1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638	https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w	
 ~∘' '¨↓Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with all blank spaces removed	Expression		Performance	Text	speed optimised optimized quick blanks lists idiom string		
-(3600÷⍨60∘⊥)Ns	Convert hours,minutes,seconds to decimal degrees/hours	Tacit	Monadic Function	Data Conversion		dms hms hrs hs degs arcminutes arcseconds amins asecs represent split combined ∘'" °′″ coordinates location position	https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKDM2MDDDt@KNqDYw4oiY4oqlKSAxIDE1IDD//w	
 1+0≠40⎕ATX'⍺'	Number of arguments used in call (dfns/dops only)	Expression		Function Application	System	arity ambivalent ambivalence variadic leftargument 900⌶ run called monadic? monadically? or dyadic? dyadically? called applied		
 '__fi__DDD'(1200⌶)⍳7	Short Finnish weekday names ('MA' 'TI'…)	Expression			Text	weekdays of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
 '__fi__Dddd'(1200⌶)⍳7	Finnish weekday names ('Maanantai' 'Tiistai'…)	Expression			Text	weekdays of		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
@@ -2777,7 +2787,6 @@ op←{⍺⍺ ⍺}	Prototypical monadic dop deriving dyadic functions	Syntax	Dyad
 op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadic Function	Dyadic Operator	Definition	direct dynamic lambda anonymous curlybraces assignment header defining		
 ⍎⌽⍕⌈*○≡⍬	Meaning of life (modern)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything new updated	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAg4o2O4oy94o2V4oyIKuKXi@KJoeKNrP//	
 +/∧\' '=D	Fast: The number of leading blank spaces in each row of D	Expression		Performance	Text	speed optimised optimized quick blanks start beginning idiom string		
-(××0 60 60⊤3600×|)Ns	Convert decimal degrees/hours to hours,minutes,seconds	Tacit	Monadic Function	Data Conversion		dms hms hrs hs degs arcminutes arcseconds amins asecs represent split combined ∘'" °′″ coordinates location position	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dk8/PN1AwQyEHnUtMTYzMDg8vUZTwVDPyPT/fwA	
 3600÷⍨-/20⎕DT'JZ'	Local time-zone offset from UTC	Constant	Expression		Data Conversion	timezone tz utc+ utc- which		
 :Implements Trigger name1{,name2,name3,…}	Delare function as a trigger function called when any of the listed variables is changed	Syntax	Control	Keyword	Expression	declaration declare oo objectorientation		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Triggers/Triggers.htm
 '__fi__MMM'(1200⌶)29×⍳12	Short Finnish month names ('TAMMI' 'HELMI'…)	Expression			Text	of months		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Format%20Datetime.htm
