@@ -694,7 +694,7 @@ A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	
 X⊃¨∘⊂Y	Selective picking from array	Tacit	Monadic Function		Structural	chipmunk		
 Iv⌷⍨∘⊂Jv	Generate consolidated left argument for successive transposes Iv⍉Jv⍉Y	Tacit	Dyadic Function		Structural	optimise optimize		
 C∊⍨∘⊂Dv	Is string Dv a member of list of strings C	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector text		
-I∊⍨∘⍳Js	Boolean vector of length Js with ones in locations I (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2 ⍸⍣¯1	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
+I∊⍨∘⍳Jv	Boolean array of shape Jv with ones in locations Iv (inverse of ⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2 ⍸⍣¯1 vector length	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 +∘÷\N	Continued fraction convergents with terms N	Tacit	Monadic Function		Mathematical	series sequence		
 ,[⍳2]Y	Merge the leading two axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA	
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated		
@@ -974,7 +974,6 @@ Iv(↑⍴∘⊂)Y	Iv copies of Y	Tacit	Dyadic Function		Structural	copy repeat r
 (,∘⍳⍴)Y	All indices Of Y	Tacit	Monadic Function		Index Generation	indicesof		
 Xv(∧/∊⍨)Yv	Is Xv a Superset of Yv?	Tacit	Dyadic Function		Sets	testif superset? contains ⊇		
 Xv(∊⍨×⍳)Yv	Changing index of an unfound element to zero (slow)	Tacit	Dyadic Function		Index Generation	missing cell item change converting conversion		
-I(~∊∘⍳)Js	Boolean vector of length Js with zeros in locations I	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2		
 X(⊃∘⍸≠)Y	Index of first differing element in X and Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof unequal different 1st locating cell item difference location		
 Xv(⍸-∊⍨)Yv	Indices of items of Yv in right-inclusive intervals with cut-offs Xv	Tacit	Dyadic Function		Index Generation	left-exclusive intervalindex iotaunderbar bins groups ranges buckets classes classifying classification items (a,b] ]a,b] ⍺<x≤b	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHV09/UPVFTQe9e7QfdTR9ah3haaCukuko4@/uzoXVJGRgomCGaoSQ6CgMVDYFChh/v8/AA	
 X(⊃∘⍸∊)Y	Index in X of the first element which is a member of Y	Tacit	Dyadic Function		Index Generation	find locate positionof locating memberof occurrence location 1st		
@@ -1056,6 +1055,7 @@ Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Str
 I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function		Index Generation	1st		
 (⊢!⍨0,⍳)Js	Coefficients of the binomial	Tacit	Monadic Function		Mathematical			
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
+I(~∊⍨∘⍳)Jv	Boolean array of shape Jv with zeros in locations Iv	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2 vector length		
 Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
 X(6=⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif <Y< <X< tao totalarrayordering interval inrange? exclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMxsH/Vu1jY@PP1R7w5NBQMu3HKGeOSM8MgZ45Ez@f8fAA	
 (⍸1=⊢∨⍳)Js	Totatives of Js	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)		
