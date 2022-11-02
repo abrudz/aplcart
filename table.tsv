@@ -1248,7 +1248,7 @@ Ms(⊢∘⊂+¯0.5 0.5×⊣)N	Stereo pair (Eye separation Ms)	Tacit	Dyadic Funct
 Mv(2*∘÷⍨1⊥2*⍨-)Nv	Euclidean distance between two points in N-space	Tacit	Dyadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMoFDDSOtRx4zD2x/1rjB81LUUyOtdoasJlDBWMFEw@P8fAA	
 (¯1*1⊥∘∊⊢<,\)Jv	Levi-Civita symbol	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol LC		
 (10⊥∘,∘⍉10∘⊥⍣¯1)Jv	Encode a vector of positive integers as equal-width fields of digits in an integer	Tacit	Monadic Function		Data Representation	serialise serialize serialisation serialization join	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DA0edS191DFDB4gf9XYCuUAaKNK7@NB6Q00FY0MFQwUjcwWD//8B	
-(⊢⎕NS⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text removing erasing erase eliminate eliminating delete deleting string		
+(⊢⎕NS⎕NS∘⍬⊢⎕EX⊢⍎)Dv	Make scripted namespace Dv into unscripted namespace	Tacit	Monadic Function		System	remove text removing erasing erase eliminate eliminating delete deleting string un-scripting de-scripting unscripting descripting		
 M((××∘⌊|)÷)N	Truncated division	Tacit	Dyadic Function		Mathematical	integer intdiv() % // divmod() T-division	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTc0UAAiGK2hcXj64emPOmY86umq0Ty8XRMoYwzGQPj/PwA	
 (⊢↑⍨¯1+⍳∘' ')Dv	First word in Dv	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning string		
 ('FDCBA'⌷⍨∘⊂0 60 70 80 90∘⍸)J	Students grades given score	Tacit	Monadic Function		Mathematical			
