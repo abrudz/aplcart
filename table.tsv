@@ -123,7 +123,7 @@ Iv⌷Y	Index Y using indices Iv	Primitive	Dyadic Function		Selection	squishquad 
 ⍳Jv	Indices of all items of array of shape Jv	Primitive	Monadic Function		Index Generation	iota sequence ɩ ι positions locations cells elements naturals numbers	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMFIw/v8fAA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Generator.htm
 X⍳Y	Index of: First indices in X of major cells Y	Primitive	Dyadic Function		Index Generation	iota firstindexin firstindexof ɩ ι findingfirst locatingfirst locatefirst firstpositionof 1st items elements firstlocation searching	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1d4VHvZqCAs5s6V25iiQJI2ljB6FHvFqC4GRdUA1gGqM5Uwez/fwA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm
 Xv⍳Y	Index of keys Y in key vector Xv	Primitive	Dyadic Function		Index Generation	find locate positionof locating location list	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZNS1RXUnfKTgKRzYlGOusKj3s0wAZDk//8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Index%20Of.htm
-∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function		Structural	flattening flattened raze razing ϵ ε ∈ flatten() cells items join vector character vectors strings 	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBAUjBeNHvVse9W4243rUNxUo8qijS8FAASiroGGuYKGpYIkkDlFsqKCemJSs/v8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Enlist.htm
+∊Y	Enlist: Simple vector from elements of Y	Primitive	Monadic Function		Structural	flattening flattened raze razing ϵ ε ∈ flatten() cells items join vector character vectors strings	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBAUjBeNHvVse9W4243rUNxUo8qijS8FAASiroGGuYKGpYIkkDlFsqKCemJSs/v8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Enlist.htm
 X∊Y	For each item of X, 1 if found in Y, else 0	Primitive	Dyadic Function		Sets	testif epsilon isin membership containedin has ϵ ε ∈ memberof elementof cell searching	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QTk5LVFUwUHnV0AUkgTx1EJKeoc@UmlgDlFYwUjB/1bnnUu9mMC6IDKA5WbQaUMlcw@f8fAA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Membership.htm
 ⍸B	Indices of all 1s in B	Primitive	Monadic Function		Index Generation	⎕U2378 wheretrues iotaunderbar locationsoftrues positions ones trues truths	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5QMFQwAEJDBUOupNzEEpCokYLxo94tBmAZMOZCUg5S9P8/AA	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Where.htm
 ⍸Bm	List of arcs from adjacency matrix Bm	Primitive	Monadic Function		Mathematical	⎕U2378 connections table directed graph vector	https://tio.run/##SyzI0U2pTMzJT///PzE3sUThUdsEBWMF40e9WwwUDBUMwNAQDA24HvVNBUk/6t2hAFL7/z8A	https://help.dyalog.com/latest/#Language/Primitive%20Functions/Where.htm
@@ -940,6 +940,7 @@ A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		M
 M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine ⌾		
 M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine converting change changing		
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing		
+(≢↑1∘↓)Y	Shifting Y left/up one position (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list vector 1		
 (1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1		
 (⌊1+10∘⍟)J	Number of digits in strictly positive integers in J	Tacit	Monadic Function		Mathematical	needed positions width representation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GWobGjzqmPGod76mgqGZoYWCoYKRuaGFkcX//wA	
 (180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Circular/Trigonometric			
@@ -1100,6 +1101,7 @@ Is(⊢+⊣×0=⊢)J	Change all 0s in J into Is	Tacit	Dyadic Function		Mathematic
 M(○××3÷⍨⊢)N	Volume of cone with height M and radius N	Tacit	Dyadic Function		Circular/Trigonometric	lengths		
 I(⊣*⍨1+÷⍨)N	Effective rate of interest with nominal rate N for I periods	Tacit	Dyadic Function		Mathematical			
 As○⍨∘(¯10+~)⍨N	Mirror complex N across x-axis if As	Tacit	Dyadic Function		Circular/Trigonometric	conjugate negateimaginary mirroring reflecting reflection		
+(-∘≢↑¯1∘↓)Y	Shifting Y right/down one position (padding on left/top)	Tacit	Dyadic Function		Selection	leftshift list vector 1		
 M(×∘×⍨∘|)N	Resign: Transfer of sign from M to N	Tacit	Dyadic Function		Mathematical	signum		
 (⊢÷⌈⌿∘|)N	Normalisation by Infinity-norm	Tacit	Monadic Function		Mathematical	L∞-normalise L∞-normalize L∞-normalization L-∞	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgKOKKosO34oyI4oy/4oiYfCkgMyA0//8	
 (×⌿*∘÷≢)N	Geometric mean	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean		
