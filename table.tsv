@@ -1849,7 +1849,7 @@ Ms{⍺←0 ⋄ ⍺,⍨⍵÷⌽⍳≢⍵}Nv	Integral of polynomial Nv with descen
 Xv{(⊂⍺)∊⌽∘⍵¨⍳≢⍵}Yv	Are circular lists Xv and Yv identical (excluding phase)	Dfn	Dyadic Function		Comparison	testif vectors same? equivalent? equal?		
 Ms{⍵⍀⍨(⌈⍺)≠⍳1+≢⍵}Y	Adding an empty cell into Y at fractional position Ms	Dfn	Monadic Function		Structural	expand insert item element		
 Is{(+/[⍺]÷⍺⊃⍴)⍵}N	Average (mean value) of elements of N along direction Is	Dfn	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items		
-I{⍵⊂[1]⍨(≢⍵)⍴⍺↑1}Y	Cut Y into partitions of length I (last partition can be shorter)	Dfn	Dyadic Function		Structural	chop split separate chunks segments		
+I{⍵⊂[1]⍨(≢⍵)⍴⍺↑1}Y	Cut Y into partitions of length I (last partition can be shorter)	Dfn	Dyadic Function		Structural	chop split separate chunks segments non-overlapping nonoverlapping windows		
 Av{⍵[⍋(+\⍺)-1⌽⍺]}Bv	¯1-rotate on each subvector of Bv indicated by Av (Fast ∊¯1⌽¨Av⊂Bv)	Dfn	Dyadic Function		Structural	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists rotating shifting cyclically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXP@rdGv2ot1tDO@ZR7y5NXcNHPXuBjNhaBfXEpOQUVzd39f//AQ	
 Mv{(⍵<⊃⍺)∨⍵≥⊃⌽⍺}N	Is N outside the range [ 1⌷Mv , 2⌷Mv )	Dfn	Dyadic Function		Comparison	testif numbers numeric >Y≥ >X≥ ≤M< ≤N< interval outsiderange?		
 Mv{(⍵≥⊃⍺)∧⍵<⊃⌽⍺}N	Is N within the range [ 1⌷Mv , 2⌷Mv )	Dfn	Dyadic Function		Comparison	testif numbers numeric ≤Y< ≤X< ≤M< ≤N< interval inrange?		
@@ -1881,7 +1881,7 @@ Av{g[⍋(+\⍺)[g←⍒⍵]]}Y	Grade down (⍒) for sorting each subarray of Y i
 {s←0 ⋄ ⌈/{s⊢←0⌈s+⍵}¨⍵}Nv	Largest sum of any contiguous subvector	Dfn	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm		
 Mv{×11○(⍵-1↓⍺)×+2-/⍺}Ns	Sign (side) of point Ns relative to bisections of complex plane by directed edges of Mv	Dfn	Dyadic Function		Mathematical	signum geometrical geometry	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMvA6tNwSShgrVh6cbGj6a3q3xqHerruGjtsmPendpHp6ubaSrD2TVKhh6GXCRrMkAWZMhVCMRNv3/DwA	
 Iv{(¯1+⊃⍵)+?⍺⍴1--/⍵}Jv	Iv-shaped array of random numbers in range Jv[1]…Jv[2] (inclusively, with replacement)	Dfn	Dyadic Function		Index Generation	between integers		
-Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Y into partitions of lengths Iv	Dfn	Dyadic Function		Structural	chop split separate chunks segments		
+Iv{(-⍺)↑¨↑∘⍵¨+\⍺}Y	Cut Y into partitions of lengths Iv	Dfn	Dyadic Function		Structural	chop split separate chunks segments non-overlapping nonoverlapping windows		
 {⍵.((⊂,∘⊂⍎)¨⎕NL¯2)}Y	Extract name-value pairs from namespaces Y	Dfn	Monadic Function		Data Conversion	object unpack namevalue dictionary array contents converting change changing get names and their values		
 X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Dfn	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location		
 X{(-≢⍴⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to rank of X	Dfn	Dyadic Function		Structural	conform align number dimensions pad axes		
