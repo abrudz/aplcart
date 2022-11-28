@@ -2271,6 +2271,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 4070⌶Y	Dyalog registry location and user documents folder (unofficial, Windows only)	I-beam	Constant	Monadic Operator	System	key home directory locate sessionfile		
 50100⌶Js	Line Count	I-beam	Monadic Function	Monadic Operator	System	⊃⎕lc ↑⎕lc linecounter number state stack suspension ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Line%20Count.htm
 5170⌶0	Access "secret" Link storage location in the workspace (unofficial)	I-beam	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	System	store retrieve links information		
+5174⌶Dv	Objects associated with the filename Dv (unofficial)	I-beam	Constant	Monadic Operator	System	⎕fix source text vector ibeam string		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/List%20Loaded%20Files.htm
 5176⌶0	List Loaded Files	I-beam	Constant	Monadic Operator	System	⎕fix source text vector ibeam string		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/List%20Loaded%20Files.htm
 5177⌶⍬	List Loaded File Objects	I-beam	Constant	Monadic Operator	System	⎕fix source text vector ibeam string		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/List%20Loaded%20File%20Objects.htm
 5178⌶Yv	Remove Loaded File Object Info	I-beam	Monadic Function	Monadic Operator	System	⎕fix source text delete drop without ibeam remove removing erasing erase eliminate eliminating deleting string		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Remove%20Loaded%20File%20Object%20Info.htm
