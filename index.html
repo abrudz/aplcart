@@ -9,9 +9,9 @@
   <body onload="I()" id="b" class="">
     <div class="h">
       <label title="what to q̲uery for" for="q">Tell me about:&nbsp;</label><input id="q" title="what to q̲uery for" accesskey="q" oninput="Q()" autocomplete="off" placeholder="something to achieve/improve/optimise"/>
-      <a class="o" title="ex̲punge query"        href="#" id="x" accesskey="x" onclick="X()">×</a>
+      <a class="o" title="ex̲punge query"        href="#" id="x" accesskey="x" onclick="X();event.preventDefault()">×</a>
       <a class="o" title="e̲xplanation" target="_blank" id="e" accesskey="e" href="https://github.com/abrudz/aplcart#usage">?</a>
-      <a class="o" title="c̲opy query URL" href="#" id="c" accesskey="c" onclick="C()">#</a>
+      <a class="o" title="c̲opy query URL" href="#" id="c" accesskey="c" onclick="C();event.preventDefault()">#</a>
       <p>X,<s> </s>Y,<s> </s>Z:<s> </s>any<s> type array </s> M,<s> </s>N:<s> </s>num<s>eric array </s> I,<s> </s>J:<s> </s>int<s>eger array </s> A,<s> </s>B:<s> </s>Bool<s>ean array </s> C,<s> </s>D:<s> </s>char<s>acter array </s> f,<s> </s>g,<s> </s>h:<s> </s>f<s>unctio</s>n<s> </s> ax:<s> bracket </s>axis<s> </s> s:<s> </s>scal<s>ar </s> v:<s> </s>vec<s>tor </s> m:<s> </s>mat<s>rix</s></p>
     </div>
     
@@ -24,7 +24,7 @@
       <a class="o" title="source code at github.com/abrudz/a̲plcart" target="_blank" id="a" accesskey="a" href="https://github.com/abrudz/aplcart">
         <img src="/github.svg"></a>
       <a class="o" title="d̲onate" accesskey="d" target="_blank" id="s" href="https://github.com/sponsors/abrudz">♥</a>
-      <a class="o" title="cycle b̲lack/g̲rey/w̲hite theme"  id="w" href="#" onclick="W()"> </a>
+      <a class="o" title="cycle b̲lack/g̲rey/w̲hite theme"  id="w" href="#" onclick="W();event.preventDefault()v"> </a>
       <i accesskey="w" onclick="W('w')"></i><i accesskey="g" onclick="W('g')"></i><i accesskey="b" onclick="W('b')"></i><i accesskey="r" onclick="R()"></i>
     </div>
   </body>
