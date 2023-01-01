@@ -1,5 +1,5 @@
 @font-face{font-family:P;src:local('APL333'),url(/apl333.ttf)}
-@font-face{font-family:M;src:local('APL385 Unicode'),url(/apl385.ttf)}
+@font-face{font-family:M;src:local('APL386 Unicode'),url(/APL386.ttf)}
 i{display:none}
 *{font-family:P}
 body{color:#222;overflow:hidden;position:relative;font-size:16px;content:"w";background:#ddd}     .w{background:#ddd;filter:invert(0)}
