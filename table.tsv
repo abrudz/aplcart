@@ -1307,7 +1307,7 @@ Is(,(⊣↑1⍴⍨⊢)⍤0)Jv	Expansion mask (left argument for ⍀) for fields 
 ((1↓⊢,1↑0∘⍴)⍤1)Y	Rightmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighbours neighbors neighboring lefthand bitshift cells items		
 X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1st binary base-2 base2		
 ((×/⊢-≠)3∘dfns.pco)Js	Euler's totient function (fastest above about 1000)	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)		
-((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function		Sets	nub distinctitems uniqueelemenets matrix items elements		
+((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function		Sets	⍸⍣¯1⍤⊢⌸ dictionary nubin distinctitems uniqueelemenets matrix items elements		
 ('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 ISO-8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO-8601:2005 LST string		
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing		
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing string		
