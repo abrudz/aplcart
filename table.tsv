@@ -1234,6 +1234,7 @@ X(⊢∘-∘≢↑⍪⍨)Y	Shift after: Appending X at back/right/bottom of Y, p
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2		
 Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string text		
 (⊂⍤?⍨∘≢⌷⊢)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements		
+Is(⊣,⊣+∘⍳-⍨)Js	Consecutive integers from Is to Js (Is≤Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence range seq() sequence … ...		
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum		
 (+/⍒∘|⊃¨⊂)Nv	More accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	summation of summing floats precisionloss without avoiding accumulation accumulating errors imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list		
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text		
@@ -1391,7 +1392,6 @@ Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros aft
 M((1-⊣×1-⊢)×1-⊢×1-⊣)N	Probabilistic XNOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying		
 Xs(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Yv	Remove leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending removing erasing erase eliminate eliminating delete deleting		
 ((1,⍨⍪)⊢⍤/⍥,⍪,~)Bv	Expansion vector (left argument for \ or ⍀) to insert a new element after each one in Bv	Tacit	Monadic Function		Structural	expand openup major cells items lists		
-Is(⊣,⊣+∘⍳-⍨)Js	Consecutive integers from Is to Js (Is≤Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence range seq() sequence … ...		
 Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (descending if Is>Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence range seq() sequence … ...		
 X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic Function		Sets	major cells elements trailing ending		
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	expand openup major cells items list		
@@ -1763,12 +1763,14 @@ Is{~0∊2</[⍺]⍵}N	Is N Strictly Increasing along axis Is?	Dfn	Dyadic Functio
 Is{~0∊2≤/[⍺]⍵}N	Is N Non-decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif ascending? rising? up ordered? sorted? dimension		
 Is{~0∊2≥/[⍺]⍵}N	Is N Non-increasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nonincreasing? sorted? dimension		
 Is{~0∊2>/[⍺]⍵}N	Is N Strictly Decreasing along axis Is?	Dfn	Dyadic Function		Mathematical	testif descending? falling? down ordered? Nondecreasing? sorted? dimension		
+{0⎕JSON¨⍵⊆⍨⍵=⎕UCS 10}Dv	Convert JSON Lines text Dv to APL vector	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from JSONLines2APL javascriptobjectnotation import parse deserialise deserialize converting change changing string		
 note←{new←⎕PW {old←⎕PW}} dfns.wrapnote note	Wrap text paras in note vect	Dfn	Function		Text	words linevector box-drawingcharacters boxdrawingcharacters string		https://dfns.dyalog.com/n_wrapnote.htm
 {⍵ ⎕NPUT⍨⊂⎕SE⎕WG'Log'}Dv	Save Session log as file Dv	Dfn	Monadic Function		System	store dyalog transcript text scrollback scroll-back string		
 X{0=40⎕ATX⍵:⍺ ⋄ ⍎⍵}Dv	Using default value X if Dv does not exist	Dfn	Dyadic Function		System	fallback missing variable		
 Is{⍺↑⍵⍪⍺⌿¯1↑⍵}Y	Stretch Y to length Is repeating the last major cell as necessary	Dfn	Dyadic Function		Structural	elongate continue final element item		
 {⍵/⍨~'  '⍷⍵}Dv	Remove multiple blanks	Dfn	Monadic Function		Text	consecutive spaces removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu6JOXUFB/VHvdiC3VkHdM00BBPLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnp6v//AwA	
 Cv{≢⍺⎕S 3⍠'ML'1⊢⍵}Dv	Does Dv have a match for regular expression Cv?	Dfn	Dyadic Function		Text	find has? match? contains? search testif string regex regexp		
+X{(⊂1⎕JSON¨⍺)⎕NPUT⍵}Dv	Convert APL vector X to JSON Lines file Dv	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from APL2JSONLines javascriptobjectnotation export generate serialise serialize converting change changing string		
 {(⍎⍵⎕NS⍬).⎕CY ⍵}Dv	Import workspace Dv into a namespace so an item can be called using wsname.name	Dfn	Monadic Function		System	load fetch get include from .dws		
 {fns}←{space←⎕THIS} dfns.fnrepl (from to)	Function string replacement	Dfn	Function		Text	stringreplacement		https://dfns.dyalog.com/n_fnrepl.htm
 {⎕D[1+⍉10⊥⍣¯1⊢⍵]}Jv	Zero-padded character matrix from vector of integers	Dfn	Monadic Function		Data Representation	rows with 0s zeroes zeros 0-padded fill	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqgbRLtKH2o95OQ4NHXUsf9S4@tN7wUdeiR71bY2sVjA0VDBSMzA0t/v8HAA	
@@ -1825,6 +1827,7 @@ Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryp
 Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated		
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method		
 Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at point Ms	Dfn	Dyadic Function		Mathematical			
+{∊(1⎕JSON¨,⊆⍵),¨⎕UCS 10}Y	Convert APL vector Y to JSON Lines text	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from APL2JSONLines javascriptobjectnotation export generate serialise serialize converting change changing string		
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Remove multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu8LoUccKfQMdIEtdQf1R5wKgcK2CugIYeKaBqfy8nEoFTxArOy@1XEEhI79coSQfyE0BEQVF@QWpRQrl@UUpQF5xQWJyZl46SLH6//8A	
 {⍵⌽⍨+/∧\' '=⍵}D	Justifying left	Dfn	Monadic Function		Text	leftalign left-align string		
 Av{¯2-⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Sum (+/) of each subvector of N indicated by Av (fast +/¨Av⊂Nv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells reduce reductions		
@@ -1837,6 +1840,7 @@ Ms{⍵×⍺÷⍵[⊃⍒|⍵]}Nv	Scale Nv so the maximum element is Ms	Dfn	Dyadic
 Is{⍵⌿⍨(⍋⍒⍵)∊⍳⍺}Y	The Is largest cells of Y in order of occurrence	Dfn	Dyadic Function		Selection	biggest greatestif items elements		
 {2∨/0,≠\⍵=''''}Dv	Locations of texts between and including quotes	Dfn	Monadic Function		Text	strings string		
 {2∧/0,≠\⍵=''''}Dv	Locations of texts between and excluding quotes	Dfn	Monadic Function		Text	strings string		
+{0⎕JSON¨(⊃⎕NGET⍵1)~⊂''}Dv	Convert JSON Lines file Dv to APL vector	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from JSONLines2APL javascriptobjectnotation import parse deserialise deserialize converting change changing string		
 Is{(-⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to Is	Dfn	Dyadic Function		Structural	number dimensions pad axes		
 Is{⍵⍪(⍺-≢⍵)⌿¯1↑⍵}Y	Extending Y with last cell of Y to length Is	Dfn	Dyadic Function		Structural	filling enlongating item element		
 X{⍺⌿⍨(≢⍵)≥⍵⍳⍺}Y	Intersection (∩) on major cells for any rank	Dfn	Dyadic Function		Sets	setand higher high-rank any-rank highrank anyrank items elements		
