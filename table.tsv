@@ -1507,7 +1507,7 @@ vvec←graph dfns.search from	Breadth-first search of graph ⍺	Dfn	Function		St
 vvec←tree dfns.stpath to	Path through spanning tree ⍺ to vertex ⍵	Dfn	Function		Structural	graph spanningtree		https://dfns.dyalog.com/n_stpath.htm
 vecs←seps dfns.segs vec	⍺-separated segments of vector ⍵	Dfn	Function		Structural	words split text list partitions string		https://dfns.dyalog.com/n_segs.htm
 m←dfns.m91 n	McCarthy's M91 function	Dfn	Function		Mathematical			https://dfns.dyalog.com/n_m91.htm
-mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table combinations		https://dfns.dyalog.com/n_cmat.htm
+mat←m dfns.cmat n	⍺-combination matrix of ⍳⍵	Dfn	Function		Mathematical	expressiontransformation Pascal'striangle fibonaccinumber Pascalstriangle table combinations of range		https://dfns.dyalog.com/n_cmat.htm
 mat←dfns.pmat n	Numeric matrix of all permutations of length Js	Dfn	Monadic Function		Mathematical	combinatorics ordered without replacement list vector table		https://dfns.dyalog.com/n_pmat.htm
 match←this dfns.refmatch that	Space reference match	Dfn	Function		Comparison	testif comparenamespaces namespacecomparison blank identical equal sameas equivalent		https://dfns.dyalog.com/n_refmatch.htm
 bmat←dfns.assign costs	Hungarian method cost assignment	Dfn	Function		Mathematical	Hungarianmethod maximise optimise graph independentzeros zeroes 0s		https://dfns.dyalog.com/n_assign.htm
@@ -2162,7 +2162,7 @@ f{⍎'⍺⍺ ⍵ ⋄ ⍵' ⋄ ⍺⍺}Y	Apply no-result function “en passant”
 {⍺(⍺⍺ ⍵⍵ ⍺⍺⍨)⍵}	Church Boolean XNOR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying		
 {⍺(⍺⍺⍨ ⍵⍵ ⍺⍺)⍵}	Church Boolean XOR	Dop	Dyadic Function	Dyadic Operator	Boolean/Logical	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 f{↑⍺⍺⍨/(⌽⍵),⊂⍺}Y	Fold (reduce) from the left	Dop	Monadic Function	Monadic Operator	Function Application	reduction typenotation reducing folding		
-f{⍺⍺¨⍣(~0∊⍴⍵)⊢⍵}Y	For each: f on items of Y unless Y is empty	Dop	Monadic Function	Monadic Operator	Function Application	foreach mapping cells noelements avoid prototypes fill conditionally apply void of		
+f{⍺⍺¨⍣(~0∊⍴⍵)⊢⍵}Y	For each: f on items of Y unless Y is empty	Dop	Monadic Function	Monadic Operator	Function Application	foreach mapping cells noelements avoid prototypes fill conditionally apply void of skip don't not if conditional		
 X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Dop	Dyadic Function	Monadic Operator	Mathematical	look-up matrix		
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	converting change changing		
 X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements		
