@@ -630,7 +630,7 @@ Iv⍴∘⊂Y	Array of shape Iv filled with copies of Y	Tacit	Dyadic Function		St
 ⊂∘⊃Y	Corner element of a (non-empty) array Y[1;1;1…]	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvFgUjBR19hUe9my25IJLq6lCGwqOupkcdMx51NWOq/f8fAA	
 Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function		Mathematical	sequence	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GSsYP@rd8qh3s6WmwuHpjzpmAJkKxv//AwA	
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwETB@FHvFgM9I1MuqOij3s2POmY86lyEJPf/PwA	
-,∘⍳Yv	All tuples of corresponding elements of ⍳¨Yv (for small Yv)	Tacit	Monadic Function		Index Generation	indices major cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
+,∘⍳Jv	All tuples of corresponding elements of ⍳¨Jv (for small Jv of max length 15)	Tacit	Monadic Function		Index Generation	indices major cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
 C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st text	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA	
 Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
 ⍸@⊢B	Replace 1s in Boolean array B with their enumeration	Tacit	Monadic Function		Boolean/Logical	identify label indices where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5weNS1SMFQwQCIQSSY/v8fAA	
@@ -1300,7 +1300,7 @@ Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Ta
 (+⍨>1⊥∘∪⊢∨⍳)Js	Is Js a deficient number?	Tacit	Monadic Function		Mathematical	testif deficient?		
 Mv(¯2+1⊥∘.<⍪∘.≤)N	Test relations (¯2…2) of elements of N to range 1⌷Mv , 2⌷Mv	Tacit	Dyadic Function		Comparison	numbers numeric interval items elements		
 2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets base-2 base2		
-(⍉1+⊢⊤¯1+∘⍳×/)Jv	All tuples of corresponding elements of ⍳¨Jv (for large Jv)	Tacit	Monadic Function		Index Generation	indices major cells items combinations	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6Cg8ai301D7UdeiR11LDq0HsjpmPOrdfHi6vqaCsYKhgsl/AA	
+(⍉1+⊢⊤¯1+∘⍳×/)Jv	All tuples of corresponding elements of ⍳¨Jv (for large Jv even above length 15)	Tacit	Monadic Function		Index Generation	⍳Jv odometer indices major cells items combinations	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6Cg8ai301D7UdeiR11LDq0HsjpmPOrdfHi6vqaCsYKhgsl/AA	
 (⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels string		
 M((+⌿÷≢)2*⍨-)N	Mean squared error	Tacit	Dyadic Function		Mathematical	MSE deviation MSD	https://tio.run/##AToAxf9hcGwtZHlhbG9n///ijpXihpAgMSAyIDMgKCgr4oy/w7fiiaIpMirijagtKSAwLjkgMi4xIDMuMf//	
 Is(,(⊣↑1⍴⍨⊢)⍤0)Jv	Expansion mask (left argument for ⍀) for fields of length Jv to uniform field of length |Is	Tacit	Dyadic Function		Structural	expand harmonise harmonize align masking bitmask bit-mask		
