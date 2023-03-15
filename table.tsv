@@ -1057,7 +1057,8 @@ Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Str
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods		
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element		
 I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function		Index Generation	1st		
-(⊢!⍨0,⍳)Js	Coefficients of the binomial	Tacit	Monadic Function		Mathematical			
+(⊢!⍨0,⍳)Js	Coefficients of the binomial (exact, fastest below 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
+(1,(×\⌽÷⊢)∘⍳)Js	Coefficients of the binomial (approximated, fastest above 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
 I(~∊⍨∘⍳)Jv	Boolean array of shape Jv with zeros in locations Iv	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2 vector length		
 Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
