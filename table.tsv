@@ -1058,7 +1058,6 @@ Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Str
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element		
 I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function		Index Generation	1st		
 (⊢!⍨0,⍳)Js	Coefficients of the binomial (exact, fastest below 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
-(1,(×\⌽÷⊢)∘⍳)Js	Coefficients of the binomial (approximated, fastest above 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
 (⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
 I(~∊⍨∘⍳)Jv	Boolean array of shape Jv with zeros in locations Iv	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2 vector length		
 Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
@@ -1346,6 +1345,7 @@ Mv(*@1⊢∘⍟⌹1,∘⍪⊣)Nv	Coefficients of least squares exponential fit g
 ((¯1↓⊢,⍨1↑0∘⍴)⍤1)Y	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items		
 Is(⌈(⊃>⍥|⌽,)⌊)Js	Choose the number closer to zero (the positive one if tied)	Tacit	Dyadic Function		Selection	pick closest to 0 smallest least lowest magnitude absolute value		
 (⊃⍤⌽⍤⍸⍤1≠∘' ')D	Indices of last non-blanks in rows	Tacit	Monadic Function		Index Generation	nonblanks nonspaces characters text row-wise rowwise horizontally string		
+(1,(×\⌽÷⊢)∘⍳)Js	Coefficients of the binomial (approximated, fastest above 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
 (⊢∧(∧⍀∨⍀=⊢))B	First group of ones	Tacit	Monadic Function		Boolean/Logical	sequence run trues truths 1st		
 ((×⌿2 2⍴1,⍴)⍴2 1 3∘⍉)Y	Juxtapositioning planes of rank 3 array Y	Tacit	Dyadic Function		Structural	merge layers		
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers		
@@ -1362,6 +1362,8 @@ X(⍳⍨∘⊖⍨-⍨1+∘≢⊣)Y	Last indices in X of major cells Y, 0 if not 
 Iv(⊢⌷⍨∘⊂~⍨∘⍳∘≢)Y	Remove major cells from Y at indices Iv	Tacit	Dyadic Function		Selection	elements items without positions removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFEwUzBQ0HnUtetSz/VHvikcdMx51NdVBWb2bQWTnIk0F9cSk5JTUNPX//wE	
 Iv(⍳⍤≢⍤⊣⌷∘⊃⍤0⌷⍤0 99)Y	Merging Y[1] Y[2] Y[3], … under control of Iv (1:cell from Y[1], 2:cell from Y[2], …)	Tacit	Dyadic Function		Selection	zipping merge merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 (0~⍨¯1-2-/∘⍸1,1,⍨~)Bv	Lengths of groups of ones in Bv	Tacit	Monadic Function		Boolean/Logical	runs 1s trues truths		
+(2÷⍨⍋∘⍋+⍒∘⍋∘⌽)Nv	Assign ascending ranking based on scores Nv (ties all get average ranking of used slots)	Tacit	Monadic Function		Mathematical	places place-values positions shared allotted allocation allocate ranks ⍒⍋ ⍒⍤⍋	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lFv96OOGUBS@1HvJAgLRPbs1VQwBkNTBQsgNDL8/x8A	
+(2÷⍨⍋∘⍒+⍒∘⍒∘⌽)Nv	Assign descending ranking based on scores Nv (ties all get average ranking of used slots)	Tacit	Monadic Function		Mathematical	places place-values positions shared allotted allocation allocate ranks ⍒⍒ ⍒⍤⍒	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lFv96OOGY96J2kDMYQFInv2aioYg6GpggUQGhn@/w8A	
 Xv(≢⍤⊣↓¨,⊂⍨⊣⍷,)Yv	Split Yv at occurrences of Xv (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing split() segments partitions by delimiters delimited string text		
 (⍳∘≢+.×⍨1 ¯1∘.=⍉)Jm	Changing connection matrix Jm (¯1 to 1) to a node matrix	Tacit	Monadic Function		Mathematical	graph connectivity table change converting conversion		
 (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm	Euclidean distance table for points in N-space (one point per row)	Tacit	Monadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jLQedcw4vP1R7wrDR11LgbzeFbqaj3qXGIKwgqUlkK8AVWuiYPSod4uBAggaAiGY/P8fAA	
