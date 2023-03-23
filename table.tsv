@@ -1069,7 +1069,7 @@ X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Functio
 Is(⊃∘⍋⌷⊢)Y	Is-smallest (default: the smallest) major cell of Y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA	
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Selection	sort() up increasing sorting reordering ordering		
 (⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Array Properties	testif ascending? increasing? rising? up ordered? sorted? nondecreasing		
-(⊢≡∘⍋⍋)Yv	Is Yv permutation vector?	Tacit	Monadic Function		Array Properties	testif permutation? 1…ns		
+(⊢≡∘⍋⍋)Nv	Is Nv a permutation vector?	Tacit	Monadic Function		Array Properties	testif ispermutation? 1…ns		
 Is(⊃∘⍒⌷⊢)Y	Is-largest (default: the largest) major cell of Y	Tacit	Monadic Function		Selection	greatestof maximum biggest lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNR76RHPdsfdS3SVABrhinAIf3/PwA	
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Selection	sort() down decreasing sorting reordering ordering		
 (⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?		
@@ -1195,6 +1195,7 @@ X(⍸-⍳≤∘≢⊣)Y	Indices of major cells of Y in right-inclusive intervals
 (+/∘∪⊢∨⍳)Js	Sum of positive divisors of Js	Tacit	Monadic Function		Mathematical	sigma σ(n)	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgKCsv4oiY4oiq4oqi4oio4o2zKSAxMv//	
 (⊃∘⍋∘|⊃⊢)Nv	First number with smallest magnitude	Tacit	Monadic Function		Mathematical	minimum absolute value closest nearest to 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ai3G0jWgDhdizQVjBUOrTdRMPr/HwA	
 X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering		
+X≡⍥(⊂∘⍋⌷⊢)Y	Are X and Y permutations of each other?	Tacit	Dyadic Function		Comparison	testif anagrams? isanagram? isanagramof? ispermutation? ispermutationof? permutationsof? permutations?		
 (⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?		
 (⊃∘⍒∘|⊃⊢)Nv	First number with largest magnitude	Tacit	Monadic Function		Mathematical	maximum absolute value biggest farthest furthest away from 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA	
 (⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?		
@@ -1312,7 +1313,6 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 (⊃0⎕NINFO⍠1,∘'/*')Dv	List directory Dv (. for current directory)	Tacit	Monadic Function		System	contents ls files directories	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GwDZeZl5afmPehcY6jzqmKGur6Wuqa5fWlykzkVYnZ76//8A	
 ((⎕D,⎕A)⌷⍨1+⊂)J	Translate digits to characters (bases 2 through 36)	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing		
 ('correct',⍨'in'/⍨~)Bs	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing string		
-X≡⍥{(⊂⍋⍵)⌷⍵}Y	Is Xv a permutation of Yv?	Tacit	Dyadic Function		Array Properties	testif anagrams? anagram? permutation? permutations?		
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items		
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2		
@@ -1904,7 +1904,6 @@ X{l-(l←1+≢⍺)|⍵⍳⍨⊖⍺}Y	Last indices in X of major cells Y	Dfn	Dyad
 X{(-≢⍴⍺)↑(99⍴1),⍴⍵}Y	Increase rank of Y to rank of X	Dfn	Dyadic Function		Structural	conform align number dimensions pad axes		
 X{(⊃0⍴⊂)@(∊∘⍺)⊢⍵}Y	Replacing elements of Y in set X with prototypical elements	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update cells items zeroes falses falsehoods		
 X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Dfn	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus higher high-rank any-rank highrank anyrank items elements remove removing erasing erase eliminate eliminating delete deleting		
-X{(S⍺)≡(S←⊂∘⍋⌷⊢)⍵}Y	Are X and Y permutations of each other?	Dfn	Dyadic Function		Comparison	testif permutation? permutationof?		
 X{⍺⍪⍵⌿⍨(≢⍺)<⍺⍳⍵}Y	Union (∪) on major cells of any rank	Dfn	Dyadic Function		Sets	setor higher high-rank any-rank highrank anyrank items elements		
 {⍵⊂⍤⊢⌸⍥,⍨+/↑⍳⍴⍵}Ym	Extract the anti-diagonals of a matrix (without wrap-around) as vector of vectors	Dfn	Monadic Function		Structural	table SW-NE extract collect select		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
