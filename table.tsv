@@ -1001,7 +1001,8 @@ X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index 
 Mm(1 2 1 2⍉∘.+)Nm	Sum of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables		
 Mm(1 2 1 2⍉1∘.+)Nm	Shur sum	Tacit	Dyadic Function		Mathematical			
 Mm(1 2 1 2⍉1∘.×)Nm	Shur product	Tacit	Dyadic Function		Mathematical			
-Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical	table		
+Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical			
+Mm{,⍤2,[⍳2]1 3 2 4⍉⍺∘.×⍵}Nm	Kronecker product	Tacit	Dyadic Function		Mathematical	matrixdirectproduct ⊗ Zehfussmatrix Zehfussproduct	https://tio.run/##SyzI0U2pTMzJT///31HhUdsEBSMF40e9WwwVDq03UTDXObQeyFcw5nICy5komADlLIBylkBspmCqA1JnDFVrpACSAWFjoLgRkDYFYkOuR31TQZodFap1HvUuMdKJftS72SjWEGiuEci8zke9ux51zNA7PP1R79ZaBaf//wE	
 (≢÷1⊥÷)N	Harmonic mean	Tacit	Monadic Function		Mathematical	average subcontrary H() HM() harmonicmean		
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning		
 Mv(1⊥∘|-)Nv	Manhattan distance between two points in N-space	Tacit	Dyadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgPDQekMFQwUNw0ddSx91zKjR1QSKGYNk/v8HAA	
