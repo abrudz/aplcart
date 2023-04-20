@@ -1237,7 +1237,7 @@ X(⊢∘-∘≢↑⍪⍨)Y	Shift after: Appending X at back/right/bottom of Y, p
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2		
 Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string text		
 (⊂⍤?⍨∘≢⌷⊢)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements		
-Is(⊣,⊣+∘⍳-⍨)Js	Consecutive integers from Is to Js (Is≤Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence range seq() sequence … ...		
+Is(⊣,⊣+∘⍳-⍨)Js	Consecutive integers from Is to Js (Is≤Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence inclusiverange seq() sequence … ... values between		
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum		
 (+/⍒∘|⊃¨⊂)Nv	More accurately sum a vector of floating point numbers	Tacit	Monadic Function		Mathematical	summation of summing floats precisionloss without avoiding accumulation accumulating errors imprecision 64-bit IEEE754-2008 128-bit binaryfloatingpoint list		
 (⌽∘,¨,\∘⌽)Yv	Suffixes of a vector	Tacit	Monadic Function		Structural	string text		
@@ -1397,7 +1397,7 @@ Iv(⊢∘≢≥∘⍋⊢∘⍳∘≢,⊣)Y	Expansion vector for Y with zeros aft
 M((1-⊣×1-⊢)×1-⊢×1-⊣)N	Probabilistic XNOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying		
 Xs(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Yv	Remove leading, multiple and trailing Xs's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending removing erasing erase eliminate eliminating delete deleting		
 ((1,⍨⍪)⊢⍤/⍥,⍪,~)Bv	Expansion vector (left argument for \ or ⍀) to insert a new element after each one in Bv	Tacit	Monadic Function		Structural	expand openup major cells items lists		
-Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (descending if Is>Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence range seq() sequence … ...		
+Is(⊣,⊣-∘(⍳∘|××)-)Js	Consecutive integers from Is to Js (descending if Is>Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence inclusiverange seq() sequence … ... values between		
 X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic Function		Sets	major cells elements trailing ending		
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	expand openup major cells items list		
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix Im (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points beginnings table change converting conversion		
@@ -1940,7 +1940,7 @@ Xs{⍵@(1+⍳⍴⍵)⊢⍺⍴⍨2+⍴⍵}Y	Surround any-rank array Y with scalar
 X{(⊂⍋∊⍳∘≢¨⍺ ⍵)⌷⍺⍪⍵}Y	Merge X and Y alternately	Dfn	Dyadic Function		Structural	faro weave dovetail the technique zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
 {(+/∨\' '≠⌽⍵)↑¨↓⍵}Dm	Fast: A nested vector comprising simple character vectors constructed from the rows of Dm (which must be of depth 1) with trailing spaces removed	Dfn	Monadic Function	Performance	Text	dtb speed optimised optimized quick blanks lists ending split from table idiom matrix to removing string		
 Xv{⍵[⍋(1+≢⍺)⊥⍺⍳⍉⍵;]}Ym	Sorting rows of Ym according to key Xv (alphabetising)	Dfn	Dyadic Function		Mathematical	alphabetizing order		
-{⍺←⎕UCS 10 ⋄ 1↓¨⍺(=⊂⊢)⍺,⍵}Dv	.split() split-on cut-at Vector of character vectors constructed from the linefeed-separated character vector Dv (which must be of depth 1)	Dfn	Ambivalent Monadic Function, Dyadic Function		Text	from to delimited segmented LF newline string		
+{⍺←⎕UCS 10 ⋄ 1↓¨⍺(=⊂⊢)⍺,⍵}Dv	Vector of character vectors constructed from the linefeed-separated character vector Dv (which must be of depth 1)	Dfn	Ambivalent Monadic Function, Dyadic Function		Text	.split() split-on cut-at from to delimited segmented LF newline string		
 Av{(⍺/⍵)∧z/1⌽z←⍺/⍨⍺≥⍵}Bv	All-true (∧/) in each subvector of Bv indicated by Av (fast ∧/¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists reduce reductions		
 Av{(⍺⌿⍵)∧a⌿1⊖a←⍺⌿⍨⍵≤⍺}Bv	All elements true (∧⌿) on each subvector of Bv partioned by Av (fast ∧⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector major cells items ∧/¨Av⊂[1]Bv		
 Av{(⍺⌿⍵)≥a⌿1⊖a←⍺⌿⍨⍵∨⍺}Bv	Any element true (∨⌿) on each subvector of Bv partitioned by Av (fast ∨⌿¨Av⊂[1]Bv)	Dfn	Dyadic Function		Boolean/Logical	speed quick sub-vector cell item ∨/¨Av⊂[1]Bv		
