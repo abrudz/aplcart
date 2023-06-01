@@ -2087,8 +2087,8 @@ rslt←init (acc dfns.ltrav) list	List traversal	Dop		Monadic Operator	Structura
 rslt←larg (selector dfns.logic) rarg	Logical function array	Dop		Monadic Operator	Boolean/Logical	conditionaloperator Booleanfunctions truthtables		https://dfns.dyalog.com/n_logic.htm
 rslt←part (redn dfns.pred) rarg	Partitioned reduction	Dop		Monadic Operator	Function Application	partionedreduction sub-vectors segmented sub-lists subvectors sublists separated separator delimiter		https://dfns.dyalog.com/n_pred.htm
 rslt←(f dfns.alt g) mat	Alternant	Dop		Dyadic Operator	Mathematical	determinant permanent innerproduct SAX immanant Imm() Immλ() Imm(A) Immλ(A) Imm(Nm) Immλ(Nm) perm() perm(A) perm(Nm) per() per(A) per(Nm)		https://dfns.dyalog.com/n_alt.htm
-rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting		https://dfns.dyalog.com/n_and.htm
-rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting		https://dfns.dyalog.com/n_and.htm
+rslt←(f dfns.and g) arg	Sequential test	Dop		Dyadic Operator	Boolean/Logical	lazyevaluation sequentialtestif adjacentguard && shortcutting shortcircuiting short-circuiting		https://dfns.dyalog.com/n_and.htm
+rslt←(f dfns.or g) arg	Sequential test	Dop		Dyadic Operator	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting shortcircuiting short-circuiting		https://dfns.dyalog.com/n_and.htm
 rslt←(fn dfns.vwise) ref	Variable-wise: apply ⍺⍺ to each var in space ⍵	Dop		Monadic Operator	Function Application	variablewise blank namespace		https://dfns.dyalog.com/n_vwise.htm
 rslt←(fun dfns.file) fname	Apply function to native file tie	Dop		Monadic Operator	Native Files	nativefile railwaydiagram		https://dfns.dyalog.com/n_file.htm
 rslt←(fun dfns.limit) arg	Function power limit (fixpoint)	Dop		Monadic Operator	Function Application	functionpower palindrome arithmetic-geometricmean goldenmean arithmeticgeometricmean ⍣≡		https://dfns.dyalog.com/n_limit.htm
