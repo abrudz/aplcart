@@ -656,7 +656,7 @@ Mv⌊.×Nv	Minimum of Nv with weights Mv	Tacit	Dyadic Function		Mathematical	sma
 Mv+.÷Nv	Sum of reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence		
 Mv-.÷Nv	Sum of alternating reciprocal series Mv÷Nv	Tacit	Dyadic Function		Mathematical	sequence		
 Xv+.=Yv	Counting pairwise matches (equal elements) in two vectors	Tacit	Dyadic Function		Comparison	cells items lists		
-X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	list compare equality match		
+X∧.=Yv	Comparing vector Yv with rows of array X	Tacit	Dyadic Function		Comparison	list compare equality match	https://tio.run/##SyzI0U2pTMzJT///P1fhUdsEIJ6o7paZl6euoO6eWFSJoBzz8hKBlHNiUQ6QcklE5qGqdEpNLFXnetQ3FWReLpyh8KhjuZ4tVNX//wA	
 Xm∧.=Ys	Boolean rows of Xm all equal to scalar Ys	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2 compare equality match		
 Nv×.*B	Products over subsets of Nv specified by B	Tacit	Dyadic Function		Mathematical	sub-sets		
 Iv∘.+Jv	Addition Table for Iv down and Jv across	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix		
@@ -942,7 +942,7 @@ M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	D
 M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine converting change changing		
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing		
 (≢↑1∘↓)Y	Shifting Y left/up one position (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list vector 1		
-(1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1		
+(1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUe8WTQV1j9ScnHx1LhySuCTU//8HAA	
 (⌊1+10∘⍟)J	Number of digits in strictly positive integers in J	Tacit	Monadic Function		Mathematical	needed positions width representation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GWobGjzqmPGod76mgqGZoYWCoYKRuaGFkcX//wA	
 (180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Circular/Trigonometric			
 (○4×*∘2)N	Area of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball		
@@ -1068,11 +1068,11 @@ X(6≠⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Functio
 (⍳⍨∪⍳⊢)Y	Index of first instance of each major cell	Tacit	Monadic Function		Sets	items elements indicesof location 1st		
 Is(⊃∘⍋⌷⊢)Y	Is-smallest (default: the smallest) major cell of Y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA	
 (⊂∘⍋⌷⊢)Y	Sort Ascending	Tacit	Monadic Function		Selection	sort() up increasing sorting reordering ordering		
-(⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Array Properties	testif ascending? increasing? rising? up ordered? sorted? nondecreasing		
+(⍳∘≢≡⍋)N	Is N Non-decreasing?	Tacit	Monadic Function		Array Properties	testif ascending? increasing? rising? up ordered? sorted? nondecreasing	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/1dmsqGBsqmBgqmFoqGJlxEaPIFLcqI3MFQwsjCwhhYmpp8P8/AA	
 (⊢≡∘⍋⍋)Nv	Is Nv a permutation vector?	Tacit	Monadic Function		Array Properties	testif ispermutation? 1…ns		
 Is(⊃∘⍒⌷⊢)Y	Is-largest (default: the largest) major cell of Y	Tacit	Monadic Function		Selection	greatestof maximum biggest lexicographically item element	https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNR76RHPdsfdS3SVABrhinAIf3/PwA	
 (⊂∘⍒⌷⊢)Y	Sort Descending	Tacit	Monadic Function		Selection	sort() down decreasing sorting reordering ordering		
-(⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?		
+(⍳∘≢≡⍒)N	Is N Non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/1TtJUMDY0UTA0tVQwMjPlIkKRAh5VRuYGBgqGFkYWEMLE1PL/fwA	
 X(∧\∘⌽=)Y	Indicate trailing elements that are equal	Tacit	Dyadic Function		Comparison	show matching onright cells items masking indicating ending		
 X(∧\∘⌽≠)Y	Indicate trailing elements that are unequal	Tacit	Dyadic Function		Comparison	show different onright cells items masking indicating ending		
 (+\¯1↓1∘,)Jv	Starting positions of subvectors having lengths Jv	Tacit	Monadic Function		Index Generation	sub-vectors sub-lists sublists		
@@ -1198,9 +1198,9 @@ X(⍸-⍳≤∘≢⊣)Y	Indices of major cells of Y in right-inclusive intervals
 (⊃∘⍋∘|⊃⊢)Nv	First number with smallest magnitude	Tacit	Monadic Function		Mathematical	minimum absolute value closest nearest to 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ai3G0jWgDhdizQVjBUOrTdRMPr/HwA	
 X(⌷⍨∘⊂∘⍋⍨)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering		
 X≡⍥(⊂∘⍋⌷⊢)Y	Are X and Y permutations of each other?	Tacit	Dyadic Function		Comparison	testif anagrams? isanagram? isanagramof? ispermutation? ispermutationof? permutationsof? permutations?		
-(⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?		
+(⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxe7s1FYwNTRQMTS0VjMxMuYhWqkBQrZG5gYGCoYWRBYQwMbX8/x8A	
 (⊃∘⍒∘|⊃⊢)Nv	First number with largest magnitude	Tacit	Monadic Function		Mathematical	maximum absolute value biggest farthest furthest away from 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA	
-(⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?		
+(⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxeydpKhgbKpgYKphaKhiZcRGv1JSQWiNzBUMLIwsIYWJqafD/PwA	
 (⍉∘↑⊂⍤¯1¨)Yv-	Convert inverted table to table (character data as matrices; keep trailing spaces)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKn@qG@qc6R6Slpesfp/IPtR2wQFqJSCxqPezkcdMx61TXzU1fSod8mh9YaHVmgqaBgpmDzq3aLumKSg4JySmqYOFDJUMAKS5grGmv//AwA	
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st		
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths		
@@ -1208,7 +1208,7 @@ X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		I
 (××∘⌊0.5+|)N	Rounding to nearest whole number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()		
 (=∘⌊⍨*∘0.5)N	Indicate which numbers in N are perfect squares.	Tacit	Monadic Function		Mathematical	square? squares? perfect integers	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bB91zHjU0/Wod4UWkGWgZ6qpYKhgpGCsYKJgqmCmYK5goWCpYGjw/z8A	
 (⌊/∘.=⌈⌿)Nm	Boolean matrix indicating saddle points	Tacit	Monadic Function		Mathematical	minimax indicate masking table binary base-2 base2		
-(2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	testif isprime primality		
+(2=0+.=⍳|⊢)Ns	Is Ns a prime?	Tacit	Monadic Function		Mathematical	testif isprime primality	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jGwNtPVsH/VurnnUtUhTwYwLh4Q5LgkLXBKWuCQMDXDKGP7/DwA	
 (÷⍳∘.+¯1+⍳)Js	Hilbert matrix of order Js	Tacit	Monadic Function		Mathematical	table sorting reordering ordering		
 (1 2 1⍉⊢∘.-⌊/)Nm	Move set of points Nm into first quadrant	Tacit	Monadic Function		Mathematical	1st		
 (0≠.=400 100 4∘.|⊢)J	Is J (YYYY) a leap year?	Tacit	Monadic Function		Mathematical	testif gregoriancalendar 29thfeb29 29february29th		
@@ -1271,7 +1271,7 @@ M((××∘⌊|)÷)N	Truncated division	Tacit	Dyadic Function		Mathematical	integ
 (⊃{2⊃⎕VFI⍞},⊢)Ns	Giving a default value for input of scalar number	Tacit	Monadic Function		Mathematical	prompt fallback		
 Cs{⍺←⎕UCS 10 ⋄ ,⍺,⍵}Dm	Matrix to segmented string using Cs or linefeed as delimiter (includes initial delimiter)	Tacit	Ambivalent Monadic Function, Dyadic Function		Structural	vectorise vectorize serialise serialize list table delimited MATtoSS segmented character text separated separator		
 '-'@(=∘' ')Y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format string		
-((~,∩)∘' ')Dv	Moving all blanks to end of text	Tacit	Monadic Function		Text	spaces trailing ending string		
+((~,∩)∘' ')Dv	Moving all blanks to end of text	Tacit	Monadic Function		Text	spaces trailing ending string	https://tio.run/##SyzI0U2pTMzJT/@vnpJZXJCTWKmu8KhvqnOkgnpKWl6x@n8g51HbBAWopIKGRp3Oo46Vmo86ZqgrqGsqqHukFqUqJKUqFBckJqcC1f8HAA	
 X{⊃(⍋-⍒)⍺⍵}Y	General comparison according to Total Array Order (¯1:X precedes Y, 0:X≡Y, 1:X succeeds Y)	Tacit	Dyadic Function		Comparison	cmp() <=> >-< characters nested any array generalised generalized tao spaceship space-ship three-way compare comparing		
 (⍕' '@(0∘=))N	Formatting with zero values replaced with blanks	Tacit	Monadic Function		Text	hidden 0s empty cells items elements zeroes zeros spaces falses falsehoods string		
 (××∘⌊|+1≤2||)N	Rounding to nearest even number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
@@ -1303,7 +1303,7 @@ Ms(⊢∘⌽⊥⍨∘÷1+⊣)Nv	Present value of cash flows Nv at interval Ms	Ta
 (+⍨=1⊥∘∪⊢∨⍳)Js	Is Js a perfect number?	Tacit	Monadic Function		Mathematical	testif perfect?		
 (+⍨>1⊥∘∪⊢∨⍳)Js	Is Js a deficient number?	Tacit	Monadic Function		Mathematical	testif deficient?		
 Mv(¯2+1⊥∘.<⍪∘.≤)N	Test relations (¯2…2) of elements of N to range 1⌷Mv , 2⌷Mv	Tacit	Dyadic Function		Comparison	numbers numeric interval items elements		
-2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets base-2 base2		
+2∘(⍉⍴⍨⊤¯1+∘⍳*)Js	All binary representations with Js bits (truth table with Js variables, matrix for choosing all subsets)	Tacit	Monadic Function		Boolean/Logical	sub-sets base-2 base2	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMHnXM0HjU2/mod8uj3hWPupYcWm@oDRR71LtZS1PB@P9/AA	
 (⍉1+⊢⊤¯1+∘⍳×/)Jv	All tuples of corresponding elements of ⍳¨Jv (for large Jv even above length 15)	Tacit	Monadic Function		Index Generation	⍳Jv odometer indices major cells items combinations	https://tio.run/##SyzI0U2pTMzJT/8PBI/6pj5qm6Cg8ai301D7UdeiR11LDq0HsjpmPOrdfHi6vqaCsYKhgsl/AA	
 (⎕D⌷⍨∘⊂1+10⊥⍣¯1⍳)Js	Vertical column headings for character matrix of width Js	Tacit	Monadic Function		Text	labels string		
 M((+⌿÷≢)2*⍨-)N	Mean squared error	Tacit	Dyadic Function		Mathematical	MSE deviation MSD	https://tio.run/##AToAxf9hcGwtZHlhbG9n///ijpXihpAgMSAyIDMgKCgr4oy/w7fiiaIpMirijagtKSAwLjkgMi4xIDMuMf//	
@@ -1759,8 +1759,8 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode		https://dfns.dyalog.com/n_putfile.htm
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing		https://dfns.dyalog.com/n_test.htm
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem		https://dfns.dyalog.com/n_wsdiff.htm
-Xv(+/∧\⍤⌽⍤=)Yv	Count number of trailing elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright items end match		
-Xv(+/∧\⍤⌽⍤≠)Yv	Count number of trailing elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix different onright items end differ		
+Xv(1⊥=)Yv	Count number of trailing elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright items end match	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnXPyS1PUFTQMH3UttdVUUA8oAvH//wcA	
+Xv(1⊥≠)Yv	Count number of trailing elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix different onright items end differ	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfMScyqLS9QVNAwfdS191LlAEyxWkp9bqf7/PwA	
 {1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
@@ -1793,7 +1793,7 @@ Av{⍵⌷⍨⊂⌽⍒+\⍺}Y	Reversal (⊖) of each subvector of Y indicated by 
 X{⍺.##=⍵.##}Y	Are X and Y sibling objects?	Dfn	Dyadic Function		Systems	testif siblings? sameparents		
 Is{⍵⌿⍨0=⍺|⍳≢⍵}Y	Taking every Is'th major cell of Y	Dfn	Dyadic Function		Selection	nth element item		
 Is{⍵⌿⍨0≠⍺|⍳≢⍵}Y	Remove every Is'th cell of Y	Dfn	Dyadic Function		Selection	filter item element removing erasing erase eliminate eliminating delete deleting		
-X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an element in X	Dfn	Dyadic Function		Selection	cell item table		
+X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym	Rows of non-empty matrix Y starting with an element in X	Dfn	Dyadic Function		Selection	cell item table	https://tio.run/##SyzI0U2pTMzJT///P1fhUdsEIJ6o7pNflJqrrqCeWVBcCqJT8nPyi4B0cWYJkEzMTQVRyfl5xanJJaklpSCpxJTMgszi5My8dCAnNQeokOtR31SQgeqJqZn5peoK1Y96tz7q2f@od8Wj3l2POrpAjK7F@kDRWoXc//8B	
 Iv{⍵⌷⍨⊂⍺∪⍳≢⍵}Y	Move major cells at positions Iv to the front/top	Dfn	Dyadic Function		Structural	index indices numbers bring promote element row item matrix table first	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwUqh/1bn3Us/1R74pHXU2Penc96lj1qHfzo85FQPFaBXWP1JycfPX//wE	
 Av{≠\⍵\⍺≠¯1↓0,⍺}Bv	Compression vector Av for partitioned array indicated by Bv (Fast Av/⍨≢¨⊆⍨Bv)	Dfn	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists replicate generate produce construct argument separated separator delimiter	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAuPpR54KYR71bgXgXkHloveGjtskGOkBeLVjeAK4SiP//BwA	
 Av{⍵[⍋⍺++\⍺]}Bv	1-rotate on each subvector of Bv indicated by Av (Fast ∊1⌽¨Av⊂Bv)	Dfn	Dyadic Function		Structural	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists rotating shifting cyclically separated separator delimiter	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXP@rdGv2ot/tR7y5t7RggGVuroJ6YlJzi6uau/v8/AA	
