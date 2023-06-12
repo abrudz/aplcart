@@ -705,7 +705,7 @@ Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Func
 ∘.⊢⍨Yv	Square matrix with Yv as rows	Tacit	Monadic Function		Structural	tomatrixof table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S16FHvCgVDBSMFYwWT//8B	
 ∘.⊣⍨Yv	Square matrix with Yv as columns	Tacit	Monadic Function		Structural	tomatrixof table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S1@FHvCgVDBSMFYwWT//8B	
 Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists rows		
-Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply		
+Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1QwUXjUtfRR74pHHTMe9a5SMFAwVDACSik86p2rkKZRoalgq2BccWiTboW2iUJafpFChUJmnkK1gY6hjpGOce3//wA	
 Cv⎕NPUT⍨∘⊂Dv	Write text (vector or vector of vectors) Dv to Unicode file Cv	Tacit	Dyadic Function		System	native files dump cat save to 🐈 ascii ansi Windows-1252 UTF-8 UTF-16LE UTF-16BE UTF-32LE UTF-32LE vtv charvec charactervector textvector string	https://tio.run/##SyzI0U2pTMzJT///Xz23Mi0zJ1WvpKJEXUHjUd9Uv4DQkEe9Kx51zHjU1aSpoO6RmpOTr66gHp5flJOizgVU8ahtggJIobtriAKy9v//AQ	
 ⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists		
 I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range		
@@ -992,7 +992,7 @@ M(⌊∘-⍣2)N	Force numbers N to range (-M)≤N≤M	Tacit	Dyadic Function		Mat
 (⍉⍪∘⍉)Y	Join (⍪) planes of rank 3 array Y to form a single matrix	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flattening flattened reducing table		
 X(≡∨1∊⍷)Y	Is X a Subarray of Y?	Tacit	Dyadic Function		Structural	testif contains? has? isin? issubarray? appearsin? sub-array sub-string substring subvector sub-vector submatrix sub-matrix sub-sequence subsequence sub-list sublist sub-table subtable		
 X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index Generation	beginningsof sub-array sub-string substring subvector sub-vector sub-matrix submatrix sub-sequence subsequence sub-list sublist sub-table subtable 1st		
-(⌊0.5+⊢)N	Rounding to nearest integer (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring closestinteger nearestinteger nint()		
+(⌊0.5+⊢)N	Rounding to nearest integer (favouring up)	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring closestinteger nearestinteger nint()	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GeiZaj/qWqSpYGyoZ6JgqGeqYGmkZ/b/PwA	
 (1 ¯1∘.×⊢)N	±N increasing rank	Tacit	Monadic Function		Mathematical	plusminus dimensions axes		
 (¯1 1∘.×⊢)N	∓N increasing rank	Tacit	Monadic Function		Mathematical	minusplus dimensions axes		
 (32+1.8∘×)N	Celsius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celsius f2c() ftoc() converting change changing		
