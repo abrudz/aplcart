@@ -1750,7 +1750,7 @@ Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic F
 Iv{⍵⌷¨⍨⊂⊂⍺}Yv	Inverted Table Select: records Iv from inverted table Yv ((⊂Iv)⌷Y where Y is unverted Yv)	Dfn	Dyadic Function		Selection			
 Iv{~⍺⍀1⍴⍨⍴⍵}Y	Locate fill elements formed by expanding Y by Iv	Dfn	Dyadic Function		Boolean/Logical	fills indicate mask indication of paddings bitmask bit-mask		
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements string		https://dfns.dyalog.com/n_cols.htm
-Cv{0::⍎⍵ ⋄ ⍎⍺}Dv	Execute Alternate: Execute Dv but if it errors, execute Cv	Dfn	Ambivalent Monadic Function,Dyadic Function		System	⎕EA APL2		
+Cv{0::⍎⍺ ⋄ ⍎⍵}Dv	Execute Alternate: Execute Dv but if it errors, execute Cv	Dfn	Ambivalent Monadic Function,Dyadic Function		System	⎕EA APL2		
 {(⊂⍋⍵)⌷⍵}Y	Fast: Y sorted into ascending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering idiom		
 {(⊂⍒⍵)⌷⍵}Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering idiom		
 Cv{⍎⍺,'←⍵'}Y	Assign values Y to names Cv	Dfn	Dyadic Function		System	assignment name-value names-values dynamic variable		
