@@ -1355,6 +1355,7 @@ Is(⌈(⊃>⍥|⌽,)⌊)Js	Choose the number closer to zero (the positive one if
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers		
 (⊢⌽⍨1-1⊥⍨=∘' ')Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright right-align flushrightflush rightjustifyright table string		
 Is(⊣⊥⊣|(+/⊥⍣¯1))J	Digital sum in base Is	Tacit	Dyadic Function		Mathematical			
+((⎕NUNTIE⊢⎕NREAD⍤,∘83 ¯1)⎕NTIE∘0)Dv	Read raw signed bytes of file Dv	Tacit	Monadic Function		Native Files			
 (∩∘(⎕D,⎕A,⎕C⎕A))Dv	Remove non-alphanumeric ASCII characters	Tacit	Monadic Function		Text	punctuation removing erasing erase eliminate eliminating delete deleting string		
 (~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without removing erasing erase eliminate eliminating deleting string		
 Cv{∇⌊⎕DL⍵⊣0#.⎕SAVE⍺}&Ns	Save workspace as Cv every Ns seconds	Tacit	Dyadic Function		System	auto-save autosave auto-saving autosaving automatic backup back-up continuous in the background		
@@ -1606,6 +1607,8 @@ n←¯1 dfns.pco ⍵	number of primes less than ⍵	Dfn	Dyadic Function		Mathema
 p←4 dfns.pco ⍵	next prime larger than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
 p←dfns.pco ⍵	⍵-th prime	Dfn	Monadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
 p←¯4 dfns.pco ⍵	next prime smaller than ⍵	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
+Xv(1⊥=)Yv	Count number of trailing elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright items end match	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnXPyS1PUFTQMH3UttdVUUA8oAvH//wcA	
+Xv(1⊥≠)Yv	Count number of trailing elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix different onright items end differ	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfMScyqLS9QVNAwfdS191LlAEyxWkp9bqf7/PwA	
 graph←graph dfns.inslink (from to)	Insert edge ⍵ in graph ⍺	Dfn	Function		Mathematical			https://dfns.dyalog.com/n_inslink.htm
 graph←graph dfns.remlink (from to)	Remove edge ⍵ from graph ⍺	Dfn	Function		Structural	unweightedgraph delete drop without removing erasing erase eliminate eliminating deleting		https://dfns.dyalog.com/n_remlink.htm
 array←(from repl) dfns.subs array	Vector substitution	Dfn	Function		Text	stringreplacement list string		https://dfns.dyalog.com/n_subs.htm
@@ -1759,8 +1762,6 @@ caps←{ack ign←'' ''} dfns.von chars	Capitalise first letters of names	Dfn	Fu
 {size}←{term←2} dfns.putfile (fid rows)	Put rows to text-file	Dfn	Function		Native Files	nativefile textfile Unicode		https://dfns.dyalog.com/n_putfile.htm
 {ok}←{opts←'q'} dfns.test script	Run test script: no news => good news	Dfn	Function		System	qualityassurance unittesting autoformat QA testing		https://dfns.dyalog.com/n_test.htm
 {excl←'⍵'} dfns.wsdiff (wsa wsb)	Workspace differences	Dfn	Function		System	compareworkspaces name-clashproblem nameclashproblem		https://dfns.dyalog.com/n_wsdiff.htm
-Xv(1⊥=)Yv	Count number of trailing elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix matching onright items end match	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnXPyS1PUFTQMH3UttdVUUA8oAvH//wcA	
-Xv(1⊥≠)Yv	Count number of trailing elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	suffix different onright items end differ	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfMScyqLS9QVNAwfdS191LlAEyxWkp9bqf7/PwA	
 {1≥|-/¨⍳2⍴⍵}Jv	Tridiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	tri-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {2≥|-/¨⍳2⍴⍵}Jv	Pentadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	penta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {3≥|-/¨⍳2⍴⍵}Jv	Heptadiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	hepta-diagonal banded	https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8	
