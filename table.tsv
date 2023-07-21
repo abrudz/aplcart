@@ -1355,7 +1355,7 @@ Is(⌈(⊃>⍥|⌽,)⌊)Js	Choose the number closer to zero (the positive one if
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers		
 (⊢⌽⍨1-1⊥⍨=∘' ')Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright right-align flushrightflush rightjustifyright table string		
 Is(⊣⊥⊣|(+/⊥⍣¯1))J	Digital sum in base Is	Tacit	Dyadic Function		Mathematical			
-((⎕NUNTIE⊢⎕NREAD⍤,∘83 ¯1)⎕NTIE∘0)Dv	Read raw signed bytes of file Dv	Tacit	Monadic Function		Native Files			
+((⎕NUNTIE⊢⎕NREAD⍤,∘83 ¯1)⎕NTIE∘0)Dv	Read raw signed bytes of file Dv	Tacit	Monadic Function		Native Files	fetch get byte-values bytevalues blob		
 (∩∘(⎕D,⎕A,⎕C⎕A))Dv	Remove non-alphanumeric ASCII characters	Tacit	Monadic Function		Text	punctuation removing erasing erase eliminate eliminating delete deleting string		
 (~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without removing erasing erase eliminate eliminating deleting string		
 Cv{∇⌊⎕DL⍵⊣0#.⎕SAVE⍺}&Ns	Save workspace as Cv every Ns seconds	Tacit	Dyadic Function		System	auto-save autosave auto-saving autosaving automatic backup back-up continuous in the background		
