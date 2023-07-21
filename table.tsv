@@ -1355,8 +1355,8 @@ Is(⌈(⊃>⍥|⌽,)⌊)Js	Choose the number closer to zero (the positive one if
 ((⊢~∘.×⍨)1↓⍳)Js	Primes until Js	Tacit	Monadic Function		Mathematical	primesuntil numbers		
 (⊢⌽⍨1-1⊥⍨=∘' ')Dm	Right justify matrix Dm	Tacit	Monadic Function		Text	rightalignright right-align flushrightflush rightjustifyright table string		
 Is(⊣⊥⊣|(+/⊥⍣¯1))J	Digital sum in base Is	Tacit	Dyadic Function		Mathematical			
-((⎕NUNTIE⊢⎕NREAD⍤,∘80 ¯1)⎕NTIE∘0)Dv	Read raw bytes of file Dv as 8-bit unsigned characters	Tacit	Monadic Function		Native Files	fetch get byte-values 8bit bytevalues blob uchrs uchars		
-((⎕NUNTIE⊢⎕NREAD⍤,∘83 ¯1)⎕NTIE∘0)Dv	Read raw bytes of file Dv as 8-bit signed integers	Tacit	Monadic Function		Native Files	fetch get byte-values 8bit bytevalues blob sints		
+((⎕NUNTIE⊢⎕NREAD⍤,∘80 ¯1)⎕NTIE∘0)Dv	Read raw bytes of file Dv as 8-bit unsigned characters	Tacit	Monadic Function		Native Files	binary fetch get byte-values 8bit bytevalues blob uchrs uchars		
+((⎕NUNTIE⊢⎕NREAD⍤,∘83 ¯1)⎕NTIE∘0)Dv	Read raw bytes of file Dv as 8-bit signed integers	Tacit	Monadic Function		Native Files	binary fetch get byte-values 8bit bytevalues blob sints		
 (∩∘(⎕D,⎕A,⎕C⎕A))Dv	Remove non-alphanumeric ASCII characters	Tacit	Monadic Function		Text	punctuation removing erasing erase eliminate eliminating delete deleting string		
 (~∘'.,:;?!')Dv	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without removing erasing erase eliminate eliminating deleting string		
 Cv{∇⌊⎕DL⍵⊣0#.⎕SAVE⍺}&Ns	Save workspace as Cv every Ns seconds	Tacit	Dyadic Function		System	auto-save autosave auto-saving autosaving automatic backup back-up continuous in the background		
