@@ -938,8 +938,8 @@ Is,/∘⍳∘≢Y	Moving width-Is window of indices for array Y	Tacit	Dyadic Fun
 M(⊢×1-⊣)N	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance ⇍ Mpq		
 M(⊣×1-⊢)N	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq		
 A(⊢×¯1*⊣)N	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation changing converting conversion		
-M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine ⌾		
-M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine converting change changing		
+M(⊣+¯11○⊢)N	Join real part M and imaginary part N to form complex	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine ⌾ cartesian rectangular ⊕		
+M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine converting change changing ⊗		
 (¯128+256|128∘+)J	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing		
 (≢↑1∘↓)Y	Shifting Y left/up one position (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list vector 1		
 (1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUe8WTQV1j9ScnHx1LhySuCTU//8HAA	
@@ -1037,7 +1037,7 @@ Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Struc
 (2∘*+¯1∘*)Js	Jacobsthal-Lucas number	Tacit	Monadic Function		Mathematical	sequence Édouard Edouard Ernst J(n) A014551() A14551()		
 (1∘○+2∘○)N	Hartley kernel	Tacit	Monadic Function		Mathematical	cas()		
 (1=×/∘⍴)Y	Is Y a Singleton?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?		
-(⊣+¯11○⊢)⌿N	Join real and imaginary major cells by removing leading axis	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine reduce start beginning remove erasing erase eliminate eliminating delete deleting		
+(⊣+¯11○⊢)⌿N	Join real and imaginary major cells by removing leading axis	Tacit	Dyadic Function		Mathematical	complexnumber re() im() values combine reduce start beginning remove erasing erase eliminate eliminating delete deleting cartesian rectangular		
 (⊣×¯12○⊢)⌿N	Join magnitude and radians major cells by removing leading axis	Tacit	Dyadic Function		Data Conversion	complexnumber polar angle absolute values combine reduce start beginning converting change changing remove erasing erase eliminate eliminating delete deleting		
 (∧/2=⌿⊢)Ym	Comparison of successive rows	Tacit	Dyadic Function		Comparison			
 Iv(-⍤⊣↓↓)Y	Drop first and last Iv items along leading axes of Y	Tacit	Dyadic Function		Selection	dropping remove trim cut major cells elements dimensions delete start beginning ending head tail infix removing erasing erase eliminate eliminating deleting		
@@ -1319,9 +1319,8 @@ X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Fun
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells items		
 (1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2 contiguous		
-X(1-⍳⍨∘⊖⍨-∘≢⊣)Y	Index of: Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition reverse-iota reverseiota findinglast locatinglast locatelast positionoflast items elements lastlocation searching	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1dQcNQ91Hv5ke9Kx51zHjUNQ3I0AWxOhc96lqsCVTq7KbOlZtYogDSaKxg9Kh3C1C5GRfUKJAMfhNMFcz@/wcA	
+X(1-⍳⍨∘⊖⍨-∘≢⊣)Y	last index of ((⍳): Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	lastindexin lastindexof lastposition reverse-iota reverseiota findinglast locatinglast locatelast positionoflast items elements lastlocation searching indexin indexof finding locating locate positionof location	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1dQcNQ91Hv5ke9Kx51zHjUNQ3I0AWxOhc96lqsCVTq7KbOlZtYogDSaKxg9Kh3C1C5GRfUKJAMfhNMFcz@/wcA	
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial with descending coefficients Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate		
-X(1+≢⍤⊣-⍳⍨∘⌽⍨)Y	Last index of (⍳): Last indices in X of major cells Y	Tacit	Dyadic Function		Index Generation	indexin indexof finding locating locate positionof items elements location		
 (¯2-/∘⍸1,1,⍨2≠/⊢)Yv	Lengths of subvectors of Yv having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items contiguous		
 (¯1+¯2-/∘⍸1,⍨⊢=⊃)Dv	Segment lengths (excluding delimiters) in delimited string Dv where the first character is the delimiter ≢¨ ⍴¨	Tacit	Monadic Function		Text	segmented string SSLEN separated separator		
 X(⊂⍤⍋⍤⌷⍨∘⊂⌷⊢)Jv	Sorting indices Jv according to data X	Tacit	Dyadic Function		Index Generation	permute		
@@ -1846,6 +1845,7 @@ Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at po
 {⍵/⍨2∨/0,⍨' '≠⍵}Dv	Remove multiple and trailing blanks	Dfn	Monadic Function		Text	trim right consecutive spaces ending removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu8LoUccKfQMdIEtdQf1R5wKgcK2CugIYeKaBqfy8nEoFTxArOy@1XEEhI79coSQfyE0BEQVF@QWpRQrl@UUpQF5xQWJyZl46SLH6//8A	
 {⍵⌽⍨+/∧\' '=⍵}D	Justifying left	Dfn	Monadic Function		Text	leftalign left-align string		
 Av{¯2-⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Sum (+/) of each subvector of N indicated by Av (fast +/¨Av⊂Nv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells reduce reductions separated separator delimiter		
+Av{2<⌿0⍪(1⌽⍺)⌿+⍀⍵}N	Any-true or any-positive (∨/×) of each subvector of non-negative N indicated by Av (fast ∨/¨Av⊂×Nv)	Dfn	Dyadic Function		Mathematical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells reduce reductions separated separator delimiter		
 Av{2=⌿1⍪(1⌽⍺)⌿=⍀⍵}B	Reverse parity (=⌿) in each subvector of B as indicated by Av (fast =/¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells reduce reductions separated separator delimiter		
 Av{2≠⌿0⍪(1⌽⍺)⌿≠⍀⍵}B	Parity (≠⌿) in each subvector of B indicated by Av (fast ≠/¨Av⊂Bv)	Dfn	Dyafic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major cells reduce reductions separated separator delimiter		
 Ms{⍵×⍺÷⍵[⊃⍒|⍵]}Nv	Scale Nv so the maximum element is Ms	Dfn	Dyadic Function		Mathematical	clamp rescale adjust largest highest biggest normalise normalize	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wVqh/1bj08/VHvrsPbgazoR13Nj3on1QCZsbUKh9YbAbHh//8A	
