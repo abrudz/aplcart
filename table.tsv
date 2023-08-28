@@ -998,9 +998,8 @@ X(⊃∘⍸⍷)Y	Position of first subarray X in Y	Tacit	Dyadic Function		Index 
 (32+1.8∘×)N	Celsius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celsius f2c() ftoc() converting change changing		
 (10 12∘.○⊢)N	From complex to magnitude and radians (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber polar arc() abs() separate parts angle absolute values start beginning converting change changing		
 (9 11∘.○⊢)N	From complex to real and imaginary (increase rank with leading length-two axis)	Tacit	Monadic Function		Data Conversion	complexnumber re() im() separate parts values start beginning converting change changing		
-Mm(1 2 1 2⍉∘.+)Nm	Sum of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables		
-Mm(1 2 1 2⍉1∘.+)Nm	Shur sum	Tacit	Dyadic Function		Mathematical			
-Mm(1 2 1 2⍉1∘.×)Nm	Shur product	Tacit	Dyadic Function		Mathematical			
+Mm(1 2 1 2⍉∘.+)Nm	Sum of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables schur shur שור שוּר		
+Mm(1 2 1 2⍉∘.×)Nm	Product of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables schur shur שור שוּר		
 Mm(1 3 2 4⍉∘.×)Nm	Direct matrix product	Tacit	Dyadic Function		Mathematical			
 (≢÷1⊥÷)N	Harmonic mean	Tacit	Monadic Function		Mathematical	average subcontrary H() HM() harmonicmean		
 (⊥⍨0=⌽)Bv	Count of leading zeros	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at start beginning		
