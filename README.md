@@ -30,7 +30,6 @@ See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how t
 - Insert leading and trailing slashes to [use regex](https://aplcart.info?q=%2F\b11\b%2F) (access-key <kbd>r</kbd>  ― for _**r**egex_ ― to toggle)
 - [Some entries](https://aplcart.info?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
 - [Some entries](https://aplcart.info?q=(?)) have a <kbd>?</kbd> which can be clicked to open online documentation
-- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to reload the main page
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
 - Hit [<kbd>×</kbd>](https://aplcart.info?q=) at the end of the input field to clear it (access-key <kbd>x</kbd> — for _e**x**punge_)
 - Hit [<kbd>#</kbd>](https://aplcart.info?q=42) in the top right corner copy to the current query to the address bar and to your clipboard (access-key <kbd>c</kbd> — for _**c**opy_)
