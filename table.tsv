@@ -1028,6 +1028,7 @@ Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the re
 Is(×⍴1↑⍨⊢)Js	Starting points for Is fields of width Js	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list separated separator delimiter		
 (××∘⌊|)N	Rounding towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp		
 I(!×∘!⊣)J	Number of ordered of combinations of I out of J	Tacit	Dyadic Function		Mathematical	combinatorics permutations		
+Ms(⊢×<∘|)N	Null near-zero (within absolute distance Ms) values in N	Tacit	Monadic Function		Mathematical	zero-out 0-out remove eliminate arithmetic near-zeros near-zeroes near-0s set small tiny fuzz tolerance tolerant ⎕CT almost values numbers		
 M(≤∘|×⊢)N	Rounding to zero values of N within M of zero	Tacit	Dyadic Function		Mathematical	precision fuzz 0		
 Is(⊢∘≢↑↓)Y	Shifting Y left/up Is positions (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list vector		
 Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list		
@@ -1405,6 +1406,7 @@ X(⊂⍤⍋⍤∊⍨⍥(⊂⍤¯1)⌷⊢)Y	Move items X to end of Y	Tacit	Dyadic
 ((¯1⌽+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements after i'th element	Tacit	Monadic Function		Structural	expand openup major cells rows items list		
 (-/(⍳⌈/∘,)∘.=⍉)Im	Changing node matrix Im (starts,ends) to a connection matrix	Tacit	Monadic Function		Mathematical	graph connectivity starting points beginnings table change converting conversion		
 (-1⊥2(⍟×⊢)⊢∘≢⌸÷≢)Y	Shannon entropy of array ⍵	Tacit	Monadic Function		Mathematical	informationtheory text message string		
+Ms(0j1⊥⊣(⊢×<∘|)11 9∘.○⊢)N	Null near-zero (within absolute distance Ms) real and imaginary parts in N	Tacit	Monadic Function		Mathematical	zero-out 0-out remove eliminate arithmetic near-zeros near-zeroes near-0s set small tiny fuzz tolerance tolerant ⎕CT almost values complex numbers part near-real near-imaginary		
 (⌊10⍟⊢÷⍨∘⍎'.'~⍨⍕)Nv	Number of decimals of elements of Nv	Tacit	Monadic Function		Mathematical	digits cells items		
 M((1-×)×1-(1-⊣)×1-⊢)N	Probabilistic XOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq		
 Is{(+/∘∪⊢∨⍳)⍣⍺⊢⍵}Js	Is'th number in the Aliqout sequence for Js	Tacit	Dyadic Function		Mathematical			
