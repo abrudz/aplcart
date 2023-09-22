@@ -1126,7 +1126,7 @@ X(⊢∘≢≥⍳⍨)Y	Membership (∊) on major cells for any rank	Tacit	Dyadic
 M(⊢×∘~∊⍨)N	Zeroing elements of N that are found in M	Tacit	Dyadic Function		Sets	arein membersof 0ing cells items		
 Xv(~⍤∊⍨⊆⊢)Yv	Split Yv at occurrences of sequences of elements in Xv (removes separators and empty segments)	Tacit	Dyadic Function		Text	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string		
 Xv(∧/∊⍨,∊)Yv	Identity of two sets	Tacit	Dyadic Function		Sets	equivalence		
-(¯2-/∘⍸,∘1)Iv	Segment lengths from beginning indices	Tacit	Monadic Function		Data Conversion	chunk start leading converting change changing segments partitions		
+(¯2-/0∘,)Iv	Segment lengths from beginning indices	Tacit	Monadic Function		Data Conversion	chunk start leading converting change changing segments partitions		
 (¯2-/∘⍸,∘1)Bv	Changing starting indicators Bv of subvectors to lengths	Tacit	Monadic Function		Boolean/Logical	partitions change converting conversion segments		
 (¯2-/∘⍸1∘,)Iv	Segment lengths from ending indices	Tacit	Monadic Function		Data Conversion	chunk trailing converting change changing segments partitions		
 (2÷⍨⍳+⍸)⍨Nv	Assign ranking based on non-descending scores Nv (ties all get average ranking of used slots)	Tacit	Monadic Function		Mathematical	places place-values positions shared allotted allocation allocate ranks	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lHvZu1HvTs0gUwFYzA0VbAAQiPD//8B	
@@ -1187,7 +1187,6 @@ Is(-⍤⊣↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, t
 (,⍨⍴1↑⍨1∘+)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
 (⌈/-⌊/)∘,N	Range (difference between largest and smallest element) in N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes of		
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum		
-Xs(1↓¨,⊂⍨1,=)Dv	Vector of character vectors constructed from the linefeed-separated character vector Dv (which must be of depth 1)	Tacit	Dyadic Function		Structural	text .split() split-on cut-at from to delimited segmented LF newline string separated separator delimiter		
 (⊢⌽⍨¯1+⍳∘≢)Ym	Align the diagonals of a matrix into columns (with wrap-around)	Tacit	Dyadic Function		Structural	table		
 X(⍳|⍨1+∘≢⊣)Y	First indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof 1st zero locating items elements location missing unfound		
 (⌽⌽,0,-)∘⍳Js	Integers from -Js to Js	Tacit	Monadic Function		Mathematical	whole numbers natural symmetric negative positive		
@@ -1217,7 +1216,7 @@ Mv(+.×⍨÷1⊥⊣)Nm	Weighted average of rows of Nm with weights Mv	Tacit	Dyad
 Iv(,⌿1+⊢⊤¯1+⊣)Jv	Indices of Iv'th elements in ravel order of an array of dimensions Jv	Tacit	Dyadic Function		Index Generation	ravelorderindex cells items axes		
 Iv Jv⍕⍨∘(∊,⍤0/)N	Formatting N with Jv decimals in fields of width Iv	Tacit	Dyadic Function		Text	widths string		
 (+/2 1∘⊃∘⎕VFI⍤1)Dm	Sum of numbers in character matrix Dm	Tacit	Monadic Function		Data Conversion	table converting change changing		
-(⊢⎕NS⎕EX⊢⎕NS∘⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	give		
+(⊢⎕NS⎕EX⊢⍎)Dv	Make unnamed namespace Dv into named namespace	Tacit	Monadic Function		System	give		
 M(1-×⍥(1∘-))N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq		
 (⍋(≢,⊂)¨)Yv	Ascending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical		
 (⍒(≢,⊂)¨)Yv	Descending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical ordering sorting		
@@ -1236,7 +1235,7 @@ Is(×∘×⍨∘≢↑↓)Y	Shifting Y Is positions forward/left/up (if Is is po
 Is(⊢↑⍨⊢∘≢,⊣)Ym	Adjust Ym to width Is (positive Is to pad/chop on right, negative Is to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit		
 X(⊢∘-∘≢↑⍪⍨)Y	Shift after: Appending X at back/right/bottom of Y, pushing corresponding cells off the front/left/top edge	Tacit	Dyadic function		Strurctural	« pushing		
 (1/⍨∘,1,∘⍪-)Nv	Boolean gaps of lengths Nv after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2 contiguous		
-Xs(1↓¨,⊂⍨⊣=,)Yv	Split Yv at occurrences of Xs (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string text		
+Xs(1↓¨,⊂⍨1,=)Yv	Split Yv (which has to be simple) at occurrences of Xs (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string text .split() split-on cut-at from to segmented LF newline separated separator delimiter		
 (⊂⍤?⍨∘≢⌷⊢)Y	Shuffle major cells	Tacit	Monadic Function		Selection	mix randomize randomise list order items elements		
 Is(⊣,⊣+∘⍳-⍨)Js	Consecutive integers from Is to Js (Is≤Js)	Tacit	Dyadic Function		Mathematical	arithmetic progression sequence inclusiverange seq() sequence … ... values between		
 (+/∘∪⊢∨¯1↓⍳)Js	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum		
@@ -1309,7 +1308,7 @@ Mv(¯2+1⊥∘.<⍪∘.≤)N	Test relations (¯2…2) of elements of N to range 
 M((+⌿÷≢)2*⍨-)N	Mean squared error	Tacit	Dyadic Function		Mathematical	MSE deviation MSD	https://tio.run/##AToAxf9hcGwtZHlhbG9n///ijpXihpAgMSAyIDMgKCgr4oy/w7fiiaIpMirijagtKSAwLjkgMi4xIDMuMf//	
 Is(,(⊣↑1⍴⍨⊢)⍤0)Jv	Expansion mask (left argument for ⍀) for fields of length Jv to uniform field of length |Is	Tacit	Dyadic Function		Structural	expand harmonise harmonize align masking bitmask bit-mask		
 ((1↓⊢,1↑0∘⍴)⍤1)Y	Rightmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighbours neighbors neighboring lefthand bitshift cells items		
-X(<\@(≡¨⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1st binary base-2 base2		
+X(<\@(=⍨)⍷)Y	Boolean one at first occurrence of X in Y	Tacit	Monadic Function		Sets	findfirstin search locatefirst 1st binary base-2 base2	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU0xKT1BU0bGIcNGwf9a7QfNS7XVPBWMH0Ue8W9cSk5JTUNPX//wE	
 ((×/⊢-≠)3∘dfns.pco)Js	Euler's totient function (fastest above about 1000)	Tacit	Monadic Function		Mathematical	phi(n) φ(n) ϕ(n)		
 ((∪∘.=⊢)⍳⍨)Y	Self-classify: table of unique vs all major cells of Y	Tacit	Monadic Function		Sets	⍸⍣¯1⍤⊢⌸ dictionary nubin distinctitems uniqueelemenets matrix items elements		
 ('-'@5 8∘⍕1000⊥3∘↑)Jv	Date (⎕TS format) to YYYY-MM-DD	Tacit	Monadic Function		Text	SS-ISO8601:2006-09 ISO-8601:2006-09 PN-90/N-01204 GB/T 7408-2005 KS NP EN 28601 CAN/CSA-Z234.4-89 (R2007) DS/ISO-8601:2005 LST string		
