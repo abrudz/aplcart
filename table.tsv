@@ -1055,7 +1055,7 @@ Xs(1↓∘,,⍤0)Yv	Join scalar elements of vector Yv with separator Xs	Tacit	Dy
 X(⊢∘≢↑⍪)Y	Shift before: Inserting X at front/left/top of Y, pushing corresponding cells off the back/right/bottom edge	Tacit	Dyadic function		Strurctural	» pushing		
 Bs(⊢⊃⍨1+⊣)Yv	Picking one of two values according to Bs	Tacit	Dyadic Function		Selection	Choosing choose		
 (?∘≢⊃⊢)Yv	Pick random item from vector	Tacit	Monadic Function		Selection	selectrandom list cell element		
-Is(↑,⍥⊂↓)Y	Y's Head of Length Is and its Tail	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining		
+Is(↑,⍥⊂↓)Y	Cutting Y at offset Is	Tacit	Dyadic Function		Structural	headtail splitting divide dividing separate separating first leading remaining index position head of length and tail		
 (↑,∘⊂⍤1)Y	Increment rank by inserting a new dimension before the trailing one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add ending last	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNlHnUceMR11Nj3qXGGoqGCkYK5gAZYBqHP//BwA	
 (⊃0⍴⊂∘⊃)Y	Prototype (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes blanks falses falsehoods		
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element		
@@ -2195,7 +2195,7 @@ f{⍺⍺¨⍣(~0∊⍴⍵)⊢⍵}Y	For each: f on items of Y unless Y is empty	D
 X(Y{⍺∘.=⍺⍺+.×⍵})N	Sums of N according to codes X for lookup table Y	Dop	Dyadic Function	Monadic Operator	Mathematical	look-up matrix		
 Xv(f{⍵⍺⍺⌸¨⍨⊂8⌶⍨⍺})Yv	Inverted Table Dyadic Key (Xf⌸Y where X and Y are unverted Xv and Yv)	Dop	Dyadic Function	Monadic Operator	Sets			
 (Is{⍵⍕⍤1⍨⍺⍺,⍪⍵⍵}Iv)Nm	Row-by-row formatting (width Is) of Nm with Iv decimals per row	Dop	Monadic Function	Dyadic Operator	Data Conversion	converting change changing		
-X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements		
+X(Is{⍺⍺(↑⍪⍺⍪↓)⍵})Y	Inserting X into Y after major cell Is	Dop	Dyadic Function	Monadic Operator	Structural	items elements splice splicing joining putting		
 (Xs{⍺⍺@(⍵⍵∘⊣)⍵}Bv)Y	Replacing elements of Y satisfying Bv with Xs	Dop	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update major cells rows items indicate masking indicating		
 X f{⍺ ⍺⍺⍣(⍺ ⍵⍵ ⍵)⊢⍵}g Y	Apply X∘f to Y, X g Y times	Dop	Dyadic Function	Monadic Operator	Iteration	application inverse repeated repeating inversion inverting iterating looping iterate		
 Mv(Is{⌽⍵⌹⍺∘.*0,⍳⍺⍺})Nv	Descending coefficients of Is-degree polynomial fit given x-values Mv and y-values Nv	Dop	Dyadic Function	Monadic Operator	Mathematical	curvefitting regression model best leastsquaresfit		
