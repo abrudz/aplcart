@@ -1278,7 +1278,7 @@ Cs{⍺←⎕UCS 10 ⋄ ,⍺,⍵}Dm	Matrix to segmented string using Cs or linefe
 X{⊃(⍋-⍒)⍺⍵}Y	General comparison according to Total Array Order (¯1:X precedes Y, 0:X≡Y, 1:X succeeds Y)	Tacit	Dyadic Function		Comparison	cmp() <=> >-< characters nested any array generalised generalized tao spaceship space-ship three-way compare comparing		
 (⍕' '@(0∘=))N	Formatting with zero values replaced with blanks	Tacit	Monadic Function		Text	hidden 0s empty cells items elements zeroes zeros spaces falses falsehoods string		
 (××∘⌊|+1≤2||)N	Rounding to nearest even number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
-(××∘⌊|+1>2||)N	Rounding to nearest odd number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring		
+(××∘⌊|+1>2||)N	Rounding to nearest odd number (favouring away from 0)	Tacit	Monadic Function		Mathematical	precision favoring	https://tio.run/##ATQAy/9hcGwtZHlhbG9n///ijpXihpAgKMOXw5fiiJjijIp8KzE@Mnx8KSAxLjYgMi43IDMuMf//	
 (××¯1+2×∘⌈2÷⍨|)N	Rounding to nearest odd number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 (⌊+1∘|>∘?0∘×)N	Stochastic rounding to integer	Tacit	Monadic Function		Mathematical	precision whole number probabilistic		
 (×/⊢÷+/-2×⊢)Nv	Aspect ratio of a triangle given its side lengths	Tacit	Monadic Function		Mathematical	AR()		
@@ -1726,7 +1726,7 @@ Cv{≢⍺⎕S 3⊢⍵}Dv	Count number of matches for PCRE regex Cv in Dv	Dfn	Dya
 nmats←{sreq←1} dfns.kt (rows cols)	Knight's Tour Chess Problem	Dfn	Function		Mathematical	chesspuzzle knight'stour knightstour graph treesearching diversions torus		https://dfns.dyalog.com/n_kt.htm
 pnum←{fmt←1} (dfns.phinary) nums	Phinary representation of numbers ⍵	Dfn	Function		Mathematical	goldenmean goldenrectangle phinarynumber		https://dfns.dyalog.com/n_phinary.htm
 {lines}←{defs←default} dfns.turtle cmds	Flying-turtle graphics	Dfn	Function		GUI	Turtlegraphics L-Systems fractal palindrome Flyingturtle polyhedron LSystems		https://dfns.dyalog.com/n_turtle.htm
-Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods		
+Bv{⍺⍀⍺⌿⍵}Y	Replacing major cells of Y not satisfying Bv with prototypical cells	Dfn	Dyadic Function		Structural	blanks spaces 0s zeroes zeros fill substitute merge aamend replace update items elements indicate masking indicating zeroes falses falsehoods	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgdAATELo6ke9ux71NoDInv2PerfWKqg75iZWZealK6pzoejBVKlhDJQw0dQwUjBXMLTQ1DBUMAPR//8DAA	
 Xv(+/∧\⍤=)Yv	Count number of leading elements that are equal between two vectors of equal length	Dfn	Dyadic Function		Comparison	prefix matching onleft items start beginning match		
 Xv(+/∧\⍤≠)Yv	Count number of leading elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	prefix different onleft items start beginning differ		
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children string		https://dfns.dyalog.com/n_maze.htm
