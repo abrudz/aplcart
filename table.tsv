@@ -1190,6 +1190,7 @@ M(⊢∘××+∘|)N	Increasing absolute value without change of sign	Tacit	Dyadi
 Is(-⍤⊣↑1⍴⍨⊢)Js	Suffix Vector: length Is with Js ones on the right, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍵Js falses falsehoods trues truths		
 (,⍨⍴1↑⍨1∘+)Js	Identity matrix of order Js	Tacit	Monadic Function		Mathematical	unitmatrix table		
 (⌈/-⌊/)∘,N	Range (difference between largest and smallest element) in N	Tacit	Monadic Function		Mathematical	span minmaxmin extremes of		
+Iv(↑⍪↑⍨∘-⍨)Y	Take first and last Iv items along leading axes of Y	Tacit	Dyadic Function		Selection	taking remove trim cut major cells rows elements dimensions delete start beginning ending head tail infix removing erasing erase eliminate eliminating deleting	https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFQ0MF00e9Wx71bjY15XrUNxUsaKTxqG3io95VYHLFo44ZukBKE6jl/38A	
 Ms(⊢⊃⍨2+∘×⊣)Yv	Picking one of three values according to sign of Ms	Tacit	Dyadic Function		Selection	Choosing choose signum		
 Xs(1↓¨,⊂⍨1,=)Yv	Split Yv (which has to be simple) at occurrences of Xs (removes separators and keeps empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string text .split() split-on cut-at from to segmented LF newline separated separator delimiter		
 (⊢⌽⍨¯1+⍳∘≢)Ym	Align the diagonals of a matrix into columns (with wrap-around)	Tacit	Dyadic Function		Structural	table		
