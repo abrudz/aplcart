@@ -715,7 +715,7 @@ Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Func
 Xv,[0.5]Yv	Two-row matrix from two vectors (repeat scalars)	Tacit	Monadic Function		Structural	table lists rows		
 Mv⊥⍨∘⍪Nv	Evaluate polynomial with descending coefficients Mv for point(s) Nv	Tacit	Dyadic Function		Mathematical	apply	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1QwUXjUtfRR74pHHTMe9a5SMFAwVDACSik86p2rkKZRoalgq2BccWiTboW2iUJafpFChUJmnkK1gY6hjpGOce3//wA	
 Cv⎕NPUT⍨∘⊂Dv	Write text (vector or vector of vectors) Dv to Unicode file Cv	Tacit	Dyadic Function		System	native files dump cat save to 🐈 ascii ansi Windows-1252 UTF-8 UTF-16LE UTF-16BE UTF-32LE UTF-32LE vtv charvec charactervector textvector string	https://tio.run/##SyzI0U2pTMzJT///Xz23Mi0zJ1WvpKJEXUHjUd9Uv4DQkEe9Kx51zHjU1aSpoO6RmpOTr66gHp5flJOizgVU8ahtggJIobtriAKy9v//AQ	
-⍉∘↑Xv Yv …	N-column matrix from N vectors	Tacit	Monadic Function		Structural	transpose columns table lists		
+⍉∘↑Yv	Matrix with columns from vectors Yv	Tacit	Monadic Function		Structural	transpose columns table lists		
 I(1+-)J	Inclusive integer difference	Tacit	Dyadic Function		Mathematical	span distance fence-post range		
 M(×-)N	Sign of difference (¯1:M is smaller, 0:M=N, 1:M is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison		
 M(1-×)N	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼		
