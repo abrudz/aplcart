@@ -1453,7 +1453,7 @@ Av(≥{~≠\⍺\2≠/1,⍺⌿⍵}⊢)Bv	Leading ones (∧⍀) in each subvector 
 Is(∧/+=∘(+/∘∪⊢∨⍳)¨,)Js	Are Is and Js amicable numbers?	Tacit	Dyadic Function		Mathematical	testif amicable?		
 ⌽@(1(⌽∨⊢)0<\⍤,2>/⊢)⍣≡Nv	Bubble sort	Tacit	Monadic Function		Mathematical	sinking	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA	
 Mv(⊣,⍥(2*∘÷⍨+.×⍨)⊢÷2⍨)Ns	Length of edges of pyramid with height and width Mv and length Ns	Tacit	Dyadic Function		Mathematical	lengths sides		
-Xs(⎕FIX'file://',⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked string		
+Xs(⎕FIX⊢⊣⎕NPUT⍨∘⊂∘⎕SRC⍨)Dv	Save scripted object Xs (ref) to synced file Dv	Tacit	Dyadic Function		System	sync'ed text source reference namespace class interface synchronised synchronized tracked string		
 ' '∘(1↓,⊢⍤/⍨1(⊢∨⌽)0,≠)Dv	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	DEB remove delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without removing erasing erase eliminate eliminating deleting string		
 (⊃((+⌿÷≢),≢÷1⊥÷)⍣≡)Nv	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic		
 ((3⌽']  [',⍕)⍤0∘⍳∘≢,⍕)Ym	Add line numbers to table Xm	Tacit	Monadic Function		Text	matrix string		
@@ -3681,7 +3681,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 {2⎕NQ#'DeleteTypeLib'⍵}∘⊃¨2⎕NQ#'ListTypeLibs'	Delete all loaded TypeLibs	Expression		.NET interface	System	deletion deleting removal removing remove unloading COMserver COMobjects COMlibraries		
 Is{3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥⍺,⍵-1}Js	Number of days in month Js of year Is	Constant			System	calendar length this		
 (⎕D,⎕A~'ILOU')[(1+(10⍴32)⊤12⎕DT'Z'),?16⍴32]	Generate random ULID	Expression			Text	Universally Unique Lexicographically Sortable Identifier generation generating randomised randomized string		
-⎕SE.(⍎⊃2⎕FIX'file://','/StartupSession.aplf',⍨2⎕NQ#'GetEnvironment' 'DYALOG')	Initialise session (Dyalog.Utils, Link, SALT, user commands, etc.) in runtime or shell script	Expression			System	start ucmds usercommands ] dyalogrt dyalogscript dyascript ]link initialize		
+⎕SE.(⍎⊃2⎕FIX'/StartupSession.aplf',⍨2⎕NQ#'GetEnvironment' 'DYALOG')	Initialise session (Dyalog.Utils, Link, SALT, user commands, etc.) in runtime or shell script	Expression			System	start ucmds usercommands ] dyalogrt dyalogscript dyascript ]link initialize		
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8	
 '-'@(4+5×⍳4)⊢(⎕D,⎕C⎕A)[4(9+|)@20⊢5@15?36⍴16]	Generate random UUIDv4	Expression			Text	GUID version-4 universally globally unique identifier generation generating randomised randomized string		
 {⎕IO←0 ⋄ (,~⊃)'  ----  ',8 4⍴(⎕D,⎕C⎕A)[((12⍴16)⊤12⎕DT'Z'),7,4(8+|)@3?19⍴16]}	Generate random UUIDv7	Expression			Text	GUID version-7 universally globally unique identifier generation generating randomised randomized string		
