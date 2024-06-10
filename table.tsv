@@ -3680,7 +3680,7 @@ op←{⍵⍵ ⍺}	Prototypical dyadic dop deriving dyadic functions	Syntax	Dyadi
 ({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name	Call function “name” from the dfns workspace without polluting the current workspace	Syntax			System	dfns.dws	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA	
 1⌽,⍨9⍴'''1⌽,⍨9⍴'''	An expression giving itself	Constant			Text	quine string	https://tio.run/##SyzI0U2pTMzJT/8PBIaPevbqPOpdYfmod4u6ujoaFwA	
 {2⎕NQ#'DeleteTypeLib'⍵}∘⊃¨2⎕NQ#'ListTypeLibs'	Delete all loaded TypeLibs	Expression		.NET interface	System	deletion deleting removal removing remove unloading COMserver COMobjects COMlibraries		
-Is{3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥⍺,⍵-1}Js	Number of days in month Js of year Is	Constant			System	calendar length this		
+Is{3⊃⊃¯1⎕DT ¯1+1⎕DT⊂1+0 12⊤1+12⊥⍺,⍵-1}Js	Number of days in month Js of year Is	Constant			Mathematical	calendar length this		
 ⎕SE.(⍎⊃2⎕FIX'/StartupSession.aplf',⍨2⎕NQ#'GetEnvironment' 'DYALOG')	Initialise session (Dyalog.Utils, Link, SALT, user commands, etc.) in runtime or shell script	Expression			System	start ucmds usercommands ] dyalogrt dyalogscript dyascript ]link initialize		
 (⎕D,⎕A~'ILOU')[(1+(10⍴32)⊤12⎕DT'Z'),?16⍴32]	Generate random ULID	Expression			Text	Universally Unique Lexicographically Sortable Identifier generation generating randomised randomized string		
 ⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0	Meaning of life (traditional)	Constant			Expression	hitchhiker'sguidetothegalaxy hitchhikersguidetothegalaxy Deep Thought 42 HG2G HHGTTG H2G2 tHGttG the Answer to the Ultimate Question Life, the Universe, and Everything FinnAPL	https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8	
