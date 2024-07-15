@@ -1031,8 +1031,8 @@ Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ↔ ⍴Xv)	Tacit	Dyadic Function		Mat
 (~∘' ')Dv	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without removing erasing erase eliminate eliminating delete deleting		
 Xv{⍉↑⍺⍵}Yv	Two-column matrix from two vectors (pad shorter vector)	Tacit	Monadic Function		Structural	table lists		
 Xv∘.{⍺⍵}Yv	Catalogue of all pairs from Xv and Yv	Tacit	Dyadic Function		Structural	pairings tuples table matrix		
-A(1-⊢×1-⊣)B	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying		
-A(1-⊣×1-⊢)B	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq		
+M(1-⊢×1-⊣)N	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying		
+M(1-⊣×1-⊢)N	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq		
 (1≡≡∧⍬≡⍴)Y	Is Y an object representation (⎕OR)?	Tacit	Monadic Function	Array Properties	System	⎕OR? nounified? package?	https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwfNS5EIQ6lj/qXQNi9G7RBEr5BakDNagTUOUPUfX/PwA	
 M(12○⊣+0J1×⊢)N	2-argument arctangent (M:x, N:y)	Tacit	Dyadic Function		Mathematical	atan2() arctan2() atn2() arctn2() atng2() arctng2()		
 Is(⊣↑1⍴⍨⊢)Js	Prefix Vector: length Is with Js ones on the left, the rest zeroes	Tacit	Dyadic Function		Boolean/Logical	1s 0s zeros Is⍺Js falses falsehoods trues truths		
