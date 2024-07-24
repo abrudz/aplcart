@@ -2,7 +2,7 @@
 
 **There is plenty of documentation on what parts of APL do. APLcart seeks to answer *How do I…* questions.**
 
-APLcart is a searchable collection of over two thousand short APL phrases intended for both beginners and professionals, with content provided by the community. Knowledge of basic APL syntax is a prerequisite. 
+APLcart is a searchable collection of over three thousand short APL phrases intended for both beginners and professionals, with content provided by the community. Knowledge of basic APL syntax is a prerequisite. 
 
 APLcart can also be used for [exercising your APL skills](#quiz).
 
