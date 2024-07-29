@@ -1612,6 +1612,7 @@ yyyymmdd←dfns.easter year	Easter Sunday in year ⍵	Dfn	Function		Mathematical
 z←x dfns.xtimes y	Fast multi-digit product using FFT	Dfn	Function		Mathematical	FastFourierTransform convolution polynomial convolute		https://dfns.dyalog.com/n_xtimes.htm
 X{}Y	Fast: X and Y are ignored (sink; no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet dump idiom		
 {}Y	Fast: Y is ignored (sink; no result produced)	Dfn	Function	Performance	System	speed optimised optimized quick silence shh quiet dump idiom		
+≢⍤⊃Yv	Inverted Table Tally (≢Y where Y is unverted Yv)	Dfn	Monadic Function		Array Properties			
 X⊣⍣Bs⊢Y	Ternary: if Bs then return X else return Y	Dfn	Monadic Function	Structure	Expression	conditionaloperator inlineiff ternaryiff ?:		
 cvec←dfns.dice ?6 6	Interpret a throw of dice	Dfn	Function		Text	guard diversions string		https://dfns.dyalog.com/n_dice.htm
 v←2 dfns.pco ⍵	prime factors and exponents	Dfn	Dyadic Function		Mathematical	primenumber Jlang		https://dfns.dyalog.com/n_pco.htm
@@ -1746,6 +1747,7 @@ Xv(+/∧\⍤=)Yv	Count number of leading elements that are equal between two vec
 Xv(+/∧\⍤≠)Yv	Count number of leading elements that are unequal between two vectors of equal length	Dfn	Dyadic Function		Comparison	prefix different onleft items start beginning differ		
 cmat←{⎕RL←2⊃⎕AI} dfns.maze shape	Kidz maze	Dfn	Function		Text	diversions indexedassignment kids children string		https://dfns.dyalog.com/n_maze.htm
 {-/×⌿0 1⌽⍵}Nm	Determinant of two-row matrix	Dfn	Monadic Function		Mathematical	det() 2-row 2row |A| det(A) det(Nm) |Nm|		
+{⍉↑⊂⍤¯1¨⍵}Yv	Inverted Table Transpose (⍉Y where Y is unverted Yv)	Dfn	Monadic Function		Structural			
 {2⊥~2⊥⍣¯1⊢⍵}J	Bit-wise NOT for positive integers	Dfn	Monadic Function		Boolean/Logical	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion		
 {⍵/1 0⍴⍨≢⍵}Jv	Alternating sequence of Jv[1] ones, Jv[2] zeros, Jv[3] ones, …	Dfn	Monadic Function		Boolean/Logical	1s 0s zeroes naughts falses falsehoods trues truths		
 Av{⍵⌷⍨⊂⍒⍺}Y	Moving cells of Y indicated by Av to the start of Y	Dfn	Dyadic Function		Structural	conditional promote promotion items elements beginning leading		
@@ -1847,6 +1849,7 @@ svec←{shape←⍬⍴(⍴⍵)*÷2} dfns.sudoku prob	Solution vector for Sudoku 
 {' '∧.=X←⍞:⍵ ⋄ X}Y	Return default value Y if input is empty	Dfn	Monadic Function		System	prompt fallback		
 {⍵/⍨2∨/0,' '≠⍵}Dv	Remove leading and multiple blanks	Dfn	Monadic Function		Text	trim spaces left consecutive start beginning removing erasing erase eliminate eliminating delete deleting string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA	
 {⍵↓⍨-⊥⍨' '=⍵}Dv	Remove trailing blanks	Dfn	Monadic Function		Text	delete spaces drop ending without removing erasing erase eliminate eliminating deleting string		
+{(⍳≢⊃⍵)=8⌶⍨⍵}Yv	Inverted Table Nubsieve (≠Y where Y is unverted Yv)	Dfn	Monadic Function		Sets			
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	RIDE get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
