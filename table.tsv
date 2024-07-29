@@ -1705,6 +1705,7 @@ expr←vars dfns.unify expr expr ···	Unification of expressions	Dfn	Function	
 Xv{↑⍺⍵}Yv	Two-row matrix from two vectors (pad shorter vector)	Dfn	Monadic Function		Structural	table lists		
 Ms{0 ⍺⊤⍵}N	Integer quotient and remainder (new leading length-2 axis) of N divided by Ms	Dfn	Dyadic Function		Mathematical	divisionremainder divide % divmod() residual fractional parts	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoNFB717nrUteRR79ZaBUMDBUNDBUMjBUPj//8B	
 dfns.mmind ⎕A[?4⍴6]	Mastermind or “cows and bulls”	Dfn	Function		Mathematical	gameofcowsandbulls diversions REPL		https://dfns.dyalog.com/n_mmind.htm
+(+/1 1∘⍉)Nm	Matrix Trace: Sum of main diagonal	Dfn	Monadic Function		Mathematical	tr(A) over	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQcFUCksYLxo94tj3o3W3JBxTW09Q0VDB91zHjU26mp4Pj/PwA	
 {isolate} ⎕SE.Dyalog.Utils.repObj Y	String representation of array (without refs)	Dfn	Ambivalent Monadic Function, Dyadic Function		System	representing generate toexpression for show definition stringify serialise serialize serialisation serialization text value		
 distribution←average + standard_deviation × dfns.NormRand (shape)	Random numbers with normal distribution	Dfn	Function		Mathematical	Gaussian distributed		https://dfns.dyalog.com/n_NormRand.htm
 sref←{from←⎕THIS} dfns.up gens	Reference to ancestor space	Dfn	Function		System	parentspace ancestorspace namespacereferences blank		https://dfns.dyalog.com/n_up.htm
@@ -1727,6 +1728,7 @@ cmat←{excl} dfns.fndiff (fna fnb)	Defined function differences	Dfn	Function		T
 {name}←{ref} dfns.ambiv namelist	Ambivalise traditional function	Dfn	Function		System	Ambivalize ambivalent tradfn		https://dfns.dyalog.com/n_ambiv.htm
 {tape}←{tape} dfns.bf toks	Brainfuck	Dfn	Function		Text	turingcomplete lists hyperator 2-adicnumbers Turingtape 2adicnumbers vectors string		https://dfns.dyalog.com/n_bf.htm
 Xs(¯1↓∘∊,¨)Yv	Xs-separated vector constructed from the vector of vectors Yv (which must be of depth 2)	Dfn	Ambivalent Monadic Function, Dyadic Function		Structural	.join() join-on from to delimited segmented string interpose intersperse interposing interspersing nested combine merge flat list strings character text joiner joining merging combining between interject inserting separated separator delimiter		
+(0∧.=1 1∘⍉)Nm	Is Nm traceless?	Dfn	Monadic Function		Mathematical	tr(A) over	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQcFUCksYLxo94tj3o3W3JBxTUMHnUs17M1VDB81DHjUW@npoIjTMoJSYuBgqGCkYIxbl1O//8DAA	
 Av{⍵⌿⍨1+⍺}Y	Duplicate Y cells where indicated by Av	Dfn	Dyadic Function		Structural	replicate double items elements		
 As{⊖⍣⍺⊢⍵}Y	Reverse Y on condition As	Dfn	Dyadic Function		Structural	conditional		
 X{</⍋⍺⍵}Y	Is X lexically less than or equal to Y?	Dfn	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfPyEtUVqm30H/V2P@rd9ah3a62CulN@kjoXXhVgQbgSkHr8KkA8BexqFBQe9c5VSFQoKUrMzMnMS1coLkhMTlVIzs9NLVZITCtJLVLIy0eT/f8fAA	
