@@ -2324,7 +2324,7 @@ ns.name	Namespace Member	Syntax			Expression	namespaceseparator dotinto point pe
 2101⌶0	Close .NET AppDomain (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Close%20.NET%20AppDomain.htm
 2250⌶0	Verify .NET Interface	I-beam	Constant	Monadic Operator	System	ibeam .netcore .netframework supported configured .netbridge dll		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Verify%20.NET%20Interface.htm
 2350⌶Dv	Set list of user commands for auto-complete (unofficial)	I-beam	Constant	Monadic Operator	System	ibeam ucmd ] autocomplete autocompletion session input		
-2400⌶Bs	Set Workspace Save Options	I-beam	Monadic Function	Monadic Operator	System	clear trace stop monitor flags breakpoints halt inspect monitor ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Set%20Workspace%20Save%20Options.htm
+2400⌶Bs	Set Workspace Save Options	I-beam	Monadic Function	Monadic Operator	System	clear traces stops monitors flags breakpoints halt inspect monitor ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Set%20Workspace%20Save%20Options.htm
 2401⌶Bs	Expose Root Properties	I-beam	Monadic Function	Monadic Operator	System	dotting ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Expose%20Root%20Properties.htm
 2501⌶0	Discard parked incoming .NET threads (Windows only)	I-beam	Constant	Monadic Operator	System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Discard%20Thread%20on%20Exit.htm
 2501⌶Bs	Discard incoming .NET thread on exit (Windows only)	I-beam	Monadic Function	Monadic Operator	System	ibeam		https://help.dyalog.com/latest/#Language/I%20Beam%20Functions/Discard%20Thread%20on%20Exit.htm
