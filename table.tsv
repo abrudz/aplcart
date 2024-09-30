@@ -1344,7 +1344,7 @@ X(1-⍳⍨∘⊖⍨-∘≢⊣)Y	last index of ((⍳): Last indices in X of major
 X(⊂⍤⍋⍤⌷⍨∘⊂⌷⊢)Jv	Sorting indices Jv according to data X	Tacit	Dyadic Function		Index Generation	permute		
 (⊢⍳⍨⌷⍨∘⊂∘⍋⍨)Y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	rising up		
 (⊢⍳⍨⌷⍨∘⊂∘⍒⍨)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling do		
-Is(⍉⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise columns		
+Is(⍉⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Dyadic Function		Structural	table vertically columnwise columns		
 Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default Is:≢Y) groups as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal	https://tio.run/##SyzI0U2pTMzJT///PzQvKrNA4VHbBIWaRx0zHvVuBpGdix51LQIxupoe9ewAsrnKEovAitQTk5JTUtPUuR71TQXxDRUgBgDlYUJGmELGmEImmEKmmEJmmELmmEIWmEIKCKH//wE	
 (⊢×∘.<⍨∘⍳∘≢)Mm	Extract the upper triangular part of the matrix Mm without main diagonal	Tacit	Monadic Function		Mathematical	zero out lower make strict triangle northeast north east north-east	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMPZtHvSuA9KPezSCyc5GmgqmC6aPeLUABI9P//wE	
 (⊢×∘.≤⍨∘⍳∘≢)Mm	Extract the upper triangular part of the matrix Mm with main diagonal	Tacit	Monadic Function		Mathematical	zero out lower make triangle northeast north east north-east	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMvUedSx71rgCyHvVuBpGdizQVTBVMH/VuAQoYmf7/DwA	
