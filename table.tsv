@@ -1167,7 +1167,7 @@ Xs(,∘⌽∘⍉⍣4)Ym	Surround matrix Ym with scalar Xs	Tacit	Dyadic Function	
 X(1⍳⍨⊃⍤¯1⍤⍷)Y	Index of first consecutive occurrence of major cells of X in Y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof subarray sub-array locating items elements location 1st		
 (Bv∊⍨⊢∘⊂⌺3 3)Bm	Conway's Game of Life: next generation given Bv of 140 surviving 3-by-3 subarrays	Tacit	Monadic Function		Mathematical	gol conways cellularautomaton sub-array		
 (∘.!⍨0,⍳)Js	Binomial coefficients until Js	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations pascalstriangle		
-Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Monadic Function		Sets	testif setequivalence sets? equivalent?		
+Xv(∊∧.∧∊⍨)Yv	Set Identity (are the sets identical?)	Tacit	Dyadic Function		Sets	testif setequivalence sets? equivalent?		
 (+/÷1⌈0⊥⍴)N	Row averages (0 if none)	Tacit	Monadic Function		Mathematical	arithmeticmean		
 Is(+⌿⊥⍣¯1)⍣≡J	Base-Is digital root	Tacit	Dyadic Function		Mathematical	sum		
 Mv(+.×÷1⊥⊣)Nm	Weighted average of columns of Nm with weights Mv	Tacit	Dyadic Function		Mathematical			
