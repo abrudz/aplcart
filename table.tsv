@@ -711,7 +711,7 @@ I∊⍨∘⍳Jv	Boolean array of shape Jv with ones in locations Iv (inverse of 
 ,[⍳2]Y	Merge the leading two axes of Y	Tacit	Monadic Function		Structural	laminate ravel combine dimensions melt fuse join along leading axis	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA	
 ⊢∘≢⌸Y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated		
 +.×⍨Nv	Sum of squares of Nv	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry		
-Av+.×⍨Nv	Summation over subsets of Nv specified by Av	Tacit	Dyadic Function		Mathematical			
+A+.×Nv	Summation over subsets of Nv specified by rows of A	Tacit	Dyadic Function		Mathematical		https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0TBSMH/VuMVQwUDDUAWIgaQglDRQMNBW09Q5PVzAGipj8/w8A	
 Xs∨.≠⍨Y	Do rows of Y contain elements differing from Xs?	Tacit	Dyadic Function		Comparison	testif hasdifferent cells items		
 ∘.⊢⍨Yv	Square matrix with Yv as rows	Tacit	Monadic Function		Structural	tomatrixof table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S16FHvCgVDBSMFYwWT//8B	
 ∘.⊣⍨Yv	Square matrix with Yv as columns	Tacit	Monadic Function		Structural	tomatrixof table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S1@FHvCgVDBSMFYwWT//8B	
