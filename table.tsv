@@ -643,7 +643,7 @@ Ms×∘⍳Js	Arithmetic progression vector: Js steps of Ms	Tacit	Dyadic Function
 ⍳∘≢Ym	All row indices of matrix Ym	Tacit	Monadic Function		Index Generation	enumerate rows table	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwETB@FHvFgM9I1MuqOij3s2POmY86lyEJPf/PwA	
 ,∘⍳Jv	All tuples of corresponding elements of ⍳¨Jv (for small Jv of max length 15)	Tacit	Monadic Function		Index Generation	indices major cells rows items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA	
 C⍳∘⊂Dv	Position of first occurrence of string Dv in list of strings C	Tacit	Dyadic Function		Index Generation	indexin indexof vtv vector 1st text	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA	
-Ms∊∘⍳Ns	Is Ms in range 1…Ns?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
+Ms∊∘⍳Js	Is Ms in range 1…Js?	Tacit	Dyadic Function		Comparison	inrange? valid? testif	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A	
 ⍸@⊢B	Replace 1s in Boolean array B with their enumeration	Tacit	Monadic Function		Boolean/Logical	identify label indices where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5weNS1SMFQwQCIQSSY/v8fAA	
 X f⍣¯1⍣≡Y	Limit: apply inverse of X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA	
 f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A	
@@ -776,7 +776,7 @@ Im(⌷⍤¯1 99)Y	Select: each major cell of Im selects a cell from Y	Tacit	Dyad
 (⍳⍴)Y	All indices of array Y	Tacit	Monadic Function		Index Generation			
 (⍳∘1)N	Index of first 1 in N	Tacit	Monadic Function		Index Generation	indexof one locate find positionof location 1st		
 X(⍳⍤1)Y	Indices of elements of X in corresponding rows of X (X[i;]⍳Y[i;])	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof rowwise row-wise locating cells items location horizontally		
-Ms(⍳,)Ns	Catalogue of all pairs from ⍳Ms and ⍳Ns	Tacit	Dyadic Function		Index Generation	pairings tuples table matrix		
+Is(⍳,)Js	Catalogue of all pairs from ⍳Is and ⍳Js	Tacit	Dyadic Function		Index Generation	pairings tuples table matrix		
 (0∊≠)Y	Are any major cells identical?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? anyidentical? anydups? items elements		
 (0∊⍴)Y	Is Y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?		
 X(~∊)Y	Boolean items in X that are not in Y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave elementof ∉ cells elements binary base-2 base2		
@@ -2425,7 +2425,7 @@ name:	Label for → and :GoTo	Syntax	Control	Structure	System	line number jump t
 ⌈/⍬	Negative “infinity” (the smallest representable value)	Constant			Expression	system internal representation lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞ mostnegative least number		
 ⌊/⍬	Positive “infinity” (the largest representable value)	Constant			Expression	system internal representation upper limit ∞ ∞ ¯ negativeinfinity ∞ mostpositive biggest greatestif number		
 ⊃⌽Y	Fast: The item in the top right of Y	Expression		Performance	Selection	speed optimised optimized quick top-right ne northeast north-east cell element idiom		
-Bv/⍳Ns	Fast: The subset of ⍳Ns corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths idiom		
+Bv/⍳Js	Fast: The subset of ⍳Js corresponding to the 1s in Bv	Expression		Performance	Index Generation	speed optimised optimized quick ones trues truths idiom		
 0∊⍴Y	Fast: Is Y empty?	Expression		Performance	Array Properties	testif speed optimised optimized quick idiom		
 X f[ax]Y	f between X and Y along axis ax	Syntax	Dyadic Function	Monadic Operator	Function Application	squarebrackets axisoperator dimension		https://help.dyalog.com/latest/#Language/Primitive%20Operators/Axis%20with%20Dyadic%20Operand.htm
 f[ax]Y	f on Y along axis/axes ax	Syntax	Monadic Function	Monadic Operator	Function Application	squarebrackets axisoperator		https://help.dyalog.com/latest/#Language/Primitive%20Operators/Axis%20with%20Monadic%20Operand.htm
