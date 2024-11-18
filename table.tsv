@@ -1311,7 +1311,7 @@ Is(⊢⌷⍨∘⊂∘⍋⌷⍤1)Y	Sort Y ascending according to column Is	Tacit	
 Xv(⊢⌷⍨∘⊂∘⍋∊⍨)Yv	Move items Xv to end of Yv	Tacit	Dyadic Function		Sets	major cells rows elements trailing ending		
 Is(⊢⌷⍨∘⊂∘⍒⌷⍤1)Y	Sort Y descending according to column Is	Tacit	Dyadic Function		Mathematical	sort() major cells rows elements items of array down decreasing sorting reordering ordering bycolumn specific		
 (¯1⌽+\∊⍨∘⍳+/)Jv	Changing lengths Jv of subvectors to starting indicators	Tacit	Monadic Function		Boolean/Logical	partitions change converting conversion segments		
-(∨\∧∘⌽∨\∘⌽)B	Mask for selecting between first and last 1 on each row	Tacit	Monadic Function		Boolean/Logical	masking trim ones 1st bitmask bit-mask		
+(∨\∧∘⌽∨\∘⌽)B	Mask for selecting between first and last 1 on each row	Tacit	Monadic Function		Boolean/Logical	masking trimming trims ones 1st bitmask bit-mask infix fill 1s between outermost vector		
 (⌊⊢+2÷⍨0.5≠2|⊢)N	Rounding, to nearest even integer for 0.5 = 1||N	Tacit	Monadic Function		Mathematical	precision whole number favoring		
 (⌽⊢∘.<∘⍳⌈/)Iv	Matrix with Iv[i] trailing zeroes on row i	Tacit	Monadic Function		Boolean/Logical	1s 0s zeros ones falses falsehoods trues truths table ending		
 (⌽⊢∘.≥∘⍳⌈/)Iv	Matrix with Iv[i] trailing ones on row i	Tacit	Monadic Function		Boolean/Logical	1st trues truths first table ending		
