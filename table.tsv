@@ -820,7 +820,7 @@ Is↑⍨∘-⍨Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Stru
 X⍴⍨∘⍴⍨Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill		
 ,∘⊆∘,Y	Normalise scalar/vector/vector of scalars/vectors to vector of vectors	Tacit	Monadic Function		Structural	normalize nested nesting flexible consistent input		
 Iv⌷⍨∘⊂⍨Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements getting picking selecting		
-Iv⌷⍨∘⊂⍨Y	Permute: Reorder major cells of Y according tot permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
+Iv⌷⍨∘⊂⍨Y	Permute: Reorder major cells of Y according to permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
 X⍳⍨∘⊖⍨Y	Index of last occurrence of major cells Y in X, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location reverse back trailing ending	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OKEpMTU0CUusKj3s2Pelc86pjxqGsakAGSVf//HwA	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions		
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings separated separator delimiter		
