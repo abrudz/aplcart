@@ -1,5 +1,5 @@
 @font-face{font-family:P;src:local('APL333'),url(apl333.ttf)}         *{font-family:P;text-decoration:none}
-@font-face{font-family:M;src:local('APL385 Unicode'),url(apl385.ttf)} #q,td:first-child{font-family:M}
+@font-face{font-family:M;src:local('APL386 Unicode'),url(APL386.ttf)} #q,td:first-child{font-family:M}
 i{display:none}
 html,body{height:100%}
 body{display:flex;flex-flow:column;margin:0;font-size:16px;
