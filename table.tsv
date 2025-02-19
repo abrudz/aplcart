@@ -820,7 +820,7 @@ Is-⍛↑Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Structural
 X⍴⍛⍴Y	Array with shape of X and content of Y	Tacit	Dyadic Function		Structural	reshape mould mold form fill		
 ,∘⊆∘,Y	Normalise scalar/vector/vector of scalars/vectors to vector of vectors	Tacit	Monadic Function		Structural	normalize nested nesting flexible consistent input		
 Iv⊂⍛⌷Y	Select major cells Iv from Y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements getting picking selecting		
-Iv⊂⍛⌷Y	Permute: Reorder major cells of Y according tot permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
+Iv⊂⍛⌷Y	Permute: Reorder major cells of Y according to permutation vector Iv	Tacit	Dyadic Function		Selection	rightshoeunderbar ⊇ items elements permutation permuting		
 X⊖⍛⍳Y	Index of last occurrence of major cells Y in X, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location reverse back trailing ending	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OKEpMTU0CUusKj3s2Pelc86pjxqGsakAGSVf//HwA	
 ⍳∘≢∘⍴Y	All axes of array Y	Tacit	Monadic Function		Index Generation	dimensions		
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings separated separator delimiter		
@@ -1216,7 +1216,7 @@ X(⍳|⍨1+∘≢⊣)Y	First indices in X of major cells Y, 0 if not found	Tacit
 X(⍸-⍳≤∘≢⊣)Y	Indices of major cells of Y in right-inclusive intervals with cut-offs X	Tacit	Dyadic Function		Index Generation	left-exclusive intervalindex iotaunderbar bins groups ranges buckets classes classifying classification items elements high-rank (a,b] ]a,b] ⍺<x≤b	https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFo0e9Wx71bjbjetQ3FSigABRX0HjUu0MXKPioc8mjjhmPOhc96lqsqWCsYEyMIpP//wE	
 (+/∘∪⊢∨⍳)Js	Sum of positive divisors of Js	Tacit	Monadic Function		Mathematical	sigma σ(n)	https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgKCsv4oiY4oiq4oqi4oio4o2zKSAxMv//	
 (⊃∘⍋∘|⊃⊢)Nv	First number with smallest magnitude	Tacit	Monadic Function		Mathematical	minimum absolute value closest nearest to 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ai3G0jWgDhdizQVjBUOrTdRMPr/HwA	
-X(⊂∘⍋⍛⌷)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering		
+X(⊂⍤⍋⍛⌷)Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering		
 X≡⍥(⊂∘⍋⌷⊢)Y	Are X and Y permutations of each other?	Tacit	Dyadic Function		Comparison	testif anagrams? isanagram? isanagramof? ispermutation? ispermutationof? permutationsof? permutations?		
 (⍳∘≢≡⌽∘⍋)N	Is N Strictly Decreasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? sorted?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxe7s1FYwNTRQMTS0VjMxMuYhWqkBQrZG5gYGCoYWRBYQwMbX8/x8A	
 (⊃∘⍒∘|⊃⊢)Nv	First number with largest magnitude	Tacit	Monadic Function		Mathematical	maximum absolute value biggest farthest furthest away from 0 zero	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA	
@@ -1342,8 +1342,8 @@ X(1-⊖⍛⍳-∘≢⊣)Y	last index of ((⍳): Last indices in X of major cells
 (¯2-/∘⍸1,1,⍨2≠/⊢)Yv	Lengths of subvectors of Yv having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items contiguous		
 (¯1+¯2-/∘⍸1,⍨⊢=⊃)Dv	Segment lengths (excluding delimiters) in delimited string Dv where the first character is the delimiter ≢¨ ⍴¨	Tacit	Monadic Function		Text	segmented string SSLEN separated separator		
 X(⊂⍤⍋⍤⌷⍨∘⊂⌷⊢)Jv	Sorting indices Jv according to data X	Tacit	Dyadic Function		Index Generation	permute		
-(⊂∘⍋⍛⌷⍳⊢)Y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	rising up		
-(⊂∘⍒⍛⌷⍳⊢)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling do		
+(⊂⍤⍋⍛⌷⍳⊢)Y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	rising up		
+(⊂⍤⍒⍛⌷⍳⊢)Y	Descending cardinals numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling do		
 Is(⍉⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-column matrix (filled column-wise)	Tacit	Dyadic Function		Structural	table vertically columnwise columns		
 Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y	Distribute major cells of Y into Is (default Is:≢Y) groups as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal	https://tio.run/##SyzI0U2pTMzJT///PzQvKrNA4VHbBIWaRx0zHvVuBpGdix51LQIxupoe9ewAsrnKEovAitQTk5JTUtPUuR71TQXxDRUgBgDlYUJGmELGmEImmEKmmEJmmELmmEIWmEIKCKH//wE	
 (⊢×∘.<⍨∘⍳∘≢)Mm	Extract the upper triangular part of the matrix Mm without main diagonal	Tacit	Monadic Function		Mathematical	zero out lower make strict triangle northeast north east north-east	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMPZtHvSuA9KPezSCyc5GmgqmC6aPeLUABI9P//wE	
