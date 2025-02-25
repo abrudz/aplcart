@@ -92,7 +92,8 @@ The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is press
 
 RIDE allows adding a website to its menu bar:
 
-- Edit ▸ Preferences ▸ Menu, then below &Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
+- macOS: Dyalog  ▸ Preferences ▸ Menu, then below the `&Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
+- other platforms: Edit  ▸ Preferences ▸ Menu, then below the `&Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
 
 You can now press <kbd>Alt</kbd>-<kbd>Alt</kbd>,<kbd>a</kbd> to launch APLcart.
 
