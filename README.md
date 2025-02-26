@@ -54,7 +54,7 @@ While APLcart does not feature checking of your answer (indeed, there can often 
 See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
 
 - Hit [here](https://aplcart.info/quiz) and choose task type, and figure out the answer. You may want to use [an APL interpreter](https://aplwiki.com/wiki/Running_APL).
-- Hit the logo [⊆⌈](abrudz/aplcart) in the top left corner to go to the main APLcart page (access-key <kbd>a</kbd> — for _**a**plcart_)
+- Hit the logo [⊆⌈](https://aplcart.info  ) in the top left corner to go to the main APLcart page (access-key <kbd>a</kbd> — for _**a**plcart_)
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to access this documentation (access-key <kbd>e</kbd> — for _**e**xplain_)
 - Hit one of the <kbd>Reveal</kbd> buttons to reveal APLcart's answer (there may be other correct answers) to that task
 - Hit one of the <kbd>Next…</kbd> buttons to proceed to the next task of that type
@@ -92,7 +92,8 @@ The Windows Dyalog IDE allows using an online search when <kbd>F1</kbd> is press
 
 RIDE allows adding a website to its menu bar:
 
-- Edit ▸ Preferences ▸ Menu, then below &Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
+- macOS: Dyalog  ▸ Preferences ▸ Menu, then below the `&Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
+- other platforms: Edit  ▸ Preferences ▸ Menu, then below the `&Help` line, insert a line containing <code>&APLcart =https://aplcart.info</code>
 
 You can now press <kbd>Alt</kbd>-<kbd>Alt</kbd>,<kbd>a</kbd> to launch APLcart.
 
