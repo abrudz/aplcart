@@ -686,7 +686,7 @@ name←X∘⍋	Create a “grade-ascending-according-to” function with a hashe
 name←X∘⍒	Create a “grade decending according to” function with a hashed principal argument (fast X⍒Y for subsequent values of Y)	Tacit	Monadic Function		Index Generation	performance hasharray hash-array hash-table		https://help.dyalog.com/latest/#Language/Defined%20Functions%20and%20Operators/Search%20Functions%20and%20Hash.htm
 {0}¨Y	Fast: 0 corresponding to each item of Y	Tacit	Monadic Function	Performance	Boolean/Logical	speed optimised optimized quick zeroes naughts 0s zeros cell element falses falsehoods idiom		
 X(f⍤0)Y	Run f on scalars	Tacit	Dyadic Function	Monadic Operator	Function Application	apply		
-Mv(f⍤0 1)Nm	Apply f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise		
+Mv(f⍤0 1)Nm	Apply scalar function f between vector Mv and each column of Nm	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise		
 Mv(f⍤1)Nm	Apply f between vector Mv and each row of Nm	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise list dimensions axes horizontally		
 Xs(@1)Y	Replacing first major cell of Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural	substitute merge amend replace update 1st item element		
 X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic Operator	Function Application	f⁻¹(x,y) f′(x,y) fʹ(x,y) opposite revert		
