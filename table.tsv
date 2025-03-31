@@ -1163,7 +1163,7 @@ X(1≠6 9⍸⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic F
 (≢∘∪⊢∨⍳)Js	Number-of-divisors of Js	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5		
 Is(⍋×∘⍋∘⍋)Y	Choosing grading direction (¯1,0,1) dynamically during execution	Tacit	Dyadic Function		Mathematical	sorting ascending descending grade		
 Iv(+\⍤⊢∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating bitmask bit-mask		
-(+\+\∘⍳)Js	First Js figurate numbers	Tacit	Monadic Function		Mathematical	1st		
+Is{+\⍣⍺⍳⍵}Js	First Js figurate numbers of order Is	Dfn	Dyadic Function		Mathematical	r-simplex polyhedral polygonal pyramidal triangular tetrahedral pentalope 5-simplex 6-simplex 7-simplex hyperpyramidal pascal's triangle		
 (∧⌿⊢=⌈⍀)N	Are columns of N in ascending order?	Tacit	Monadic Function		Comparison	testif vertical raising? sorted? growing?		
 (∧⌿⊢=⌊⍀)N	Are columns of N in descending order?	Tacit	Monadic Function		Comparison	testif vertical falling? sorted? shrinking?		
 (+⍀1⍪2≢⌿⊢)Y	Increment on change: Array of same shape as Y beginning with 1 and increasing for each change in adjacent values	Tacit	Monadic Function		Comparison	incrementing changing neighbouring neighboring elements items cumulative group enumerate enumeration	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tB/1Nhg@6l1l9Khz0aOe/Y@6FmkqqPtmFheDUEFBpvr//wA	
@@ -1408,7 +1408,7 @@ Is(⊢↑⍨⊢∘≢+|∘-∘≢)Y	Increasing the leading dimension of Y to mul
 Iv(⊢↑⍨⊢∘⍴+|∘-∘⍴)Y	Increasing the dimensions of Y to multiples of Iv	Tacit	Dyadic Function		Structural	allaxes divisibleby pad extend axes		
 Is(⊢↑⍨∘-∘⌊2÷⍨+∘≢)Dv	Centering text line Dv into a field of width Is	Tacit	Dyadic Function		Text	centre align string		
 X(⍪⌷⍨∘⊂∘⍋,⍥⍳⍥≢)Y	Merge X and Y alternately	Tacit	Dyadic Function		Structural	faro weave dovetail the technique zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing		
-Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise rows		
+Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled column-wise)	Tacit	Dyadic Function		Structural	table vertically columnwise rows		
 (⊢≡⊢×∘.<⍨∘⍳∘≢)Nm	Is Nm an upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove strict removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4aezaPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIRYk5BlDSgGxzkEwAkwZkmwM3AQL//wcA	
 (⊢≡⊢×∘.≤⍨∘⍳∘≢)Nm	Is Nm an upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4beo84lj3pXAFmPejeDyM5FmgpQpcYKxo96txgqoEEuykwygJIGFJiEZAaYNKDAJLgZEPj/PwA	
 (⊢≡⊢×∘.≥⍨∘⍳∘≢)Nm	Is Nm a lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4beo86lj3pXAFmPejeDyM5FmgpQpcYKxo96txgqoEEu8k0yAEKQGQYUmmQANQluHoUmIZn3/z8A	
@@ -1922,16 +1922,16 @@ Mv{(⍵>⊃⍺)∧⍵<⊃⌽⍺}N	Is N within the range ( 1⌷Mv , 2⌷Mv )	Dfn	
 Mv{(⍵≤⊃⍺)∨⍵>⊃⌽⍺}N	Is N outside the range ( 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric ≥Y> ≥X> ≥M> ≥N> interval outsiderange?		
 Mv{(⍵>⊃⍺)∧⍵≤⊃⌽⍺}N	Is N within the range ( 1⌷Mv , 2⌷Mv ]	Dfn	Dyadic Function		Comparison	testif numbers numeric <Y≤ <X≤ <M≤ <N≤ interval inrange?		
 I{(1++\' '=⍵)[⍺]}Dv	Ordinal numbers of words in Dv that indices I point to	Dfn	Dyadic Function		Index Generation	which		
-I{⍉2⊥∨/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise OR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq		
-I{⍉2⊥∧/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise AND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq		
-I{⍉2⊥</2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse nonimplication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply		
-I{⍉2⊥≤/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise implication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialconditional materialconsequence implies implying materialimplication therefore Cpq		
-I{⍉2⊥=/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XNOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate materialbiconditional biimplication eqv nxor bothorneither both-or-neither exclusivenor materialequivalence Kroneckerdelta iff logicalequivalence Epq doubleimplying		
-I{⍉2⊥≥/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise converse implication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate because if converseconditional Bpq reverseimplying cimply		
-I{⍉2⊥>/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise nonimplication for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate abjunction not butnot Lpq nimply		
-I{⍉2⊥≠/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise XOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq		
-I{⍉2⊥⍱/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NOR for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq		
-I{⍉2⊥⍲/2⊥⍣¯1⍉⍺,[0.5]⍵}J	Bit-wise NAND for positive integers	Dfn	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq		
+I(2⊥(∨/2⊥⍣¯1,⍤0))J	Bit-wise OR for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate disjunction vel alternation Apq		
+I(2⊥(∧/2⊥⍣¯1,⍤0))J	Bit-wise AND for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate conjunction Kpq		
+I(2⊥(</2⊥⍣¯1,⍤0))J	Bit-wise converse nonimplication for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate Mpq cnimply		
+I(2⊥(≤/2⊥⍣¯1,⍤0))J	Bit-wise implication for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate materialconditional materialconsequence implies implying materialimplication therefore Cpq		
+I(2⊥(=/2⊥⍣¯1,⍤0))J	Bit-wise XNOR for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate materialbiconditional biimplication eqv nxor bothorneither both-or-neither exclusivenor materialequivalence Kroneckerdelta iff logicalequivalence Epq doubleimplying		
+I(2⊥(≥/2⊥⍣¯1,⍤0))J	Bit-wise converse implication for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate because if converseconditional Bpq reverseimplying cimply		
+I(2⊥(>/2⊥⍣¯1,⍤0))J	Bit-wise nonimplication for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate abjunction not butnot Lpq nimply		
+I(2⊥(≠/2⊥⍣¯1,⍤0))J	Bit-wise XOR for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate exclusivedisjunction eor exor Jpq		
+I(2⊥(⍱/2⊥⍣¯1,⍤0))J	Bit-wise NOR for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate peirce'sarrow quine'sdagger ampheck neithernor neither-nor jointdenial Xpq		
+I(2⊥(⍲/2⊥⍣¯1,⍤0))J	Bit-wise NAND for positive integers	Tacit	Dyadic Function		Boolean/Logical	bitwise binary gate shefferstroke notand alternativedenial Dpq		
 Ns{+/⍵××\1,⍺÷⍳¯1+≢⍵}Nv	Value of Taylor series with coefficients Nv at point Ns	Dfn	Dyadic Function		Mathematical			
 Av{≠⍀b⍀2≠⌿0⍪⍵⌿⍨b←⍺∨⍵}Bv	Not leading zeroes (∨\) in each subvector of Bv indicated by Av (fast ∊∨\¨Av⊂Nv)	Dfn	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists zeros 0s falses falsehoods start beginning scan separated separator delimiter		
 {1↓∊':'@1∘⍕¨100+3↑3↓⍵}Jv	Date (⎕TS format) to hh:mm:ss	Dfn	Monadic Function		Text	timestamp 24-hour clock string		
