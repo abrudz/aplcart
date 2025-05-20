@@ -1772,7 +1772,7 @@ M{⎕DIV←1 ⋄ ⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dya
 crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem string		https://dfns.dyalog.com/n_dots.htm
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating		
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor self-contained		
-{⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof		
+{⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Monadic Function		Mathematical	sumof		
 {1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w	
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
@@ -1870,7 +1870,7 @@ X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namesp
 Cv{⍺⎕S'&'⍠'OM'1⊢⍵}Dv	Find all matches (even overlapping) for regex Cv in Dv	Dfn	Dyadic Function		Text	occurrences	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE/XUFaof9e4C8oPV1dQf9S5Q9/dVN3zUtehR79ZaoHxSYmKy@v//AA	
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find string regex regexp		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
-Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
+Is{⎕A[⎕←1+26|⍺-1-⎕A⍳⍵]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
 Iv{⍺⌷⍨∘⊂⍨⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated		
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method		
 Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at point Ms	Dfn	Dyadic Function		Mathematical			
@@ -2194,6 +2194,7 @@ X f{⊃⌽⍸⍺ ⍺⍺ ⍵}Y	Index of last element where Xv f Y (f returns Bool
 X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2		
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic		https://dfns.dyalog.com/n_repl.htm
 f{f←⍺⍺ ⋄ ⎕OR'f'}⍬	Arrayify: Convert f into an array for use in an array of functions	Dop	Monadic Function	Monadic Operator	Function Application	function-array encapsulate encapsulation embedding toarray gerund		
+X(Xs{⍺←⊢ ⋄ ⍺(⍺⍺.((⎕OR ⍵⍵){⍺←⊢ ⋄ ⍺ ⍺⍺ ⍵}))⍵}Dv)Y	Apply: Apply function Dv from namespace Xs on arguments X (optional) and Y	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	activate activation activating applying application calling using dereference dereferencing		
 rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator	Function Application	conditionaloperator listoffunctions co-operator cooperator vector		https://dfns.dyalog.com/n_lof.htm
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition (Q-combinator): g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	Queer-bird Q-combinator before jotunderbar composewith bind ringunderbar functioncomposition ⍛ reverse-compose fXgY backcompose back-compose reversecompose into reversed		
 f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
