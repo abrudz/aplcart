@@ -699,7 +699,8 @@ M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³
 A*∘~⍨N	Conditional change of elements of N to one according to A	Tacit	Dyadic Function		Mathematical	1 cells items changing converting conversion		
 X g⍨∘f⍨∘h Y	Split-Compose (D₂-combinator): apply g between (f X) and (h Y), that is (f X) g (h Y)	Tacit	Dyadic Function		Composition	composewith splitover (fX)g(hY) (fX)ghY dovekies D2-combinator		
 +∘÷/N	Continued fraction with terms N	Tacit	Monadic Function		Mathematical	series sequence		
-A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2		
+A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2 replicate		
+I/⍥,Y	Create vector of elements in array Y selected by integer array I of the same shape	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2 expand		
 ∨/∘,B	Are any true?	Tacit	Monadic Function		Boolean/Logical	testif forany thereexists ∃ ⋁		
 ∧/∘,B	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀		
 ⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick cell element dimension 1st idiom		
