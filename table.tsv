@@ -1067,6 +1067,8 @@ Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Struc
 Iv(-⍤⊣↓↓)Y	Drop first and last Iv items along leading axes of Y	Tacit	Dyadic Function		Selection	dropping remove trim cut major cells rows elements dimensions delete start beginning ending head tail infix removing erasing erase eliminate eliminating deleting		
 Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function		Structural	substitute merge amend replace update item element		
 Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
+Is(↓⍤1)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
+Is(⍉⊣↓⍉⍤⊢)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table		
 (⍴⍴0,1⍨¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table		
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing contiguous		
