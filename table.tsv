@@ -1081,7 +1081,7 @@ Is(↑,⍥⊂↓)Y	Cutting Y at offset Is	Tacit	Dyadic Function		Structural	head
 (?∘⍴⌷⊢)Y	Index random item from array	Tacit	Monadic Function		Selection	selectrandom cell element		
 I(⊣+1⍳⍨↓)B	Index of first one after index Is in Bv	Tacit	Dyadic Function		Index Generation	1st		
 (⊢!⍨0,⍳)Js	Coefficients of the binomial (exact, fastest below 10)	Tacit	Monadic Function		Mathematical	binomial combinations choose		
-(⍳∘≢,⊢)Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
+⍳∘≢⍛,Ym	Attach row numbers to a matrix	Tacit	Monadic Function		Index Generation	labels table		
 I(~∊⍨∘⍳)Jv	Boolean array of shape Jv with zeros in locations Iv	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2 vector length		
 Iv(⍸⍤⊣⊆⊢)Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
 X(6=⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X )	Tacit	Dyadic Function		Comparison	testif <Y< <X< tao totalarrayordering interval inrange? exclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMxsH/Vu1jY@PP1R7w5NBQMu3HKGeOSM8MgZ45Ez@f8fAA	
