@@ -699,7 +699,8 @@ M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³
 A*∘~⍨N	Conditional change of elements of N to one according to A	Tacit	Dyadic Function		Mathematical	1 cells items changing converting conversion		
 X f⍛g∘h Y	Split-Compose (D₂-combinator): apply g between (f X) and (h Y), that is (f X) g (h Y)	Tacit	Dyadic Function		Composition	composewith splitover (fX)g(hY) (fX)ghY dovekies D2-combinator		
 +∘÷/N	Continued fraction with terms N	Tacit	Monadic Function		Mathematical	series sequence		
-A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary base-2 base2		
+A⊣@⊢⍨Yv	Using Boolean array A for expanding Yv (Yv's elements at 1s in A)	Tacit	Dyadic Function		Structural	ones cells items trues truths binary replicate		
+I/⍥,Y	Create vector of elements in array Y selected by integer array I of the same shape	Tacit	Dyadic Function		Structural	ones cells items trues truths binary expand		
 ∨/∘,B	Are any true?	Tacit	Monadic Function		Boolean/Logical	testif forany thereexists ∃ ⋁		
 ∧/∘,B	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀		
 ⊃∘⍴¨Y	Fast: The length of the first axis of each item in X	Tacit	Monadic Function	Performance	Array Properties	speed optimised optimized quick cell element dimension 1st idiom		
@@ -845,7 +846,7 @@ I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical
 (¯2○1○⊢)N	Complementary Angle	Tacit	Monadic Function		Circular/Trigonometric	○/		
 (1⍴⍨≢)Ym	Vector having as many ones as Ym has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list		
 (*×⍨)N	Limit of nominal rate N when continuously compounded	Tacit	Monadic Function		Mathematical	interest		
-(180÷⍨○)N	N Degrees in Radians	Tacit	Monadic Function		Circular/Trigonometric			
+(○÷180)∘×N	N Degrees in Radians	Tacit	Monadic Function		Circular/Trigonometric			
 (!-∘1)N	Gamma function of N	Tacit	Monadic Function		Mathematical	gamma() Γ		
 (÷1∘○)N	Cosecant	Tacit	Monadic Function		Circular/Trigonometric	csc() cosec() cosecans		
 (÷2∘○)N	Secant	Tacit	Monadic Function		Circular/Trigonometric	sec() secans		
@@ -968,7 +969,7 @@ M(⊣×¯12○⊢)N	Join magnitude M and radians N to form complex	Tacit	Dyadic 
 (≢↑1∘↓)Y	Shifting Y left/up one position (padding on right/bottom)	Tacit	Dyadic Function		Selection	leftshift list vector 1		
 (1=≢∘⍴)Y	Is Y a vector?	Tacit	Monadic Function		Array Properties	testif rank1	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUe8WTQV1j9ScnHx1LhySuCTU//8HAA	
 (⌊1+10∘⍟)J	Number of digits in strictly positive integers in J	Tacit	Monadic Function		Mathematical	needed positions width representation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GWobGjzqmPGod76mgqGZoYWCoYKRuaGFkcX//wA	
-(180÷○∘÷)N	N Radians in Degrees	Tacit	Monadic Function		Circular/Trigonometric			
+(÷○÷180)∘×N	N Radians in Degrees	Tacit	Monadic Function		Circular/Trigonometric			
 (○4×*∘2)N	Area of sphere with radius N	Tacit	Monadic Function		Circular/Trigonometric	length ball		
 (*∘÷∘3)N	Cube Root	Tacit	Monadic Function		Mathematical	squareroot cbrt ³√ ∛ ^0.333 ^.333 ^(1/3)		
 M×⍥(1∘-)N	Probabilistic NOR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽		
@@ -1772,7 +1773,7 @@ M{⎕DIV←1 ⋄ ⍺÷⍵}N	Avoiding division by zero error (gives zero)	Dfn	Dya
 crep←{dot←'·'} dfns.dots crep	Show dfn with “white dots”	Dfn	Function		Text	whitedots functionsformatting name-clashproblem stuff nameclashproblem string		https://dfns.dyalog.com/n_dots.htm
 Iv{1@⍺{0}¨⍵}Y	Locate indices Iv in array Y	Dfn	Monadic Function		Boolean/Logical	indicate locations masking indicating		
 {⍵=⍵.⍵⍵}Y	Is Y a root namespace?	Dfn	Monadic Function		System	testif root? own parent ancestor self-contained		
-{⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Dyadic Function		Mathematical	sumof		
+{⌽+⌿↑⌽¨⍵}Nv	Sum of list of polynomials with descending coefficients	Dfn	Monadic Function		Mathematical	sumof		
 {1=-/¨⍳2⍴⍵}Jv	Subdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	sub-diagonal	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8	
 {¯1=-/¨⍳2⍴⍵}Jv	Superdiagonal matrix of size Jv (n or m,n)	Dfn	Monadic Function		Mathematical	super-diagonal	https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w	
 {⍉2⊥⍣¯1⊢0,⍳⍵}Js	All binary representations up to Js (truth table)	Dfn	Monadic Function		Boolean/Logical	matrix base-2 base2		
@@ -2196,6 +2197,7 @@ X f{⊃⌽⍸⍺ ⍺⍺ ⍵}Y	Index of last element where Xv f Y (f returns Bool
 X f{⊃⍸~⍺ ⍺⍺ ⍵}Y	Index of first element where not X f Y (f returns Boolean result)	Dop	Dyadic Function	Monadic Operator	Index Generation	find condition cell item 1st binary base-2 base2		
 {prompt←4↑''} (eval dfns.repl) stop	Read-eval-print loop	Dop		Monadic Operator	Function Application	shell error-guard,dynamic shell errorguard,dynamic		https://dfns.dyalog.com/n_repl.htm
 f{f←⍺⍺ ⋄ ⎕OR'f'}⍬	Arrayify: Convert f into an array for use in an array of functions	Dop	Monadic Function	Monadic Operator	Function Application	function-array encapsulate encapsulation embedding toarray gerund		
+X(Xs{⍺←⊢ ⋄ ⍺(⍺⍺.((⎕OR ⍵⍵){⍺←⊢ ⋄ ⍺ ⍺⍺ ⍵}))⍵}Dv)Y	Apply: Apply function Dv from namespace Xs on arguments X (optional) and Y	Dop	Ambivalent Monadic Function, Dyadic Function	Dyadic Operator	Function Application	activate activation activating applying application calling using dereference dereferencing		
 rslt←{larg} {''} dfns.lof F lof G lof H … rarg	List of functions	Dop		Dyadic Operator	Function Application	conditionaloperator listoffunctions co-operator cooperator vector		https://dfns.dyalog.com/n_lof.htm
 X f{⍵ ⍵⍵⍨⍺⍺ ⍺}g Y	Reverse composition (Q-combinator): g on f X and Y, that is, (f X) g Y	Dop	Dyadic Function	Dyadic Operator	Function Application	Queer-bird Q-combinator before jotunderbar composewith bind ringunderbar functioncomposition ⍛ reverse-compose fXgY backcompose back-compose reversecompose into reversed		
 f{2⊥⍺⍺/2⊥⍣¯1⍉⍵}J	Bit-wise application of f over positive integers Jv	Dop	Monadic Function	Monadic Operator	Boolean/Logical	bitwise apply binary		
