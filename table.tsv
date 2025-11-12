@@ -1037,8 +1037,9 @@ Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (¯1∘⎕C≠⊢)D	Are characters of D uppercase?	Tacit	Monadic Function		Text	is upper-case? large? caps? capitals? capital? majuscules? majuscule? string		
 (7|1⎕DT,¨)J	Day of week (Sunday:0) of first of January J	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar 1st year		
 I-⍥(1⎕DT⊆)J	Number of days between ⎕TS-style timestamps I and J	Tacit	Dyadic Function		Data Conversion	datetime date-time difference subtraction timedelta time-delta ∆t Δt day-count daycount		
-(0 2∊⍨10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type chars? characters?		
-(1 2 9∊⍨40∘⎕ATX)Dv	Is Dv an array?	Tacit	Monadic Function		System	are arrays? values? variables? constants?		
+(0=10|⎕DR)Y	Is Y character?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type chars? characters?		
+((1=≢∘⍴)∧0=10|⎕DR)Y	Is Y a character vector?	Tacit	Monadic Function		Array Properties	testif char? text? datatype data-type chars? characters? charvec?		
+(1 2 8 9∊⍨40∘⎕ATX)Dv	Is Dv an array?	Tacit	Monadic Function		System	are arrays? values? variables? constants?		
 (9.1=42∘⎕ATX)Dv	Is Dv a namespace?	Tacit	Monadic Function		System	are namespaces?		
 (⎕A⍳1∘⎕C)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing		
 Xv{+/⍵}⌸Nv	Sum Nv by buckets Xv (⍴Nv ↔ ⍴Xv)	Tacit	Dyadic Function		Mathematical	groups grouping classify bins		
@@ -1066,7 +1067,7 @@ Is(×∘⍴⍴⊢)Yv	Duplicating vector Yv Is times	Tacit	Dyadic Function		Struc
 (∧/2=⌿⊢)Ym	Comparison of successive rows	Tacit	Dyadic Function		Comparison			
 Iv(-⍤⊣↓↓)Y	Drop first and last Iv items along leading axes of Y	Tacit	Dyadic Function		Selection	dropping remove trim cut major cells rows elements dimensions delete start beginning ending head tail infix removing erasing erase eliminate eliminating deleting		
 Xs(⊖⊣@1∘⊖)Y	Replacing last major cell of Y with Xs	Tacit	Dyadic Function		Structural	substitute merge amend replace update item element		
-Is(⊢↓⍨0,⊣)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
+Is(↓⍤1)Ym	Drop Is columns from matrix Ym	Tacit	Dyadic Function		Structural	table delete remove without removing erasing erase eliminate eliminating deleting		
 Is(,∘≢⍴⊢)Yv	Forming an Is-row matrix with all rows being Yv	Tacit	Dyadic Function		Structural	table		
 (⍴⍴0,1⍨¨)Nm	Non-diagonal matrix of shape of matrix Nm	Tacit	Monadic Function		Mathematical	nondiagonal table		
 (1,⍨2≠/⊢)Yv	Ending points of groups of equal elements (non-empty Yv)	Tacit	Monadic Function		Comparison	runs identical cells items ends trailing contiguous		
@@ -1416,7 +1417,7 @@ Is(⍉⊢⍴⍨⊣,⍨⊢∘≢÷⊣)Yv	Reshape Yv to Is-row matrix (filled colu
 (⊢≡⊢×∘.>⍨∘⍳∘≢)Nm	Is Nm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove strict removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4ae3aPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIhcUcwoYYACFIuwFuQ4hwjAHUHLhpFJmDZNr//wA	
 Is(⊢÷⊣*∘÷⍨1⊥*⍨∘|)N	Normalisation by Is-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LTq8/VHXYq1HHTOAjN4Vho@6lmoBaSC/RlPBWMHk/38A	
 Ms(⊣*∘÷⍨1⊥*⍨÷⊢∘≢)N	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic		
-(≢(⊢-⍨1↓⊢,1+⊣)⍸)Bv	Length of subvectors indicated by Bv (Fast ≢¨⊆⍨Bv)	Tacit	Monadic Function		Array Properties	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major count length() cells len() major cells rows elements dimension separated separator delimiter	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUu0njUtUj3Ue8Kw0dtk4FMHUPtR12LNR/17tBUMFQwAENDCOv/fwA	
+(≢(⊢-⍨1↓⊢,1+⊣)⍸)Bv	Length of subvectors indicated by Bv (Fast ≢¨⊂⍨Bv)	Tacit	Monadic Function		Array Properties	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists major count length() cells len() major cells rows elements dimension separated separator delimiter	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUu0njUtUj3Ue8Kw0dtk4FMHUPtR12LNR/17tBUMFQwAENDCOv/fwA	
 (⊂⊃¨⍨∘⍋(≢,⊂)¨)Yv	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 (⊂⊃¨⍨∘⍒(≢,⊂)¨)Yv	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength		
 ((+\∊⍨∘⍳+/)1∘+)Jv	Expansion vector (left argument for \ or ⍀) to insert Jv[i] elements before i'th element	Tacit	Monadic Function		Structural	expand openup major cells rows items lists		
@@ -1873,7 +1874,7 @@ X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namesp
 Cv{⍺⎕S'&'⍠'OM'1⊢⍵}Dv	Find all matches (even overlapping) for regex Cv in Dv	Dfn	Dyadic Function		Text	occurrences	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE/XUFaof9e4C8oPV1dQf9S5Q9/dVN3zUtehR79ZaoHxSYmKy@v//AA	
 Cv{⍺⎕S'%'⍠'ML'1⊢⍵}Dv	grep: Globally search Dv with regular expression Cv and print first occurrence	Dfn	Dyadic Function		Text	find string regex regexp		
 {,⊃∘.+/⍵⍴⊂¯1+⍳10}Is	Sum of digits of the first 10*Is numbers	Dfn	Monadic Function		Mathematical	sod()		
-Is{a[27|⍺+⍵⍳⍨a←27↑⎕A]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
+Is{⎕A[1+26|⍺-1-⎕A⍳⍵]}D	Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)	Dfn	Dyadic Function		Text	julius obfuscation obfuscate rotate rotation encrypting decrypting cypher shift code rot13 string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE	
 Iv{⍺⊂⍛⌷⍣⍵⍳≢⍺}Js	Permutation Iv to the power of Js	Dfn	Dyadic Function		Index Generation	repeated		
 {(⊢÷⊃)⌽+\0,⍳⍵}Js	Outstanding balances on rule of 78s	Dfn	Monadic Function		Mathematical	sum-of-the-digits method		
 Ms{⍵+.×⍨⍺*¯1+⍳≢⍵}Nv	Value of polynomial with coefficients Nv at point Ms	Dfn	Dyadic Function		Mathematical			
