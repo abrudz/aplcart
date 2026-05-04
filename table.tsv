@@ -1080,7 +1080,7 @@ Is(+⌿⊥⍣¯1)J	Base-Is digit sum	Tacit	Dyadic Function		Mathematical	digital
 (¯1⊥¨⍪⍀)N	An array that begins with 1↑N and has pair-wise sums 1↓N	Tacit	Monadic function		Mathematical	2+⌿⍣¯1⊢ 2+/⍣¯1⊢ inverse pairwise summation	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq03fNS19NAKnRhNBWMdEwVTIDTjgsoaKWjr41Dy/z8A	
 Iv(10∘*⍛⊤)J	Decoding numeric codes J packed with field widths Iv (ZYYYZZZ:1 3 2)	Tacit	Dyadic Function		Data Conversion	unpack converting change changing		
 (7|1⎕DT,¨)J	Day of week (Sunday:0) of first of January J	Tacit	Monadic Function		Mathematical	weekday gregoriancalendar 1st year		
-I-⍥1∘⎕DT J	Number of days between ⎕TS-style timestamps I and J	Tacit	Dyadic Function		Data Conversion	datetime date-time difference subtraction timedelta time-delta ∆t Δt day-count daycount		
+I-⍥(1∘⎕DT)J	Number of days between (⎕TS-style or Dyalog date number) date-times I and J	Tacit	Dyadic Function		Data Conversion	datetime date-time difference subtraction timedelta time-delta ∆t Δt day-count daycount		
 (1 2 8 9∊⍨40∘⎕ATX)Dv	Is Dv an array?	Tacit	Monadic Function		System	are arrays? values? variables? constants?		
 (9.1=42∘⎕ATX)Dv	Is Dv a namespace?	Tacit	Monadic Function		System	are namespaces?		
 (⎕A⍳1∘⎕C)D	Convert letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing		
