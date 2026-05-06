@@ -935,8 +935,8 @@ Xs(,,⍤0)Yv	Inserting Xs before each element of Yv	Tacit	Dyadic Function		Struc
 Xv(,,⍤0)Yv	Merging equal-length vectors Xv and Yv alternately	Tacit	Dyadic Function		Structural	faro weave dovetail the technique zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip() zip zipwith() zip-with zipwith		
 Xv(,,⍤1 0)Yv	Inserting Xv before every element of Yv	Tacit	Dyadic Function		Structural	merge cell item		
 (⊃0∘⍴)Y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods		
-(⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flattening flattened row-wise rowwise		
-(⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flattening flattened column-wise columnwise		
+(⊃,/)Yv	Join array of arrays horizontally	Tacit	Dyadic Function		Structural	nextto juxtapose merge flattening flattened row-wise rowwise vector matrices matrix		
+(⊃⍪⌿)Y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flattening flattened column-wise columnwise vector matrices matrix		
 (,⊂⍤¯1)Y	Vector of major cells for any rank Y	Tacit	Monadic Function		Structural	vectorise vectorize list dimensions higher high-rank any-rank highrank anyrank items elements axes		
 (⊃0⍴⊂)Y	Type: 'a' 1 ⎕NULL → ' ' 0 ⎕NULL (∊ with ⎕ML←0)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods		
 Xs(≠⊆⊢)Yv	Split Yv at occurrences of Xs (removes separators and empty segments)	Tacit	Dyadic Function		Structural	cut chop divide linebreaks newlines spaces carriagereturns crnl crlf linefeeds vec2vtv separate separators chunk list dividing segments partitions by delimiters delimited string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9dUVNB51LnjU1faoa5GmgnpGak5Ovn5JRmpRqn55flFOivr//wA	
