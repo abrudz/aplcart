@@ -870,7 +870,6 @@ Is(⍎⍕)N	Rounding N to Is decimal places	Tacit	Dyadic Function		Mathematical	
 Iv∊∘⍳∘≢Y	Starting points for Y in indices pointed by Iv	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings separated separator delimiter		
 ⊂∘⍋⍛⌷Y	Sort Ascending	Tacit	Monadic Function		Selection	sort() up increasing sorting reordering ordering		
 ⊂⍤⍋⍛⌷Y	Fast: Y sorted into ascending order	Tacit	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering idiom		
-⊂⍤⍋⍛⌷Y	Fast: Y sorted into ascending order	Tacit	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() up increasing sorting reordering ordering idiom		
 X⊂⍤⍋⍛⌷Y	Sorting Y according to X	Tacit	Dyadic Function		Mathematical	ordering		
 ⍋⍤⍋⍛≡Nv	Is Nv a permutation vector?	Tacit	Monadic Function		Array Properties	testif ispermutation? 1…ns		
 ⊂∘⍒⍛⌷Y	Sort Descending	Tacit	Monadic Function		Selection	sort() down decreasing sorting reordering ordering		
@@ -1728,7 +1727,6 @@ tree←dfns.tnest (depth leaves)	Array from TreeView style tree	Dfn	Function		Da
 {protected←0} dfns.wsmerge wsid	Merge saved ws into current active ws	Dfn	Function		System	workspacemerge		https://dfns.dyalog.com/n_wsmerge.htm
 {⎕CSV ⍵ ⍬ 4 1}Dv	Data matrix and column titles as 2-element vector from CSV (file or vector of vectors), with apparent numbers as numbers	Dfn	Monadic Function		Data Conversion	fetch load numbers list single simple commaseparatedvalues autodetect autoconvert auto-detect auto-convert automatic heuristically heuristics headings	https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6iZGegbqCuq5hqq4xkNY2StU2Utd81DfVLyA0RD2vNLdYr6SiRJ0LKPKobYJCtQ6Q4RwcpvCodysQr1EwqlVAqPr/HwA	
 X{⍺⍵}Y	Fast: X and Y as a two item vector (X Y)	Dfn	Dyadic Function	Performance	Structural	speed optimised optimized quick juxtapose tuple pair list cell element idiom		
-⊂⍤⍒⍛⌷Y	Fast: Y sorted into descending order	Dfn	Monadic Function	Performance	Mathematical	speed optimised optimized quick sort() down decreasing sorting reordering ordering idiom		
 (9=40∘⎕ATX)Dv	Is Dv an object?	Dfn	Monadic Function		System	are objects?		
 C←{trace←0} dfns.scc G	Strongly connected components of directed graph ⍵	Dfn	Function		Structural	Stronglyconnectedcomponents depth-firstsearch DAG depthfirstsearch dfs		https://dfns.dyalog.com/n_scc.htm
 alloc←{seats←435} dfns.apportion populations	Huntington-Hill apportionment	Dfn	Function		Sets	USHousepfRepresentatives assignment alotment		https://dfns.dyalog.com/n_apportion.htm
