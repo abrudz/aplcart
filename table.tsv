@@ -1983,6 +1983,7 @@ X{⍺⌿⍨~(⍳≢⍺)∊⍺⍳⍵}Y	Without (~) on major cells for any rank	Df
 X{⎕VSET⊂⍵((⍺⍎'⎕NS')⍵)}Dv	Change parent (##) of namespace Dv to be namespace X (ref or name)	Dfn	Dyadic Function		System	reparenting re-parenting adopting hierachy		
 {⍵⊂⍤⊢⌸⍥,⍨+/↑⍳⍴⍵}Ym	Extract the anti-diagonals of a matrix (without wrap-around) as vector of vectors	Dfn	Monadic Function		Structural	table SW-NE extract collect select		
 {⌿∘⍵¨,⌿⊖2⊥⍣¯1⍳¯1+2*≢⍵}Y	Powerset: All subsets of Y, excluding the empty set (0⌿Y) but including Y itself	Dfn	Monadic Function		Sets	power-set all combinations	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qHczkNQ20nrUuQioplZB3dHJ2UWdi0zdxgpGj3q3qDsmOiU5J6v//w8A	
+{⎕VSET(↑,⍥⊂⎕SHADOW⊢⎕VGET),⊆,⍵}Dv	Pass-through localisation: Localise while inheriting global value	Dfn	Monadic Function		System	shadow locals globals localising localizing passthrough localization localize apl+win apl64 apl*plus		
 Ms{r×+\⍵÷r←×\1@1⍴∘⍺≢⍵}Nv	Accumulate deposits Nv at rate Ms	Dfn	Dyadic Function		Mathematical	accumulationof		
 A{⍵∧s=⌈⍀⍺×s←+⍀2<⌿0⍪⍵}B	Trim groups of ones in B to begin only where first pointed to by a 1 in A	Dfn	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st contiguous		
 {--⌿(2,≢⍵)⍴⍋⍋⍪⍨⍵}Y	Count of occurrences of the cells of Y	Dfn	Monadic Function		Sets	tally selfcount items elements		
