@@ -1909,7 +1909,7 @@ X{⍺⌿⍨⍵≢⍛≥⍵⍳⍺}Y	Intersection (∩) on major cells for any ran
 {(⍳≢⊃⍵)=8⌶⍨⍵}Yv	Inverted Table Nubsieve (≠Y where Y is unverted Yv)	Dfn	Monadic Function		Sets			
 defns←{names←0 {list←0 {space←⎕THIS}}} dfns.defs namelist	Extended ]defs	Dfn	Function		System	display latebinding ⎕NC		https://dfns.dyalog.com/n_defs.htm
 X{r←⍵ ⋄ r←r⊣'r'⎕NS¨⍺}Ys	Merge members of namespaces X into namespace Ys	Dfn	Dyadic Function		System	combine		
-{⎕MKDIR⍠'Unique'1⊢⍵,'/'}Dv	Create randomely named directory in directory Dv	Dfn	Monadic Function		System	md newfolder make generate avoid clash os operating system		https://docs.dyalog.com/20.0/language-reference-guide/system-functions/mkdir/
+{⎕MKDIR⍠'Unique'1⊢⍵,'/'}Dv	Create randomly named directory in directory Dv	Dfn	Monadic Function		System	md newfolder make generate avoid clash os operating system		https://docs.dyalog.com/20.0/language-reference-guide/system-functions/mkdir/
 {2⎕NQ⎕SE'FileRead'⊣⎕SE⎕WS'File'⍵}	Load Session configuration (including ]box and ]rows settings) from file Dv	Dfn	Monadic Function		System	Ride get retrieve dyalog .dse restore settings ]boxing ]output.boxing ]output.rows		
 {2⎕NQ⎕SE'FileWrite'⊣⎕SE⎕WS'File'⍵}Dv	Save Session configuration (including ]box and ]rows settings) as file Dv	Dfn	Monadic Function		System	Ride put store dyalog .dse permanent keep settings ]boxing ]output.boxing ]output.rows make persistent		
 {(∨\' '≠⍵)/⍵}Dv	Fast: Dv without any leading blank spaces	Dfn	Monadic Function	Performance	Text	speed optimised optimized quick trim left-align leftalign blanks start beginning remove removing erasing erase eliminate eliminating delete deleting idiom string		
