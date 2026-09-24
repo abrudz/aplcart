@@ -1411,7 +1411,7 @@ I(2⊥(⍲/2⊥⍣¯1,⍤0))J	Bit-wise NAND for positive integers	Tacit	Dyadic F
 ∘.>⍨∘⍳∘≢⍛×⍛≡Nm	Is Nm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove strict removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4ae3aPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIhcUcwoYYACFIuwFuQ4hwjAHUHLhpFJmDZNr//wA	
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells rows items		
-(1,⍨¯1↓2≠⌿⊢↑⍨1+≢)Yv	Ending points of groups of equal elements	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells rows items indicate masking indicating trailing binary base-2 base2 contiguous		
+(≢↑1⍪⍨¯1↓2≠⌿⊢⍪0⍨)Yv	Ending points of groups of equal elements (possibly empty Yv)	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells rows items indicate masking indicating trailing binary base-2 base2 contiguous		
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial with descending coefficients Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate		
 I(⊂⍤~⍨∘⍳∘≢⌷⊢)Y	Major cells of Y except those enumerated in I	Tacit	Dyadic Function		Selection	elements items without positions removing erasing erase eliminate eliminating delete deleting remove indices at drop		
 (¯2-/∘⍸1,1,⍨2≠/⊢)Yv	Lengths of subvectors of Yv having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items contiguous		
