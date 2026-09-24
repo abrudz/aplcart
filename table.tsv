@@ -923,7 +923,7 @@ M(≠⌿≤)N	Is N within the range [ 1⌷M , 2⌷M ) or [ 2⌷M , 1⌷M ) ?	Tac
 (¯1∘↑⍤1)Ym	Last column as a column matrix (column vector)	Tacit	Monadic Function		Selection	rightmostcolumn trailing table list ending		
 Xs@(Ys∘=)Y	Replacing all values Ys in Y with Xs	Tacit	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update		
 X f@(1⍨¨)Y	Handling array Y temporarily as a vector (optionally with left argument X)	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	columnheadings columnnumbers ⍢, flattened flattening ravelled raveled list		
-Xs@(1⍨¨)Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural			
+Xs⍴⍨⍴Y	Fill array Y with Xs	Tacit	Monadic Function	Monadic Operator	Structural			
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus		
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus		
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Mathematical	sumall +⌿, grandtotal sumitems cells items		
