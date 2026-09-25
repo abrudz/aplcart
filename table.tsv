@@ -718,7 +718,7 @@ M,.×N	Mid product of M and N	Tacit	Dyadic Function		Mathematical	midproduct
 X∘.,Y	Cartesian product: all pairs of X and Y	Tacit	Monadic Function		Sets			
 Ms⊥∘⌽Nv	Ascendingly ordered Nv-coefficient polynomial at point Ms	Tacit	Dyadic Function		Mathematical	polynomium		
 Mv⍪⍛⊥Nv	Evaluate polynomial with descending coefficients Nv for point(s) Mv	Tacit	Dyadic Function		Mathematical	apply		
-⍕⍛≡Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif		
+(80=⎕DR)Y	Is Y a simple character array?	Tacit	Monadic Function		Array Properties	testif		
 ⍎∘⍕Yv	Convert character or numeric data into numeric (unsafe)	Tacit	Monadic Function		Data Conversion	normalise numbers converting change changing		
 Cv⊂⍛⎕NPUT Dv	Write text (vector or matrix or vector of vectors) Cv to Unicode file Dv	Tacit	Dyadic Function		System	native files dump cat save to 🐈 ascii ansi Windows-1252 UTF-8 UTF-16LE UTF-16BE UTF-32LE UTF-32LE vtv charvec charactervector textvector string	https://tio.run/##SyzI0U2pTMzJT///Xz23Mi0zJ1WvpKJEXUHjUd9Uv4DQkEe9Kx51zHjU1aSpoO6RmpOTr66gHp5flJOizgVU8ahtggJIobtriAKy9v//AQ	
 name←~∘Y	Create a “without” function with a hashed principal argument (fast X~Y for subsequent values of X)	Tacit	Monadic Function		Sets	performance hasharray hash-array hash-table		https://docs.dyalog.com/20.0/programming-reference-guide/introduction/search-functions-and-hash/
