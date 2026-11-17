@@ -660,6 +660,11 @@ C f⍥⎕C D	Caseless operation	Tacit	Dyadic Function	Monadic Operator	Text	lett
 -∘+N	Mirror complex N across y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal mirroring reflecting reflection	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA	
 ⌽∘⊖Ym	Rotate 180°	Tacit	Monadic Function		Structural	turning rotating rotation half-turn halfturn	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ	
 M×∘÷N	Division: force DOMAIN ERROR for division by 0	Tacit	Dyadic Function		Mathematical			
+×⍛|N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals		
++⍛=N	Is N real?	Tacit	Monadic Function		Mathematical	testif		
+⌊⍛=N	Is N integer?	Tacit	Monadic Function		Mathematical	testif whole number?		
++⍛≠N	Is N complex?	Tacit	Monadic Function		Mathematical	testif		
+⌽⍛≡Dv	Is Dv a palindrome?	Tacit	Monadic Function		Text	testif string		
 As-⍛↓Y	Conditional drop of last element of Y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without removing erasing erase eliminate eliminating deleting		
 Is-⍛↑Yv	Padding Yv on the left to width Is	Tacit	Dyadic Function		Structural	extend left-align leftalign text string		
 Xm≢⍛↑Ym	Vertically lengthening matrix Ym to be compatible (for ,) with Xm	Tacit	Monadic Function		Structural	extend compatibility sameheight adjust column-wise columnwise table		
@@ -685,6 +690,8 @@ Ms∊∘⍳Js	Is Ms in range 1…Js?	Tacit	Dyadic Function		Comparison	inrange? 
 Iv⍳⍛∊Jv	Boolean array of shape Iv with ones in locations Jv (inverse of Jv←⍸Bv)	Tacit	Dyadic Function		Boolean/Logical	inversion 1s trues truths list binary base-2 base2 ⍸⍣¯1 vector length	https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8	
 ⍸@⊢B	Replace 1s in Boolean array B with their enumeration	Tacit	Monadic Function		Boolean/Logical	identify label indices where	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5weNS1SMFQwQCIQSSY/v8fAA	
 Iv⍸⍛⊆Y	Cut Yv into non-empty partitions of length Iv (+/Iv ↔ ⍴Y)	Tacit	Dyadic Function		Structural	cutting partition partitioning chopping splitting separate separating chunks chunking segments segmenting		
+∪⍛≡Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?		
+∪⍛⍳Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels self-classify selfclassify		
 X f⍣¯1⍣≡Y	Limit: apply inverse of X∘f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA	
 f⍣¯1⍣≡Y	Limit: apply inverse of f until stable	Tacit	Monadic Function	Monadic Operator	Function Application	limes lim() convergence fixedpoint fixed-point	https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A	
 ⍋∘⍋Y	Permutation vector that sorts like Y	Tacit	Monadic Function		Index Generation	ranking list		
@@ -881,11 +888,6 @@ M(⊢-×)N	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathemat
 M(⊣-×)N	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq		
 M(+-×)N	Probabilistic OR	Tacit	Dyadic Function		Mathematical	fuzzy probability chance disjunction vel alternation Apq		
 M(⊢-|)N	Largest whole multiple of M less than or equal to N (N rounded down to closest smaller multiple of M)	Tacit	Dyadic Function		Mathematical	without less nodivisionremainder bar() noresidual intmultiples smaller ≤ integer unit floor	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0HnUt0q3RVLAEcQwNFQwtFYwMFIwM//8HAA	
-(×|⊢)N	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals		
-(⊢=+)N	Is N real?	Tacit	Monadic Function		Mathematical	testif		
-(⌊=⊢)N	Is N integer?	Tacit	Monadic Function		Mathematical	testif whole number?		
-(⊢≠+)N	Is N complex?	Tacit	Monadic Function		Mathematical	testif		
-(⌽≡⊢)Dv	Is Dv a palindrome?	Tacit	Monadic Function		Text	testif string	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvXsfdS58FHXIk0F9aLE5NTkxCJ1LmySQAmQvPr//wA	
 I(⌊1+⍟)J	Length to represent J in base I	Tacit	Dyadic Function		Mathematical	width representation required digits positions		
 (¯2○1○⊢)N	Complementary Angle	Tacit	Monadic Function		Circular/Trigonometric	○/		
 (1⍴⍨≢)Ym	Vector having as many ones as Ym has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list		
@@ -952,8 +954,6 @@ Xv(∨/∊)Yv	Do Xv and Yv have any elements in common?	Tacit	Dyadic Function		S
 Xv(∧/∊)Yv	Is Xv a Subset of Yv?	Tacit	Dyadic Function		Sets	testif subset? containedin ⊆ made of elements		
 X@(∊∘Y)Z	Replace all occurrences of elements from Y in array Z with X	Tacit	Monadic Function	Monadic Operator	Structural	substitute merge amend update cells items	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK9QdNB51dD3qmKHu6OrpH6quqaDu4erj46/g6Oei4O7v7@IU6ar@/z8A	
 X(1⍳⍨∊)Y	Index of first occurrence in X of any item of Y	Tacit	Dyadic Function		Index Generation	cell element find locate 1st position find location		
-(⊢≡∪)Y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHKk0F9cSk5BR1Lhwyier//wMA	
-(∪⍳⊢)Y	Consecutive ids (indices with equal major cells mapping to same index)	Tacit	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels self-classify selfclassify	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA	
 Is(⊢∩∧)Jv	Elements of Jv divisible by Is	Tacit	Dyadic Function		Mathematical	filter divisors cells items		
 Xv(~,∩)Yv	Move elements Yv (which are members of Xv) to the rear of Xv	Tacit	Dyadic Function		Sets	demote end cells items sort by non-membership non-members		
 Xv(∩,~)Yv	Move elements Yv (which are members of Xv) to the front of Xv	Tacit	Dyadic Function		Sets	promote beginning cells items sort by non-membership non-members		
