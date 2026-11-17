@@ -1835,6 +1835,7 @@ Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of
 {⍵/⍨1,2≢⌿⍵}Yv	Remove consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas		
 Iv{⍵⌷¨⍨⊂⊂⍺}Yv	Inverted Table Select: records Iv from inverted table Yv ((⊂Iv)⌷Y where Y is unverted Yv)	Dfn	Dyadic Function		Selection			
+(×/⊢!+\)Jv	Multinomial coefficient: number of distinct rearrangements of ⍸Jv	Tacit	Monadic Function		Mathematical	reorderings unique permutations identical indistinguishable copies multiple multiplicity		
 X{⍵⎕NPUT⍨⊂1⎕JSON¨⍺}Dv	Convert APL vector X to JSON Lines file Dv	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from APL2JSONLines javascriptobjectnotation export generate serialise serialize converting change changing string		
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements string		https://dfns.dyalog.com/n_cols.htm
 Cv{0::⍎⍺ ⋄ ⍎⍵}Dv	Execute Alternate: Execute Dv but if it errors, execute Cv	Dfn	Ambivalent Monadic Function,Dyadic Function		System	⎕EA APL2		
