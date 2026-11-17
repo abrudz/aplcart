@@ -1200,6 +1200,7 @@ X(1≠6 9⍸⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic F
 (⊂⍤⍋⍛⌷⍤¯1)Y	Sort major cells ascending	Tacit	Monadic Function		Mathematical	elements items sort() up increasing sorting reordering ordering		
 Is(⍋×∘⍋∘⍋)Y	Choosing grading direction (¯1,0,1) dynamically during execution	Tacit	Dyadic Function		Mathematical	sorting ascending descending grade		
 (⊂⍤⍒⍛⌷⍤¯1)Y	Sort major cells descending	Tacit	Monadic Function		Mathematical	elements items sort() down decreasing sorting reordering ordering		
+(×/⊢!+\)Jv	Multinomial coefficient: number of distinct rearrangements of ⍸Jv	Tacit	Monadic Function		Mathematical	reorderings unique permutations identical indistinguishable copies multiple multiplicity		
 Iv(+\⍤⊢∊⊣)Bv	Mask to get subvectors with indices Iv as indicated by Bv	Tacit	Dyadic Function		Selection	sub-vectors masking indicating bitmask bit-mask		
 (∧⌿⌈⍀⍛=)N	Are columns of N in ascending order?	Tacit	Monadic Function		Comparison	testif vertical raising? sorted? growing?		
 (∧⌿⌊⍀⍛=)N	Are columns of N in descending order?	Tacit	Monadic Function		Comparison	testif vertical falling? sorted? shrinking?		
@@ -1835,7 +1836,6 @@ Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv	Adjacency matrix of size Iv (n or m,n) from list of
 {⍵/⍨1,2≢⌿⍵}Yv	Remove consecutive duplicates from an ordered vector	Dfn	Monadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 Is{⊃-//⍺ 1/¯2 ⍵}N	Is differences of differences of adjacents	Dfn	Dyadic Function		Mathematical	nth derivative deltas		
 Iv{⍵⌷¨⍨⊂⊂⍺}Yv	Inverted Table Select: records Iv from inverted table Yv ((⊂Iv)⌷Y where Y is unverted Yv)	Dfn	Dyadic Function		Selection			
-(×/⊢!+\)Jv	Multinomial coefficient: number of distinct rearrangements of ⍸Jv	Tacit	Monadic Function		Mathematical	reorderings unique permutations identical indistinguishable copies multiple multiplicity		
 X{⍵⎕NPUT⍨⊂1⎕JSON¨⍺}Dv	Convert APL vector X to JSON Lines file Dv	Dfn	Monadic Function		Data Conversion	NDJSON .jsonl from APL2JSONLines javascriptobjectnotation export generate serialise serialize converting change changing string		
 cmat←{gap←1 {max←⎕PW}} dfns.cols items	Multi-column display	Dfn	Function		Text	cells elements string		https://dfns.dyalog.com/n_cols.htm
 Cv{0::⍎⍺ ⋄ ⍎⍵}Dv	Execute Alternate: Execute Dv but if it errors, execute Cv	Dfn	Ambivalent Monadic Function, Dyadic Function		System	⎕EA APL2		
@@ -2104,6 +2104,7 @@ Iv{g⌷⍨⊂⍋(+\(⍳≢⍵)∊+\1,⍺)⌷⍨⊂g←⍒⍵}Y	Grade down (⍒) 
 {⍵⌷¨⍨⊂{⍵[⍋⍺⌷⍨⊂⍵]}/⍵,⊂⍳≢⊃⍵}Yv	Inverted Table Sort (Y[⍋Y;] where Y is unverted Yv)	Dfn	Monadic Function		Selection			
 {⎕ED{2⎕FIX(⊢,⍵⊂⍨0=⍴)61⎕ATX⍵}⍣(0=≢60⎕ATX⍵)⊢⍵}Dv	Begin editing function/operator Dv and preserve whitespace	Dfn	Monadic Function		System	allow keeping text-as-typed save saving remembering white-spaces indents indentation code autoformatting auto-formatting layout custom text-as-is preservation source-as-typed		
 Av{(x/⍵)≥(z/1⌽z←⍺/⍨⍺≥z)∧⍺/z←⍵∨x←1⌽⍺}Bv	Less than or equal reduction on each subvector of Bv indicated by Av (Fast ≤/¨Av⊂Bv)	Dfn	Dyadic Function		Boolean/Logical	quick speedy performance optimised optimized partitioned partitions segmented segments sub-vectors subvectors subarrays sub-arrays sub-lists sublists reduce separated separator delimiter		
+Iv{p←⍺ ⋄ p⊣{p[⍵]←⍺}⍥({p[⍵]}⍣≡)/¨⍵}Jv	Union-find: merge the sets (trees in parent vector Iv) containing each pair of elements in Jv	Dfn	Dyadic Function		Sets	unionfind disjoint-set disjointset merge-find mergefind forest connected components graph		
 I{⍵⊂[1]⍨¯2-/0,(⌊1.5+l×⍺÷⍨¯1+⍳⍺)⍸⍳l←≢⍵}Y	Cut Y into I partitions of equal lengths (with even distribution of variation)	Dfn	Dyadic Function		Structural	chop split separate chunks segments justified		
 M{⍺+⍵×(0.5*⍨¯2×⍟?0×⍺+⍵)×1○○2×?0×⍺+⍵}N	Normally distributed numbers with mean M and standard deviation N	Dfn	Dyadic Function		Mathematical	Gaussian distribution random normrand() randnorm() nrand() randn()		
 Mv{⍵∊⍺:1 ⋄ (¯1∊×d)∨1<|+/⍟d←(⊢÷1∘⌽)⍺-⍵}Ns	Is Ns inside closed polygon Mv (using complex points)?	Dfn	Dyadic Function		Mathematical	testif contains		
