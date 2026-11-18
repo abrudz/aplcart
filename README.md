@@ -149,3 +149,26 @@ Got an idea for improving the site? [Suggest it!](https://github.com/abrudz/aplc
 Wrote a cool train? Found a clever dfn? [Submit it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=addition&template=content-request.md&title=)
 
 Missing something? Faulty content? [Report it!](https://github.com/abrudz/aplcart/issues/new?assignees=abrudz&labels=bug&template=bug_report.md&title=)
+
+### Columns of table.tsv
+
+Each line is an entry with nine tab-separated columns. Only SYNTAX and DESCRIPTION are displayed, but queries search all columns. Reuse values already present in a column where possible.
+
+|COLUMN|CONTENT|
+| - | - |
+|SYNTAX|The phrase, with arguments and operands named as in [CONTRIBUTING.md](CONTRIBUTING.md#notation-for-arguments-and-operands)|
+|DESCRIPTION|What the phrase does|
+|CLASS|Kind of code: `Primitive`, `System`, `Tacit`, `Dfn`, `Dop`, `Tradfn`, `I-beam`, `Syntax`, `Non-syntax`, `Expression`, `Constant`, or `GUI Object`|
+|TYPE|The function SYNTAX is or derives: `Monadic Function`, `Dyadic Function`, or `Ambivalent Monadic Function, Dyadic Function`; otherwise a value such as `Expression`, `Constant`, `Variable`, `Control`, or `Ucmd`, or empty|
+|GROUP|For operators, `Monadic Operator` or `Dyadic Operator`; otherwise an area such as `Native files`, `SALT`, or `Performance`, or empty|
+|CATEGORY|Topic, such as `Mathematical`, `Structural`, `Text`, `Boolean/Logical`, `Selection`, `Index Generation`, `Comparison`, `Sets`, or `Function Application`|
+|KEYWORDS|Space-separated search terms (synonyms, alternative spellings, names used elsewhere) not already in the other columns|
+|TIO|Optional [Try It Online](https://tio.run/#apl-dyalog) link, shown as <kbd>▸</kbd> (TIO's Dyalog APL predates version 20.0)|
+|DOCS|Optional documentation link, shown as <kbd>?</kbd>|
+
+### Placement of entries
+
+Add entries anywhere, for example at the end. Then, in Dyalog APL with the repository linked (`]Link.Create # path/to/aplcart`):
+
+- `Test''` gives `1` if every line has exactly nine columns (beware of trailing tabs); if not, `File''` reports the first bad line
+- `ReorderFile''` sorts the entries by CLASS (`Primitive`, `System`, `Tacit`, `Dfn`, `Dop`, then the rest), then by SYNTAX length ignoring spaces, names, and numbers, then by the glyphs used
