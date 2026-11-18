@@ -745,6 +745,7 @@ X(f⍣¯1)Y	Inverse: find Z such that Y ≡ X f Z	Tacit	Monadic Function	Monadic
 Ms×∘×⍨Nv	Rotate figure Nv in direction of point Ms	Tacit	Dyadic Function		Mathematical	rotation complex points		
 ×∘|⍨N	Square without changing sign	Tacit	Monadic Function		Mathematical	change converting conversion		
 ?⍨∘≢Y	Random Permutation vector for Y	Tacit	Monadic Function		Index Generation	shuffled shuffling randompermutation randomise randomize randomlypermute		
+X⍴⍨∘⍴Y	Fill array Y with X	Tacit	Dyadic Function		Structural			
 M*∘÷⍨N	M'th Root of N	Tacit	Dyadic Function		Mathematical	nthroot ⁿ√ ³√ ∛ ∜		
 A*∘~⍨N	Conditional change of elements of N to one according to A	Tacit	Dyadic Function		Mathematical	1 cells items changing converting conversion		
 +∘÷/N	Continued fraction with terms N	Tacit	Monadic Function		Mathematical	series sequence		
@@ -925,7 +926,6 @@ M(≠⌿≤)N	Is N within the range [ 1⌷M , 2⌷M ) or [ 2⌷M , 1⌷M ) ?	Tac
 (¯1∘↑⍤1)Ym	Last column as a column matrix (column vector)	Tacit	Monadic Function		Selection	rightmostcolumn trailing table list ending		
 Xs@(Ys∘=)Y	Replacing all values Ys in Y with Xs	Tacit	Monadic Function	Dyadic Operator	Structural	substitute merge amend replace update		
 X f@(1⍨¨)Y	Handling array Y temporarily as a vector (optionally with left argument X)	Tacit	Ambivalent Monadic Function, Dyadic Function	Monadic Operator	Function Application	columnheadings columnnumbers ⍢, flattened flattening ravelled raveled list		
-X⍴⍨∘⍴Y	Fill array Y with X	Tacit	Dyadic Function		Structural			
 Ms(+,-)Ns	Ms±Ns	Tacit	Dyadic Function		Mathematical	plusminus		
 Ms(-,+)Ns	Ms∓Ns	Tacit	Dyadic Function		Mathematical	minusplus		
 (+/,)N	Sum all elements in an array	Tacit	Monadic Function		Mathematical	sumall +⌿, grandtotal sumitems cells items		
@@ -1194,7 +1194,6 @@ X(1=4 9⍸⍳+3×⍸)Y	Is Y within the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Func
 X(1=6 9⍸⍳+3×⍸)Y	Is Y within the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif <Y≤ <X≤ tao totalarrayordering interval inrange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtzRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A	
 X(1≠4 9⍸⍳+3×⍸)Y	Is Y outside the range [ 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif >Y> >X> tao totalarrayordering interval outsiderange? inclusive	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wUbB81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A	
 X(1≠6 9⍸⍳+3×⍸)Y	Is Y outside the range ( 1⌷X , 2⌷X ]	Tacit	Dyadic Function		Comparison	testif ≥Y> ≥X> tao totalarrayordering interval outsiderange?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wU7B81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A	
-(<\⍛≡≠∘,)Y	Are all elements of simple Y equal?	Tacit	Monadic Function		Comparison	testif allsame allmatch? cells items allidentical allequal		
 (≢∘∪⍳⍛∨)Js	Number-of-divisors of Js	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5		
 (⊂⍤⍋⍛⌷⍤1)Y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering		
 (⊂⍤⍋⍛⌷⍤¯1)Y	Sort major cells ascending	Tacit	Monadic Function		Mathematical	elements items sort() up increasing sorting reordering ordering		
@@ -1263,6 +1262,7 @@ Xv(∊⊂⍤⍋⍛⌷⊣)Yv	Move items Yv to end of Xv	Tacit	Dyadic Function		Se
 (⍳∘≢≡⌽∘⍒)N	Is N Strictly Increasing?	Tacit	Monadic Function		Mathematical	testif ascending? rising? up ordered? sorted?	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxeydpKhgbKpgYKphaKhiZcRGv1JSQWiNzBUMLIwsIYWJqafD/PwA	
 ∨\⍤≠∘' '⍛/Dv	Remove leading blanks	Tacit	Monadic Function		Text	remove delete spaces beginning start drop without removing erasing erase eliminate eliminating deleting string		
 ∨\⍤≠∘'0'⍛/	Remove leading zeroes	Tacit	Monadic Function		Text	remove zeros 0s trim left falses falsehoods start beginning removing erasing erase eliminate eliminating delete deleting string		
+(<\⍛≡≠∘,)Y	Are all elements of simple Y equal?	Tacit	Monadic Function		Comparison	testif allsame allmatch? cells items allidentical allequal		
 X(⊃∘⍸⍷⍨∘⊂)Y	Position of first item Y in X	Tacit	Dyadic Function		Index Generation	indicesin indicesof cell element 1st		
 (2×⊢+.×1∘⌽)Nv	Area of box with sides Nv	Tacit	Monadic Function		Mathematical	block edge lengths		
 (××∘⌈¯0.5+|)N	Rounding to nearest whole number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring integer round()		
@@ -1362,6 +1362,7 @@ Is(⊢⍴⍨⊣,÷⍨∘≢)Yv	Reshape Yv to Is-row matrix (filled row-wise)	Tac
 Is(⊢⍴⍨÷⍨∘≢,⊣)Yv	Reshape Yv to Is-column matrix (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns		
 Xs(⊢⊢⍤/⍨2∨/1,≠)Yv	Remove consecutive duplicate Xs's from vector Yv	Tacit	Dyadic Function		Sets	list removing erasing erase eliminate eliminating delete deleting		
 (+/∘,÷×/⍤⍴)N	Arithmetic mean value of all elements	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() major cells rows items		
+(≢↑1⍪⍨¯1↓2≠⌿,∘0)Yv	Ending points of groups of equal elements (possibly empty Yv)	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells rows items indicate masking indicating trailing binary base-2 base2 contiguous		
 X(↑⊂⍤¯1⍤⊢,⊂⍤⊣)Y	Appending X as additional major cell of Y, adjusting dimensions of both as necessary	Tacit	Dyadic Function		Structural	inserting stack bottom ontop on-top under table list trailing matrix vector expand to matching shapes join merge		
 (*∘○0J2×⊢÷⍨1+⍳)Js	Js spokes of unit wheel	Tacit	Monadic Function		Circular/Trigonometric	circle points distributed		
 X(⊖⍛⍳-⍨1+∘≢⊣)Y	Last indices in X of major cells Y, 0 if not found	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof zero locating items elements location		
@@ -1412,7 +1413,6 @@ I(2⊥(⍲/2⊥⍣¯1,⍤0))J	Bit-wise NAND for positive integers	Tacit	Dyadic F
 ∘.>⍨∘⍳∘≢⍛×⍛≡Nm	Is Nm a lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove strict removing erasing erase eliminate eliminating delete deleting	https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4ae3aPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIhcUcwoYYACFIuwFuQ4hwjAHUHLhpFJmDZNr//wA	
 (××2×∘⌈2÷⍨1-⍨|)N	Rounding to nearest even number (favouring towards 0)	Tacit	Monadic Function		Mathematical	precision favoring		
 Iv(⊢↑⍨≢⍤⊣↑⌊∘⍴)Y	Take of at most Iv elements from Y	Tacit	Dyadic Function		Selection	limit major cells rows items		
-(≢↑1⍪⍨¯1↓2≠⌿,∘0)Yv	Ending points of groups of equal elements (possibly empty Yv)	Tacit	Monadic Function		Comparison	runs sequences Boolean major cells rows items indicate masking indicating trailing binary base-2 base2 contiguous		
 ¯1∘(↓×∘⌽∘⍳+∘≢)Nv	Derivative of polynomial with descending coefficients Nv	Tacit	Monadic Function		Mathematical	firstderivative derivate		
 I(⊂⍤~⍨∘⍳∘≢⌷⊢)Y	Major cells of Y except those enumerated in I	Tacit	Dyadic Function		Selection	elements items without positions removing erasing erase eliminate eliminating delete deleting remove indices at drop		
 (¯2-/∘⍸1,1,⍨2≠/⊢)Yv	Lengths of subvectors of Yv having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items contiguous		
