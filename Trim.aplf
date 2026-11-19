@@ -1,13 +1,13 @@
  Trim←{
      (header body)←1(↑{⍺ ⍵}↓)⍵
      ProcessRow←{
-         (first7 url)←¯1(↓{⍺ ⍵}↑)⍵
+         (first7 urls)←¯2(↓{⍺ ⍵}↑)⍵
 
-         words←⎕C Words←' '(≠⊆⊢)⊃⌽first7
-         notin7←(∧/∘.≢⍨⍲∘.(⊃⍷)⍨)words
-         in1to6←words(∨/⍷)¨⊂⎕C∊¯1↓first7
-         kws←⊂1↓∊' ',¨Words/⍨notin7>in1to6
-         url,⍨kws,⍨¯1↓first7
+         words←¯1⎕C Words←' '(≠⊆⊢)⊃⌽first7
+         notin7←(∧/∘.≢⍨⍲∘.(∨/⍷)⍨)words
+         in1to6←words(∨/⍷)¨⊂¯1⎕C⊃{⍺,(⎕UCS 9),⍵}/¯1↓first7
+         kws←⊂1↓∊' ',¨Words/⍨(≠words)∧notin7>in1to6
+         urls,⍨kws,⍨¯1↓first7
      }
      header⍪ProcessRow⍤1⊢body
  }
